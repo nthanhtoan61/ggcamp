@@ -99,7 +99,7 @@ export default function SurvivalCampsPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Around-the-Clock Care & All Meals Included</p>
+                <p>24/7 supervision + full board</p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -110,7 +110,7 @@ export default function SurvivalCampsPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>Bilingual<br />DE &amp; EN</p>
               </div>
             </div>
           </div>
@@ -324,10 +324,10 @@ export default function SurvivalCampsPage() {
                 <div id="Accordion">
                   <div
                     uk-accordion="collapsible: false;"
-                    id="js-2"
-                    className="custom_acc_691a9cf43d7b0"
+                    id="js-3"
+                    className="custom_acc_691a9cf9c4817"
                   >
-                    <div id="js-2_0" className="el-item jp_">
+                    <div id="js-3_0" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
                           All you need to know
@@ -336,75 +336,282 @@ export default function SurvivalCampsPage() {
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <ul>
+                            <li>Survival training – 4 days × 2.5 hours</li>
+                            <li>For all levels / Ages: 7–17 years</li>
                             <li>
-                              <strong>Survival for 4 days, 3 hours each:</strong>{" "}
-                              Intensive survival training at nearby wilderness
-                              area
+                              Survival skills: Learn how to survive and thrive
+                              in the wild, guided by certified teamers
                             </li>
                             <li>
-                              <strong>For all levels:</strong> Beginners and
-                              experienced survivalists welcome
+                              Community &amp; adventure: Full-day activity
+                              program including canoeing, archery, high ropes
+                              course, and a lake with a water trampoline
                             </li>
                             <li>
-                              <strong>Community & adventure:</strong> Full-day
-                              varied program including canoeing, archery, high
-                              ropes course, swimming lake with water trampoline
+                              Evening fun: Campfires, stick bread, capture the
+                              flag &amp; more
                             </li>
                             <li>
-                              <strong>Fun evening program:</strong> Campfire,
-                              stick bread, Capture the Flag, and more
+                              Cool trips for two-week stays: Overnight hike,
+                              swimming pool, Heide Park, Hamburg city trip
                             </li>
                             <li>
-                              <strong>
-                                Cool trips & excursions during a two-week stay:
-                              </strong>{" "}
-                              Hiking with overnight outdoor camping, swimming
-                              pool, Heide Park, and Hamburg trip
+                              Camp languages English/German: Learn new
+                              languages naturally in an international setting
                             </li>
                             <li>
-                              <strong>
-                                Camp language English/German:
-                              </strong>{" "}
-                              Learn languages playfully in an international
-                              atmosphere
+                              Full board for 7 days (Sun–Sat), 6 nights – with
+                              freshly prepared meals
                             </li>
                             <li>
-                              <strong>
-                                Full board 7 days (Sun–Sat), 6 nights:
-                              </strong>{" "}
-                              Freshly prepared meals
+                              24/7 all-round care: Our teamers are always
+                              there for you
                             </li>
                             <li>
-                              <strong>24h all-around care:</strong> Our teamers
-                              are always there for you
+                              Digital detox approach: Phones and devices only
+                              during siesta
                             </li>
                             <li>
-                              <strong>Digital detox approach:</strong> Phones
-                              and electronic devices allowed only during siesta
+                              Arrival &amp; departure services: Shuttle
+                              transfers available from train stations/airports
                             </li>
                           </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="js-3_6" className="el-item jp_">
+                      <a className="uk-accordion-title" href="#">
+                        <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
+                          Arrival and departure
+                        </h3>
+                      </a>
+                      <div className="uk-accordion-content uk-margin-remove-first-child">
+                        <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
+                          <h4>All roads lead to camp!</h4>
+                          <p>
+                            Whether by car, train, plane, or shuttle – your
+                            child will travel safely and comfortably. We take
+                            care of everything to ensure a smooth arrival!
+                          </p>
+                          <ul>
+                            <li>
+                              <em>Own arrival:</em> Simply drop off and pick up
+                              your child yourself. You&apos;ll receive detailed
+                              directions by email about 6 weeks before camp
+                              starts – so nothing stands in the way of a relaxed
+                              arrival.
+                            </li>
+                            <li>
+                              <em>Shuttle service:</em> Since our adventure
+                              camps are often in remote areas, we&apos;re happy
+                              to provide shuttle transfers from nearby airports
+                              and train stations.
+                            </li>
+                          </ul>
+                          <p>
+                            Shuttles run only on Sundays for arrival and
+                            Saturdays for departure within set time windows.
+                            Outside these times, you can book a private shuttle
+                            for an additional fee. Please contact us directly to
+                            arrange this.
+                          </p>
+                          <p>
+                            <em>Airport Hamburg</em>
+                            <br />
+                            Arrival (landing): 10:00 – 15:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 14:00
+                            <br />
+                            Departure (take-off): 14:00 – 18:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 12:30
+                          </p>
+                          <p>
+                            <em>Airport Hanover</em>
+                            <br />
+                            Arrival (landing): 10:00 – 16:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 15:30
+                            <br />
+                            Departure (take-off): 13:00 – 18:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 11:00
+                          </p>
+                          <p>
+                            <em>Train Station Hanover</em>
+                            <br />
+                            Arrival: 14:00 – 16:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 15:30
+                            <br />
+                            Departure: 11:00 – 13:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 10:30
+                          </p>
+                          <p>
+                            You can select all available options during the
+                            booking process.{" "}
+                            <Link
+                              href="/info/arrival-departure"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              Detailed information about transfer options is
+                              also available here.
+                            </Link>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="js-3_7" className="el-item jp_">
+                      <a className="uk-accordion-title" href="#">
+                        <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
+                          Insurance
+                        </h3>
+                      </a>
+                      <div className="uk-accordion-content uk-margin-remove-first-child">
+                        <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
+                          <h4>Well insured for your adventure!</h4>
+                          <p>
+                            Whether it&apos;s minor mishaps or unexpected
+                            incidents – with our Camp Adventure insurance,
+                            you&apos;re fully protected throughout your trip.
+                          </p>
+                          <p>
+                            <em>Camp Adventure Insurance Package:</em>
+                            <br />
+                            Liability, accident, and health insurance for the
+                            entire duration of your trip
+                            <br />✔ Coverage for accidents &amp; doctor visits
+                            <br />✔ Protection against property damage
+                            <br />
+                            Price: from USD45 per person per trip
+                            <br />
+                            Valid from arrival to departure
+                            <br />
+                            Only for international travel
+                          </p>
+                          <p>
+                            <em>Important note:</em> Without international
+                            health insurance, medical costs must be paid out of
+                            pocket. We recommend carrying a cash reserve of
+                            USD500 or a credit card. Participants from outside
+                            the EU must provide proof of their own insurance
+                            before departure.
+                          </p>
+                          <p>
+                            <em>Camp Adventure Trip Cancellation Guarantee:</em>
+                            <br />
+                            Our guarantee against homesickness, illness &amp;
+                            more. Need to cancel your trip? No problem! With our
+                            cancellation guarantee, you&apos;ll receive a full
+                            refund of the Camp Adventure trip price – minus a
+                            deductible of USD50 (Germany) or USD100 (UK/Spain).
+                            <br />✔ Valid up to one day before departure
+                            <br />✔ No matter the reason: illness, accident,
+                            exams, or homesickness
+                            <br />
+                            Price: USD45 (for one-week stays) / USD85 (for
+                            multi-week stays)
+                          </p>
+                          <p>
+                            All insurance options can be selected during the
+                            booking process.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="js-3_8" className="el-item jp_">
+                      <a className="uk-accordion-title" href="#">
+                        <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
+                          Book our survival camps for kids &amp; teens
+                        </h3>
+                      </a>
+                      <div className="uk-accordion-content uk-margin-remove-first-child">
+                        <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
+                          <h4>
+                            Survival Camp in Northern Germany 🌲🔥🏕️
+                          </h4>
+                          <p>
+                            Learn how to survive in nature and master real
+                            outdoor skills!
+                            <br />
+                            Start your week full of challenges and discover new
+                            abilities! In the booking form, Survival Camp is
+                            already preselected – all that&apos;s left is to
+                            choose your accommodation and travel options.
+                            <br />
+                            Secure your spot now and face the wild – your
+                            survival adventure awaits! 🌿🏹
+                            <br />
+                            And if you want to explore even more: stay an extra
+                            week and try another exciting camp profile!
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <style jsx>{`
-                  .custom_acc_691a9cf43d7b0 .uk-accordion-title {
-                    padding: 10px 15px;
-                    background-color: #f8f8f8;
-                    border-bottom: 1px solid #ddd;
-                    cursor: pointer;
+                  .custom_acc_691a9cf9c4817 .uk-accordion-title * {
+                    color: #000000 !important;
                   }
-                  .custom_acc_691a9cf43d7b0 .uk-accordion-title:hover {
-                    background-color: #e8e8e8;
+                  .custom_acc_691a9cf9c4817 .uk-accordion-title {
+                    padding: 10px !important;
+                    color: #000000 !important;
+                    background: #ffffff !important;
+                    border: 1px solid #ffaa00 !important;
+                    position: relative;
+                    padding-left: 60px !important;
                   }
-                  .custom_acc_691a9cf43d7b0 .uk-accordion-content {
-                    padding: 15px;
+                  .custom_acc_691a9cf9c4817 .uk-accordion-title::before {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    background-color: #ffaa00 !important;
+                    width: 50px;
+                    height: 100%;
+                    left: 0;
+                    content: "+";
+                    color: white;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 1;
+                  }
+                  .custom_acc_691a9cf9c4817
+                    .uk-open
+                    > .uk-accordion-title::before {
+                    content: "−";
+                  }
+                  .custom_acc_691a9cf9c4817 .uk-accordion-content {
+                    border: 1px solid #ffaa00 !important;
+                    background: #ffffff !important;
+                    padding: 15px !important;
+                    margin-top: 15px !important;
+                  }
+                  .custom_acc_691a9cf9c4817 > :nth-child(n + 2) {
+                    border: unset !important;
+                    box-shadow: unset !important;
                   }
                 `}</style>
               </div>
             </div>
-            <div className="uk-width-1-3@m"></div>
+            <div className="uk-width-1-3@m">
+              <div id="Buchung">
+                <div style={{ textAlign: "center" }}>
+                  <iframe
+                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/survivalwal"
+                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    allowFullScreen={true}
+                    width="1000"
+                    height="1700"
+                    frameBorder="0"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -111,7 +111,7 @@ export default function SailingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>Bilingual<br />EN &amp; ES</p>
               </div>
             </div>
           </div>
@@ -339,8 +339,8 @@ export default function SailingPage() {
                           <ul>
                             <li>Sailing for 4 days, 3 hours each</li>
                             <li>
-                              For all levels: beginners & advanced / Age group:
-                              10–16
+                              For all levels: beginners &amp; advanced / Age
+                              group: 10–16
                             </li>
                             <li>
                               Sailing experience: theory, practice, team spirit,
@@ -353,52 +353,230 @@ export default function SailingPage() {
                             </li>
                             <li>
                               Activity program (day/evening): outdoor
-                              activities, sports, creativity, campfire, disco &
-                              more
+                              activities, sports, creativity, campfire, disco
+                              &amp; more
                             </li>
                             <li>
-                              Cool trips & excursions during a two-week stay:
-                              City trip to Barcelona, Montserrat, and more
+                              Cultural experience in Barcelona – weekly trips
+                              to the city center and sights
                             </li>
                             <li>
-                              Camp language English/Spanish: Learn languages
-                              playfully in an international atmosphere
+                              Camp languages English/Spanish: learn languages
+                              naturally in an international atmosphere
                             </li>
                             <li>
-                              Full board 7 days (Sun–Sat), 6 nights: Freshly
-                              prepared meals
+                              Accommodation: great shared rooms with sea views
                             </li>
                             <li>
-                              24h all-around care: Our teamers are always
+                              Full board for 7 days (Sun–Sat), 6 nights with
+                              freshly prepared meals
+                            </li>
+                            <li>
+                              24/7 all-inclusive care: our teamers are always
                               there for you
                             </li>
                             <li>
-                              Digital detox approach: Phones and electronic
+                              Digital detox approach: phones and electronic
                               devices allowed only during siesta
                             </li>
+                            <li>
+                              Arrival &amp; departure services: shuttle transfers
+                              from train station/airport
+                            </li>
                           </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="js-2_6" className="el-item jp_">
+                      <a className="uk-accordion-title" href="#">
+                        <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
+                          arrival and departure
+                        </h3>
+                      </a>
+                      <div className="uk-accordion-content uk-margin-remove-first-child">
+                        <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
+                          <h4>All Roads Lead to Camp</h4>
+                          <p>
+                            Whether by car, train, plane, or shuttle – your
+                            child will arrive safely and comfortably. We take
+                            care of everything to ensure a smooth journey!
+                          </p>
+                          <ul>
+                            <li>
+                              Self-arrival: Simply drop off and pick up your
+                              child yourself. You&apos;ll receive detailed
+                              directions via email about 6 weeks before camp
+                              starts, making your arrival stress-free.
+                            </li>
+                            <li>
+                              Flight arrival with supervision: Our teamers
+                              accompany all group flights, ensure a safe
+                              arrival, and also take care of the return journey.
+                              If a group flight is canceled, we&apos;ll inform
+                              you promptly—free rebooking or cancellation of the
+                              camp stay will then be possible.
+                            </li>
+                            <li>
+                              Shuttle service: Since our language camps are
+                              often located in remote areas, we&apos;re happy to
+                              provide shuttle transfers from the nearby
+                              Barcelona airport.
+                            </li>
+                          </ul>
+                          <p>
+                            Shuttles run only on Sundays for arrival and
+                            Saturdays for departure within set time windows.
+                            Outside these times, you can book a private shuttle
+                            for an additional fee. Please contact us directly to
+                            arrange this.
+                          </p>
+                          <p>
+                            Choose your transfer options during the booking
+                            process.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="js-2_7" className="el-item jp_">
+                      <a className="uk-accordion-title" href="#">
+                        <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
+                          Insurance
+                        </h3>
+                      </a>
+                      <div className="uk-accordion-content uk-margin-remove-first-child">
+                        <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
+                          <h4>Well protected for your adventure</h4>
+                          <p>
+                            Whether minor mishaps or unexpected incidents –
+                            with our Camp Adventure insurance, you&apos;re fully
+                            covered.
+                          </p>
+                          <p>
+                            Camp Adventure Insurance Package:<br />
+                            Liability, accident, and health insurance for the
+                            entire duration of your trip.<br />✔ Coverage for
+                            accidents &amp; doctor visits<br />✔ Protection
+                            against property damage<br />
+                            Price: from USD45 per person per trip<br />
+                            Valid from arrival to departure<br />
+                            Only for trips abroad<br />⚠ Important note:
+                            Without international insurance coverage, you must
+                            cover medical costs yourself. We recommend carrying
+                            a safety reserve of USD500 in cash or a credit card.
+                            Participants outside the EU must provide proof of
+                            their own insurance before travel.
+                          </p>
+                          <p>
+                            Camp Adventure Trip Cancellation Guarantee:<br />
+                            Our guarantee against homesickness, illness &amp;
+                            more. Need to cancel your trip? No problem! With our
+                            cancellation guarantee, you&apos;ll receive a full
+                            refund of the Camp Adventure trip price—minus a
+                            deductible of USD50 (Germany) or USD100
+                            (England/Spain).<br />✔ Valid up to one day before
+                            departure<br />✔ Valid regardless of the reason:
+                            illness, accident, exams, or homesickness<br />
+                            Price: USD45 (for one-week stays) / USD85 (for
+                            multi-week stays)
+                          </p>
+                          <p>
+                            All insurance options can be selected during the
+                            booking process.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="js-2_8" className="el-item jp_">
+                      <a className="uk-accordion-title" href="#">
+                        <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
+                          Sailing Summer Camp in Spain
+                        </h3>
+                      </a>
+                      <div className="uk-accordion-content uk-margin-remove-first-child">
+                        <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
+                          <h4>
+                            Sailing at Camp Adventure – experience the wind and
+                            water up close! ⛵🌊
+                          </h4>
+                          <p>
+                            Start your week full of maritime adventures now!
+                            Sailing is already preselected in the booking form –
+                            all that&apos;s left is to add your details.
+                          </p>
+                          <p>
+                            Secure your spot today and feel the freedom on the
+                            water!
+                          </p>
+                          <p>
+                            And if you want to explore even more, stay an extra
+                            week and try another exciting profile! We look
+                            forward to welcoming you. Join the Crew !
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <style jsx>{`
-                  .custom_acc_691a9cf43d7b0 .uk-accordion-title {
-                    padding: 10px 15px;
-                    background-color: #f8f8f8;
-                    border-bottom: 1px solid #ddd;
-                    cursor: pointer;
+                  .custom_acc_691a9cf43d7b0 .uk-accordion-title * {
+                    color: #000000 !important;
                   }
-                  .custom_acc_691a9cf43d7b0 .uk-accordion-title:hover {
-                    background-color: #e8e8e8;
+                  .custom_acc_691a9cf43d7b0 .uk-accordion-title {
+                    padding: 10px !important;
+                    color: #000000 !important;
+                    background: #ffffff !important;
+                    border: 1px solid #ffaa00 !important;
+                    position: relative;
+                    padding-left: 60px !important;
+                  }
+                  .custom_acc_691a9cf43d7b0 .uk-accordion-title::before {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    background-color: #ffaa00 !important;
+                    width: 50px;
+                    height: 100%;
+                    left: 0;
+                    content: "+";
+                    color: white;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 1;
+                  }
+                  .custom_acc_691a9cf43d7b0
+                    .uk-open
+                    > .uk-accordion-title::before {
+                    content: "−";
                   }
                   .custom_acc_691a9cf43d7b0 .uk-accordion-content {
-                    padding: 15px;
+                    border: 1px solid #ffaa00 !important;
+                    background: #ffffff !important;
+                    padding: 15px !important;
+                    margin-top: 15px !important;
+                  }
+                  .custom_acc_691a9cf43d7b0 > :nth-child(n + 2) {
+                    border: unset !important;
+                    box-shadow: unset !important;
                   }
                 `}</style>
               </div>
             </div>
-            <div className="uk-width-1-3@m"></div>
+            <div className="uk-width-1-3@m">
+              <div id="Buchung">
+                <div style={{ textAlign: "center" }}>
+                  <iframe
+                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/sailing"
+                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    allowFullScreen={true}
+                    width="1000"
+                    height="1700"
+                    frameBorder="0"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

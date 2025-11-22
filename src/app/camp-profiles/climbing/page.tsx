@@ -37,17 +37,42 @@ export default function ClimbingPage() {
                     Climbing Camp in Southern Germany in the Bavarian Forest
                   </p>
                 </h1>
+              </div>
+            </div>
+            <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+              <div className="uk-width-1-2@m">
                 <div
-                  className="uk-panel uk-text-lead uk-margin uk-text-left"
+                  id="page#0"
+                  className="uk-margin uk-text-left"
                   uk-scrollspy-class=""
                 >
-                  <p>
-                    Big climbs, high ropes, and our legendary climbing park –
-                    with experienced guides, you&apos;ll find out what
-                    you&apos;re truly capable of.
-                  </p>
+                  <a
+                    className="el-content uk-button uk-button-primary uk-button-small uk-flex-inline uk-flex-center uk-flex-middle"
+                    href="#Regen"
+                    uk-scroll=""
+                  >
+                    <span
+                      className="uk-margin-small-right"
+                      uk-icon="location"
+                    ></span>
+                    Bavarian Forest - Starting at 395 USD
+                  </a>
+                </div>
+                <div className="uk-margin uk-text-left" uk-scrollspy-class="">
+                  <a
+                    className="el-content uk-button uk-button-default uk-button-small uk-flex-inline uk-flex-center uk-flex-middle"
+                    href="#Regen"
+                    uk-scroll=""
+                  >
+                    <span
+                      className="uk-margin-small-right"
+                      uk-icon="crosshairs"
+                    ></span>
+                    Summer
+                  </a>
                 </div>
               </div>
+              <div className="uk-width-1-2@m"></div>
             </div>
           </div>
         </div>
@@ -83,11 +108,7 @@ export default function ClimbingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>
-                  7 - 17 years
-                  <br />
-                  Separated by age groups
-                </p>
+                <p>12 - 17 years</p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -98,7 +119,7 @@ export default function ClimbingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Tent & Cabin/House</p>
+                <p>Tents &amp; Tiny Houses</p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -109,7 +130,7 @@ export default function ClimbingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Around-the-Clock Care & All Meals Included</p>
+                <p>24h Supervision &amp; All Meals Included</p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -123,7 +144,7 @@ export default function ClimbingPage() {
                 <p>
                   Bilingual
                   <br />
-                  GER & EN
+                  GER &amp; ENG
                 </p>
               </div>
             </div>

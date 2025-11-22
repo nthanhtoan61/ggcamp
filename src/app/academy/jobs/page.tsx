@@ -17,7 +17,9 @@ export default function JobsPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-fixed uk-section uk-section-xlarge"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/be/Teamertraining_2017_51_Kopie-be22331c.jpeg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/be/Teamertraining_2017_51_Kopie-be22331c.jpeg"
+            )})`,
           }}
         >
           <div
@@ -41,13 +43,20 @@ export default function JobsPage() {
                   </p>
                 </div>
                 <div className="uk-panel uk-margin">
-                  <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                  <div
+                    className="uk-grid tm-grid-expand uk-grid-margin"
+                    uk-grid=""
+                  >
                     <div className="uk-width-1-3@s uk-width-1-5@m"></div>
                     <div className="uk-width-1-3@s uk-width-1-5@m"></div>
                     <div className="uk-width-1-3@s uk-width-1-5@m"></div>
                     <div className="uk-width-1-3@s uk-width-1-5@m">
                       <div className="uk-margin">
-                        <a className="el-link" href="#Online-Application" uk-scroll="">
+                        <a
+                          className="el-link"
+                          href="#Online-Application"
+                          uk-scroll=""
+                        >
                           <Image
                             src={getTemplateImageUrl(
                               "yootheme/cache/8a/Apply_Now_2-8a8f9772.png"
@@ -110,10 +119,16 @@ export default function JobsPage() {
       <div className="uk-section-default uk-section-overlap uk-section uk-section-small uk-flex uk-flex-middle">
         <div className="uk-width-1-1">
           <div className="uk-container uk-container-large">
-            <div className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge" uk-grid="">
+            <div
+              className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge"
+              uk-grid=""
+            >
               <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
                 <div className="uk-panel uk-width-1-1">
-                  <div className="uk-margin uk-text-center" uk-scrollspy-class="uk-animation-fade">
+                  <div
+                    className="uk-margin uk-text-center"
+                    uk-scrollspy-class="uk-animation-fade"
+                  >
                     <Image
                       src={getTemplateImageUrl(
                         "yootheme/cache/ad/Jan-Vieth_Potrait-ad3f092b.jpg"
@@ -125,7 +140,10 @@ export default function JobsPage() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="uk-panel uk-margin uk-text-center" uk-scrollspy-class="">
+                  <div
+                    className="uk-panel uk-margin uk-text-center"
+                    uk-scrollspy-class=""
+                  >
                     <p>Jan Vieth, Founder & Managing Director</p>
                   </div>
                 </div>
@@ -136,23 +154,25 @@ export default function JobsPage() {
                     <p>
                       Welcome to Camp Adventure Academy in cooperation with our
                       partner Camp Europe e.V., a non-profit association that is
-                      responsible for the recruiting of our teamers (International
-                      Camp Counselors), we create an international atmosphere that
-                      couldn&apos;t be any stronger. We bring children, young
-                      adults, and teamers from all over the world together to
-                      create unforgettable experiences with many adventures, new
-                      friends and never-ending fun. Every year our team consists of
-                      a wild mix of characters from different origins and careers as
-                      well as various ideas and goals. It doesn&apos;t matter if you
-                      are still in/just finished school, your apprenticeship or your
-                      studies, your application is always welcome. For us, your
-                      personal development and growth come first. Intense practical
-                      experiences, freedom for your personal development and flat
-                      hierarchies complement our versatile fields of activity. If
-                      you want to try something new, be active, leave your comfort
-                      zone as well as expand your language skills at the same time.
-                      If you are communicative, creative and a sport enthusiast we
-                      would be very happy to welcome you to our volunteer team. Our
+                      responsible for the recruiting of our teamers
+                      (International Camp Counselors), we create an
+                      international atmosphere that couldn&apos;t be any
+                      stronger. We bring children, young adults, and teamers
+                      from all over the world together to create unforgettable
+                      experiences with many adventures, new friends and
+                      never-ending fun. Every year our team consists of a wild
+                      mix of characters from different origins and careers as
+                      well as various ideas and goals. It doesn&apos;t matter if
+                      you are still in/just finished school, your apprenticeship
+                      or your studies, your application is always welcome. For
+                      us, your personal development and growth come first.
+                      Intense practical experiences, freedom for your personal
+                      development and flat hierarchies complement our versatile
+                      fields of activity. If you want to try something new, be
+                      active, leave your comfort zone as well as expand your
+                      language skills at the same time. If you are
+                      communicative, creative and a sport enthusiast we would be
+                      very happy to welcome you to our volunteer team. Our
                       recruiting team is looking forward to your application!
                     </p>
                   </div>
@@ -165,10 +185,31 @@ export default function JobsPage() {
 
       {/* Positions Section */}
       <div className="uk-section-default uk-section-overlap uk-section uk-padding-remove-top">
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              .el-item.uk-flex.uk-flex-column .uk-card-body {
+                display: block !important;
+              }
+              .uk-card-media-top {
+                margin: 0 auto;
+              }
+              .uk-card-media-top canvas,
+              .uk-card-media-top img,
+              .uk-card-media-top svg,
+              .uk-card-media-top video {
+                margin: 0 auto;
+              }
+            `,
+          }}
+        />
         <div className="uk-container uk-container-xlarge">
           <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
             <div className="uk-width-1-2@m">
-              <div className="uk-position-relative uk-margin-remove-top uk-margin-remove-bottom uk-width-2xlarge uk-text-center">
+              <div
+                className="uk-position-relative uk-margin-remove-top uk-margin-remove-bottom uk-width-2xlarge uk-text-center"
+                style={{ left: "70px", top: "110px" }}
+              >
                 <Image
                   src={getTemplateImageUrl(
                     "yootheme/cache/48/ca_academy_logo-48f93492.jpg"
@@ -188,7 +229,7 @@ export default function JobsPage() {
                     src="https://www.goabroad.com/reviews/generator/program/47934/177329/240/490/0/0?layout_type=0&theme=light&show_name=1?rvs="
                     frameBorder="0"
                     scrolling="no"
-                    allowTransparency={true}
+                    allowtransparency="true"
                     style={{
                       border: "none",
                       overflow: "auto",
@@ -202,7 +243,10 @@ export default function JobsPage() {
           </div>
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-text-center" uk-scrollspy-class="uk-animation-slide-right-medium">
+              <h2
+                className="uk-h1 uk-text-center"
+                uk-scrollspy-class="uk-animation-slide-right-medium"
+              >
                 International Camp Counselor & Office Internship Positions in
                 Germany
               </h2>
@@ -211,29 +255,43 @@ export default function JobsPage() {
                 uk-scrollspy-class="uk-animation-slide-left-medium"
               ></div>
               <div
-                className="uk-panel uk-margin uk-text-left"
+                className="uk-panel uk-margin uk-text-center"
                 uk-scrollspy-class="uk-animation-slide-top-medium"
               >
                 <p>
                   You want to become part of our team and are looking for the
-                  perfect position? We offer a range of options that vary in length
-                  of stay, location, and role. Each with their own unique aspects,
-                  challenges, and rewards. These roles range from on-site a camp
-                  counselors or language teachers at our summer camps in Germany,
-                  England, or Northern Ireland to administration within our office in
-                  Hamburg. Whether you&apos;re looking to step out of your comfort
-                  zone or hone your skills, Camp Adventure Academy is the place for
-                  you.
+                  perfect position? We offer a range of options that vary in
+                  length of stay, location, and role. Each with their own unique
+                  aspects, challenges, and rewards. These roles range from
+                  on-site a camp counselors or language teachers at our summer
+                  camps in Germany, England, or Northern Ireland to
+                  administration within our office in Hamburg. Whether
+                  you&apos;re looking to step out of your comfort zone or hone
+                  your skills, Camp Adventure Academy is the place for you.
                 </p>
               </div>
             </div>
           </div>
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-margin uk-text-center">
-                <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match" uk-grid="">
+              <div
+                className="uk-margin uk-text-center"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  width: "100%",
+                }}
+              >
+                <div
+                  className="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match"
+                  uk-grid=""
+                  style={{ maxWidth: "100%" }}
+                >
                   <div>
-                    <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="uk-animation-fade">
+                    <div
+                      className="el-item uk-flex uk-flex-column"
+                      uk-scrollspy-class="uk-animation-fade"
+                    >
                       <a
                         className="uk-flex-1 uk-card uk-card-default uk-card-small uk-card-hover uk-link-toggle"
                         href="#Online-Application"
@@ -252,18 +310,22 @@ export default function JobsPage() {
                           />
                         </div>
                         <div className="uk-card-body uk-margin-remove-first-child">
-                          <h3 className="el-title uk-card-title uk-heading-divider uk-margin-top uk-margin-remove-bottom">
+                          <h3
+                            className="el-title uk-card-title uk-heading-divider uk-margin-top uk-margin-remove-bottom"
+                            style={{ display: "block" }}
+                          >
                             International Camp Counselor Postions
                           </h3>
                           <div className="el-content uk-panel uk-margin-top">
                             <p>
-                              International Camp Counselors a.k.a. Teamers are the
-                              backbone of our summer camps. Join our Diverse team and
-                              expand your outdoor knowledge though experiential
-                              learning. Once your training is complete you will be
-                              responsible for the entertainment and care of our
-                              campers. You will have the opportunity to implement new
-                              ideas thanks to the variety of facilities and equipment
+                              International Camp Counselors a.k.a. Teamers are
+                              the backbone of our summer camps. Join our Diverse
+                              team and expand your outdoor knowledge though
+                              experiential learning. Once your training is
+                              complete you will be responsible for the
+                              entertainment and care of our campers. You will
+                              have the opportunity to implement new ideas thanks
+                              to the variety of facilities and equipment
                               available on site.
                             </p>
                           </div>
@@ -272,7 +334,10 @@ export default function JobsPage() {
                     </div>
                   </div>
                   <div>
-                    <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="uk-animation-fade">
+                    <div
+                      className="el-item uk-flex uk-flex-column"
+                      uk-scrollspy-class="uk-animation-fade"
+                    >
                       <a
                         className="uk-flex-1 uk-card uk-card-default uk-card-small uk-card-hover uk-link-toggle"
                         href="#büro"
@@ -291,18 +356,22 @@ export default function JobsPage() {
                           />
                         </div>
                         <div className="uk-card-body uk-margin-remove-first-child">
-                          <h3 className="el-title uk-card-title uk-heading-divider uk-margin-top uk-margin-remove-bottom">
+                          <h3
+                            className="el-title uk-card-title uk-heading-divider uk-margin-top uk-margin-remove-bottom"
+                            style={{ display: "block" }}
+                          >
                             Office Internship Positions in Hamburg, Germany
                           </h3>
                           <div className="el-content uk-panel uk-margin-top">
                             <p>
-                              Combined internship as a Teamer (international Camp
-                              Counselor) in our camp & in office administration with
-                              interesting insights into the organizational processes
-                              of Camp Adventure Academy. Discover what it takes to
-                              keep a Camp Adventure running in high season. Train as
-                              a Teamer (Camp Counselor) and immerse yourself into the
-                              active environment on site and gain a deeper
+                              Combined internship as a Teamer (international
+                              Camp Counselor) in our camp & in office
+                              administration with interesting insights into the
+                              organizational processes of Camp Adventure
+                              Academy. Discover what it takes to keep a Camp
+                              Adventure running in high season. Train as a
+                              Teamer (Camp Counselor) and immerse yourself into
+                              the active environment on site and gain a deeper
                               understanding of Camp Adventure.
                             </p>
                           </div>
@@ -323,7 +392,10 @@ export default function JobsPage() {
           <div className="uk-grid-margin uk-container uk-container-xlarge">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1">
               <div className="uk-width-1-1@m">
-                <h2 className="uk-h1 uk-text-center" uk-scrollspy-class="uk-animation-slide-right-medium">
+                <h2
+                  className="uk-h1 uk-text-center"
+                  uk-scrollspy-class="uk-animation-slide-right-medium"
+                >
                   Camp Counselor Positions
                   <br />
                   in Germany, England and Spain
@@ -338,20 +410,21 @@ export default function JobsPage() {
                 >
                   <p>
                     In cooperation with the association{" "}
-                    <a href="https://campeurope.net/">Camp Europe</a> e.V. we offer
-                    various roles in our outdoor education adventure, sport &
-                    language camps for young people from all over the world.
+                    <a href="https://campeurope.net/">Camp Europe</a> e.V. we
+                    offer various roles in our outdoor education adventure,
+                    sport & language camps for young people from all over the
+                    world.
                   </p>
                   <p>
-                    If you are athletic or musical, you like to teach languages or
-                    love to cook, you are an enthusiastic writer and like to create
-                    children&apos;s magazines, love climbing or crafts - then you
-                    are exactly who we are looking for. Get carried away by our unique
-                    Camp Adventure spirit and spend an unforgettable summer as a
-                    teamer in our international camps. Here is a first taste of our
-                    main teamer training which takes place every year at the end of
-                    June at our flagship site, Camp Adventure Academy in the
-                    Lüneburger Heide.
+                    If you are athletic or musical, you like to teach languages
+                    or love to cook, you are an enthusiastic writer and like to
+                    create children&apos;s magazines, love climbing or crafts -
+                    then you are exactly who we are looking for. Get carried
+                    away by our unique Camp Adventure spirit and spend an
+                    unforgettable summer as a teamer in our international camps.
+                    Here is a first taste of our main teamer training which
+                    takes place every year at the end of June at our flagship
+                    site, Camp Adventure Academy in the Lüneburger Heide.
                   </p>
                 </div>
               </div>
@@ -359,7 +432,10 @@ export default function JobsPage() {
           </div>
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-margin uk-text-center" uk-scrollspy-class="uk-animation-fade">
+              <div
+                className="uk-margin uk-text-center"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <iframe
                   src="https://www.youtube.com/embed/-gbOWMAHE2g?v=-gbOWMAHE2g&disablekb=1"
                   allow="autoplay"
@@ -367,6 +443,11 @@ export default function JobsPage() {
                   uk-responsive=""
                   width="960"
                   height="540"
+                  style={{
+                    maxWidth: "100%",
+                    margin: "0 auto",
+                    display: "block",
+                  }}
                 ></iframe>
               </div>
             </div>
@@ -379,7 +460,10 @@ export default function JobsPage() {
         <div className="uk-container uk-container-xlarge">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h3 className="uk-h2 uk-text-primary uk-text-center" uk-scrollspy-class="uk-animation-fade">
+              <h3
+                className="uk-h2 uk-text-primary uk-text-center"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <p>
                   Job offers in our camps<a id="diploma"></a>
                 </p>
@@ -390,7 +474,10 @@ export default function JobsPage() {
           {/* Internship in International Outdoor Education */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class=""
+              >
                 <span>Internship in International Outdoor Education</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
@@ -401,9 +488,9 @@ export default function JobsPage() {
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
                       <p>
-                        In our international adventure, sports and language camps you
-                        will gain a varied insight into the areas of adventure and
-                        nature education.
+                        In our international adventure, sports and language
+                        camps you will gain a varied insight into the areas of
+                        adventure and nature education.
                       </p>
                       <p>
                         <strong>What you can expect</strong>
@@ -411,12 +498,12 @@ export default function JobsPage() {
                       <ul>
                         <li>
                           Active participation in professional trainings and
-                          workshops (Camp Counselor, pedagogy, creativity, arts &
-                          craft, teambuilding etc.)
+                          workshops (Camp Counselor, pedagogy, creativity, arts
+                          & craft, teambuilding etc.)
                         </li>
                         <li>
-                          Intense practical experience in program design, execution
-                          and evaluation
+                          Intense practical experience in program design,
+                          execution and evaluation
                         </li>
                         <li>
                           Insights into event planning as well as adventure
@@ -432,11 +519,12 @@ export default function JobsPage() {
                           young people
                         </li>
                         <li>
-                          Intercultural empathy as well as sensibility for nature
+                          Intercultural empathy as well as sensibility for
+                          nature
                         </li>
                         <li>
-                          You are flexible, eager to travel and at least 19 years
-                          old
+                          You are flexible, eager to travel and at least 19
+                          years old
                         </li>
                         <li>Ability to work in a team and creativity</li>
                         <li>Personal initiative</li>
@@ -450,29 +538,31 @@ export default function JobsPage() {
                           different nations
                         </li>
                         <li>
-                          7 days intense training (for all teamers it is obligatory
-                          to attend the training, for exact dates see &quot;Application
-                          process&quot;)
+                          7 days intense training (for all teamers it is
+                          obligatory to attend the training, for exact dates see
+                          &quot;Application process&quot;)
                         </li>
                         <li>Personal and professional development</li>
                         <li>Creditable as mandatory internship</li>
                         <li>
                           Possibility to acquire the Juleica (Youth Leader Card)
                         </li>
-                        <li>Expense allowance as well as free Food and Board</li>
+                        <li>
+                          Expense allowance as well as free Food and Board
+                        </li>
                       </ul>
                       <p>
                         <strong>Application</strong>
                       </p>
                       <p>
-                        If you feel like trying something new and gaining valuable
-                        practical experience in an international environment, then
-                        don&apos;t hesitate to apply right here. We´ll forward you
-                        to our partner Camp Europe e.V.
+                        If you feel like trying something new and gaining
+                        valuable practical experience in an international
+                        environment, then don&apos;t hesitate to apply right
+                        here. We´ll forward you to our partner Camp Europe e.V.
                       </p>
                       <p>
-                        If you have any further questions please contact Tanja via
-                        Email{" "}
+                        If you have any further questions please contact Tanja
+                        via Email{" "}
                         <a href="mailto:academy@campadventure.de">
                           academy@campadventure.de
                         </a>
@@ -497,7 +587,10 @@ export default function JobsPage() {
           {/* Teamer for Outdoor and Adventure Sport */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="uk-animation-fade">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <span>Teamer for Outdoor and Adventure Sport</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
@@ -509,9 +602,9 @@ export default function JobsPage() {
                     <div className="el-content uk-panel">
                       <div className="el-content uk-margin-top">
                         <p>
-                          Spend your summer in nature and engage children and young
-                          adults from all over the world with outdoor games, sports
-                          and adventures.
+                          Spend your summer in nature and engage children and
+                          young adults from all over the world with outdoor
+                          games, sports and adventures.
                         </p>
                         <p>
                           <strong>What you can expect</strong>
@@ -519,8 +612,8 @@ export default function JobsPage() {
                         <ul>
                           <li>
                             Active participation in professional trainings and
-                            workshops (Camp Counselor, pedagogy, creativity, arts &
-                            craft, teambuilding etc.)
+                            workshops (Camp Counselor, pedagogy, creativity,
+                            arts & craft, teambuilding etc.)
                           </li>
                           <li>
                             Intense practical experience in program design,
@@ -536,13 +629,13 @@ export default function JobsPage() {
                         </p>
                         <ul>
                           <li>
-                            Enthusiasm for adventure-educational work with children
-                            & young people
+                            Enthusiasm for adventure-educational work with
+                            children & young people
                           </li>
                           <li>Joy of sport and the act of facilitating it</li>
                           <li>
-                            You are flexible, eager to travel and at least 19 years
-                            old
+                            You are flexible, eager to travel and at least 19
+                            years old
                           </li>
                           <li>
                             You have a physical basic fitness and enjoy outdoor
@@ -555,18 +648,19 @@ export default function JobsPage() {
                         </p>
                         <ul>
                           <li>
-                            International team of 200 young people from 30 different
-                            nations
+                            International team of 200 young people from 30
+                            different nations
                           </li>
                           <li>
                             7 days intense training (for all teamers it is
-                            obligatory to attend the training, for exact dates see
-                            &quot;Application process&quot;)
+                            obligatory to attend the training, for exact dates
+                            see &quot;Application process&quot;)
                           </li>
                           <li>Personal and professional development</li>
                           <li>Creditable as mandatory internship</li>
                           <li>
-                            Possibility to acquire the Juleica (Youth Leader Card)
+                            Possibility to acquire the Juleica (Youth Leader
+                            Card)
                           </li>
                           <li>
                             Expense allowance as well as free board and lodging
@@ -575,13 +669,13 @@ export default function JobsPage() {
                         <p>
                           <strong>Application</strong>
                         </p>
-                        If you feel like trying something new and gaining valuable
-                        practical experience in an international environment, then
-                        don&apos;t hesitate apply right here. We´ll forward you to
-                        our partner Camp Europe e.V.
+                        If you feel like trying something new and gaining
+                        valuable practical experience in an international
+                        environment, then don&apos;t hesitate apply right here.
+                        We´ll forward you to our partner Camp Europe e.V.
                         <p>
-                          If you have any further questions please contact Tanja via
-                          Email{" "}
+                          If you have any further questions please contact Tanja
+                          via Email{" "}
                           <a href="mailto:academy@campadventure.de">
                             academy@campadventure.de
                           </a>{" "}
@@ -607,7 +701,10 @@ export default function JobsPage() {
           {/* Language teacher */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="uk-animation-fade">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <span>Language teacher</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
@@ -618,10 +715,10 @@ export default function JobsPage() {
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
                       <p>
-                        Give children and young adults from all over the world an
-                        understanding of the English or German language and culture
-                        outside the classroom and gain lots of valuable experience
-                        for your studies.
+                        Give children and young adults from all over the world
+                        an understanding of the English or German language and
+                        culture outside the classroom and gain lots of valuable
+                        experience for your studies.
                       </p>
                       <p>
                         <strong>What you can expect</strong>
@@ -633,8 +730,8 @@ export default function JobsPage() {
                           Counselor, pedagogy, creativity, teambuilding etc.)
                         </li>
                         <li>
-                          Intense practical experience in the design and execution
-                          of language programs
+                          Intense practical experience in the design and
+                          execution of language programs
                         </li>
                         <li>Insights into adventure education</li>
                       </ul>
@@ -643,40 +740,39 @@ export default function JobsPage() {
                       </p>
                       <ul>
                         <li>
-                          Enthusiasm for adventure-educational work with children
-                          & young people
+                          Enthusiasm for adventure-educational work with
+                          children & young people
                         </li>
                         <li>
-                          Education and experience in language classes (e.g. TEFL
-                          certificate, experiences in teaching)
+                          Education and experience in language classes (e.g.
+                          TEFL certificate, experiences in teaching)
                         </li>
                         <li>German/English as a native language</li>
                         <li>
-                          Intercultural empathy as well as sensibility for nature
+                          Intercultural empathy as well as sensibility for
+                          nature
                         </li>
                         <li>
-                          You are flexible, eager to travel and at least 19 years
-                          old
+                          You are flexible, eager to travel and at least 19
+                          years old
                         </li>
                         <li>
                           Enthusiasm, sense of humor, patience and self-control
                         </li>
-                        <li>
-                          Excellent oral and written communication skills
-                        </li>
+                        <li>Excellent oral and written communication skills</li>
                       </ul>
                       <p>
                         <strong>What we offer</strong>
                       </p>
                       <ul>
                         <li>
-                          International team of 200 young people from 30 different
-                          nations
+                          International team of 200 young people from 30
+                          different nations
                         </li>
                         <li>
-                          9 days intense training (for all teamers it is obligatory
-                          to attend the training, for exact dates see &quot;Application
-                          process&quot;)
+                          9 days intense training (for all teamers it is
+                          obligatory to attend the training, for exact dates see
+                          &quot;Application process&quot;)
                         </li>
                         <li>Personal and professional development</li>
                         <li>Creditable as mandatory internship</li>
@@ -691,14 +787,15 @@ export default function JobsPage() {
                         <strong>Application</strong>
                       </p>
                       <p>
-                        If you feel like trying something new and gaining valuable
-                        practical experience in an international environment, then
-                        don&apos;t hesitate any longer and apply right here. We´ll
-                        forward you to our partner Camp Europe e.V.
+                        If you feel like trying something new and gaining
+                        valuable practical experience in an international
+                        environment, then don&apos;t hesitate any longer and
+                        apply right here. We´ll forward you to our partner Camp
+                        Europe e.V.
                       </p>
                       <p>
-                        If you have any further questions please contact Tanja via
-                        Email{" "}
+                        If you have any further questions please contact Tanja
+                        via Email{" "}
                         <a href="mailto:academy@campadventure.de">
                           academy@campadventure.de
                         </a>
@@ -723,7 +820,10 @@ export default function JobsPage() {
           {/* Mr & Mrs Clean */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="uk-animation-fade">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <span>Mr & Mrs Clean</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
@@ -734,35 +834,38 @@ export default function JobsPage() {
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
                       <p>
-                        We are looking for young individuals that would like to be
-                        part of or Mr & Mrs Clean team in our Luneburger Heide
-                        (Walsrode) location. Join our international staff in creating
-                        an unforgettable experience for everyone involved at Camp
-                        Adventure.
+                        We are looking for young individuals that would like to
+                        be part of or Mr & Mrs Clean team in our Luneburger
+                        Heide (Walsrode) location. Join our international staff
+                        in creating an unforgettable experience for everyone
+                        involved at Camp Adventure.
                       </p>
                       <p>
-                        <br /> Maybe there are no more counselor positions anymore
-                        or you&apos;re still too young, no problem, we&apos;re
-                        looking for Mr & Mrs Clean. You&apos;re responsible for the
-                        cleanliness and hygiene on site along with a tight knit
-                        group or colleagues. This involves maintaining a hight
-                        standard of hygiene in on site washrooms, common areas and
-                        kitchens. Are you passionate about keeping places clean?
-                        Once you have completed training, you will be integrated
-                        into the camp with all other staff, sharing accommodation in
-                        a tent with teamers (camp Counselors) and engaging in
-                        activities with them once the campers are in bed. Your work
-                        will be done during shifts, usually six-seven hours per day,
-                        when not on shift you are free to relax or join the teamers
-                        in supervising the campers. The campers are children and
-                        young adults from all over the world between 7 and 17 years.
+                        <br /> Maybe there are no more counselor positions
+                        anymore or you&apos;re still too young, no problem,
+                        we&apos;re looking for Mr & Mrs Clean. You&apos;re
+                        responsible for the cleanliness and hygiene on site
+                        along with a tight knit group or colleagues. This
+                        involves maintaining a hight standard of hygiene in on
+                        site washrooms, common areas and kitchens. Are you
+                        passionate about keeping places clean? Once you have
+                        completed training, you will be integrated into the camp
+                        with all other staff, sharing accommodation in a tent
+                        with teamers (camp Counselors) and engaging in
+                        activities with them once the campers are in bed. Your
+                        work will be done during shifts, usually six-seven hours
+                        per day, when not on shift you are free to relax or join
+                        the teamers in supervising the campers. The campers are
+                        children and young adults from all over the world
+                        between 7 and 17 years.
                       </p>
                       <p>
                         <strong>Requirements</strong>
                       </p>
                       <ul>
                         <li>
-                          Intercultural empathy as well as sensibility for nature
+                          Intercultural empathy as well as sensibility for
+                          nature
                         </li>
                         <li>At least 18 years of age</li>
                         <li>Police clearance certificate</li>
@@ -772,8 +875,8 @@ export default function JobsPage() {
                         </li>
                         <li>
                           Time in June – September to come to our camp in the
-                          Lüneburger Heide (Walsrode) for four weeks (always for the
-                          whole month)
+                          Lüneburger Heide (Walsrode) for four weeks (always for
+                          the whole month)
                         </li>
                       </ul>
                       <p>
@@ -782,15 +885,17 @@ export default function JobsPage() {
                       <ul>
                         <li>A 4-weeks-placement with free room & board</li>
                         <li> USD 300 expense allowance for four weeks</li>
-                        <li>Free activities and excursions when you are off-duty</li>
+                        <li>
+                          Free activities and excursions when you are off-duty
+                        </li>
                         <li>
                           Campfire in the evening with up to 100 international
                           teamers
                         </li>
                       </ul>
                       <p>
-                        Feel free to contact Kadda via email with any questions you
-                        may have at{" "}
+                        Feel free to contact Kadda via email with any questions
+                        you may have at{" "}
                         <a href="mailto:academy@campadventure.de">
                           academy@campadventure.de
                         </a>
@@ -805,37 +910,41 @@ export default function JobsPage() {
           {/* Coordinators Club */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="uk-animation-fade">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <span>Coordinators Club</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
                 <div className="el-item">
                   <a className="el-title uk-accordion-title" href="#">
-                    Charismatic personalities manage to carry others away, motivate
-                    and excite them
+                    Charismatic personalities manage to carry others away,
+                    motivate and excite them
                   </a>
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
                       <p>
-                        Since 2002, in cooperation with Camp Europe e.V., we have
-                        offered a competent training platform for teamers, outdoor
-                        educators, language coaches and camp directors with the goal
-                        of professionalizing in the area of child and youth travel.
+                        Since 2002, in cooperation with Camp Europe e.V., we
+                        have offered a competent training platform for teamers,
+                        outdoor educators, language coaches and camp directors
+                        with the goal of professionalizing in the area of child
+                        and youth travel.
                       </p>
                       <p>
-                        Usually, our camp coordinators start as teamers caring for
-                        children and young adults. It then quickly becomes apparent
-                        who is qualified for the position of a camp director because
-                        of their charismatic personality, outstanding commitment,
-                        social competences, communication skills, honesty and
-                        reliability.
+                        Usually, our camp coordinators start as teamers caring
+                        for children and young adults. It then quickly becomes
+                        apparent who is qualified for the position of a camp
+                        director because of their charismatic personality,
+                        outstanding commitment, social competences,
+                        communication skills, honesty and reliability.
                       </p>
                       <p>
-                        From teamer (or even camper) to camp coordinator it usually
-                        takes a few years. Years in which our recruiting team
-                        supports suitable candidates and create the ideal frame and
-                        necessary free space to advance their personal and
-                        professional development best.
+                        From teamer (or even camper) to camp coordinator it
+                        usually takes a few years. Years in which our recruiting
+                        team supports suitable candidates and create the ideal
+                        frame and necessary free space to advance their personal
+                        and professional development best.
                       </p>
                       <p>
                         <strong>
@@ -849,8 +958,8 @@ export default function JobsPage() {
                           international summer camps
                         </li>
                         <li>
-                          Assignment as camp director assistant (in midsized to big
-                          camps)
+                          Assignment as camp director assistant (in midsized to
+                          big camps)
                         </li>
                         <li>
                           Assignment as camp director in small to midsized camps
@@ -869,23 +978,24 @@ export default function JobsPage() {
                       </p>
                       <ul>
                         <li>
-                          Comprehensive insight into the organization of children
-                          and youth travel
+                          Comprehensive insight into the organization of
+                          children and youth travel
                         </li>
                         <li>
-                          Gradual increase of responsibility in our international
-                          summer camps
+                          Gradual increase of responsibility in our
+                          international summer camps
                         </li>
                         <li>
-                          Leader training in the course of our camp director course
+                          Leader training in the course of our camp director
+                          course
                         </li>
                         <li>
-                          Member of the training team which coordinates and manages
-                          all trainings for new teamers
+                          Member of the training team which coordinates and
+                          manages all trainings for new teamers
                         </li>
                         <li>
-                          Training: First aid instructor according to the directives
-                          of &quot;Emergency First Response&quot;
+                          Training: First aid instructor according to the
+                          directives of &quot;Emergency First Response&quot;
                         </li>
                         <li>
                           Training: High ropes course trainer according to ERCA
@@ -938,7 +1048,10 @@ export default function JobsPage() {
           {/* Step 1 */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="uk-animation-fade">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <span>Step 1</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
@@ -949,14 +1062,15 @@ export default function JobsPage() {
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
                       <p>
-                        Every summer we bring children and young adults, motivated
-                        and dynamic teamers together, from all over the world. With
-                        such a diverse team, English is the main language within our
-                        team. As a way of acclimatising people to this, we conduct
-                        our international application process in English. The
-                        application process is carried out by the non-profit
-                        association Camp Europe e.V.. Before applying, please read
-                        the information given in steps 2-4.
+                        Every summer we bring children and young adults,
+                        motivated and dynamic teamers together, from all over
+                        the world. With such a diverse team, English is the main
+                        language within our team. As a way of acclimatising
+                        people to this, we conduct our international application
+                        process in English. The application process is carried
+                        out by the non-profit association Camp Europe e.V..
+                        Before applying, please read the information given in
+                        steps 2-4.
                       </p>
                     </div>
                     <div className="uk-margin-top">
@@ -978,7 +1092,10 @@ export default function JobsPage() {
           {/* Step 2 */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="uk-animation-fade">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <span>Step 2</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
@@ -989,9 +1106,9 @@ export default function JobsPage() {
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
                       <p>
-                        As soon as we have received and checked your application you
-                        will receive a response from us via e-mail. In case of a
-                        positive assessment we will invite you to an online
+                        As soon as we have received and checked your application
+                        you will receive a response from us via e-mail. In case
+                        of a positive assessment we will invite you to an online
                         interview to get to know each other a bit better.
                       </p>
                     </div>
@@ -1004,7 +1121,10 @@ export default function JobsPage() {
           {/* Step 3 */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="uk-animation-fade">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <span>Step 3</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
@@ -1015,32 +1135,33 @@ export default function JobsPage() {
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
                       <p>
-                        Once confirmed we will send you all important information
-                        needed for organizing your voluntary assignment. After that
-                        we need the following documents from you to finalize the
-                        application process:
+                        Once confirmed we will send you all important
+                        information needed for organizing your voluntary
+                        assignment. After that we need the following documents
+                        from you to finalize the application process:
                       </p>
                       <ul>
                         <li>
-                          Copy of the signed agreement (Memorandum of Understanding)
+                          Copy of the signed agreement (Memorandum of
+                          Understanding)
                         </li>
                         <li>
-                          Transfer of a deposit of USD 290 for the participation in
-                          the one week staff training (WILL BE REFUNDED AFTER 4
-                          WEEKS OF ASSIGNMENT IN CAMP. LANGUAGE COACHES DO NOT HAVE
-                          TO PAY A DEPOSIT.)
+                          Transfer of a deposit of USD 290 for the participation
+                          in the one week staff training (WILL BE REFUNDED AFTER
+                          4 WEEKS OF ASSIGNMENT IN CAMP. LANGUAGE COACHES DO NOT
+                          HAVE TO PAY A DEPOSIT.)
                         </li>
                         <li>Copy of your passport</li>
                         <li>
-                          Copy of your valid first aid certificate – 9 UE, not older
-                          than 2 years (you can as well complete a first aid course
-                          for USD 55 during staff training)
+                          Copy of your valid first aid certificate – 9 UE, not
+                          older than 2 years (you can as well complete a first
+                          aid course for USD 55 during staff training)
                         </li>
                         <li>Background check</li>
                         <li>
-                          Certifacte of health from a doctor about your physical and
-                          psychological fitness to execute camps for children and
-                          young adults
+                          Certifacte of health from a doctor about your physical
+                          and psychological fitness to execute camps for
+                          children and young adults
                         </li>
                       </ul>
                     </div>
@@ -1053,7 +1174,10 @@ export default function JobsPage() {
           {/* Step 4 */}
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h4 className="uk-h3 uk-heading-line uk-text-primary" uk-scrollspy-class="uk-animation-fade">
+              <h4
+                className="uk-h3 uk-heading-line uk-text-primary"
+                uk-scrollspy-class="uk-animation-fade"
+              >
                 <span>Step 4</span>
               </h4>
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
@@ -1070,7 +1194,8 @@ export default function JobsPage() {
                           {" "}
                           Camp Adventure Academy
                         </a>{" "}
-                        in the Lüneburger Heide (Walsrode) on the following dates:
+                        in the Lüneburger Heide (Walsrode) on the following
+                        dates:
                       </p>
                       <ul>
                         <li>
@@ -1098,14 +1223,14 @@ export default function JobsPage() {
                         </li>
                       </ul>
                       <p>
-                        Additionally, you have the opportunity to take one of our
-                        additional qualifications to teach German, English or
-                        Spanish as a foreign language in the camp (native speakers
-                        only) or to be assigned as an assistant in the high ropes
-                        course. The{" "}
+                        Additionally, you have the opportunity to take one of
+                        our additional qualifications to teach German, English
+                        or Spanish as a foreign language in the camp (native
+                        speakers only) or to be assigned as an assistant in the
+                        high ropes course. The{" "}
                         <strong>
-                          additional qualifications can be combined with Training
-                          1-4
+                          additional qualifications can be combined with
+                          Training 1-4
                         </strong>{" "}
                         and will take place on the following dates:
                       </p>
@@ -1123,9 +1248,9 @@ export default function JobsPage() {
                         refunded up to USD 150.
                       </p>
                       <p>
-                        To get an impression of the contents of the staff training
-                        and to experience the great atmosphere of the international
-                        team, watch our Staff Training Video.
+                        To get an impression of the contents of the staff
+                        training and to experience the great atmosphere of the
+                        international team, watch our Staff Training Video.
                       </p>
                       <center>
                         <iframe
@@ -1158,7 +1283,10 @@ export default function JobsPage() {
         >
           <div className="uk-width-1-1">
             <div className="uk-container uk-container-large">
-              <div className="uk-grid tm-grid-expand uk-grid-large uk-grid-margin-large" uk-grid="">
+              <div
+                className="uk-grid tm-grid-expand uk-grid-large uk-grid-margin-large"
+                uk-grid=""
+              >
                 <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
                   <div className="uk-panel uk-width-1-1">
                     <div
@@ -1167,11 +1295,14 @@ export default function JobsPage() {
                     >
                       <p>
                         Spend stunning nights under the night sky, listen to the
-                        crackle of the campfire and feel the delight of children and
-                        young adults….
+                        crackle of the campfire and feel the delight of children
+                        and young adults….
                       </p>
                     </div>
-                    <div className="uk-h1 uk-text-left@m uk-text-center" uk-scrollspy-class="">
+                    <div
+                      className="uk-h1 uk-text-left@m uk-text-center"
+                      uk-scrollspy-class=""
+                    >
                       ... that is Camp Adventure
                     </div>
                   </div>
@@ -1190,10 +1321,19 @@ export default function JobsPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-text-center">Online Application</h2>
+              <h2 className="uk-h1 uk-margin-small uk-text-center">
+                Online Application
+              </h2>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
               <div className="uk-panel uk-margin">
-                <div style={{ textAlign: "center" }}>
+                <div
+                  style={{
+                    textAlign: "center",
+                    display: "flex",
+                    justifyContent: "center",
+                    width: "100%",
+                  }}
+                >
                   <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSczZM8LHrri-Fdmzl4x7bforey_7JK9YKznaiRv2FIYkII8Ow/viewform?embedded=true"
                     width="1000"
@@ -1201,6 +1341,11 @@ export default function JobsPage() {
                     frameBorder="0"
                     marginHeight={0}
                     marginWidth={0}
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 auto",
+                      display: "block",
+                    }}
                   >
                     Loading…
                   </iframe>
@@ -1233,4 +1378,3 @@ export default function JobsPage() {
     </>
   );
 }
-

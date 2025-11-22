@@ -9,6 +9,14 @@ import {
   getTemplateJsUrl,
 } from "@/lib/assets";
 
+// Extend Window interface for Leaflet and UIkit
+declare global {
+  interface Window {
+    L?: any;
+    UIkit?: any;
+  }
+}
+
 /**
  * Component để load tất cả CSS và JS từ media và templates
  * Sử dụng trong layout chính
@@ -17,7 +25,9 @@ export const PageHead: React.FC = () => {
   useEffect(() => {
     // Load CSS vào head
     const cssFiles = [
-      getMediaCssUrl("vendor/joomla-custom-elements/css/joomla-alert.mineeda.css"),
+      getMediaCssUrl(
+        "vendor/joomla-custom-elements/css/joomla-alert.mineeda.css"
+      ),
       getMediaCssUrl("system/css/joomla-fontawesome.min0c40.css"),
       getTemplateCssUrl("yootheme_ca/css/theme.9d8de.css"),
       getTemplateCssUrl("yootheme_ca/css/custom0c40.css"),
@@ -51,7 +61,9 @@ export const PageHead: React.FC = () => {
         strategy="afterInteractive"
       />
       <Script
-        src={getMediaJsUrl("vendor/webcomponentsjs/js/webcomponents-bundle.min0577.js")}
+        src={getMediaJsUrl(
+          "vendor/webcomponentsjs/js/webcomponents-bundle.min0577.js"
+        )}
         strategy="lazyOnload"
       />
       <Script
@@ -67,20 +79,63 @@ export const PageHead: React.FC = () => {
 
       {/* Load template JS */}
       <Script
-        src={getTemplateJsUrl("yootheme/packages/theme-cookie/app/cookie.min0c40.js")}
+        src={getTemplateJsUrl(
+          "yootheme/packages/theme-cookie/app/cookie.min0c40.js"
+        )}
         strategy="lazyOnload"
       />
       <Script
-        src={getTemplateJsUrl("yootheme/vendor/assets/uikit/dist/js/uikit.min0c40.js")}
+        src={getTemplateJsUrl(
+          "yootheme/vendor/assets/uikit/dist/js/uikit.min0c40.js"
+        )}
         strategy="afterInteractive"
       />
       <Script
-        src={getTemplateJsUrl("yootheme/vendor/assets/uikit/dist/js/uikit-icons-fjord.min0c40.js")}
+        src={getTemplateJsUrl(
+          "yootheme/vendor/assets/uikit/dist/js/uikit-icons-fjord.min0c40.js"
+        )}
         strategy="afterInteractive"
       />
+
+      {/* Load Leaflet JS for maps - must load before theme.js */}
+      <Script
+        src={getTemplateJsUrl(
+          "yootheme/vendor/assets/leaflet/leaflet/dist/leaflet0c40.js"
+        )}
+        strategy="afterInteractive"
+        onLoad={() => {
+          // Ensure Leaflet is available globally
+          if (typeof window !== "undefined" && !window.L) {
+            // Wait a bit if Leaflet not immediately available
+            setTimeout(() => {
+              if (window.L && window.UIkit) {
+                // Force UIkit to re-initialize maps
+                window.UIkit.update(document.body);
+              }
+            }, 100);
+          }
+        }}
+      />
+
       <Script
         src={getTemplateJsUrl("yootheme/js/theme0c40.js")}
         strategy="afterInteractive"
+        onLoad={() => {
+          // Initialize maps after theme.js loads
+          if (typeof window !== "undefined" && window.UIkit && window.L) {
+            // Force UIkit to initialize all map components
+            const mapElements = document.querySelectorAll("[uk-map]");
+            mapElements.forEach((el) => {
+              if (window.UIkit.map) {
+                window.UIkit.map(el);
+              }
+            });
+            // Also try update
+            if (window.UIkit.update) {
+              window.UIkit.update(document.body);
+            }
+          }
+        }}
       />
       <Script
         src={getTemplateJsUrl("yootheme_ca/js/custom0c40.js")}
@@ -186,6 +241,51 @@ export const PageHead: React.FC = () => {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `document.addEventListener('DOMContentLoaded', function () { const parentItems = document.querySelectorAll('#module-menu-dialog-mobile li.uk-parent'); parentItems.forEach(parent => { const subMenu = parent.querySelector('.uk-nav-sub'); if (subMenu) { subMenu.setAttribute('hidden', ''); parent.classList.remove('uk-open'); const link = parent.querySelector('a'); if (link) link.setAttribute('aria-expanded', 'false'); } }); parentItems.forEach(parent => { const link = parent.querySelector('a'); const subMenu = parent.querySelector('.uk-nav-sub'); if (!link || !subMenu) return; link.addEventListener('click', function (e) { const isHidden = subMenu.hasAttribute('hidden'); if (isHidden) { e.preventDefault(); parentItems.forEach(other => { if (other !== parent) { const otherSub = other.querySelector('.uk-nav-sub'); const otherLink = other.querySelector('a'); if (otherSub) otherSub.setAttribute('hidden', ''); other.classList.remove('uk-open'); if (otherLink) otherLink.setAttribute('aria-expanded', 'false'); } }); subMenu.removeAttribute('hidden'); parent.classList.add('uk-open'); link.setAttribute('aria-expanded', 'true'); } }); }); });`,
+        }}
+      />
+
+      {/* Initialize UIkit maps after all scripts loaded */}
+      <Script
+        id="uikit-maps-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              function initMaps() {
+                if (typeof window !== 'undefined' && window.UIkit && window.L) {
+                  // Find all map elements
+                  const mapElements = document.querySelectorAll('[uk-map]');
+                  mapElements.forEach(function(el) {
+                    // UIkit should auto-initialize, but force it if needed
+                    if (window.UIkit.map && !el._uikitMap) {
+                      try {
+                        window.UIkit.map(el);
+                      } catch(e) {
+                        console.log('Map init error:', e);
+                      }
+                    }
+                  });
+                  
+                  // Also try global update
+                  if (window.UIkit.update) {
+                    window.UIkit.update(document.body);
+                  }
+                } else {
+                  // Retry after a short delay if UIkit or Leaflet not ready
+                  setTimeout(initMaps, 200);
+                }
+              }
+              
+              // Wait for DOM and scripts
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                  setTimeout(initMaps, 500);
+                });
+              } else {
+                setTimeout(initMaps, 500);
+              }
+            })();
+          `,
         }}
       />
 

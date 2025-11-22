@@ -9,6 +9,38 @@ export default function InfoSessionsEngPage() {
     <>
       {/* Hero Section */}
       <div
+        className="uk-section-primary uk-section-overlap uk-position-relative"
+        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
+      >
+        <div
+          className="uk-background-norepeat uk-background-cover uk-background-top-center uk-section uk-section-xlarge"
+          style={{
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/f7/info-sessions_header-f74bd44e.jpeg"
+            )})`,
+          }}
+        >
+          <div
+            className="uk-position-cover"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+          ></div>
+          <div className="uk-container uk-container-large uk-position-relative">
+            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
+              <div className="uk-width-1-1@m">
+                <div
+                  className="uk-heading-large uk-text-center"
+                  uk-scrollspy-class=""
+                >
+                  Info Sessions
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div
         className="uk-section-muted uk-section-overlap uk-section uk-padding-remove-bottom"
         uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
       >
@@ -39,9 +71,7 @@ export default function InfoSessionsEngPage() {
                   We&apos;re hosting an Open Day in Walsrode, where you can try
                   out some of our first activities, meet our staff, and take a
                   full tour with our camp director, Jan.{" "}
-                  <strong>
-                    Everyone is welcome—no registration needed!
-                  </strong>
+                  <strong>Everyone is welcome—no registration needed!</strong>
                 </p>
                 <p style={{ textAlign: "center" }}>
                   📅 <strong>When?</strong> June 7th, from 12:00 to 16:00

@@ -23,7 +23,9 @@ export default function SchoolTripsPage() {
           uk-img=""
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/banner/b4.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/banner/b4.jpg"
+            )})`,
           }}
         >
           <div
@@ -79,8 +81,8 @@ export default function SchoolTripsPage() {
                     This allows teachers to conect with their students while
                     using the outline of our signature bed time routine.
                   </span>{" "}
-                  All this is done with a high staff-kids ratio of about 1:10
-                  to 1:14.
+                  All this is done with a high staff-kids ratio of about 1:10 to
+                  1:14.
                 </p>
               </div>
             </div>
@@ -101,15 +103,15 @@ export default function SchoolTripsPage() {
                 <p>
                   <span>
                     All students are encouraged to work as a team, discovering
-                    their own strenghts and weakneses, and those of their
-                    peers. With a clearer understanding of these traits they can
-                    grow as individuals and develop their interpersonal skills,
+                    their own strenghts and weakneses, and those of their peers.
+                    With a clearer understanding of these traits they can grow
+                    as individuals and develop their interpersonal skills,
                     improving their abilities to work within a team.
                   </span>
                   Throughout the five day program, students have the chance to
-                  acquire new and useful skills. Furthermore, a great exploration
-                  of the surrounding environment will give them a different and
-                  better understanding of nature.
+                  acquire new and useful skills. Furthermore, a great
+                  exploration of the surrounding environment will give them a
+                  different and better understanding of nature.
                 </p>
                 <p>
                   Includes: Raft building, Teambuilding challenges, Survival
@@ -139,12 +141,12 @@ export default function SchoolTripsPage() {
                 <p>
                   Camp Adventure&apos;s cooperation with the German association
                   &quot;No Power to Drugs&quot; (Keine Macht den Drogen) will
-                  give students a good understanding of how &quot;addictions&quot;
-                  are developed. The main aim of this program is to raise
-                  awareness among students, to strengthen their self-esteem and
-                  show effective ways of saying &quot;No&quot; to drugs. Apart
-                  from acquiring useful life skills they will have the chance to
-                  grow as a team.
+                  give students a good understanding of how
+                  &quot;addictions&quot; are developed. The main aim of this
+                  program is to raise awareness among students, to strengthen
+                  their self-esteem and show effective ways of saying
+                  &quot;No&quot; to drugs. Apart from acquiring useful life
+                  skills they will have the chance to grow as a team.
                 </p>
                 <p>
                   Includes: &quot;No power to Drugs exercises&quot;,
@@ -198,7 +200,9 @@ export default function SchoolTripsPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-margin-small uk-text-center">Goal Setting</h2>
+              <h2 className="uk-h1 uk-margin-small uk-text-center">
+                Goal Setting
+              </h2>
               <hr className="uk-divider-icon" />
               <div className="uk-panel uk-text-large uk-column-1-2@m uk-column-1-1@s uk-margin">
                 <p>
@@ -212,8 +216,8 @@ export default function SchoolTripsPage() {
                   disconnect, think and reflect.
                 </p>
                 <p>
-                  Includes: Special personal Goal setting exercises, Alpine
-                  Hike with Biwak, SOLO
+                  Includes: Special personal Goal setting exercises, Alpine Hike
+                  with Biwak, SOLO
                 </p>
               </div>
               <div className="uk-panel uk-margin">
@@ -229,7 +233,9 @@ export default function SchoolTripsPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-margin-small uk-text-center">Leadership</h2>
+              <h2 className="uk-h1 uk-margin-small uk-text-center">
+                Leadership
+              </h2>
               <hr className="uk-divider-icon" />
               <div className="uk-panel uk-text-large uk-column-1-2@m uk-column-1-1@s uk-margin">
                 <p>
@@ -260,7 +266,9 @@ export default function SchoolTripsPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-margin-small uk-text-center">Local Excursions</h2>
+              <h2 className="uk-h1 uk-margin-small uk-text-center">
+                Local Excursions
+              </h2>
               <hr className="uk-divider-icon" />
               <div className="uk-panel uk-text-large uk-column-1-2@m uk-column-1-1@s uk-margin">
                 <p>
@@ -280,7 +288,9 @@ export default function SchoolTripsPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-margin-small uk-text-center">Special locations</h2>
+              <h2 className="uk-h1 uk-margin-small uk-text-center">
+                Special locations
+              </h2>
               <hr className="uk-divider-icon" />
               <div className="uk-panel uk-text-large uk-column-1-2@m uk-column-1-1@s uk-margin">
                 <p>
@@ -288,10 +298,10 @@ export default function SchoolTripsPage() {
                   past few years. We are specialised in outdoor and experiential
                   education programs and use facilities from partners that best
                   suit your needs. There is a great variety including everything
-                  from adventurous campgrounds to an outdoor station close to the
-                  Austrian Alpes. In all our trips we aim to deliver our unique
-                  adventure feeling. We do not want the students to feel as
-                  though they are in a 5 star hotel, instead we want them to
+                  from adventurous campgrounds to an outdoor station close to
+                  the Austrian Alpes. In all our trips we aim to deliver our
+                  unique adventure feeling. We do not want the students to feel
+                  as though they are in a 5 star hotel, instead we want them to
                   enjoy one of our many great outdoor centres. Focusing on what
                   we believe is the most important thing; the nature surrounding
                   them.
@@ -307,13 +317,15 @@ export default function SchoolTripsPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-margin-small uk-text-center">Program Examples</h2>
+              <h2 className="uk-h1 uk-margin-small uk-text-center">
+                Program Examples
+              </h2>
               <hr className="uk-divider-icon" />
               <div className="uk-panel uk-text-large uk-column-1-2@m uk-column-1-1@s uk-margin">
                 <p>
                   We are flexible with duration, location and program of all
-                  trips. Feel free to get in touch with us and help us develop
-                  a tailor-made school trip adapted to your needs.
+                  trips. Feel free to get in touch with us and help us develop a
+                  tailor-made school trip adapted to your needs.
                 </p>
                 <p>
                   For more details please contact Guillaume:{" "}
@@ -327,7 +339,10 @@ export default function SchoolTripsPage() {
 
               {/* Location Cards */}
               <div className="uk-margin">
-                <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match" uk-grid="">
+                <div
+                  className="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match"
+                  uk-grid=""
+                >
                   {/* Lüneburger Heide */}
                   <div>
                     <div className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child">
@@ -449,8 +464,8 @@ export default function SchoolTripsPage() {
         <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
           <div className="uk-width-1-1@m">
             <div
-              className="uk-position-relative uk-position-z-index uk-dark"
-              style={{ height: "600px" }}
+              className="uk-position-relative uk-dark"
+              style={{ height: "600px", width: "100%", zIndex: 1 }}
               uk-map=""
               data-map-type="leaflet"
             >
@@ -496,39 +511,40 @@ export default function SchoolTripsPage() {
                     center: { lat: 53.5597, lng: 9.9601 },
                     lazyload: true,
                     library: "leaflet",
-                    baseUrl: "/templates/yootheme/vendor/assets/leaflet/leaflet/dist",
+                    baseUrl:
+                      "/templates/yootheme/vendor/assets/leaflet/leaflet/dist",
                   }),
                 }}
               />
-              <template>
+              <template suppressHydrationWarning>
                 <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                   <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                     Camp Adventure Office
                   </h3>
                 </div>
               </template>
-              <template>
+              <template suppressHydrationWarning>
                 <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                   <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                     Camp Adventure Academy - Lüneburger Heide
                   </h3>
                 </div>
               </template>
-              <template>
+              <template suppressHydrationWarning>
                 <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                   <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                     Camp Adventure - Bayerischer Wald
                   </h3>
                 </div>
               </template>
-              <template>
+              <template suppressHydrationWarning>
                 <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                   <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                     Camp Adventure - Rossall School
                   </h3>
                 </div>
               </template>
-              <template>
+              <template suppressHydrationWarning>
                 <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                   <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                     Camp Adventure - Bath University
@@ -585,10 +601,16 @@ export default function SchoolTripsPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
                 <div className="uk-margin uk-text-center">
-                  <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-3@l uk-grid-collapse uk-grid-match" uk-grid="">
+                  <div
+                    className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-3@l uk-grid-collapse uk-grid-match"
+                    uk-grid=""
+                  >
                     {/* Partnership Logos */}
                     <div>
-                      <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="">
+                      <div
+                        className="el-item uk-flex uk-flex-column"
+                        uk-scrollspy-class=""
+                      >
                         <a
                           className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
                           href="https://www.reisenetz.org/"
@@ -609,7 +631,10 @@ export default function SchoolTripsPage() {
                       </div>
                     </div>
                     <div>
-                      <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="">
+                      <div
+                        className="el-item uk-flex uk-flex-column"
+                        uk-scrollspy-class=""
+                      >
                         <a
                           className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
                           href="http://www.campingfellowship.org/"
@@ -630,7 +655,10 @@ export default function SchoolTripsPage() {
                       </div>
                     </div>
                     <div>
-                      <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="">
+                      <div
+                        className="el-item uk-flex uk-flex-column"
+                        uk-scrollspy-class=""
+                      >
                         <a
                           className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
                           href="https://www.language-testing-service.de/cms/index.php?id=8"
@@ -651,7 +679,10 @@ export default function SchoolTripsPage() {
                       </div>
                     </div>
                     <div>
-                      <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="">
+                      <div
+                        className="el-item uk-flex uk-flex-column"
+                        uk-scrollspy-class=""
+                      >
                         <a
                           className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
                           href="https://www.kmdd.de/Home.htm"
@@ -672,7 +703,10 @@ export default function SchoolTripsPage() {
                       </div>
                     </div>
                     <div>
-                      <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="">
+                      <div
+                        className="el-item uk-flex uk-flex-column"
+                        uk-scrollspy-class=""
+                      >
                         <a
                           className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
                           href="https://dofe-germany.de/"
@@ -693,7 +727,10 @@ export default function SchoolTripsPage() {
                       </div>
                     </div>
                     <div>
-                      <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="">
+                      <div
+                        className="el-item uk-flex uk-flex-column"
+                        uk-scrollspy-class=""
+                      >
                         <a
                           className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
                           href="https://www.erca.uk/index.php/de/"
@@ -743,4 +780,3 @@ export default function SchoolTripsPage() {
     </>
   );
 }
-
