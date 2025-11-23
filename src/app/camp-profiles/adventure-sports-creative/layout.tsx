@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+image.pngimport type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Adventure, Sports & Creative Camps in Germany | Camp Adventure",

@@ -662,13 +662,257 @@ export default function ArtsCraftsPage() {
                 `}</style>
               </div>
             </div>
-            <div className="uk-width-1-3@m"></div>
+            <div className="uk-width-1-3@m">
+              <div className="uk-card-default uk-card uk-card-body uk-margin">
+                <h3 className="uk-h4 uk-margin-remove-bottom">
+                  Creative, Sports & Adventure Camp Lüneburger Heide / Walsrode
+                </h3>
+                <div className="uk-margin-small-top">
+                  <iframe
+                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/creativewal"
+                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    allowFullScreen={true}
+                    width="100%"
+                    height="800"
+                    frameBorder="0"
+                    style={{ minHeight: "600px" }}
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Regen/Bavarian Forest Section */}
+      <div
+        id="Regen"
+        className="uk-section-muted uk-section uk-padding-remove-bottom"
+      >
+        <div className="uk-container uk-container-large">
+          <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+            <div className="uk-grid-item-match uk-width-2-3@m">
+              <div className="uk-card-default uk-card uk-card-body">
+                <h2 className="uk-h2 uk-margin-remove-bottom uk-text-left">
+                  <p>
+                    Creative Camp in the Bavarian Forest – Your Arts & Crafts
+                    Adventure!
+                  </p>
+                </h2>
+                <div className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
+                  <p>
+                    Unleash your creativity in the heart of nature! Our Creative
+                    Specialty Camp in the Bavarian Forest combines artistic
+                    spirit, a love of nature, and a thirst for adventure – the
+                    perfect setting to let your imagination run wild.
+                  </p>
+                  <p>
+                    Create, experiment, be creative! Whether it&apos;s painting,
+                    crafting, or DIY projects – you&apos;ll find just the right
+                    spark for your ideas. Join a vibrant international community
+                    at Camp Adventure in Southern Germany, just a short trip
+                    from Munich and Nuremberg!
+                  </p>
+                  <p>
+                    Let your creative potential shine – we can&apos;t wait to
+                    welcome you!
+                  </p>
+                </div>
+                <div
+                  className="uk-slider-container uk-margin uk-text-center"
+                  uk-slider="sets: 1; center: 1; velocity: 1; autoplay: 1;  autoplayInterval: 4000;"
+                >
+                  <div className="uk-position-relative">
+                    <div className="uk-slider-items uk-grid">
+                      <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
+                          <Image
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/fc/03-Regen-Sport-Camp-Bridge-fc7e5448.jpg"
+                            )}
+                            width={1260}
+                            height={840}
+                            alt="Outdoor climbing and ziplining under a stone viaduct – thrilling activities at summer camp in the Bavarian Forest"
+                            loading="lazy"
+                            className="el-image uk-transition-scale-up uk-transition-opaque"
+                          />
+                        </div>
+                      </div>
+                      <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
+                          <Image
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/d3/reg_programm_games-d3b4af4a.jpg"
+                            )}
+                            width={1260}
+                            height={840}
+                            alt="Group of children being welcomed at language camp – beginning of an exciting adventure week in Regen"
+                            loading="lazy"
+                            className="el-image uk-transition-scale-up uk-transition-opaque"
+                          />
+                        </div>
+                      </div>
+                      <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
+                          <Image
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/cd/02-Regen-Language-Camp-Kayak-cd591e8f.jpg"
+                            )}
+                            width={1260}
+                            height={840}
+                            alt="Children on a canoeing trip through nature – outdoor language camp adventure with expert supervision in Regen"
+                            loading="lazy"
+                            className="el-image uk-transition-scale-up uk-transition-opaque"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="uk-margin-top" uk-inverse="">
+                    <ul
+                      className="el-nav uk-slider-nav uk-dotnav uk-flex-center"
+                      uk-margin=""
+                    ></ul>
+                  </div>
+                </div>
+                <div id="AccordionRegen">
+                  <div
+                    uk-accordion="collapsible: false;"
+                    id="js-5"
+                    className="custom_acc_691a9ce562604_regen"
+                  >
+                    <div id="js-5_0" className="el-item jp_">
+                      <a className="uk-accordion-title" href="#">
+                        <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
+                          Everything you need at a glance
+                        </h3>
+                      </a>
+                      <div className="uk-accordion-content uk-margin-remove-first-child">
+                        <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
+                          <ul>
+                            <li>
+                              Arts &amp; Crafts: 4 x 2.5 hours of profile
+                              sessions
+                            </li>
+                            <li>For all levels &amp; age groups: 7-16 years</li>
+                            <li>
+                              Accommodation: Tents, tiny houses and log cabins
+                              or shared rooms
+                            </li>
+                            <li>
+                              Activity program beyond the profile sessions
+                              (day/evening): Outdoor, sports &amp; creativity,
+                              campfire, disco, and more
+                            </li>
+                            <li>
+                              Cool trips &amp; excursions (for two-week stays):
+                              Overnight hike or Munich trip
+                            </li>
+                            <li>
+                              Camp language: English/German – Learn languages
+                              naturally in an international atmosphere
+                            </li>
+                            <li>
+                              Full board for 7 days (Sun–Sat), 6 nights with
+                              freshly prepared meals
+                            </li>
+                            <li>
+                              24/7 all-round care: Our teamers are always there
+                              for you
+                            </li>
+                            <li>
+                              Digital Detox approach: Phones and electronic
+                              devices only during siesta
+                            </li>
+                            <li>
+                              Arrival &amp; departure services: Shuttle
+                              transfers from train stations/airports available
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <style jsx>{`
+                  .custom_acc_691a9ce562604_regen .uk-accordion-title * {
+                    color: #000000 !important;
+                  }
+                  .custom_acc_691a9ce562604_regen .uk-accordion-title {
+                    padding: 10px !important;
+                    color: #000000 !important;
+                    background: #ffffff !important;
+                    border: 1px solid #ffaa00 !important;
+                    position: relative;
+                    padding-left: 60px !important;
+                  }
+                  .custom_acc_691a9ce562604_regen .uk-accordion-title::before {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    background-color: #ffaa00 !important;
+                    width: 50px;
+                    height: 100%;
+                    left: 0;
+                    content: "+";
+                    color: white;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 1;
+                  }
+                  .custom_acc_691a9ce562604_regen
+                    .uk-open
+                    > .uk-accordion-title::before {
+                    content: "−";
+                  }
+                  .custom_acc_691a9ce562604_regen .uk-accordion-content {
+                    border: 1px solid #ffaa00 !important;
+                    background: #ffffff !important;
+                    padding: 15px !important;
+                    margin-top: 15px !important;
+                  }
+                  .custom_acc_691a9ce562604_regen > :nth-child(n + 2) {
+                    border: unset !important;
+                    box-shadow: unset !important;
+                  }
+                `}</style>
+              </div>
+            </div>
+            <div className="uk-width-1-3@m">
+              <div className="uk-card-default uk-card uk-card-body uk-margin">
+                <h3 className="uk-h4 uk-margin-remove-bottom">
+                  Adventure & Language Camp Bayerischer Wald / Regen
+                </h3>
+                <div className="uk-margin-small-top">
+                  <iframe
+                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/creativereg"
+                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    allowFullScreen={true}
+                    width="100%"
+                    height="800"
+                    frameBorder="0"
+                    style={{ minHeight: "600px" }}
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -690,22 +934,47 @@ export default function ArtsCraftsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Wonderful Arts & Crafts Camp! Our daughter discovered her
+                    creative side and came home with amazing artwork. The
+                    instructors encouraged self-expression and the atmosphere
+                    was inspiring. She loved every creative project and made
+                    friends who share her passion for art!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Anna K. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>

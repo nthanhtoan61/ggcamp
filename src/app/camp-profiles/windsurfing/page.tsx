@@ -17,7 +17,9 @@ export default function WindsurfingPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png"
+            )})`,
           }}
         >
           <div
@@ -111,7 +113,11 @@ export default function WindsurfingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />EN & ES</p>
+                <p>
+                  Bilingual
+                  <br />
+                  EN & ES
+                </p>
               </div>
             </div>
           </div>
@@ -368,8 +374,8 @@ export default function WindsurfingPage() {
                               Accommodation: Great shared rooms with sea view
                             </li>
                             <li>
-                              Full board for 7 days (Sun–Sat), 6 nights,
-                              freshly prepared meals
+                              Full board for 7 days (Sun–Sat), 6 nights, freshly
+                              prepared meals
                             </li>
                             <li>
                               24/7 all-round support: Our teamers are always
@@ -396,21 +402,23 @@ export default function WindsurfingPage() {
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <p>
-                            All Roads Lead to Camp<br />
+                            All Roads Lead to Camp
+                            <br />
                             Whether by car, train, plane, or shuttle – your
                             child will arrive safely and stress-free. We&apos;ll
                             make sure everything runs smoothly!
                           </p>
                           <p>
                             Self-arrival: Simply drop off and pick up your child
-                            yourself. You&apos;ll receive detailed directions via
-                            email six weeks before camp starts – so nothing
+                            yourself. You&apos;ll receive detailed directions
+                            via email six weeks before camp starts – so nothing
                             stands in the way of a relaxed journey.
                           </p>
                           <p>
                             Flight with supervision: Our teamers accompany all
                             group flights, ensure a safe arrival, and are there
-                            for the return trip as well.<br />
+                            for the return trip as well.
+                            <br />
                             If a group flight cannot be arranged, we&apos;ll
                             inform you in advance – and you&apos;ll be able to
                             rebook or cancel the camp stay free of charge.
@@ -419,9 +427,11 @@ export default function WindsurfingPage() {
                             Shuttle service: Since many of our language camps
                             are located in remote areas, we&apos;re happy to
                             shuttle your child from the nearest airport,
-                            Barcelona.<br />
+                            Barcelona.
+                            <br />
                             The shuttle runs only on Sundays for arrival and
-                            Saturdays for departure within specific time slots.<br />
+                            Saturdays for departure within specific time slots.
+                            <br />
                             If you need a transfer outside of these windows, a
                             private shuttle can be arranged for an extra fee –
                             just reach out to us individually.
@@ -454,37 +464,49 @@ export default function WindsurfingPage() {
                             you&apos;re fully covered throughout your trip.
                           </p>
                           <p>
-                            The Camp Adventure Insurance Package includes:<br />
+                            The Camp Adventure Insurance Package includes:
+                            <br />
                             Liability, accident, and health insurance for the
-                            entire duration of the trip.<br />
-                            ✔ Coverage for accidents &amp; doctor visits<br />
-                            ✔ Protection against damage to property<br />
-                            💰 Price: from USD45 per person per trip<br />
-                            📅 Valid from arrival to departure<br />
+                            entire duration of the trip.
+                            <br />
+                            ✔ Coverage for accidents &amp; doctor visits
+                            <br />
+                            ✔ Protection against damage to property
+                            <br />
+                            💰 Price: from USD45 per person per trip
+                            <br />
+                            📅 Valid from arrival to departure
+                            <br />
                             🌍 Available only for international trips
                           </p>
                           <p>
                             <em>⚠ Important note:</em> Without international
                             insurance coverage, medical expenses must be paid
-                            out of pocket.<br />
+                            out of pocket.
+                            <br />
                             We recommend bringing a safety reserve of USD500 in
-                            cash or a credit card.<br />
+                            cash or a credit card.
+                            <br />
                             Participants from outside the EU must submit proof
                             of their own insurance before the trip.
                           </p>
                           <p>
-                            The Camp Adventure Travel Cancellation Guarantee<br />
+                            The Camp Adventure Travel Cancellation Guarantee
+                            <br />
                             Our safety net in case of homesickness, illness
-                            &amp; more.<br />
+                            &amp; more.
+                            <br />
                             Need to cancel your trip? No problem! With our
-                            Travel Cancellation Guarantee, you&apos;ll get a full
-                            refund of your Camp Adventure fee – minus a
+                            Travel Cancellation Guarantee, you&apos;ll get a
+                            full refund of your Camp Adventure fee – minus a
                             deductible of USD50 (Germany) or USD100 (UK/Spain).
                           </p>
                           <p>
-                            ✔ Valid up to one day before departure<br />
+                            ✔ Valid up to one day before departure
+                            <br />
                             ✔ Covers all reasons: illness, accidents, make-up
-                            exams, or homesickness<br />
+                            exams, or homesickness
+                            <br />
                             💰 Price: USD45 (1-week stay) / USD85 (multi-week
                             stay)
                           </p>
@@ -637,7 +659,7 @@ export default function WindsurfingPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -646,7 +668,7 @@ export default function WindsurfingPage() {
               <div className="uk-panel uk-margin">
                 <div style={{ textAlign: "center" }}>
                   <iframe
-                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/windsurfing"
+                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/survivalwal"
                     title="Bookacamp, die Buchungsplattform von Camp Adventure"
                     allowFullScreen={true}
                     width="1000"
@@ -659,22 +681,47 @@ export default function WindsurfingPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Amazing windsurfing experience at Camp Adventure! The
+                    instructors were patient and skilled, helping our son
+                    progress quickly. The combination of windsurfing lessons and
+                    camp activities was perfect. He came back confident and
+                    already asking to go back next year!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Maria S. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -683,4 +730,3 @@ export default function WindsurfingPage() {
     </>
   );
 }
-

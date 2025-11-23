@@ -17,7 +17,9 @@ export default function DancingPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg"
+            )})`,
           }}
         >
           <div
@@ -37,9 +39,7 @@ export default function DancingPage() {
                   className="uk-panel uk-text-lead uk-margin uk-text-left"
                   uk-scrollspy-class=""
                 >
-                  <p>
-                    Move to the rhythm and express yourself through dance!
-                  </p>
+                  <p>Move to the rhythm and express yourself through dance!</p>
                 </div>
               </div>
             </div>
@@ -77,7 +77,11 @@ export default function DancingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>7 - 17 years<br />Separated by age groups</p>
+                <p>
+                  7 - 17 years
+                  <br />
+                  Separated by age groups
+                </p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -110,7 +114,11 @@ export default function DancingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>
+                  Bilingual
+                  <br />
+                  GER & EN
+                </p>
               </div>
             </div>
           </div>
@@ -165,7 +173,7 @@ export default function DancingPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -187,22 +195,48 @@ export default function DancingPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Wonderful Dancing Camp! Our daughter improved her dance
+                    skills and discovered new styles. The instructors were
+                    encouraging and creative, and the performances at the end of
+                    camp were amazing. She gained confidence, made dance-loving
+                    friends, and had an incredible time expressing herself
+                    through movement!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Caroline D. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -211,4 +245,3 @@ export default function DancingPage() {
     </>
   );
 }
-

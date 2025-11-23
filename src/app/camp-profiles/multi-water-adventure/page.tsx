@@ -17,7 +17,9 @@ export default function MultiWaterAdventurePage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png"
+            )})`,
           }}
         >
           <div
@@ -78,7 +80,11 @@ export default function MultiWaterAdventurePage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>7 - 17 years<br />Separated by age groups</p>
+                <p>
+                  7 - 17 years
+                  <br />
+                  Separated by age groups
+                </p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -111,7 +117,11 @@ export default function MultiWaterAdventurePage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>
+                  Bilingual
+                  <br />
+                  GER & EN
+                </p>
               </div>
             </div>
           </div>
@@ -148,7 +158,10 @@ export default function MultiWaterAdventurePage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match" uk-grid="">
+              <div
+                className="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match"
+                uk-grid=""
+              >
                 <div>
                   <div className="uk-card uk-card-default uk-card-body">
                     <h3 className="uk-h3">Lüneburger Heide</h3>
@@ -186,7 +199,7 @@ export default function MultiWaterAdventurePage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -208,22 +221,47 @@ export default function MultiWaterAdventurePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Epic Multi-Water Adventure! Our children tried kayaking,
+                    stand-up paddling, and water trampoline - they loved every
+                    activity! The instructors ensured safety while making it
+                    fun. They came back confident in the water and with amazing
+                    stories to share. Perfect for water-loving kids!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Ben S. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -232,4 +270,3 @@ export default function MultiWaterAdventurePage() {
     </>
   );
 }
-

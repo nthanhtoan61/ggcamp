@@ -17,7 +17,9 @@ export default function SailingPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png"
+            )})`,
           }}
         >
           <div
@@ -111,7 +113,11 @@ export default function SailingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />EN &amp; ES</p>
+                <p>
+                  Bilingual
+                  <br />
+                  EN &amp; ES
+                </p>
               </div>
             </div>
           </div>
@@ -357,8 +363,8 @@ export default function SailingPage() {
                               &amp; more
                             </li>
                             <li>
-                              Cultural experience in Barcelona – weekly trips
-                              to the city center and sights
+                              Cultural experience in Barcelona – weekly trips to
+                              the city center and sights
                             </li>
                             <li>
                               Camp languages English/Spanish: learn languages
@@ -380,8 +386,8 @@ export default function SailingPage() {
                               devices allowed only during siesta
                             </li>
                             <li>
-                              Arrival &amp; departure services: shuttle transfers
-                              from train station/airport
+                              Arrival &amp; departure services: shuttle
+                              transfers from train station/airport
                             </li>
                           </ul>
                         </div>
@@ -447,35 +453,43 @@ export default function SailingPage() {
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <h4>Well protected for your adventure</h4>
                           <p>
-                            Whether minor mishaps or unexpected incidents –
-                            with our Camp Adventure insurance, you&apos;re fully
+                            Whether minor mishaps or unexpected incidents – with
+                            our Camp Adventure insurance, you&apos;re fully
                             covered.
                           </p>
                           <p>
-                            Camp Adventure Insurance Package:<br />
+                            Camp Adventure Insurance Package:
+                            <br />
                             Liability, accident, and health insurance for the
-                            entire duration of your trip.<br />✔ Coverage for
-                            accidents &amp; doctor visits<br />✔ Protection
-                            against property damage<br />
-                            Price: from USD45 per person per trip<br />
-                            Valid from arrival to departure<br />
-                            Only for trips abroad<br />⚠ Important note:
-                            Without international insurance coverage, you must
-                            cover medical costs yourself. We recommend carrying
-                            a safety reserve of USD500 in cash or a credit card.
-                            Participants outside the EU must provide proof of
-                            their own insurance before travel.
+                            entire duration of your trip.
+                            <br />✔ Coverage for accidents &amp; doctor visits
+                            <br />✔ Protection against property damage
+                            <br />
+                            Price: from USD45 per person per trip
+                            <br />
+                            Valid from arrival to departure
+                            <br />
+                            Only for trips abroad
+                            <br />⚠ Important note: Without international
+                            insurance coverage, you must cover medical costs
+                            yourself. We recommend carrying a safety reserve of
+                            USD500 in cash or a credit card. Participants
+                            outside the EU must provide proof of their own
+                            insurance before travel.
                           </p>
                           <p>
-                            Camp Adventure Trip Cancellation Guarantee:<br />
+                            Camp Adventure Trip Cancellation Guarantee:
+                            <br />
                             Our guarantee against homesickness, illness &amp;
                             more. Need to cancel your trip? No problem! With our
                             cancellation guarantee, you&apos;ll receive a full
                             refund of the Camp Adventure trip price—minus a
                             deductible of USD50 (Germany) or USD100
-                            (England/Spain).<br />✔ Valid up to one day before
-                            departure<br />✔ Valid regardless of the reason:
-                            illness, accident, exams, or homesickness<br />
+                            (England/Spain).
+                            <br />✔ Valid up to one day before departure
+                            <br />✔ Valid regardless of the reason: illness,
+                            accident, exams, or homesickness
+                            <br />
                             Price: USD45 (for one-week stays) / USD85 (for
                             multi-week stays)
                           </p>
@@ -582,7 +596,7 @@ export default function SailingPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -604,22 +618,46 @@ export default function SailingPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Fantastic Sailing Camp! Our children learned to sail, work
+                    as a team, and gained so much confidence on the water. The
+                    instructors were patient and skilled. It was a perfect blend
+                    of learning and adventure. We&apos;ll be back!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Claudia B. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -628,4 +666,3 @@ export default function SailingPage() {
     </>
   );
 }
-

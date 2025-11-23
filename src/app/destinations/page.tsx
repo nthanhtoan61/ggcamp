@@ -23,7 +23,9 @@ export default function DestinationsPage() {
           uk-img=""
           className="uk-background-norepeat uk-background-cover uk-background-top-center uk-section uk-section-xlarge"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/banner/b2.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/banner/b2.jpg"
+            )})`,
           }}
         >
           <div
@@ -33,7 +35,10 @@ export default function DestinationsPage() {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
-                <h1 className="uk-heading-large uk-text-center" uk-scrollspy-class="">
+                <h1
+                  className="uk-heading-large uk-text-center"
+                  uk-scrollspy-class=""
+                >
                   Our international Camps
                 </h1>
                 <div
@@ -54,10 +59,16 @@ export default function DestinationsPage() {
         uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
       >
         <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge" uk-grid="">
+          <div
+            className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge"
+            uk-grid=""
+          >
             <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
               <div className="uk-panel uk-width-1-1">
-                <div className="uk-h1 uk-text-left@m uk-text-center" uk-scrollspy-class="">
+                <div
+                  className="uk-h1 uk-text-left@m uk-text-center"
+                  uk-scrollspy-class=""
+                >
                   Welcome to Camp Adventure
                 </div>
                 <div
@@ -74,8 +85,8 @@ export default function DestinationsPage() {
                 >
                   <p>
                     Both my children really enjoyed Camp Adventure. The teamers
-                    did a great job making them feel comfortable and at home.
-                    My son was unsure if he wanted to stay at first but he felt
+                    did a great job making them feel comfortable and at home. My
+                    son was unsure if he wanted to stay at first but he felt
                     part of his tent group and camp very quickly and loved it.
                     Both had tons of fun. Thank you CA!
                   </p>
@@ -171,56 +182,56 @@ export default function DestinationsPage() {
                     }),
                   }}
                 />
-                <template>
+                <template suppressHydrationWarning>
                   <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                     <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                       Camp Adventure Office - Hamburg
                     </h3>
                   </div>
                 </template>
-                <template>
+                <template suppressHydrationWarning>
                   <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                     <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                       Camp Adventure Academy - Lüneburger Heide
                     </h3>
                   </div>
                 </template>
-                <template>
+                <template suppressHydrationWarning>
                   <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                     <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                       Camp Adventure - Bayerischer Wald
                     </h3>
                   </div>
                 </template>
-                <template>
+                <template suppressHydrationWarning>
                   <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                     <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                       Camp Adventure - Rossall School
                     </h3>
                   </div>
                 </template>
-                <template>
+                <template suppressHydrationWarning>
                   <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                     <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                       Camp Adventure - Bath University
                     </h3>
                   </div>
                 </template>
-                <template>
+                <template suppressHydrationWarning>
                   <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                     <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                       Camp Adventure - Lauenburgische Seen
                     </h3>
                   </div>
                 </template>
-                <template>
+                <template suppressHydrationWarning>
                   <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                     <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                       Camp Adventure - Amrum
                     </h3>
                   </div>
                 </template>
-                <template>
+                <template suppressHydrationWarning>
                   <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                     <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
                       Camp Adventure - Barcelona Beach Camp
@@ -1342,10 +1353,11 @@ export default function DestinationsPage() {
                         We have many different camp sites. Some of them are
                         fenced in, others are not. There are no armed guards or
                         the like in our camps, as we believe that these
-                        conditions create a very insecure feeling. We do not have
-                        a high security zone in Germany, Northern Ireland or
-                        England, but we keep our eyes open and do everything we
-                        can to ensure that all participants have a great time.
+                        conditions create a very insecure feeling. We do not
+                        have a high security zone in Germany, Northern Ireland
+                        or England, but we keep our eyes open and do everything
+                        we can to ensure that all participants have a great
+                        time.
                       </div>
                     </div>
                   </div>
@@ -1384,12 +1396,11 @@ export default function DestinationsPage() {
                       <div className="el-content uk-panel uk-margin-top">
                         Camp Adventure attaches great importance to
                         internationality. The participants and supervisors in
-                        our camps come from many different countries. Last
-                        year, for example, we had participants from over 60
-                        different countries and supervisors from 25 different
-                        nations. Of course we don&apos;t know where they will
-                        come from this year. So we are at least as excited as
-                        you are.
+                        our camps come from many different countries. Last year,
+                        for example, we had participants from over 60 different
+                        countries and supervisors from 25 different nations. Of
+                        course we don&apos;t know where they will come from this
+                        year. So we are at least as excited as you are.
                         <br />
                         Every year, our team is made up of an international
                         mixture. Through our office in Hamburg and our branch
@@ -1421,8 +1432,8 @@ export default function DestinationsPage() {
                         activities can be chosen by the participants on site in
                         the respective camps. We present the offers to the
                         participants, so that everyone gets an insight into the
-                        different courses. The children can then register in
-                        the lists of the respective courses.
+                        different courses. The children can then register in the
+                        lists of the respective courses.
                       </div>
                     </div>
                   </div>
@@ -1459,8 +1470,8 @@ export default function DestinationsPage() {
                         When do I have to pay the price for the booked camp?
                       </h3>
                       <div className="el-content uk-panel uk-margin-top">
-                        The deposit must be paid within 7 days of receipt of
-                        the booking confirmation. The remaining payment for the
+                        The deposit must be paid within 7 days of receipt of the
+                        booking confirmation. The remaining payment for the
                         booked camp is due 4 weeks before the start of the camp
                         at the latest. Further information can be found in our{" "}
                         <Link href="/info/terms-conditions">
@@ -1477,7 +1488,10 @@ export default function DestinationsPage() {
                   className="el-content uk-button uk-button-default uk-flex-inline uk-flex-center uk-flex-middle"
                   href="/info/faq"
                 >
-                  <span className="uk-margin-small-right" uk-icon="comments"></span>
+                  <span
+                    className="uk-margin-small-right"
+                    uk-icon="comments"
+                  ></span>
                   More questions
                 </Link>
               </div>
@@ -1583,12 +1597,12 @@ export default function DestinationsPage() {
                       </h3>
                       <div className="el-content uk-panel uk-margin-top">
                         <p>
-                          If something should happen, it is not only important to
-                          provide first aid for the affected person, but also to
-                          care for the other children and adolescents. We have a
-                          specially trained team for crisis intervention, which
-                          then provides immediate care and can thus prevent
-                          possible traumatisation due to the experience.
+                          If something should happen, it is not only important
+                          to provide first aid for the affected person, but also
+                          to care for the other children and adolescents. We
+                          have a specially trained team for crisis intervention,
+                          which then provides immediate care and can thus
+                          prevent possible traumatisation due to the experience.
                         </p>
                       </div>
                     </div>
@@ -1606,8 +1620,8 @@ export default function DestinationsPage() {
                           No safety without sufficient staff! We are the leaders
                           in Germany with our great caregiver key. There are no
                           camps that have a key worse than 1:6-1:8, which means
-                          that one caregiver is responsible for a maximum of
-                          6-8 children. In the junior camps we also use our CIT
+                          that one caregiver is responsible for a maximum of 6-8
+                          children. In the junior camps we also use our CIT
                           (Counselor in Training), so that we often reach a key
                           of only 1:4. We know that this key can seem
                           exaggerated, but we want to guarantee the highest
@@ -1631,13 +1645,13 @@ export default function DestinationsPage() {
                           All our camps are also supervised at night by the
                           counselors/teamers. On the one hand we want to prevent
                           visitors from coming to the site - which has not
-                          happened until today - and on the other hand we want to
-                          be there for the children when they wake up at night
-                          and get homesick or have to go to the toilet. The
-                          nightwatch patrols the area and is otherwise reachable
-                          at a central place for the children. Some of our
-                          locations - e.g. the headquarters in Walsrode - are
-                          also video-monitored and fenced in.
+                          happened until today - and on the other hand we want
+                          to be there for the children when they wake up at
+                          night and get homesick or have to go to the toilet.
+                          The nightwatch patrols the area and is otherwise
+                          reachable at a central place for the children. Some of
+                          our locations - e.g. the headquarters in Walsrode -
+                          are also video-monitored and fenced in.
                         </p>
                       </div>
                     </div>
@@ -1663,8 +1677,8 @@ export default function DestinationsPage() {
                           various associations and professional circles. Of
                           course, the background check and the &quot;6-eyes
                           principle&quot;, which states that a child must never
-                          be alone with a caregiver, is also an essential part of
-                          our protection concept. The most important thing,
+                          be alone with a caregiver, is also an essential part
+                          of our protection concept. The most important thing,
                           however, is to create an &quot;open system&quot; in
                           which everyone knows that sexual abuse should not be a
                           taboo subject, but that simple instruments such as a
@@ -1691,9 +1705,9 @@ export default function DestinationsPage() {
                           is responsible for further developing and checking the
                           quality guidelines of the entire industry. As
                           Germany&apos;s ambassador to the ICF, he is also kept
-                          up to date on improvements in camp and training quality
-                          worldwide and adapts these as quickly as possible to
-                          our own camps.
+                          up to date on improvements in camp and training
+                          quality worldwide and adapts these as quickly as
+                          possible to our own camps.
                         </p>
                       </div>
                     </div>
@@ -1710,9 +1724,9 @@ export default function DestinationsPage() {
                         <p>
                           Of course, all parents receive a number from us, which
                           allows them to reach us 24 hours a day in an
-                          emergency. If an emergency occurs at your home, you can
-                          inform us immediately and we can decide together how,
-                          when and whether to inform your child.
+                          emergency. If an emergency occurs at your home, you
+                          can inform us immediately and we can decide together
+                          how, when and whether to inform your child.
                         </p>
                       </div>
                     </div>

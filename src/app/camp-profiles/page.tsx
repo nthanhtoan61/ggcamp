@@ -22,7 +22,7 @@ export default function CampProfilesPage() {
     const applyFilters = () => {
       const hash = window.location.hash;
       const searchParams = new URLSearchParams(window.location.search);
-
+      
       let field4 = "";
       let field5 = "";
       let field6 = "";
@@ -546,15 +546,15 @@ export default function CampProfilesPage() {
               </h2>
             </div>
           </div>
-          <form
-            id="filter-form"
-            method="GET"
-            action="/camp-profiles#searchform"
-            onSubmit={handleFilterSubmit}
+                <form
+                  id="filter-form"
+                  method="GET"
+                  action="/camp-profiles#searchform"
+                  onSubmit={handleFilterSubmit}
             className="uk-grid uk-grid-small uk-child-width-1-4@m uk-child-width-1-1"
-            uk-grid=""
-          >
-            <div className="uk-width-1-4@m">
+                  uk-grid=""
+                >
+                  <div className="uk-width-1-4@m">
               <label
                 className="uk-form-label"
                 style={{
@@ -566,47 +566,47 @@ export default function CampProfilesPage() {
               >
                 PROGRAMS & COURSES
               </label>
-              <select
-                id="field_4_select"
-                className="multiselect"
-                data-hidden="field_4"
-                multiple
-              >
+                    <select
+                      id="field_4_select"
+                      className="multiselect"
+                      data-hidden="field_4"
+                      multiple
+                    >
                 <option value="adventure">Adventure, Sport and Creative</option>
-                <option value="fishing">Fishing</option>
-                <option value="arts-crafts">Arts & Crafts</option>
-                <option value="coding">Coding</option>
-                <option value="german">German course</option>
-                <option value="englisch">English course</option>
-                <option value="englisch-toefl">
-                  English course (TOEFL exam)
-                </option>
-                <option value="soccer">Soccer</option>
-                <option value="husky">Husky</option>
-                <option value="icit">
-                  International Counselor in Training (ICIT)
-                </option>
-                <option value="top-rope">
-                  Climbing course (Top Rope certificate)
-                </option>
-                <option value="leadership">Leadership</option>
-                <option value="water-sports">Multi Water Adventure</option>
-                <option value="horseback">Horseback Riding</option>
-                <option value="dlrg">Lifeguard course (DLRG bronze)</option>
-                <option value="swimming">Swimming course</option>
-                <option value="sailing">Sailing</option>
-                <option value="skating">Skating</option>
-                <option value="space">Space Exploration</option>
-                <option value="spanish">Spanish course</option>
-                <option value="survival">Survival</option>
-                <option value="dancing">Dancing</option>
+                      <option value="fishing">Fishing</option>
+                      <option value="arts-crafts">Arts & Crafts</option>
+                      <option value="coding">Coding</option>
+                      <option value="german">German course</option>
+                      <option value="englisch">English course</option>
+                      <option value="englisch-toefl">
+                        English course (TOEFL exam)
+                      </option>
+                      <option value="soccer">Soccer</option>
+                      <option value="husky">Husky</option>
+                      <option value="icit">
+                        International Counselor in Training (ICIT)
+                      </option>
+                      <option value="top-rope">
+                        Climbing course (Top Rope certificate)
+                      </option>
+                      <option value="leadership">Leadership</option>
+                      <option value="water-sports">Multi Water Adventure</option>
+                      <option value="horseback">Horseback Riding</option>
+                      <option value="dlrg">Lifeguard course (DLRG bronze)</option>
+                      <option value="swimming">Swimming course</option>
+                      <option value="sailing">Sailing</option>
+                      <option value="skating">Skating</option>
+                      <option value="space">Space Exploration</option>
+                      <option value="spanish">Spanish course</option>
+                      <option value="survival">Survival</option>
+                      <option value="dancing">Dancing</option>
                 <option value="diving">Diving course (PADI Open Water)</option>
-                <option value="tennis">Tennis</option>
-                <option value="windsurf">Windsurfing</option>
-              </select>
-              <input type="hidden" id="field_4" name="field_4" value="" />
-            </div>
-            <div className="uk-width-1-4@m">
+                      <option value="tennis">Tennis</option>
+                      <option value="windsurf">Windsurfing</option>
+                    </select>
+                    <input type="hidden" id="field_4" name="field_4" value="" />
+                  </div>
+                  <div className="uk-width-1-4@m">
               <label
                 className="uk-form-label"
                 style={{
@@ -618,19 +618,19 @@ export default function CampProfilesPage() {
               >
                 HOLIDAY
               </label>
-              <select
-                id="field_5_select"
-                className="multiselect"
-                data-hidden="field_5"
-                multiple
-              >
-                <option value="spring">Spring</option>
-                <option value="summer">Summer</option>
-                <option value="autumn">Autumn</option>
-              </select>
-              <input type="hidden" id="field_5" name="field_5" value="" />
-            </div>
-            <div className="uk-width-1-4@m">
+                    <select
+                      id="field_5_select"
+                      className="multiselect"
+                      data-hidden="field_5"
+                      multiple
+                    >
+                      <option value="spring">Spring</option>
+                      <option value="summer">Summer</option>
+                      <option value="autumn">Autumn</option>
+                    </select>
+                    <input type="hidden" id="field_5" name="field_5" value="" />
+                  </div>
+                  <div className="uk-width-1-4@m">
               <label
                 className="uk-form-label"
                 style={{
@@ -642,21 +642,21 @@ export default function CampProfilesPage() {
               >
                 LOCATION
               </label>
-              <select
-                id="field_6_select"
-                className="multiselect"
-                data-hidden="field_6"
-                multiple
-              >
-                <option value="northern-germany">Northern Germany</option>
-                <option value="west-germany">West Germany</option>
-                <option value="south-germany">South Germany</option>
-                <option value="england">England</option>
-                <option value="spain">Spain</option>
-              </select>
-              <input type="hidden" id="field_6" name="field_6" value="" />
-            </div>
-            <div className="uk-width-1-4@m">
+                    <select
+                      id="field_6_select"
+                      className="multiselect"
+                      data-hidden="field_6"
+                      multiple
+                    >
+                      <option value="northern-germany">Northern Germany</option>
+                      <option value="west-germany">West Germany</option>
+                      <option value="south-germany">South Germany</option>
+                      <option value="england">England</option>
+                      <option value="spain">Spain</option>
+                    </select>
+                    <input type="hidden" id="field_6" name="field_6" value="" />
+                  </div>
+                  <div className="uk-width-1-4@m">
               <label
                 className="uk-form-label"
                 style={{
@@ -669,21 +669,21 @@ export default function CampProfilesPage() {
                 AGE
               </label>
               <select id="field_7_select" name="field_7" className="uk-select">
-                <option value=""></option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-              </select>
-            </div>
+                      <option value=""></option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                    </select>
+                  </div>
             <div
               className="uk-width-1-1"
               style={{ marginTop: "1.5rem", textAlign: "center" }}
@@ -701,13 +701,13 @@ export default function CampProfilesPage() {
                 }}
               >
                 APPLY FILTER
-              </button>
-              <button
-                className="uk-button uk-button-secondary"
-                type="button"
-                onClick={() => {
-                  window.location.href = "/camp-profiles#searchform";
-                }}
+                    </button>
+                    <button
+                      className="uk-button uk-button-secondary"
+                      type="button"
+                      onClick={() => {
+                        window.location.href = "/camp-profiles#searchform";
+                      }}
                 style={{
                   textTransform: "uppercase",
                   fontWeight: "bold",
@@ -717,15 +717,15 @@ export default function CampProfilesPage() {
                 }}
               >
                 RESET
-              </button>
-            </div>
-          </form>
+                    </button>
+                  </div>
+                </form>
 
           <Script
             id="multiselect-init"
             strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
+                  dangerouslySetInnerHTML={{
+                    __html: `
                       document.addEventListener('DOMContentLoaded', function () {
                         if (typeof jQuery !== 'undefined' && typeof jQuery.fn.multiselect !== 'undefined') {
                           jQuery('.multiselect[multiple]').multiselect({
@@ -750,8 +750,8 @@ export default function CampProfilesPage() {
                         }
                       });
                     `,
-            }}
-          />
+                  }}
+                />
         </div>
       </div>
 

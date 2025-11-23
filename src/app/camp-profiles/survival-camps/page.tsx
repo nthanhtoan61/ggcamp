@@ -17,7 +17,9 @@ export default function SurvivalCampsPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg"
+            )})`,
           }}
         >
           <div
@@ -37,9 +39,7 @@ export default function SurvivalCampsPage() {
                   className="uk-panel uk-text-lead uk-margin uk-text-left"
                   uk-scrollspy-class=""
                 >
-                  <p>
-                    Learn essential survival skills in the great outdoors!
-                  </p>
+                  <p>Learn essential survival skills in the great outdoors!</p>
                 </div>
               </div>
             </div>
@@ -77,7 +77,11 @@ export default function SurvivalCampsPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>7 - 17 years<br />Separated by age groups</p>
+                <p>
+                  7 - 17 years
+                  <br />
+                  Separated by age groups
+                </p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -110,7 +114,11 @@ export default function SurvivalCampsPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />DE &amp; EN</p>
+                <p>
+                  Bilingual
+                  <br />
+                  DE &amp; EN
+                </p>
               </div>
             </div>
           </div>
@@ -356,16 +364,16 @@ export default function SurvivalCampsPage() {
                               swimming pool, Heide Park, Hamburg city trip
                             </li>
                             <li>
-                              Camp languages English/German: Learn new
-                              languages naturally in an international setting
+                              Camp languages English/German: Learn new languages
+                              naturally in an international setting
                             </li>
                             <li>
                               Full board for 7 days (Sun–Sat), 6 nights – with
                               freshly prepared meals
                             </li>
                             <li>
-                              24/7 all-round care: Our teamers are always
-                              there for you
+                              24/7 all-round care: Our teamers are always there
+                              for you
                             </li>
                             <li>
                               Digital detox approach: Phones and devices only
@@ -529,9 +537,7 @@ export default function SurvivalCampsPage() {
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
-                          <h4>
-                            Survival Camp in Northern Germany 🌲🔥🏕️
-                          </h4>
+                          <h4>Survival Camp in Northern Germany 🌲🔥🏕️</h4>
                           <p>
                             Learn how to survive in nature and master real
                             outdoor skills!
@@ -617,7 +623,7 @@ export default function SurvivalCampsPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -639,22 +645,53 @@ export default function SurvivalCampsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Our kids loooove Camp Adventure. Our daughter is going for
+                    the 4th time this year, our son for the 3rd, and even our
+                    little one has been once - a wonderfully organized camp with
+                    a super friendly team, a great location (Walsrode), and even
+                    during the Corona years, all the kids came home glowing,
+                    happily dirty, with new friendships and some puzzling games
+                    we couldn&apos;t solve for ages (I&apos;m talking about:
+                    &quot;I&apos;m making a triangle from...&quot;). Since then,
+                    our summer holidays are always planned around Camp Adventure
+                    - because C.A. is definitely booked every year :-) Huge
+                    thanks to all the amazing helpers!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Hannah H. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -663,4 +700,3 @@ export default function SurvivalCampsPage() {
     </>
   );
 }
-

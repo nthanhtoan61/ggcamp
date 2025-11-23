@@ -17,7 +17,9 @@ export default function EnglischcampsPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/48/01-Bath-English-Language-Camp-Common-Room-48c460e3.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/48/01-Bath-English-Language-Camp-Common-Room-48c460e3.jpg"
+            )})`,
           }}
         >
           <div
@@ -37,9 +39,7 @@ export default function EnglischcampsPage() {
                   className="uk-panel uk-text-lead uk-margin uk-text-left"
                   uk-scrollspy-class=""
                 >
-                  <p>
-                    Improve your English skills while having fun at camp!
-                  </p>
+                  <p>Improve your English skills while having fun at camp!</p>
                 </div>
               </div>
             </div>
@@ -78,7 +78,8 @@ export default function EnglischcampsPage() {
               </div>
               <div className="uk-panel uk-margin uk-text-center">
                 <p>
-                  Ages - 7 to 17 years<br />
+                  Ages - 7 to 17 years
+                  <br />
                   Separated by age groups
                 </p>
               </div>
@@ -92,8 +93,10 @@ export default function EnglischcampsPage() {
               </div>
               <div className="uk-panel uk-margin uk-text-center">
                 <p>
-                  Germany: Tents &amp; Lodges<br />
-                  UK: Boarding House<br />
+                  Germany: Tents &amp; Lodges
+                  <br />
+                  UK: Boarding House
+                  <br />
                   Spain: BISC Sailing Center
                 </p>
               </div>
@@ -118,7 +121,8 @@ export default function EnglischcampsPage() {
               </div>
               <div className="uk-panel uk-margin uk-text-center">
                 <p>
-                  Bilingual<br />
+                  Bilingual
+                  <br />
                   DE &amp; EN
                 </p>
               </div>
@@ -128,7 +132,10 @@ export default function EnglischcampsPage() {
       </div>
 
       {/* Language Section */}
-      <div id="Sprache" className="uk-section-default uk-section uk-padding-remove-top">
+      <div
+        id="Sprache"
+        className="uk-section-default uk-section uk-padding-remove-top"
+      >
         <div className="uk-container">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1">
@@ -321,16 +328,16 @@ export default function EnglischcampsPage() {
                     European Framework of Reference for Languages — without any
                     pressure, as you cannot fail. The test simply determines
                     your current language level. This certification is highly
-                    valuable, for example, to prove your English proficiency
-                    for international exchange programs.
+                    valuable, for example, to prove your English proficiency for
+                    international exchange programs.
                   </p>
                   <p>
                     The TOEFL® course is offered only with two-week language
                     courses and includes, in addition to the regular 40 English
-                    lessons, 10 extra lessons focused on exam preparation.
-                    These extra sessions concentrate on grammar, text analysis,
-                    and listening comprehension, and include a practice test to
-                    help you approach the exam with confidence and ease.
+                    lessons, 10 extra lessons focused on exam preparation. These
+                    extra sessions concentrate on grammar, text analysis, and
+                    listening comprehension, and include a practice test to help
+                    you approach the exam with confidence and ease.
                   </p>
                 </div>
                 <div id="page#3" className="uk-margin">
@@ -574,7 +581,7 @@ export default function EnglischcampsPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -596,22 +603,48 @@ export default function EnglischcampsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Excellent English Camp! Our children improved their English
+                    dramatically while having the time of their lives. Learning
+                    through games, activities, and daily conversations with
+                    native speakers was incredibly effective. They gained
+                    confidence and made international friends. Highly
+                    recommended!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        David P. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -620,4 +653,3 @@ export default function EnglischcampsPage() {
     </>
   );
 }
-

@@ -17,7 +17,9 @@ export default function HorsebackRidingPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg"
+            )})`,
           }}
         >
           <div
@@ -79,7 +81,11 @@ export default function HorsebackRidingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>7 - 17 years<br />Separated by age groups</p>
+                <p>
+                  7 - 17 years
+                  <br />
+                  Separated by age groups
+                </p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -112,7 +118,11 @@ export default function HorsebackRidingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>
+                  Bilingual
+                  <br />
+                  GER & EN
+                </p>
               </div>
             </div>
           </div>
@@ -146,8 +156,8 @@ export default function HorsebackRidingPage() {
                   </p>
                   <p>
                     Care, training, and unforgettable trail rides — the
-                    experienced trainers from the Altenwahlingen Equestrian
-                    Club will teach you how to handle horses properly. Whether
+                    experienced trainers from the Altenwahlingen Equestrian Club
+                    will teach you how to handle horses properly. Whether
                     you&apos;re just starting out or want to improve your
                     skills, this is the place for you.
                   </p>
@@ -292,8 +302,7 @@ export default function HorsebackRidingPage() {
                               <strong>
                                 Riding 4 days a week, 2 hours each:
                               </strong>{" "}
-                              Intensive riding lessons at a nearby riding
-                              stable
+                              Intensive riding lessons at a nearby riding stable
                             </li>
                             <li>
                               <strong>For all levels:</strong> Beginners and
@@ -316,9 +325,7 @@ export default function HorsebackRidingPage() {
                               pool, Heide Park, and Hamburg trip
                             </li>
                             <li>
-                              <strong>
-                                Camp language English/German:
-                              </strong>{" "}
+                              <strong>Camp language English/German:</strong>{" "}
                               Learn languages playfully in an international
                               atmosphere
                             </li>
@@ -364,29 +371,7 @@ export default function HorsebackRidingPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <h2 className="uk-h2 uk-text-center">Booking</h2>
-              <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
-              <div className="uk-panel uk-margin">
-                <div style={{ textAlign: "center" }}>
-                  <iframe
-                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/horseridingwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
-                    allowFullScreen={true}
-                    width="1000"
-                    height="1700"
-                    frameBorder="0"
-                    allowFullScreen={true}
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
       {/* ProvenExpert Widget */}
       <div className="uk-section-default uk-section">
@@ -410,4 +395,3 @@ export default function HorsebackRidingPage() {
     </>
   );
 }
-

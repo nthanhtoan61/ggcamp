@@ -17,7 +17,9 @@ export default function SoccerPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/dd/11-Soccer-Camps-dda0e3d8.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/dd/11-Soccer-Camps-dda0e3d8.jpg"
+            )})`,
           }}
         >
           <div
@@ -80,7 +82,11 @@ export default function SoccerPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Ages 7 - 17<br />Separated by age groups</p>
+                <p>
+                  Ages 7 - 17
+                  <br />
+                  Separated by age groups
+                </p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -92,8 +98,10 @@ export default function SoccerPage() {
               </div>
               <div className="uk-panel uk-margin uk-text-center">
                 <p>
-                  Germany: Tents & Lodges<br />
-                  GB: Boarding House<br />
+                  Germany: Tents & Lodges
+                  <br />
+                  GB: Boarding House
+                  <br />
                   Spain: BISC Sailing Center
                 </p>
               </div>
@@ -117,7 +125,11 @@ export default function SoccerPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>
+                  Bilingual
+                  <br />
+                  GER & EN
+                </p>
               </div>
             </div>
           </div>
@@ -160,7 +172,10 @@ export default function SoccerPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1">
               <div className="uk-margin uk-text-center">
-                <div className="uk-grid uk-child-width-1-1 uk-child-width-1-4@m uk-grid-match" uk-grid="parallax: 0;">
+                <div
+                  className="uk-grid uk-child-width-1-1 uk-child-width-1-4@m uk-grid-match"
+                  uk-grid="parallax: 0;"
+                >
                   <div>
                     <div className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child">
                       <Image
@@ -312,13 +327,25 @@ export default function SoccerPage() {
 
       {/* Booking Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
+        <div
+          className="uk-container uk-container-large"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <div
+            className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin"
+            style={{ width: "100%", maxWidth: "1200px" }}
+          >
             <div className="uk-width-1-1@m">
               <h2 className="uk-h2 uk-text-center">Booking</h2>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
               <div className="uk-panel uk-margin">
-                <div style={{ textAlign: "center" }}>
+                <div
+                  style={{
+                    textAlign: "center",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/soccerwal"
                     title="Bookacamp, die Buchungsplattform von Camp Adventure"
@@ -327,6 +354,7 @@ export default function SoccerPage() {
                     height="1550"
                     frameBorder="0"
                     allowFullScreen={true}
+                    style={{ margin: "0 auto" }}
                   ></iframe>
                 </div>
               </div>
@@ -335,20 +363,45 @@ export default function SoccerPage() {
         </div>
       </div>
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Fantastic Soccer Camp! Our son loved every minute. The
+                    training was professional, the coaches were amazing, and he
+                    learned so much about teamwork and technique. The
+                    combination of soccer and camp activities was perfect.
+                    We&apos;ll definitely be back!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Andreas W. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -357,4 +410,3 @@ export default function SoccerPage() {
     </>
   );
 }
-

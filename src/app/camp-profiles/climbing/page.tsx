@@ -579,7 +579,7 @@ export default function ClimbingPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -601,7 +601,7 @@ export default function ClimbingPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* ProvenExpert Widget */}
       <div className="uk-section-default uk-section">

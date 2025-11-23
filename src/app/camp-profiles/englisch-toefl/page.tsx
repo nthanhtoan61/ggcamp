@@ -17,7 +17,9 @@ export default function EnglischToeflPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/48/01-Bath-English-Language-Camp-Common-Room-48c460e3.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/48/01-Bath-English-Language-Camp-Common-Room-48c460e3.jpg"
+            )})`,
           }}
         >
           <div
@@ -133,17 +135,17 @@ export default function EnglischToeflPage() {
                 </p>
                 <p>
                   At the end of the course you will take an exam to achieve the
-                  TOEFL® certificate. The great thing is that you can&apos;t fail
-                  the test. It just measures your ability to use and understand
-                  English as it&apos;s read, written, heard and spoken according
-                  to the CEFR – the Common European Framework of Reference for
-                  Languages (A1 to C2).
+                  TOEFL® certificate. The great thing is that you can&apos;t
+                  fail the test. It just measures your ability to use and
+                  understand English as it&apos;s read, written, heard and
+                  spoken according to the CEFR – the Common European Framework
+                  of Reference for Languages (A1 to C2).
                 </p>
                 <p>
-                  Attending this special course is definitely worth it as you will
-                  receive a certificate that not only proves your level of English
-                  but is also accepted at schools worldwide in case you consider
-                  to spend a school year abroad.
+                  Attending this special course is definitely worth it as you
+                  will receive a certificate that not only proves your level of
+                  English but is also accepted at schools worldwide in case you
+                  consider to spend a school year abroad.
                 </p>
               </div>
             </div>
@@ -156,7 +158,10 @@ export default function EnglischToeflPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match" uk-grid="">
+              <div
+                className="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match"
+                uk-grid=""
+              >
                 <div>
                   <div className="uk-card uk-card-default uk-card-body">
                     <h3 className="uk-h3">Germany</h3>
@@ -174,9 +179,7 @@ export default function EnglischToeflPage() {
                 <div>
                   <div className="uk-card uk-card-default uk-card-body">
                     <h3 className="uk-h3">England</h3>
-                    <p>
-                      TOEFL® courses at Bath University and Rossall School.
-                    </p>
+                    <p>TOEFL® courses at Bath University and Rossall School.</p>
                     <Link
                       href="/destinations/en-england-bath-university"
                       className="uk-button uk-button-primary"
@@ -192,7 +195,7 @@ export default function EnglischToeflPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -214,22 +217,48 @@ export default function EnglischToeflPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Excellent TOEFL preparation! Our teenager improved their
+                    English significantly and passed the TOEFL exam with flying
+                    colors. The combination of test preparation and immersive
+                    language learning at camp was incredibly effective. The
+                    instructors were knowledgeable and supportive throughout the
+                    process.
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Jennifer L. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -238,4 +267,3 @@ export default function EnglischToeflPage() {
     </>
   );
 }
-

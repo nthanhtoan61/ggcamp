@@ -33,7 +33,9 @@ export default function CornwallPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/0a/sprache_header-0aad37bf.webp")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/0a/sprache_header-0aad37bf.webp"
+            )})`,
           }}
         >
           <div
@@ -49,7 +51,10 @@ export default function CornwallPage() {
                 >
                   Summer Language Trip 2025 to England
                 </h1>
-                <div className="uk-panel uk-text-lead uk-margin uk-text-center" uk-scrollspy-class="">
+                <div
+                  className="uk-panel uk-text-lead uk-margin uk-text-center"
+                  uk-scrollspy-class=""
+                >
                   <p>Learn, improve and more English</p>
                 </div>
               </div>
@@ -77,7 +82,10 @@ export default function CornwallPage() {
       {/* Quote Section */}
       <div className="uk-section-default uk-section-overlap uk-section uk-section-small">
         <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge" uk-grid="">
+          <div
+            className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge"
+            uk-grid=""
+          >
             <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
               <div className="uk-panel uk-width-1-1">
                 <div uk-scrollspy-class="">
@@ -127,7 +135,10 @@ export default function CornwallPage() {
         <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-h5 uk-text-center" uk-scrollspy-class="uk-animation-slide-left-medium">
+              <div
+                className="uk-h5 uk-text-center"
+                uk-scrollspy-class="uk-animation-slide-left-medium"
+              >
                 England
               </div>
               <h2
@@ -152,9 +163,14 @@ export default function CornwallPage() {
                   uk-scrollspy-class="uk-animation-slide-right-small"
                 >
                   <li className="el-item">
-                    <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                    <div
+                      className="uk-child-width-expand@m uk-grid-small"
+                      uk-grid=""
+                    >
                       <div className="uk-width-medium@m uk-text-break">
-                        <div className="el-title uk-margin-remove uk-h6">Location</div>
+                        <div className="el-title uk-margin-remove uk-h6">
+                          Location
+                        </div>
                       </div>
                       <div>
                         <div className="el-content uk-panel">
@@ -164,9 +180,14 @@ export default function CornwallPage() {
                     </div>
                   </li>
                   <li className="el-item">
-                    <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                    <div
+                      className="uk-child-width-expand@m uk-grid-small"
+                      uk-grid=""
+                    >
                       <div className="uk-width-medium@m uk-text-break">
-                        <div className="el-title uk-margin-remove uk-h6">Age</div>
+                        <div className="el-title uk-margin-remove uk-h6">
+                          Age
+                        </div>
                       </div>
                       <div>
                         <div className="el-content uk-panel">
@@ -176,9 +197,14 @@ export default function CornwallPage() {
                     </div>
                   </li>
                   <li className="el-item">
-                    <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                    <div
+                      className="uk-child-width-expand@m uk-grid-small"
+                      uk-grid=""
+                    >
                       <div className="uk-width-medium@m uk-text-break">
-                        <div className="el-title uk-margin-remove uk-h6">Price</div>
+                        <div className="el-title uk-margin-remove uk-h6">
+                          Price
+                        </div>
                       </div>
                       <div>
                         <div className="el-content uk-panel">
@@ -188,9 +214,14 @@ export default function CornwallPage() {
                     </div>
                   </li>
                   <li className="el-item">
-                    <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                    <div
+                      className="uk-child-width-expand@m uk-grid-small"
+                      uk-grid=""
+                    >
                       <div className="uk-width-medium@m uk-text-break">
-                        <div className="el-title uk-margin-remove uk-h6">Duration</div>
+                        <div className="el-title uk-margin-remove uk-h6">
+                          Duration
+                        </div>
                       </div>
                       <div>
                         <div className="el-content uk-panel">
@@ -200,23 +231,31 @@ export default function CornwallPage() {
                     </div>
                   </li>
                   <li className="el-item">
-                    <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                    <div
+                      className="uk-child-width-expand@m uk-grid-small"
+                      uk-grid=""
+                    >
                       <div className="uk-width-medium@m uk-text-break">
-                        <div className="el-title uk-margin-remove uk-h6">Accommodation</div>
+                        <div className="el-title uk-margin-remove uk-h6">
+                          Accommodation
+                        </div>
                       </div>
                       <div>
                         <div className="el-content uk-panel">
-                          <p>
-                            Cornwall On Campus & London Youth Hostel
-                          </p>
+                          <p>Cornwall On Campus & London Youth Hostel</p>
                         </div>
                       </div>
                     </div>
                   </li>
                   <li className="el-item">
-                    <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                    <div
+                      className="uk-child-width-expand@m uk-grid-small"
+                      uk-grid=""
+                    >
                       <div className="uk-width-medium@m uk-text-break">
-                        <div className="el-title uk-margin-remove uk-h6">Courses</div>
+                        <div className="el-title uk-margin-remove uk-h6">
+                          Courses
+                        </div>
                       </div>
                       <div>
                         <div className="el-content uk-panel">
@@ -226,25 +265,47 @@ export default function CornwallPage() {
                     </div>
                   </li>
                 </ul>
-                <div className="uk-margin uk-text-center" uk-scrollspy-class="uk-animation-fade">
-                  <div className="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center" uk-grid="">
+                <div
+                  className="uk-margin uk-text-center"
+                  uk-scrollspy-class="uk-animation-fade"
+                >
+                  <div
+                    className="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center"
+                    uk-grid=""
+                  >
                     <div className="el-item">
-                      <a className="el-content uk-button uk-button-default" href="#Profile" uk-scroll="">
+                      <a
+                        className="el-content uk-button uk-button-default"
+                        href="#Profile"
+                        uk-scroll=""
+                      >
                         Courses
                       </a>
                     </div>
                     <div className="el-item">
-                      <a className="el-content uk-button uk-button-default" href="#Daten" uk-scroll="">
+                      <a
+                        className="el-content uk-button uk-button-default"
+                        href="#Daten"
+                        uk-scroll=""
+                      >
                         Dates & Prices
                       </a>
                     </div>
                     <div className="el-item">
-                      <a className="el-content uk-button uk-button-default" href="#Transfers" uk-scroll="">
+                      <a
+                        className="el-content uk-button uk-button-default"
+                        href="#Transfers"
+                        uk-scroll=""
+                      >
                         Transfers
                       </a>
                     </div>
                     <div className="el-item">
-                      <a className="el-content uk-button uk-button-default" href="#Buchung" uk-scroll="">
+                      <a
+                        className="el-content uk-button uk-button-default"
+                        href="#Buchung"
+                        uk-scroll=""
+                      >
                         Booking
                       </a>
                     </div>
@@ -262,7 +323,10 @@ export default function CornwallPage() {
           <div className="uk-margin-medium uk-container uk-container-small">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1">
               <div className="uk-width-1-1@m">
-                <div className="uk-panel uk-text-lead uk-margin" uk-scrollspy-class="">
+                <div
+                  className="uk-panel uk-text-lead uk-margin"
+                  uk-scrollspy-class=""
+                >
                   <p>Locations – Cornwall & London: the best of both worlds</p>
                 </div>
                 <div
@@ -274,14 +338,13 @@ export default function CornwallPage() {
                     sides of England – Cornwall and London. In Cornwall, the
                     sunny south of the country, endless beaches, impressive
                     cliffs and picturesque coastal towns await. Our campus is
-                    located in Falmouth, a safe and lively port city with
-                    cafés, street food, small shops and real beach life.
-                    Everything is within easy walking distance – perfect for
-                    young people who want to experience adventure, language and
-                    nature. The mild climate, the family atmosphere and the
-                    relaxed feeling of life make Cornwall an ideal destination
-                    for youth travel – sun, English and new friendships
-                    included.
+                    located in Falmouth, a safe and lively port city with cafés,
+                    street food, small shops and real beach life. Everything is
+                    within easy walking distance – perfect for young people who
+                    want to experience adventure, language and nature. The mild
+                    climate, the family atmosphere and the relaxed feeling of
+                    life make Cornwall an ideal destination for youth travel –
+                    sun, English and new friendships included.
                   </p>
                   <p>
                     After the stay in the south, it&apos;s on to London – the
@@ -292,8 +355,8 @@ export default function CornwallPage() {
                     world-famous sights make London loud, lively and inspiring.
                   </p>
                   <p>
-                    Both scenically and culturally, this combination is unique
-                    – it makes real England accessible to young people up close
+                    Both scenically and culturally, this combination is unique –
+                    it makes real England accessible to young people up close
                     and is lived Learning by Living.
                   </p>
                 </div>
@@ -352,14 +415,14 @@ export default function CornwallPage() {
                   <p>
                     In Cornwall, participants stay on a modern campus in
                     Falmouth, just a few minutes from the beach and the city.
-                    The young people live in small shared apartments with
-                    double or single rooms as well as their own counselor room.
-                    Modern apartments with a common room and kitchen provide a
-                    real campus feeling – cooking together, chatting and
-                    relaxing included. The grounds are green, safe and perfectly
-                    located – short distances to lessons, sports and the sea
-                    offer maximum freedom. The counselors are always nearby –
-                    with 24/7 supervision, heart and overview. A familiar
+                    The young people live in small shared apartments with double
+                    or single rooms as well as their own counselor room. Modern
+                    apartments with a common room and kitchen provide a real
+                    campus feeling – cooking together, chatting and relaxing
+                    included. The grounds are green, safe and perfectly located
+                    – short distances to lessons, sports and the sea offer
+                    maximum freedom. The counselors are always nearby – with
+                    24/7 supervision, heart and overview. A familiar
                     togetherness quickly develops here – almost like in a small
                     village, just with beach life!
                   </p>
@@ -372,8 +435,8 @@ export default function CornwallPage() {
                     with their own bathroom are comfortable and family-friendly.
                     Our counselors are also available around the clock for the
                     participants here. From the accommodation you start directly
-                    into London life – sightseeing, shopping, street food &
-                    city vibes are just around the corner.
+                    into London life – sightseeing, shopping, street food & city
+                    vibes are just around the corner.
                   </p>
                   <p>
                     From the quiet camp village to the pulsating metropolis –
@@ -385,15 +448,15 @@ export default function CornwallPage() {
                     <br />
                     And who knows – maybe you&apos;ll take this feeling home
                     with you and think: I could imagine living like this for
-                    longer – very close to language, culture and the English
-                    way of life.
+                    longer – very close to language, culture and the English way
+                    of life.
                   </p>
                   <p>
                     <span data-teams="true">
                       <i>
                         <em>
-                          Please note: The organizer of this trip is our
-                          Spanish company Outdoor Education Spain S.L.
+                          Please note: The organizer of this trip is our Spanish
+                          company Outdoor Education Spain S.L.
                         </em>
                       </i>
                     </span>
@@ -412,19 +475,22 @@ export default function CornwallPage() {
             <div className="uk-width-1-1@m">
               <h2 className="uk-h2 uk-text-center" uk-scrollspy-class="">
                 <p>
-                  Activities – Language Camp Cornwall & London: the best of
-                  both worlds!
+                  Activities – Language Camp Cornwall & London: the best of both
+                  worlds!
                 </p>
               </h2>
-              <div className="uk-divider-icon uk-width-medium uk-margin-auto" uk-scrollspy-class=""></div>
+              <div
+                className="uk-divider-icon uk-width-medium uk-margin-auto"
+                uk-scrollspy-class=""
+              ></div>
               <div
                 className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin"
                 uk-scrollspy-class="uk-animation-slide-right-medium"
               >
                 <p>
                   Your adventure starts with the journey – on the legendary
-                  night train from London to Cornwall! The perfect place to
-                  grow together into an international community from the first
+                  night train from London to Cornwall! The perfect place to grow
+                  together into an international community from the first
                   minute. The next morning you wake up in sunny southwest
                   England – ready for camp life!
                 </p>
@@ -458,7 +524,10 @@ export default function CornwallPage() {
               <h2 className="uk-h2 uk-text-center" uk-scrollspy-class="">
                 Language Courses in Summer Camp
               </h2>
-              <div className="uk-divider-icon uk-width-medium uk-margin-auto" uk-scrollspy-class=""></div>
+              <div
+                className="uk-divider-icon uk-width-medium uk-margin-auto"
+                uk-scrollspy-class=""
+              ></div>
               <div className="uk-panel uk-margin" uk-scrollspy-class="">
                 <p>
                   The ability to communicate in other languages is simply a
@@ -468,9 +537,9 @@ export default function CornwallPage() {
                   are exclusively led by English native speakers, in
                   internationally mixed classes with a maximum of 12 students.
                   With the help of a written and oral placement test, our
-                  experienced teachers ensure that your children are placed in
-                  a course that corresponds to their existing language skills.
-                  Per week they can expect 20 holiday-appropriate lessons of 45
+                  experienced teachers ensure that your children are placed in a
+                  course that corresponds to their existing language skills. Per
+                  week they can expect 20 holiday-appropriate lessons of 45
                   minutes each, which do not represent a continuation of normal
                   school lessons, but simply advance them linguistically with a
                   lot of fun. How intensively the children want to learn English
@@ -483,7 +552,10 @@ export default function CornwallPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <div className="uk-margin uk-text-left@m uk-text-center">
-                <div className="uk-grid uk-child-width-1-1 uk-grid-divider uk-grid-match" uk-grid="">
+                <div
+                  className="uk-grid uk-child-width-1-1 uk-grid-divider uk-grid-match"
+                  uk-grid=""
+                >
                   <div>
                     <div className="el-item uk-panel" uk-scrollspy-class="">
                       <div className="uk-grid-large" uk-grid="">
@@ -505,18 +577,18 @@ export default function CornwallPage() {
                           </h2>
                           <div className="el-content uk-panel uk-margin-top">
                             <p>
-                              In our Classic courses, kids improve their language
-                              skills playfully and practically. With interesting,
-                              age-appropriate topics and holiday-appropriate
-                              methods, we bring them closer to the language, also
-                              outside the classroom. They internalize vocabulary
-                              through daily use and not through mindless
-                              memorization. The constant contact with the
-                              English-speaking counselors ensures the correct
-                              pronunciation. We will inspire your children for
-                              the English language and ensure that they start the
-                              new school year strengthened and motivated after the
-                              holidays. Promise!
+                              In our Classic courses, kids improve their
+                              language skills playfully and practically. With
+                              interesting, age-appropriate topics and
+                              holiday-appropriate methods, we bring them closer
+                              to the language, also outside the classroom. They
+                              internalize vocabulary through daily use and not
+                              through mindless memorization. The constant
+                              contact with the English-speaking counselors
+                              ensures the correct pronunciation. We will inspire
+                              your children for the English language and ensure
+                              that they start the new school year strengthened
+                              and motivated after the holidays. Promise!
                             </p>
                           </div>
                         </div>
@@ -560,13 +632,13 @@ export default function CornwallPage() {
                               international exchange programs.
                               <br />
                               <br />
-                              The TOEFL® course includes an additional 10 lessons
-                              in addition to the regular 40 English units, which
-                              serve to prepare your children for the exam with
-                              special exercises. The focus is on grammar, text
-                              processing and listening comprehension and there is
-                              a &quot;test run&quot; so that they can go into the
-                              exam relaxed.
+                              The TOEFL® course includes an additional 10
+                              lessons in addition to the regular 40 English
+                              units, which serve to prepare your children for
+                              the exam with special exercises. The focus is on
+                              grammar, text processing and listening
+                              comprehension and there is a &quot;test run&quot;
+                              so that they can go into the exam relaxed.
                             </p>
                           </div>
                         </div>
@@ -594,27 +666,27 @@ export default function CornwallPage() {
                           </h2>
                           <div className="el-content uk-panel uk-margin-top">
                             <p>
-                              Do you love the sea and are you looking for action?
-                              Then windsurfing in Cornwall is exactly your thing!
-                              England&apos;s south coast offers perfect
-                              conditions: sun, wind and endless beaches. Whether
-                              you&apos;re a beginner or already have experience –
-                              our certified coaches will show you how to master
-                              the board and play with the wind.
+                              Do you love the sea and are you looking for
+                              action? Then windsurfing in Cornwall is exactly
+                              your thing! England&apos;s south coast offers
+                              perfect conditions: sun, wind and endless beaches.
+                              Whether you&apos;re a beginner or already have
+                              experience – our certified coaches will show you
+                              how to master the board and play with the wind.
                             </p>
                             <p>
                               At one of Cornwall&apos;s most beautiful surf
                               spots, you&apos;ll learn step by step in small
                               groups how to start safely, steer and stand your
                               first turns. Here it&apos;s not about competition,
-                              but about the feeling of becoming one with wind and
-                              water.
+                              but about the feeling of becoming one with wind
+                              and water.
                             </p>
                             <p>
                               As a side effect, you experience real Learning by
                               Living – speaking English, laughing, learning and
-                              enjoying beach life with participants from all over
-                              the world.
+                              enjoying beach life with participants from all
+                              over the world.
                             </p>
                             <p>
                               Windsurfing in Cornwall – adrenaline, team spirit
@@ -633,14 +705,20 @@ export default function CornwallPage() {
       </div>
 
       {/* Dates & Prices Section */}
-      <div className="uk-section-muted uk-section-overlap uk-section" id="Daten">
+      <div
+        className="uk-section-muted uk-section-overlap uk-section"
+        id="Daten"
+      >
         <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
             <div className="uk-width-1-1@m">
               <h2 className="uk-h2 uk-text-center" uk-scrollspy-class="">
                 Dates & Prices 2025
               </h2>
-              <div className="uk-divider-icon uk-width-medium uk-margin-auto" uk-scrollspy-class=""></div>
+              <div
+                className="uk-divider-icon uk-width-medium uk-margin-auto"
+                uk-scrollspy-class=""
+              ></div>
             </div>
           </div>
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
@@ -660,7 +738,11 @@ export default function CornwallPage() {
                     <a href="#">Services</a>
                   </li>
                 </ul>
-                <div id="js-4" className="uk-switcher" uk-height-match="row: false">
+                <div
+                  id="js-4"
+                  className="uk-switcher"
+                  uk-height-match="row: false"
+                >
                   <div className="el-item uk-margin-remove-first-child">
                     <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">
                       Courses
@@ -767,8 +849,8 @@ export default function CornwallPage() {
                         </li>
                         <li>
                           Membership in associations for children and youth
-                          travel in Germany and worldwide for constant improvement
-                          and external quality review
+                          travel in Germany and worldwide for constant
+                          improvement and external quality review
                         </li>
                         <li>Travel organizer insolvency insurance</li>
                         <li>
@@ -797,14 +879,20 @@ export default function CornwallPage() {
       </div>
 
       {/* Transfers Section */}
-      <div className="uk-section-muted uk-section-overlap uk-section" id="Transfers">
+      <div
+        className="uk-section-muted uk-section-overlap uk-section"
+        id="Transfers"
+      >
         <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
             <div className="uk-width-1-1@m">
               <h2 className="uk-h2 uk-text-center" uk-scrollspy-class="">
                 Arrival/Departure Info & Shuttle Services
               </h2>
-              <div className="uk-divider-icon uk-width-medium uk-margin-auto" uk-scrollspy-class=""></div>
+              <div
+                className="uk-divider-icon uk-width-medium uk-margin-auto"
+                uk-scrollspy-class=""
+              ></div>
             </div>
           </div>
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
@@ -821,7 +909,11 @@ export default function CornwallPage() {
                     <a href="#">Accompanied Group Flight 2026</a>
                   </li>
                 </ul>
-                <div id="js-6" className="uk-switcher" uk-height-match="row: false">
+                <div
+                  id="js-6"
+                  className="uk-switcher"
+                  uk-height-match="row: false"
+                >
                   <div className="el-item uk-margin-remove-first-child">
                     <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">
                       Independent Arrival and Departure
@@ -881,20 +973,45 @@ export default function CornwallPage() {
         </div>
       </div>
 
-      {/* ProvenExpert Widget */}
-      <div className="uk-section-default uk-section uk-padding-remove-top">
-        <div className="uk-container uk-container-large">
+      {/* Testimonial Section */}
+      <div className="uk-section-default uk-section">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Amazing Cornwall Language Camp experience! Our children
+                    improved their English while exploring beautiful Cornwall
+                    and visiting London. The combination of language learning,
+                    UK culture, and adventure was perfect. They came back more
+                    confident and with wonderful memories!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Victoria C. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -903,4 +1020,3 @@ export default function CornwallPage() {
     </>
   );
 }
-

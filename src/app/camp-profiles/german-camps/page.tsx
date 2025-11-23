@@ -17,7 +17,9 @@ export default function GermanCampsPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg"
+            )})`,
           }}
         >
           <div
@@ -38,7 +40,8 @@ export default function GermanCampsPage() {
                   uk-scrollspy-class=""
                 >
                   <p>
-                    Learn German in an authentic environment with native speakers!
+                    Learn German in an authentic environment with native
+                    speakers!
                   </p>
                 </div>
               </div>
@@ -77,7 +80,11 @@ export default function GermanCampsPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>7 - 17 years<br />Separated by age groups</p>
+                <p>
+                  7 - 17 years
+                  <br />
+                  Separated by age groups
+                </p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -142,13 +149,14 @@ export default function GermanCampsPage() {
                     you immediately put into practice in daily camp life –
                     through games, outings, or simply chilling with your new
                     friends from around the world. This is how learning comes to
-                    life – <strong>
+                    life –{" "}
+                    <strong>
                       and you&apos;ll get more confident with each passing day.
                     </strong>
                   </p>
                   <p>
-                    Secure your spot now and make German a part of your
-                    everyday life –{" "}
+                    Secure your spot now and make German a part of your everyday
+                    life –{" "}
                     <strong>
                       welcome to the German course in Lüneburg! 🚀
                     </strong>
@@ -362,8 +370,8 @@ export default function GermanCampsPage() {
                             </li>
                             <li>
                               Cool trips &amp; excursions for two-week stays:
-                              Overnight hike, swimming pool, Heidepark
-                              amusement park, and a trip to Hamburg
+                              Overnight hike, swimming pool, Heidepark amusement
+                              park, and a trip to Hamburg
                             </li>
                             <li>
                               Camp language English/German: Playful language
@@ -476,16 +484,19 @@ export default function GermanCampsPage() {
                             entire duration of the trip.
                             <br />✔ Protection for accidents &amp; doctor visits
                             <br />✔ Coverage for property damage
-                            <br />💰 Price: from USD45 per person and trip
-                            <br />📅 Valid from arrival/departure
-                            <br />🌍 Only for trips abroad
                             <br />
-                            <em>⚠ Important note:</em> Without foreign
-                            insurance coverage, medical costs will be at your
-                            own expense. We recommend having a cash reserve of
-                            USD500 or a credit card. Participants from outside
-                            the EU must provide proof of their own insurance
-                            before departure.
+                            💰 Price: from USD45 per person and trip
+                            <br />
+                            📅 Valid from arrival/departure
+                            <br />
+                            🌍 Only for trips abroad
+                            <br />
+                            <em>⚠ Important note:</em> Without foreign insurance
+                            coverage, medical costs will be at your own expense.
+                            We recommend having a cash reserve of USD500 or a
+                            credit card. Participants from outside the EU must
+                            provide proof of their own insurance before
+                            departure.
                           </p>
                           <p>
                             <em>
@@ -502,8 +513,9 @@ export default function GermanCampsPage() {
                             <br />✔ Valid until one day before departure
                             <br />✔ No matter the reason: illness, accident,
                             exams, or homesickness
-                            <br />💰 Price: USD45 (for a one-week stay) / USD85
-                            (for a multi-week stay)
+                            <br />
+                            💰 Price: USD45 (for a one-week stay) / USD85 (for a
+                            multi-week stay)
                           </p>
                           <p>
                             You can select all insurance options during the
@@ -607,8 +619,8 @@ export default function GermanCampsPage() {
         </div>
       </div>
 
-      {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* Booking & Testimonial Section
+      <div className="uk-section-default uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -630,22 +642,51 @@ export default function GermanCampsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    The best experience for kids, teens, and counselors!
+                    Adventure, international atmosphere, open-mindedness, and
+                    excellent team leaders and directors. A unique spirit that
+                    brings people together. Over 50 nations spend their best
+                    summer at the camp, no matter where they come from, their
+                    skin color, or size. A place of peace and equal opportunity.
+                    A true way of life. No wonder many counselors were campers
+                    for over a decade and are now the leaders. I love being part
+                    of it every year — a second home! I love Camp
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/GC9VaG3yszCdMvGk8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Ann-Christin V. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -654,4 +695,3 @@ export default function GermanCampsPage() {
     </>
   );
 }
-

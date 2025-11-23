@@ -17,7 +17,9 @@ export default function AdventureSportsCreativePage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/04/01-Abenteuercamp-Bogenschieen-044ac9af.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/04/01-Abenteuercamp-Bogenschieen-044ac9af.jpg"
+            )})`,
           }}
         >
           <div
@@ -115,7 +117,11 @@ export default function AdventureSportsCreativePage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>7 - 17 years<br />Separated by age groups</p>
+                <p>
+                  7 - 17 years
+                  <br />
+                  Separated by age groups
+                </p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -148,7 +154,11 @@ export default function AdventureSportsCreativePage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>
+                  Bilingual
+                  <br />
+                  GER & EN
+                </p>
               </div>
             </div>
           </div>
@@ -195,9 +205,14 @@ export default function AdventureSportsCreativePage() {
                   <div className="uk-position-relative">
                     <div className="uk-slider-items uk-grid">
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/04/01-Abenteuercamp-Bogenschieen-044ac9af.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/04/01-Abenteuercamp-Bogenschieen-044ac9af.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Child practicing archery in a forest setting – action-packed adventure camp in Walsrode"
@@ -207,9 +222,14 @@ export default function AdventureSportsCreativePage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/0e/08-Sommercamp-Walsrode-tents-inside-0ec7f7f4.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/0e/08-Sommercamp-Walsrode-tents-inside-0ec7f7f4.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Smiling boys sitting inside a shared camp tent – outdoor adventure vacation for kids in Walsrode summer camp"
@@ -219,9 +239,14 @@ export default function AdventureSportsCreativePage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Cozy wooden cabin with bunk beds – child-friendly accommodation at summer camp in Walsrode"
@@ -233,7 +258,10 @@ export default function AdventureSportsCreativePage() {
                     </div>
                   </div>
                   <div className="uk-margin-top" uk-inverse="">
-                    <ul className="el-nav uk-slider-nav uk-dotnav uk-flex-center" uk-margin=""></ul>
+                    <ul
+                      className="el-nav uk-slider-nav uk-dotnav uk-flex-center"
+                      uk-margin=""
+                    ></ul>
                   </div>
                 </div>
                 <div id="Accordion">
@@ -252,34 +280,50 @@ export default function AdventureSportsCreativePage() {
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <ul style={{ listStyleType: "disc" }}>
                             <li>
-                              <strong>Adventure, Sports & Creativity:</strong> 4 days of 2.5-hour profile session
+                              <strong>Adventure, Sports & Creativity:</strong> 4
+                              days of 2.5-hour profile session
                             </li>
                             <li>
                               <strong>For all levels & ages:</strong> 7-17 year
                             </li>
                             <li>
-                              <strong>Activity program beyond the profile sessions (day/evening):</strong> Outdoor, sports & creativity, campfire, disco, and more
+                              <strong>
+                                Activity program beyond the profile sessions
+                                (day/evening):
+                              </strong>{" "}
+                              Outdoor, sports & creativity, campfire, disco, and
+                              more
                             </li>
                             <li>
-                              <strong>Cool trips & excursions (for two-week stays):</strong> Overnight hike, swimming pool, Heide Park & Hamburg trip
+                              <strong>
+                                Cool trips & excursions (for two-week stays):
+                              </strong>{" "}
+                              Overnight hike, swimming pool, Heide Park &
+                              Hamburg trip
                             </li>
                             <li>
-                              <strong>Camp language:</strong> English/German – Learn the language naturally in an international atmosphere
+                              <strong>Camp language:</strong> English/German –
+                              Learn the language naturally in an international
+                              atmosphere
                             </li>
                             <li>
                               <strong>Accommodation:</strong> Tents & cabins
                             </li>
                             <li>
-                              Full board (7 days, Sun-Sat), 6 nights, freshly prepared meals
+                              Full board (7 days, Sun-Sat), 6 nights, freshly
+                              prepared meals
                             </li>
                             <li>
-                              <strong>24/7 all-around care:</strong> Our teamers are always there for you
+                              <strong>24/7 all-around care:</strong> Our teamers
+                              are always there for you
                             </li>
                             <li>
-                              <strong>Digital Detox approach:</strong> Phones & electronic devices only during siesta
+                              <strong>Digital Detox approach:</strong> Phones &
+                              electronic devices only during siesta
                             </li>
                             <li>
-                              <strong>Arrival & departure services:</strong> Shuttle service from train station/airport
+                              <strong>Arrival & departure services:</strong>{" "}
+                              Shuttle service from train station/airport
                             </li>
                           </ul>
                         </div>
@@ -292,9 +336,15 @@ export default function AdventureSportsCreativePage() {
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div id="jp_accordation_section_691a9ce46753e" className="jp_section_content">
+                        <div
+                          id="jp_accordation_section_691a9ce46753e"
+                          className="jp_section_content"
+                        >
                           <div className="uk-container">
-                            <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                            <div
+                              className="uk-grid tm-grid-expand uk-grid-margin"
+                              uk-grid=""
+                            >
                               <div className="uk-width-1-2@m">
                                 <div
                                   className="uk-position-relative uk-position-z-index uk-dark uk-margin"
@@ -325,7 +375,8 @@ export default function AdventureSportsCreativePage() {
                                         center: { lat: 52.8482, lng: 9.4721 },
                                         lazyload: true,
                                         library: "leaflet",
-                                        baseUrl: "/templates/yootheme/vendor/assets/leaflet/leaflet/dist",
+                                        baseUrl:
+                                          "/templates/yootheme/vendor/assets/leaflet/leaflet/dist",
                                       }),
                                     }}
                                   />
@@ -347,34 +398,47 @@ export default function AdventureSportsCreativePage() {
                               </div>
                               <div className="uk-width-1-2@m">
                                 <div className="uk-panel uk-margin">
-                                  <h4>Welcome to Walsrode – Your Adventure in the Lüneburger Heide!</h4>
+                                  <h4>
+                                    Welcome to Walsrode – Your Adventure in the
+                                    Lüneburger Heide!
+                                  </h4>
                                   <p>
-                                    Our Camp Adventure (Academy) in Walsrode is set in the
-                                    beautiful Lüneburger Heide, right between Bremen, Hamburg,
-                                    and Hanover. Just a short walk away, you&apos;ll find a charming
-                                    northern German village with traditional farms and
-                                    timber-framed houses – the perfect setting for an
-                                    unforgettable mix of adventure, sports, and creativity in
+                                    Our Camp Adventure (Academy) in Walsrode is
+                                    set in the beautiful Lüneburger Heide, right
+                                    between Bremen, Hamburg, and Hanover. Just a
+                                    short walk away, you&apos;ll find a charming
+                                    northern German village with traditional
+                                    farms and timber-framed houses – the perfect
+                                    setting for an unforgettable mix of
+                                    adventure, sports, and creativity in
                                     northern Germany.
                                   </p>
                                   <p>
-                                    Over 150,000 m² of Pure Adventure!<br />Our spacious
-                                    campgrounds are divided into three exciting zones: Beach
-                                    &amp; Water, Survival, and Creative. Go kayaking, bounce on
-                                    a water trampoline, build rafts, make fires, or climb
-                                    through the high ropes course – there&apos;s non-stop action
-                                    every day!
+                                    Over 150,000 m² of Pure Adventure!
+                                    <br />
+                                    Our spacious campgrounds are divided into
+                                    three exciting zones: Beach &amp; Water,
+                                    Survival, and Creative. Go kayaking, bounce
+                                    on a water trampoline, build rafts, make
+                                    fires, or climb through the high ropes
+                                    course – there&apos;s non-stop action every
+                                    day!
                                   </p>
                                   <p>
-                                    International Vibes &amp; Real Camp Spirit!<br />Our camp is
-                                    bilingual (English &amp; German) – meet campers from all
-                                    over the world and improve your English naturally as you go!
+                                    International Vibes &amp; Real Camp Spirit!
+                                    <br />
+                                    Our camp is bilingual (English &amp; German)
+                                    – meet campers from all over the world and
+                                    improve your English naturally as you go!
                                   </p>
                                   <p>
-                                    Whether you&apos;re a language lover, outdoor explorer, or
-                                    creative soul – discover all the profiles and activities
-                                    that make your camp experience one-of-a-kind.<br />We can&apos;t
-                                    wait to meet you!
+                                    Whether you&apos;re a language lover,
+                                    outdoor explorer, or creative soul –
+                                    discover all the profiles and activities
+                                    that make your camp experience
+                                    one-of-a-kind.
+                                    <br />
+                                    We can&apos;t wait to meet you!
                                   </p>
                                 </div>
                               </div>
@@ -390,13 +454,21 @@ export default function AdventureSportsCreativePage() {
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div id="jp_accordation_section_691a9ce467616" className="jp_section_content">
+                        <div
+                          id="jp_accordation_section_691a9ce467616"
+                          className="jp_section_content"
+                        >
                           <div className="uk-container">
-                            <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                            <div
+                              className="uk-grid tm-grid-expand uk-grid-margin"
+                              uk-grid=""
+                            >
                               <div className="uk-width-1-3@m">
                                 <div className="uk-margin">
                                   <Image
-                                    src={getTemplateImageUrl("yootheme/cache/1e/08-Sommercamp-Walsrode-tents-inside-1e26262a.jpg")}
+                                    src={getTemplateImageUrl(
+                                      "yootheme/cache/1e/08-Sommercamp-Walsrode-tents-inside-1e26262a.jpg"
+                                    )}
                                     width={1080}
                                     height={720}
                                     alt="Smiling boys sitting inside a shared camp tent – outdoor adventure vacation for kids in Walsrode summer camp"
@@ -406,7 +478,9 @@ export default function AdventureSportsCreativePage() {
                                 </div>
                                 <div className="uk-margin">
                                   <Image
-                                    src={getTemplateImageUrl("yootheme/cache/b6/05-Sommercamp-Walsrode-Huts-8-beds-b69c257e.jpg")}
+                                    src={getTemplateImageUrl(
+                                      "yootheme/cache/b6/05-Sommercamp-Walsrode-Huts-8-beds-b69c257e.jpg"
+                                    )}
                                     width={1080}
                                     height={720}
                                     alt="Cozy wooden cabin with bunk beds – child-friendly accommodation at summer camp in Walsrode"
@@ -419,19 +493,29 @@ export default function AdventureSportsCreativePage() {
                                 <div className="uk-panel uk-margin">
                                   <h4>Camp Life – Like a Little Village!</h4>
                                   <p>
-                                    At our international summer camp in Lower Saxony, you can
-                                    choose between our cozy tent village or the comfy Adventure
-                                    Lodges – it all depends on your sense of adventure!<br />🏕️
-                                    Tent Village: Spacious tents for 6–7 campers with wooden
-                                    floors and a loft area – the ultimate outdoor experience
-                                    under the stars.<br />🏡 Adventure Lodges: Comfortable
-                                    cabins with 4–8 beds, storage shelves, and seating areas.
-                                    <em
-                                    > (Please note: staying in a lodge comes at an extra
-                                    charge.)<br /></em
-                                    >Accommodations are separated by gender, so girls and boys
-                                    stay in their own tents or lodges. We also organize by age
-                                    group to make sure everyone feels right at home:
+                                    At our international summer camp in Lower
+                                    Saxony, you can choose between our cozy tent
+                                    village or the comfy Adventure Lodges – it
+                                    all depends on your sense of adventure!
+                                    <br />
+                                    🏕️ Tent Village: Spacious tents for 6–7
+                                    campers with wooden floors and a loft area –
+                                    the ultimate outdoor experience under the
+                                    stars.
+                                    <br />
+                                    🏡 Adventure Lodges: Comfortable cabins with
+                                    4–8 beds, storage shelves, and seating
+                                    areas.
+                                    <em>
+                                      {" "}
+                                      (Please note: staying in a lodge comes at
+                                      an extra charge.)
+                                      <br />
+                                    </em>
+                                    Accommodations are separated by gender, so
+                                    girls and boys stay in their own tents or
+                                    lodges. We also organize by age group to
+                                    make sure everyone feels right at home:
                                   </p>
                                   <ul>
                                     <li>Junior (7–12 years)</li>
@@ -439,14 +523,24 @@ export default function AdventureSportsCreativePage() {
                                     <li>Senior Plus (15–17 years)</li>
                                   </ul>
                                   <p>
-                                    Restroom and shower facilities are also separated by gender
-                                    and always close by.<br />Best of all: Our teamers live
-                                    right next door – they&apos;re available for you 24/7!<br />Good
-                                    to know:<br />For tents, bring your own sleeping bag and
-                                    sleeping mat.<br />For lodges, bring a fitted sheet and
-                                    either a sleeping bag or bedding set (available for rent if
-                                    needed).<br />You can choose your preferred accommodation
-                                    during the booking process – secure your spot now!
+                                    Restroom and shower facilities are also
+                                    separated by gender and always close by.
+                                    <br />
+                                    Best of all: Our teamers live right next
+                                    door – they&apos;re available for you 24/7!
+                                    <br />
+                                    Good to know:
+                                    <br />
+                                    For tents, bring your own sleeping bag and
+                                    sleeping mat.
+                                    <br />
+                                    For lodges, bring a fitted sheet and either
+                                    a sleeping bag or bedding set (available for
+                                    rent if needed).
+                                    <br />
+                                    You can choose your preferred accommodation
+                                    during the booking process – secure your
+                                    spot now!
                                   </p>
                                 </div>
                               </div>
@@ -462,13 +556,21 @@ export default function AdventureSportsCreativePage() {
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div id="jp_accordation_section_691a9ce46771a" className="jp_section_content">
+                        <div
+                          id="jp_accordation_section_691a9ce46771a"
+                          className="jp_section_content"
+                        >
                           <div className="uk-container">
-                            <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                            <div
+                              className="uk-grid tm-grid-expand uk-grid-margin"
+                              uk-grid=""
+                            >
                               <div className="uk-width-1-3@m">
                                 <div className="uk-margin">
                                   <Image
-                                    src={getTemplateImageUrl("yootheme/cache/56/12-Abenteuercamp-Creative-561e41c7.jpg")}
+                                    src={getTemplateImageUrl(
+                                      "yootheme/cache/56/12-Abenteuercamp-Creative-561e41c7.jpg"
+                                    )}
                                     width={1080}
                                     height={810}
                                     alt="Group of girls painting and crafting in a creative workshop – artistic holiday fun at Walsrode summer camp"
@@ -478,7 +580,9 @@ export default function AdventureSportsCreativePage() {
                                 </div>
                                 <div className="uk-margin">
                                   <Image
-                                    src={getTemplateImageUrl("yootheme/cache/7e/10-Abenteuercamp-Climbing-Tree-7e2c8878.jpg")}
+                                    src={getTemplateImageUrl(
+                                      "yootheme/cache/7e/10-Abenteuercamp-Climbing-Tree-7e2c8878.jpg"
+                                    )}
                                     width={1080}
                                     height={717}
                                     alt="Kids climbing safely on a log in the high ropes course – nature and adventure experience at Walsrode adventure camp"
@@ -489,42 +593,58 @@ export default function AdventureSportsCreativePage() {
                               </div>
                               <div className="uk-width-2-3@m">
                                 <div className="uk-panel uk-margin">
-                                  <h4>A Full Day of Adventure, Sports &amp; Creativity!</h4>
+                                  <h4>
+                                    A Full Day of Adventure, Sports &amp;
+                                    Creativity!
+                                  </h4>
                                   <p>
-                                    &quot;Adventure, Sports &amp; Creativity&quot; is the base program at
-                                    our Lüneburger Heide Camp – no extra booking needed! If you
-                                    don&apos;t choose an additional profile like Horseback Riding or
-                                    Survival, this is your go-to for an action-packed and varied
-                                    camp experience.
+                                    &quot;Adventure, Sports &amp;
+                                    Creativity&quot; is the base program at our
+                                    Lüneburger Heide Camp – no extra booking
+                                    needed! If you don&apos;t choose an
+                                    additional profile like Horseback Riding or
+                                    Survival, this is your go-to for an
+                                    action-packed and varied camp experience.
                                   </p>
                                   <p>
-                                    Every morning, you get to pick a new exciting activity –
-                                    whatever you&apos;re in the mood for!
+                                    Every morning, you get to pick a new
+                                    exciting activity – whatever you&apos;re in
+                                    the mood for!
                                   </p>
                                   <p>
-                                    ⛺ Outdoor Action &amp; Adventure: High ropes course,
-                                    archery, raft building, or survival training – challenge
-                                    your limits!<br />⚽ Sports &amp; Movement: Soccer,
-                                    volleyball, basketball, or splashing around in the lake –
-                                    get moving and have fun!<br />🎨 Creativity &amp; Chill:
-                                    Crafts, painting, reading, or baking – perfect for relaxing
+                                    ⛺ Outdoor Action &amp; Adventure: High
+                                    ropes course, archery, raft building, or
+                                    survival training – challenge your limits!
+                                    <br />⚽ Sports &amp; Movement: Soccer,
+                                    volleyball, basketball, or splashing around
+                                    in the lake – get moving and have fun!
+                                    <br />
+                                    🎨 Creativity &amp; Chill: Crafts, painting,
+                                    reading, or baking – perfect for relaxing
                                     moments at camp.
                                   </p>
                                   <p>
-                                    Learn English – Without Even Trying!<br />Our international
-                                    team brings the real camp spirit – full of energy,
-                                    adventure, and fun. And the best part? English becomes a
-                                    natural part of the day – whether you&apos;re playing sports,
-                                    doing creative projects, or chilling by the campfire.
+                                    Learn English – Without Even Trying!
+                                    <br />
+                                    Our international team brings the real camp
+                                    spirit – full of energy, adventure, and fun.
+                                    And the best part? English becomes a natural
+                                    part of the day – whether you&apos;re
+                                    playing sports, doing creative projects, or
+                                    chilling by the campfire.
                                   </p>
                                   <p>
-                                    Friendships That Last!<br />Shared adventures create real
-                                    connections – and many campers already plan their return
-                                    together for next summer. These are friendships that stick!
+                                    Friendships That Last!
+                                    <br />
+                                    Shared adventures create real connections –
+                                    and many campers already plan their return
+                                    together for next summer. These are
+                                    friendships that stick!
                                   </p>
                                   <p>
-                                    There&apos;s no room for boredom here – every day brings fresh
-                                    adventures, new sports challenges, and creative highlights
+                                    There&apos;s no room for boredom here –
+                                    every day brings fresh adventures, new
+                                    sports challenges, and creative highlights
                                     just for you!
                                   </p>
                                 </div>
@@ -541,13 +661,21 @@ export default function AdventureSportsCreativePage() {
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div id="jp_accordation_section_691a9ce4677ee" className="jp_section_content">
+                        <div
+                          id="jp_accordation_section_691a9ce4677ee"
+                          className="jp_section_content"
+                        >
                           <div className="uk-container">
-                            <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                            <div
+                              className="uk-grid tm-grid-expand uk-grid-margin"
+                              uk-grid=""
+                            >
                               <div className="uk-width-1-3@m">
                                 <div className="uk-margin">
                                   <Image
-                                    src={getTemplateImageUrl("yootheme/cache/7e/02-Sommercamp-Walsrode-Dining-Hall-inside-7e70a1df.jpg")}
+                                    src={getTemplateImageUrl(
+                                      "yootheme/cache/7e/02-Sommercamp-Walsrode-Dining-Hall-inside-7e70a1df.jpg"
+                                    )}
                                     width={1080}
                                     height={720}
                                     alt="Children eating together in the camp dining hall – shared meals and community spirit at Walsrode summer camp"
@@ -560,17 +688,27 @@ export default function AdventureSportsCreativePage() {
                                 <div className="uk-panel uk-margin">
                                   <h4>Food Everyone Loves!</h4>
                                   <p>
-                                    Three delicious meals a day – fresh, varied, and super
-                                    tasty! Whether you&apos;re vegetarian, gluten-free, or
-                                    lactose-intolerant – just let us know in advance, and we&apos;ve
-                                    got you covered.<br />Start your day with a hearty breakfast
-                                    buffet: fresh bread rolls, cold cuts, fruit, muesli, juice,
-                                    and tea.<br />At lunch and dinner, enjoy warm meals along
-                                    with a colorful salad bar.<br />Throughout the day, you&apos;ll
-                                    stay fueled with fresh fruit, afternoon snacks, and plenty
-                                    of water – perfect for all your camp adventures!<br />And
-                                    the best part? Everything is freshly cooked – no instant
-                                    soups, no bland cafeteria food. Just real meals that taste
+                                    Three delicious meals a day – fresh, varied,
+                                    and super tasty! Whether you&apos;re
+                                    vegetarian, gluten-free, or
+                                    lactose-intolerant – just let us know in
+                                    advance, and we&apos;ve got you covered.
+                                    <br />
+                                    Start your day with a hearty breakfast
+                                    buffet: fresh bread rolls, cold cuts, fruit,
+                                    muesli, juice, and tea.
+                                    <br />
+                                    At lunch and dinner, enjoy warm meals along
+                                    with a colorful salad bar.
+                                    <br />
+                                    Throughout the day, you&apos;ll stay fueled
+                                    with fresh fruit, afternoon snacks, and
+                                    plenty of water – perfect for all your camp
+                                    adventures!
+                                    <br />
+                                    And the best part? Everything is freshly
+                                    cooked – no instant soups, no bland
+                                    cafeteria food. Just real meals that taste
                                     great and give you the energy you need!
                                   </p>
                                 </div>
@@ -587,13 +725,21 @@ export default function AdventureSportsCreativePage() {
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div id="jp_accordation_section_691a9ce4678c1" className="jp_section_content">
+                        <div
+                          id="jp_accordation_section_691a9ce4678c1"
+                          className="jp_section_content"
+                        >
                           <div className="uk-container">
-                            <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                            <div
+                              className="uk-grid tm-grid-expand uk-grid-margin"
+                              uk-grid=""
+                            >
                               <div className="uk-width-1-3@m">
                                 <div className="uk-margin">
                                   <Image
-                                    src={getTemplateImageUrl("yootheme/cache/2e/Teamertraining_2017_60-2e2ec36d.jpg")}
+                                    src={getTemplateImageUrl(
+                                      "yootheme/cache/2e/Teamertraining_2017_60-2e2ec36d.jpg"
+                                    )}
                                     width={1920}
                                     height={1280}
                                     alt="Camp counselors warmly welcoming children – dedicated Camp Adventure team for supervised holiday programs"
@@ -606,22 +752,28 @@ export default function AdventureSportsCreativePage() {
                                 <div className="uk-panel uk-margin">
                                   <h4>Cared for Around the Clock!</h4>
                                   <p>
-                                    Our experienced and passionate teamers are there for you
-                                    24/7 – full of energy, positivity, and always ready to
-                                    listen. Whether it&apos;s a quick question or a bigger worry, you
-                                    can count on them anytime.
+                                    Our experienced and passionate teamers are
+                                    there for you 24/7 – full of energy,
+                                    positivity, and always ready to listen.
+                                    Whether it&apos;s a quick question or a
+                                    bigger worry, you can count on them anytime.
                                   </p>
                                   <p>
-                                    The best part?<br />Our team comes from all over the world
-                                    and brings that true international camp spirit – that&apos;s why
-                                    we speak both English and German!
+                                    The best part?
+                                    <br />
+                                    Our team comes from all over the world and
+                                    brings that true international camp spirit –
+                                    that&apos;s why we speak both English and
+                                    German!
                                   </p>
                                   <p>
-                                    This way, you&apos;ll naturally pick up both languages – while
-                                    playing sports, chatting by the campfire, or just hanging
-                                    out.<br />Our supervision ratio is between 1:7 and 1:10, so
-                                    you&apos;re always in good hands with our all-around care
-                                    package!
+                                    This way, you&apos;ll naturally pick up both
+                                    languages – while playing sports, chatting
+                                    by the campfire, or just hanging out.
+                                    <br />
+                                    Our supervision ratio is between 1:7 and
+                                    1:10, so you&apos;re always in good hands
+                                    with our all-around care package!
                                   </p>
                                 </div>
                               </div>
@@ -646,8 +798,8 @@ export default function AdventureSportsCreativePage() {
                           </p>
                           <ul>
                             <li>
-                              🚗 <em>Self-arrival: </em>Simply drop off and
-                              pick up your child yourself. You&apos;ll receive a
+                              🚗 <em>Self-arrival: </em>Simply drop off and pick
+                              up your child yourself. You&apos;ll receive a
                               detailed arrival guide via email 6 weeks before
                               the camp starts – making your trip as easy and
                               relaxed as possible.
@@ -655,17 +807,19 @@ export default function AdventureSportsCreativePage() {
                             <li>
                               🚌 <em>Shuttle service:</em> Since our Adventure
                               Camps are often located in remote natural areas,
-                              we offer convenient shuttles from nearby
-                              airports and train stations.
+                              we offer convenient shuttles from nearby airports
+                              and train stations.
                             </li>
                           </ul>
                           <p>
-                            <em>Important:</em><br />Shuttles run only on
-                            Sundays (arrival) and Saturdays (departure) within
-                            set time slots.<br />If you need transport outside
-                            of these windows, we can arrange a private shuttle
-                            for an additional fee – just reach out to us in
-                            advance.
+                            <em>Important:</em>
+                            <br />
+                            Shuttles run only on Sundays (arrival) and Saturdays
+                            (departure) within set time slots.
+                            <br />
+                            If you need transport outside of these windows, we
+                            can arrange a private shuttle for an additional fee
+                            – just reach out to us in advance.
                           </p>
                         </div>
                       </div>
@@ -680,18 +834,23 @@ export default function AdventureSportsCreativePage() {
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <h4>Peace of Mind for Every Adventure!</h4>
                           <p>
-                            From little mishaps to unexpected situations –
-                            with our Camp Adventure insurance package, your
-                            child is fully covered.
+                            From little mishaps to unexpected situations – with
+                            our Camp Adventure insurance package, your child is
+                            fully covered.
                           </p>
                           <p>
-                            Camp Adventure Insurance Package<br />Includes
-                            liability, accident, and health insurance for the
-                            entire duration of the trip.<br />✔ Coverage for
-                            accidents & doctor visits<br />✔ Protection
-                            for damages to property<br />💰 Price: from USD45
-                            per person per trip<br />📅 Valid from arrival to
-                            departure<br />🌍
+                            Camp Adventure Insurance Package
+                            <br />
+                            Includes liability, accident, and health insurance
+                            for the entire duration of the trip.
+                            <br />✔ Coverage for accidents & doctor visits
+                            <br />✔ Protection for damages to property
+                            <br />
+                            💰 Price: from USD45 per person per trip
+                            <br />
+                            📅 Valid from arrival to departure
+                            <br />
+                            🌍
                             <em>Applies only to trips abroad</em>
                           </p>
                         </div>
@@ -699,8 +858,9 @@ export default function AdventureSportsCreativePage() {
                     </div>
                   </div>
                 </div>
-                <style dangerouslySetInnerHTML={{
-                  __html: `
+                <style
+                  dangerouslySetInnerHTML={{
+                    __html: `
                     .custom_acc_691a9ce46701a .uk-accordion-title * {
                       color: #000000 !important;
                     }
@@ -748,8 +908,9 @@ export default function AdventureSportsCreativePage() {
                       border: unset !important;
                       box-shadow: unset !important;
                     }
-                  `
-                }} />
+                  `,
+                  }}
+                />
               </div>
             </div>
             <div className="uk-width-1-3@m">
@@ -795,18 +956,19 @@ export default function AdventureSportsCreativePage() {
                 </h2>
                 <div className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
                   <p>
-                    Action, Sports &amp; Creativity – Our Kids &amp; Teen
-                    Camps in the Bavarian Forest Have It All!
+                    Action, Sports &amp; Creativity – Our Kids &amp; Teen Camps
+                    in the Bavarian Forest Have It All!
                     <br />
-                    Climbing, outdoor challenges, team games, and creative workshops
-                    make your holidays truly unforgettable.
+                    Climbing, outdoor challenges, team games, and creative
+                    workshops make your holidays truly unforgettable.
                   </p>
                   <p>
                     No extra profile needed – if you don&apos;t choose Horseback
                     Riding or Survival, you&apos;ll automatically be part of the
                     Adventure Base Program!
                     <br />
-                    Experience nature, sports, and an international community at its best.
+                    Experience nature, sports, and an international community at
+                    its best.
                   </p>
                   <p>Book your Adventure Camp and safe your spot!</p>
                 </div>
@@ -817,9 +979,14 @@ export default function AdventureSportsCreativePage() {
                   <div className="uk-position-relative">
                     <div className="uk-slider-items uk-grid">
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/d3/reg_programm_archery-d31dea56.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/d3/reg_programm_archery-d31dea56.jpg"
+                            )}
                             width={1260}
                             height={837}
                             alt="Girl aiming with bow and arrow – archery activity for kids at outdoor summer camp"
@@ -829,9 +996,14 @@ export default function AdventureSportsCreativePage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/d3/reg_programm_games-d3b4af4a.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/d3/reg_programm_games-d3b4af4a.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Group of children being welcomed at language camp – beginning of an exciting adventure week in Regen"
@@ -841,9 +1013,14 @@ export default function AdventureSportsCreativePage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/d6/01-Regen-Sport-Camp-Location-d6d81402.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/d6/01-Regen-Sport-Camp-Location-d6d81402.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Aerial view of Sportcamp Regen with sports fields and scenic nature – active summer camp in the Bavarian Forest"
@@ -853,9 +1030,14 @@ export default function AdventureSportsCreativePage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/fc/03-Regen-Sport-Camp-Bridge-fc7e5448.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/fc/03-Regen-Sport-Camp-Bridge-fc7e5448.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Outdoor climbing and ziplining under a stone viaduct – thrilling activities at summer camp in the Bavarian Forest"
@@ -865,9 +1047,14 @@ export default function AdventureSportsCreativePage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/cd/02-Regen-Language-Camp-Kayak-cd591e8f.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/cd/02-Regen-Language-Camp-Kayak-cd591e8f.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Children on a canoeing trip through nature – outdoor language camp adventure with expert supervision in Regen"
@@ -879,7 +1066,10 @@ export default function AdventureSportsCreativePage() {
                     </div>
                   </div>
                   <div className="uk-margin-top" uk-inverse="">
-                    <ul className="el-nav uk-slider-nav uk-dotnav uk-flex-center" uk-margin=""></ul>
+                    <ul
+                      className="el-nav uk-slider-nav uk-dotnav uk-flex-center"
+                      uk-margin=""
+                    ></ul>
                   </div>
                 </div>
                 {/* Accordion for Regen - Similar structure to Walsrode but with Regen-specific content */}
@@ -899,31 +1089,46 @@ export default function AdventureSportsCreativePage() {
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <ul style={{ listStyleType: "disc" }}>
                             <li>
-                              <strong>Choose your focus:</strong> 4 exciting profile sessions (2.5 hrs each) packed with sports, adventure, or creative fun
+                              <strong>Choose your focus:</strong> 4 exciting
+                              profile sessions (2.5 hrs each) packed with
+                              sports, adventure, or creative fun
                             </li>
                             <li>
-                              <strong>Daily variety:</strong> Enjoy even more activities outside your profile – outdoor games, sports, creativity, campfires, disco nights & more
+                              <strong>Daily variety:</strong> Enjoy even more
+                              activities outside your profile – outdoor games,
+                              sports, creativity, campfires, disco nights & more
                             </li>
                             <li>
-                              <strong>Awesome excursions</strong> for 2-week campers: overnight hike under the stars or a trip to Munich
+                              <strong>Awesome excursions</strong> for 2-week
+                              campers: overnight hike under the stars or a trip
+                              to Munich
                             </li>
                             <li>
-                              <strong>Bilingual camp vibe:</strong> English & German – learn languages naturally in an international setting
+                              <strong>Bilingual camp vibe:</strong> English &
+                              German – learn languages naturally in an
+                              international setting
                             </li>
                             <li>
-                              <strong>Accommodation:</strong> Stay in tents & tiny houses at the campsite, or in wooden cabins & solid lodges at the BLSV grounds
+                              <strong>Accommodation:</strong> Stay in tents &
+                              tiny houses at the campsite, or in wooden cabins &
+                              solid lodges at the BLSV grounds
                             </li>
                             <li>
-                              <strong>Full board:</strong> 7-day stay (Sun–Sat), 6 nights with freshly prepared meals
+                              <strong>Full board:</strong> 7-day stay (Sun–Sat),
+                              6 nights with freshly prepared meals
                             </li>
                             <li>
-                              <strong>24/7 support:</strong> Our dedicated teamers are always nearby and happy to help
+                              <strong>24/7 support:</strong> Our dedicated
+                              teamers are always nearby and happy to help
                             </li>
                             <li>
-                              <strong>Digital Detox:</strong> Phones and electronics only allowed during siesta
+                              <strong>Digital Detox:</strong> Phones and
+                              electronics only allowed during siesta
                             </li>
                             <li>
-                              <strong>Arrival & departure made easy:</strong> Shuttle service from train stations and airports available
+                              <strong>Arrival & departure made easy:</strong>{" "}
+                              Shuttle service from train stations and airports
+                              available
                             </li>
                           </ul>
                         </div>
@@ -936,9 +1141,15 @@ export default function AdventureSportsCreativePage() {
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div id="jp_accordation_section_691a9ce46aac7" className="jp_section_content">
+                        <div
+                          id="jp_accordation_section_691a9ce46aac7"
+                          className="jp_section_content"
+                        >
                           <div className="uk-container">
-                            <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                            <div
+                              className="uk-grid tm-grid-expand uk-grid-margin"
+                              uk-grid=""
+                            >
                               <div className="uk-width-1-2@m">
                                 <div
                                   className="uk-position-relative uk-position-z-index uk-dark uk-margin"
@@ -969,7 +1180,8 @@ export default function AdventureSportsCreativePage() {
                                         center: { lat: 48.9666, lng: 13.1128 },
                                         lazyload: true,
                                         library: "leaflet",
-                                        baseUrl: "/templates/yootheme/vendor/assets/leaflet/leaflet/dist",
+                                        baseUrl:
+                                          "/templates/yootheme/vendor/assets/leaflet/leaflet/dist",
                                       }),
                                     }}
                                   />
@@ -992,30 +1204,48 @@ export default function AdventureSportsCreativePage() {
                               <div className="uk-width-1-2@m">
                                 <div className="uk-panel uk-margin">
                                   <h4>
-                                    Welcome to Regen – Your Adventure in the Bavarian Forest!
+                                    Welcome to Regen – Your Adventure in the
+                                    Bavarian Forest!
                                   </h4>
                                   <p>
-                                    Our Camp Adventure in Regen is located right in the heart of
-                                    the Bavarian Forest – one of South Germany&apos;s most beautiful
-                                    natural landscapes. Surrounded by forests, rolling hills,
-                                    and crystal-clear rivers, it&apos;s the perfect place for
-                                    adventure, sports, and creative camps in southern Germany.
+                                    Our Camp Adventure in Regen is located right
+                                    in the heart of the Bavarian Forest – one of
+                                    South Germany&apos;s most beautiful natural
+                                    landscapes. Surrounded by forests, rolling
+                                    hills, and crystal-clear rivers, it&apos;s
+                                    the perfect place for adventure, sports, and
+                                    creative camps in southern Germany.
                                   </p>
                                   <p>
-                                    <strong>Pure action &amp; nature!</strong><br />Whether it&apos;s
-                                    canoeing, kayaking, climbing, or team-building – this is
-                                    where the fun really begins!<br />In cooperation with the
-                                    Bavarian Sports Association (BLSV), we use top-class sports
-                                    facilities on-site and nearby to offer even more variety and
-                                    excitement.
+                                    <strong>Pure action &amp; nature!</strong>
+                                    <br />
+                                    Whether it&apos;s canoeing, kayaking,
+                                    climbing, or team-building – this is where
+                                    the fun really begins!
+                                    <br />
+                                    In cooperation with the Bavarian Sports
+                                    Association (BLSV), we use top-class sports
+                                    facilities on-site and nearby to offer even
+                                    more variety and excitement.
                                   </p>
                                   <p>
-                                    <strong>International community &amp; real camp spirit!</strong><br />Our bilingual teamers (English/German) create an
-                                    inspiring and welcoming atmosphere.
+                                    <strong>
+                                      International community &amp; real camp
+                                      spirit!
+                                    </strong>
+                                    <br />
+                                    Our bilingual teamers (English/German)
+                                    create an inspiring and welcoming
+                                    atmosphere.
                                   </p>
                                   <p>
-                                    Whether you&apos;re an outdoor enthusiast, sports lover, or
-                                    language explorer – this camp is one-of-a-kind!<br /><strong>We can&apos;t wait to welcome you!</strong>
+                                    Whether you&apos;re an outdoor enthusiast,
+                                    sports lover, or language explorer – this
+                                    camp is one-of-a-kind!
+                                    <br />
+                                    <strong>
+                                      We can&apos;t wait to welcome you!
+                                    </strong>
                                   </p>
                                 </div>
                               </div>
@@ -1026,8 +1256,9 @@ export default function AdventureSportsCreativePage() {
                     </div>
                   </div>
                 </div>
-                <style dangerouslySetInnerHTML={{
-                  __html: `
+                <style
+                  dangerouslySetInnerHTML={{
+                    __html: `
                     .custom_acc_691a9ce46a7b9 .uk-accordion-title * {
                       color: #000000 !important;
                     }
@@ -1075,8 +1306,9 @@ export default function AdventureSportsCreativePage() {
                       border: unset !important;
                       box-shadow: unset !important;
                     }
-                  `
-                }} />
+                  `,
+                  }}
+                />
               </div>
             </div>
             <div className="uk-width-1-3@m">
@@ -1109,7 +1341,7 @@ export default function AdventureSportsCreativePage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-default uk-section">
+      {/* <div className="uk-section-default uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -1131,22 +1363,47 @@ export default function AdventureSportsCreativePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Perfect Adventure & Sports Camp! Our children tried so many
+                    exciting activities - climbing, canoeing, archery, and more.
+                    The variety kept them engaged and active all week. They
+                    learned new skills, pushed their limits, and had an absolute
+                    blast. The best summer camp experience!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Lisa G. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
                 <center>
                   <div className="pe-richsnippets"></div>
                   <Script
                     type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
                     async
                   />
                 </center>
+                </div>
               </div>
             </div>
           </div>
@@ -1155,4 +1412,3 @@ export default function AdventureSportsCreativePage() {
     </>
   );
 }
-

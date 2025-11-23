@@ -17,7 +17,9 @@ export default function SpaceExplorationPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg"
+            )})`,
           }}
         >
           <div
@@ -31,15 +33,13 @@ export default function SpaceExplorationPage() {
                   className="uk-heading-large uk-margin-remove-bottom uk-text-left"
                   uk-scrollspy-class=""
                 >
-                  <p>Space Exploration Specialty Camp in Germany</p>
+                  <p>Space Exploration Camp</p>
                 </h1>
                 <div
                   className="uk-panel uk-text-lead uk-margin uk-text-left"
                   uk-scrollspy-class=""
                 >
-                  <p>
-                    Explore the universe and learn about space science!
-                  </p>
+                  <p>Explore the universe and learn about space science!</p>
                 </div>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function SpaceExplorationPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Sweden</p>
+                <p>Germany</p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -77,7 +77,11 @@ export default function SpaceExplorationPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>10 - 17 years</p>
+                <p>
+                  7 – 17 years
+                  <br />
+                  Grouped by age
+                </p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -88,7 +92,7 @@ export default function SpaceExplorationPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>ESA Space Camp</p>
+                <p>Tents & Cabins/Houses</p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -99,7 +103,7 @@ export default function SpaceExplorationPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>24-hour supervision + full board</p>
+                <p>24/7 supervision + full board</p>
               </div>
             </div>
             <div className="uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
@@ -110,7 +114,11 @@ export default function SpaceExplorationPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>
+                  Bilingual
+                  <br />
+                  GER & EN
+                </p>
               </div>
             </div>
           </div>
@@ -134,10 +142,11 @@ export default function SpaceExplorationPage() {
                 </h2>
                 <div className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
                   <p>
-                    Are you fascinated by space? At the Space Exploration Camp in
-                    Northern Germany, you&apos;ll dive into the mysteries of the
-                    universe! Explore planets, experiment with rocket engines,
-                    and discover what it&apos;s like to be an astronaut.
+                    Are you fascinated by space? At the Space Exploration Camp
+                    in Northern Germany, you&apos;ll dive into the mysteries of
+                    the universe! Explore planets, experiment with rocket
+                    engines, and discover what it&apos;s like to be an
+                    astronaut.
                   </p>
                   <p>
                     Learn, build, research! With cool hands-on projects,
@@ -145,14 +154,14 @@ export default function SpaceExplorationPage() {
                     push your limits and develop your scientific thinking.
                   </p>
                   <p>
-                    Science meets adventure holidays! Surrounded by the nature of
-                    Northern Germany, you&apos;ll combine research with teamwork
-                    and explore the universe alongside children and teens from
-                    all over the world.
+                    Science meets adventure holidays! Surrounded by the nature
+                    of Northern Germany, you&apos;ll combine research with
+                    teamwork and explore the universe alongside children and
+                    teens from all over the world.
                   </p>
                   <p>
-                    Get ready for your mission – Space Exploration is waiting for
-                    you!
+                    Get ready for your mission – Space Exploration is waiting
+                    for you!
                   </p>
                 </div>
                 <div
@@ -393,26 +402,51 @@ export default function SpaceExplorationPage() {
                     <div id="js-3_1" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Location
+                          Camp-Location
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="uk-panel uk-margin">
-                          <h4>Welcome to Walsrode – Your Adventure in the Lüneburger Heide!</h4>
+                          <h4>
+                            Welcome to Walsrode – Your Adventure in the
+                            Lüneburger Heide!
+                          </h4>
                           <p>
-                            Our Camp Adventure (Academy) in Walsrode is nestled idyllically in the Lüneburg Heath, right between Bremen, Hamburg, and Hanover. Just a short walk away, you&apos;ll find a charming North German village with farms and half-timbered houses – the perfect place for little discoveries.
+                            Our Camp Adventure (Academy) in Walsrode is nestled
+                            idyllically in the Lüneburg Heath, right between
+                            Bremen, Hamburg, and Hanover. Just a short walk
+                            away, you&apos;ll find a charming North German
+                            village with farms and half-timbered houses – the
+                            perfect place for little discoveries.
                           </p>
                           <p>
-                            <strong>Over 150,000 m² of pure adventure!</strong> Our spacious campgrounds are divided into three exciting areas: Beach/Water, Survival & Creative. Kayaking, bouncing on the water trampoline, building rafts, making fires, or climbing the high ropes course – there&apos;s always action here!
+                            <strong>Over 150,000 m² of pure adventure!</strong>{" "}
+                            Our spacious campgrounds are divided into three
+                            exciting areas: Beach/Water, Survival & Creative.
+                            Kayaking, bouncing on the water trampoline, building
+                            rafts, making fires, or climbing the high ropes
+                            course – there&apos;s always action here!
                           </p>
                           <p>
-                            <strong>International community & camp spirit!</strong> Our camp is bilingual (English & German) – you&apos;ll meet participants from all over the world and naturally improve your English.
+                            <strong>
+                              International community & camp spirit!
+                            </strong>{" "}
+                            Our camp is bilingual (English & German) –
+                            you&apos;ll meet participants from all over the
+                            world and naturally improve your English.
                           </p>
                           <p>
-                            Whether you&apos;re a language fan, outdoor adventurer, or creative thinker – discover all the profiles & activities that make your camp experience with us truly unique! We look forward to welcoming you!
+                            Whether you&apos;re a language fan, outdoor
+                            adventurer, or creative thinker – discover all the
+                            profiles & activities that make your camp experience
+                            with us truly unique! We look forward to welcoming
+                            you!
                           </p>
                           <div className="uk-margin-top">
-                            <Link href="/destinations/germany-lueneburger-heide" className="uk-button uk-button-default">
+                            <Link
+                              href="/destinations/germany-lueneburger-heide"
+                              className="uk-button uk-button-default"
+                            >
                               Info - Location
                             </Link>
                           </div>
@@ -424,15 +458,20 @@ export default function SpaceExplorationPage() {
                     <div id="js-3_2" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Accommodations
+                          Your camp accommodation
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                        <div
+                          className="uk-grid tm-grid-expand uk-grid-margin"
+                          uk-grid=""
+                        >
                           <div className="uk-width-1-3@m">
                             <div className="uk-margin">
                               <Image
-                                src={getTemplateImageUrl("yootheme/cache/0e/08-Sommercamp-Walsrode-tents-inside-0ec7f7f4.jpg")}
+                                src={getTemplateImageUrl(
+                                  "yootheme/cache/0e/08-Sommercamp-Walsrode-tents-inside-0ec7f7f4.jpg"
+                                )}
                                 width={1080}
                                 height={720}
                                 className="el-image"
@@ -442,7 +481,9 @@ export default function SpaceExplorationPage() {
                             </div>
                             <div className="uk-margin">
                               <Image
-                                src={getTemplateImageUrl("yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg")}
+                                src={getTemplateImageUrl(
+                                  "yootheme/cache/8e/05-Sommercamp-Walsrode-Huts-8-beds-8ec9bcb0.jpg"
+                                )}
                                 width={1080}
                                 height={720}
                                 className="el-image"
@@ -455,12 +496,24 @@ export default function SpaceExplorationPage() {
                             <div className="uk-panel uk-margin">
                               <h4>Live like in a small village!</h4>
                               <p>
-                                At our international holiday camp in Lower Saxony, you can choose between the tent village and adventure lodges – depending on your sense of adventure!<br />
-                                <strong>Tent Village:</strong> Six- to seven-person tents with wooden floors and lofts offer a true outdoor experience under the stars.<br />
-                                <strong>Adventure Lodges:</strong> Cozy cabins with four to eight beds, shelving, and seating areas. (Note: Staying in a lodge comes with an additional charge.)
+                                At our international holiday camp in Lower
+                                Saxony, you can choose between the tent village
+                                and adventure lodges – depending on your sense
+                                of adventure!
+                                <br />
+                                <strong>Tent Village:</strong> Six- to
+                                seven-person tents with wooden floors and lofts
+                                offer a true outdoor experience under the stars.
+                                <br />
+                                <strong>Adventure Lodges:</strong> Cozy cabins
+                                with four to eight beds, shelving, and seating
+                                areas. (Note: Staying in a lodge comes with an
+                                additional charge.)
                               </p>
                               <p>
-                                Our accommodations are separated by gender, so girls and boys sleep in their own tents or cabins. They are also grouped by age:
+                                Our accommodations are separated by gender, so
+                                girls and boys sleep in their own tents or
+                                cabins. They are also grouped by age:
                               </p>
                               <ul>
                                 <li>Junior (7–12 years)</li>
@@ -468,17 +521,24 @@ export default function SpaceExplorationPage() {
                                 <li>Senior Plus (15–17 years)</li>
                               </ul>
                               <p>
-                                Washrooms are also separated by gender and always nearby.
+                                Washrooms are also separated by gender and
+                                always nearby.
                               </p>
                               <p>
-                                And the best part: Our teamers live right next door and are available around the clock!
+                                And the best part: Our teamers live right next
+                                door and are available around the clock!
                               </p>
                               <p>
-                                <em>Good to know:</em><br />
-                                For tents, you need a sleeping bag and sleeping mat. For fixed accommodations, bring a fitted sheet and either a sleeping bag or bedding, which you can rent if you wish.
+                                <em>Good to know:</em>
+                                <br />
+                                For tents, you need a sleeping bag and sleeping
+                                mat. For fixed accommodations, bring a fitted
+                                sheet and either a sleeping bag or bedding,
+                                which you can rent if you wish.
                               </p>
                               <p>
-                                All accommodation options can be selected during the booking process – secure your spot now!
+                                All accommodation options can be selected during
+                                the booking process – secure your spot now!
                               </p>
                             </div>
                           </div>
@@ -490,15 +550,20 @@ export default function SpaceExplorationPage() {
                     <div id="js-3_3" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Program
+                          profile
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                        <div
+                          className="uk-grid tm-grid-expand uk-grid-margin"
+                          uk-grid=""
+                        >
                           <div className="uk-width-1-3@m">
                             <div className="uk-margin">
                               <Image
-                                src={getTemplateImageUrl("yootheme/cache/c3/02-Space-Exploration-Sommer-Camp-c32f2b6e.jpg")}
+                                src={getTemplateImageUrl(
+                                  "yootheme/cache/c3/02-Space-Exploration-Sommer-Camp-c32f2b6e.jpg"
+                                )}
                                 width={1080}
                                 height={720}
                                 className="el-image"
@@ -508,7 +573,9 @@ export default function SpaceExplorationPage() {
                             </div>
                             <div className="uk-margin">
                               <Image
-                                src={getTemplateImageUrl("yootheme/cache/44/05-Walsrode-Kanu-44a26bc9.jpg")}
+                                src={getTemplateImageUrl(
+                                  "yootheme/cache/44/05-Walsrode-Kanu-44a26bc9.jpg"
+                                )}
                                 width={1080}
                                 height={720}
                                 className="el-image"
@@ -519,38 +586,82 @@ export default function SpaceExplorationPage() {
                           </div>
                           <div className="uk-width-2-3@m">
                             <div className="uk-panel uk-margin">
-                              <h4>Space Explorer – Get Up Close to the Universe! 🚀✨</h4>
+                              <h4>
+                                Space Explorer – Get Up Close to the Universe!
+                                🚀✨
+                              </h4>
                               <p>
-                                Over four afternoons, 2.5 hours each, it&apos;s all about space! Dive into the fascinating world of space exploration, conduct research, experiment, and uncover the mysteries of the universe.
+                                Over four afternoons, 2.5 hours each, it&apos;s
+                                all about space! Dive into the fascinating world
+                                of space exploration, conduct research,
+                                experiment, and uncover the mysteries of the
+                                universe.
                               </p>
                               <p>
-                                <strong>Launch rockets & explore orbits:</strong> Build your own models, test rocket launches, and understand how communication works in space.<br />
-                                <strong>Hands-on research</strong> – exciting experiments in chemistry, electricity & magnetism invite awe and discovery.<br />
-                                <strong>Teamwork & creativity</strong> – an age-appropriate program that encourages collaboration and creative thinking.<br />
-                                <strong>Developed by experts</strong> – created by Alessandro Ercolani (ESA) for a unique adventure full of knowledge and fun!
+                                <strong>
+                                  Launch rockets & explore orbits:
+                                </strong>{" "}
+                                Build your own models, test rocket launches, and
+                                understand how communication works in space.
+                                <br />
+                                <strong>Hands-on research</strong> – exciting
+                                experiments in chemistry, electricity &
+                                magnetism invite awe and discovery.
+                                <br />
+                                <strong>Teamwork & creativity</strong> – an
+                                age-appropriate program that encourages
+                                collaboration and creative thinking.
+                                <br />
+                                <strong>Developed by experts</strong> – created
+                                by Alessandro Ercolani (ESA) for a unique
+                                adventure full of knowledge and fun!
                               </p>
                               <p>
-                                🚀 Blast off with our skilled teamers and fellow space enthusiasts! Put your knowledge into action, dive into exciting experiments, and boost your space and astronomy skills to new heights! 🔭🛰️
+                                🚀 Blast off with our skilled teamers and fellow
+                                space enthusiasts! Put your knowledge into
+                                action, dive into exciting experiments, and
+                                boost your space and astronomy skills to new
+                                heights! 🔭🛰️
                               </p>
                               <p>
-                                After your core activities, enjoy a range of thrilling leisure options:
+                                After your core activities, enjoy a range of
+                                thrilling leisure options:
                               </p>
                               <p>
-                                🏹 Get active with archery, BMX biking, frisbee, and fun team challenges.<br />
-                                🧗 Push your limits on the 20-meter high ropes course.<br />
-                                🌊 Cool down with canoe trips, aqua fitness, and a ride on the legendary 85-meter water slide.<br />
-                                🔥 Cozy up for campfire nights filled with music, stories, and talent shows under the stars.
+                                🏹 Get active with archery, BMX biking, frisbee,
+                                and fun team challenges.
+                                <br />
+                                🧗 Push your limits on the 20-meter high ropes
+                                course.
+                                <br />
+                                🌊 Cool down with canoe trips, aqua fitness, and
+                                a ride on the legendary 85-meter water slide.
+                                <br />
+                                🔥 Cozy up for campfire nights filled with
+                                music, stories, and talent shows under the
+                                stars.
                               </p>
                               <p>
-                                <strong>Learn English naturally!</strong><br />
-                                Our international counselors from the USA, Canada, and England bring authentic camp vibes. English flows effortlessly throughout your day—in workshops, outdoor adventures, and relaxing evenings by the fire.
+                                <strong>Learn English naturally!</strong>
+                                <br />
+                                Our international counselors from the USA,
+                                Canada, and England bring authentic camp vibes.
+                                English flows effortlessly throughout your
+                                day—in workshops, outdoor adventures, and
+                                relaxing evenings by the fire.
                               </p>
                               <p>
-                                <strong>Digital detox for real connections!</strong><br />
-                                Phones are only allowed during siesta time, so you can fully enjoy genuine experiences, make new friends, and create unforgettable memories.
+                                <strong>
+                                  Digital detox for real connections!
+                                </strong>
+                                <br />
+                                Phones are only allowed during siesta time, so
+                                you can fully enjoy genuine experiences, make
+                                new friends, and create unforgettable memories.
                               </p>
                               <p>
-                                Get ready for unforgettable days in Walsrode and explore the amazing world of Space Exploration!
+                                Get ready for unforgettable days in Walsrode and
+                                explore the amazing world of Space Exploration!
                               </p>
                             </div>
                           </div>
@@ -562,15 +673,20 @@ export default function SpaceExplorationPage() {
                     <div id="js-3_4" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Meals and Snacks
+                          Food & daily snacks
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                        <div
+                          className="uk-grid tm-grid-expand uk-grid-margin"
+                          uk-grid=""
+                        >
                           <div className="uk-width-1-3@m">
                             <div className="uk-margin">
                               <Image
-                                src={getTemplateImageUrl("yootheme/cache/fa/02-Sommercamp-Walsrode-Dining-Hall-inside-fa5687ee.jpg")}
+                                src={getTemplateImageUrl(
+                                  "yootheme/cache/fa/02-Sommercamp-Walsrode-Dining-Hall-inside-fa5687ee.jpg"
+                                )}
                                 width={1080}
                                 height={720}
                                 className="el-image"
@@ -583,13 +699,26 @@ export default function SpaceExplorationPage() {
                             <div className="uk-panel uk-margin">
                               <h4>Delicious meals for every taste!</h4>
                               <p>
-                                Enjoy three tasty and balanced meals a day – always fresh, always varied! With advance notice, we&apos;re happy to offer vegetarian, gluten-free, or lactose-free options, so there&apos;s something for everyone.
+                                Enjoy three tasty and balanced meals a day –
+                                always fresh, always varied! With advance
+                                notice, we&apos;re happy to offer vegetarian,
+                                gluten-free, or lactose-free options, so
+                                there&apos;s something for everyone.
                               </p>
                               <p>
-                                Your day begins with a generous breakfast buffet: fresh bread rolls, spreads, fruit, cereal, juices, and tea. For lunch and dinner, we serve warm meals along with a vibrant salad bar. Throughout the day, you&apos;ll find fresh fruit, a small afternoon snack, and plenty of water to keep you going strong.
+                                Your day begins with a generous breakfast
+                                buffet: fresh bread rolls, spreads, fruit,
+                                cereal, juices, and tea. For lunch and dinner,
+                                we serve warm meals along with a vibrant salad
+                                bar. Throughout the day, you&apos;ll find fresh
+                                fruit, a small afternoon snack, and plenty of
+                                water to keep you going strong.
                               </p>
                               <p>
-                                The highlight? Everything is prepared fresh – no powdered soups, no boring basics. Just real food that&apos;s full of flavor and keeps your energy levels up!
+                                The highlight? Everything is prepared fresh – no
+                                powdered soups, no boring basics. Just real food
+                                that&apos;s full of flavor and keeps your energy
+                                levels up!
                               </p>
                             </div>
                           </div>
@@ -601,15 +730,20 @@ export default function SpaceExplorationPage() {
                     <div id="js-3_5" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Supervision and guidance
+                          Care & Support at camp
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
+                        <div
+                          className="uk-grid tm-grid-expand uk-grid-margin"
+                          uk-grid=""
+                        >
                           <div className="uk-width-1-3@m">
                             <div className="uk-margin">
                               <Image
-                                src={getTemplateImageUrl("yootheme/cache/2e/Teamertraining_2017_60-2e2ec36d.jpg")}
+                                src={getTemplateImageUrl(
+                                  "yootheme/cache/2e/Teamertraining_2017_60-2e2ec36d.jpg"
+                                )}
                                 width={1080}
                                 height={720}
                                 className="el-image"
@@ -622,14 +756,27 @@ export default function SpaceExplorationPage() {
                             <div className="uk-panel uk-margin">
                               <h4>Always here for you – day and night!</h4>
                               <p>
-                                Our dedicated and friendly teamers are on hand 24/7 – full of energy, empathy, and always ready to help. Whether it&apos;s a quick question or something more serious, there&apos;s always someone to talk to.
+                                Our dedicated and friendly teamers are on hand
+                                24/7 – full of energy, empathy, and always ready
+                                to help. Whether it&apos;s a quick question or
+                                something more serious, there&apos;s always
+                                someone to talk to.
                               </p>
                               <p>
-                                What makes it extra special? Our international staff bring real camp spirit with them – and we communicate in both English and German!
+                                What makes it extra special? Our international
+                                staff bring real camp spirit with them – and we
+                                communicate in both English and German!
                               </p>
                               <p>
-                                That means you&apos;ll naturally switch between the two languages – whether you&apos;re playing sports, sitting by the campfire, or chatting during free time.<br />
-                                We maintain a close supervision ratio of 1:7 to 1:10. With our all-day care and support, you&apos;re in safe hands every moment of your camp experience!
+                                That means you&apos;ll naturally switch between
+                                the two languages – whether you&apos;re playing
+                                sports, sitting by the campfire, or chatting
+                                during free time.
+                                <br />
+                                We maintain a close supervision ratio of 1:7 to
+                                1:10. With our all-day care and support,
+                                you&apos;re in safe hands every moment of your
+                                camp experience!
                               </p>
                             </div>
                           </div>
@@ -641,49 +788,82 @@ export default function SpaceExplorationPage() {
                     <div id="js-3_6" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Arrival and departure
+                          Getting there & heading home
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <h4>All roads lead to camp!</h4>
                           <p>
-                            Whether by car, train, plane, or shuttle – your child will travel safely and comfortably. We take care of everything to ensure a smooth arrival!
+                            Whether by car, train, plane, or shuttle – your
+                            child will travel safely and comfortably. We take
+                            care of everything to ensure a smooth arrival!
                           </p>
                           <ul>
                             <li>
-                              <em>Self-arrival:</em> Simply drop off and pick up your child yourself. You&apos;ll receive detailed directions via email about 6 weeks before camp starts – making your arrival stress-free.
+                              <em>Self-arrival:</em> Simply drop off and pick up
+                              your child yourself. You&apos;ll receive detailed
+                              directions via email about 6 weeks before camp
+                              starts – making your arrival stress-free.
                             </li>
                             <li>
-                              <em>Shuttle service:</em> Since our adventure camps are often in remote areas, we&apos;re happy to offer shuttle transfers from nearby airports and train stations.
+                              <em>Shuttle service:</em> Since our adventure
+                              camps are often in remote areas, we&apos;re happy
+                              to offer shuttle transfers from nearby airports
+                              and train stations.
                             </li>
                           </ul>
                           <p>
-                            Shuttles run only on Sundays for arrival and Saturdays for departure within specified time windows. Outside these times, you can book a private shuttle for an additional fee. Please contact us directly to arrange this.
+                            Shuttles run only on Sundays for arrival and
+                            Saturdays for departure within specified time
+                            windows. Outside these times, you can book a private
+                            shuttle for an additional fee. Please contact us
+                            directly to arrange this.
                           </p>
                           <p>
-                            <em>Airport Hamburg</em><br />
-                            Arrival (landing): 10:00 – 15:00<br />
-                            Meeting Point (McDonald&apos;s): 14:00<br />
-                            Departure (take-off): 14:00 – 18:00<br />
+                            <em>Airport Hamburg</em>
+                            <br />
+                            Arrival (landing): 10:00 – 15:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 14:00
+                            <br />
+                            Departure (take-off): 14:00 – 18:00
+                            <br />
                             Meeting Point (McDonald&apos;s): 12:30
                           </p>
                           <p>
-                            <em>Airport Hanover</em><br />
-                            Arrival (landing): 10:00 – 16:00<br />
-                            Meeting Point (McDonald&apos;s): 15:30<br />
-                            Departure (take-off): 13:00 – 18:00<br />
+                            <em>Airport Hanover</em>
+                            <br />
+                            Arrival (landing): 10:00 – 16:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 15:30
+                            <br />
+                            Departure (take-off): 13:00 – 18:00
+                            <br />
                             Meeting Point (McDonald&apos;s): 11:00
                           </p>
                           <p>
-                            <em>Train Station Hanover</em><br />
-                            Arrival: 14:00 – 16:00<br />
-                            Meeting Point (McDonald&apos;s): 15:30<br />
-                            Departure: 11:00 – 13:00<br />
+                            <em>Train Station Hanover</em>
+                            <br />
+                            Arrival: 14:00 – 16:00
+                            <br />
+                            Meeting Point (McDonald&apos;s): 15:30
+                            <br />
+                            Departure: 11:00 – 13:00
+                            <br />
                             Meeting Point (McDonald&apos;s): 10:30
                           </p>
                           <p>
-                            You can select all available options during the booking process. <Link href="/info/arrival-departure" target="_blank" rel="noopener">Detailed transfer information is also available here.</Link>
+                            You can select all available options during the
+                            booking process.{" "}
+                            <Link
+                              href="/info/arrival-departure"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              Detailed transfer information is also available
+                              here.
+                            </Link>
                           </p>
                         </div>
                       </div>
@@ -693,34 +873,66 @@ export default function SpaceExplorationPage() {
                     <div id="js-3_7" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Insurance
+                          Travel & camp insurance
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <h4>Well insured for your adventure!</h4>
                           <p>
-                            Whether it&apos;s minor mishaps or unexpected incidents – with our Camp Adventure insurance, you&apos;re fully protected throughout your trip.
+                            Whether it&apos;s minor mishaps or unexpected
+                            incidents – with our Camp Adventure insurance,
+                            you&apos;re fully protected throughout your trip.
                           </p>
                           <p>
-                            <em><strong>Camp Adventure Insurance Package:</strong></em><br />
-                            Liability, accident, and health insurance for the entire duration of your trip<br />
-                            ✔ Coverage for accidents and doctor visits<br />
-                            ✔ Protection against property damage<br />
-                            Price: from USD45 per person per trip<br />
-                            Valid from arrival to departure<br />
-                            Only for international travel<br />
-                            <em>⚠ Important:</em> Without international health insurance, medical costs must be paid privately. We recommend carrying a safety reserve of USD500 in cash or a credit card. Participants from outside the EU must provide proof of their own insurance before travel.
+                            <em>
+                              <strong>Camp Adventure Insurance Package:</strong>
+                            </em>
+                            <br />
+                            Liability, accident, and health insurance for the
+                            entire duration of your trip
+                            <br />
+                            ✔ Coverage for accidents and doctor visits
+                            <br />
+                            ✔ Protection against property damage
+                            <br />
+                            Price: from USD45 per person per trip
+                            <br />
+                            Valid from arrival to departure
+                            <br />
+                            Only for international travel
+                            <br />
+                            <em>⚠ Important:</em> Without international health
+                            insurance, medical costs must be paid privately. We
+                            recommend carrying a safety reserve of USD500 in
+                            cash or a credit card. Participants from outside the
+                            EU must provide proof of their own insurance before
+                            travel.
                           </p>
                           <p>
-                            <em><strong>Camp Adventure Trip Cancellation Guarantee:</strong></em><br />
-                            Our guarantee against homesickness, illness & more. Need to cancel your trip? No problem! With our cancellation guarantee, you&apos;ll receive a full refund of your Camp Adventure trip price – minus a deductible of USD50 (Germany) or USD100 (UK/Spain).<br />
-                            ✔ Valid up to one day before departure<br />
-                            ✔ Valid regardless of the reason: illness, accident, exams, or homesickness<br />
-                            Price: USD45 (for 1-week stays) / USD85 (for multi-week stays)
+                            <em>
+                              <strong>
+                                Camp Adventure Trip Cancellation Guarantee:
+                              </strong>
+                            </em>
+                            <br />
+                            Our guarantee against homesickness, illness & more.
+                            Need to cancel your trip? No problem! With our
+                            cancellation guarantee, you&apos;ll receive a full
+                            refund of your Camp Adventure trip price – minus a
+                            deductible of USD50 (Germany) or USD100 (UK/Spain).
+                            <br />
+                            ✔ Valid up to one day before departure
+                            <br />
+                            ✔ Valid regardless of the reason: illness, accident,
+                            exams, or homesickness
+                            <br />
+                            Price: USD45 (for 1-week stays) / USD85 (for
+                            multi-week stays)
                           </p>
                           <p>
-                            All insurance options can be selected during the booking process.
+                            All insurance options can be selected during the
+                            booking process.
                           </p>
                         </div>
                       </div>
@@ -735,15 +947,25 @@ export default function SpaceExplorationPage() {
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
-                          <h4>Space Exploration – Your Adventure in Space! 🚀✨</h4>
+                          <h4>
+                            Space Exploration – Your Adventure in Space! 🚀✨
+                          </h4>
                           <p>
-                            Explore the mysteries of the universe and become a space expert!
+                            Explore the mysteries of the universe and become a
+                            space expert!
                           </p>
                           <p>
-                            Start your week full of fascinating discoveries about astronomy, rockets, and distant galaxies! Space Exploration is already preselected in the booking form – all that&apos;s left is to choose your accommodation and travel options.
+                            Start your week full of fascinating discoveries
+                            about astronomy, rockets, and distant galaxies!
+                            Space Exploration is already preselected in the
+                            booking form – all that&apos;s left is to choose
+                            your accommodation and travel options.
                           </p>
                           <p>
-                            Secure your spot now and blast off into the universe! 🌍🛰️ And if you want to explore even more, stay an extra week and try another exciting camp profile!
+                            Secure your spot now and blast off into the
+                            universe! 🌍🛰️ And if you want to explore even more,
+                            stay an extra week and try another exciting camp
+                            profile!
                           </p>
                         </div>
                       </div>
@@ -773,7 +995,9 @@ export default function SpaceExplorationPage() {
                     font-weight: bold;
                     color: #ffaa00;
                   }
-                  .custom_acc_691a9cf7946c8 .uk-open > .uk-accordion-title::before {
+                  .custom_acc_691a9cf7946c8
+                    .uk-open
+                    > .uk-accordion-title::before {
                     content: "−";
                   }
                   .custom_acc_691a9cf7946c8 .uk-accordion-content {
@@ -788,7 +1012,24 @@ export default function SpaceExplorationPage() {
                 `}</style>
               </div>
             </div>
-            <div className="uk-width-1-3@m"></div>
+            <div className="uk-width-1-3@m">
+              <div className="uk-card-default uk-card uk-card-body uk-margin">
+                <h3 className="uk-h4 uk-margin-remove-bottom">
+                  Creative, Sports & Adventure Camp Lüneburger Heide / Walsrode
+                </h3>
+                <div className="uk-margin-small-top">
+                  <iframe
+                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/spaceexplorationwal"
+                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    allowFullScreen={true}
+                    width="100%"
+                    height="800"
+                    frameBorder="0"
+                    style={{ minHeight: "600px" }}
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -808,11 +1049,11 @@ export default function SpaceExplorationPage() {
                     to the Universe in Southern Germany!
                   </p>
                 </h2>
-              <div className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
-                <p>
-                    Fascinated by space? Then the Space Exploration Camp in Regen
-                    is just right for you! Explore planets, experiment with
-                    rocket engines, and discover what it&apos;s like to
+                <div className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
+                  <p>
+                    Fascinated by space? Then the Space Exploration Camp in
+                    Regen is just right for you! Explore planets, experiment
+                    with rocket engines, and discover what it&apos;s like to
                     experience space as an astronaut.
                   </p>
                   <p>
@@ -821,14 +1062,14 @@ export default function SpaceExplorationPage() {
                     your scientific thinking and push beyond your limits.
                   </p>
                   <p>
-                    Science meets adventure! Surrounded by nature in the Bavarian
-                    Forest, you&apos;ll combine research with teamwork and
-                    explore the universe together with like-minded peers from
-                    around the world – bilingual and interactive!
-                </p>
-                <p>
-                    Get ready for your mission – Space Exploration is waiting for
-                    you!
+                    Science meets adventure! Surrounded by nature in the
+                    Bavarian Forest, you&apos;ll combine research with teamwork
+                    and explore the universe together with like-minded peers
+                    from around the world – bilingual and interactive!
+                  </p>
+                  <p>
+                    Get ready for your mission – Space Exploration is waiting
+                    for you!
                   </p>
                 </div>
                 <div
@@ -1040,8 +1281,8 @@ export default function SpaceExplorationPage() {
                               from train station/airport
                             </li>
                           </ul>
-              </div>
-            </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1061,28 +1302,20 @@ export default function SpaceExplorationPage() {
                 `}</style>
               </div>
             </div>
-            <div className="uk-width-1-3@m"></div>
-          </div>
-        </div>
-      </div>
-
-      {/* Booking Section */}
-      <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <h2 className="uk-h2 uk-text-center">Booking</h2>
-              <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
-              <div className="uk-panel uk-margin">
-                <div style={{ textAlign: "center" }}>
+            <div className="uk-width-1-3@m">
+              <div className="uk-card-default uk-card uk-card-body uk-margin">
+                <h3 className="uk-h4 uk-margin-remove-bottom">
+                  Adventure & Language Camp Bayerischer Wald / Regen
+                </h3>
+                <div className="uk-margin-small-top">
                   <iframe
-                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/spaceexplorationwal"
+                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/spacereg"
                     title="Bookacamp, die Buchungsplattform von Camp Adventure"
                     allowFullScreen={true}
-                    width="1000"
-                    height="1700"
+                    width="100%"
+                    height="800"
                     frameBorder="0"
-                    allowFullScreen={true}
+                    style={{ minHeight: "600px" }}
                   ></iframe>
                 </div>
               </div>
@@ -1091,20 +1324,43 @@ export default function SpaceExplorationPage() {
         </div>
       </div>
 
-      {/* ProvenExpert Widget */}
-      <div className="uk-section-muted uk-section">
-        <div className="uk-container uk-container-large">
+      {/* Testimonial Section */}
+      <div className="uk-section-default uk-section">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Mein Sohn (7) kann es kaum erwarten im Sommer zum zweiten
+                    Mal ins Camp zu fahren. Die fünf Sterne habt ihr euch
+                    verdient! Weiter so!!!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Katharina W. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -1113,4 +1369,3 @@ export default function SpaceExplorationPage() {
     </>
   );
 }
-

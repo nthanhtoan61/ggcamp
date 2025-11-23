@@ -17,7 +17,9 @@ export default function SpanishcampPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png"
+            )})`,
           }}
         >
           <div
@@ -37,9 +39,7 @@ export default function SpanishcampPage() {
                   className="uk-panel uk-text-lead uk-margin uk-text-left"
                   uk-scrollspy-class=""
                 >
-                  <p>
-                    Learn Spanish in beautiful Spain with native speakers!
-                  </p>
+                  <p>Learn Spanish in beautiful Spain with native speakers!</p>
                 </div>
               </div>
             </div>
@@ -132,9 +132,9 @@ export default function SpanishcampPage() {
                   conversations with international campers and staff.
                 </p>
                 <p>
-                  Immerse yourself in Spanish culture while learning the language
-                  in an authentic environment. Perfect for beginners and those
-                  looking to improve their Spanish skills.
+                  Immerse yourself in Spanish culture while learning the
+                  language in an authentic environment. Perfect for beginners
+                  and those looking to improve their Spanish skills.
                 </p>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function SpanishcampPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -188,22 +188,48 @@ export default function SpanishcampPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Fantastic Spanish Camp in Barcelona! Our children improved
+                    their Spanish significantly while having an amazing time.
+                    Learning from native speakers in a beautiful beach setting
+                    made it fun and effective. They gained confidence, made
+                    international friends, and fell in love with Spanish
+                    culture!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Carlos R. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -212,4 +238,3 @@ export default function SpanishcampPage() {
     </>
   );
 }
-

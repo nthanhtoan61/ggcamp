@@ -17,7 +17,9 @@ export default function DivingPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/bd/Personen%20auf%20Segelboot-bdadb0cc.png"
+            )})`,
           }}
         >
           <div
@@ -110,7 +112,11 @@ export default function DivingPage() {
                 ></span>
               </div>
               <div className="uk-panel uk-margin uk-text-center">
-                <p>Bilingual<br />GER & EN</p>
+                <p>
+                  Bilingual
+                  <br />
+                  GER & EN
+                </p>
               </div>
             </div>
           </div>
@@ -131,15 +137,27 @@ export default function DivingPage() {
                 </h2>
                 <div className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
                   <p>
-                    Dive in, go deep, and be amazed!<br />
-                    At our Dive Camp in Barcelona, you&apos;ll explore the fascinating underwater world of the Mediterranean and learn everything you need for safe diving – in both English and Spanish!
+                    Dive in, go deep, and be amazed!
+                    <br />
+                    At our Dive Camp in Barcelona, you&apos;ll explore the
+                    fascinating underwater world of the Mediterranean and learn
+                    everything you need for safe diving – in both English and
+                    Spanish!
                   </p>
                   <p>
-                    Learn to dive with the pros!<br />
-                    In cooperation with Dive Center Barcelona, experienced instructors will guide you step by step – whether you&apos;re a beginner or already have some scuba diving experience. By the end, you&apos;ll have the chance to earn your internationally recognized! CMAS 1 Star Diver certification, allowing you to dive up to 25 meters deep!
+                    Learn to dive with the pros!
+                    <br />
+                    In cooperation with Dive Center Barcelona, experienced
+                    instructors will guide you step by step – whether
+                    you&apos;re a beginner or already have some scuba diving
+                    experience. By the end, you&apos;ll have the chance to earn
+                    your internationally recognized! CMAS 1 Star Diver
+                    certification, allowing you to dive up to 25 meters deep!
                   </p>
                   <p>
-                    Dive into a whole new world with like-minded adventurers, build team spirit, and experience the ultimate summer fun – both above and below the water!
+                    Dive into a whole new world with like-minded adventurers,
+                    build team spirit, and experience the ultimate summer fun –
+                    both above and below the water!
                   </p>
                 </div>
                 <div
@@ -149,9 +167,14 @@ export default function DivingPage() {
                   <div className="uk-position-relative">
                     <div className="uk-slider-items uk-grid">
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/0b/01-Tauchkurs-im-Sommercamp-0b5fad8b.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/0b/01-Tauchkurs-im-Sommercamp-0b5fad8b.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Two teens underwater during scuba diving course, making heart sign with hands at summer camp"
@@ -161,9 +184,14 @@ export default function DivingPage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/ad/00-Barcelona-Beachcamp-BISC-ada2dde8.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/ad/00-Barcelona-Beachcamp-BISC-ada2dde8.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Aerial view of solar-roofed camp building overlooking Barcelona harbor and city skyline"
@@ -173,9 +201,14 @@ export default function DivingPage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/18/02-Barcelona-Beachcamp-Zimmer-18b5d451.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/18/02-Barcelona-Beachcamp-Zimmer-18b5d451.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Modern four-bed dorm with bunk beds in a stylish youth camp accommodation by the harbor in Barcelona"
@@ -185,9 +218,14 @@ export default function DivingPage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/10/03-Barcelona-Beachcamp-Speisesaal-10a600ce.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/10/03-Barcelona-Beachcamp-Speisesaal-10a600ce.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Empty dining hall with large windows and marina view in modern youth camp accommodation in Barcelona"
@@ -197,9 +235,14 @@ export default function DivingPage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/6a/04-Barcelona-Beachcamp-Indoor-Lounge-6add3572.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/6a/04-Barcelona-Beachcamp-Indoor-Lounge-6add3572.jpg"
+                            )}
                             width={1260}
                             height={838}
                             alt="Stylish lounge with white sofas and sea view in premium summer camp facility in Spain"
@@ -209,9 +252,14 @@ export default function DivingPage() {
                         </div>
                       </div>
                       <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div className="el-item uk-inline-clip uk-transition-toggle" tabIndex={0}>
+                        <div
+                          className="el-item uk-inline-clip uk-transition-toggle"
+                          tabIndex={0}
+                        >
                           <Image
-                            src={getTemplateImageUrl("yootheme/cache/a0/05-Barcelona-Beachcamp-Strand-a092c88e.jpg")}
+                            src={getTemplateImageUrl(
+                              "yootheme/cache/a0/05-Barcelona-Beachcamp-Strand-a092c88e.jpg"
+                            )}
                             width={1260}
                             height={840}
                             alt="Teenagers sitting in a circle on the beach listening to a camp counselor during summer camp in Spain"
@@ -223,7 +271,10 @@ export default function DivingPage() {
                     </div>
                   </div>
                   <div className="uk-margin-top uk-visible@s" uk-inverse="">
-                    <ul className="el-nav uk-slider-nav uk-dotnav uk-flex-center" uk-margin=""></ul>
+                    <ul
+                      className="el-nav uk-slider-nav uk-dotnav uk-flex-center"
+                      uk-margin=""
+                    ></ul>
                   </div>
                 </div>
               </div>
@@ -267,8 +318,8 @@ export default function DivingPage() {
               <div className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
                 <p>
                   Our scuba diving camps in Barcelona offer professional PADI
-                  certification courses. Learn to dive safely under the
-                  guidance of certified instructors and explore the beautiful
+                  certification courses. Learn to dive safely under the guidance
+                  of certified instructors and explore the beautiful
                   Mediterranean underwater world.
                 </p>
                 <p>
@@ -305,7 +356,7 @@ export default function DivingPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
+      {/* <div className="uk-section-muted uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -327,22 +378,47 @@ export default function DivingPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    Outstanding Diving Camp! Our son earned his diving
+                    certification and fell in love with underwater exploration.
+                    The instructors were professional, safety was always a
+                    priority, and the whole experience was unforgettable. Highly
+                    recommend!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Robert H. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
@@ -351,4 +427,3 @@ export default function DivingPage() {
     </>
   );
 }
-

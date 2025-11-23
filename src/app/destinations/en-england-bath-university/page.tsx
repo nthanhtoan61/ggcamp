@@ -17,7 +17,9 @@ export default function EnglandBathUniversityPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge uk-padding-remove-bottom"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/48/01-Bath-English-Language-Camp-Common-Room-48c460e3.jpg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/48/01-Bath-English-Language-Camp-Common-Room-48c460e3.jpg"
+            )})`,
           }}
         >
           <div
@@ -54,39 +56,42 @@ export default function EnglandBathUniversityPage() {
           <div className="uk-margin-medium uk-container uk-container-small">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1">
               <div className="uk-width-1-1@m">
-                <div className="uk-panel uk-text-lead uk-margin" uk-scrollspy-class="">
-                  <p>
-                    Location – Bath & London: Two Worlds, One Adventure
-                  </p>
+                <div
+                  className="uk-panel uk-text-lead uk-margin"
+                  uk-scrollspy-class=""
+                >
+                  <p>Location – Bath & London: Two Worlds, One Adventure</p>
                 </div>
                 <div
                   className="uk-panel uk-column-1-2@m uk-column-1-1@s uk-margin"
                   uk-scrollspy-class=""
                 >
                   <p>
-                    Our English and Adventure Camp Bath & London is in the county
-                    of Somerset in the west of England – where history meets
-                    modern student life. Bath is considered one of Britain&apos;s
-                    most beautiful cities and was among the first to be declared
-                    a UNESCO World Heritage Site. Famous for its Roman thermal
-                    baths, charming streets, and elegant Georgian architecture, Bath
-                    is a place where culture and beauty come together perfectly.
+                    Our English and Adventure Camp Bath & London is in the
+                    county of Somerset in the west of England – where history
+                    meets modern student life. Bath is considered one of
+                    Britain&apos;s most beautiful cities and was among the first
+                    to be declared a UNESCO World Heritage Site. Famous for its
+                    Roman thermal baths, charming streets, and elegant Georgian
+                    architecture, Bath is a place where culture and beauty come
+                    together perfectly.
                   </p>
                   <p>
-                    The University of Bath campus sits proudly on the green hills
-                    overlooking the city – with stunning views, open space, and
-                    that unmistakable campus energy. You&apos;ll find everything
-                    you need for the perfect summer: modern sports facilities,
-                    wide lawns, chill-out spots, and even a lake with a
-                    sunbathing area. The heart of the campus, the
+                    The University of Bath campus sits proudly on the green
+                    hills overlooking the city – with stunning views, open
+                    space, and that unmistakable campus energy. You&apos;ll find
+                    everything you need for the perfect summer: modern sports
+                    facilities, wide lawns, chill-out spots, and even a lake
+                    with a sunbathing area. The heart of the campus, the
                     &quot;Parade,&quot; is your go-to meeting point – with small
                     shops, cafés, and cozy lounges to relax in after a busy day.
                   </p>
                   <p>
-                    Bath strikes the perfect balance between peace and liveliness
-                    – a safe campus surrounded by nature and common areas to hang
-                    out with new friends from all over the world – and to make
-                    English your second language almost without noticing.
+                    Bath strikes the perfect balance between peace and
+                    liveliness – a safe campus surrounded by nature and common
+                    areas to hang out with new friends from all over the world –
+                    and to make English your second language almost without
+                    noticing.
                   </p>
                 </div>
                 <div
@@ -152,9 +157,15 @@ export default function EnglandBathUniversityPage() {
                 English Language Camp at Bath University
               </h2>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
-              <ul className="uk-list uk-list-divider uk-list-large uk-text-left@s uk-text-center" uk-scrollspy-class="uk-animation-slide-right-small">
+              <ul
+                className="uk-list uk-list-divider uk-list-large uk-text-left@s uk-text-center"
+                uk-scrollspy-class="uk-animation-slide-right-small"
+              >
                 <li className="el-item">
-                  <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                  <div
+                    className="uk-child-width-expand@m uk-grid-small"
+                    uk-grid=""
+                  >
                     <div className="uk-width-medium@m uk-text-break">
                       <div className="el-title uk-margin-remove uk-text-bold">
                         Location
@@ -168,7 +179,10 @@ export default function EnglandBathUniversityPage() {
                   </div>
                 </li>
                 <li className="el-item">
-                  <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                  <div
+                    className="uk-child-width-expand@m uk-grid-small"
+                    uk-grid=""
+                  >
                     <div className="uk-width-medium@m uk-text-break">
                       <div className="el-title uk-margin-remove uk-text-bold">
                         Ages
@@ -182,7 +196,10 @@ export default function EnglandBathUniversityPage() {
                   </div>
                 </li>
                 <li className="el-item">
-                  <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                  <div
+                    className="uk-child-width-expand@m uk-grid-small"
+                    uk-grid=""
+                  >
                     <div className="uk-width-medium@m uk-text-break">
                       <div className="el-title uk-margin-remove uk-text-bold">
                         Rates
@@ -196,7 +213,10 @@ export default function EnglandBathUniversityPage() {
                   </div>
                 </li>
                 <li className="el-item">
-                  <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                  <div
+                    className="uk-child-width-expand@m uk-grid-small"
+                    uk-grid=""
+                  >
                     <div className="uk-width-medium@m uk-text-break">
                       <div className="el-title uk-margin-remove uk-text-bold">
                         Duration
@@ -204,13 +224,18 @@ export default function EnglandBathUniversityPage() {
                     </div>
                     <div>
                       <div className="el-content uk-panel">
-                        <p>7 or 14 days (starting at saturday, ending on Sunday)</p>
+                        <p>
+                          7 or 14 days (starting at saturday, ending on Sunday)
+                        </p>
                       </div>
                     </div>
                   </div>
                 </li>
                 <li className="el-item">
-                  <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                  <div
+                    className="uk-child-width-expand@m uk-grid-small"
+                    uk-grid=""
+                  >
                     <div className="uk-width-medium@m uk-text-break">
                       <div className="el-title uk-margin-remove uk-text-bold">
                         Accommodation
@@ -224,7 +249,10 @@ export default function EnglandBathUniversityPage() {
                   </div>
                 </li>
                 <li className="el-item">
-                  <div className="uk-child-width-expand@m uk-grid-small" uk-grid="">
+                  <div
+                    className="uk-child-width-expand@m uk-grid-small"
+                    uk-grid=""
+                  >
                     <div className="uk-width-medium@m uk-text-break">
                       <div className="el-title uk-margin-remove uk-text-bold">
                         Courses
@@ -238,8 +266,14 @@ export default function EnglandBathUniversityPage() {
                   </div>
                 </li>
               </ul>
-              <div className="uk-margin uk-text-center" uk-scrollspy-class="uk-animation-fade">
-                <div className="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center" uk-grid="">
+              <div
+                className="uk-margin uk-text-center"
+                uk-scrollspy-class="uk-animation-fade"
+              >
+                <div
+                  className="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center"
+                  uk-grid=""
+                >
                   <div className="el-item">
                     <a
                       className="el-content uk-button uk-button-default"
@@ -296,7 +330,8 @@ export default function EnglandBathUniversityPage() {
                   className="uk-h2 uk-text-center"
                   uk-scrollspy-class="uk-animation-slide-left-medium"
                 >
-                  Accommodation – modern, safe & right in the heart of campus life
+                  Accommodation – modern, safe & right in the heart of campus
+                  life
                 </h2>
                 <div
                   className="uk-divider-icon uk-width-medium uk-margin-auto"
@@ -310,15 +345,15 @@ export default function EnglandBathUniversityPage() {
                     In Bath, you&apos;ll stay right on the University of Bath
                     campus – central, modern, and right in the middle of it all.
                     In small, multi-story houses, you&apos;ll live together with
-                    international participants. Single rooms, a shared lounge, and
-                    a kitchen offer the perfect balance between privacy and
+                    international participants. Single rooms, a shared lounge,
+                    and a kitchen offer the perfect balance between privacy and
                     community.
                   </p>
                   <p>
-                    Our teamers are always nearby – with heart, humor, and an open
-                    ear for whatever&apos;s on your mind. That way, you&apos;ll
-                    feel safe, free, and completely at ease – the true Camp
-                    Adventure way.
+                    Our teamers are always nearby – with heart, humor, and an
+                    open ear for whatever&apos;s on your mind. That way,
+                    you&apos;ll feel safe, free, and completely at ease – the
+                    true Camp Adventure way.
                   </p>
                   <p>
                     After campus life, it&apos;s time for London calling!
@@ -326,12 +361,13 @@ export default function EnglandBathUniversityPage() {
                     <br />
                     Here, too, our teamers are available around the clock. From
                     your accommodation, you&apos;ll dive straight into London
-                    life – sightseeing, shopping, street food & city vibes are all
-                    just around the corner.
+                    life – sightseeing, shopping, street food & city vibes are
+                    all just around the corner.
                   </p>
                   <p>
-                    From the peaceful campus in Bath to the vibrant metropolis of
-                    London – this combination makes our England Camp truly unique.
+                    From the peaceful campus in Bath to the vibrant metropolis
+                    of London – this combination makes our England Camp truly
+                    unique.
                     <br />
                     Live, learn & explore – right in the heart of real England!
                   </p>
@@ -372,7 +408,8 @@ export default function EnglandBathUniversityPage() {
                   <p>
                     We offer English Classic and English TOEFL® courses at Bath
                     University. Our innovative and creative learning concepts
-                    ensure that English lessons during the holidays are also fun!
+                    ensure that English lessons during the holidays are also
+                    fun!
                   </p>
                 </div>
               </div>
@@ -403,8 +440,8 @@ export default function EnglandBathUniversityPage() {
                   uk-scrollspy-class=""
                 >
                   <p>
-                    Please check our booking system for current dates and prices.
-                    Prices start from 795 USD per week.
+                    Please check our booking system for current dates and
+                    prices. Prices start from 795 USD per week.
                   </p>
                 </div>
               </div>
@@ -457,17 +494,15 @@ export default function EnglandBathUniversityPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1">
               <div className="uk-width-1-1@m">
                 <h2 className="uk-h2 uk-text-center">Booking</h2>
-                <div
-                  className="uk-divider-icon uk-width-medium uk-margin-auto"
-                ></div>
+                <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
                 <div className="uk-panel uk-margin">
                   <div style={{ textAlign: "center" }}>
                     <iframe
                       src="https://bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/bath"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
-                    allowFullScreen={true}
-                    width="1000"
-                    height="1000"
+                      title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                      allowFullScreen={true}
+                      width="1000"
+                      height="1000"
                       frameBorder="0"
                       allowFullScreen={true}
                     ></iframe>
@@ -501,4 +536,3 @@ export default function EnglandBathUniversityPage() {
     </>
   );
 }
-

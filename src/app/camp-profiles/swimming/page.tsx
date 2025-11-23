@@ -1068,14 +1068,26 @@ export default function SwimmingPage() {
       </div>
 
       {/* Booking Section */}
-      <div className="uk-section-muted uk-section">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
+      {/* <div className="uk-section-muted uk-section">
+        <div
+          className="uk-container uk-container-large"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <div
+            className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin"
+            style={{ width: "100%", maxWidth: "1200px" }}
+          >
             <div className="uk-width-1-1@m">
               <h2 className="uk-h2 uk-text-center">Booking</h2>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
               <div className="uk-panel uk-margin">
-                <div style={{ textAlign: "center" }}>
+                <div
+                  style={{
+                    textAlign: "center",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/swimmingbegreg"
                     title="Bookacamp, die Buchungsplattform von Camp Adventure"
@@ -1084,28 +1096,54 @@ export default function SwimmingPage() {
                     height="1500"
                     frameBorder="0"
                     allowFullScreen={true}
+                    style={{ margin: "0 auto" }}
                   ></iframe>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ProvenExpert Widget */}
+      {/* Testimonial Section */}
       <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="uk-container uk-container-small">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div>
-                <center>
-                  <div className="pe-richsnippets"></div>
-                  <Script
-                    type="text/javascript"
-                    src="https://www.provenexpert.com/widget/richsnippetf927.js?u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                    async
-                  />
-                </center>
+            <div className="uk-grid-item-match uk-width-1-1">
+              <div className="uk-card-default uk-card uk-card-body">
+                <blockquote
+                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
+                  uk-scrollspy-class=""
+                >
+                  <p>
+                    The Swimming Camp exceeded all our expectations! Our
+                    daughter not only improved her swimming technique but also
+                    earned her certificate. The instructors were professional
+                    and supportive, and the camp atmosphere was wonderful. She
+                    made great friends and can&apos;t wait to return!
+                  </p>
+                  <footer className="el-footer">
+                    <cite className="el-author">
+                      <a
+                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Julia M. auf Google
+                      </a>
+                    </cite>
+                  </footer>
+                </blockquote>
+                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
+                  <center>
+                    <div className="pe-richsnippets"></div>
+                    <Script
+                      type="text/javascript"
+                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
+                      async
+                    />
+                  </center>
+                </div>
               </div>
             </div>
           </div>
