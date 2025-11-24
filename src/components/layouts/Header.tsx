@@ -359,6 +359,38 @@ export const Header: React.FC = () => {
                   <div className="uk-navbar-center">
                     <div className="uk-navbar-center-left uk-preserve-width">
                       <ul className="uk-navbar-nav">
+                        <li>
+                          <Link href="/">Home Page</Link>
+                        </li>
+                        <li className="item-183 uk-parent">
+                          <a href="/info">
+                            About <span uk-navbar-parent-icon=""></span>
+                          </a>
+                          <div className="uk-drop uk-navbar-dropdown">
+                            <div>
+                              <ul className="uk-nav uk-navbar-dropdown-nav">
+                               <li>
+                                  <Link href="/info/about">About us</Link>
+                                </li>
+                                <li>
+                                  <Link href="/info/travel-documents">Travel Documents</Link>
+                                </li>
+                                <li>
+                                  <Link href="/info/safety">Safety</Link>
+                                </li>
+                                <li>
+                                  <Link href="/info/insurance">Insurance</Link>
+                                </li>
+                                <li>
+                                  <Link href="/info/terms-conditions">Terms&Conditions</Link>
+                                </li>
+                                <li>
+                                  <Link href="/info/faq">FAQ</Link>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
                         <li className="item-165 uk-parent">
                           <a href="/destinations">
                             Camp Locations <span uk-navbar-parent-icon=""></span>
@@ -398,9 +430,33 @@ export const Header: React.FC = () => {
                             </div>
                           </div>
                         </li>
-                        <li className="item-672 uk-parent">
-                          <a href="/camp-profiles">
-                            Camp Profiles <span uk-navbar-parent-icon=""></span>
+                      
+                        
+                      </ul>
+                    </div>
+
+                    <Link
+                      href="/"
+                      aria-label="Back to home"
+                      className="uk-logo uk-navbar-item"
+                      style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+                    >
+                      <Image
+                        alt="Camp Adventure"
+                        loading="eager"
+                        src={logoUrl}
+                        width={100}
+                        height={35}
+                        priority
+                        style={{ display: "block" }}
+                      />
+                    </Link>
+
+                    <div className="uk-navbar-center-right uk-preserve-width">
+                      <ul className="uk-navbar-nav">
+                          <li className="item-672 uk-parent">
+                          <a href="/activities">
+                            Activities <span uk-navbar-parent-icon=""></span>
                           </a>
                           <div className="uk-drop uk-navbar-dropdown" style={{ width: "400px" }}>
                             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
@@ -588,119 +644,7 @@ export const Header: React.FC = () => {
                             </div>
                           </div>
                         </li>
-                        <li className="item-210">
-                          <Link href="/schooltrips">School Trips</Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <Link
-                      href="/"
-                      aria-label="Back to home"
-                      className="uk-logo uk-navbar-item"
-                      style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-                    >
-                      <Image
-                        alt="Camp Adventure"
-                        loading="eager"
-                        src={logoUrl}
-                        width={100}
-                        height={35}
-                        priority
-                        style={{ display: "block" }}
-                      />
-                    </Link>
-
-                    <div className="uk-navbar-center-right uk-preserve-width">
-                      <ul className="uk-navbar-nav">
-                        <li className="item-226 uk-parent">
-                          <a href="/academy">
-                            Academy <span uk-navbar-parent-icon=""></span>
-                          </a>
-                          <div className="uk-drop uk-navbar-dropdown">
-                            <div>
-                              <ul className="uk-nav uk-navbar-dropdown-nav">
-                                <li>
-                                  <Link href="/academy/jobs">Camp & Office Positions</Link>
-                                </li>
-                                <li className="item-237 uk-parent">
-                                  <a href="#" uk-scroll="">
-                                    Educational Programs <span uk-navbar-parent-icon=""></span>
-                                  </a>
-                                  <ul className="uk-nav-sub">
-                                    <li>
-                                      <Link href="/academy/educational-programs/outdoor-education-diploma">
-                                        Outdoor Education Diploma
-                                      </Link>
-                                    </li>
-                                    <li>
-                                      <Link href="/academy/educational-programs/icit-eng">
-                                        International Counsellor in Training (ICIT)
-                                      </Link>
-                                    </li>
-                                  </ul>
-                                </li>
-                                <li>
-                                  <Link href="/academy/location-camp-adventure-academy">
-                                    Location of Camp Adventure Academy
-                                  </Link>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="item-183 uk-parent">
-                          <a href="/info">
-                            Info <span uk-navbar-parent-icon=""></span>
-                          </a>
-                          <div className="uk-drop uk-navbar-dropdown">
-                            <div>
-                              <ul className="uk-nav uk-navbar-dropdown-nav">
-                                <li>
-                                  <Link href="/info/news">News</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/info-sessions-eng">Info Sessions</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/arrival-departure">Arrival&Departure</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/safety">Safety</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/insurance">Insurance</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/faq">FAQ</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/agencies">Agencies</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/innovation-consulting">
-                                    Innovation Consulting
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/terms-conditions">Terms&Conditions</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/contact">Contact</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/family-weekend">Family Weekend</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/travel-documents">Travel Documents</Link>
-                                </li>
-                                <li>
-                                  <Link href="/info/about">About us</Link>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </li>
+                        
                         <li className="item-182">
                           <Link href="/booking">Booking</Link>
                         </li>
