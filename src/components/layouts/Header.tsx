@@ -15,7 +15,6 @@ export const Header: React.FC = () => {
           <a href="#tm-main" className="uk-link-reset">Skip to main content</a>
         </div>
       </div>
-
       <div className="tm-page">
         {/* Mobile Header */}
         <header className="tm-header-mobile uk-hidden@l">
@@ -37,8 +36,8 @@ export const Header: React.FC = () => {
                       <div uk-navbar-toggle-icon=""></div>
                     </a>
                   </div>
-                  <div className="uk-navbar-center">
-                    <Link href="/" aria-label="Back to home" className="uk-logo uk-navbar-item">
+                  <div className="uk-navbar-center" style={{ display: "none" }}>
+                    <Link href="/" aria-label="Back to home" className="uk-logo uk-navbar-item" >
                       <Image
                         alt="Camp Adventure"
                         loading="eager"
@@ -112,7 +111,7 @@ export const Header: React.FC = () => {
                             </li>
                           </ul>
                         </li>
-                        <li className="item-672 uk-parent">
+                        <li className="item-678 uk-parent">
                           <Link href="/camp-profiles">Camp Profiles</Link>
                           <ul className="uk-nav-sub">
                             <li>
@@ -363,15 +362,13 @@ export const Header: React.FC = () => {
                           <Link href="/">Home Page</Link>
                         </li>
                         <li className="item-183 uk-parent">
-                          <a href="/info">
-                            About <span uk-navbar-parent-icon=""></span>
+                          <a href="/about-us">
+                            About Us<span uk-navbar-parent-icon=""></span>
                           </a>
                           <div className="uk-drop uk-navbar-dropdown">
                             <div>
                               <ul className="uk-nav uk-navbar-dropdown-nav">
-                               <li>
-                                  <Link href="/info/about">About us</Link>
-                                </li>
+                            
                                 <li>
                                   <Link href="/info/travel-documents">Travel Documents</Link>
                                 </li>
@@ -456,197 +453,16 @@ export const Header: React.FC = () => {
                       <ul className="uk-navbar-nav">
                           <li className="item-672 uk-parent">
                           <a href="/activities">
-                            Activities <span uk-navbar-parent-icon=""></span>
+                            Activities 
                           </a>
-                          <div className="uk-drop uk-navbar-dropdown" style={{ width: "400px" }}>
-                            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-                              <div className="uk-width-1-1">
-                                <div>
-                                  <div className="uk-child-width-expand" uk-grid="">
-                                    <div>
-                                      <ul className="uk-margin-remove-bottom uk-nav uk-nav-default">
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/adventure-sports-creative"
-                                          >
-                                            Adventure, Sports & Creative
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/arts-crafts">
-                                            Arts & Crafts
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/climbing">
-                                            Climbing
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/dancing">
-                                            Dancing
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/diving">
-                                            Diving
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/englischcamps"
-                                          >
-                                            Englischcamps
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/englisch-toefl"
-                                          >
-                                            Englisch TOEFL©
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/fishing">
-                                            Fishing
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/german-camps"
-                                          >
-                                            German Camps
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/horseback-riding"
-                                          >
-                                            Horseback Riding
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/husky-camp">
-                                            Husky Camp
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/international-counsellor-in-training-icit"
-                                          >
-                                            International Counsellor in Training (ICIT)
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/lifeguarding"
-                                          >
-                                            Lifeguarding
-                                          </Link>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div>
-                                      <ul className="uk-margin-remove-bottom uk-nav uk-nav-default">
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/language-camps"
-                                          >
-                                            Language
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/senior-plus-leadership"
-                                          >
-                                            Leadership
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/multi-water-adventure"
-                                          >
-                                            Multi Water Adventure
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/sailing">
-                                            Sailing
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/skating">
-                                            Skating
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/soccer">
-                                            Soccer
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/space-exploration"
-                                          >
-                                            Space Exploration
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/spanishcourse"
-                                          >
-                                            Spanishcourse
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/survival-camps"
-                                          >
-                                            Survival
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/swimming">
-                                            Swimming
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link className="el-link" href="/camp-profiles/tennis">
-                                            Tennis
-                                          </Link>
-                                        </li>
-                                        <li className="el-item">
-                                          <Link
-                                            className="el-link"
-                                            href="/camp-profiles/windsurfing"
-                                          >
-                                            Windsurfing
-                                          </Link>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          
                         </li>
                         
                         <li className="item-182">
                           <Link href="/booking">Booking</Link>
+                        </li>
+                         <li className="item-183">
+                          <Link href="/activity-detail">Activity Detail</Link>
                         </li>
                         <li className="item-943 uk-parent">
                           <a
