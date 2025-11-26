@@ -357,7 +357,7 @@ export default function HomePage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin uk-margin-remove-bottom">
               <div className="uk-width-1-1">
                 <h1
-                  className="uk-heading-small uk-text-center"
+                  className="uk-heading-small uk-text-center !text-[5vw]"
                   id="page#0"
                   style={{ color: "#fff" }}
                 >
@@ -600,7 +600,7 @@ export default function HomePage() {
         <div className="uk-container">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1">
-              <h2 className="uk-h2 uk-text-center@m uk-text-center">
+              <h2 className="uk-h2 uk-text-center@m uk-text-center !text-[1.67vw]">
                 <p>Go and Grow program</p>
               </h2>
             </div>
@@ -699,7 +699,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet">
+                <h3 className="uk-heading-bullet !text-[1.67vw]">
                   Holidays that do more – International language and specialty
                   camps for kids & teens
                 </h3>
@@ -739,7 +739,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet">
+                <h3 className="uk-heading-bullet !text-[1.67vw]">
                   Holiday camps for every season | Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -815,7 +815,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet">
+                <h3 className="uk-heading-bullet !text-[1.67vw]">
                   The perfect camp for every age group
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -876,7 +876,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet">
+                <h3 className="uk-heading-bullet !text-[1.67vw]">
                   Specialty camps & adventure holidays | Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -999,7 +999,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet">
+                <h3 className="uk-heading-bullet !text-[1.67vw]">
                   Language camps & adventure trips | Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -1108,7 +1108,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet">
+                <h3 className="uk-heading-bullet !text-[1.67vw]">
                   School trips & group travel with Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -1178,7 +1178,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet">
+                <h3 className="uk-heading-bullet !text-[1.67vw]">
                   Family weekends & parent-child camps at Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -1267,7 +1267,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-grid-medium uk-child-width-1-1 uk-grid-margin-medium">
             <div className="uk-grid-item-match uk-flex-middle uk-width-1-1@m">
               <div className="uk-panel uk-width-1-1">
-                <h4 className="uk-h2 uk-text-center" uk-scrollspy-class="">
+                <h4 className="uk-h2 uk-text-center !text-[1.67vw]" uk-scrollspy-class="">
                   <p>We love Camp</p>
                 </h4>
                 <div
@@ -1286,10 +1286,10 @@ export default function HomePage() {
                 className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">
+                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                   Internationality
                 </h3>
-                <div className="el-content uk-panel uk-margin-top">
+                <div className="el-content uk-panel uk-margin-top !text-black">
                   <p>&nbsp;participants from more than 70 countries</p>
                 </div>
               </div>
@@ -1297,10 +1297,10 @@ export default function HomePage() {
                 className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">
+                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                   Outdoors
                 </h3>
-                <div className="el-content uk-panel uk-margin-top">
+                <div className="el-content uk-panel uk-margin-top !text-black">
                   <p>feel the real nature in the best surroundings</p>
                 </div>
               </div>
@@ -1324,10 +1324,10 @@ export default function HomePage() {
                 className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">
+                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                   Friendship
                 </h3>
-                <div className="el-content uk-panel uk-margin-top">
+                <div className="el-content uk-panel uk-margin-top !text-black">
                   <p>make friends from all over the world</p>
                 </div>
               </div>
@@ -1335,10 +1335,10 @@ export default function HomePage() {
                 className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">
+                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                   Challenge
                 </h3>
-                <div className="el-content uk-panel uk-margin-top">
+                <div className="el-content uk-panel uk-margin-top !text-black">
                   <p>leave your comfort zone, challenge yourself</p>
                 </div>
               </div>
@@ -1353,7 +1353,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet">Join the Go and Grow team</h3>
+                <h3 className="uk-heading-bullet !text-[1.67vw]">Join the Go and Grow team</h3>
                 <div className="uk-panel uk-margin">
                   <p>
                     Since the very beginning, Go and Grow has stood for
@@ -1430,13 +1430,13 @@ export default function HomePage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
               <div className="uk-width-1-1@m">
                 <div
-                  className="uk-h5 uk-margin-small uk-text-center"
+                  className="uk-h5 uk-margin-small uk-text-center !text-[1.67vw]"
                   uk-scrollspy-class="uk-animation-slide-top-medium"
                 >
                   Go and Grow
                 </div>
                 <h2
-                  className="uk-h1 uk-margin-small uk-text-center"
+                  className="uk-h1 uk-margin-small uk-text-center !text-[5vw]"
                   uk-scrollspy-class="uk-animation-slide-bottom-medium"
                 >
                   <p>Partnerships & memberships</p>
