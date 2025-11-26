@@ -7,6 +7,9 @@ import { getTemplateImageUrl } from "@/lib/assets";
 import { programs } from "@/data/programs";
 import { ProgramCard } from "@/components/features/ProgramCard";
 
+// Declare jQuery for TypeScript
+declare const jQuery: any;
+
 export default function HomePage() {
   const [filteredPrograms, setFilteredPrograms] = useState(programs);
 
@@ -41,7 +44,7 @@ export default function HomePage() {
         const hiddenField4 = document.getElementById("field_4") as HTMLInputElement;
         if (hiddenField4) hiddenField4.value = field4;
         // Set selected values trong multiselect
-        if (typeof jQuery !== "undefined" && typeof jQuery.fn.multiselect !== "undefined") {
+        if (typeof jQuery !== "undefined" && jQuery.fn.multiselect) {
           const values = field4.split(",");
           jQuery("#field_4_select").multiselect("select", values);
         }
@@ -49,7 +52,7 @@ export default function HomePage() {
       if (field5) {
         const hiddenField5 = document.getElementById("field_5") as HTMLInputElement;
         if (hiddenField5) hiddenField5.value = field5;
-        if (typeof jQuery !== "undefined" && typeof jQuery.fn.multiselect !== "undefined") {
+        if (typeof jQuery !== "undefined" && jQuery.fn.multiselect) {
           const values = field5.split(",");
           jQuery("#field_5_select").multiselect("select", values);
         }
@@ -57,7 +60,7 @@ export default function HomePage() {
       if (field6) {
         const hiddenField6 = document.getElementById("field_6") as HTMLInputElement;
         if (hiddenField6) hiddenField6.value = field6;
-        if (typeof jQuery !== "undefined" && typeof jQuery.fn.multiselect !== "undefined") {
+        if (typeof jQuery !== "undefined" && jQuery.fn.multiselect) {
           const values = field6.split(",");
           jQuery("#field_6_select").multiselect("select", values);
         }
@@ -157,21 +160,22 @@ export default function HomePage() {
 
     // Khởi tạo multiselect khi jQuery đã sẵn sàng
     const initMultiselect = () => {
-      if (typeof jQuery !== "undefined" && typeof jQuery.fn.multiselect !== "undefined") {
+      if (typeof jQuery !== "undefined" && jQuery.fn.multiselect) {
         jQuery(".multiselect[multiple]").multiselect({
           texts: {
             placeholder: "",
-            selectedOptions: "",
+            selectedOptions: ""
           },
           selectAll: false,
-          selectGroup: true,
+          selectGroup: true
         });
-
         // Apply filters sau khi multiselect đã khởi tạo
         applyFilters();
       } else {
         // Retry sau 100ms nếu jQuery chưa sẵn sàng
-        setTimeout(initMultiselect, 100);
+        window.setTimeout(() => {
+          initMultiselect();
+        }, 100);
       }
     };
 
@@ -192,15 +196,33 @@ export default function HomePage() {
 
   const handleFilterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+    
+    // Update hidden fields with current multiselect values before processing
+    if (typeof jQuery !== "undefined" && jQuery.fn.multiselect) {
+      document.querySelectorAll('.multiselect').forEach(function(selectElement) {
+        const select = jQuery(selectElement);
+        const hiddenFieldId = select.attr('data-hidden');
+        const hiddenField = document.getElementById(hiddenFieldId);
+        const selectedValues = select.val(); // Get values from MultiSelect
+
+        if (hiddenField) {
+          hiddenField.value = selectedValues ? selectedValues.join(',') : '';
+        }
+      });
+    }
+    
+    // Get values from hidden fields (which are updated by the multiselect)
+    const field4Hidden = document.getElementById("field_4") as HTMLInputElement;
+    const field5Hidden = document.getElementById("field_5") as HTMLInputElement;
+    const field6Hidden = document.getElementById("field_6") as HTMLInputElement;
+    const field7Select = document.getElementById("field_7_select") as HTMLSelectElement;
+    
+    const field4 = field4Hidden?.value || "";
+    const field5 = field5Hidden?.value || "";
+    const field6 = field6Hidden?.value || "";
+    const field7 = field7Select?.value || "";
+    
     const params = new URLSearchParams();
-
-    const field4 = (formData.get("field_4") as string) || "";
-    const field5 = (formData.get("field_5") as string) || "";
-    const field6 = (formData.get("field_6") as string) || "";
-    const field7 = (formData.get("field_7") as string) || "";
-
     if (field4) params.set("field_4", field4);
     if (field5) params.set("field_5", field5);
     if (field6) params.set("field_6", field6);
@@ -547,7 +569,7 @@ export default function HomePage() {
                       __html: `
                         (function() {
                           function initMultiselect() {
-                            if (typeof jQuery !== 'undefined' && typeof jQuery.fn.multiselect !== 'undefined') {
+                            if (typeof jQuery !== 'undefined' && jQuery.fn.multiselect) {
                               jQuery(document).ready(function($) {
                                 // Khởi tạo MultiSelect nếu chưa được khởi tạo
                                 if (!$('.multiselect[multiple]').data('plugin_multiselect')) {
@@ -561,22 +583,28 @@ export default function HomePage() {
                                   });
                                 }
 
-                                // Xử lý form submission
-                                const form = document.getElementById('filter-form');
-                                if (form) {
-                                  form.addEventListener('submit', function(e) {
-                                    // Lấy giá trị từ multiselect và đưa vào hidden fields
-                                    document.querySelectorAll('.multiselect').forEach(function(select) {
-                                      const hiddenFieldId = select.getAttribute('data-hidden');
-                                      const hiddenField = document.getElementById(hiddenFieldId);
-                                      const selectedValues = $(select).val(); // Lấy giá trị từ MultiSelect
+                                // Update hidden fields before form submission
+                                // Lấy giá trị từ multiselect và đưa vào hidden fields
+                                document.querySelectorAll('.multiselect').forEach(function(select) {
+                                  const hiddenFieldId = select.getAttribute('data-hidden');
+                                  const hiddenField = document.getElementById(hiddenFieldId);
+                                  const selectedValues = $(select).val(); // Lấy giá trị từ MultiSelect
 
-                                      if (hiddenField) {
-                                        hiddenField.value = selectedValues ? selectedValues.join(',') : '';
-                                      }
-                                    });
-                                  });
-                                }
+                                  if (hiddenField) {
+                                    hiddenField.value = selectedValues ? selectedValues.join(',') : '';
+                                  }
+                                });
+
+                                // Also update the multiselect values when they change
+                                $('.multiselect[multiple]').on('change', function() {
+                                  const hiddenFieldId = $(this).attr('data-hidden');
+                                  const hiddenField = document.getElementById(hiddenFieldId);
+                                  const selectedValues = $(this).val();
+
+                                  if (hiddenField) {
+                                    hiddenField.value = selectedValues ? selectedValues.join(',') : '';
+                                  }
+                                });
                               });
                             } else {
                               // Retry sau 100ms nếu jQuery chưa sẵn sàng
@@ -633,7 +661,7 @@ export default function HomePage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h2 uk-text-center@m uk-text-center">
+              <h2 className="uk-h2 uk-text-center@m uk-text-center !font-bold">
                 <p>
                   Go and Grow Camp has organised international summer camps and
                   outdoor educational school trips in various countries
@@ -699,7 +727,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw]">
+                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
                   Holidays that do more – International language and specialty
                   camps for kids & teens
                 </h3>
@@ -739,7 +767,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw]">
+                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
                   Holiday camps for every season | Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -815,7 +843,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw]">
+                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
                   The perfect camp for every age group
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -876,7 +904,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw]">
+                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
                   Specialty camps & adventure holidays | Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -999,7 +1027,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw]">
+                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
                   Language camps & adventure trips | Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -1108,7 +1136,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw]">
+                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
                   School trips & group travel with Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -1178,7 +1206,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw]">
+                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
                   Family weekends & parent-child camps at Go and Grow
                 </h3>
                 <div className="uk-panel uk-margin">
@@ -1267,7 +1295,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-grid-medium uk-child-width-1-1 uk-grid-margin-medium">
             <div className="uk-grid-item-match uk-flex-middle uk-width-1-1@m">
               <div className="uk-panel uk-width-1-1">
-                <h4 className="uk-h2 uk-text-center !text-[1.67vw]" uk-scrollspy-class="">
+                <h4 className="uk-h2 uk-text-center !text-[2.22vw] !font-bold" uk-scrollspy-class="">
                   <p>We love Camp</p>
                 </h4>
                 <div
@@ -1286,7 +1314,7 @@ export default function HomePage() {
                 className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
+                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                   Internationality
                 </h3>
                 <div className="el-content uk-panel uk-margin-top !text-black">
@@ -1297,7 +1325,7 @@ export default function HomePage() {
                 className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
+                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                   Outdoors
                 </h3>
                 <div className="el-content uk-panel uk-margin-top !text-black">
@@ -1309,12 +1337,12 @@ export default function HomePage() {
               <div className="uk-margin uk-text-center" uk-scrollspy-class="">
                 <Image
                   src={getTemplateImageUrl(
-                    "yootheme/cache/23/home_ilovecamp-23a9e7bf.png"
+                    "yootheme/logo/logo.png"
                   )}
                   width={640}
                   height={629}
                   className="el-image"
-                  alt="We love Camp at Campadventure"
+                  alt="Go and Grow"
                   loading="lazy"
                 />
               </div>
@@ -1324,7 +1352,7 @@ export default function HomePage() {
                 className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
+                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                   Friendship
                 </h3>
                 <div className="el-content uk-panel uk-margin-top !text-black">
@@ -1335,7 +1363,7 @@ export default function HomePage() {
                 className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
+                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                   Challenge
                 </h3>
                 <div className="el-content uk-panel uk-margin-top !text-black">
@@ -1353,7 +1381,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-grid-item-match uk-width-1-1">
               <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw]">Join the Go and Grow team</h3>
+                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">Join the Go and Grow team</h3>
                 <div className="uk-panel uk-margin">
                   <p>
                     Since the very beginning, Go and Grow has stood for
@@ -1430,13 +1458,13 @@ export default function HomePage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
               <div className="uk-width-1-1@m">
                 <div
-                  className="uk-h5 uk-margin-small uk-text-center !text-[1.67vw]"
+                  className="uk-h5 uk-margin-small uk-text-center !text-[1.67vw] !font-semibold "
                   uk-scrollspy-class="uk-animation-slide-top-medium"
                 >
                   Go and Grow
                 </div>
                 <h2
-                  className="uk-h1 uk-margin-small uk-text-center !text-[5vw]"
+                  className="uk-h1 uk-margin-small uk-text-center !text-[5vw] !font-bold"
                   uk-scrollspy-class="uk-animation-slide-bottom-medium"
                 >
                   <p>Partnerships & memberships</p>
