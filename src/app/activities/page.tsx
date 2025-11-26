@@ -71,17 +71,18 @@ export default function CampProfilesPage() {
 
 
   const holidays = [
+     { value: "autumn", label: "Autumn" },
     { value: "spring", label: "Spring" },
     { value: "summer", label: "Summer" },
-    { value: "autumn", label: "Autumn" },
+   
   ];
 
   const locations = [
-    { value: "northern-germany", label: "Northern Germany" },
-    { value: "west-germany", label: "West Germany"},
-    { value: "south-germany", label: "South Germany" },
     { value: "england", label: "England"},
+    { value: "northern-germany", label: "Northern Germany" },
+    { value: "south-germany", label: "South Germany" },
     { value: "spain", label: "Spain"},
+    { value: "west-germany", label: "West Germany"},
   ];
 
   // Camp data
