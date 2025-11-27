@@ -1,26 +1,33 @@
 "use client";
-
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getTemplateImageUrl, getMediaImageUrl } from "@/lib/assets";
 
 export const Header: React.FC = () => {
-  const logoUrl = getTemplateImageUrl("yootheme/cache/c9/logo-camp-adventure-c9850ee6.png");
+  const logoUrl = getTemplateImageUrl(
+    "yootheme/cache/c9/logo-camp-adventure-c9850ee6.png"
+
+  );
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const toggleDropdown = (id: string) => {
+    setOpenDropdown(prev => (prev === id ? null : id));
+  };
 
   return (
     <>
       {/* Skip to main content */}
       <div className="uk-hidden-visually uk-notification uk-notification-top-left uk-width-auto">
         <div className="uk-notification-message">
-          <a href="#tm-main" className="uk-link-reset">Skip to main content</a>
+          <a href="#tm-main" className="uk-link-reset">
+            Skip to main content
+          </a>
         </div>
       </div>
       <div className="tm-page">
         {/* Mobile Header */}
         <header className="tm-header-mobile uk-hidden@l">
-          <div
-            uk-sticky="show-on-up: true; animation: uk-animation-slide-top; cls-active: uk-navbar-sticky; sel-target: .uk-navbar-container"
-          >
+          <div uk-sticky="show-on-up: true; animation: uk-animation-slide-top; cls-active: uk-navbar-sticky; sel-target: .uk-navbar-container">
             <div className="uk-navbar-container">
               <div className="uk-container uk-container-expand">
                 <nav
@@ -37,7 +44,11 @@ export const Header: React.FC = () => {
                     </a>
                   </div>
                   <div className="uk-navbar-center" style={{ display: "none" }}>
-                    <Link href="/" aria-label="Back to home" className="uk-logo uk-navbar-item" >
+                    <Link
+                      href="/"
+                      aria-label="Back to home"
+                      className="uk-logo uk-navbar-item"
+                    >
                       <Image
                         alt="Camp Adventure"
                         loading="eager"
@@ -53,7 +64,10 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Mobile Off-canvas Menu */}
-          <div id="tm-dialog-mobile" uk-offcanvas="container: true; overlay: true; mode: slide">
+          <div
+            id="tm-dialog-mobile"
+            uk-offcanvas="container: true; overlay: true; mode: slide"
+          >
             <div className="uk-offcanvas-bar uk-flex uk-flex-column">
               <button
                 className="uk-offcanvas-close uk-close-large"
@@ -66,7 +80,11 @@ export const Header: React.FC = () => {
                 <div className="uk-grid uk-child-width-1-1" uk-grid="">
                   <div>
                     <div className="uk-panel" id="module-tm-4">
-                      <Link href="/" aria-label="Back to home" className="uk-logo">
+                      <Link
+                        href="/"
+                        aria-label="Back to home"
+                        className="uk-logo"
+                      >
                         <Image
                           alt="Camp Adventure"
                           loading="eager"
@@ -78,11 +96,85 @@ export const Header: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <div className="uk-panel" id="module-menu-dialog-mobile">
-                      <ul className="uk-nav uk-nav-default">
-                        <li className="item-165 uk-parent">
-                          <a href="/destinations">Camp Locations</a>
-                          <ul className="uk-nav-sub">
+                    <div className="uk-panel" id="menu-dialog-mobile">
+                      <ul className="uk-nav uk-nav-default" uk-nav="">
+                        <li className="item-home">
+                          <Link href="/">Home Page</Link>
+                        </li>
+
+                        <li className="item-183 uk-parent " style={{ padding: "5px 0" }}>
+                          <div className="uk-flex uk-flex-between uk-flex-middle">
+                            
+                            <Link
+                              style={{
+                                color: "#90929d",
+                                textDecoration: "none",
+                              }}
+                              href="/about-us"
+                            >
+                              About Us{" "}
+                            </Link>
+
+                           
+                            <a
+                              className="menu-toggle"
+                              href="#"
+                              uk-toggle="target: #about-us-sub-menu"
+                              style={{ color: "#90929d", textDecoration: "none" }}
+                            >
+                              <span uk-navbar-parent-icon=""></span>
+                            </a>
+                          </div>
+
+                         
+                          <ul id="about-us-sub-menu" className="uk-nav-sub">
+                            <li>
+                              <Link href="/about-us/travel-documents">
+                                Travel Documents
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/about-us/safety">Safety</Link>
+                            </li>
+                            <li>
+                              <Link href="/about-us/insurance">Insurance</Link>
+                            </li>
+                            <li>
+                              <Link href="/about-us/terms-conditions">
+                                Terms&Conditions
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/about-us/faq">FAQ</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="item-165 uk-parent" style={{ padding: "5px 0" }}>
+                          <div className="uk-flex uk-flex-between uk-flex-middle">
+                            
+                            <Link
+                              style={{
+                                color: "#90929d",
+                                textDecoration: "none",
+                              }}
+                              href="/about-us"
+                            >
+                             Camp Locations{" "}
+                            </Link>
+
+                           
+                            <a
+                              className="menu-toggle"
+                              href="#"
+                              uk-toggle="target: #about-us-sub-menu2"
+                              style={{ color: "#90929d", textDecoration: "none" }}
+                            >
+                              <span uk-navbar-parent-icon=""></span>
+                            </a>
+                          </div>
+
+                         
+                          <ul id="about-us-sub-menu2" className="uk-nav-sub">
                             <li>
                               <Link href="/destinations/germany-lueneburger-heide">
                                 Germany - Lüneburger Heide
@@ -99,7 +191,9 @@ export const Header: React.FC = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/destinations/en-spain-barcelona">Spain - Barcelona</Link>
+                              <Link href="/destinations/en-spain-barcelona">
+                                Spain - Barcelona
+                              </Link>
                             </li>
                             <li>
                               <Link href="/destinations/camps-for-companies">
@@ -110,184 +204,30 @@ export const Header: React.FC = () => {
                               <Link href="/destinations/booking">Booking</Link>
                             </li>
                           </ul>
+                          
+                          
                         </li>
-                        <li className="item-678 uk-parent">
-                          <Link href="/camp-profiles">Camp Profiles</Link>
-                          <ul className="uk-nav-sub">
-                            <li>
-                              <Link href="/camp-profiles/adventure-sports-creative">
-                                Adventure, Sports & Creative
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/arts-crafts">Arts & Crafts</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/climbing">Climbing</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/dancing">Dancing</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/diving">Diving</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/englischcamps">Englischcamps</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/englisch-toefl">
-                                Englisch TOEFL©
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/fishing">Fishing</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/german-camps">German Camps</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/horseback-riding">Horseback Riding</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/husky-camp">Husky Camp</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/international-counsellor-in-training-icit">
-                                International Counsellor in Training (ICIT)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/lifeguarding">Lifeguarding</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/language-camps">Language</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/senior-plus-leadership">Leadership</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/multi-water-adventure">
-                                Multi Water Adventure
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/sailing">Sailing</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/skating">Skating</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/soccer">Soccer</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/space-exploration">Space Exploration</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/spanishcourse">Spanishcourse</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/survival-camps">Survival</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/swimming">Swimming</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/tennis">Tennis</Link>
-                            </li>
-                            <li>
-                              <Link href="/camp-profiles/windsurfing">Windsurfing</Link>
-                            </li>
-                          </ul>
-                        </li>
-                        <li className="item-210">
-                          <Link href="/schooltrips">School Trips</Link>
-                        </li>
-                        <li className="item-226 uk-parent">
-                          <Link href="/academy">Academy</Link>
-                          <ul className="uk-nav-sub">
-                            <li>
-                              <Link href="/academy/jobs">Camp & Office Positions</Link>
-                            </li>
-                            <li className="item-237 uk-parent">
-                              <a href="#">Educational Programs</a>
-                              <ul>
-                                <li>
-                                  <Link href="/academy/educational-programs/outdoor-education-diploma">
-                                    Outdoor Education Diploma
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/academy/educational-programs/icit-eng">
-                                    International Counsellor in Training (ICIT)
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <Link href="/academy/location-camp-adventure-academy">
-                                Location of Camp Adventure Academy
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
-                        <li className="item-183 uk-parent">
-                          <Link href="/info">Info</Link>
-                          <ul className="uk-nav-sub">
-                            <li>
-                              <Link href="/info/news">News</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/info-sessions-eng">Info Sessions</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/arrival-departure">Arrival&Departure</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/safety">Safety</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/insurance">Insurance</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/faq">FAQ</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/agencies">Agencies</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/innovation-consulting">
-                                Innovation Consulting
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/info/terms-conditions">Terms&Conditions</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/contact">Contact</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/family-weekend">Family Weekend</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/travel-documents">Travel Documents</Link>
-                            </li>
-                            <li>
-                              <Link href="/info/about">About us</Link>
-                            </li>
-                          </ul>
+                        <li className="item-672">
+                          <Link href="/activities">Activities</Link>
                         </li>
                         <li className="item-182">
                           <Link href="/booking">Booking</Link>
                         </li>
+                        <li className="item-activity-detail">
+                          <Link href="/activity-detail">Activity Detail</Link>
+                        </li>
                         <li className="item-943 uk-parent">
-                          <a
-                            href="https://gallery.campadventure.de/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Photos
-                          </a>
+                          <a href="#">Photos</a>
                           <ul className="uk-nav-sub">
+                            <li>
+                              <a
+                                href="https://gallery.campadventure.de/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                Photo Gallery
+                              </a>
+                            </li>
                             <li>
                               <Link href="/photo/photos">Photos - archive</Link>
                             </li>
@@ -316,7 +256,9 @@ export const Header: React.FC = () => {
                             >
                               <Image
                                 title="Deutsch (Deutschland)"
-                                src={getMediaImageUrl("mod_languages/images/de_de.gif")}
+                                src={getMediaImageUrl(
+                                  "mod_languages/images/de_de.gif"
+                                )}
                                 alt="Deutsch (Deutschland)"
                                 width={16}
                                 height={11}
@@ -324,10 +266,15 @@ export const Header: React.FC = () => {
                             </a>
                           </li>
                           <li className="uk-active">
-                            <Link href="/" style={{ display: "flex !important" }}>
+                            <Link
+                              href="/"
+                              style={{ display: "flex !important" }}
+                            >
                               <Image
                                 title="English (United Kingdom)"
-                                src={getMediaImageUrl("mod_languages/images/en_gb.gif")}
+                                src={getMediaImageUrl(
+                                  "mod_languages/images/en_gb.gif"
+                                )}
                                 alt="English (United Kingdom)"
                                 width={16}
                                 height={11}
@@ -346,9 +293,7 @@ export const Header: React.FC = () => {
 
         {/* Desktop Header */}
         <header className="tm-header uk-visible@l">
-          <div
-            uk-sticky='media: @l; cls-active: uk-navbar-sticky; sel-target: .uk-navbar-container'
-          >
+          <div uk-sticky="media: @l; cls-active: uk-navbar-sticky; sel-target: .uk-navbar-container">
             <div className="uk-navbar-container">
               <div className="uk-container">
                 <nav
@@ -368,18 +313,23 @@ export const Header: React.FC = () => {
                           <div className="uk-drop uk-navbar-dropdown">
                             <div>
                               <ul className="uk-nav uk-navbar-dropdown-nav">
-                            
                                 <li>
-                                  <Link href="/about-us/travel-documents">Travel Documents</Link>
+                                  <Link href="/about-us/travel-documents">
+                                    Travel Documents
+                                  </Link>
                                 </li>
                                 <li>
                                   <Link href="/about-us/safety">Safety</Link>
                                 </li>
                                 <li>
-                                  <Link href="/about-us/insurance">Insurance</Link>
+                                  <Link href="/about-us/insurance">
+                                    Insurance
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/about-us/terms-conditions">Terms&Conditions</Link>
+                                  <Link href="/about-us/terms-conditions">
+                                    Terms&Conditions
+                                  </Link>
                                 </li>
                                 <li>
                                   <Link href="/about-us/faq">FAQ</Link>
@@ -390,7 +340,8 @@ export const Header: React.FC = () => {
                         </li>
                         <li className="item-165 uk-parent">
                           <a href="/destinations">
-                            Camp Locations <span uk-navbar-parent-icon=""></span>
+                            Camp Locations{" "}
+                            <span uk-navbar-parent-icon=""></span>
                           </a>
                           <div className="uk-drop uk-navbar-dropdown">
                             <div>
@@ -421,14 +372,14 @@ export const Header: React.FC = () => {
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/destinations/booking">Booking</Link>
+                                  <Link href="/destinations/booking">
+                                    Booking
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
                           </div>
                         </li>
-                      
-                        
                       </ul>
                     </div>
 
@@ -436,7 +387,11 @@ export const Header: React.FC = () => {
                       href="/"
                       aria-label="Back to home"
                       className="uk-logo uk-navbar-item"
-                      style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
                     >
                       <Image
                         alt="Camp Adventure"
@@ -451,17 +406,14 @@ export const Header: React.FC = () => {
 
                     <div className="uk-navbar-center-right uk-preserve-width">
                       <ul className="uk-navbar-nav">
-                          <li className="item-672 uk-parent">
-                          <a href="/activities">
-                            Activities 
-                          </a>
-                          
+                        <li className="item-672 uk-parent">
+                          <a href="/activities">Activities</a>
                         </li>
-                        
+
                         <li className="item-182">
                           <Link href="/booking">Booking</Link>
                         </li>
-                         <li className="item-183">
+                        <li className="item-183">
                           <Link href="/activity-detail">Activity Detail</Link>
                         </li>
                         <li className="item-943 uk-parent">
@@ -476,7 +428,10 @@ export const Header: React.FC = () => {
                             <div>
                               <ul className="uk-nav uk-navbar-dropdown-nav">
                                 <li>
-                                  <Link href="/photo/photos" title="Photos | Go and Grow">
+                                  <Link
+                                    href="/photo/photos"
+                                    title="Photos | Go and Grow"
+                                  >
                                     Photos - archive
                                   </Link>
                                 </li>
@@ -505,7 +460,9 @@ export const Header: React.FC = () => {
                               >
                                 <Image
                                   title="Deutsch (Deutschland)"
-                                  src={getMediaImageUrl("mod_languages/images/de_de.gif")}
+                                  src={getMediaImageUrl(
+                                    "mod_languages/images/de_de.gif"
+                                  )}
                                   alt="Deutsch (Deutschland)"
                                   width={16}
                                   height={11}
@@ -513,10 +470,15 @@ export const Header: React.FC = () => {
                               </a>
                             </li>
                             <li className="uk-active">
-                              <Link href="/" style={{ display: "flex !important" }}>
+                              <Link
+                                href="/"
+                                style={{ display: "flex !important" }}
+                              >
                                 <Image
                                   title="English (United Kingdom)"
-                                  src={getMediaImageUrl("mod_languages/images/en_gb.gif")}
+                                  src={getMediaImageUrl(
+                                    "mod_languages/images/en_gb.gif"
+                                  )}
                                   alt="English (United Kingdom)"
                                   width={16}
                                   height={11}
@@ -534,7 +496,10 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Desktop Off-canvas (empty) */}
-          <div id="tm-dialog" uk-offcanvas="container: true; mode: slide; flip: true; overlay: true">
+          <div
+            id="tm-dialog"
+            uk-offcanvas="container: true; mode: slide; flip: true; overlay: true"
+          >
             <div className="uk-offcanvas-bar uk-flex uk-flex-column">
               <button
                 className="uk-offcanvas-close uk-close-large"
