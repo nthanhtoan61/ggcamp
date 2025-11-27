@@ -157,7 +157,7 @@ export const Header: React.FC = () => {
                                 color: "#90929d",
                                 textDecoration: "none",
                               }}
-                              href="/about-us"
+                              href="/destinations"
                             >
                              Camp Locations{" "}
                             </Link>
