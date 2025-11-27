@@ -38,15 +38,15 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
             loading="lazy"
           />
         </div>
-        <div className="uk-card-body uk-margin-remove-first-child">
+        <div className="uk-card-body uk-margin-remove-first-child !pd-1vw">
           <h3 className="el-title uk-h3 uk-heading-bullet uk-margin-top uk-margin-remove-bottom">
             {title}
           </h3>
           {price !== "0" && (
-            <div className="el-meta uk-margin-top">from {price} USD</div>
+            <div className="el-meta uk-margin-top text-black">from {price} USD</div>
           )}
           <div className="el-content uk-panel uk-margin-top">
-            <ul className="uk-list uk-list-divider">
+            <ul className="uk-list uk-list-divider text-black">
               <li>
                 <span className="uk-margin-small-right" uk-icon="clock"></span>
                 {seasons.join(", ")}

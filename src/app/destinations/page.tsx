@@ -3,6 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
 import { getTemplateImageUrl } from "@/lib/assets";
+import DestinationMap from "./DestinationMap";
 
 export const metadata: Metadata = {
   title: "International Sport & Language Camp in Germany 2026",
@@ -11,6 +12,74 @@ export const metadata: Metadata = {
 };
 
 export default function DestinationsPage() {
+  // Marker list
+  const camps = [
+    {
+      id: "bayerischer-wald",
+      lat: 48.9701,
+      lng: 13.1263,
+      title: "Bayerischer Wald",
+      image:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/1b/e5/23/trifter-klause-im-watzlik.jpg?w=1200&h=-1&s=1",
+    },
+    {
+      id: "hamburg",
+      lat: 53.5597,
+      lng: 9.9601,
+      title: "Hamburg",
+      image:
+        "https://cdn-images.wework.com/images/69626CB4-BEDF-11EB-8766-0E6A5DC689CD/69626cb4-bedf-11eb-8766-0e6a5dc689cd_0.jpg?width=600",
+    },
+    {
+      id: "lueneburger-heide",
+      lat: 52.8625,
+      lng: 9.5883,
+      title: "Lüneburger Heide",
+      image:
+        "https://www.campadventure.de/templates/yootheme/cache/05/01-Sommercamp-Walsrode-Dining-Hall-outside-05806542.jpeg",
+    },
+    {
+      id: "rossall-school",
+      lat: 53.9246,
+      lng: -3.00764,
+      title: "Rossall School",
+      image:
+        "https://images.squarespace-cdn.com/content/v1/674e026f2e3d592ae64503b6/22ba03d4-bc8c-4c0a-8651-31932b1c16b6/Copy+of+Rossall+Archway+-+Prize+Day.jpg",
+    },
+    {
+      id: "bath-university",
+      lat: 51.3802,
+      lng: -2.36674,
+      title: "Bath University",
+      image:
+        "https://stories.bath.ac.uk/innovation-with-impact/landing-page/spin-out-club/assets/ylpLnicsFq/53233832409_7a68d40a42_o-2560x1440.jpg",
+    },
+    {
+      id: "lauenburgische-seen",
+      lat: 53.6279,
+      lng: 10.687,
+      title: "Lauenburgische Seen",
+      image:
+        "https://www.herzogtum-lauenburg.info/wp-content/uploads/045_Abendimpression_Ratzebu.jpg",
+    },
+    {
+      id: "amrum",
+      lat: 54.627,
+      lng: 8.38935,
+      title: "Amrum",
+      image:
+        "https://www.campadventure.de/templates/yootheme/cache/52/02-Language-Camps-by-Camp-Adventure-5201a531.jpeg",
+    },
+    {
+      id: "barcelona-beach-camp",
+      lat: 41.4114,
+      lng: 2.2281,
+      title: "Barcelona Beach Camp",
+      image:
+        "https://www.gelc-language-camps.org/templates/yootheme/cache/bd/1_Header-bdc50a76.jpeg",
+    },
+  ];
+  
   return (
     <>
       {/* Hero Section */}
@@ -36,7 +105,7 @@ export default function DestinationsPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
                 <h1
-                  className="uk-heading-large uk-text-center"
+                  className="uk-heading-large uk-text-center !text-[5vw]"
                   uk-scrollspy-class=""
                 >
                   Our international Camps
@@ -66,7 +135,7 @@ export default function DestinationsPage() {
             <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
               <div className="uk-panel uk-width-1-1">
                 <div
-                  className="uk-h1 uk-text-left@m uk-text-center"
+                  className="uk-h1 uk-text-left@m uk-text-center !text-[2.12vw]"
                   uk-scrollspy-class=""
                 >
                   Welcome to Camp Adventure
@@ -80,7 +149,7 @@ export default function DestinationsPage() {
             <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
               <div className="uk-panel uk-width-1-1">
                 <blockquote
-                  className="uk-margin-medium uk-text-left@m uk-text-center"
+                  className="uk-margin-medium uk-text-left@m uk-text-center !text-[1.31vw]"
                   uk-scrollspy-class=""
                 >
                   <p>
@@ -90,7 +159,7 @@ export default function DestinationsPage() {
                     part of his tent group and camp very quickly and loved it.
                     Both had tons of fun. Thank you CA!
                   </p>
-                  <footer className="el-footer">Anja B., Germany</footer>
+                  <footer className="el-footer !text-[1.31vw]">Anja B., Germany</footer>
                 </blockquote>
               </div>
             </div>
@@ -103,7 +172,7 @@ export default function DestinationsPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-panel uk-text-large uk-dropcap uk-margin">
+              <div className="uk-panel uk-text-large uk-dropcap uk-margin text-black !text-[1.52vw]">
                 <p>
                   Our international Adventure, Sports & Language Camps in
                   Germany, England and Spain combine a welcoming, inclusive
@@ -114,131 +183,8 @@ export default function DestinationsPage() {
                   from all over the globe in one of our international camps!
                 </p>
               </div>
-              <div
-                className="uk-position-relative uk-position-z-index uk-dark"
-                style={{ height: "600px" }}
-                uk-map=""
-                data-map-type="leaflet"
-              >
-                <script
-                  type="application/json"
-                  dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      markers: [
-                        {
-                          lat: 53.5597,
-                          lng: 9.9601,
-                          title: "Camp Adventure Office - Hamburg",
-                        },
-                        {
-                          lat: 52.8625,
-                          lng: 9.5883,
-                          title: "Camp Adventure Academy - Lüneburger Heide",
-                        },
-                        {
-                          lat: 48.9701,
-                          lng: 13.1263,
-                          title: "Camp Adventure - Bayerischer Wald",
-                        },
-                        {
-                          lat: 53.9246,
-                          lng: -3.00764,
-                          title: "Camp Adventure - Rossall School",
-                        },
-                        {
-                          lat: 51.3802,
-                          lng: -2.36674,
-                          title: "Camp Adventure - Bath University",
-                        },
-                        {
-                          lat: 53.6279,
-                          lng: 10.687,
-                          title: "Camp Adventure - Lauenburgische Seen",
-                        },
-                        {
-                          lat: 54.627,
-                          lng: 8.38935,
-                          title: "Camp Adventure - Amrum",
-                        },
-                        {
-                          lat: 41.4114,
-                          lng: 2.2281,
-                          title: "Camp Adventure - Barcelona Beach Camp",
-                        },
-                      ],
-                      controls: true,
-                      dragging: false,
-                      max_zoom: 18,
-                      min_zoom: 0,
-                      poi: false,
-                      type: "satellite",
-                      zoom: "4",
-                      zooming: false,
-                      center: { lat: 53.5597, lng: 9.9601 },
-                      lazyload: true,
-                      library: "leaflet",
-                      baseUrl:
-                        "/templates/yootheme/vendor/assets/leaflet/leaflet/dist",
-                    }),
-                  }}
-                />
-                <template suppressHydrationWarning>
-                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                      Camp Adventure Office - Hamburg
-                    </h3>
-                  </div>
-                </template>
-                <template suppressHydrationWarning>
-                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                      Camp Adventure Academy - Lüneburger Heide
-                    </h3>
-                  </div>
-                </template>
-                <template suppressHydrationWarning>
-                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                      Camp Adventure - Bayerischer Wald
-                    </h3>
-                  </div>
-                </template>
-                <template suppressHydrationWarning>
-                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                      Camp Adventure - Rossall School
-                    </h3>
-                  </div>
-                </template>
-                <template suppressHydrationWarning>
-                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                      Camp Adventure - Bath University
-                    </h3>
-                  </div>
-                </template>
-                <template suppressHydrationWarning>
-                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                      Camp Adventure - Lauenburgische Seen
-                    </h3>
-                  </div>
-                </template>
-                <template suppressHydrationWarning>
-                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                      Camp Adventure - Amrum
-                    </h3>
-                  </div>
-                </template>
-                <template suppressHydrationWarning>
-                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                      Camp Adventure - Barcelona Beach Camp
-                    </h3>
-                  </div>
-                </template>
-              </div>
+
+              <DestinationMap markers={camps} />
             </div>
           </div>
         </div>
@@ -253,7 +199,7 @@ export default function DestinationsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <h2
-                className="uk-h2 uk-text-center"
+                className="uk-h2 uk-text-center !text-[1.67vw]"
                 uk-scrollspy-class="uk-animation-slide-left-medium"
               >
                 Our Camp Locations & Program Options
@@ -295,10 +241,10 @@ export default function DestinationsPage() {
                   </div>
                   <div className="uk-width-expand uk-flex uk-flex-column uk-flex-center@m uk-flex-none uk-flex-1@m">
                     <div className="uk-card-body uk-margin-remove-first-child">
-                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom">
+                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                         Germany
                       </div>
-                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom !text-[1.67vw]">
                         Camp Adventure Academy - Lüneburger Heide
                       </h3>
                       <div className="uk-margin-top">
@@ -349,7 +295,7 @@ export default function DestinationsPage() {
                               Creative, Sports & Adventure
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black text-black">
                             Many great activities are waiting for you
                           </div>
                         </div>
@@ -385,7 +331,7 @@ export default function DestinationsPage() {
                               English/German
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black text-black">
                             Improve your language skills
                           </div>
                         </div>
@@ -421,7 +367,7 @@ export default function DestinationsPage() {
                               Lifeguarding
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black text-black">
                             Recognize & act in emergencies at and in the water
                           </div>
                         </div>
@@ -457,7 +403,7 @@ export default function DestinationsPage() {
                               Survival
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black text-black">
                             The choice for all survivors
                           </div>
                         </div>
@@ -493,7 +439,7 @@ export default function DestinationsPage() {
                               Soccer
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Scoring goals has to be learned - our coaches teach
                             you
                           </div>
@@ -530,7 +476,7 @@ export default function DestinationsPage() {
                               Horseback Riding
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             It&apos;s all about horses
                           </div>
                         </div>
@@ -566,7 +512,7 @@ export default function DestinationsPage() {
                               Husky Camp
                             </Link>
                           </h4>
-                          <div className="el-content uk-panel uk-margin-top">
+                          <div className=" text-black">
                             <p>Learn more about the fascinating dogs</p>
                           </div>
                         </div>
@@ -602,7 +548,7 @@ export default function DestinationsPage() {
                               Leadership
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             The next step in camp life
                           </div>
                         </div>
@@ -638,7 +584,7 @@ export default function DestinationsPage() {
                               Camp Counselor in Training (ICIT)
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Discover your strengths and become a teamer
                           </div>
                         </div>
@@ -680,10 +626,10 @@ export default function DestinationsPage() {
                   </div>
                   <div className="uk-width-expand uk-flex uk-flex-column uk-flex-center@m uk-flex-none uk-flex-1@m">
                     <div className="uk-card-body uk-margin-remove-first-child">
-                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom">
+                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                         Germany
                       </div>
-                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom !text-[1.67vw]">
                         Adventure & Language Camp Bayerischer Wald
                       </h3>
                       <div className="uk-margin-top">
@@ -734,7 +680,7 @@ export default function DestinationsPage() {
                               Creative, Sports & Adventure
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black text-black">
                             Many great activities are waiting for you
                           </div>
                         </div>
@@ -770,7 +716,7 @@ export default function DestinationsPage() {
                               Survival
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             The choice for all survivors
                           </div>
                         </div>
@@ -806,7 +752,7 @@ export default function DestinationsPage() {
                               Climbing Course
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Pure adrenaline up to lofty heights
                           </div>
                         </div>
@@ -842,7 +788,7 @@ export default function DestinationsPage() {
                               English Classic
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Improve your language skills in practice
                           </div>
                         </div>
@@ -878,7 +824,7 @@ export default function DestinationsPage() {
                               English TOEFL®
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Language training incl. certificate
                           </div>
                         </div>
@@ -914,7 +860,7 @@ export default function DestinationsPage() {
                               German Classic
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Holiday-oriented language course with fun
                           </div>
                         </div>
@@ -956,10 +902,10 @@ export default function DestinationsPage() {
                   </div>
                   <div className="uk-width-expand uk-flex uk-flex-column uk-flex-center@m uk-flex-none uk-flex-1@m">
                     <div className="uk-card-body uk-margin-remove-first-child">
-                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom">
+                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                         England
                       </div>
-                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom !text-[1.67vw]">
                         Bath University
                       </h3>
                       <div className="uk-margin-top">
@@ -1010,7 +956,7 @@ export default function DestinationsPage() {
                               English Classic
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Learning in the motherland of language
                           </div>
                         </div>
@@ -1046,7 +992,7 @@ export default function DestinationsPage() {
                               English TOEFL®
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Language training incl. certificate
                           </div>
                         </div>
@@ -1088,10 +1034,10 @@ export default function DestinationsPage() {
                   </div>
                   <div className="uk-width-expand uk-flex uk-flex-column uk-flex-center@m uk-flex-none uk-flex-1@m">
                     <div className="uk-card-body uk-margin-remove-first-child">
-                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom">
+                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                         England
                       </div>
-                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom !text-[1.67vw]">
                         Rossall School
                       </h3>
                       <div className="uk-margin-top">
@@ -1142,7 +1088,7 @@ export default function DestinationsPage() {
                               English Classic
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Learning in the motherland of language
                           </div>
                         </div>
@@ -1178,7 +1124,7 @@ export default function DestinationsPage() {
                               English TOEFL®
                             </Link>
                           </h4>
-                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom">
+                          <div className="el-meta uk-muted uk-margin-small-top uk-margin-remove-bottom text-black">
                             Language training incl. certificate
                           </div>
                         </div>
@@ -1210,7 +1156,7 @@ export default function DestinationsPage() {
                         src={getTemplateImageUrl(
                           "yootheme/cache/38/AI Kids auf Boot-3859030a.png"
                         )}
-                        width={920}
+                        width={500}
                         height={920}
                         alt="Sailing trip at our Barcelona Beach Camp in Spain"
                         className="el-image uk-flex-1 uk-object-cover"
@@ -1220,10 +1166,10 @@ export default function DestinationsPage() {
                   </div>
                   <div className="uk-width-expand uk-flex uk-flex-column uk-flex-center@m uk-flex-none uk-flex-1@m">
                     <div className="uk-card-body uk-margin-remove-first-child">
-                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom">
+                      <div className="el-meta uk-h4 uk-margin-top uk-margin-remove-bottom !text-[1.67vw]">
                         Spain
                       </div>
-                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom !text-[1.67vw]">
                         Barcelona Beach camp
                       </h3>
                       <div className="uk-margin-top">
@@ -1252,7 +1198,7 @@ export default function DestinationsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <h2
-                className="uk-h2 uk-text-center"
+                className="uk-h2 uk-text-center !text-[1.67vw] !font-bold"
                 uk-scrollspy-class="uk-animation-slide-right-medium"
               >
                 Frequently Asked Questions
@@ -1275,10 +1221,10 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Which languages are spoken in camp?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         The main language in all our camps is English. In
                         addition, there is the language of the country in which
                         the camp takes place. As we have our headquarters in
@@ -1295,10 +1241,10 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Who are the camp counselors?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         Every year our team is made up of an international mix.
                         The non-profit association Camp Europe e.V. with
                         headquarters in Hamburg and a branch office in Canada
@@ -1316,11 +1262,11 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Should 12-year-olds rather go to Junior Camp or Senior
                         Camp?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         This question is not easy to answer and depends on the
                         individual stage of development of your child.
                         Therefore, as parents, we leave you the opportunity to
@@ -1337,10 +1283,10 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         How do you provide safety for the kids?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         Before our camp counselors start working with us, we
                         check their police clearance certificates. You must be
                         at least 19 years old to work for us as a teamer. They
@@ -1366,10 +1312,10 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         How is my child accommodated in camp?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         In the Creative, Sports & Adventure Camp in Neuburg the
                         participants are accommodated in tents with 6-7 persons.
                         These are equipped with a floor and a wooden gallery.
@@ -1390,10 +1336,10 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Where do kids and camp counselors come from?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         Camp Adventure attaches great importance to
                         internationality. The participants and supervisors in
                         our camps come from many different countries. Last year,
@@ -1418,11 +1364,11 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         How is the choice of activities/courses in the camps
                         made?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         If your child would like to participate in a paid
                         profile (e.g. horse riding, language course, GEOlino),
                         this must be booked in advance when registering. In
@@ -1442,10 +1388,10 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         How big are the camps? How high is the caregiver key?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         Capacities range from around 30 participants in smaller
                         language camps to a maximum of 350 children. However,
                         the maximum capacity is not reached every week. However,
@@ -1466,10 +1412,10 @@ export default function DestinationsPage() {
                       className="el-item uk-panel uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         When do I have to pay the price for the booked camp?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         The deposit must be paid within 7 days of receipt of the
                         booking confirmation. The remaining payment for the
                         booked camp is due 4 weeks before the start of the camp
@@ -1503,14 +1449,14 @@ export default function DestinationsPage() {
       {/* Security Concept Section */}
       <div
         id="guide"
-        className="uk-section-default uk-section-overlap uk-section uk-section-large"
+        className="uk-section-default uk-section-overlap uk-section uk-section-large !pb-2"
         uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
       >
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <h2
-                className="uk-h1 uk-margin-small uk-text-center"
+                className="uk-h1 uk-margin-small uk-text-center !text-[5vw] !font-bold"
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
               >
                 Security Concept
@@ -1523,7 +1469,7 @@ export default function DestinationsPage() {
           </div>
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-panel uk-margin" uk-scrollspy-class="">
+              <div className="uk-panel uk-margin text-black" uk-scrollspy-class="">
                 <p>
                   Dear parents,
                   <br />
@@ -1550,10 +1496,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Background Check
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           Every counselor, chef, teamer who enters our camps has
                           to be registrated, needs a background check as well as
@@ -1570,10 +1516,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Education
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           Each supervisor must complete an almost two-week
                           training course with us, which from early in the
@@ -1592,10 +1538,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Crisis Intervention
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           If something should happen, it is not only important
                           to provide first aid for the affected person, but also
@@ -1612,10 +1558,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Caregiver Key
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           No safety without sufficient staff! We are the leaders
                           in Germany with our great caregiver key. There are no
@@ -1637,10 +1583,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Nightwatch
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           All our camps are also supervised at night by the
                           counselors/teamers. On the one hand we want to prevent
@@ -1661,10 +1607,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Cooperation
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           Cooperation with the independent representative for
                           questions of sexual child abuse via our umbrella
@@ -1694,10 +1640,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Quality
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           As a member of the quality committee of the
                           professional association for children and youth travel
@@ -1717,10 +1663,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Accessibility
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           Of course, all parents receive a number from us, which
                           allows them to reach us 24 hours a day in an
@@ -1736,10 +1682,10 @@ export default function DestinationsPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         In case of emergency
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top">
+                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
                         <p>
                           Every caregiver has a valid first aid certificate and
                           can help if necessary.
@@ -1749,7 +1695,7 @@ export default function DestinationsPage() {
                   </div>
                 </div>
               </div>
-              <div className="uk-panel uk-margin" uk-scrollspy-class="">
+              <div className="uk-panel uk-margin text-black" uk-scrollspy-class="">
                 <p style={{ textAlign: "center" }}> </p>
                 <p style={{ textAlign: "center" }}>
                   We hope to have helped you with this overview. For further

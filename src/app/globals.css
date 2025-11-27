@@ -27,7 +27,7 @@ body {
 }
 
 html {
-  font-family: Raleway, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -103,7 +103,7 @@ footer .uk-margin .el-link .el-image img {
 
 /* Add padding to sections for better alignment - xích vào trong xíu */
 .uk-section {
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 20px;
 }
 
@@ -118,6 +118,7 @@ footer .uk-margin .el-link .el-image img {
 .uk-container {
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 960px) {
@@ -137,4 +138,114 @@ footer .uk-margin .el-link .el-image img {
     padding-left: 30px;
     padding-right: 30px;
   }
+}
+
+.contact-section{
+  position: relative !important;
+  z-index: 1 !important;
+  background: transparent !important;
+  width: 100% !important;
+  padding-top: 15.63vw;
+  padding-bottom: 26.04vw;
+  padding-left: 10.42vw;
+  padding-right: 2.08vw;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.footer-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.footer-copyright {
+  background: #ffffff !important; /* Hoặc màu bạn muốn */
+  padding-top: 20px !important;   /* Giảm khoảng cách so với nội dung trên */
+  padding-bottom: 20px !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* initial state for each column */
+.footer-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+/* when UIkit adds uk-scrollspy-inview class -> animate in */
+.uk-scrollspy-inview.footer-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* social icons: inherit theme color by default; change color on hover using existing theme yellow */
+.footer-social a {
+  transition: color 240ms ease, transform 200ms ease;
+  color: inherit; /* keep default */
+}
+
+.footer-social li {
+  transition: color 240ms ease, transform 200ms ease;
+  color: inherit; /* keep default */
+}
+
+/* hover: lift icon and change color to theme yellow (keeps your theme variable) */
+.footer-social a:hover {
+  transform: translateY(-4px);
+  color: #f59e0b !important; /* reuse your theme yellow */
+}
+
+/* optionally enlarge icon on hover */
+.footer-social a:hover span {
+  transform: scale(1.08);
+}
+
+.footer-social li:hover {
+  transform: translateY(-4px);
+  color: #f59e0b !important; /* reuse your theme yellow */
+}
+
+.footer-social li:hover span {
+  transform: scale(1.08);
+}
+
+/* ensure uk-icon svg inherits color */
+.footer-social a span svg,
+.footer-social a span {
+  transition: fill 200ms ease, color 200ms ease;
+  /* UIkit icons accept color; using color on parent should reflect on SVG stroke/fill */
+}
+
+/* Email underline styling */
+.footer-email-underline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  background-image: url("/templates/yootheme/vendor/assets/uikit-themes/master-fjord/images/footer-shape.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 18px;
+  padding-bottom: 18px;
+}
+
+/* Footer bottom styling with side margins */
+.footer-bottom {
+  
+  padding: 20px 0;
+  text-align: center;
+  margin: 0 100px; /* reduce sides */
+  border-top: 2px solid #f59e0b;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-bottom .portfolio {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
 }
