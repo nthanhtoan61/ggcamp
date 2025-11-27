@@ -370,19 +370,19 @@ export const Header: React.FC = () => {
                               <ul className="uk-nav uk-navbar-dropdown-nav">
                             
                                 <li>
-                                  <Link href="/info/travel-documents">Travel Documents</Link>
+                                  <Link href="/about-us/travel-documents">Travel Documents</Link>
                                 </li>
                                 <li>
-                                  <Link href="/info/safety">Safety</Link>
+                                  <Link href="/about-us/safety">Safety</Link>
                                 </li>
                                 <li>
-                                  <Link href="/info/insurance">Insurance</Link>
+                                  <Link href="/about-us/insurance">Insurance</Link>
                                 </li>
                                 <li>
-                                  <Link href="/info/terms-conditions">Terms&Conditions</Link>
+                                  <Link href="/about-us/terms-conditions">Terms&Conditions</Link>
                                 </li>
                                 <li>
-                                  <Link href="/info/faq">FAQ</Link>
+                                  <Link href="/about-us/faq">FAQ</Link>
                                 </li>
                               </ul>
                             </div>
