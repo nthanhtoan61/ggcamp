@@ -584,7 +584,12 @@ export default function CampProfilesPage() {
     if (form) form.reset();
     setSortBy("name-asc");
     setPriceRange([0, 2000]);
+    setSelectedProgram("");
+    setSelectedHolidays([]);
+    setSelectedLocations([]);
+    setSelectedAge("");
     setFilteredCamps(sortCamps(camps, "name-asc"));
+    setCurrentPage(1);
   };
 
   // Handle sort change
