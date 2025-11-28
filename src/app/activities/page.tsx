@@ -26,6 +26,7 @@ interface Camp {
   image: string;
   link: string;
   program: string;
+  rating?: number; // Rating from 1 to 5
 }
 
 export default function CampProfilesPage() {
@@ -39,50 +40,61 @@ export default function CampProfilesPage() {
   const [selectedHolidays, setSelectedHolidays] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAge, setSelectedAge] = useState("");
-  
- const programs = [
-  { value: "adventure", label: "Adventure, Sports & Creative", count: 0 },
-  { value: "arts-crafts", label: "Arts & Crafts", count: 0 },
-  { value: "climbing", label: "Climbing", count: 0 },
-  { value: "dancing", label: "Dancing", count: 0 },
-  { value: "diving", label: "Diving", count: 0 },
-  { value: "englisch-camps", label: "Englischcamps", count: 0 },
-  { value: "englisch-toefl", label: "Englisch TOEFL©", count: 0 },
-  { value: "fishing", label: "Fishing", count: 0 },
-  { value: "german-camps", label: "German Camps", count: 0 },
-  { value: "horseback", label: "Horseback Riding", count: 0 },
-  { value: "husky", label: "Husky Camp", count: 0 },
-  { value: "icit", label: "International Counsellor in Training (ICIT)", count: 0 },
-  { value: "lifeguarding", label: "Lifeguarding", count: 0 },
-  { value: "language", label: "Language", count: 0 },
-  { value: "leadership", label: "Leadership", count: 0 },
-  { value: "multi-water", label: "Multi Water Adventure", count: 0 },
-  { value: "sailing", label: "Sailing", count: 0 },
-  { value: "skating", label: "Skating", count: 0 },
-  { value: "soccer", label: "Soccer", count: 0 },
-  { value: "space", label: "Space Exploration", count: 0 },
-  { value: "spanish", label: "Spanishcourse", count: 0 },
-  { value: "survival", label: "Survival", count: 0 },
-  { value: "swimming", label: "Swimming", count: 0 },
-  { value: "tennis", label: "Tennis", count: 0 },
-  { value: "windsurf", label: "Windsurfing", count: 0 },
-];
+  const [ratingWise, setRatingWise] = useState(""); // Rating filter: "5", "4", "3", "2", "1" or ""
 
+  // Search bar states (only applied when Search button is clicked)
+  const [searchLocation, setSearchLocation] = useState("");
+  const [searchHolidaySeason, setSearchHolidaySeason] = useState("");
+  // Applied search filters (used for actual filtering)
+  const [appliedSearchLocation, setAppliedSearchLocation] = useState("");
+  const [appliedSearchHolidaySeason, setAppliedSearchHolidaySeason] =
+    useState("");
 
+  const programs = [
+    { value: "adventure", label: "Adventure, Sports & Creative", count: 0 },
+    { value: "arts-crafts", label: "Arts & Crafts", count: 0 },
+    { value: "climbing", label: "Climbing", count: 0 },
+    { value: "dancing", label: "Dancing", count: 0 },
+    { value: "diving", label: "Diving", count: 0 },
+    { value: "englisch-camps", label: "Englischcamps", count: 0 },
+    { value: "englisch-toefl", label: "Englisch TOEFL©", count: 0 },
+    { value: "fishing", label: "Fishing", count: 0 },
+    { value: "german-camps", label: "German Camps", count: 0 },
+    { value: "horseback", label: "Horseback Riding", count: 0 },
+    { value: "husky", label: "Husky Camp", count: 0 },
+    {
+      value: "icit",
+      label: "International Counsellor in Training (ICIT)",
+      count: 0,
+    },
+    { value: "lifeguarding", label: "Lifeguarding", count: 0 },
+    { value: "language", label: "Language", count: 0 },
+    { value: "leadership", label: "Leadership", count: 0 },
+    { value: "multi-water", label: "Multi Water Adventure", count: 0 },
+    { value: "sailing", label: "Sailing", count: 0 },
+    { value: "skating", label: "Skating", count: 0 },
+    { value: "soccer", label: "Soccer", count: 0 },
+    { value: "space", label: "Space Exploration", count: 0 },
+    { value: "spanish", label: "Spanishcourse", count: 0 },
+    { value: "survival", label: "Survival", count: 0 },
+    { value: "swimming", label: "Swimming", count: 0 },
+    { value: "tennis", label: "Tennis", count: 0 },
+    { value: "windsurf", label: "Windsurfing", count: 0 },
+  ];
 
   const holidays = [
-     { value: "autumn", label: "Autumn" },
     { value: "spring", label: "Spring" },
     { value: "summer", label: "Summer" },
-   
+    { value: "autumn", label: "Autumn" },
   ];
 
   const locations = [
-    { value: "england", label: "England"},
+    { value: "england", label: "England" },
     { value: "northern-germany", label: "Northern Germany" },
     { value: "south-germany", label: "South Germany" },
-    { value: "spain", label: "Spain"},
-    { value: "west-germany", label: "West Germany"},
+    { value: "spain", label: "Spain" },
+    { value: "west-germany", label: "West Germany" },
+    { value: "holiday", label: "Holiday" },
   ];
 
   // Camp data
@@ -99,6 +111,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/adventure-sports-creative",
       program: "adventure",
+      rating: 5,
     },
     {
       name: "Arts & Crafts",
@@ -112,6 +125,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/arts-crafts",
       program: "arts-crafts",
+      rating: 4,
     },
     {
       name: "Climbing",
@@ -125,6 +139,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/climbing",
       program: "climbing",
+      rating: 5,
     },
     {
       name: "Dancing",
@@ -138,6 +153,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/dancing",
       program: "dancing",
+      rating: 4,
     },
     {
       name: "Diving",
@@ -151,6 +167,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/diving",
       program: "diving",
+      rating: 5,
     },
     {
       name: "Englisch TOEFL®",
@@ -164,6 +181,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/englisch-toefl",
       program: "englisch-toefl",
+      rating: 5,
     },
     {
       name: "Englischcamps",
@@ -177,6 +195,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/englischcamps",
       program: "englisch-camps",
+      rating: 4,
     },
     {
       name: "Fishing",
@@ -190,6 +209,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/fishing",
       program: "fishing",
+      rating: 4,
     },
     {
       name: "German Camps",
@@ -203,6 +223,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/german-camps",
       program: "german-camps",
+      rating: 4,
     },
     {
       name: "Horseback Riding",
@@ -216,6 +237,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/horseback-riding",
       program: "horseback",
+      rating: 5,
     },
     {
       name: "Husky Camp",
@@ -229,6 +251,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/husky-camp",
       program: "husky",
+      rating: 5,
     },
     {
       name: "International Counsellor in Training (ICIT)",
@@ -242,6 +265,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/international-counsellor-in-training-icit",
       program: "icit",
+      rating: 5,
     },
     {
       name: "Leadership",
@@ -255,6 +279,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/senior-plus-leadership",
       program: "leadership",
+      rating: 5,
     },
     {
       name: "Lifeguarding",
@@ -268,6 +293,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/lifeguarding",
       program: "lifeguarding",
+      rating: 4,
     },
     {
       name: "Multi Water Adventure",
@@ -281,6 +307,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/multi-water-adventure",
       program: "multi-water",
+      rating: 1,
     },
     {
       name: "Sailing",
@@ -294,6 +321,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/sailing",
       program: "sailing",
+      rating: 2,
     },
     {
       name: "Skating",
@@ -307,6 +335,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/skating",
       program: "skating",
+      rating: 3,
     },
     {
       name: "Soccer",
@@ -320,6 +349,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/soccer",
       program: "soccer",
+      rating: 3,
     },
     {
       name: "Space Exploration",
@@ -333,6 +363,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/space-exploration",
       program: "space",
+      rating: 4,
     },
     {
       name: "Spanish Camps",
@@ -346,6 +377,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/spanish-camps",
       program: "spanish",
+      rating: 4,
     },
     {
       name: "Survival",
@@ -359,6 +391,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/survival",
       program: "survival",
+      rating: 4,
     },
     {
       name: "Swimming",
@@ -372,6 +405,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/swimming",
       program: "swimming",
+      rating: 4,
     },
     {
       name: "Tennis",
@@ -385,6 +419,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/tennis",
       program: "tennis",
+      rating: 4,
     },
     {
       name: "Windsurfing",
@@ -398,6 +433,7 @@ export default function CampProfilesPage() {
       ),
       link: "/activities/windsurfing",
       program: "windsurf",
+      rating: 5,
     },
   ];
   const setCount = () => {
@@ -528,55 +564,87 @@ export default function CampProfilesPage() {
     return () => clearTimeout(timeout1);
   }, []);
 
-  // Handle filter form submission
-  const handleFilterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    // Save current scroll position
-    const scrollPosition = typeof window !== 'undefined' ? window.scrollY : 0;
-
+  // Auto-apply filters when any filter changes
+  useEffect(() => {
     const filtered = camps.filter((camp) => {
       // Price range filter (up to selected price)
       if (camp.price > priceRange[1]) return false;
 
+      // Location filter from search bar (only applied when Search is clicked)
+      if (appliedSearchLocation) {
+        if (appliedSearchLocation === "holiday") {
+          // If searching by holiday, filter by season
+          if (
+            appliedSearchHolidaySeason &&
+            !camp.season.includes(appliedSearchHolidaySeason)
+          ) {
+            return false;
+          }
+        } else {
+          // If searching by specific location, filter by location
+          if (!camp.locations.includes(appliedSearchLocation)) return false;
+        }
+      }
+
+      // Program filter
       if (selectedProgram && camp.program !== selectedProgram) return false;
+
+      // Holiday filter
       if (
         selectedHolidays.length > 0 &&
         !camp.season.some((s) => selectedHolidays.includes(s))
       )
         return false;
+
+      // Location filter
       if (
         selectedLocations.length > 0 &&
         !camp.locations.some((l) => selectedLocations.includes(l))
       )
         return false;
+
+      // Age filter
       if (selectedAge) {
         const age = parseInt(selectedAge);
         if (age < camp.age[0] || age > camp.age[1]) return false;
       }
+
+      // Rating filter
+      if (ratingWise && ratingWise !== "") {
+        const minRating = parseInt(ratingWise, 10);
+        // Filter: show camps with rating >= minRating
+        // "4 Stars & Up" means rating >= 4 (so 4 and 5 stars)
+        // "3 Stars & Up" means rating >= 3 (so 3, 4, and 5 stars)
+        if (!camp.rating || isNaN(camp.rating) || camp.rating < minRating) {
+          return false;
+        }
+      }
+
       return true;
     });
 
-    setFilteredCamps(sortCamps(filtered, sortBy));
-    
-    // Restore scroll position after filtering
-    if (typeof window !== 'undefined' && scrollPosition !== undefined) {
-      window.scrollTo(0, scrollPosition);
-    }
-  };
+    const sorted = sortCamps(filtered, sortBy);
+    setFilteredCamps(sorted);
+    // Reset to first page when filters change
+    setCurrentPage(1);
+  }, [
+    sortBy,
+    priceRange,
+    selectedProgram,
+    selectedHolidays,
+    selectedLocations,
+    selectedAge,
+    ratingWise,
+    appliedSearchLocation,
+    appliedSearchHolidaySeason,
+    camps,
+  ]);
 
   // Calculate items to display on current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredCamps.slice(indexOfFirstItem, indexOfLastItem);
   const totalPages = Math.ceil(filteredCamps.length / itemsPerPage);
-
-  // Initialize with all camps
-  useEffect(() => {
-    setFilteredCamps(sortCamps(camps, sortBy));
-    // Reset to first page when filters change
-    setCurrentPage(1);
-  }, [sortBy, priceRange, selectedProgram, selectedHolidays, selectedLocations, selectedAge]);
 
   // Handle reset
   const handleReset = () => {
@@ -588,6 +656,11 @@ export default function CampProfilesPage() {
     setSelectedHolidays([]);
     setSelectedLocations([]);
     setSelectedAge("");
+    setRatingWise("");
+    setSearchLocation("");
+    setSearchHolidaySeason("");
+    setAppliedSearchLocation("");
+    setAppliedSearchHolidaySeason("");
     setFilteredCamps(sortCamps(camps, "name-asc"));
     setCurrentPage(1);
   };
@@ -595,55 +668,16 @@ export default function CampProfilesPage() {
   // Handle sort change
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     // Save current scroll position
-    const scrollPosition = typeof window !== 'undefined' ? window.scrollY : 0;
-    
+    const scrollPosition = typeof window !== "undefined" ? window.scrollY : 0;
+
     const newSortBy = e.target.value;
     setSortBy(newSortBy);
     setFilteredCamps(sortCamps(filteredCamps, newSortBy));
-    
+
     // Restore scroll position after sorting
-    if (typeof window !== 'undefined' && scrollPosition !== undefined) {
+    if (typeof window !== "undefined" && scrollPosition !== undefined) {
       window.scrollTo(0, scrollPosition);
     }
-  };
-
-  // Apply price filter immediately and sort by price
-  const applyPriceFilter = (newPriceRange: [number, number]) => {
-    // Save current scroll position
-    const scrollPosition = typeof window !== 'undefined' ? window.scrollY : 0;
-    
-    // Use requestAnimationFrame to prevent UI blocking
-    requestAnimationFrame(() => {
-      const filtered = camps.filter((camp) => {
-        // Price range filter (up to selected price)
-        if (camp.price > newPriceRange[1]) return false;
-
-        if (selectedProgram && camp.program !== selectedProgram) return false;
-        if (
-          selectedHolidays.length > 0 &&
-          !camp.season.some((s) => selectedHolidays.includes(s))
-        )
-          return false;
-        if (
-          selectedLocations.length > 0 &&
-          !camp.locations.some((l) => selectedLocations.includes(l))
-        )
-          return false;
-        if (selectedAge) {
-          const age = parseInt(selectedAge);
-          if (age < camp.age[0] || age > camp.age[1]) return false;
-        }
-        return true;
-      });
-
-      // Sort by price ascending when filtering by price range
-      setFilteredCamps(sortCamps(filtered, "price-asc"));
-      
-      // Restore scroll position after filtering
-      if (typeof window !== 'undefined' && scrollPosition !== undefined) {
-        window.scrollTo(0, scrollPosition);
-      }
-    });
   };
 
   // Sort camps
@@ -750,6 +784,89 @@ export default function CampProfilesPage() {
             #searchform {
               background: #006533;
               padding: 2rem 0;
+            }
+            .search-bar-container {
+              background: white;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              padding: 2rem;
+              margin: 2rem auto;
+              max-width: 1200px;
+            }
+            .search-bar-form {
+              display: flex;
+              gap: 1rem;
+              align-items: flex-end;
+              flex-wrap: wrap;
+            }
+            .search-field-group {
+              flex: 1;
+              min-width: 200px;
+            }
+            .search-field-label {
+              display: block;
+              font-weight: 600;
+              color: #333;
+              margin-bottom: 0.5rem;
+              font-size: 0.875rem;
+              text-transform: uppercase;
+            }
+            .search-field-input {
+              width: 100%;
+              padding: 0.75rem 1rem;
+              border: 2px solid #4CAF50;
+              border-radius: 8px;
+              font-size: 1rem;
+              background: white;
+              color: #333;
+              cursor: pointer;
+            }
+            .search-field-input:focus {
+              outline: none;
+              border-color: #45a049;
+              box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+            }
+            .search-field-input option {
+              padding: 0.5rem;
+            }
+            .search-button {
+              padding: 0.75rem 2rem;
+              background: #4CAF50;
+              color: white;
+              border: none;
+              border-radius: 8px;
+              font-size: 1rem;
+              font-weight: 600;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              transition: background 0.2s;
+            }
+            .search-button:hover {
+              background: #45a049;
+            }
+            .search-button:active {
+              transform: scale(0.98);
+            }
+            .holiday-season-field {
+              display: none;
+              position: relative;
+            }
+            .holiday-season-field.show {
+              display: block;
+            }
+            @media (max-width: 768px) {
+              .search-bar-form {
+                flex-direction: column;
+              }
+              .search-field-group {
+                width: 100%;
+              }
+              .search-button {
+                width: 100%;
+                justify-content: center;
+              }
             }
             #searchform .uk-button.uk-button-default,
             #searchform .uk-button.uk-button-secondary {
@@ -952,6 +1069,136 @@ export default function CampProfilesPage() {
                 max-width: 100%;
               }
             }
+            /* Modern Pagination Styles */
+            .modern-pagination {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 0.5rem;
+              margin: 2rem 0;
+            }
+            .pagination-arrow {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: #f5f5f5;
+              border: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: all 0.2s;
+              color: #4CAF50;
+              font-size: 18px;
+            }
+            .pagination-arrow:hover:not(:disabled) {
+              background: #e0e0e0;
+              transform: scale(1.05);
+            }
+            .pagination-arrow:disabled {
+              opacity: 0.5;
+              cursor: not-allowed;
+            }
+            .pagination-pages {
+              display: flex;
+              align-items: center;
+              gap: 0.25rem;
+              background: #f5f5f5;
+              padding: 0.25rem;
+              border-radius: 8px;
+            }
+            .pagination-page {
+              min-width: 40px;
+              height: 40px;
+              padding: 0 12px;
+              border-radius: 6px;
+              background: transparent;
+              border: none;
+              color: #333;
+              font-size: 14px;
+              font-weight: 500;
+              cursor: pointer;
+              transition: all 0.2s;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .pagination-page:hover {
+              background: #e0e0e0;
+            }
+            .pagination-page.active {
+              background: #4CAF50;
+              color: white;
+              font-weight: 600;
+            }
+            .pagination-ellipsis {
+              min-width: 40px;
+              height: 40px;
+              padding: 0 8px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #666;
+              font-size: 14px;
+            }
+            /* Price Slider Styles */
+            .price-slider {
+              -webkit-appearance: none;
+              appearance: none;
+              height: 8px;
+              border-radius: 5px;
+              background: #e0e0e0;
+              outline: none;
+              transition: background 0.3s;
+            }
+            .price-slider::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: #4CAF50;
+              cursor: pointer;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              transition: all 0.3s;
+              margin-top: -6px;
+            }
+            .price-slider::-webkit-slider-thumb:hover {
+              background: #45a049;
+              transform: scale(1.1);
+              box-shadow: 0 3px 6px rgba(76, 175, 80, 0.4);
+            }
+            .price-slider::-moz-range-thumb {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: #4CAF50;
+              cursor: pointer;
+              border: none;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              transition: all 0.3s;
+              margin-top: -6px;
+            }
+            .price-slider::-moz-range-thumb:hover {
+              background: #45a049;
+              transform: scale(1.1);
+              box-shadow: 0 3px 6px rgba(76, 175, 80, 0.4);
+            }
+            .price-slider::-webkit-slider-runnable-track {
+              height: 8px;
+              border-radius: 5px;
+              background: linear-gradient(to right, #4CAF50 0%, #4CAF50 var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
+            }
+            .price-slider::-moz-range-track {
+              height: 8px;
+              border-radius: 5px;
+              background: #e0e0e0;
+            }
+            .price-slider::-moz-range-progress {
+              height: 8px;
+              border-radius: 5px;
+              background: #4CAF50;
+            }
           `,
         }}
       />
@@ -973,12 +1220,7 @@ export default function CampProfilesPage() {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
-                <h1 className="uk-heading-large uk-text-center">
-                  International Sport- & Language Camps
-                </h1>
-                <div className="uk-panel uk-text-lead uk-margin uk-text-center">
-                  <p>for Kids and Teenagers from all over the world</p>
-                </div>
+                <h1 className="uk-heading-large uk-text-center">Activities</h1>
               </div>
             </div>
           </div>
@@ -1076,9 +1318,18 @@ export default function CampProfilesPage() {
       </div>
 
       {/* Map Section */}
-      <div className="uk-section-secondary uk-section uk-padding-remove-vertical">
-        <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-          <div className="uk-width-1-1@m">
+      <div
+        className="uk-section uk-padding-remove-vertical"
+        style={{ paddingLeft: 0, paddingRight: 0 }}
+      >
+        <div
+          className="uk-grid tm-grid-expand uk-child-width-1-1"
+          style={{ marginLeft: 0, marginRight: 0 }}
+        >
+          <div
+            className="uk-width-1-1@m"
+            style={{ paddingLeft: 0, paddingRight: 0 }}
+          >
             <div
               className="uk-position-relative uk-dark"
               style={{ height: "600px", width: "100%", zIndex: 1 }}
@@ -1092,45 +1343,199 @@ export default function CampProfilesPage() {
         </div>
       </div>
 
+      {/* Search Bar Section */}
+      <div className="uk-section-default uk-section">
+        <div className="uk-container uk-container-large">
+          <div className="search-bar-container">
+            <div className="search-bar-form">
+              {/* Location Field */}
+              <div className="search-field-group">
+                <label className="search-field-label">
+                  <span style={{ marginRight: "0.5rem" }}>📍</span>
+                  Location
+                </label>
+                <select
+                  value={searchLocation}
+                  onChange={(e) => {
+                    setSearchLocation(e.target.value);
+                    if (e.target.value !== "holiday") {
+                      setSearchHolidaySeason("");
+                    }
+                  }}
+                  className="search-field-input"
+                >
+                  <option value="">Select...</option>
+                  {locations.map((location) => (
+                    <option key={location.value} value={location.value}>
+                      {location.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Holiday Season Field - Hidden by default, shown when Holiday is selected */}
+              <div
+                className={`search-field-group holiday-season-field ${
+                  searchLocation === "holiday" ? "show" : ""
+                }`}
+              >
+                <label className="search-field-label">
+                  <span style={{ marginRight: "0.5rem" }}>👥</span>
+                  Holiday Season
+                </label>
+                <div style={{ position: "relative" }}>
+                  <select
+                    value={searchHolidaySeason}
+                    onChange={(e) => setSearchHolidaySeason(e.target.value)}
+                    className="search-field-input"
+                    style={{
+                      paddingRight: searchHolidaySeason ? "40px" : "1rem",
+                    }}
+                  >
+                    <option value="">Select...</option>
+                    {holidays.map((holiday) => (
+                      <option key={holiday.value} value={holiday.value}>
+                        {holiday.label}
+                      </option>
+                    ))}
+                  </select>
+                  {searchHolidaySeason && (
+                    <button
+                      type="button"
+                      onClick={() => setSearchHolidaySeason("")}
+                      style={{
+                        position: "absolute",
+                        right: "10px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        background: "#4CAF50",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "50%",
+                        width: "24px",
+                        height: "24px",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "16px",
+                        lineHeight: "1",
+                        padding: 0,
+                      }}
+                      aria-label="Clear selection"
+                    >
+                      ×
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Search Button */}
+              <button
+                type="button"
+                onClick={() => {
+                  setAppliedSearchLocation(searchLocation);
+                  setAppliedSearchHolidaySeason(searchHolidaySeason);
+                }}
+                className="search-button"
+              >
+                <span>🌐</span>
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Layout with Balanced Design */}
       <div className="uk-container">
         <div className="main-layout">
           {/* Filter and Sort Panel - Left Side */}
           <div className="filter-sort-panel ">
-            
             <h2 className="panel-title">FIND YOUR CAMP!</h2>
 
-            {/* Price Range Section */}
-            <div className="sort-section px-6 pb-6 pt-4 border-t border-b border-gray-200">
-              <label className="sort-label">
-                Sort by Price: Up to ${priceRange[1]}
-              </label>
-              <div className="uk-margin">
-                <input
-                  type="range"
-                  min="0"
-                  max="2000"
-                  value={priceRange[1]}
-                  onChange={(e) => {
-                    const newPriceRange: [number, number] = [0, parseInt(e.target.value)];
-                    setPriceRange(newPriceRange);
-                    // Apply filter immediately when slider changes
-                    applyPriceFilter(newPriceRange);
-                  }}
-                  className="uk-range"
-                  style={{ width: "100%" }}
+            {/* Price Section */}
+            <div className="mb-6 px-6 pt-6 border-t border-b border-gray-200">
+              <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
+                PRICE
+              </h3>
+              <div className="space-y-4">
+                {/* Price Input */}
+                <div>
+                  <label className="block text-xs text-gray-600 mb-2">
+                    Maximum Price (USD)
+                  </label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="2000"
+                    value={priceRange[1]}
+                    onChange={(e) => {
+                      const value = Math.min(
+                        2000,
+                        Math.max(0, parseInt(e.target.value) || 0)
+                      );
+                      const newPriceRange: [number, number] = [0, value];
+                      setPriceRange(newPriceRange);
+                    }}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                    placeholder="Enter max price"
+                  />
+                </div>
 
-                />
+                {/* Price Slider */}
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-xs text-gray-600">$0</span>
+                    <span className="text-sm font-semibold text-green-600">
+                      Up to ${priceRange[1]}
+                    </span>
+                    <span className="text-xs text-gray-600">$2000</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="2000"
+                    step="1"
+                    value={priceRange[1]}
+                    onChange={(e) => {
+                      const value = parseInt(e.target.value);
+                      const newPriceRange: [number, number] = [0, value];
+                      setPriceRange(newPriceRange);
+                      // Update slider progress color
+                      const slider = e.target as HTMLInputElement;
+                      const progress = (value / 2000) * 100;
+                      slider.style.setProperty(
+                        "--slider-progress",
+                        `${progress}%`
+                      );
+                    }}
+                    onInput={(e) => {
+                      const slider = e.target as HTMLInputElement;
+                      const value = parseInt(slider.value);
+                      const progress = (value / 2000) * 100;
+                      slider.style.setProperty(
+                        "--slider-progress",
+                        `${progress}%`
+                      );
+                    }}
+                    className="price-slider w-full"
+                    style={
+                      {
+                        "--slider-progress": `${(priceRange[1] / 2000) * 100}%`,
+                      } as React.CSSProperties
+                    }
+                  />
+                </div>
               </div>
-              
             </div>
 
             {/* Filter Form */}
-            <form onSubmit={handleFilterSubmit} className="bg-white">
+            <div className="bg-white">
               {/* Programs & Courses Section */}
               <div className="mb-6 px-6 pt-6">
                 <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
-                  PROGRAMS & COURSES
+                  Activities
                 </h3>
                 <div className="space-y-2 max-h-96 overflow-y-auto pr-2">
                   {programs.map((program) => (
@@ -1164,7 +1569,7 @@ export default function CampProfilesPage() {
               </div>
 
               {/* Holiday Section */}
-              <div className="mb-6 px-6">
+              {/* <div className="mb-6 px-6">
                 <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
                   HOLIDAY
                 </h3>
@@ -1191,14 +1596,13 @@ export default function CampProfilesPage() {
                           {holiday.label}
                         </span>
                       </div>
-                     
                     </label>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Location Section */}
-              <div className="mb-6 px-6">
+              {/* <div className="mb-6 px-6">
                 <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
                   LOCATION
                 </h3>
@@ -1225,11 +1629,10 @@ export default function CampProfilesPage() {
                           {location.label}
                         </span>
                       </div>
-                      
                     </label>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Age Section */}
               <div className="mb-6 px-6">
@@ -1250,14 +1653,27 @@ export default function CampProfilesPage() {
                 </select>
               </div>
 
-              {/* Buttons */}
-              <div className="flex items-center justify-between px-6 pb-6 pt-4 border-t border-b border-gray-200">
-                <button
-                  type="submit"
-                  className="px-6 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors"
+              {/* Rating Wise Section */}
+              <div className="mb-6 px-6">
+                <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
+                  RATING WISE
+                </h3>
+                <select
+                  value={ratingWise}
+                  onChange={(e) => setRatingWise(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
                 >
-                  Apply Filter
-                </button>
+                  <option value="">All Ratings</option>
+                  <option value="5">5 Stars</option>
+                  <option value="4">4 Stars & Up</option>
+                  <option value="3">3 Stars & Up</option>
+                  <option value="2">2 Stars & Up</option>
+                  <option value="1">1 Star & Up</option>
+                </select>
+              </div>
+
+              {/* Reset Button */}
+              <div className="flex items-center justify-center px-6 pb-6 pt-4 border-t border-b border-gray-200">
                 <button
                   type="button"
                   onClick={handleReset}
@@ -1266,10 +1682,7 @@ export default function CampProfilesPage() {
                   Reset
                 </button>
               </div>
-            </form>
-            
-
-            
+            </div>
           </div>
 
           {/* Camps Cards Panel - Right Side */}
@@ -1277,7 +1690,8 @@ export default function CampProfilesPage() {
             {/* Results Info */}
             <div className="results-info mb-6">
               <div className="uk-text-right@s uk-text-center">
-                Showing {currentItems.length} of {filteredCamps.length} camps (Page {currentPage} of {totalPages})
+                Showing {currentItems.length} of {filteredCamps.length} camps
+                (Page {currentPage} of {totalPages})
               </div>
             </div>
             <div className="camp-grid">
@@ -1335,110 +1749,211 @@ export default function CampProfilesPage() {
                             </li>
                           </ul>
                         </div>
-                          <div>
+                        <div>
                           <div className=" uk-button uk-button-default">
                             Camp Details
                           </div>
-                          </div>
+                        </div>
                       </div>
                     </div>
                   </Link>
                 </div>
               ))}
             </div>
-            
+
             {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="uk-margin-top uk-flex uk-flex-center">
-                <ul className="uk-pagination" style={{ flexWrap: 'wrap' }}>
-                  <li className={currentPage === 1 ? "uk-disabled" : ""}>
-                    <button 
-                      onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-                      className="uk-button uk-button-default uk-button-small"
+            {totalPages > 1 &&
+              (() => {
+                // Calculate which pages to show
+                const getPageNumbers = () => {
+                  const pages: (number | string)[] = [];
+                  const maxVisible = 5;
+
+                  if (totalPages <= maxVisible) {
+                    // Show all pages if total is small
+                    for (let i = 1; i <= totalPages; i++) {
+                      pages.push(i);
+                    }
+                  } else {
+                    // Always show first page
+                    pages.push(1);
+
+                    if (currentPage <= 3) {
+                      // Near the beginning
+                      for (let i = 2; i <= 4; i++) {
+                        pages.push(i);
+                      }
+                      pages.push("ellipsis");
+                      pages.push(totalPages);
+                    } else if (currentPage >= totalPages - 2) {
+                      // Near the end
+                      pages.push("ellipsis");
+                      for (let i = totalPages - 3; i <= totalPages; i++) {
+                        pages.push(i);
+                      }
+                    } else {
+                      // In the middle
+                      pages.push("ellipsis");
+                      for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+                        pages.push(i);
+                      }
+                      pages.push("ellipsis");
+                      pages.push(totalPages);
+                    }
+                  }
+
+                  return pages;
+                };
+
+                const pageNumbers = getPageNumbers();
+
+                return (
+                  <div className="modern-pagination">
+                    {/* Previous Arrow */}
+                    <button
+                      className="pagination-arrow"
+                      onClick={() =>
+                        setCurrentPage((prev) => Math.max(1, prev - 1))
+                      }
                       disabled={currentPage === 1}
-                      style={{ whiteSpace: 'nowrap' }}
+                      aria-label="Previous page"
                     >
-                      Previous
+                      ‹
                     </button>
-                  </li>
-                  
-                  {/* Only show first, last, and nearby pages on mobile */}
-                  {totalPages <= 5 ? (
-                    Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                      <li key={page} className={currentPage === page ? "uk-active" : ""}>
-                        <button 
-                          onClick={() => setCurrentPage(page)}
-                          className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
-                          style={{ minWidth: '30px' }}
-                        >
-                          {page}
-                        </button>
-                      </li>
-                    ))
-                  ) : (
-                    <>
-                      <li className={currentPage === 1 ? "uk-active" : ""}>
-                        <button 
-                          onClick={() => setCurrentPage(1)}
-                          className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
-                          style={{ minWidth: '30px' }}
-                        >
-                          1
-                        </button>
-                      </li>
-                      {currentPage > 3 && (
-                        <li>
-                          <span className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right" style={{ minWidth: '30px' }}>
-                            ...
-                          </span>
-                        </li>
-                      )}
-                      {currentPage > 2 && currentPage < totalPages - 1 && (
-                        <li className="uk-active">
-                          <button 
-                            onClick={() => setCurrentPage(currentPage)}
-                            className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
-                            style={{ minWidth: '30px' }}
+
+                    {/* Page Numbers Container */}
+                    <div className="pagination-pages">
+                      {pageNumbers.map((page, index) => {
+                        if (page === "ellipsis") {
+                          return (
+                            <span
+                              key={`ellipsis-${index}`}
+                              className="pagination-ellipsis"
+                            >
+                              ...
+                            </span>
+                          );
+                        }
+                        return (
+                          <button
+                            key={page}
+                            className={`pagination-page ${
+                              currentPage === page ? "active" : ""
+                            }`}
+                            onClick={() => setCurrentPage(page as number)}
                           >
-                            {currentPage}
+                            {page}
                           </button>
-                        </li>
-                      )}
-                      {currentPage < totalPages - 2 && (
-                        <li>
-                          <span className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right" style={{ minWidth: '30px' }}>
-                            ...
-                          </span>
-                        </li>
-                      )}
-                      <li className={currentPage === totalPages ? "uk-active" : ""}>
-                        <button 
-                          onClick={() => setCurrentPage(totalPages)}
-                          className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
-                          style={{ minWidth: '30px' }}
-                        >
-                          {totalPages}
-                        </button>
-                      </li>
-                    </>
-                  )}
-                  
-                  <li className={currentPage === totalPages ? "uk-disabled" : ""}>
-                    <button 
-                      onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-                      className="uk-button uk-button-default uk-button-small"
+                        );
+                      })}
+                    </div>
+
+                    {/* Next Arrow */}
+                    <button
+                      className="pagination-arrow"
+                      onClick={() =>
+                        setCurrentPage((prev) => Math.min(totalPages, prev + 1))
+                      }
                       disabled={currentPage === totalPages}
-                      style={{ whiteSpace: 'nowrap' }}
+                      aria-label="Next page"
                     >
-                      Next
+                      ›
                     </button>
-                  </li>
-                </ul>
-              </div>
-            )}
+                  </div>
+                );
+              })()}
           </div>
         </div>
       </div>
+
+      {/* Newsletter Section */}
+
+      <section>
+        <div className="py-[8vh] bg-[#fbf8f0] mt-[5vh]">
+          <div className="flex items-center gap-[4vw]">
+            {/* LEFT: image with play button */}
+            <div className="w-1/2 relative h-[45vh] rounded-[1.25vw] overflow-hidden bg-white">
+              <div className="absolute inset-[0.3vw] rounded-[calc(1.25vw-0.3vw)] overflow-hidden">
+                <Image
+                  src={getTemplateImageUrl("yootheme/aboutImage/beach.jpg")}
+                  alt="Beach"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* circular play button */}
+              <button
+                type="button"
+                className="absolute left-[45%] top-1/2 -translate-y-1/2 bg-white rounded-full p-[0.8vw] shadow-lg z-20 flex items-center justify-center"
+                aria-label="Play video"
+              >
+                <div className="w-[3.2vw] h-[3.2vw] bg-transparent rounded-full flex items-center justify-center">
+                  <div className="w-[2.2vw] h-[2.2vw] bg-[#f3f3f3] rounded-full flex items-center justify-center shadow-inner">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="1.2vw"
+                      height="1.2vw"
+                      fill="#214a28"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            {/* RIGHT: newsletter content */}
+            <div className="w-1/2">
+              <h2 className="text-[2.2vw] text-[#274423] font-bold leading-[1.05] mb-[1.5vh]">
+                Stay Updated with Our Monthly Newsletter
+              </h2>
+
+              <div className="mb-[2vh]">
+                <div className="w-[6.5vw] h-[0.5vh] bg-[#2ca06c] rounded-full -mt-[0.5vh] mb-[1vh]" />
+                <p className="text-[1vw] text-gray-600 leading-[1.4vw]">
+                  Sign up to receive the latest news about new camps,
+                  activities, and exciting opportunities. Don’t miss out on
+                  anything fun!
+                </p>
+              </div>
+
+              <form
+                className="flex items-center max-w-[28vw] shadow-sm rounded-full"
+                onSubmit={(e) => e.preventDefault()}
+              >
+                <input
+                  type="email"
+                  aria-label="Email address"
+                  placeholder="Enter your email address"
+                  className="flex-1 py-[1.5vh] px-[1.5vw] rounded-l-[0.8vw] border border-gray-200 bg-white focus:outline-none text-[0.9vw]"
+                />
+                <button
+                  type="submit"
+                  className="bg-[#2ca06c] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
+                >
+                  <span>Subscribe</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="1.2vw"
+                    height="1.2vw"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Cooperations & Memberships Section */}
       <div className="uk-section-default uk-section-overlap uk-position-relative">
