@@ -16,7 +16,9 @@ export default function SafetyPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-top-center uk-section uk-section-xlarge"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/5e/sicherheit_header-5ede6167.jpeg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/5e/sicherheit_header-5ede6167.jpeg"
+            )})`,
           }}
         >
           <div
@@ -27,8 +29,9 @@ export default function SafetyPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
                 <h1
-                  className="uk-heading-large uk-text-center"
+                  className="font-['Raleway'] text-[5vw] md:text-[4vw] lg:text-[5vw] xl:text-[5vw] leading-tight font-bold text-center max-[991px]:text-[8vw]"
                   uk-scrollspy-class=""
+                  style={{ fontSize: "clamp(2.5rem, 5vw, 5vw)" }}
                 >
                   Philosophy &<br />
                   Safety at Camp
@@ -45,13 +48,21 @@ export default function SafetyPage() {
           <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
             <div className="uk-width-1-3@m">
               <h1>
-                <p>The concept of Camp Adventure</p>
+                <p
+                  className="font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[6vw]"
+                  style={{ fontSize: "clamp(1.25rem, 1.7vw, 2.1vw)" }}
+                >
+                  The concept of Camp Adventure
+                </p>
               </h1>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
             </div>
             <div className="uk-width-2-3@m">
               <blockquote>
-                <p>
+                <p
+                  className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                  style={{ fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)" }}
+                >
                   Dear parents,
                   <br />
                   <br />
@@ -79,14 +90,16 @@ export default function SafetyPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <div
-                className="uk-h5 uk-margin-small uk-text-center"
+                className="uk-h5 uk-margin-small uk-text-center font-['Raleway'] text-[1.7vw] md:text-[1.2vw] lg:text-[1.7vw] xl:text-[1.7vw] max-[991px]:text-[4vw]"
                 uk-scrollspy-class="uk-animation-slide-top-medium"
+                style={{ fontSize: "clamp(1rem, 1.7vw, 1.7vw)" }}
               >
                 Camp Adventure
               </div>
               <div
-                className="uk-h1 uk-margin-small uk-text-center"
+                className="uk-h1 uk-margin-small uk-text-center font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[6vw]"
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
+                style={{ fontSize: "clamp(1.25rem, 1.7vw, 2.1vw)" }}
               >
                 Our Philosophy
               </div>
@@ -104,16 +117,24 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Community
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
-                          What is most important for us at camp is the community.
-                          We want everyone – participants, teamers and camp
-                          directors, no matter from which country or what culture
-                          – to have an unforgettable time and every single one of
-                          us helps to reach this goal.
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
+                          What is most important for us at camp is the
+                          community. We want everyone – participants, teamers
+                          and camp directors, no matter from which country or
+                          what culture – to have an unforgettable time and every
+                          single one of us helps to reach this goal.
                         </p>
                       </div>
                     </div>
@@ -123,11 +144,19 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Responsibility
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           We want everyone to help shape the daily life at camp.
                           Besides playing this of course also includes social
                           coexistence. Together with us your children keep the
@@ -148,22 +177,30 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Internationality
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           At camp new friendships arise even though some campers
                           live thousands of kilometers apart. Our experienced
                           campers immediately include newcomers because this is
-                          what they love camp for – they come to make new friends
-                          and meet their fellow camp mates again. After our camp
-                          season many parents tell us about mutual visits – some
-                          went to France, Spain or Canada. They also tell us
-                          about the increased motivation of their children to pay
-                          a little more attention to the language lessons at
-                          school so conversations at camp next summer become
-                          easier.
+                          what they love camp for – they come to make new
+                          friends and meet their fellow camp mates again. After
+                          our camp season many parents tell us about mutual
+                          visits – some went to France, Spain or Canada. They
+                          also tell us about the increased motivation of their
+                          children to pay a little more attention to the
+                          language lessons at school so conversations at camp
+                          next summer become easier.
                         </p>
                       </div>
                     </div>
@@ -173,11 +210,19 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Log off, get outside
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           We want all campers to have a relaxed holiday. Mobile
                           phones are especially counterproductive to reach this
                           goal. Therefore, our camps are mobile-free zones and
@@ -195,11 +240,19 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         No power to drugs
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           For legal reasons, as a result of our cooperation with
                           the organization „No power to drugs" and by our
                           conviction that drugs don&apos;t belong into the hands
@@ -207,8 +260,8 @@ export default function SafetyPage() {
                           for all campers to possess or consume any kind of
                           drugs including cigarettes and alcoholic drinks.
                           Non-compliance with this rule will lead to the
-                          suspension from camp or even criminal charges. It is our
-                          belief that with all our activities and the great
+                          suspension from camp or even criminal charges. It is
+                          our belief that with all our activities and the great
                           atmosphere at camp, we offer much better alternatives
                           anyway!
                         </p>
@@ -220,15 +273,23 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Dealing with discrimination
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           We would like to point out that we do not accept any
                           form of discrimination, bullying or violence so that
-                          all campers can enjoy a happy, relaxed and safe holiday
-                          at camp. <a id="safety"></a>
+                          all campers can enjoy a happy, relaxed and safe
+                          holiday at camp. <a id="safety"></a>
                         </p>
                         <p></p>
                       </div>
@@ -251,14 +312,16 @@ export default function SafetyPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <div
-                className="uk-h5 uk-margin-small uk-text-center"
+                className="uk-h5 uk-margin-small uk-text-center font-['Raleway'] text-[1.7vw] md:text-[1.2vw] lg:text-[1.7vw] xl:text-[1.7vw] max-[991px]:text-[4vw]"
                 uk-scrollspy-class="uk-animation-slide-top-medium"
+                style={{ fontSize: "clamp(1rem, 1.7vw, 1.7vw)" }}
               >
                 Camp Adventure
               </div>
               <div
-                className="uk-h1 uk-margin-small uk-text-center"
+                className="uk-h1 uk-margin-small uk-text-center font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[6vw]"
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
+                style={{ fontSize: "clamp(1.25rem, 1.7vw, 2.1vw)" }}
               >
                 Security Concept
               </div>
@@ -280,13 +343,21 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Background Check
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
-                          Every counselor, chef, teamer or helper that enters our
-                          camps has to be registrated, complete a background
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
+                          Every counselor, chef, teamer or helper that enters
+                          our camps has to be registrated, complete a background
                           check, as well as have references. That&apos;s why
                           parents are only allowed on the camp site on the day
                           of arrival and departure and not during the week. We
@@ -301,15 +372,23 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Education
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           Each counselor must complete an almost two-week
                           training course with us, from early in the morning
-                          until late in the evening includes so many lessons that
-                          the number of hours even corresponds to the basic
+                          until late in the evening includes so many lessons
+                          that the number of hours even corresponds to the basic
                           study in educational sciences. Here we focus on the
                           areas of safety, accident prevention, child psychology
                           and needs as well as the various safety aspects in the
@@ -323,17 +402,25 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Crisis Intervention
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           If something should happen, it is not only important
                           to provide first aid for the affected person, but also
-                          to care for the other children and adolescents. We have
-                          a specially trained team for crisis intervention, which
-                          then provides immediate care and can thus prevent
-                          possible traumatisation due to the experience.
+                          to care for the other children and adolescents. We
+                          have a specially trained team for crisis intervention,
+                          which then provides immediate care and can thus
+                          prevent possible traumatisation due to the experience.
                         </p>
                       </div>
                     </div>
@@ -343,21 +430,29 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Nightwatch
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           All our camps are also supervised at night by the
                           counselors/teamers. On the one hand we want to prevent
                           visitors from coming to the site - which has not
-                          happened until today - and on the other hand we want to
-                          be there for the children if they wake up at night and
-                          get homesick or have to go to the toilet. The nightwatch
-                          patrols the area and is otherwise reachable at a
-                          central place for the children. Some of our locations
-                          - e.g. the headquarters in Walsrode - are also
-                          video-monitored and fenced in.
+                          happened until today - and on the other hand we want
+                          to be there for the children if they wake up at night
+                          and get homesick or have to go to the toilet. The
+                          nightwatch patrols the area and is otherwise reachable
+                          at a central place for the children. Some of our
+                          locations - e.g. the headquarters in Walsrode - are
+                          also video-monitored and fenced in.
                         </p>
                       </div>
                     </div>
@@ -367,21 +462,30 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Caregiver Key
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           No safety without sufficient staff! We are the leaders
                           in Germany with our great caregiver key. There are no
                           camps that have a key worse than 1:6-1:8, which means
                           that one caregiver is responsible for a maximum of 6-8
                           children. In the junior camps we also use our CIT
                           (Counselor in Training), so that we often reach a key
-                          of only 1:4. We know that this key can seem exaggerated,
-                          but we want to guarantee the highest possible safety and
-                          we firmly believe that this is exactly what our high
-                          level of caregiver commitment leads to.
+                          of only 1:4. We know that this key can seem
+                          exaggerated, but we want to guarantee the highest
+                          possible safety and we firmly believe that this is
+                          exactly what our high level of caregiver commitment
+                          leads to.
                         </p>
                       </div>
                     </div>
@@ -391,11 +495,19 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Cooperation
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           Cooperation with the independent representative for
                           questions of sexual child abuse via our umbrella
                           organisation Reisenetz e.V.: Camp Adventure was one of
@@ -407,8 +519,8 @@ export default function SafetyPage() {
                           various associations and professional circles. Of
                           course, the background check and the &quot;6-eyes
                           principle&quot;, which states that a child must never
-                          be alone with a caregiver, is also an essential part of
-                          our protection concept. The most important thing,
+                          be alone with a caregiver, is also an essential part
+                          of our protection concept. The most important thing,
                           however, is to create an &quot;open system&quot; in
                           which everyone knows that sexual abuse should not be a
                           taboo subject, but that simple instruments such as a
@@ -424,20 +536,28 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Quality
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           As a member of the quality committee of the
                           professional association for children and youth travel
                           &quot;Reisenetz&quot;, our managing director Jan Vieth
                           is responsible for further developing and checking the
                           quality guidelines of the entire industry. As
                           Germany&apos;s ambassador to the ICF, he is also kept
-                          up to date on improvements in camp and training quality
-                          worldwide and adapts these as quickly as possible to
-                          our own camps.
+                          up to date on improvements in camp and training
+                          quality worldwide and adapts these as quickly as
+                          possible to our own camps.
                         </p>
                       </div>
                     </div>
@@ -447,16 +567,24 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Accessibility
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           Of course, all parents receive a number from us, which
                           allows them to reach us 24 hours a day in an
-                          emergency. If an emergency occurs at your home, you can
-                          inform us immediately and we can decide together how,
-                          when and whether to inform your child.
+                          emergency. If an emergency occurs at your home, you
+                          can inform us immediately and we can decide together
+                          how, when and whether to inform your child.
                         </p>
                       </div>
                     </div>
@@ -466,11 +594,19 @@ export default function SafetyPage() {
                       className="el-item uk-card uk-card-default uk-card-body uk-margin-remove-first-child"
                       uk-scrollspy-class=""
                     >
-                      <h2 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom">
+                      <h2
+                        className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         In case of emergency
                       </h2>
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           Every caregiver has a valid first aid certificate and
                           can help if necessary.
                         </p>
@@ -481,7 +617,13 @@ export default function SafetyPage() {
               </div>
               <div className="uk-panel uk-margin" uk-scrollspy-class="">
                 <p style={{ textAlign: "center" }}> </p>
-                <p style={{ textAlign: "center" }}>
+                <p
+                  className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                  style={{
+                    fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                    textAlign: "center",
+                  }}
+                >
                   We hope to have helped you with this overview. For further
                   information you can call us at +49 (0) 40 4100 949 00.
                 </p>
@@ -493,4 +635,3 @@ export default function SafetyPage() {
     </>
   );
 }
-
