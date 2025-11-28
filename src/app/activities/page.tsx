@@ -1000,7 +1000,7 @@ export default function CampProfilesPage() {
 
       {/* ProvenExpert Widget + Quote Section */}
 
-      <div className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge uk-padding ">
+      <div className="uk-grid tm-grid-expand uk-grid-large uk-margin uk-padding ">
         <div className="h-[30vh] md:h-[40vh]  uk-grid-item-match uk-flex-middle uk-width-1-3@m ">
           <div className="uk-panel uk-width-1-1">
             <center>
@@ -1024,7 +1024,7 @@ export default function CampProfilesPage() {
         <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m ">
           <div className="uk-panel uk-width-1-1">
             <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
-              <p className="text-[1.67vw]">
+              <p className="text-[1vw]">
                 My son (age 11) absolutely loved Camp Adventure! After two
                 disastrous camp experiences, this was our last attempt. I am so
                 glad he went! He said he had the time of his life and can&apos;t
@@ -1050,8 +1050,8 @@ export default function CampProfilesPage() {
       {/* Description */}
       <div className="uk-section-default uk-section  p-12 m-8">
         <div className="uk-panel uk-text-large uk-dropcap uk-margin">
-          <p className="text-[1.67vw]">
-            I In our international camps in Germany and England we offer various
+          <p className="text-[1vw]">
+             I  In our international camps in Germany and England we offer various
             courses that you can book as additional options to our camp
             activities. Get an overview of what is taking place where and simply
             decide which camp you would like to spend next summer based on the
