@@ -503,7 +503,7 @@ export default function AboutPage() {
               </h2>
 
               <div className="mb-[2vh]">
-                <div className="w-[6.5vw] h-[0.5vh] bg-[#2ca06c] rounded-full -mt-[0.5vh] mb-[1vh]" />
+                <div className="w-[6.5vw] h-[0.5vh] bg-[#9c5d00] rounded-full -mt-[0.5vh] mb-[1vh]" />
                 <p className="text-[1vw] text-gray-600 leading-[1.4vw]">
                   Sign up to receive the latest news about new camps,
                   activities, and exciting opportunities. Don’t miss out on
@@ -523,7 +523,7 @@ export default function AboutPage() {
                 />
                 <button
                   type="submit"
-                  className="bg-[#2ca06c] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
+                  className="bg-[#9c5d00] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
                 >
                   <span>Subscribe</span>
                   <svg
@@ -554,12 +554,12 @@ export default function AboutPage() {
               <h2 className="text-[2vw] font-bold text-[#274423]">
                 Tour Events for you
               </h2>
-              <div className="w-[7vw] h-[0.6vh] bg-[#2ca06c] rounded-full -mt-[0.5vh]" />
+              <div className="w-[7vw] h-[0.6vh] bg-[#9c5d00] rounded-full -mt-[0.5vh]" />
             </div>
 
             <a
               href="#"
-              className="text-[#2ca06c] flex items-center gap-[0.5vw] text-[1vw]"
+              className="text-[#9c5d00] flex items-center gap-[0.5vw] text-[1vw]"
             >
               See All Event
               <svg

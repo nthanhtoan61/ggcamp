@@ -129,6 +129,11 @@ export const Header: React.FC = () => {
                          
                           <ul id="about-us-sub-menu" className="uk-nav-sub">
                             <li>
+                              <Link href="/info/about-us">
+                                About us
+                              </Link>
+                            </li>
+                            <li>
                               <Link href="/info/travel-documents" >
                                 Travel Documents
                               </Link>
@@ -371,7 +376,7 @@ export const Header: React.FC = () => {
               margin: 0
             }}>
               <li className="item-183 uk-parent">
-                <a href="/info/about-us" style={{
+                <a href="#" style={{
                   fontSize: '0.8vw',
                   padding: '0 10px',
                   whiteSpace: 'nowrap'
@@ -384,6 +389,14 @@ export const Header: React.FC = () => {
                     <ul className="uk-nav uk-navbar-dropdown-nav" style={{
                       fontSize: '13px'
                     }}>
+                      <li style={{ padding: '5px 0' }}>
+                        <Link href="/info/about-us" style={{
+                          fontSize: '0.68vw',
+                          padding: '5px 15px'
+                        }}>
+                          About us
+                        </Link>
+                      </li>
                       <li style={{ padding: '5px 0' }}>
                         <Link href="/info/travel-documents" style={{
                           fontSize: '0.68vw',
@@ -460,13 +473,6 @@ export const Header: React.FC = () => {
                   padding: '0 10px',
                   whiteSpace: 'nowrap'
                 }}>Booking</Link>
-              </li>
-              <li className="item-183">
-                <Link href="/activity-detail" style={{
-                  fontSize: '0.8vw',
-                  padding: '0 10px',
-                  whiteSpace: 'nowrap'
-                }}>Activity Detail</Link>
               </li>
               <li className="item-943 uk-parent">
                 <a

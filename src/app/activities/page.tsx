@@ -864,7 +864,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .search-field-input {
               width: 100%;
               padding: 0.75rem 1rem;
-              border: 2px solid #4CAF50;
+              border: 2px solid #9c5d00;
               border-radius: 8px;
               font-size: 1rem;
               background: white;
@@ -881,7 +881,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             }
             .search-button {
               padding: 0.75rem 2rem;
-              background: #4CAF50;
+              background: #9c5d00;
               color: white;
               border: none;
               border-radius: 8px;
@@ -1137,7 +1137,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               justify-content: center;
               cursor: pointer;
               transition: all 0.2s;
-              color: #4CAF50;
+              color: #9c5d00;
               font-size: 18px;
             }
             .pagination-arrow:hover:not(:disabled) {
@@ -1176,7 +1176,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               background: #e0e0e0;
             }
             .pagination-page.active {
-              background: #4CAF50;
+              background: #9c5d00;
               color: white;
               font-weight: 600;
             }
@@ -1206,7 +1206,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #4CAF50;
+              background: #9c5d00;
               cursor: pointer;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
               transition: all 0.3s;
@@ -1221,7 +1221,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #4CAF50;
+              background: #9c5d00;
               cursor: pointer;
               border: none;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -1236,7 +1236,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .price-slider::-webkit-slider-runnable-track {
               height: 8px;
               border-radius: 5px;
-              background: linear-gradient(to right, #4CAF50 0%, #4CAF50 var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
+              background: linear-gradient(to right, #9c5d00 0%, #9c5d00 var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
             }
             .price-slider::-moz-range-track {
               height: 8px;
@@ -1246,7 +1246,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .price-slider::-moz-range-progress {
               height: 8px;
               border-radius: 5px;
-              background: #4CAF50;
+              background: #9c5d00;
             }
           `,
         }}
@@ -1299,7 +1299,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m ">
           <div className="uk-panel uk-width-1-1">
             <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
-              <p className="text-[1vw]">
+              <p className="text-[1.7vw]">
                 My son (age 11) absolutely loved Camp Adventure! After two
                 disastrous camp experiences, this was our last attempt. I am so
                 glad he went! He said he had the time of his life and can&apos;t
@@ -1325,7 +1325,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
       {/* Description */}
       <div className="uk-section-default uk-section  p-12 m-8">
         <div className="uk-panel uk-text-large uk-dropcap uk-margin">
-          <p className="text-[1vw]">
+          <p className="text-[1.7vw]">
              I  In our international camps in Germany and England we offer various
             courses that you can book as additional options to our camp
             activities. Get an overview of what is taking place where and simply
@@ -1426,7 +1426,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                         right: "10px",
                         top: "50%",
                         transform: "translateY(-50%)",
-                        background: "#4CAF50",
+                        background: "#9c5d00",
                         color: "white",
                         border: "none",
                         borderRadius: "50%",
@@ -1930,7 +1930,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               </h2>
 
               <div className="mb-[2vh]">
-                <div className="w-[6.5vw] h-[0.5vh] bg-[#2ca06c] rounded-full -mt-[0.5vh] mb-[1vh]" />
+                <div className="w-[6.5vw] h-[0.5vh] bg-[#9c5d00] rounded-full -mt-[0.5vh] mb-[1vh]" />
                 <p className="text-[1vw] text-gray-600 leading-[1.4vw]">
                   Sign up to receive the latest news about new camps,
                   activities, and exciting opportunities. Don’t miss out on
@@ -1950,7 +1950,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                 />
                 <button
                   type="submit"
-                  className="bg-[#2ca06c] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
+                  className="bg-[#9c5d00] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
                 >
                   <span>Subscribe</span>
                   <svg

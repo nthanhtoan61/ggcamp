@@ -32,7 +32,7 @@ export default function EventCard({
       </div>
 
       <div className="p-[2vw]">
-        <div className="text-[0.9vw] text-[#2ca06c] mb-[1vw] flex items-center gap-[0.5vw]">
+        <div className="text-[0.9vw] text-[#9c5d00] mb-[1vw] flex items-center gap-[0.5vw]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ export default function EventCard({
 
           <a
             href="#"
-            className="text-[#2ca06c] flex items-center gap-[0.5vw] text-[0.9vw]"
+            className="text-[#9c5d00] flex items-center gap-[0.5vw] text-[0.9vw]"
           >
             Read More
             <svg
