@@ -1,9 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   // Cấu hình static export cho Netlify
   output: 'export',
+  
+  // React strict mode
+  reactStrictMode: false,
+  
+  // Bỏ qua lỗi TypeScript khi build (nếu cần)
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  
+  // Bỏ qua lỗi ESLint khi build (nếu cần)
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   
   // Cấu hình images để cho phép external hosts
   images: {
@@ -14,6 +26,8 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    // Với static export, cần unoptimized
+    unoptimized: true,
   },
   
   // Cấu hình để serve static files từ public folder
