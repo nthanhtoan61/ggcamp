@@ -17,9 +17,9 @@ export default function HomePage() {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const avatars = [
-    "yootheme/aboutImage/act4.jpg",
-    "yootheme/aboutImage/act4.jpg",
-    "yootheme/aboutImage/act4.jpg",
+    "yootheme/aboutImage/profile-face_1.jpg",
+    "yootheme/aboutImage/young-tourist-sitting-tent.jpg",
+    "yootheme/aboutImage/portrait-young-male-tourist-standing-forest-with-tent.jpg",
   ];
   // Refs for scroll-triggered animations in About Us section
   const ref = useRef<HTMLDivElement>(null);
@@ -507,7 +507,7 @@ export default function HomePage() {
             <div className="flex items-start gap-2">
               <div className="p-2 rounded-full">{/* Optional icon */}</div>
 
-              <div className="text-white font-semibold text-[1.62vw] leading-snug !text-left">
+              <div className="!text-[1.667vw] text-white font-semibold leading-snug !text-left">
                 <div>Your Adventure Journey</div>
                 <div>Start Here!</div>
               </div>
@@ -526,8 +526,8 @@ export default function HomePage() {
 
               {/* Text */}
               <div className="flex flex-col gap-y-1 items-start">
-                <h3 className="!text-white !font-semibold text-[1.62vw] !mb-1 !mt-1">Call us</h3>
-                <span className="text-white text-base font-semibold">+(123) 456 789</span>
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">Call us</h3>
+                <span className="!text-[1.667vw] text-white text-base font-semibold">+(123) 456 789</span>
               </div>
             </a>
 
@@ -541,7 +541,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className="flex flex-col gap-y-1 items-start">
-                <h3 className="!text-white !font-semibold text-[1.62vw] !mb-1 !mt-1">Email</h3>
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">Email</h3>
                 <span className="text-white text-base font-semibold">office@ggcamp.org</span>
               </div>
             </a>
@@ -557,8 +557,8 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className="flex flex-col gap-y-1 items-start">
-                <h3 className="!text-white !font-semibold text-[1.62vw] !mb-1 !mt-1">Working Hours</h3>
-                <span className="text-white text-base font-semibold">Mon-Sat 08:pm - 05:am</span>
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">Working Hours</h3>
+                <span className="!text-[1.667vw] text-white text-base font-semibold">Mon-Sat 08:pm - 05:am</span>
               </div>
             </a>
           </div>
@@ -576,7 +576,7 @@ export default function HomePage() {
               className={`about-main-img relative w-80 h-[250px] overflow-hidden rounded-xl shadow-lg transform transition-all duration-700 hover:scale-105 ${isMainImage1Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
               <img
-                src={getTemplateImageUrl("yootheme/aboutImage/act3.jpg")}
+                src={getTemplateImageUrl("yootheme/aboutImage/act2.jpg")}
                 alt="About Image 1"
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
@@ -600,7 +600,7 @@ export default function HomePage() {
               className={`about-extra-img absolute right-35 top-0 w-60 h-140 rounded-xl overflow-hidden shadow-xl border-4 border-white transform transition-all duration-700 hover:scale-105 ${isExtraImageVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
               <img
-                src={getTemplateImageUrl("yootheme/aboutImage/act2.jpg")}
+                src={getTemplateImageUrl("yootheme/aboutImage/man-camping.jpg")}
                 alt="Extra Corner Image"
                 className="w-full h-full object-cover"
               />

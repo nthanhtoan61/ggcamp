@@ -413,9 +413,9 @@ footer .uk-margin .el-link .el-image img {
 
   .about-extra-img {
     width: 15.63vw !important;
-    height: 34.18vw !important;
+    height: 23.18vw !important;
     right: 7.81vw !important;
-    top: 0 !important;
+    top: 7.81vw !important;
   }
 
   /* Nhóm avatar + counter */
@@ -531,9 +531,9 @@ footer .uk-margin .el-link .el-image img {
 
   .about-extra-img {
     width: 15.63vw !important;
-    height: 34.18vw !important;
+    height: 23.18vw !important;
     right: 3.81vw !important;
-    top: 0 !important;
+    top: 7.81vw !important;
   }
 
   /* Nhóm avatar + counter */
@@ -641,9 +641,9 @@ footer .uk-margin .el-link .el-image img {
 
   .about-extra-img {
     width: 15.63vw !important;
-    height: 34.18vw !important;
+    height: 23.18vw !important;
     right: 0.81vw !important;
-    top: 0 !important;
+    top: 7.81vw !important;
   }
 
   /* Nhóm avatar + counter */
@@ -745,107 +745,107 @@ footer .uk-margin .el-link .el-image img {
 @media (min-width: 768px) and (max-width: 1023px) {
 
   .about-main-img {
-    width: 19.53vw !important;    
-    height: 16.28vw !important; 
+    width: 18vw !important;    
+    height: 15vw !important;
+    right: 10vw !important; 
   }
 
   .about-extra-img {
-    width: 15.63vw !important;
-    height: 34.18vw !important;
-    right: 7.81vw !important;
-    top: 0 !important;
+    width: 14.5vw !important;
+    height: 21.21vw !important;
+    right: 5.5vw !important;
+    top: 7.81vw !important;
   }
 
   /* Nhóm avatar + counter */
   .about-author-group {
-    gap: 1rem !important; /* giảm gap */
+    gap: 0.8rem !important; /* giảm gap */
   }
 
   /* Avatar */
   .about-author-group img {
-    width: 60px !important;
-    height: 60px !important;
-    margin-right: -12px !important; /* giống -mr-4 */
+    width: 55px !important;
+    height: 55px !important;
+    margin-right: -10px !important; /* giống -mr-4 */
   }
 
   /* Circle counter */
   .about-author-count {
-    width: 60px !important;
-    height: 60px !important;
-    margin-right: -12px !important;
-    font-size: 1.5rem !important;
+    width: 55px !important;
+    height: 55px !important;
+    margin-right: -10px !important;
+    font-size: 1.4rem !important;
   }
 
   /* Text Adventurer */
   .about-author-text {
-    margin-left: 12px !important;
-    margin-top: 10px !important;
-    font-size: 1.1rem !important;
+    margin-left: 10px !important;
+    margin-top: 8px !important;
+    font-size: 1rem !important;
   }
 
   /* MAIN TITLES */
   .about-title {
-    font-size: 4.5vw !important;   /* giảm từ 6.25vw xuống gọn hơn */
+    font-size: 4vw !important;   /* giảm từ 6.25vw xuống gọn hơn */
   }
 
   .about-subtitle {
-    font-size: 2.2vw !important;    /* mềm hơn 2.67vw */
+    font-size: 2vw !important;    /* mềm hơn 2.67vw */
   }
 
   /* DESCRIPTION */
   .about-description {
-    font-size: 1.05rem !important;
-    max-width: 750px;
+    font-size: 1rem !important;
+    max-width: 700px;
   }
 
   /* ICON LIST SECTION */
   .about-icon-list {
-    gap: 1.25rem !important; /* giảm gap từ 16px xuống 12px */
+    gap: 1rem !important; /* giảm gap từ 16px xuống 12px */
   }
 
   .about-icon-list li {
-    font-size: 1.05rem !important; /* gọn nhưng vẫn rõ */
+    font-size: 1rem !important; /* gọn nhưng vẫn rõ */
   }
 
   .about-icon-list .icon-circle {
-    width: 30px !important;
-    height: 30px !important;
-    min-width: 30px !important;
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
   }
 
   .about-icon-list .icon-circle svg {
-    width: 14px !important;
-    height: 14px !important;
+    width: 13px !important;
+    height: 13px !important;
   }
 
   /* QUOTE + BUTTON */
   .about-quote {
-    font-size: 1.15rem !important;
-    line-height: 1.5 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
   }
 
   .about-button {
-    padding: 10px 26px !important;
-    font-size: 1rem !important;
-  }
-
-  .contact-box {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.75rem !important;
-    padding: 0.8rem !important;
-  }
-
-  .contact-box h3 {
-    font-size: 1.1rem !important;
-  }
-
-  .contact-box span {
+    padding: 9px 24px !important;
     font-size: 0.95rem !important;
   }
 
+  .contact-box {
+    gap: 0.7rem !important;
+    padding: 0.75rem !important;
+    margin-top: 12rem !important;
+  }
+
+  .contact-box h3 {
+    font-size: 1.05rem !important;
+  }
+
+  .contact-box span {
+    font-size: 0.9rem !important;
+  }
+
   .contact-box .w-px {
-    height: 1rem !important;
+    height: 0.9rem !important;
   }
 }
 
@@ -863,7 +863,7 @@ footer .uk-margin .el-link .el-image img {
     width: 15.63vw !important;
     height: 34.18vw !important;
     right: 7.81vw !important;
-    top: 0 !important;
+    top: 7.81vw !important;
   }
 
   /* Nhóm avatar + counter */
