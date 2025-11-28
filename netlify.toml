@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Headers cho static assets - Cache-Control để tối ưu performance
+[[headers]]
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/templates/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirect rules cho Next.js static export
+# Với Next.js App Router static export, mỗi page có file HTML riêng
+# Nên redirect này chỉ cần thiết nếu có 404 hoặc fallback routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
