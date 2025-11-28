@@ -145,7 +145,7 @@ footer .uk-margin .el-link .el-image img {
   z-index: 1 !important;
   background: transparent !important;
   width: 100% !important;
-  padding-top: 15.63vw;
+  padding-top: 25vw; /* tăng từ 15.63vw lên 25vw */
   padding-bottom: 26.04vw;
   padding-left: 10.42vw;
   padding-right: 2.08vw;
@@ -158,14 +158,15 @@ footer .uk-margin .el-link .el-image img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  min-height: 700px;
+  object-fit: contain;
   z-index: 0;
 }
 
 .footer-copyright {
-  background: #ffffff !important; /* Hoặc màu bạn muốn */
-  padding-top: 20px !important;   /* Giảm khoảng cách so với nội dung trên */
+  background: #ffffff !important;
+  padding-top: 20px !important; 
   padding-bottom: 20px !important;
   position: relative;
   z-index: 2;
@@ -248,4 +249,828 @@ footer .uk-margin .el-link .el-image img {
 .footer-bottom .portfolio {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
+}
+
+.ripple-button {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  background-color: #9c5d00;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.button-text {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+
+.button-text.hovered {
+  color: #9c5d00;
+}
+
+.button-icon {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-text.hovered .button-icon {
+  transform: rotate(45deg);
+}
+
+/* Ripple Circle */
+.ripple-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  z-index: 5;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Hover in */
+.ripple-in {
+  transform: translate(-50%, -50%) scale(20); /* đủ phủ hết nút */
+  opacity: 1;
+}
+
+/* Hover out */
+.ripple-out {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+
+/* Loại bỏ underline cho tất cả link trong contact box */
+.contact-box a {
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: none;
+}
+
+/* Hover đổi màu background cho icon */
+.contact-box a .icon-wrapper {
+  transition: background-color 0.3s;
+}
+
+.contact-box a:hover .icon-wrapper {
+  background-color: #9c5d00;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1s forwards;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* Heading responsive */
+.hero-heading {
+  font-size: clamp(2rem, 4.5vw, 6rem); /* nhỏ nhất 2rem, lớn nhất 6rem, tỉ lệ theo viewport */
+}
+
+/* Paragraph responsive */
+.hero-paragraph {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  max-width: 90%;
+  margin: 1rem auto 0 auto;
+}
+
+/* Button responsive */
+.hero-button {
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+}
+
+/* Contact box text */
+.contact-box-text {
+  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+}
+
+/* Hero section height */
+.hero-section {
+  height: 100vh;
+}
+
+/* Background image cover */
+.hero-background {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Optional: adjust content spacing for laptop vs desktop */
+@media (min-width: 1024px) {
+  .hero-content {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-content {
+    gap: 3rem;
+  }
+}
+
+/* ================================
+   RESPONSIVE ≥ 1536px (2K)
+   ================================ */
+@media (min-width: 1536px) {
+
+  .about-main-img {
+    width: 19.53vw !important;    
+    height: 16.28vw !important; 
+  }
+
+  .about-extra-img {
+    width: 15.63vw !important;
+    height: 23.18vw !important;
+    right: 7.81vw !important;
+    top: 7.81vw !important;
+  }
+
+  /* Nhóm avatar + counter */
+  .about-author-group {
+    gap: 1rem !important; /* giảm gap */
+  }
+
+  /* Avatar */
+  .about-author-group img {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important; /* giống -mr-4 */
+  }
+
+  /* Circle counter */
+  .about-author-count {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* Text Adventurer */
+  .about-author-text {
+    margin-left: 12px !important;
+    margin-top: 10px !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* MAIN TITLES */
+  .about-title {
+    font-size: 4.5vw !important;   /* giảm từ 6.25vw xuống gọn hơn */
+  }
+
+  .about-subtitle {
+    font-size: 2.2vw !important;    /* mềm hơn 2.67vw */
+  }
+
+  /* DESCRIPTION */
+  .about-description {
+    font-size: 1.05rem !important;
+    max-width: 750px;
+  }
+
+  /* ICON LIST SECTION */
+  .about-icon-list {
+    gap: 1.25rem !important; /* giảm gap từ 16px xuống 12px */
+  }
+
+  .about-icon-list li {
+    font-size: 1.05rem !important; /* gọn nhưng vẫn rõ */
+  }
+
+  .about-icon-list .icon-circle {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+  }
+
+  .about-icon-list .icon-circle svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* QUOTE + BUTTON */
+  .about-quote {
+    font-size: 1.15rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .about-button {
+    padding: 10px 26px !important;
+    font-size: 1rem !important;
+  }
+
+  .contact-box {
+    gap: 1.5rem !important;
+    padding: 1.25rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  .contact-box h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .contact-box span {
+    font-size: 1.2rem !important;
+  }
+
+  .contact-box svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .contact-box .p-3 {
+    padding: 0.85rem !important;
+  }
+
+  .contact-box .w-px {
+    height: 1.5rem !important;
+  }
+}
+
+/* ================================
+   RESPONSIVE ≥ 1280px (XL)
+   ================================ */
+@media (min-width: 1280px) and (max-width: 1535px) {
+
+  .about-main-img {
+    width: 19.53vw !important;    
+    height: 16.28vw !important; 
+  }
+
+  .about-extra-img {
+    width: 15.63vw !important;
+    height: 23.18vw !important;
+    right: 3.81vw !important;
+    top: 7.81vw !important;
+  }
+
+  /* Nhóm avatar + counter */
+  .about-author-group {
+    gap: 1rem !important; /* giảm gap */
+  }
+
+  /* Avatar */
+  .about-author-group img {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important; /* giống -mr-4 */
+  }
+
+  /* Circle counter */
+  .about-author-count {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* Text Adventurer */
+  .about-author-text {
+    margin-left: 12px !important;
+    margin-top: 10px !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* MAIN TITLES */
+  .about-title {
+    font-size: 4.5vw !important;   /* giảm từ 6.25vw xuống gọn hơn */
+  }
+
+  .about-subtitle {
+    font-size: 2.2vw !important;    /* mềm hơn 2.67vw */
+  }
+
+  /* DESCRIPTION */
+  .about-description {
+    font-size: 1.05rem !important;
+    max-width: 750px;
+  }
+
+  /* ICON LIST SECTION */
+  .about-icon-list {
+    gap: 1.25rem !important; /* giảm gap từ 16px xuống 12px */
+  }
+
+  .about-icon-list li {
+    font-size: 1.05rem !important; /* gọn nhưng vẫn rõ */
+  }
+
+  .about-icon-list .icon-circle {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+  }
+
+  .about-icon-list .icon-circle svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* QUOTE + BUTTON */
+  .about-quote {
+    font-size: 1.15rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .about-button {
+    padding: 10px 26px !important;
+    font-size: 1rem !important;
+  }
+
+  .contact-box {
+    gap: 1.25rem !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+  }
+
+  .contact-box h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .contact-box span {
+    font-size: 1.1rem !important;
+  }
+
+  .contact-box svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+/* ================================
+   RESPONSIVE ≥ 1024px (LG)
+   ================================ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  .about-main-img {
+    width: 19.53vw !important;    
+    height: 16.28vw !important; 
+  }
+
+  .about-extra-img {
+    width: 15.63vw !important;
+    height: 23.18vw !important;
+    right: 0.81vw !important;
+    top: 7.81vw !important;
+  }
+
+  /* Nhóm avatar + counter */
+  .about-author-group {
+    gap: 1rem !important; /* giảm gap */
+  }
+
+  /* Avatar */
+  .about-author-group img {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important; /* giống -mr-4 */
+  }
+
+  /* Circle counter */
+  .about-author-count {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* Text Adventurer */
+  .about-author-text {
+    margin-left: 12px !important;
+    margin-top: 10px !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* MAIN TITLES */
+  .about-title {
+    font-size: 4.5vw !important;   /* giảm từ 6.25vw xuống gọn hơn */
+  }
+
+  .about-subtitle {
+    font-size: 2.2vw !important;    /* mềm hơn 2.67vw */
+  }
+
+  /* DESCRIPTION */
+  .about-description {
+    font-size: 1.05rem !important;
+    max-width: 750px;
+  }
+
+  /* ICON LIST SECTION */
+  .about-icon-list {
+    gap: 1.25rem !important; /* giảm gap từ 16px xuống 12px */
+  }
+
+  .about-icon-list li {
+    font-size: 1.05rem !important; /* gọn nhưng vẫn rõ */
+  }
+
+  .about-icon-list .icon-circle {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+  }
+
+  .about-icon-list .icon-circle svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* QUOTE + BUTTON */
+  .about-quote {
+    font-size: 1.15rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .about-button {
+    padding: 10px 26px !important;
+    font-size: 1rem !important;
+  }
+
+  .contact-box {
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+    padding: 0.9rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .contact-box h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .contact-box span {
+    font-size: 1rem !important;
+  }
+
+  .contact-box .w-px {
+    height: 1.2rem !important;
+  }
+}
+
+/* ================================
+   RESPONSIVE ≥ 768px (MD – Tablet)
+   ================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .about-main-img {
+    width: 18vw !important;    
+    height: 15vw !important;
+    right: 10vw !important; 
+  }
+
+  .about-extra-img {
+    width: 14.5vw !important;
+    height: 21.21vw !important;
+    right: 5.5vw !important;
+    top: 7.81vw !important;
+  }
+
+  /* Nhóm avatar + counter */
+  .about-author-group {
+    gap: 0.8rem !important; /* giảm gap */
+  }
+
+  /* Avatar */
+  .about-author-group img {
+    width: 55px !important;
+    height: 55px !important;
+    margin-right: -10px !important; /* giống -mr-4 */
+  }
+
+  /* Circle counter */
+  .about-author-count {
+    width: 55px !important;
+    height: 55px !important;
+    margin-right: -10px !important;
+    font-size: 1.4rem !important;
+  }
+
+  /* Text Adventurer */
+  .about-author-text {
+    margin-left: 10px !important;
+    margin-top: 8px !important;
+    font-size: 1rem !important;
+  }
+
+  /* MAIN TITLES */
+  .about-title {
+    font-size: 4vw !important;   /* giảm từ 6.25vw xuống gọn hơn */
+  }
+
+  .about-subtitle {
+    font-size: 2vw !important;    /* mềm hơn 2.67vw */
+  }
+
+  /* DESCRIPTION */
+  .about-description {
+    font-size: 1rem !important;
+    max-width: 700px;
+  }
+
+  /* ICON LIST SECTION */
+  .about-icon-list {
+    gap: 1rem !important; /* giảm gap từ 16px xuống 12px */
+  }
+
+  .about-icon-list li {
+    font-size: 1rem !important; /* gọn nhưng vẫn rõ */
+  }
+
+  .about-icon-list .icon-circle {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+  }
+
+  .about-icon-list .icon-circle svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  /* QUOTE + BUTTON */
+  .about-quote {
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .about-button {
+    padding: 9px 24px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .contact-box {
+    gap: 0.7rem !important;
+    padding: 0.75rem !important;
+    margin-top: 12rem !important;
+  }
+
+  .contact-box h3 {
+    font-size: 1.05rem !important;
+  }
+
+  .contact-box span {
+    font-size: 0.9rem !important;
+  }
+
+  .contact-box .w-px {
+    height: 0.9rem !important;
+  }
+}
+
+/* ================================
+   RESPONSIVE ≥ 640px (SM – Large mobile)
+   ================================ */
+@media (min-width: 640px) and (max-width: 767px) {
+
+  .about-main-img {
+    width: 19.53vw !important;    
+    height: 16.28vw !important; 
+  }
+
+  .about-extra-img {
+    width: 15.63vw !important;
+    height: 34.18vw !important;
+    right: 7.81vw !important;
+    top: 7.81vw !important;
+  }
+
+  /* Nhóm avatar + counter */
+  .about-author-group {
+    gap: 1rem !important; /* giảm gap */
+  }
+
+  /* Avatar */
+  .about-author-group img {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important; /* giống -mr-4 */
+  }
+
+  /* Circle counter */
+  .about-author-count {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* Text Adventurer */
+  .about-author-text {
+    margin-left: 12px !important;
+    margin-top: 10px !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* MAIN TITLES */
+  .about-title {
+    font-size: 4.5vw !important;   /* giảm từ 6.25vw xuống gọn hơn */
+  }
+
+  .about-subtitle {
+    font-size: 2.2vw !important;    /* mềm hơn 2.67vw */
+  }
+
+  /* DESCRIPTION */
+  .about-description {
+    font-size: 1.05rem !important;
+    max-width: 750px;
+  }
+
+  /* ICON LIST SECTION */
+  .about-icon-list {
+    gap: 1.25rem !important; /* giảm gap từ 16px xuống 12px */
+  }
+
+  .about-icon-list li {
+    font-size: 1.05rem !important; /* gọn nhưng vẫn rõ */
+  }
+
+  .about-icon-list .icon-circle {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+  }
+
+  .about-icon-list .icon-circle svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* QUOTE + BUTTON */
+  .about-quote {
+    font-size: 1.15rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .about-button {
+    padding: 10px 26px !important;
+    font-size: 1rem !important;
+  }
+
+  .contact-box {
+    gap: 0.6rem !important;
+    padding: 0.7rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .contact-box h3 {
+    font-size: 1rem !important;
+  }
+
+  .contact-box span {
+    font-size: 0.85rem !important;
+  }
+
+  .contact-box svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+
+/* ================================
+   RESPONSIVE ≤ 480px (Small mobile)
+   ================================ */
+@media (max-width: 480px) {
+
+  .about-main-img {
+    width: 19.53vw !important;    
+    height: 16.28vw !important; 
+  }
+
+  .about-extra-img {
+    width: 15.63vw !important;
+    height: 34.18vw !important;
+    right: 7.81vw !important;
+    top: 0 !important;
+  }
+
+  /* Nhóm avatar + counter */
+  .about-author-group {
+    gap: 1rem !important; /* giảm gap */
+  }
+
+  /* Avatar */
+  .about-author-group img {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important; /* giống -mr-4 */
+  }
+
+  /* Circle counter */
+  .about-author-count {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: -12px !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* Text Adventurer */
+  .about-author-text {
+    margin-left: 12px !important;
+    margin-top: 10px !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* MAIN TITLES */
+  .about-title {
+    font-size: 4.5vw !important;   /* giảm từ 6.25vw xuống gọn hơn */
+  }
+
+  .about-subtitle {
+    font-size: 2.2vw !important;    /* mềm hơn 2.67vw */
+  }
+
+  /* DESCRIPTION */
+  .about-description {
+    font-size: 1.05rem !important;
+    max-width: 750px;
+  }
+
+  /* ICON LIST SECTION */
+  .about-icon-list {
+    gap: 1.25rem !important; /* giảm gap từ 16px xuống 12px */
+  }
+
+  .about-icon-list li {
+    font-size: 1.05rem !important; /* gọn nhưng vẫn rõ */
+  }
+
+  .about-icon-list .icon-circle {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+  }
+
+  .about-icon-list .icon-circle svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* QUOTE + BUTTON */
+  .about-quote {
+    font-size: 1.15rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .about-button {
+    padding: 10px 26px !important;
+    font-size: 1rem !important;
+  }
+
+  .contact-box {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    padding: 0.6rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .contact-box h3 {
+    font-size: 0.95rem !important;
+  }
+
+  .contact-box span {
+    font-size: 0.8rem !important;
+  }
+
+  .contact-box svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .contact-box .w-px {
+    height: 0.8rem !important;
+  }
 }
