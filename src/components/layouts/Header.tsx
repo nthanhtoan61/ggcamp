@@ -110,9 +110,9 @@ export const Header: React.FC = () => {
                                 color: "#90929d",
                                 textDecoration: "none",
                               }}
-                              href="/about-us"
+                              href="#"
                             >
-                              About Us{" "}
+                              Info{" "}
                             </Link>
 
                            
@@ -129,27 +129,30 @@ export const Header: React.FC = () => {
                          
                           <ul id="about-us-sub-menu" className="uk-nav-sub">
                             <li>
-                              <Link href="/about-us/travel-documents">
+                              <Link href="/info/travel-documents">
                                 Travel Documents
                               </Link>
                             </li>
                             <li>
-                              <Link href="/about-us/safety">Safety</Link>
+                              <Link href="/info/safety">Safety</Link>
                             </li>
                             <li>
-                              <Link href="/about-us/insurance">Insurance</Link>
+                              <Link href="/info/insurance">Insurance</Link>
                             </li>
                             <li>
-                              <Link href="/about-us/terms-conditions">
+                              <Link href="/info/terms-conditions">
                                 Terms&Conditions
                               </Link>
                             </li>
                             <li>
-                              <Link href="/about-us/faq">FAQ</Link>
+                              <Link href="/info/faq">FAQ</Link>
                             </li>
                           </ul>
                         </li>
-                        <li className="item-165 uk-parent" style={{ padding: "5px 0" }}>
+                         <li className="item-672">
+                          <Link href="/destinations">Camp Locations</Link>
+                        </li>
+                        {/* <li className="item-165 uk-parent" style={{ padding: "5px 0" }}>
                           <div className="uk-flex uk-flex-between uk-flex-middle">
                             
                             <Link
@@ -206,9 +209,12 @@ export const Header: React.FC = () => {
                           </ul>
                           
                           
-                        </li>
+                        </li> */}
                         <li className="item-672">
                           <Link href="/activities">Activities</Link>
+                        </li>
+                           <li className="item-672">
+                          <Link href="/blog">Blog</Link>
                         </li>
                         <li className="item-182">
                           <Link href="/booking">Booking</Link>
@@ -307,32 +313,33 @@ export const Header: React.FC = () => {
                           <Link href="/">Home Page</Link>
                         </li>
                         <li className="item-183 uk-parent">
-                          <a href="/about-us">
-                            About Us<span uk-navbar-parent-icon=""></span>
+                          <a href="/info/about-us">
+                            Info 
+                            <span uk-navbar-parent-icon=""></span>
                           </a>
                           <div className="uk-drop uk-navbar-dropdown">
                             <div>
                               <ul className="uk-nav uk-navbar-dropdown-nav">
                                 <li>
-                                  <Link href="/about-us/travel-documents">
+                                  <Link href="/info/travel-documents">
                                     Travel Documents
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/about-us/safety">Safety</Link>
+                                  <Link href="/info/safety">Safety</Link>
                                 </li>
                                 <li>
-                                  <Link href="/about-us/insurance">
+                                  <Link href="/info/insurance">
                                     Insurance
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/about-us/terms-conditions">
+                                  <Link href="/info/terms-conditions">
                                     Terms&Conditions
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/about-us/faq">FAQ</Link>
+                                  <Link href="/info/faq">FAQ</Link>
                                 </li>
                               </ul>
                             </div>
@@ -341,9 +348,9 @@ export const Header: React.FC = () => {
                         <li className="item-165 uk-parent">
                           <a href="/destinations">
                             Camp Locations{" "}
-                            <span uk-navbar-parent-icon=""></span>
+                            {/* <span uk-navbar-parent-icon=""></span> */}
                           </a>
-                          <div className="uk-drop uk-navbar-dropdown">
+                          {/* <div className="uk-drop uk-navbar-dropdown">
                             <div>
                               <ul className="uk-nav uk-navbar-dropdown-nav">
                                 <li>
@@ -378,7 +385,7 @@ export const Header: React.FC = () => {
                                 </li>
                               </ul>
                             </div>
-                          </div>
+                          </div> */}
                         </li>
                       </ul>
                     </div>
@@ -408,6 +415,9 @@ export const Header: React.FC = () => {
                       <ul className="uk-navbar-nav">
                         <li className="item-672 uk-parent">
                           <a href="/activities">Activities</a>
+                        </li>
+                        <li className="item-672 uk-parent">
+                          <a href="/blog">Blog</a>
                         </li>
 
                         <li className="item-182">

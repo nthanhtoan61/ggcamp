@@ -959,7 +959,7 @@ export default function CampProfilesPage() {
       {/* Hero Section */}
       <div className="uk-section-default uk-section-overlap uk-preserve-color uk-light uk-position-relative">
         <div
-          className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge"
+          className="h-[40vh] md:h-[60vh] uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge  "
           style={{
             backgroundImage: `url(${getTemplateImageUrl(
               "yootheme/banner/b3.jpg"
@@ -970,45 +970,31 @@ export default function CampProfilesPage() {
             className="uk-position-cover"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.19)" }}
           ></div>
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <h1 className="uk-heading-large uk-text-center">
-                  International Sport- & Language Camps
-                </h1>
-                <div className="uk-panel uk-text-lead uk-margin uk-text-center">
-                  <p>for Kids and Teenagers from all over the world</p>
-                </div>
-              </div>
-            </div>
-          </div>
+
+             <div className="relative z-10  flex flex-col items-center justify-center h-full">
+                <p className="text-[4.5vw] text-white font-bold">International Sport- & Language Camps</p>
+              <p className="text-[1.667vw] text-white">for Kids and Teenagers from all over the world</p>
+             </div>
+         
         </div>
       </div>
 
       {/* Intro Section */}
-      <div className="uk-section-default uk-section uk-padding-remove-bottom">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-text-center@m uk-text-center">
-                <p>
+      <div className="text-center p-12 m-8">
+                <p className="text-[1.67vw]">
                   Adventure & sports camps, vacation camps, as well as English &
                   German language camps in Germany and England, since 2002
                 </p>
-              </h2>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* ProvenExpert Widget + Quote Section */}
-      <div className="uk-section-default uk-section-overlap uk-section uk-section-small">
-        <div className="uk-container uk-container-large">
+      
+       
           <div
-            className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge"
-            uk-grid=""
+            className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge uk-padding "
+            
           >
-            <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
+            <div className="h-[30vh] md:h-[40vh]  uk-grid-item-match uk-flex-middle uk-width-1-3@m ">
               <div className="uk-panel uk-width-1-1">
                 <center>
                   <a
@@ -1021,17 +1007,20 @@ export default function CampProfilesPage() {
                       width={465}
                       height={200}
                       alt="Customer reviews"
-                      style={{ border: 0 }}
+                      
+                      style={{ border: 0, width: "100%" , height: "100%" }}
                       unoptimized
+                      
+                      
                     />
                   </a>
                 </center>
               </div>
             </div>
-            <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
+            <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m ">
               <div className="uk-panel uk-width-1-1">
                 <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
-                  <p>
+                  <p className="text-[1.67vw]">
                     My son (age 11) absolutely loved Camp Adventure! After two
                     disastrous camp experiences, this was our last attempt. I am
                     so glad he went! He said he had the time of his life and
@@ -1040,10 +1029,11 @@ export default function CampProfilesPage() {
                   <footer className="el-footer">
                     <cite className="el-author">
                       <a
-                        className="uk-link-muted"
+                        className="uk-link-muted text-[1.67vw]"
                         href="https://goo.gl/maps/6SUEPwPJtZofokoX7"
                         target="_blank"
                         rel="noreferrer"
+                        
                       >
                         Sarah O.
                       </a>
@@ -1053,16 +1043,15 @@ export default function CampProfilesPage() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+          
+     
+  
 
       {/* Description */}
-      <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
+      <div className="uk-section-default uk-section  p-12 m-8">
+       
               <div className="uk-panel uk-text-large uk-dropcap uk-margin">
-                <p>
+                <p className="text-[1.67vw]">
                   I In our international camps in Germany and England we offer
                   various courses that you can book as additional options to our
                   camp activities. Get an overview of what is taking place where
@@ -1071,9 +1060,6 @@ export default function CampProfilesPage() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
       {/* Map Section */}
       <div className="uk-section-secondary uk-section uk-padding-remove-vertical">
@@ -1098,7 +1084,7 @@ export default function CampProfilesPage() {
           {/* Filter and Sort Panel - Left Side */}
           <div className="filter-sort-panel ">
             
-            <h2 className="panel-title">FIND YOUR CAMP!</h2>
+            <h2 className="panel-title text-[2.67vw]">FIND YOUR CAMP!</h2>
 
             {/* Price Range Section */}
             <div className="sort-section px-6 pb-6 pt-4 border-t border-b border-gray-200">
@@ -1457,12 +1443,12 @@ export default function CampProfilesPage() {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
               <div className="uk-width-1-1@m">
-                <div className="uk-h5 uk-margin-small uk-text-center">
+                <div className="text-[2.5vw] uk-margin-small uk-text-center ">
                   Camp Adventure
                 </div>
-                <h3 className="uk-h1 uk-margin-small uk-text-center">
+                <div className="text-[3vw] uk-margin-small uk-text-center">
                   Cooperations & Memberships
-                </h3>
+                </div>
                 <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
               </div>
             </div>
