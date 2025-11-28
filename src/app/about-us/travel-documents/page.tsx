@@ -15,7 +15,9 @@ export default function TravelDocumentsPage() {
         <div
           className="uk-background-norepeat uk-background-cover uk-background-bottom-center uk-section uk-section-xlarge"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/cache/9d/Reiseunterlagen-9d81dea5.jpeg")})`,
+            backgroundImage: `url(${getTemplateImageUrl(
+              "yootheme/cache/9d/Reiseunterlagen-9d81dea5.jpeg"
+            )})`,
           }}
         >
           <div
@@ -26,9 +28,10 @@ export default function TravelDocumentsPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
                 <h1
-                  className="uk-heading-medium uk-text-center"
+                  className="font-['Raleway'] text-[5vw] md:text-[4vw] lg:text-[5vw] xl:text-[5vw] leading-tight font-bold text-center max-[991px]:text-[8vw]"
                   id="page#0"
                   uk-scrollspy-class=""
+                  style={{ fontSize: "clamp(2.5rem, 5vw, 5vw)" }}
                 >
                   Camp Adventure
                   <br />
@@ -52,20 +55,34 @@ export default function TravelDocumentsPage() {
                 ></span>
               </div>
               <div className="uk-alert uk-text-center">
-                <h2 className="el-title uk-h2">
+                <h2
+                  className="el-title font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[6vw]"
+                  style={{ fontSize: "clamp(1.25rem, 1.7vw, 2.1vw)" }}
+                >
                   Camp Adventure Travel Information
                 </h2>
               </div>
               <div className="uk-panel uk-text-meta uk-margin">
-                <p style={{ textAlign: "center" }}>As of: 2026</p>
+                <p
+                  className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw]"
+                  style={{
+                    fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                    textAlign: "center",
+                  }}
+                >
+                  As of: 2026
+                </p>
               </div>
-              <div className="uk-panel uk-text-large uk-margin">
-                <p>
+              <div className="uk-panel uk-margin">
+                <p
+                  className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                  style={{ fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)" }}
+                >
                   Our entire team is looking forward to an exciting and
-                  adventurous holiday camp with you. Below you will find a summary
-                  of all the important information about our adventure, sports
-                  and language camps. If you have any further questions, please
-                  do not hesitate to contact us at{" "}
+                  adventurous holiday camp with you. Below you will find a
+                  summary of all the important information about our adventure,
+                  sports and language camps. If you have any further questions,
+                  please do not hesitate to contact us at{" "}
                   <a href="mailto:office@campadventure.de">
                     office@campadventure.de
                   </a>
@@ -85,16 +102,28 @@ export default function TravelDocumentsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1">
               <div id="Accordion">
-                <div uk-accordion="collapsible: true;" id="js-0" className="custom_acc_691a9d0c2cbf0">
+                <div
+                  uk-accordion="collapsible: true;"
+                  id="js-0"
+                  className="custom_acc_691a9d0c2cbf0"
+                >
                   <div id="js-0_0" className="el-item jp_">
                     <a className="uk-accordion-title" href="#">
-                      <h3 className="el-accordion-title uk-h2 uk-margin-remove-bottom">
+                      <h3
+                        className="el-accordion-title font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold uk-margin-remove-bottom max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Germany - Lüneburger Heide/Walsrode
                       </h3>
                     </a>
                     <div className="uk-accordion-content uk-margin-remove-first-child">
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Address:</strong>
                           <br />
                           Camp Adventure Academy
@@ -115,7 +144,12 @@ export default function TravelDocumentsPage() {
                           camp, as most navigation systems will lead you to the
                           wrong place!
                         </p>
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Contact at the camp:</strong>
                           <br />
                           Email:{" "}
@@ -123,7 +157,12 @@ export default function TravelDocumentsPage() {
                             walsrode@campadventure.de
                           </a>
                         </p>
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Arrival and Departure:</strong>
                           <br />
                           Arrival: 4 – 6 pm
@@ -136,13 +175,21 @@ export default function TravelDocumentsPage() {
 
                   <div id="js-0_1" className="el-item jp_">
                     <a className="uk-accordion-title" href="#">
-                      <h3 className="el-accordion-title uk-h2 uk-margin-remove-bottom">
+                      <h3
+                        className="el-accordion-title font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold uk-margin-remove-bottom max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Germany - Bavarian Forest/Regen
                       </h3>
                     </a>
                     <div className="uk-accordion-content uk-margin-remove-first-child">
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Address:</strong>
                           <br />
                           Camp Adventure
@@ -151,7 +198,12 @@ export default function TravelDocumentsPage() {
                           <br />
                           94209 Regen
                         </p>
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Contact at the camp:</strong>
                           <br />
                           Email:{" "}
@@ -159,7 +211,12 @@ export default function TravelDocumentsPage() {
                             regen@campadventure.de
                           </a>
                         </p>
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Arrival and Departure:</strong>
                           <br />
                           Arrival: 4 – 6 pm
@@ -172,13 +229,21 @@ export default function TravelDocumentsPage() {
 
                   <div id="js-0_2" className="el-item jp_">
                     <a className="uk-accordion-title" href="#">
-                      <h3 className="el-accordion-title uk-h2 uk-margin-remove-bottom">
+                      <h3
+                        className="el-accordion-title font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold uk-margin-remove-bottom max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         England - Bath & London Camp
                       </h3>
                     </a>
                     <div className="uk-accordion-content uk-margin-remove-first-child">
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Address:</strong>
                           <br />
                           University of Bath
@@ -189,7 +254,12 @@ export default function TravelDocumentsPage() {
                           <br />
                           Bath BA2 7AY, England
                         </p>
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Contact at the camp:</strong>
                           <br />
                           Email:{" "}
@@ -197,7 +267,12 @@ export default function TravelDocumentsPage() {
                             england@campadventure.de
                           </a>
                         </p>
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Arrival and Departure:</strong>
                           <br />
                           Arrival: 4 – 6 pm
@@ -210,13 +285,21 @@ export default function TravelDocumentsPage() {
 
                   <div id="js-0_6" className="el-item jp_">
                     <a className="uk-accordion-title" href="#">
-                      <h3 className="el-accordion-title uk-h2 uk-margin-remove-bottom">
+                      <h3
+                        className="el-accordion-title font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold uk-margin-remove-bottom max-[991px]:text-[5vw]"
+                        style={{ fontSize: "clamp(1.25rem, 2.1vw, 2.1vw)" }}
+                      >
                         Spain - Barcelona Beach Camp
                       </h3>
                     </a>
                     <div className="uk-accordion-content uk-margin-remove-first-child">
                       <div className="el-content uk-panel uk-margin-top">
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Address:</strong>
                           <br />
                           BISC International Sailing Center
@@ -227,7 +310,12 @@ export default function TravelDocumentsPage() {
                           <br />
                           08930 Sant Adrià de Besòs, Barcelona, Spanien
                         </p>
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Contact at the camp:</strong>
                           <br />
                           Email:{" "}
@@ -235,7 +323,12 @@ export default function TravelDocumentsPage() {
                             barcelona@campadventure.de
                           </a>
                         </p>
-                        <p>
+                        <p
+                          className="font-['Raleway'] text-[0.99vw] md:text-[0.7vw] lg:text-[0.99vw] xl:text-[0.99vw] max-[991px]:text-[3.5vw] leading-relaxed"
+                          style={{
+                            fontSize: "clamp(0.875rem, 0.99vw, 0.99vw)",
+                          }}
+                        >
                           <strong>Arrival and Departure:</strong>
                           <br />
                           Arrival: 4 – 6 pm
@@ -254,4 +347,3 @@ export default function TravelDocumentsPage() {
     </>
   );
 }
-
