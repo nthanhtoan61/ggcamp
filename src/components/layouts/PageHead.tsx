@@ -188,13 +188,14 @@ export const PageHead: React.FC = () => {
         }}
       />
 
-      <Script
+      {/* Chatwoot/Chatlyn widget disabled - bubble hidden */}
+      {/* <Script
         id="chatwoot-integration"
         strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `window.chatwootSettings = { "locale": "de" }; (function (d, t) { var BASE_URL = "https://app.chatlyn.com/"; var g = d.createElement(t), s = d.getElementsByTagName(t)[0]; g.src = BASE_URL + "/packs/js/sdk.js"; g.defer = true; g.async = true; s.parentNode.insertBefore(g, s); g.onload = function () { window.chatwootSDK.run({ websiteToken: 'EZJsgznZEWkQfHAihvHPjYdj', baseUrl: BASE_URL, whatsApp: "+123456789", email: "info@ggcamp.org", facebook: "ggcamp" }); }; })(document, "script");`,
         }}
-      />
+      /> */}
 
       <Script
         id="google-tag-manager"
