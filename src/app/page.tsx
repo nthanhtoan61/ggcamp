@@ -858,14 +858,14 @@ export default function HomePage() {
         right: "0",
         transform: "translateY(-50%)",
         backgroundColor: "#f9f9f7",
-        padding: "80px",
+        padding: "3vw 4vw",
         borderRadius: "0",
         boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
         zIndex: 10,
         border: "2px solid #f0f0f0",
-        height: "70%",
-        width: "62%",
-        marginRight: "70px",
+        height: "80%",
+        width: "70%",
+        marginRight: "1.5vw",
       }}
     >
       <div style={{
