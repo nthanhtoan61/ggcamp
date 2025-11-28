@@ -12,11 +12,6 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
   
-  // Bỏ qua lỗi ESLint khi build (nếu cần)
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
   // Cấu hình images để cho phép external hosts
   images: {
     remotePatterns: [
