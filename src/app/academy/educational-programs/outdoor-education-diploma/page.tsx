@@ -122,7 +122,7 @@ export default function OutdoorEducationDiplomaPage() {
                       src="https://www.goabroad.com/reviews/generator/program/47934/177326/240/490/0/0?layout_type=0&theme=light&show_name=1?rvs="
                       frameBorder="0"
                       scrolling="no"
-                      allowtransparency="true"
+                      allowTransparency="true"
                       style={{
                         border: "none",
                         overflow: "auto",
