@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { getTemplateImageUrl } from "@/lib/assets";
 import { programs } from "@/data/programs";
+import { Calendar, Users, MapPin } from "lucide-react";
 
 // Extend Window interface for Leafletg
 declare global {
@@ -39,50 +40,51 @@ export default function CampProfilesPage() {
   const [selectedHolidays, setSelectedHolidays] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAge, setSelectedAge] = useState("");
-  
- const programs = [
-  { value: "adventure", label: "Adventure, Sports & Creative", count: 0 },
-  { value: "arts-crafts", label: "Arts & Crafts", count: 0 },
-  { value: "climbing", label: "Climbing", count: 0 },
-  { value: "dancing", label: "Dancing", count: 0 },
-  { value: "diving", label: "Diving", count: 0 },
-  { value: "englisch-camps", label: "Englischcamps", count: 0 },
-  { value: "englisch-toefl", label: "Englisch TOEFL©", count: 0 },
-  { value: "fishing", label: "Fishing", count: 0 },
-  { value: "german-camps", label: "German Camps", count: 0 },
-  { value: "horseback", label: "Horseback Riding", count: 0 },
-  { value: "husky", label: "Husky Camp", count: 0 },
-  { value: "icit", label: "International Counsellor in Training (ICIT)", count: 0 },
-  { value: "lifeguarding", label: "Lifeguarding", count: 0 },
-  { value: "language", label: "Language", count: 0 },
-  { value: "leadership", label: "Leadership", count: 0 },
-  { value: "multi-water", label: "Multi Water Adventure", count: 0 },
-  { value: "sailing", label: "Sailing", count: 0 },
-  { value: "skating", label: "Skating", count: 0 },
-  { value: "soccer", label: "Soccer", count: 0 },
-  { value: "space", label: "Space Exploration", count: 0 },
-  { value: "spanish", label: "Spanishcourse", count: 0 },
-  { value: "survival", label: "Survival", count: 0 },
-  { value: "swimming", label: "Swimming", count: 0 },
-  { value: "tennis", label: "Tennis", count: 0 },
-  { value: "windsurf", label: "Windsurfing", count: 0 },
-];
 
-
+  const programs = [
+    { value: "adventure", label: "Adventure, Sports & Creative", count: 0 },
+    { value: "arts-crafts", label: "Arts & Crafts", count: 0 },
+    { value: "climbing", label: "Climbing", count: 0 },
+    { value: "dancing", label: "Dancing", count: 0 },
+    { value: "diving", label: "Diving", count: 0 },
+    { value: "englisch-camps", label: "Englischcamps", count: 0 },
+    { value: "englisch-toefl", label: "Englisch TOEFL©", count: 0 },
+    { value: "fishing", label: "Fishing", count: 0 },
+    { value: "german-camps", label: "German Camps", count: 0 },
+    { value: "horseback", label: "Horseback Riding", count: 0 },
+    { value: "husky", label: "Husky Camp", count: 0 },
+    {
+      value: "icit",
+      label: "International Counsellor in Training (ICIT)",
+      count: 0,
+    },
+    { value: "lifeguarding", label: "Lifeguarding", count: 0 },
+    { value: "language", label: "Language", count: 0 },
+    { value: "leadership", label: "Leadership", count: 0 },
+    { value: "multi-water", label: "Multi Water Adventure", count: 0 },
+    { value: "sailing", label: "Sailing", count: 0 },
+    { value: "skating", label: "Skating", count: 0 },
+    { value: "soccer", label: "Soccer", count: 0 },
+    { value: "space", label: "Space Exploration", count: 0 },
+    { value: "spanish", label: "Spanishcourse", count: 0 },
+    { value: "survival", label: "Survival", count: 0 },
+    { value: "swimming", label: "Swimming", count: 0 },
+    { value: "tennis", label: "Tennis", count: 0 },
+    { value: "windsurf", label: "Windsurfing", count: 0 },
+  ];
 
   const holidays = [
-     { value: "autumn", label: "Autumn" },
+    { value: "autumn", label: "Autumn" },
     { value: "spring", label: "Spring" },
     { value: "summer", label: "Summer" },
-   
   ];
 
   const locations = [
-    { value: "england", label: "England"},
+    { value: "england", label: "England" },
     { value: "northern-germany", label: "Northern Germany" },
     { value: "south-germany", label: "South Germany" },
-    { value: "spain", label: "Spain"},
-    { value: "west-germany", label: "West Germany"},
+    { value: "spain", label: "Spain" },
+    { value: "west-germany", label: "West Germany" },
   ];
 
   // Camp data
@@ -531,9 +533,9 @@ export default function CampProfilesPage() {
   // Handle filter form submission
   const handleFilterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     // Save current scroll position
-    const scrollPosition = typeof window !== 'undefined' ? window.scrollY : 0;
+    const scrollPosition = typeof window !== "undefined" ? window.scrollY : 0;
 
     const filtered = camps.filter((camp) => {
       // Price range filter (up to selected price)
@@ -558,9 +560,9 @@ export default function CampProfilesPage() {
     });
 
     setFilteredCamps(sortCamps(filtered, sortBy));
-    
+
     // Restore scroll position after filtering
-    if (typeof window !== 'undefined' && scrollPosition !== undefined) {
+    if (typeof window !== "undefined" && scrollPosition !== undefined) {
       window.scrollTo(0, scrollPosition);
     }
   };
@@ -576,7 +578,14 @@ export default function CampProfilesPage() {
     setFilteredCamps(sortCamps(camps, sortBy));
     // Reset to first page when filters change
     setCurrentPage(1);
-  }, [sortBy, priceRange, selectedProgram, selectedHolidays, selectedLocations, selectedAge]);
+  }, [
+    sortBy,
+    priceRange,
+    selectedProgram,
+    selectedHolidays,
+    selectedLocations,
+    selectedAge,
+  ]);
 
   // Handle reset
   const handleReset = () => {
@@ -595,14 +604,14 @@ export default function CampProfilesPage() {
   // Handle sort change
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     // Save current scroll position
-    const scrollPosition = typeof window !== 'undefined' ? window.scrollY : 0;
-    
+    const scrollPosition = typeof window !== "undefined" ? window.scrollY : 0;
+
     const newSortBy = e.target.value;
     setSortBy(newSortBy);
     setFilteredCamps(sortCamps(filteredCamps, newSortBy));
-    
+
     // Restore scroll position after sorting
-    if (typeof window !== 'undefined' && scrollPosition !== undefined) {
+    if (typeof window !== "undefined" && scrollPosition !== undefined) {
       window.scrollTo(0, scrollPosition);
     }
   };
@@ -610,8 +619,8 @@ export default function CampProfilesPage() {
   // Apply price filter immediately and sort by price
   const applyPriceFilter = (newPriceRange: [number, number]) => {
     // Save current scroll position
-    const scrollPosition = typeof window !== 'undefined' ? window.scrollY : 0;
-    
+    const scrollPosition = typeof window !== "undefined" ? window.scrollY : 0;
+
     // Use requestAnimationFrame to prevent UI blocking
     requestAnimationFrame(() => {
       const filtered = camps.filter((camp) => {
@@ -638,9 +647,9 @@ export default function CampProfilesPage() {
 
       // Sort by price ascending when filtering by price range
       setFilteredCamps(sortCamps(filtered, "price-asc"));
-      
+
       // Restore scroll position after filtering
-      if (typeof window !== 'undefined' && scrollPosition !== undefined) {
+      if (typeof window !== "undefined" && scrollPosition !== undefined) {
         window.scrollTo(0, scrollPosition);
       }
     });
@@ -893,7 +902,6 @@ export default function CampProfilesPage() {
               height: 100%;
               display: flex;
               flex-direction: column;
-              flex: 1;
             }
             .camp-card-body {
               flex: 1;
@@ -971,95 +979,86 @@ export default function CampProfilesPage() {
             style={{ backgroundColor: "rgba(0, 0, 0, 0.19)" }}
           ></div>
 
-             <div className="relative z-10  flex flex-col items-center justify-center h-full">
-                <p className="text-[4.5vw] text-white font-bold">International Sport- & Language Camps</p>
-              <p className="text-[1.667vw] text-white">for Kids and Teenagers from all over the world</p>
-             </div>
-         
+          <div className="relative z-10  flex flex-col items-center justify-center h-full">
+            <p className="text-[4.5vw] text-white font-bold">
+              International Sport- & Language Camps
+            </p>
+            <p className="text-[1.667vw] text-white">
+              for Kids and Teenagers from all over the world
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Intro Section */}
       <div className="text-center p-12 m-8">
-                <p className="text-[1.67vw]">
-                  Adventure & sports camps, vacation camps, as well as English &
-                  German language camps in Germany and England, since 2002
-                </p>
+        <p className="text-[1.67vw]">
+          Adventure & sports camps, vacation camps, as well as English & German
+          language camps in Germany and England, since 2002
+        </p>
       </div>
 
       {/* ProvenExpert Widget + Quote Section */}
-      
-       
-          <div
-            className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge uk-padding "
-            
-          >
-            <div className="h-[30vh] md:h-[40vh]  uk-grid-item-match uk-flex-middle uk-width-1-3@m ">
-              <div className="uk-panel uk-width-1-1">
-                <center>
-                  <a
-                    href="https://www.provenexpert.com/camp-adventure/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src="https://images.provenexpert.com/93/fc/d5e99b2883e0bb405862d9993db6/widget_recommendation_465_04f6f.png?t=1662145244032"
-                      width={465}
-                      height={200}
-                      alt="Customer reviews"
-                      
-                      style={{ border: 0, width: "100%" , height: "100%" }}
-                      unoptimized
-                      
-                      
-                    />
-                  </a>
-                </center>
-              </div>
-            </div>
-            <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m ">
-              <div className="uk-panel uk-width-1-1">
-                <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
-                  <p className="text-[1.67vw]">
-                    My son (age 11) absolutely loved Camp Adventure! After two
-                    disastrous camp experiences, this was our last attempt. I am
-                    so glad he went! He said he had the time of his life and
-                    can&apos;t wait to come back.
-                  </p>
-                  <footer className="el-footer">
-                    <cite className="el-author">
-                      <a
-                        className="uk-link-muted text-[1.67vw]"
-                        href="https://goo.gl/maps/6SUEPwPJtZofokoX7"
-                        target="_blank"
-                        rel="noreferrer"
-                        
-                      >
-                        Sarah O.
-                      </a>
-                    </cite>
-                  </footer>
-                </blockquote>
-              </div>
-            </div>
+
+      <div className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge uk-padding ">
+        <div className="h-[30vh] md:h-[40vh]  uk-grid-item-match uk-flex-middle uk-width-1-3@m ">
+          <div className="uk-panel uk-width-1-1">
+            <center>
+              <a
+                href="https://www.provenexpert.com/camp-adventure/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="https://images.provenexpert.com/93/fc/d5e99b2883e0bb405862d9993db6/widget_recommendation_465_04f6f.png?t=1662145244032"
+                  width={465}
+                  height={200}
+                  alt="Customer reviews"
+                  style={{ border: 0, width: "100%", height: "100%" }}
+                  unoptimized
+                />
+              </a>
+            </center>
           </div>
-          
-     
-  
+        </div>
+        <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m ">
+          <div className="uk-panel uk-width-1-1">
+            <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
+              <p className="text-[1.67vw]">
+                My son (age 11) absolutely loved Camp Adventure! After two
+                disastrous camp experiences, this was our last attempt. I am so
+                glad he went! He said he had the time of his life and can&apos;t
+                wait to come back.
+              </p>
+              <footer className="el-footer">
+                <cite className="el-author">
+                  <a
+                    className="uk-link-muted text-[1.67vw]"
+                    href="https://goo.gl/maps/6SUEPwPJtZofokoX7"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Sarah O.
+                  </a>
+                </cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
 
       {/* Description */}
       <div className="uk-section-default uk-section  p-12 m-8">
-       
-              <div className="uk-panel uk-text-large uk-dropcap uk-margin">
-                <p className="text-[1.67vw]">
-                  I In our international camps in Germany and England we offer
-                  various courses that you can book as additional options to our
-                  camp activities. Get an overview of what is taking place where
-                  and simply decide which camp you would like to spend next
-                  summer based on the program of your choice.
-                </p>
-              </div>
-            </div>
+        <div className="uk-panel uk-text-large uk-dropcap uk-margin">
+          <p className="text-[1.67vw]">
+            I In our international camps in Germany and England we offer various
+            courses that you can book as additional options to our camp
+            activities. Get an overview of what is taking place where and simply
+            decide which camp you would like to spend next summer based on the
+            program of your choice.
+          </p>
+        </div>
+      </div>
 
       {/* Map Section */}
       <div className="uk-section-secondary uk-section uk-padding-remove-vertical">
@@ -1083,7 +1082,6 @@ export default function CampProfilesPage() {
         <div className="main-layout">
           {/* Filter and Sort Panel - Left Side */}
           <div className="filter-sort-panel ">
-            
             <h2 className="panel-title text-[2.67vw]">FIND YOUR CAMP!</h2>
 
             {/* Price Range Section */}
@@ -1098,17 +1096,18 @@ export default function CampProfilesPage() {
                   max="2000"
                   value={priceRange[1]}
                   onChange={(e) => {
-                    const newPriceRange: [number, number] = [0, parseInt(e.target.value)];
+                    const newPriceRange: [number, number] = [
+                      0,
+                      parseInt(e.target.value),
+                    ];
                     setPriceRange(newPriceRange);
                     // Apply filter immediately when slider changes
                     applyPriceFilter(newPriceRange);
                   }}
                   className="uk-range"
                   style={{ width: "100%" }}
-
                 />
               </div>
-              
             </div>
 
             {/* Filter Form */}
@@ -1177,7 +1176,6 @@ export default function CampProfilesPage() {
                           {holiday.label}
                         </span>
                       </div>
-                     
                     </label>
                   ))}
                 </div>
@@ -1211,7 +1209,6 @@ export default function CampProfilesPage() {
                           {location.label}
                         </span>
                       </div>
-                      
                     </label>
                   ))}
                 </div>
@@ -1253,9 +1250,6 @@ export default function CampProfilesPage() {
                 </button>
               </div>
             </form>
-            
-
-            
           </div>
 
           {/* Camps Cards Panel - Right Side */}
@@ -1263,128 +1257,165 @@ export default function CampProfilesPage() {
             {/* Results Info */}
             <div className="results-info mb-6">
               <div className="uk-text-right@s uk-text-center">
-                Showing {currentItems.length} of {filteredCamps.length} camps (Page {currentPage} of {totalPages})
+                Showing {currentItems.length} of {filteredCamps.length} camps
+                (Page {currentPage} of {totalPages})
               </div>
             </div>
-            <div className="camp-grid">
+            <div className="space-y-6">
               {currentItems.map((camp, index) => (
                 <div key={indexOfFirstItem + index} className="camp-card">
-                  <Link
-                    href={camp.link}
-                    className="camp-card-link uk-card uk-card-default uk-card-small uk-card-hover uk-link-toggle"
-                  >
-                    <div className="camp-card-content">
-                      <div className="uk-card-media-top">
-                        <Image
-                          src={camp.image}
-                          width={1920}
-                          height={1275}
-                          alt={camp.name}
-                          loading="lazy"
-                          className="el-image"
-                          style={{ height: "200px", objectFit: "cover" }}
-                        />
+                  <div className="max-w-4xl mx-auto">
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow">
+                      {/* Image Section - Full left side */}
+                      <div className="relative md:w-1/2">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={camp.image}
+                            alt={camp.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                        <span className="absolute top-4 left-0 bg-yellow-400 text-gray-900 font-semibold px-4 py-2 text-sm rounded-r-md">
+                          Featured
+                        </span>
                       </div>
-                      <div className="camp-card-body uk-card-body uk-margin-remove-first-child">
-                        <h3 className="el-title uk-h3 uk-heading-bullet uk-margin-top uk-margin-remove-bottom">
+
+                      {/* Content Section */}
+                      <div className="md:w-1/2 p-6 flex flex-col justify-between">
+                        {/* Holiday Season */}
+                        <div className="flex items-center text-teal-600 text-sm mb-3">
+                          <Calendar className="w-4 h-4 mr-2 flex-shrink-0" />
+                          <span>{camp.season.join(", ")}</span>
+                        </div>
+
+                        {/* Camp Name */}
+                        <h2 className="text-2xl font-bold text-gray-900 mb-3">
                           {camp.name}
-                        </h3>
-                        <div className="el-meta uk-margin-top">
-                          {camp.priceText}
-                        </div>
-                        <div className="el-content uk-panel uk-margin-top">
-                          <ul className="uk-list uk-list-divider">
-                            <li>
-                              <span
-                                className="uk-margin-small-right uk-icon"
-                                uk-icon="clock"
-                              ></span>
-                              {camp.season
-                                .map(
-                                  (s) => s.charAt(0).toUpperCase() + s.slice(1)
-                                )
-                                .join(", ")}
-                            </li>
-                            <li>
-                              <span
-                                className="uk-margin-small-right uk-icon"
-                                uk-icon="user"
-                              ></span>
+                        </h2>
+
+                        {/* Description */}
+                        <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Laborum excepturi qui eum. Fugit sapiente
+                          doloremque harum veniam nemo nulla voluptatibus in,
+                          alias provident voluptatem. Iure voluptatum quis
+                          ratione incidunt cum.
+                        </p>
+
+                        {/* Age and Location */}
+                        <div className="flex flex-col gap-2 text-sm text-gray-700 mb-6">
+                          <div className="flex items-center">
+                            <Users className="w-4 h-4 mr-2 flex-shrink-0" />
+                            <span>
                               From {camp.age[0]} - {camp.age[1]} years old
-                            </li>
-                            <li>
-                              <span
-                                className="uk-margin-small-right uk-icon"
-                                uk-icon="location"
-                              ></span>
-                              {camp.locations.map(formatLocation).join(", ")}
-                            </li>
-                          </ul>
+                            </span>
+                          </div>
+                          <div className="flex items-center">
+                            <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
+                            <span>{camp.locations.join(", ")}</span>
+                          </div>
                         </div>
-                          <div>
-                          <div className=" uk-button uk-button-default">
+
+                        {/* Price and Button */}
+                        <div className="flex items-center justify-between flex-wrap gap-4">
+                          <div className="flex items-center">
+                            <span className="text-3xl font-bold text-gray-900">
+                              ${camp.price}
+                            </span>
+                          </div>
+                          <a
+                            href={camp.link}
+                            className="font-semibold px-6 py-3 rounded-md flex items-center gap-2 transition-all duration-300 transform"
+                            style={{
+                              textDecoration: "none",
+                              backgroundColor: "#389f6d",
+                              color: "white",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.backgroundColor = "#2e8a5a";
+                              e.currentTarget.style.transform = "translateY(-2px)";
+                              e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.backgroundColor = "#389f6d";
+                              e.currentTarget.style.transform = "translateY(0)";
+                              e.currentTarget.style.boxShadow = "none";
+                            }}
+                          >
                             Camp Details
-                          </div>
-                          </div>
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>
-            
+
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="uk-margin-top uk-flex uk-flex-center">
-                <ul className="uk-pagination" style={{ flexWrap: 'wrap' }}>
+                <ul className="uk-pagination" style={{ flexWrap: "wrap" }}>
                   <li className={currentPage === 1 ? "uk-disabled" : ""}>
-                    <button 
-                      onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                    <button
+                      onClick={() =>
+                        setCurrentPage((prev) => Math.max(1, prev - 1))
+                      }
                       className="uk-button uk-button-default uk-button-small"
                       disabled={currentPage === 1}
-                      style={{ whiteSpace: 'nowrap' }}
+                      style={{ whiteSpace: "nowrap" }}
                     >
                       Previous
                     </button>
                   </li>
-                  
+
                   {/* Only show first, last, and nearby pages on mobile */}
                   {totalPages <= 5 ? (
-                    Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                      <li key={page} className={currentPage === page ? "uk-active" : ""}>
-                        <button 
-                          onClick={() => setCurrentPage(page)}
-                          className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
-                          style={{ minWidth: '30px' }}
+                    Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                      (page) => (
+                        <li
+                          key={page}
+                          className={currentPage === page ? "uk-active" : ""}
                         >
-                          {page}
-                        </button>
-                      </li>
-                    ))
+                          <button
+                            onClick={() => setCurrentPage(page)}
+                            className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
+                            style={{ minWidth: "30px" }}
+                          >
+                            {page}
+                          </button>
+                        </li>
+                      )
+                    )
                   ) : (
                     <>
                       <li className={currentPage === 1 ? "uk-active" : ""}>
-                        <button 
+                        <button
                           onClick={() => setCurrentPage(1)}
                           className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
-                          style={{ minWidth: '30px' }}
+                          style={{ minWidth: "30px" }}
                         >
                           1
                         </button>
                       </li>
                       {currentPage > 3 && (
                         <li>
-                          <span className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right" style={{ minWidth: '30px' }}>
+                          <span
+                            className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
+                            style={{ minWidth: "30px" }}
+                          >
                             ...
                           </span>
                         </li>
                       )}
                       {currentPage > 2 && currentPage < totalPages - 1 && (
                         <li className="uk-active">
-                          <button 
+                          <button
                             onClick={() => setCurrentPage(currentPage)}
                             className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
-                            style={{ minWidth: '30px' }}
+                            style={{ minWidth: "30px" }}
                           >
                             {currentPage}
                           </button>
@@ -1392,29 +1423,40 @@ export default function CampProfilesPage() {
                       )}
                       {currentPage < totalPages - 2 && (
                         <li>
-                          <span className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right" style={{ minWidth: '30px' }}>
+                          <span
+                            className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
+                            style={{ minWidth: "30px" }}
+                          >
                             ...
                           </span>
                         </li>
                       )}
-                      <li className={currentPage === totalPages ? "uk-active" : ""}>
-                        <button 
+                      <li
+                        className={
+                          currentPage === totalPages ? "uk-active" : ""
+                        }
+                      >
+                        <button
                           onClick={() => setCurrentPage(totalPages)}
                           className="uk-button uk-button-default uk-button-small uk-margin-small-left uk-margin-small-right"
-                          style={{ minWidth: '30px' }}
+                          style={{ minWidth: "30px" }}
                         >
                           {totalPages}
                         </button>
                       </li>
                     </>
                   )}
-                  
-                  <li className={currentPage === totalPages ? "uk-disabled" : ""}>
-                    <button 
-                      onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+
+                  <li
+                    className={currentPage === totalPages ? "uk-disabled" : ""}
+                  >
+                    <button
+                      onClick={() =>
+                        setCurrentPage((prev) => Math.min(totalPages, prev + 1))
+                      }
                       className="uk-button uk-button-default uk-button-small"
                       disabled={currentPage === totalPages}
-                      style={{ whiteSpace: 'nowrap' }}
+                      style={{ whiteSpace: "nowrap" }}
                     >
                       Next
                     </button>
