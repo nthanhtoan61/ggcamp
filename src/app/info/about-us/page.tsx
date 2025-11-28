@@ -260,7 +260,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <HeroSection
         title="About Us"
-        backgroundImage="yootheme/aboutImage/banner.jpg"
+        backgroundImage="yootheme/banner/b4.jpg"
         overlayColor="rgba(0, 0, 0, 0.7)"
         sectionClass="uk-section-primary"
         titleClass="uk-heading-large uk-text-center !text-[5vw]"

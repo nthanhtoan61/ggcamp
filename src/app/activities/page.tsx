@@ -1255,7 +1255,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
       {/* Hero Section */}
       <HeroSection
         title="Activities"
-        backgroundImage="yootheme/banner/b3.jpg"
+        backgroundImage="yootheme/banner/b9.jpg"
         overlayColor="rgba(0, 0, 0, 0.19)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
         titleClass="uk-heading-large uk-text-center"

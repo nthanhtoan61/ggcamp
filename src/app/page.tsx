@@ -876,7 +876,7 @@ export default function HomePage() {
           <h2 style={{
             textAlign: "left",
             fontFamily: "Arial, sans-serif",
-            fontSize: "22px",
+            fontSize: "1.5vw",
             fontWeight: "600",
             marginBottom: "30px",
             whiteSpace: "nowrap",
@@ -886,7 +886,7 @@ export default function HomePage() {
           <h1 style={{
             textAlign: "left",
             fontFamily: "'Prompt', sans-serif",
-            fontSize: "42px",
+            fontSize: "3vw",
             fontWeight: "600",
             whiteSpace: "nowrap",
             letterSpacing: "0px",
@@ -899,26 +899,26 @@ export default function HomePage() {
 <div style={{
   display: "flex",
   justifyContent: "space-between",
-  gap: "0px",
-  marginTop: "40px"
+  gap: "1vw",
+  marginTop: "2vw"
 }}>
   {/* Mission Box */}
   <div style={{
     flex: "1",
-    minHeight: "200px",
+    minHeight: "10vw",
     backgroundColor: "#f9f9f7",
-    padding: "20px",
+    padding: "1vw",
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
     transition: "all 0.3s ease",
     cursor: "pointer",
-    borderRadius: "10px", // Thêm bo góc
+    borderRadius: "0.5vw",
     
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.backgroundColor = "#f9f9f7";
@@ -926,17 +926,17 @@ export default function HomePage() {
   }}>
     {/* Mission Icon - Target/Compass */}
     <div style={{
-      width: "50px",
-      height: "50px",
+      width: "3vw",
+      height: "3vw",
       backgroundColor: "#9c5d00",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      marginBottom: "15px",
-      borderRadius: "12px",
-      boxShadow: "0 4px 8px rgba(156, 93, 0, 0.2)"
+      marginBottom: "0.75vw",
+      borderRadius: "0.6vw",
+      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
     }}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"/>
         <circle cx="12" cy="12" r="6"/>
         <circle cx="12" cy="12" r="2"/>
@@ -948,22 +948,22 @@ export default function HomePage() {
     </div>
     <h3 style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "18px",
+      fontSize: "1.5vw",
       fontWeight: "700",
-      marginBottom: "15px",
+      marginBottom: "0.75vw",
       color: "#333"
     }}>Our Mission</h3>
     <p style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "14px",
+      fontSize: "1vw",
       fontWeight: "400",
       color: "#666",
       lineHeight: "1.5",
       flex: "1"
     }}>We provide a safe, inclusive, and inspiring environment where children and teens can explore, learn, and grow through adventure, creativity, and friendship.</p>
     <div style={{
-      width: "85px",
-      height: "3px",
+      width: "4.25vw",
+      height: "0.15vw",
       margin: "0px",
       backgroundColor: "#9c5d00",
     }}></div>
@@ -972,20 +972,20 @@ export default function HomePage() {
   {/* Vision Box */}
   <div style={{
     flex: "1",
-    minHeight: "200px",
+    minHeight: "10vw",
     backgroundColor: "#f9f9f7",
-    padding: "20px",
+    padding: "1vw",
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
     transition: "all 0.3s ease",
     cursor: "pointer",
-    borderRadius: "10px", // Thêm bo góc
+    borderRadius: "0.5vw",
     
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.backgroundColor = "#f9f9f7";
@@ -993,39 +993,39 @@ export default function HomePage() {
   }}>
     {/* Vision Icon - Eye */}
     <div style={{
-      width: "50px",
-      height: "50px",
+      width: "3vw",
+      height: "3vw",
       backgroundColor: "#9c5d00",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      marginBottom: "15px",
-      borderRadius: "12px",
-      boxShadow: "0 4px 8px rgba(156, 93, 0, 0.2)"
+      marginBottom: "0.75vw",
+      borderRadius: "0.6vw",
+      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
     }}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
         <circle cx="12" cy="12" r="3"/>
       </svg>
     </div>
     <h3 style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "18px",
+      fontSize: "1.5vw",
       fontWeight: "700",
-      marginBottom: "15px",
+      marginBottom: "0.75vw",
       color: "#333"
     }}>Our Vision</h3>
     <p style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "14px",
+      fontSize: "1vw",
       fontWeight: "400",
       color: "#666",
       lineHeight: "1.5",
       flex: "1"
     }}>We aim to be a leading international camp experience that nurtures onfident, responsible, and compassionate young individuals connected to nature and their communities.</p>
     <div style={{
-      width: "85px",
-      height: "3px",
+      width: "4.25vw",
+      height: "0.15vw",
       margin: "0px",
       backgroundColor: "#9c5d00",
     }}></div>
@@ -1034,19 +1034,19 @@ export default function HomePage() {
   {/* Goals Box */}
   <div style={{
     flex: "1",
-    minHeight: "200px",
+    minHeight: "10vw",
     backgroundColor: "#f9f9f7",
-    padding: "20px",
+    padding: "1vw",
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
     transition: "all 0.3s ease",
     cursor: "pointer",
-    borderRadius: "10px", // Thêm bo góc
+    borderRadius: "0.5vw",
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.backgroundColor = "#f9f9f7";
@@ -1054,17 +1054,17 @@ export default function HomePage() {
   }}>
     {/* Goals Icon - Trophy/Flag */}
     <div style={{
-      width: "50px",
-      height: "50px",
+      width: "3vw",
+      height: "3vw",
       backgroundColor: "#9c5d00",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      marginBottom: "15px",
-      borderRadius: "12px",
-      boxShadow: "0 4px 8px rgba(156, 93, 0, 0.2)"
+      marginBottom: "0.75vw",
+      borderRadius: "0.6vw",
+      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
     }}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
         <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
         <path d="M4 22h16"/>
@@ -1075,22 +1075,22 @@ export default function HomePage() {
     </div>
     <h3 style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "18px",
+      fontSize: "1.5vw",
       fontWeight: "700",
-      marginBottom: "15px",
+      marginBottom: "0.75vw",
       color: "#333"
     }}>Company Goals</h3>
     <p style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "14px",
+      fontSize: "1vw",
       fontWeight: "400",
       color: "#666",
       lineHeight: "1.5",
       flex: "1"
     }}>Through hands-on activities, community service, and outdoor adventures, we help campers build independence, teamwork, and lifelong memories.</p>
     <div style={{
-      width: "85px",
-      height: "3px",
+      width: "4.25vw",
+      height: "0.15vw",
       margin: "0px",
       backgroundColor: "#9c5d00",
     }}></div>

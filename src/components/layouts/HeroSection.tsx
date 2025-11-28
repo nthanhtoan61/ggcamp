@@ -31,6 +31,9 @@ export function HeroSection({
   return (
     <div
       className={`${sectionClass} uk-section-overlap uk-position-relative`}
+      style={{ 
+        overflow: "visible", // Allow image to show fully
+      }}
       {...(enableScrollspy && {
         "uk-scrollspy": "target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;",
       } as React.HTMLAttributes<HTMLDivElement>)}
@@ -38,16 +41,24 @@ export function HeroSection({
       <div
         data-src={imageUrl}
         uk-img=""
-        className={`uk-background-norepeat uk-background-cover ${bgPositionClass} uk-section uk-section-xlarge`}
+        className={`uk-background-norepeat ${bgPositionClass} uk-section uk-section-xlarge`}
         style={{
           backgroundImage: `url(${imageUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: backgroundPosition === "center-center" ? "center center" : "center top",
+          backgroundRepeat: "no-repeat",
+          minHeight: "50vw",
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          paddingBottom: "8vw", // Extra padding to ensure image bottom is visible
         }}
       >
         <div
           className="uk-position-cover"
           style={{ backgroundColor: overlayColor }}
         ></div>
-        <div className="uk-container uk-container-large uk-position-relative">
+        <div className="uk-container uk-container-large uk-position-relative" style={{ zIndex: 1, width: "100%" }}>
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <h1
