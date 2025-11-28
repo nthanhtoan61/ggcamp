@@ -25,11 +25,11 @@ export default function TermsConditionsPage() {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
-                <div className="uk-heading-large uk-text-center" uk-scrollspy-class="">
+                <div className="text-white text-[5vw] uk-text-center" uk-scrollspy-class="">
                   Camp Adventure
                 </div>
                 <div
-                  className="uk-panel uk-text-lead uk-margin uk-text-center"
+                  className="uk-panel font-[Raleway] italic text-[1.5vw] uk-margin uk-text-center"
                   uk-scrollspy-class=""
                 >
                   <p>Our Terms & Conditions</p>
@@ -46,14 +46,14 @@ export default function TermsConditionsPage() {
           <div className="uk-grid tm-grid-expand uk-grid-large uk-child-width-1-1 uk-margin-xlarge">
             <div className="uk-grid-item-match uk-flex-middle uk-width-1-1@m">
               <div className="uk-panel uk-width-1-1">
-                <h1
-                  className="uk-h1 uk-text-left@m uk-text-center"
+                <div
+                  className="text-[2.5vw] text-[#292c3d] uk-text-left@m uk-text-center"
                   uk-scrollspy-class=""
                 >
                   Terms & Conditions
                   <br />
                   Camp Adventure e.K.
-                </h1>
+                </div>
                 <div
                   className="uk-divider-small uk-text-left@m uk-text-center"
                   uk-scrollspy-class=""
@@ -69,7 +69,7 @@ export default function TermsConditionsPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-panel uk-margin" uk-scrollspy-class="">
+              <div className="uk-panel uk-margin text-[1vw]" uk-scrollspy-class="">
                 <p>
                   This is an English translation of the original and legally
                   binding German document &quot;Allgemeine Geschäftsbedingungen
