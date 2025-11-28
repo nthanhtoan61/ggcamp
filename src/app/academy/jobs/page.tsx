@@ -227,9 +227,9 @@ export default function JobsPage() {
                 <center>
                   <iframe
                     src="https://www.goabroad.com/reviews/generator/program/47934/177329/240/490/0/0?layout_type=0&theme=light&show_name=1?rvs="
-                    frameBorder="0"
+                    frameBorder={0}
                     scrolling="no"
-                    allowTransparency="true"
+                    allowTransparency={true}
                     style={{
                       border: "none",
                       overflow: "auto",
@@ -1260,7 +1260,7 @@ export default function JobsPage() {
                           allowFullScreen
                           width="560"
                           height="315"
-                          frameBorder="0"
+                          frameBorder={0}
                         ></iframe>
                       </center>
                     </div>
@@ -1338,7 +1338,7 @@ export default function JobsPage() {
                     src="https://docs.google.com/forms/d/e/1FAIpQLSczZM8LHrri-Fdmzl4x7bforey_7JK9YKznaiRv2FIYkII8Ow/viewform?embedded=true"
                     width="1000"
                     height="800"
-                    frameBorder="0"
+                    frameBorder={0}
                     marginHeight={0}
                     marginWidth={0}
                     style={{
