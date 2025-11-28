@@ -4,9 +4,7 @@
 
 # Tắt plugin @netlify/plugin-nextjs vì chúng ta dùng static export
 # Plugin này chỉ dành cho Next.js với server-side rendering
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  enabled = false
+# Không cần cấu hình plugin vì static export không cần @netlify/plugin-nextjs
 
 # Headers cho static assets - Cache-Control để tối ưu performance
 [[headers]]
