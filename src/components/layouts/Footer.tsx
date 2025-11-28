@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
     >
       {/* Background image FULL COVER without cutting details */}
       <img
-        src="/templates/yootheme/vendor/assets/uikit-themes/master-fjord/images/background_footer.png"
+        src="/templates/yootheme/vendor/assets/uikit-themes/master-fjord/images/background_footer_white.png"
         alt="footer background"
         className="footer-image"
       />
@@ -125,8 +125,8 @@ export const Footer: React.FC = () => {
                   ></span>
                 </h3>
                 <div className="footer-social !text-white mt-5 leading-[1.8]">
-                  <p><a href="https://share.google/8G4LFRq82OwOmlFlN" target="_blank" rel="noopener" className="text-white no-underline">Poblacion, Madridejos 22,<br />Cebu City, Philippines</a></p>
-                  <p className="text-[22px] mt-4 flex items-center">
+                  <p><a href="https://share.google/8G4LFRq82OwOmlFlN" target="_blank" rel="noopener" className="!text-white no-underline">Poblacion, Madridejos 22,<br />Cebu City, Philippines</a></p>
+                  <p className="text-[22px] mt-4 flex items-center !text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 mr-2 fill-white inline-block align-middle"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
                     +123456789
                   </p>

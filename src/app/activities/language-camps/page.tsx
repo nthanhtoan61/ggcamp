@@ -1052,7 +1052,6 @@ export default function LanguageCampsPage() {
                     width="1000"
                     height="1700"
                     frameBorder="0"
-                    allowFullScreen={true}
                   ></iframe>
                 </div>
               </div>

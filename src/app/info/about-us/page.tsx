@@ -9,6 +9,7 @@ import Feature from "@/app/info/about/_component/Feature";
 import StatCard from "@/app/info/about/_component/StatCard";
 import ServiceBox from "@/app/info/about/_component/ServiceBox";
 import EventCard from "@/app/info/about/_component/EventCard";
+import { HeroSection } from "@/components/layouts";
 
 // Single page data object
 const pageData = {
@@ -256,30 +257,19 @@ export default function AboutPage() {
   // #E9A919
   return (
     <>
-      {/* Hero Section (Tailwind banner) */}
-      <section>
-        <div className="relative">
-          <div
-            className="h-[40vh] md:h-[60vh] bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${getTemplateImageUrl(
-                "yootheme/aboutImage/banner.jpg"
-              )})`,
-            }}
-          >
-            <div className="absolute inset-0 bg-black/70" />
-
-            <div className="relative z-10  flex flex-col items-center justify-center h-full">
-              <p className=" text-[5vw] text-white">About Us</p>
-              <p className="text-[1.667vw] text-[#E9A919]">Home / About us</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <HeroSection
+        title="About Us"
+        backgroundImage="yootheme/aboutImage/banner.jpg"
+        overlayColor="rgba(0, 0, 0, 0.7)"
+        sectionClass="uk-section-primary"
+        titleClass="uk-heading-large uk-text-center !text-[5vw]"
+      />
 
       {/* Go & Grow Camp */}
-      <section>
-        <div className="flex items-center justify-between gap-[2vw] py-[10vh] w-full px-[10vw]">
+      <section className="uk-section-default uk-section-overlap uk-section uk-section-small">
+        <div className="uk-container uk-container-large">
+          <div className="flex items-center justify-between gap-[2vw] py-[10vh] w-full">
           {/* LEFT CONTENT */}
           <div className="w-2/5">
             <p className="text-[1vw] text-[#E9A919] font-medium mb-[1vw] leading-[1.6vw]">
@@ -349,6 +339,7 @@ export default function AboutPage() {
               />
             ))}
           </div>
+        </div>
         </div>
       </section>
 

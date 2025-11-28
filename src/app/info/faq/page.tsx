@@ -27,11 +27,11 @@ export default function FAQPage() {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
-                <div className="uk-heading-large uk-text-center" uk-scrollspy-class="">
+                <div className="text-[5vw] text-[#292c3d] font-bold uk-text-center" uk-scrollspy-class="">
                   Camp Adventure
                 </div>
                 <div
-                  className="uk-panel uk-text-lead uk-margin uk-text-center"
+                  className="uk-panel font-[Raleway] italic text-[1.5vw] text-[#292c3d] uk-margin uk-text-center"
                   uk-scrollspy-class=""
                 >
                   Frequently Asked Questions
@@ -47,17 +47,17 @@ export default function FAQPage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <h2 className="uk-h2 uk-text-left@m uk-text-center">
+              <h2 className="text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center">
                 General Information
               </h2>
               <div className="uk-divider-small uk-text-left@m uk-text-center"></div>
               <div uk-accordion="collapsible: true;">
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     What are FAQ?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         FAQ are the initials for &quot;Frequently Asked
                         Questions&quot;.
@@ -72,11 +72,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     General booking process
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         Once the booking has been confirmed by us, you will
                         receive an e-mail requesting a deposit. As soon as we
@@ -106,11 +106,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Terms & Conditions
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         Our Terms & Conditions can be found{" "}
                         <Link href="/info/terms-conditions">here</Link>.
@@ -119,11 +119,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Where can i find a packing guide for Camps
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         <a
                           href="https://www.campadventure.de/images/g_infopakete/packliste/PAckliste2024engl.pdf"
@@ -138,12 +138,12 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Where can I find contact information from Camps and
                     adresses?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         Here you can find all the necessary information if you
                         want to drive to our camps or send something. If you
@@ -227,11 +227,11 @@ export default function FAQPage() {
               <div className="uk-divider-small uk-text-left@m uk-text-center"></div>
               <div uk-accordion="collapsible: true;">
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Where do kids and camp counselors come from?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         Camp Adventure attatches great importance to
                         internationality. The participants and supervisors in
@@ -252,11 +252,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Which languages are spoken in camp?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         The main language in all our camps is English. In
                         addition, there is the language of the country in which
@@ -271,11 +271,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Are there problems if children have low language skills?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         No, because there are usually more participants and team
                         members who speak the same language. We know from
@@ -287,11 +287,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Are girls and boys separated?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         Girls and boys are accommodated separately in the
                         dormitories/tents. The program is completely mixed.
@@ -300,11 +300,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     How big are the camps? How high is the caregiver ratio?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         Capacities range from around 30 participants in smaller
                         language camps to a maximum of about 400 children in our
@@ -324,11 +324,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Should 12-year-olds go to Junior Camp or Senior Camp?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         This question is not easy to answer and depends on the
                         individual stage of development of your child.
@@ -359,11 +359,11 @@ export default function FAQPage() {
               <div className="uk-divider-small uk-text-left@m uk-text-center"></div>
               <div uk-accordion="collapsible: true;">
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     How is the choice of activities/courses in the camps made?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         If your child would like to participate in a paid
                         additional course (e.g. horse riding, language course,
@@ -381,11 +381,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     What is a hike?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         The hike is a 1-3 day walking tour, in which all
                         participants of the Adventure Camp who stay 2 weeks in
@@ -401,11 +401,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Can I wash my clothes during the camp?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         In principle, participants should bring sufficient
                         clothing and change of clothes for the entire camp
@@ -424,11 +424,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Anti Homesick Adviser
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>Dear parents</p>
                       <p>
                         now it&apos;s almost time: In summer your child travels
@@ -665,11 +665,11 @@ export default function FAQPage() {
               <div className="uk-divider-small uk-text-left@m uk-text-center"></div>
               <div uk-accordion="collapsible: true;">
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Who are the camp counselors?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         Every year our team is made up of an international mix.
                         The non-profit association Camp Europe e.V. with
@@ -685,11 +685,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     How are the teamers trained?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         All counselors go through an extensive application
                         process. For a successful application, not only an
@@ -727,11 +727,11 @@ export default function FAQPage() {
               <div className="uk-divider-small uk-text-left@m uk-text-center"></div>
               <div uk-accordion="collapsible: true;">
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Drugs, Alcohol & Camp?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         From our point of view an absolutely unacceptable and
                         indiscutable combination! Due to our cooperation with the
@@ -756,11 +756,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Should I call my kid or write an old-fashioned letter?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         We ask all parents to write to their child at least once.
                         This is especially useful at the beginning, as it is a
@@ -812,11 +812,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Are there any prohibited items?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       Yes, there are. Not allowed are pocket knives with
                       lockable blades, all weapons, lighters and matches (danger
                       of fire in the forest!). Drugs of any kind, including
@@ -839,11 +839,11 @@ export default function FAQPage() {
               <div className="uk-divider-small uk-text-left@m uk-text-center"></div>
               <div uk-accordion="collapsible: true;">
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Electronic equipment and valuables
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       We recommend that you do not take an MP3 player, e-book,
                       tablet, etc. or any valuables with you. On the one hand we
                       do not assume any liability and on the other hand there
@@ -858,11 +858,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     How do you provide safety for the kids?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       Before our camp counselors start working with us, we check
                       their police clearance certificates. You must be at least
                       19 years old to work for us as a teamer. They must also
@@ -891,11 +891,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Insurance in case of illness?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         If your child should fall ill during the camp and medical
                         help is required, he or she will of course be taken to
@@ -930,11 +930,11 @@ export default function FAQPage() {
               <div className="uk-divider-small uk-text-left@m uk-text-center"></div>
               <div uk-accordion="collapsible: true;">
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     How&apos;s the food at the camps?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         Full board for the entire duration of the camp is of
                         course already included in the camp price. In addition,
@@ -949,11 +949,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     How is my child accommodated in the camp?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         In our Adventure Camp Bayerischer Wald and our Camp
                         Lueneburger Heide, the Juniors (7-12) and the Seniors
@@ -990,11 +990,11 @@ export default function FAQPage() {
               <div className="uk-divider-small uk-text-left@m uk-text-center"></div>
               <div uk-accordion="collapsible: true;">
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Entry regulations/Travel Consent for group flights
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         <strong>
                           All parents need to fill this out and bring it to
@@ -1197,11 +1197,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Which transfers are offered?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       The respective transfer possibilities depend on the period
                       and venue of the camp. Check directly on the respective
                       camp page under &quot;Arrival & Departure Services&quot;.
@@ -1209,11 +1209,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Where can I find the exact arrival and departure times?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       Information about the different arrival and departure
                       times can be found on the respective camp page under
                       &quot;Arrival & Departure Services&quot;.
@@ -1221,11 +1221,11 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     How do the transfer costs come about?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         When booking a train or air trip, the indicated price
                         includes the arrival and departure as well as the
@@ -1235,12 +1235,12 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <div className="el-item">
-                  <a className="el-title uk-accordion-title" href="#">
+                  <a className="text-[1.5vw]! uk-accordion-title" href="#">
                     Where can I find the address/driving directions from the
                     camp?
                   </a>
                   <div className="uk-accordion-content">
-                    <div className="el-content uk-panel">
+                    <div className="text-[1vw]!  uk-panel">
                       <p>
                         You will receive the exact address and directions of the
                         camp with the Last Travel Information about 3-4 weeks

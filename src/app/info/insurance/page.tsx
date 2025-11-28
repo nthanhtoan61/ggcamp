@@ -26,12 +26,12 @@ export default function InsurancePage() {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
-                <h1
-                  className="uk-heading-large uk-text-center"
+                <div
+                  className="text-[5vw] text-[#292c3d] font-bold uk-text-center"
                   uk-scrollspy-class=""
                 >
-                  Insurance & Travel Cancellation Guarantee
-                </h1>
+                  Insurance & Travel <br />Cancellation Guarantee
+                </div>
               </div>
             </div>
           </div>
@@ -43,16 +43,16 @@ export default function InsurancePage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-h1 uk-margin-small uk-text-center">
+              <div className="text-[3vw] text-[#292c3d] font-bold uk-margin-small uk-text-center">
                 Our Camp Adventure Insurance Package
               </div>
-              <h2 className="uk-h5 uk-margin-small uk-text-center">
+              <div className="text-[2.5vw] text-[#292c3d] uk-margin-small uk-text-center">
                 Liability, casualty and health insurance
-              </h2>
+              </div>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
-              <div className="uk-panel uk-text-large uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
+              <div className="uk-panel text-[1vw] uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
                 <p>
-                  It only takes one mouse-click to book our comprehensive holiday
+                  IIt only takes one mouse-click to book our comprehensive holiday
                   insurance package for travels abroad, which includes a
                   liability, casualty and health insurance for the entire
                   duration of your journey. This ensures that your child is well
@@ -79,7 +79,7 @@ export default function InsurancePage() {
               </div>
               <div className="uk-margin uk-text-center">
                 <a
-                  className="el-content uk-button uk-button-primary"
+                  className="el-content uk-button uk-button-primary text-[1vw]!"
                   title="Insurance confirmation 2020"
                   href="https://www.campadventure.de/images/f_infos/versicherung/DrWalter_Camp Adventure_2024.pdf"
                   target="_blank"
@@ -97,13 +97,13 @@ export default function InsurancePage() {
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
-              <div className="uk-h1 uk-text-center">
+              <div className="text-[2.5vw] text-[#292c3d] uk-text-center">
                 Camp Adventure Travel Cancellation Guarantee
               </div>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
               <div className="uk-margin uk-text-center">
                 <a
-                  className="el-content uk-button uk-button-primary"
+                  className="el-content uk-button uk-button-primary text-[1vw]!"
                   title="Travel Cancellation Guarantee"
                   href="https://www.campadventure.de/images/f_infos/versicherung/Camp Adventures Garantie gegen Heimweh_2025.pdf"
                   target="_blank"
@@ -131,10 +131,10 @@ export default function InsurancePage() {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
               <div className="uk-width-1-1@m">
-                <div className="uk-h5 uk-margin-small uk-text-center" uk-scrollspy-class="uk-animation-slide-top-medium">
+                <div className="text-[2.5vw] text-[#292c3d] font-bold uk-margin-small uk-text-center" uk-scrollspy-class="uk-animation-slide-top-medium">
                   Camp Adventure
                 </div>
-                <div className="uk-h1 uk-margin-small uk-text-center" uk-scrollspy-class="uk-animation-slide-bottom-medium">
+                <div className="text-[3vw] text-[#292c3d] uk-margin-small uk-text-center" uk-scrollspy-class="uk-animation-slide-bottom-medium">
                   Cooperations & Memberships
                 </div>
                 <div className="uk-divider-icon uk-width-medium uk-margin-auto" uk-scrollspy-class=""></div>
@@ -147,7 +147,7 @@ export default function InsurancePage() {
                     <div>
                       <div className="el-item uk-flex uk-flex-column" uk-scrollspy-class="">
                         <a
-                          className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
+                          className="uk-flex-1 uk-card uk-card-hover uk-card-body md:p-[1vw] uk-margin-remove-first-child uk-link-toggle"
                           href="https://www.reisenetz.org/"
                           target="_blank"
                           rel="noopener noreferrer"

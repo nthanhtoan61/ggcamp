@@ -2,23 +2,109 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getTemplateImageUrl } from "@/lib/assets";
 import { programs } from "@/data/programs";
 import { ProgramCard } from "@/components/features/ProgramCard";
+import { useScrollTrigger } from "@/lib/utils";
 
 // Declare jQuery for TypeScript
 declare const jQuery: any;
 
 export default function HomePage() {
   const [filteredPrograms, setFilteredPrograms] = useState(programs);
+  const [scrollY, setScrollY] = useState(0);
+  const [coords, setCoords] = useState({ x: 0, y: 0 });
+  const [hovered, setHovered] = useState(false);
+  const avatars = [
+    "yootheme/aboutImage/profile-face_1.jpg",
+    "yootheme/aboutImage/young-tourist-sitting-tent.jpg",
+    "yootheme/aboutImage/portrait-young-male-tourist-standing-forest-with-tent.jpg",
+  ];
+  // Refs for scroll-triggered animations in About Us section
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useScrollTrigger(ref);
+
+  // Individual refs for each animated element
+  const aboutUsTitleRef = useRef<HTMLHeadingElement>(null);
+  const creatingCampsTitleRef = useRef<HTMLHeadingElement>(null);
+  const descriptionTextRef = useRef<HTMLParagraphElement>(null);
+  const iconListRef = useRef<HTMLUListElement>(null);
+  const quoteTextRef = useRef<HTMLParagraphElement>(null);
+  const learnMoreButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Refs for image elements
+  const mainImage1Ref = useRef<HTMLDivElement>(null);
+  const mainImage2Ref = useRef<HTMLDivElement>(null);
+  const extraImageRef = useRef<HTMLDivElement>(null);
+
+  // Refs for author images and counter
+  const authorImagesRef = useRef<HTMLDivElement>(null);
+  const adventurerTextRef = useRef<HTMLParagraphElement>(null);
+    
+  // Visibility states for each element
+  const isAboutUsTitleVisible = useScrollTrigger(aboutUsTitleRef);
+  const isCreatingCampsTitleVisible = useScrollTrigger(creatingCampsTitleRef);
+  const isDescriptionTextVisible = useScrollTrigger(descriptionTextRef);
+  const isIconListVisible = useScrollTrigger(iconListRef);
+  const isQuoteTextVisible = useScrollTrigger(quoteTextRef);
+  const isLearnMoreButtonVisible = useScrollTrigger(learnMoreButtonRef);
+    
+  // Visibility states for image elements
+  const isMainImage1Visible = useScrollTrigger(mainImage1Ref);
+  const isMainImage2Visible = useScrollTrigger(mainImage2Ref);
+  const isExtraImageVisible = useScrollTrigger(extraImageRef);
+    
+  // Visibility states for author images and counter
+  const isAuthorImagesVisible = useScrollTrigger(authorImagesRef);
+  const isAdventurerTextVisible = useScrollTrigger(adventurerTextRef);
+  const [count, setCount] = useState(0);
+  const countedRef = useRef(false); // đảm bảo chỉ count 1 lần
+
+  const circleRef = (el: HTMLDivElement | null) => {
+    if (!el || countedRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            countedRef.current = true;
+            const target = 50;
+            const duration = 3000;
+            let startTime: number | null = null;
+
+            const step = (timestamp: number) => {
+              if (!startTime) startTime = timestamp;
+              const progress = timestamp - startTime;
+              const current = Math.min(Math.floor((progress / duration) * target), target);
+              setCount(current);
+              if (current < target) {
+                requestAnimationFrame(step);
+              }
+            };
+
+            requestAnimationFrame(step);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(el);
+  };
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+
     const applyFilters = () => {
       // Lấy params từ URL hash hoặc search
       const hash = window.location.hash;
       const searchParams = new URLSearchParams(window.location.search);
-      
+
       let field4 = "";
       let field5 = "";
       let field6 = "";
@@ -126,11 +212,12 @@ export default function HomePage() {
           filtered = filtered.filter((p) =>
             locationValues.some((l) => {
               const locationMap: Record<string, string> = {
-                "northern-germany": "northern germany",
-                "west-germany": "west germany",
-                "south-germany": "south germany",
-                england: "england",
-                spain: "spain",
+                "philippines": "philippines",
+                "vietnam": "vietnam",
+                "portugal": "portugal",
+                "china": "china",
+                "thailand": "thailand",
+                "malaysia": "malaysia",
               };
               const locationStr = locationMap[l] || l;
               return p.location.toLowerCase().includes(locationStr.toLowerCase());
@@ -196,13 +283,13 @@ export default function HomePage() {
 
   const handleFilterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     // Update hidden fields with current multiselect values before processing
     if (typeof jQuery !== "undefined" && jQuery.fn.multiselect) {
-      document.querySelectorAll('.multiselect').forEach(function(selectElement) {
+      document.querySelectorAll('.multiselect').forEach(function (selectElement) {
         const select = jQuery(selectElement);
         const hiddenFieldId = select.attr('data-hidden');
-        const hiddenField = document.getElementById(hiddenFieldId);
+        const hiddenField = document.getElementById(hiddenFieldId) as HTMLInputElement | null;
         const selectedValues = select.val(); // Get values from MultiSelect
 
         if (hiddenField) {
@@ -210,18 +297,18 @@ export default function HomePage() {
         }
       });
     }
-    
+
     // Get values from hidden fields (which are updated by the multiselect)
     const field4Hidden = document.getElementById("field_4") as HTMLInputElement;
     const field5Hidden = document.getElementById("field_5") as HTMLInputElement;
     const field6Hidden = document.getElementById("field_6") as HTMLInputElement;
     const field7Select = document.getElementById("field_7_select") as HTMLSelectElement;
-    
+
     const field4 = field4Hidden?.value || "";
     const field5 = field5Hidden?.value || "";
     const field6 = field6Hidden?.value || "";
     const field7 = field7Select?.value || "";
-    
+
     const params = new URLSearchParams();
     if (field4) params.set("field_4", field4);
     if (field5) params.set("field_5", field5);
@@ -284,11 +371,12 @@ export default function HomePage() {
         locationValues.some((l) => {
           // Map location values to actual location strings
           const locationMap: Record<string, string> = {
-            "northern-germany": "northern germany",
-            "west-germany": "west germany",
-            "south-germany": "south germany",
-            england: "england",
-            spain: "spain",
+            "philippines": "philippines",
+            "vietnam": "vietnam",
+            "portugal": "portugal",
+            "china": "china",
+            "thailand": "thailand",
+            "malaysia": "malaysia",
           };
           const locationStr = locationMap[l] || l;
           return p.location.toLowerCase().includes(locationStr.toLowerCase());
@@ -325,6 +413,8 @@ export default function HomePage() {
   };
 
   return (
+ 
+    
     <main id="tm-main">
       {/* Hero Section với Background Image và Filter Form */}
       <style
@@ -357,268 +447,313 @@ export default function HomePage() {
         }}
       />
 
-      <div
-        id="searchform"
-        className="uk-section-primary uk-section-overlap uk-position-relative"
-      >
+      <div className="relative w-full h-screen hero-section">
+        {/* Background Image */}
         <div
-          className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section"
+          className="absolute inset-0 bg-cover bg-center hero-background"
           style={{
-            backgroundImage: `url(${getTemplateImageUrl(
-              "yootheme/banner/b3.jpg"
-            )})`,
-            minHeight: "500px",
+            backgroundImage: `url(${getTemplateImageUrl("yootheme/banner/b3.jpg")})`,
           }}
         >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-          ></div>
+          <div className="absolute inset-0 bg-black/50"></div> {/* Overlay */}
+        </div>
 
-          <div className="uk-container uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin uk-margin-remove-bottom">
-              <div className="uk-width-1-1">
-                <h1
-                  className="uk-heading-small uk-text-center !text-[5vw]"
-                  id="page#0"
-                  style={{ color: "#fff" }}
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+          <h1 className="!text-white font-bold drop-shadow-xl !font-bold opacity-0 animate-fadeUp !text[5vw] hero-heading">
+            Discover Adventure and Friendship
+          </h1>
+          <p className="!text-[1.667vw] !text-white mt-4 max-w-2xl drop-shadow-md opacity-0 animate-fadeUp animate-delay-200 hero-paragraph">
+            Immerse yourself in a realm filled with excitement, discovery, and memorable experiences. Venture into nature, engage in thrilling activities, and forge lasting memories that you will cherish forever.
+          </p>
+
+          <Link href="/booking">
+            <button
+              className="ripple-button mt-6 opacity-0 animate-fadeUp animate-delay-400 hero-button"
+              onMouseEnter={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+                setHovered(true);
+              }}
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+              }}
+              onMouseLeave={() => setHovered(false)}
+            >
+              <span className={` button-text ${hovered ? "hovered" : ""}`}>
+                Book Your Smile
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="currentColor"
+                  className="button-icon"
                 >
-                  International holiday camps with Go and Grow
-                </h1>
-                <div className="uk-margin uk-width-medium uk-margin-auto uk-text-center">
-                  <Link className="el-link" href="/booking">
-                    <Image
-                      src={getTemplateImageUrl(
-                        "yootheme/cache/12/Storer-min-125a5bd1.png"
-                      )}
-                      width={400}
-                      height={200}
-                      className="el-image"
-                      alt="Camps 2026 online, Book now!"
-                      priority
-                    />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Filter Form */}
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1">
-                <div id="page#1">
-                  <form
-                    id="filter-form"
-                    method="GET"
-                    action="/#searchform"
-                    onSubmit={handleFilterSubmit}
-                    uk-grid=""
-                  >
-                    <div className="uk-width-1-4@m">
-                      <label
-                        className="uk-form-label"
-                        style={{ color: "#fff" }}
-                      >
-                        Programs & Courses
-                      </label>
-                      {/* MultiSelect cho Programs */}
-                      <select
-                        id="field_4_select"
-                        className="multiselect"
-                        data-hidden="field_4"
-                        multiple
-                      >
-                        <option value="adventure">
-                          Adventure, Sport and Creative
-                        </option>
-                        <option value="fishing">Fishing</option>
-                        <option value="arts-crafts">Arts & Crafts</option>
-                        <option value="coding">Coding</option>
-                        <option value="german">German course</option>
-                        <option value="englisch">English course</option>
-                        <option value="englisch-toefl">
-                          English course (TOEFL exam)
-                        </option>
-                        <option value="soccer">Soccer</option>
-                        <option value="husky">Husky</option>
-                        <option value="icit">
-                          International Counselor in Training (ICIT)
-                        </option>
-                        <option value="top-rope">
-                          Climbing course (Top Rope certificate)
-                        </option>
-                        <option value="leadership">Leadership</option>
-                        <option value="water-sports">
-                          Multi Water Adventure
-                        </option>
-                        <option value="horseback">Horseback Riding</option>
-                        <option value="dlrg">
-                          Lifeguard course (DLRG bronze)
-                        </option>
-                        <option value="swimming">Swimming course</option>
-                        <option value="sailing">Sailing</option>
-                        <option value="skating">Skating</option>
-                        <option value="space">Space Exploration</option>
-                        <option value="spanish">Spanish course</option>
-                        <option value="survival">Survival</option>
-                        <option value="dancing">Dancing</option>
-                        <option value="diving">
-                          Diving course (PADI Open Water)
-                        </option>
-                        <option value="climbing">Climbing</option>
-                        <option value="tennis">Tennis</option>
-                        <option value="windsurf">Windsurfing</option>
-                      </select>
-                      {/* Hidden field để lưu giá trị đã chọn */}
-                      <input type="hidden" id="field_4" name="field_4" value="" />
-                    </div>
-
-                    <div className="uk-width-1-4@m">
-                      <label
-                        className="uk-form-label"
-                        style={{ color: "#fff" }}
-                      >
-                        Holiday
-                      </label>
-                      {/* MultiSelect cho Holiday */}
-                      <select
-                        id="field_5_select"
-                        className="multiselect"
-                        data-hidden="field_5"
-                        multiple
-                      >
-                        <option value="spring">Spring</option>
-                        <option value="summer">Summer</option>
-                        <option value="autumn">Autumn</option>
-                      </select>
-                      {/* Hidden field để lưu giá trị đã chọn */}
-                      <input type="hidden" id="field_5" name="field_5" value="" />
-                    </div>
-
-                    <div className="uk-width-1-4@m">
-                      <label
-                        className="uk-form-label"
-                        style={{ color: "#fff" }}
-                      >
-                        Location
-                      </label>
-                      {/* MultiSelect cho Location */}
-                      <select
-                        id="field_6_select"
-                        className="multiselect"
-                        data-hidden="field_6"
-                        multiple
-                      >
-                        <option value="northern-germany">
-                          Northern Germany
-                        </option>
-                        <option value="west-germany">West Germany</option>
-                        <option value="south-germany">South Germany</option>
-                        <option value="england">England</option>
-                        <option value="spain">Spain</option>
-                      </select>
-                      {/* Hidden field để lưu giá trị đã chọn */}
-                      <input type="hidden" id="field_6" name="field_6" value="" />
-                    </div>
-
-                    <div className="uk-width-1-4@m">
-                      <label
-                        className="uk-form-label"
-                        style={{ color: "#fff" }}
-                      >
-                        Age
-                      </label>
-                      {/* UIkit Select cho Age (single select) */}
-                      <select
-                        id="field_7_select"
-                        name="field_7"
-                        className="uk-select"
-                      >
-                        <option value=""></option>
-                        {Array.from({ length: 12 }, (_, i) => i + 7).map(
-                          (age) => (
-                            <option key={age} value={age}>
-                              {age}
-                            </option>
-                          )
-                        )}
-                      </select>
-                    </div>
-
-                    <div className="uk-width-1-1">
-                      <button
-                        className="uk-button uk-button-default"
-                        type="submit"
-                      >
-                        Apply filter
-                      </button>
-                      <button
-                        className="uk-button uk-button-secondary"
-                        type="button"
-                        onClick={() => {
-                          window.location.href = "/#searchform";
-                        }}
-                      >
-                        Reset
-                      </button>
-                    </div>
-                  </form>
-
-                  {/* Script để khởi tạo multiselect và xử lý form submission */}
-                  <script
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        (function() {
-                          function initMultiselect() {
-                            if (typeof jQuery !== 'undefined' && jQuery.fn.multiselect) {
-                              jQuery(document).ready(function($) {
-                                // Khởi tạo MultiSelect nếu chưa được khởi tạo
-                                if (!$('.multiselect[multiple]').data('plugin_multiselect')) {
-                                  $('.multiselect[multiple]').multiselect({
-                                    texts: {
-                                      placeholder: '',
-                                      selectedOptions: ''
-                                    },
-                                    selectAll: false,
-                                    selectGroup: true
-                                  });
-                                }
-
-                                // Update hidden fields before form submission
-                                // Lấy giá trị từ multiselect và đưa vào hidden fields
-                                document.querySelectorAll('.multiselect').forEach(function(select) {
-                                  const hiddenFieldId = select.getAttribute('data-hidden');
-                                  const hiddenField = document.getElementById(hiddenFieldId);
-                                  const selectedValues = $(select).val(); // Lấy giá trị từ MultiSelect
-
-                                  if (hiddenField) {
-                                    hiddenField.value = selectedValues ? selectedValues.join(',') : '';
-                                  }
-                                });
-
-                                // Also update the multiselect values when they change
-                                $('.multiselect[multiple]').on('change', function() {
-                                  const hiddenFieldId = $(this).attr('data-hidden');
-                                  const hiddenField = document.getElementById(hiddenFieldId);
-                                  const selectedValues = $(this).val();
-
-                                  if (hiddenField) {
-                                    hiddenField.value = selectedValues ? selectedValues.join(',') : '';
-                                  }
-                                });
-                              });
-                            } else {
-                              // Retry sau 100ms nếu jQuery chưa sẵn sàng
-                              setTimeout(initMultiselect, 100);
-                            }
-                          }
-                          initMultiselect();
-                        })();
-                      `,
-                    }}
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M15.1103 5.37457C13.5933 6.89163 10.771 6.83466 9.19008 5.25375L8.5419 4.60556L7.29739 5.85007L7.94557 6.49825C9.09544 7.64813 10.6581 8.24259 12.21 8.2749L4.53199 15.9529L5.82836 17.2493L13.5063 9.57126C13.5387 11.1231 14.1331 12.6858 15.283 13.8357L15.9312 14.4839L17.1757 13.2393L16.5275 12.5912C14.9466 11.0103 14.8896 8.18799 16.4067 6.67094L17.0289 6.04868L15.7326 4.75232L15.1103 5.37457Z"
                   />
-                </div>
+                </svg>
+              </span>
+
+              <span
+                className={`ripple-circle ${hovered ? "ripple-in" : "ripple-out"}`}
+                style={{ left: coords.x, top: coords.y }}
+              ></span>
+            </button>
+          </Link>
+          {/* Contact Info Inline Box */}
+          <div className="mt-30 flex flex-row justify-center items-center gap-6 bg-black/50 p-4 rounded-xl text-white shadow-md text-sm backdrop-blur-sm contact-box opacity-0 animate-fadeUp animate-delay-600">
+
+            <div className="flex items-start gap-2">
+              <div className="p-2 rounded-full">{/* Optional icon */}</div>
+
+              <div className="!text-[1.667vw] text-white font-semibold leading-snug !text-left">
+                <div>Your Adventure Journey</div>
+                <div>Start Here!</div>
               </div>
             </div>
+
+            <div className="w-px h-6 bg-white/30"></div> {/* Divider */}
+
+            {/* Call */}
+            <a href="tel:+123456789" className="group flex items-center gap-3">
+              {/* Icon */}
+              <div className="p-3 rounded-full transition-colors duration-300 group-hover:bg-[#9c5d00]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" className="text-white">
+                  <path d="M8.8457 5.93115C8.84567 5.64689 8.73343 5.37413 8.53418 5.17139L5.28808 1.92432L5.208 1.85303C5.01329 1.69665 4.76943 1.61084 4.51757 1.61084C4.23001 1.61094 3.95373 1.72334 3.74804 1.92432L3.00586 2.68408L2.99609 2.69385C2.22454 3.45523 1.73864 4.45915 1.62011 5.53662C1.50186 6.61196 1.75664 7.69523 2.34179 8.60498C5.83558 13.7515 10.2803 18.1831 15.4365 21.6626C16.3449 22.2448 17.4253 22.4983 18.498 22.3804C19.5755 22.2619 20.5794 21.7759 21.3408 21.0044L21.3506 20.9946L22.1113 20.2495C22.3112 20.044 22.4238 19.7696 22.4238 19.4829C22.4238 19.1951 22.3115 18.9182 22.1103 18.7124L18.8447 15.4819C18.6423 15.284 18.3701 15.1725 18.0869 15.1724C17.8026 15.1724 17.5289 15.2837 17.3262 15.4829L16.8008 14.9487L17.3252 15.4849C16.8392 15.96 16.1865 16.226 15.5068 16.2261C14.8271 16.2261 14.1736 15.9601 13.6875 15.4849L8.53906 10.3354C8.29886 10.0975 8.1071 9.81434 7.97656 9.50244C7.84519 9.18854 7.77734 8.85152 7.77734 8.51123C7.77734 8.17096 7.84519 7.83391 7.97656 7.52002C8.10639 7.20982 8.29582 6.92801 8.53418 6.69092C8.73343 6.48815 8.8457 6.21544 8.8457 5.93115Z" />
+                </svg>
+              </div>
+
+              {/* Text */}
+              <div className="flex flex-col gap-y-1 items-start">
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">Call us</h3>
+                <span className="!text-[1.667vw] text-white text-base font-semibold">+(123) 456 789</span>
+              </div>
+            </a>
+
+            <div className="w-px h-6 bg-white/30"></div> {/* Divider */}
+
+            {/* Email */}
+            <a href="mailto:office@ggcamp.org" className="group flex items-center gap-3">
+              <div className="p-3 rounded-full transition-colors duration-300 group-hover:bg-[#9c5d00]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" className="text-white">
+                  <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zm0 12H4V8.489l8 5.333 8-5.333V18z" />
+                </svg>
+              </div>
+              <div className="flex flex-col gap-y-1 items-start">
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">Email</h3>
+                <span className="text-white text-base font-semibold">office@ggcamp.org</span>
+              </div>
+            </a>
+
+            <div className="w-px h-6 bg-white/30"></div> {/* Divider */}
+
+            {/* Working Hours */}
+            <a href="#" className="group flex items-center gap-3">
+              <div className="p-3 rounded-full transition-colors duration-300 group-hover:bg-[#9c5d00]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" className="text-white">
+                  <path d="M12 1.75C6.072 1.75 1.25 6.572 1.25 12.5S6.072 23.25 12 23.25 22.75 18.428 22.75 12.5 17.928 1.75 12 1.75zm0 20c-4.69 0-8.5-3.81-8.5-8.5s3.81-8.5 8.5-8.5 8.5 3.81 8.5 8.5-3.81 8.5-8.5 8.5z" />
+                  <path d="M12.75 7h-1.5v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+                </svg>
+              </div>
+              <div className="flex flex-col gap-y-1 items-start">
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">Working Hours</h3>
+                <span className="!text-[1.667vw] text-white text-base font-semibold">Mon-Sat 08:pm - 05:am</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/*About Us*/}
+      <div className="relative w-full bg-gray-50 py-20">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10 px-4">
+          {/* Left Images */}
+          <div className="relative flex-1 flex flex-col gap-6 items-center lg:items-start">
+            {/* Main Image */}
+            <div
+              ref={mainImage1Ref}
+              className={`about-main-img relative w-80 h-[250px] overflow-hidden rounded-xl shadow-lg transform transition-all duration-700 hover:scale-105 ${isMainImage1Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
+              <img
+                src={getTemplateImageUrl("yootheme/aboutImage/act2.jpg")}
+                alt="About Image 1"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            </div>
+
+            {/* Main Image */}
+            <div
+              ref={mainImage2Ref}
+              className={`about-main-img relative w-80 h-[250px] overflow-hidden rounded-xl shadow-lg transform transition-all duration-700 hover:scale-105 ${isMainImage2Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
+              <img
+                src={getTemplateImageUrl("yootheme/aboutImage/act3.jpg")}
+                alt="About Image 1"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            </div>
+
+            {/* Extra Image on Right Corner */}
+            <div
+              ref={extraImageRef}
+              className={`about-extra-img absolute right-35 top-0 w-60 h-140 rounded-xl overflow-hidden shadow-xl border-4 border-white transform transition-all duration-700 hover:scale-105 ${isExtraImageVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
+              <img
+                src={getTemplateImageUrl("yootheme/aboutImage/man-camping.jpg")}
+                alt="Extra Corner Image"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Small Author Images + Counter */}
+            <div className="flex items-center gap-4 mt-4 about-author-group">
+              <div
+                ref={authorImagesRef}
+                className={` flex items-center transition-all duration-700 ${isAuthorImagesVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              >
+                {avatars.map((src, i) => (
+                  <img
+                    key={i}
+                    src={getTemplateImageUrl(src)}
+                    alt={`Author ${i + 1}`}
+                    style={{ animationDelay: `${i * 300}ms` }} // delay tăng dần
+                    className="w-15 !h-15 rounded-full border-2 border-white shadow-md -mr-4 object-cover opacity-0 animate-fadeUp transform transition-all duration-700 hover:scale-105"
+                  />
+                ))}
+
+                {/* Count Circle */}
+                <div
+                  ref={circleRef}
+                  className="w-15 h-15 flex items-center justify-center rounded-full bg-[#9c5d00] text-white font-bold shadow-md -mr-4 opacity-0 animate-fadeUp about-author-count"
+                  style={{ animationDelay: "1000ms" }}>
+                  <span className="text-2xl">{count}</span>+
+                </div>
+              </div>
+
+              <p 
+                ref={adventurerTextRef}
+                className={`!text-[1.667vw] !ml-4 !mt-4 text-gray-700 !font-semibold transition-all duration-700 ${isAdventurerTextVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              >
+                Adventurer with happy customer
+              </p>
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className="flex-1 flex flex-col gap-4">
+            <h3
+              ref={aboutUsTitleRef}
+              className={`!about-title !text[5vw] md:!text-[5vw] text-[#9c5d00] !font-bold uppercase tracking-wider about-author-text transition-all duration-700 ${isAboutUsTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
+              About Us
+            </h3>
+
+            <h2
+              ref={creatingCampsTitleRef}
+              className={`!about-subtitle !text-[1.667vw] md:text-4xl !mt-0 font-bold transition-all duration-700 ${isCreatingCampsTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
+              Creating Amazing Camps
+            </h2>
+
+            <p
+              ref={descriptionTextRef}
+              className={`!about-description text-gray-600 mt-1 transition-all duration-700 ${isDescriptionTextVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
+              Learning is closely tied to practical experience—summer is the perfect time for hands-on opportunities.
+              While knowledge must still be nurtured, it can take on new and more engaging forms.
+            </p>
+            <hr className="border-t border-gray-300 my-6" />
+            {/* --- WRAPPER CHO ICON LIST + TEXT/BUTTON --- */}
+            <div className="flex flex-col md:flex-row mt-3 gap-8"> {/* gap-8 để cách icon list ra xa */}
+
+              {/* Left: Icon List */}
+              <ul
+                ref={iconListRef}
+                className={`about-icon-list flex flex-col gap-4 flex-[0_0_55%] !p-0 transition-all duration-700 ${isIconListVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              >
+                <li className="flex items-center gap-4 text-gray-700">
+                  <div className="min-w-8 w-8 h-8 rounded-full bg-[#9c5d00] flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  Fun-Filled Experiences for Every Camper
+                </li>
+                <li className="flex items-center gap-4 text-gray-700">
+                  <div className="min-w-8 w-8 h-8 rounded-full bg-[#9c5d00] flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  Adventures That Inspire Confidence and Growth
+                </li>
+                <li className="flex items-center gap-4 text-gray-700">
+                  <div className="min-w-8 w-8 h-8 rounded-full bg-[#9c5d00] flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  Memories and Friendships That Last a Lifetime
+                </li>
+              </ul>
+
+              {/* Right: Text + Button */}
+              <div className="flex flex-col justify-start flex-[0_0_auto] gap-0 mt-2 md:mt-0 max-w-xs md:ml-12">
+                <p
+                  ref={quoteTextRef}
+                  className={`about-quote !font-semibold text-black transition-all duration-700 ${isQuoteTextVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                >
+                  “Your Journey, Your Comfort,<br/> Your Adventure.”
+                </p>
+
+                <Link href="/info/about">
+                  <button
+                    ref={learnMoreButtonRef}
+                    className={`about-button inline-flex items-center ripple-button mt-6 transition-all duration-700 ${isLearnMoreButtonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                    onMouseEnter={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+                      setHovered(true);
+                    }}
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+                    }}
+                    onMouseLeave={() => setHovered(false)}
+                  >
+                    <span className={`button-text ${hovered ? "hovered" : ""}`}>
+                      Learn More About
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="currentColor"
+                        className="button-icon"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M15.1103 5.37457C13.5933 6.89163 10.771 6.83466 9.19008 5.25375L8.5419 4.60556L7.29739 5.85007L7.94557 6.49825C9.09544 7.64813 10.6581 8.24259 12.21 8.2749L4.53199 15.9529L5.82836 17.2493L13.5063 9.57126C13.5387 11.1231 14.1331 12.6858 15.283 13.8357L15.9312 14.4839L17.1757 13.2393L16.5275 12.5912C14.9466 11.0103 14.8896 8.18799 16.4067 6.67094L17.0289 6.04868L15.7326 4.75232L15.1103 5.37457Z"
+                        />
+                      </svg>
+                    </span>
+
+                    <span
+                      className={`ripple-circle ${hovered ? "ripple-in" : "ripple-out"}`}
+                      style={{ left: coords.x, top: coords.y }}
+                    ></span>
+                  </button>
+                </Link>
+              </div>
+
+            </div>
+            {/* --- END WRAPPER --- */}
           </div>
         </div>
       </div>
@@ -628,8 +763,8 @@ export default function HomePage() {
         <div className="uk-container">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1">
-              <h2 className="uk-h2 uk-text-center@m uk-text-center !text-[1.67vw]">
-                <p>Go and Grow program</p>
+              <h2 className="uk-h2 uk-text-center@m uk-text-center">
+                <p className="!text-[5.vw] !font-bold">Activities</p>
               </h2>
             </div>
           </div>
@@ -655,6 +790,254 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      
+<div
+  className="uk-background-norepeat uk-background-center-center"
+  style={{
+    backgroundImage: `url(${getTemplateImageUrl("yootheme/banner/b8.jpg")})`,
+    minHeight: "800px",
+    width: "100%",
+    backgroundSize: "contain",
+    height: "300px",
+    backgroundPosition: "left center",
+    position: "relative",
+  }}
+>
+  <div style={{
+    width:"100%",
+    height:"100%",
+    position: "relative",
+  }}>
+    <div 
+      className="uk-text-center" 
+      style={{
+        position: "absolute",
+        top: "50%",
+        right: "0",
+        transform: "translateY(-50%)",
+        backgroundColor: "#f9f9f7",
+        padding: "80px",
+        borderRadius: "0",
+        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+        zIndex: 10,
+        border: "2px solid #f0f0f0",
+        height: "70%",
+        width: "62%",
+        marginRight: "70px",
+      }}
+    >
+      <div style={{
+        width:"100%",
+        height:"100px"
+      }}>
+        <div style={{paddingLeft: "10px"}}>
+          <h2 style={{
+            textAlign: "left",
+            fontFamily: "Arial, sans-serif",
+            fontSize: "22px",
+            fontWeight: "600",
+            marginBottom: "30px",
+            whiteSpace: "nowrap",
+            letterSpacing: "0px"
+          }}>02&nbsp;&nbsp;&nbsp;&nbsp;——&nbsp;&nbsp;&nbsp;&nbsp;Who&nbsp;We&nbsp;Are</h2>
+          
+          <h1 style={{
+            textAlign: "left",
+            fontFamily: "'Prompt', sans-serif",
+            fontSize: "42px",
+            fontWeight: "600",
+            whiteSpace: "nowrap",
+            letterSpacing: "0px",
+            lineHeight: "0.9"
+          }}>Company Mission & Vision</h1>
+        </div>
+
+{/* 3 div hình vuông nằm ngang */}
+{/* 3 div hình vuông nằm ngang */}
+<div style={{
+  display: "flex",
+  justifyContent: "space-between",
+  gap: "0px",
+  marginTop: "40px"
+}}>
+  {/* Mission Box */}
+  <div style={{
+    flex: "1",
+    minHeight: "200px",
+    backgroundColor: "#f9f9f7",
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "left",
+    transition: "all 0.3s ease",
+    cursor: "pointer",
+    borderRadius: "10px", // Thêm bo góc
+    
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = "#ffffff";
+    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = "#f9f9f7";
+    e.currentTarget.style.boxShadow = "none";
+  }}>
+    {/* Icon khiên xanh lá */}
+    <div style={{
+      width: "40px",
+      height: "40px",
+      backgroundColor: "#28a745",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      marginBottom: "15px",
+      borderRadius: "8px" // Thêm bo góc icon
+    }}>
+      <i className="fa-solid fa-shield-halved" style={{color: "white", fontSize: "20px"}}></i>
+    </div>
+    <h3 style={{
+      fontFamily: "Arial, sans-serif",
+      fontSize: "18px",
+      fontWeight: "700",
+      marginBottom: "15px",
+      color: "#333"
+    }}>Our Mission</h3>
+    <p style={{
+      fontFamily: "Arial, sans-serif",
+      fontSize: "14px",
+      fontWeight: "400",
+      color: "#666",
+      lineHeight: "1.5",
+      flex: "1"
+    }}>We provide a safe, inclusive, and inspiring environment where children and teens can explore, learn, and grow through adventure, creativity, and friendship.</p>
+    <div style={{
+      width: "85px",
+      height: "3px",
+      margin: "0px",
+      backgroundColor: "#28a745",
+    }}></div>
+  </div>
+
+  {/* Vision Box */}
+  <div style={{
+    flex: "1",
+    minHeight: "200px",
+    backgroundColor: "#f9f9f7",
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "left",
+    transition: "all 0.3s ease",
+    cursor: "pointer",
+    borderRadius: "10px", // Thêm bo góc
+    
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = "#ffffff";
+    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = "#f9f9f7";
+    e.currentTarget.style.boxShadow = "none";
+  }}>
+    {/* Icon 3 phân lớp xanh lá */}
+    <div style={{
+      width: "40px",
+      height: "40px",
+      backgroundColor: "#28a745",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      marginBottom: "15px",
+      borderRadius: "8px" // Thêm bo góc icon
+    }}>
+      <i className="fa-solid fa-chart-column" style={{color: "white", fontSize: "20px"}}></i>
+    </div>
+    <h3 style={{
+      fontFamily: "Arial, sans-serif",
+      fontSize: "18px",
+      fontWeight: "700",
+      marginBottom: "15px",
+      color: "#333"
+    }}>Our Vision</h3>
+    <p style={{
+      fontFamily: "Arial, sans-serif",
+      fontSize: "14px",
+      fontWeight: "400",
+      color: "#666",
+      lineHeight: "1.5",
+      flex: "1"
+    }}>We aim to be a leading international camp experience that nurtures onfident, responsible, and compassionate young individuals connected to nature and their communities.</p>
+    <div style={{
+      width: "85px",
+      height: "3px",
+      margin: "0px",
+      backgroundColor: "#28a745",
+    }}></div>
+  </div>
+
+  {/* Goals Box */}
+  <div style={{
+    flex: "1",
+    minHeight: "200px",
+    backgroundColor: "#f9f9f7",
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "left",
+    transition: "all 0.3s ease",
+    cursor: "pointer",
+    borderRadius: "10px", // Thêm bo góc
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = "#ffffff";
+    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = "#f9f9f7";
+    e.currentTarget.style.boxShadow = "none";
+  }}>
+    {/* Icon công cụ */}
+    <div style={{
+      width: "40px",
+      height: "40px",
+     
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      marginBottom: "15px",
+      borderRadius: "8px" // Thêm bo góc icon
+    }}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#00ff00" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0zm0 66.8l0 378.1c138-66.8 175.1-214.8 176-303.4l-176-74.6 0 0z"/></svg>
+    </div>
+    <h3 style={{
+      fontFamily: "Arial, sans-serif",
+      fontSize: "18px",
+      fontWeight: "700",
+      marginBottom: "15px",
+      color: "#333"
+    }}>Company Goals</h3>
+    <p style={{
+      fontFamily: "Arial, sans-serif",
+      fontSize: "14px",
+      fontWeight: "400",
+      color: "#666",
+      lineHeight: "1.5",
+      flex: "1"
+    }}>Through hands-on activities, community service, and outdoor adventures, we help campers build independence, teamwork, and lifelong memories.</p>
+    <div style={{
+      width: "85px",
+      height: "3px",
+      margin: "0px",
+      backgroundColor: "#28a745",
+    }}></div>
+  </div>
+</div>
+       
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Go and Grow Camp has organised section */}
       <div className="uk-section-default uk-section uk-section-small uk-padding-remove-bottom">
@@ -1600,5 +1983,6 @@ export default function HomePage() {
         </div>
       </div>
     </main>
+  
   );
 }

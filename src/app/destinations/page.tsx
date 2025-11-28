@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getTemplateImageUrl } from "@/lib/assets";
 import DestinationMap from "./DestinationMap";
+import { HeroSection } from "@/components/layouts";
 
 export const metadata: Metadata = {
   title: "International Sport & Language Camp in Germany 2026",
@@ -83,44 +84,11 @@ export default function DestinationsPage() {
   return (
     <>
       {/* Hero Section */}
-      <div
-        className="uk-section-primary uk-section-overlap uk-position-relative"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
-      >
-        <div
-          data-src={getTemplateImageUrl("yootheme/banner/b2.jpg")}
-          uk-img=""
-          className="uk-background-norepeat uk-background-cover uk-background-top-center uk-section uk-section-xlarge"
-          style={{
-            backgroundImage: `url(${getTemplateImageUrl(
-              "yootheme/banner/b2.jpg"
-            )})`,
-          }}
-        >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-          ></div>
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <h1
-                  className="uk-heading-large uk-text-center !text-[5vw]"
-                  uk-scrollspy-class=""
-                >
-                  Our international Camps
-                </h1>
-                <div
-                  className="uk-panel uk-text-lead uk-margin uk-text-center"
-                  uk-scrollspy-class=""
-                >
-                  <p>with participants from more than 60 nations</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        title="Our international Camps"
+        backgroundImage="yootheme/banner/b2.jpg"
+        overlayColor="rgba(0, 0, 0, 0)"
+      />
 
       {/* Welcome Quote Section */}
       <div
