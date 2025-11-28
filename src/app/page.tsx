@@ -16,6 +16,8 @@ export default function HomePage() {
   const [scrollY, setScrollY] = useState(0);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
+  const [seeMoreCoords, setSeeMoreCoords] = useState({ x: 0, y: 0 });
+  const [seeMoreHovered, setSeeMoreHovered] = useState(false);
   const avatars = [
     "yootheme/aboutImage/profile-face_1.jpg",
     "yootheme/aboutImage/young-tourist-sitting-tent.jpg",
@@ -212,11 +214,12 @@ export default function HomePage() {
           filtered = filtered.filter((p) =>
             locationValues.some((l) => {
               const locationMap: Record<string, string> = {
-                "northern-germany": "northern germany",
-                "west-germany": "west germany",
-                "south-germany": "south germany",
-                england: "england",
-                spain: "spain",
+                "philippines": "philippines",
+                "vietnam": "vietnam",
+                "portugal": "portugal",
+                "china": "china",
+                "thailand": "thailand",
+                "malaysia": "malaysia",
               };
               const locationStr = locationMap[l] || l;
               return p.location.toLowerCase().includes(locationStr.toLowerCase());
@@ -370,11 +373,12 @@ export default function HomePage() {
         locationValues.some((l) => {
           // Map location values to actual location strings
           const locationMap: Record<string, string> = {
-            "northern-germany": "northern germany",
-            "west-germany": "west germany",
-            "south-germany": "south germany",
-            england: "england",
-            spain: "spain",
+            "philippines": "philippines",
+            "vietnam": "vietnam",
+            "portugal": "portugal",
+            "china": "china",
+            "thailand": "thailand",
+            "malaysia": "malaysia",
           };
           const locationStr = locationMap[l] || l;
           return p.location.toLowerCase().includes(locationStr.toLowerCase());
@@ -779,9 +783,49 @@ export default function HomePage() {
                   className="uk-grid uk-child-width-1-1 uk-child-width-1-3@m uk-grid-match"
                   uk-grid=""
                 >
-                  {filteredPrograms.map((program) => (
+                  {filteredPrograms.slice(0, 6).map((program) => (
                     <ProgramCard key={program.id} {...program} />
                   ))}
+                </div>
+                {/* See More Button */}
+                <div className="uk-text-center uk-margin-large">
+                  <Link href="/activities">
+                    <button
+                      className="about-button inline-flex items-center ripple-button mt-6 transition-all duration-700 opacity-100 translate-y-0"
+                      onMouseEnter={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect();
+                        setSeeMoreCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+                        setSeeMoreHovered(true);
+                      }}
+                      onMouseMove={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect();
+                        setSeeMoreCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+                      }}
+                      onMouseLeave={() => setSeeMoreHovered(false)}
+                    >
+                      <span className={`button-text ${seeMoreHovered ? "hovered" : ""}`}>
+                        See More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="currentColor"
+                          className="button-icon"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M15.1103 5.37457C13.5933 6.89163 10.771 6.83466 9.19008 5.25375L8.5419 4.60556L7.29739 5.85007L7.94557 6.49825C9.09544 7.64813 10.6581 8.24259 12.21 8.2749L4.53199 15.9529L5.82836 17.2493L13.5063 9.57126C13.5387 11.1231 14.1331 12.6858 15.283 13.8357L15.9312 14.4839L17.1757 13.2393L16.5275 12.5912C14.9466 11.0103 14.8896 8.18799 16.4067 6.67094L17.0289 6.04868L15.7326 4.75232L15.1103 5.37457Z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className={`ripple-circle ${seeMoreHovered ? "ripple-in" : "ripple-out"}`}
+                        style={{ left: seeMoreCoords.x, top: seeMoreCoords.y }}
+                      ></span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -832,7 +876,7 @@ export default function HomePage() {
           <h2 style={{
             textAlign: "left",
             fontFamily: "Arial, sans-serif",
-            fontSize: "22px",
+            fontSize: "1.5vw",
             fontWeight: "600",
             marginBottom: "30px",
             whiteSpace: "nowrap",
@@ -842,7 +886,7 @@ export default function HomePage() {
           <h1 style={{
             textAlign: "left",
             fontFamily: "'Prompt', sans-serif",
-            fontSize: "42px",
+            fontSize: "3vw",
             fontWeight: "600",
             whiteSpace: "nowrap",
             letterSpacing: "0px",
@@ -855,179 +899,200 @@ export default function HomePage() {
 <div style={{
   display: "flex",
   justifyContent: "space-between",
-  gap: "0px",
-  marginTop: "40px"
+  gap: "1vw",
+  marginTop: "2vw"
 }}>
   {/* Mission Box */}
   <div style={{
     flex: "1",
-    minHeight: "200px",
+    minHeight: "10vw",
     backgroundColor: "#f9f9f7",
-    padding: "20px",
+    padding: "1vw",
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
     transition: "all 0.3s ease",
     cursor: "pointer",
-    borderRadius: "10px", // Thêm bo góc
+    borderRadius: "0.5vw",
     
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.backgroundColor = "#f9f9f7";
     e.currentTarget.style.boxShadow = "none";
   }}>
-    {/* Icon khiên xanh lá */}
+    {/* Mission Icon - Target/Compass */}
     <div style={{
-      width: "40px",
-      height: "40px",
-      backgroundColor: "#28a745",
+      width: "3vw",
+      height: "3vw",
+      backgroundColor: "#9c5d00",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      marginBottom: "15px",
-      borderRadius: "8px" // Thêm bo góc icon
+      marginBottom: "0.75vw",
+      borderRadius: "0.6vw",
+      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
     }}>
-      <i className="fa-solid fa-shield-halved" style={{color: "white", fontSize: "20px"}}></i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="12" r="6"/>
+        <circle cx="12" cy="12" r="2"/>
+        <line x1="12" y1="2" x2="12" y2="6"/>
+        <line x1="12" y1="18" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="6" y2="12"/>
+        <line x1="18" y1="12" x2="22" y2="12"/>
+      </svg>
     </div>
     <h3 style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "18px",
+      fontSize: "1.5vw",
       fontWeight: "700",
-      marginBottom: "15px",
+      marginBottom: "0.75vw",
       color: "#333"
     }}>Our Mission</h3>
     <p style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "14px",
+      fontSize: "1vw",
       fontWeight: "400",
       color: "#666",
       lineHeight: "1.5",
       flex: "1"
     }}>We provide a safe, inclusive, and inspiring environment where children and teens can explore, learn, and grow through adventure, creativity, and friendship.</p>
     <div style={{
-      width: "85px",
-      height: "3px",
+      width: "4.25vw",
+      height: "0.15vw",
       margin: "0px",
-      backgroundColor: "#28a745",
+      backgroundColor: "#9c5d00",
     }}></div>
   </div>
 
   {/* Vision Box */}
   <div style={{
     flex: "1",
-    minHeight: "200px",
+    minHeight: "10vw",
     backgroundColor: "#f9f9f7",
-    padding: "20px",
+    padding: "1vw",
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
     transition: "all 0.3s ease",
     cursor: "pointer",
-    borderRadius: "10px", // Thêm bo góc
+    borderRadius: "0.5vw",
     
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.backgroundColor = "#f9f9f7";
     e.currentTarget.style.boxShadow = "none";
   }}>
-    {/* Icon 3 phân lớp xanh lá */}
+    {/* Vision Icon - Eye */}
     <div style={{
-      width: "40px",
-      height: "40px",
-      backgroundColor: "#28a745",
+      width: "3vw",
+      height: "3vw",
+      backgroundColor: "#9c5d00",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      marginBottom: "15px",
-      borderRadius: "8px" // Thêm bo góc icon
+      marginBottom: "0.75vw",
+      borderRadius: "0.6vw",
+      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
     }}>
-      <i className="fa-solid fa-chart-column" style={{color: "white", fontSize: "20px"}}></i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
     </div>
     <h3 style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "18px",
+      fontSize: "1.5vw",
       fontWeight: "700",
-      marginBottom: "15px",
+      marginBottom: "0.75vw",
       color: "#333"
     }}>Our Vision</h3>
     <p style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "14px",
+      fontSize: "1vw",
       fontWeight: "400",
       color: "#666",
       lineHeight: "1.5",
       flex: "1"
     }}>We aim to be a leading international camp experience that nurtures onfident, responsible, and compassionate young individuals connected to nature and their communities.</p>
     <div style={{
-      width: "85px",
-      height: "3px",
+      width: "4.25vw",
+      height: "0.15vw",
       margin: "0px",
-      backgroundColor: "#28a745",
+      backgroundColor: "#9c5d00",
     }}></div>
   </div>
 
   {/* Goals Box */}
   <div style={{
     flex: "1",
-    minHeight: "200px",
+    minHeight: "10vw",
     backgroundColor: "#f9f9f7",
-    padding: "20px",
+    padding: "1vw",
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
     transition: "all 0.3s ease",
     cursor: "pointer",
-    borderRadius: "10px", // Thêm bo góc
+    borderRadius: "0.5vw",
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 20px rgba(0,0,0,0.1)";
+    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.backgroundColor = "#f9f9f7";
     e.currentTarget.style.boxShadow = "none";
   }}>
-    {/* Icon công cụ */}
+    {/* Goals Icon - Trophy/Flag */}
     <div style={{
-      width: "40px",
-      height: "40px",
-     
+      width: "3vw",
+      height: "3vw",
+      backgroundColor: "#9c5d00",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      marginBottom: "15px",
-      borderRadius: "8px" // Thêm bo góc icon
+      marginBottom: "0.75vw",
+      borderRadius: "0.6vw",
+      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
     }}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#00ff00" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0zm0 66.8l0 378.1c138-66.8 175.1-214.8 176-303.4l-176-74.6 0 0z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+        <path d="M4 22h16"/>
+        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+      </svg>
     </div>
     <h3 style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "18px",
+      fontSize: "1.5vw",
       fontWeight: "700",
-      marginBottom: "15px",
+      marginBottom: "0.75vw",
       color: "#333"
     }}>Company Goals</h3>
     <p style={{
       fontFamily: "Arial, sans-serif",
-      fontSize: "14px",
+      fontSize: "1vw",
       fontWeight: "400",
       color: "#666",
       lineHeight: "1.5",
       flex: "1"
     }}>Through hands-on activities, community service, and outdoor adventures, we help campers build independence, teamwork, and lifelong memories.</p>
     <div style={{
-      width: "85px",
-      height: "3px",
+      width: "4.25vw",
+      height: "0.15vw",
       margin: "0px",
-      backgroundColor: "#28a745",
+      backgroundColor: "#9c5d00",
     }}></div>
   </div>
 </div>

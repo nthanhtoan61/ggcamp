@@ -9,6 +9,7 @@ import Feature from "@/app/info/about/_component/Feature";
 import StatCard from "@/app/info/about/_component/StatCard";
 import ServiceBox from "@/app/info/about/_component/ServiceBox";
 import EventCard from "@/app/info/about/_component/EventCard";
+import { HeroSection } from "@/components/layouts";
 
 // Single page data object
 const pageData = {
@@ -256,30 +257,19 @@ export default function AboutPage() {
   // #E9A919
   return (
     <>
-      {/* Hero Section (Tailwind banner) */}
-      <section>
-        <div className="relative">
-          <div
-            className="h-[40vh] md:h-[60vh] bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${getTemplateImageUrl(
-                "yootheme/aboutImage/banner.jpg"
-              )})`,
-            }}
-          >
-            <div className="absolute inset-0 bg-black/70" />
-
-            <div className="relative z-10  flex flex-col items-center justify-center h-full">
-              <p className=" text-[5vw] text-white">About Us</p>
-              <p className="text-[1.667vw] text-[#E9A919]">Home / About us</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <HeroSection
+        title="About Us"
+        backgroundImage="yootheme/banner/b4.jpg"
+        overlayColor="rgba(0, 0, 0, 0.7)"
+        sectionClass="uk-section-primary"
+        titleClass="uk-heading-large uk-text-center !text-[5vw]"
+      />
 
       {/* Go & Grow Camp */}
-      <section>
-        <div className="flex items-center justify-between gap-[2vw] py-[10vh] w-full px-[10vw]">
+      <section className="uk-section-default uk-section-overlap uk-section uk-section-small">
+        <div className="uk-container uk-container-large">
+          <div className="flex items-center justify-between gap-[2vw] py-[10vh] w-full">
           {/* LEFT CONTENT */}
           <div className="w-2/5">
             <p className="text-[1vw] text-[#E9A919] font-medium mb-[1vw] leading-[1.6vw]">
@@ -349,6 +339,7 @@ export default function AboutPage() {
               />
             ))}
           </div>
+        </div>
         </div>
       </section>
 
@@ -512,7 +503,7 @@ export default function AboutPage() {
               </h2>
 
               <div className="mb-[2vh]">
-                <div className="w-[6.5vw] h-[0.5vh] bg-[#2ca06c] rounded-full -mt-[0.5vh] mb-[1vh]" />
+                <div className="w-[6.5vw] h-[0.5vh] bg-[#9c5d00] rounded-full -mt-[0.5vh] mb-[1vh]" />
                 <p className="text-[1vw] text-gray-600 leading-[1.4vw]">
                   Sign up to receive the latest news about new camps,
                   activities, and exciting opportunities. Don’t miss out on
@@ -532,7 +523,7 @@ export default function AboutPage() {
                 />
                 <button
                   type="submit"
-                  className="bg-[#2ca06c] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
+                  className="bg-[#9c5d00] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
                 >
                   <span>Subscribe</span>
                   <svg
@@ -563,12 +554,12 @@ export default function AboutPage() {
               <h2 className="text-[2vw] font-bold text-[#274423]">
                 Tour Events for you
               </h2>
-              <div className="w-[7vw] h-[0.6vh] bg-[#2ca06c] rounded-full -mt-[0.5vh]" />
+              <div className="w-[7vw] h-[0.6vh] bg-[#9c5d00] rounded-full -mt-[0.5vh]" />
             </div>
 
             <a
               href="#"
-              className="text-[#2ca06c] flex items-center gap-[0.5vw] text-[1vw]"
+              className="text-[#9c5d00] flex items-center gap-[0.5vw] text-[1vw]"
             >
               See All Event
               <svg

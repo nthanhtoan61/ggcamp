@@ -3,9 +3,11 @@
 import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getTemplateImageUrl } from "@/lib/assets";
 import { programs } from "@/data/programs";
+import { Calendar, Users, MapPin } from "lucide-react";
+import { HeroSection } from "@/components/layouts";
 
 // Extend Window interface for Leafletg
 declare global {
@@ -83,17 +85,18 @@ export default function CampProfilesPage() {
   ];
 
   const holidays = [
+    { value: "autumn", label: "Autumn" },
     { value: "spring", label: "Spring" },
     { value: "summer", label: "Summer" },
-    { value: "autumn", label: "Autumn" },
   ];
 
   const locations = [
-    { value: "england", label: "England" },
-    { value: "northern-germany", label: "Northern Germany" },
-    { value: "south-germany", label: "South Germany" },
-    { value: "spain", label: "Spain" },
-    { value: "west-germany", label: "West Germany" },
+    { value: "philippines", label: "Philippines" },
+    { value: "vietnam", label: "Vietnam" },
+    { value: "portugal", label: "Portugal" },
+    { value: "china", label: "China" },
+    { value: "thailand", label: "Thailand" },
+    { value: "malaysia", label: "Malaysia" },
     { value: "holiday", label: "Holiday" },
   ];
 
@@ -105,7 +108,7 @@ export default function CampProfilesPage() {
       priceText: "from 395 USD",
       season: ["spring", "summer", "autumn"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["thailand"],
       image: getTemplateImageUrl(
         "yootheme/cache/53/00_Abenteuercamp-Hike-533b20fa.jpg"
       ),
@@ -119,7 +122,7 @@ export default function CampProfilesPage() {
       priceText: "from 500 USD",
       season: ["spring", "summer", "autumn"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["vietnam"],
       image: getTemplateImageUrl(
         "yootheme/cache/c6/01-Kreativprogramm-in-der-Ferienfreizeit-c6e95722.jpg"
       ),
@@ -133,7 +136,7 @@ export default function CampProfilesPage() {
       priceText: "from 515 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["south-germany"],
+      locations: ["philippines"],
       image: getTemplateImageUrl(
         "yootheme/cache/40/00-Kletterkurs_Sommercamp_Bayern-40f1bd8d.jpg"
       ),
@@ -147,7 +150,7 @@ export default function CampProfilesPage() {
       priceText: "from 520 USD",
       season: ["summer", "autumn"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["malaysia"],
       image: getTemplateImageUrl(
         "yootheme/cache/c1/00-Tanzen-im-Feriencamp-c1834fc7.jpg"
       ),
@@ -161,7 +164,7 @@ export default function CampProfilesPage() {
       priceText: "from 1190 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["spain"],
+      locations: ["philippines"],
       image: getTemplateImageUrl(
         "yootheme/cache/33/01-Tauchkurs-im-Sommercamp-3309e219.jpg"
       ),
@@ -175,7 +178,7 @@ export default function CampProfilesPage() {
       priceText: "from 1290 USD",
       season: ["spring", "summer"],
       age: [12, 18],
-      locations: ["england"],
+      locations: ["malaysia"],
       image: getTemplateImageUrl(
         "yootheme/cache/b9/07-Language-Camps-by-Camp-Adventure-b9f01b6a.jpg"
       ),
@@ -189,7 +192,7 @@ export default function CampProfilesPage() {
       priceText: "from 530 USD",
       season: ["spring", "summer", "autumn"],
       age: [12, 18],
-      locations: ["england", "northern-germany"],
+      locations: ["philippines", "thailand"],
       image: getTemplateImageUrl(
         "yootheme/cache/ad/00-Language-Camps-by-Camp-Adventure-add7aa60.jpg"
       ),
@@ -203,7 +206,7 @@ export default function CampProfilesPage() {
       priceText: "from 580 USD",
       season: ["spring", "summer", "autumn"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["vietnam"],
       image: getTemplateImageUrl(
         "yootheme/cache/02/01-Angeln-im-Ferienlager-02243939.jpg"
       ),
@@ -217,7 +220,7 @@ export default function CampProfilesPage() {
       priceText: "from 610 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany", "south-germany"],
+      locations: ["thailand", "vietnam"],
       image: getTemplateImageUrl(
         "yootheme/cache/0e/Deutschcamps-in-Deutschland-0ed3ea07.jpg"
       ),
@@ -231,7 +234,7 @@ export default function CampProfilesPage() {
       priceText: "from 620 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["south-germany"],
+      locations: ["portugal"],
       image: getTemplateImageUrl(
         "yootheme/cache/69/00-Reiten-Sommercamp-Ausritt-6930f841.jpg"
       ),
@@ -245,7 +248,7 @@ export default function CampProfilesPage() {
       priceText: "from 525 USD",
       season: ["spring", "summer", "autumn"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["china"],
       image: getTemplateImageUrl(
         "yootheme/cache/9c/00-Husky%20Camp_sommercamp%20mit%20Hunden-9c098a17.jpg"
       ),
@@ -259,7 +262,7 @@ export default function CampProfilesPage() {
       priceText: "from 995 USD",
       season: ["summer"],
       age: [16, 18],
-      locations: ["northern-germany", "england"],
+      locations: ["thailand", "malaysia"],
       image: getTemplateImageUrl(
         "yootheme/cache/3b/00-INTERNATIONAL%20COUNSELOR%20IN%20TRAINING_teambuilding-3b91547c.jpg"
       ),
@@ -273,7 +276,7 @@ export default function CampProfilesPage() {
       priceText: "from 1185 USD",
       season: ["summer"],
       age: [16, 18],
-      locations: ["northern-germany"],
+      locations: ["philippines"],
       image: getTemplateImageUrl(
         "yootheme/cache/0d/00-Leadership-Camp-0d21c60a.jpg"
       ),
@@ -287,7 +290,7 @@ export default function CampProfilesPage() {
       priceText: "from 580 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["malaysia"],
       image: getTemplateImageUrl(
         "yootheme/cache/6a/00-Rettungsschwimmen-Feriencamp-6a364891.jpg"
       ),
@@ -301,7 +304,7 @@ export default function CampProfilesPage() {
       priceText: "from 990 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["philippines"],
       image: getTemplateImageUrl(
         "yootheme/cache/a4/00-Multi-Water-Adventure-im-Sommercamp-a47c08a3.jpg"
       ),
@@ -315,7 +318,7 @@ export default function CampProfilesPage() {
       priceText: "from 990 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["spain"],
+      locations: ["thailand"],
       image: getTemplateImageUrl(
         "yootheme/cache/e9/01-Segeln-im-Sommercamp-in-Spanien-e9d06b28.jpg"
       ),
@@ -329,7 +332,7 @@ export default function CampProfilesPage() {
       priceText: "from 420 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["vietnam"],
       image: getTemplateImageUrl(
         "yootheme/cache/82/00-Skaten im Sommercamp-8240a4c7.jpg"
       ),
@@ -343,7 +346,7 @@ export default function CampProfilesPage() {
       priceText: "from 495 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["malaysia"],
       image: getTemplateImageUrl(
         "yootheme/cache/54/00-Soccer-Camps-543a1625.jpg"
       ),
@@ -357,7 +360,7 @@ export default function CampProfilesPage() {
       priceText: "from 595 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["china"],
       image: getTemplateImageUrl(
         "yootheme/cache/59/00-Space-Exploration-Sommer-Camp-599962e5.jpg"
       ),
@@ -371,7 +374,7 @@ export default function CampProfilesPage() {
       priceText: "from 595 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["spain"],
+      locations: ["portugal"],
       image: getTemplateImageUrl(
         "yootheme/cache/d1/Spanischcamp-in-Spanien-d118b0e9.jpg"
       ),
@@ -385,7 +388,7 @@ export default function CampProfilesPage() {
       priceText: "from 495 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["vietnam"],
       image: getTemplateImageUrl(
         "yootheme/cache/e0/03-Walsrode-Survival-e00c16d7.jpg"
       ),
@@ -399,7 +402,7 @@ export default function CampProfilesPage() {
       priceText: "from 495 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["philippines"],
       image: getTemplateImageUrl(
         "yootheme/cache/98/Schwimmen_camp-98f48b76.jpg"
       ),
@@ -413,7 +416,7 @@ export default function CampProfilesPage() {
       priceText: "from 495 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["northern-germany"],
+      locations: ["malaysia"],
       image: getTemplateImageUrl(
         "yootheme/cache/57/00-Tenniscamp-57cd2c79.jpg"
       ),
@@ -427,7 +430,7 @@ export default function CampProfilesPage() {
       priceText: "from 990 USD",
       season: ["summer"],
       age: [12, 18],
-      locations: ["spain"],
+      locations: ["thailand"],
       image: getTemplateImageUrl(
         "yootheme/cache/ac/00-Windsurfen-im-Sommercamp-ac31b126.jpg"
       ),
@@ -564,7 +567,15 @@ export default function CampProfilesPage() {
     return () => clearTimeout(timeout1);
   }, []);
 
-  // Auto-apply filters when any filter changes
+  // Handle filter form submission and auto-apply filters when any filter changes
+  const handleFilterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Save current scroll position
+    const scrollPosition = typeof window !== "undefined" ? window.scrollY : 0;
+  };
+
+  // Also auto-apply filters when any relevant value changes
   useEffect(() => {
     const filtered = camps.filter((camp) => {
       // Price range filter (up to selected price)
@@ -646,6 +657,7 @@ export default function CampProfilesPage() {
   const currentItems = filteredCamps.slice(indexOfFirstItem, indexOfLastItem);
   const totalPages = Math.ceil(filteredCamps.length / itemsPerPage);
 
+// No-op: this useEffect is redundant due to the main filter/sort useEffect above.
   // Handle reset
   const handleReset = () => {
     const form = document.getElementById("filter-form") as HTMLFormElement;
@@ -680,6 +692,44 @@ export default function CampProfilesPage() {
     }
   };
 
+// Apply price filter immediately and sort by price
+const applyPriceFilter = (newPriceRange: [number, number]) => {
+  // Save current scroll position
+  const scrollPosition = typeof window !== "undefined" ? window.scrollY : 0;
+
+  // Use requestAnimationFrame to prevent UI blocking
+  requestAnimationFrame(() => {
+    const filtered = camps.filter((camp) => {
+      // Price range filter (up to selected price)
+      if (camp.price > newPriceRange[1]) return false;
+
+      if (selectedProgram && camp.program !== selectedProgram) return false;
+      if (
+        selectedHolidays.length > 0 &&
+        !camp.season.some((s) => selectedHolidays.includes(s))
+      )
+        return false;
+      if (
+        selectedLocations.length > 0 &&
+        !camp.locations.some((l) => selectedLocations.includes(l))
+      )
+        return false;
+      if (selectedAge) {
+        const age = parseInt(selectedAge);
+        if (age < camp.age[0] || age > camp.age[1]) return false;
+      }
+      return true;
+    });
+
+    // Sort by price ascending when filtering by price range
+    setFilteredCamps(sortCamps(filtered, "price-asc"));
+
+    // Restore scroll position after filtering
+    if (typeof window !== "undefined" && scrollPosition !== undefined) {
+      window.scrollTo(0, scrollPosition);
+    }
+  });
+};
   // Sort camps
   const sortCamps = (campsToSort: Camp[], sortValue: string): Camp[] => {
     const sorted = [...campsToSort];
@@ -777,7 +827,7 @@ export default function CampProfilesPage() {
   }, []);
 
   return (
-    <>
+    <React.Fragment>
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -814,7 +864,7 @@ export default function CampProfilesPage() {
             .search-field-input {
               width: 100%;
               padding: 0.75rem 1rem;
-              border: 2px solid #4CAF50;
+              border: 2px solid #9c5d00;
               border-radius: 8px;
               font-size: 1rem;
               background: white;
@@ -831,7 +881,7 @@ export default function CampProfilesPage() {
             }
             .search-button {
               padding: 0.75rem 2rem;
-              background: #4CAF50;
+              background: #9c5d00;
               color: white;
               border: none;
               border-radius: 8px;
@@ -1010,7 +1060,6 @@ export default function CampProfilesPage() {
               height: 100%;
               display: flex;
               flex-direction: column;
-              flex: 1;
             }
             .camp-card-body {
               flex: 1;
@@ -1088,7 +1137,7 @@ export default function CampProfilesPage() {
               justify-content: center;
               cursor: pointer;
               transition: all 0.2s;
-              color: #4CAF50;
+              color: #9c5d00;
               font-size: 18px;
             }
             .pagination-arrow:hover:not(:disabled) {
@@ -1127,7 +1176,7 @@ export default function CampProfilesPage() {
               background: #e0e0e0;
             }
             .pagination-page.active {
-              background: #4CAF50;
+              background: #9c5d00;
               color: white;
               font-weight: 600;
             }
@@ -1157,7 +1206,7 @@ export default function CampProfilesPage() {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #4CAF50;
+              background: #9c5d00;
               cursor: pointer;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
               transition: all 0.3s;
@@ -1172,7 +1221,7 @@ export default function CampProfilesPage() {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #4CAF50;
+              background: #9c5d00;
               cursor: pointer;
               border: none;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -1187,7 +1236,7 @@ export default function CampProfilesPage() {
             .price-slider::-webkit-slider-runnable-track {
               height: 8px;
               border-radius: 5px;
-              background: linear-gradient(to right, #4CAF50 0%, #4CAF50 var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
+              background: linear-gradient(to right, #9c5d00 0%, #9c5d00 var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
             }
             .price-slider::-moz-range-track {
               height: 8px;
@@ -1197,123 +1246,92 @@ export default function CampProfilesPage() {
             .price-slider::-moz-range-progress {
               height: 8px;
               border-radius: 5px;
-              background: #4CAF50;
+              background: #9c5d00;
             }
           `,
         }}
       />
 
       {/* Hero Section */}
-      <div className="uk-section-default uk-section-overlap uk-preserve-color uk-light uk-position-relative">
-        <div
-          className="uk-background-norepeat uk-background-cover uk-background-center-center uk-section uk-section-xlarge"
-          style={{
-            backgroundImage: `url(${getTemplateImageUrl(
-              "yootheme/banner/b3.jpg"
-            )})`,
-          }}
-        >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.19)" }}
-          ></div>
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <h1 className="uk-heading-large uk-text-center">Activities</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        title="Activities"
+        backgroundImage="yootheme/banner/b9.jpg"
+        overlayColor="rgba(0, 0, 0, 0.19)"
+        sectionClass="uk-section-default uk-preserve-color uk-light"
+        titleClass="uk-heading-large uk-text-center"
+      />
 
       {/* Intro Section */}
-      <div className="uk-section-default uk-section uk-padding-remove-bottom">
+      <div className="uk-section-default uk-section-overlap uk-section uk-section-small">
         <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <h2 className="uk-h1 uk-text-center@m uk-text-center">
-                <p>
-                  Adventure & sports camps, vacation camps, as well as English &
-                  German language camps in Germany and England, since 2002
-                </p>
-              </h2>
-            </div>
+          <div className="text-center">
+            <p className="text-[1.67vw]">
+              Adventure & sports camps, vacation camps, as well as English & German
+              language camps in Germany and England, since 2002
+            </p>
           </div>
         </div>
       </div>
 
       {/* ProvenExpert Widget + Quote Section */}
-      <div className="uk-section-default uk-section-overlap uk-section uk-section-small">
-        <div className="uk-container uk-container-large">
-          <div
-            className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge"
-            uk-grid=""
-          >
-            <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
-              <div className="uk-panel uk-width-1-1">
-                <center>
+
+      <div className="uk-grid tm-grid-expand uk-grid-large uk-margin uk-padding ">
+        <div className="h-[30vh] md:h-[40vh]  uk-grid-item-match uk-flex-middle uk-width-1-3@m ">
+          <div className="uk-panel uk-width-1-1">
+            <center>
+              <a
+                href="https://www.provenexpert.com/camp-adventure/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                  <Image
+                    src={getTemplateImageUrl("yootheme/activities/campfire.jpg")}
+                    width={465}
+                    height={200}
+                  alt="Customer reviews"
+                  style={{ border: 0, width: "100%", height: "100%" }}
+                  unoptimized
+                />
+              </a>
+            </center>
+          </div>
+        </div>
+        <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m ">
+          <div className="uk-panel uk-width-1-1">
+            <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
+              <p className="text-[1.7vw]">
+                My son (age 11) absolutely loved Camp Adventure! After two
+                disastrous camp experiences, this was our last attempt. I am so
+                glad he went! He said he had the time of his life and can&apos;t
+                wait to come back.
+              </p>
+              <footer className="el-footer">
+                <cite className="el-author">
                   <a
-                    href="https://www.provenexpert.com/camp-adventure/"
+                    className="uk-link-muted text-[1.67vw]"
+                    href="https://goo.gl/maps/6SUEPwPJtZofokoX7"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noreferrer"
                   >
-                    <Image
-                      src="https://images.provenexpert.com/93/fc/d5e99b2883e0bb405862d9993db6/widget_recommendation_465_04f6f.png?t=1662145244032"
-                      width={465}
-                      height={200}
-                      alt="Customer reviews"
-                      style={{ border: 0 }}
-                      unoptimized
-                    />
+                    Sarah O.
                   </a>
-                </center>
-              </div>
-            </div>
-            <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
-              <div className="uk-panel uk-width-1-1">
-                <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
-                  <p>
-                    My son (age 11) absolutely loved Camp Adventure! After two
-                    disastrous camp experiences, this was our last attempt. I am
-                    so glad he went! He said he had the time of his life and
-                    can&apos;t wait to come back.
-                  </p>
-                  <footer className="el-footer">
-                    <cite className="el-author">
-                      <a
-                        className="uk-link-muted"
-                        href="https://goo.gl/maps/6SUEPwPJtZofokoX7"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Sarah O.
-                      </a>
-                    </cite>
-                  </footer>
-                </blockquote>
-              </div>
-            </div>
+                </cite>
+              </footer>
+            </blockquote>
           </div>
         </div>
       </div>
 
       {/* Description */}
-      <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <div className="uk-panel uk-text-large uk-dropcap uk-margin">
-                <p>
-                  I In our international camps in Germany and England we offer
-                  various courses that you can book as additional options to our
-                  camp activities. Get an overview of what is taking place where
-                  and simply decide which camp you would like to spend next
-                  summer based on the program of your choice.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="uk-section-default uk-section  p-12 m-8">
+        <div className="uk-panel uk-text-large uk-dropcap uk-margin">
+          <p className="text-[1.7vw]">
+             I  In our international camps in Germany and England we offer various
+            courses that you can book as additional options to our camp
+            activities. Get an overview of what is taking place where and simply
+            decide which camp you would like to spend next summer based on the
+            program of your choice.
+          </p>
         </div>
       </div>
 
@@ -1408,7 +1426,7 @@ export default function CampProfilesPage() {
                         right: "10px",
                         top: "50%",
                         transform: "translateY(-50%)",
-                        background: "#4CAF50",
+                        background: "#9c5d00",
                         color: "white",
                         border: "none",
                         borderRadius: "50%",
@@ -1694,60 +1712,61 @@ export default function CampProfilesPage() {
                 (Page {currentPage} of {totalPages})
               </div>
             </div>
-            <div className="camp-grid">
+            <div className="space-y-6">
               {currentItems.map((camp, index) => (
                 <div key={indexOfFirstItem + index} className="camp-card">
-                  <Link
-                    href={camp.link}
-                    className="camp-card-link uk-card uk-card-default uk-card-small uk-card-hover uk-link-toggle"
-                  >
-                    <div className="camp-card-content">
-                      <div className="uk-card-media-top">
-                        <Image
-                          src={camp.image}
-                          width={1920}
-                          height={1275}
-                          alt={camp.name}
-                          loading="lazy"
-                          className="el-image"
-                          style={{ height: "200px", objectFit: "cover" }}
-                        />
-                      </div>
-                      <div className="camp-card-body uk-card-body uk-margin-remove-first-child">
-                        <h3 className="el-title uk-h3 uk-heading-bullet uk-margin-top uk-margin-remove-bottom">
-                          {camp.name}
-                        </h3>
-                        <div className="el-meta uk-margin-top">
-                          {camp.priceText}
+                  <div className="max-w-4xl mx-auto">
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow">
+                      {/* Image Section - Full left side */}
+                      <div className="relative md:w-1/2">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={camp.image}
+                            alt={camp.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
                         </div>
-                        <div className="el-content uk-panel uk-margin-top">
-                          <ul className="uk-list uk-list-divider">
-                            <li>
-                              <span
-                                className="uk-margin-small-right uk-icon"
-                                uk-icon="clock"
-                              ></span>
-                              {camp.season
-                                .map(
-                                  (s) => s.charAt(0).toUpperCase() + s.slice(1)
-                                )
-                                .join(", ")}
-                            </li>
-                            <li>
-                              <span
-                                className="uk-margin-small-right uk-icon"
-                                uk-icon="user"
-                              ></span>
+                        <span className="absolute top-4 left-0 bg-yellow-400 text-gray-900 font-semibold px-4 py-2 text-sm rounded-r-md">
+                          Featured
+                        </span>
+                      </div>
+
+                      {/* Content Section */}
+                      <div className="md:w-1/2 p-6 flex flex-col justify-between">
+                        {/* Holiday Season */}
+                        <div className="flex items-center text-teal-600 text-sm mb-3">
+                          <Calendar className="w-4 h-4 mr-2 flex-shrink-0" />
+                          <span>{camp.season.join(", ")}</span>
+                        </div>
+
+                        {/* Camp Name */}
+                        <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                          {camp.name}
+                        </h2>
+
+                        {/* Description */}
+                        <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Laborum excepturi qui eum. Fugit sapiente
+                          doloremque harum veniam nemo nulla voluptatibus in,
+                          alias provident voluptatem. Iure voluptatum quis
+                          ratione incidunt cum.
+                        </p>
+
+                        {/* Age and Location */}
+                        <div className="flex flex-col gap-2 text-sm text-gray-700 mb-6">
+                          <div className="flex items-center">
+                            <Users className="w-4 h-4 mr-2 flex-shrink-0" />
+                            <span>
                               From {camp.age[0]} - {camp.age[1]} years old
-                            </li>
-                            <li>
-                              <span
-                                className="uk-margin-small-right uk-icon"
-                                uk-icon="location"
-                              ></span>
-                              {camp.locations.map(formatLocation).join(", ")}
-                            </li>
-                          </ul>
+                            </span>
+                          </div>
+                          <div className="flex items-center">
+                            <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
+                            <span>{camp.locations.join(", ")}</span>
+                          </div>
                         </div>
                         <div>
                           <div className=" uk-button uk-button-default">
@@ -1756,7 +1775,7 @@ export default function CampProfilesPage() {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>
@@ -1911,7 +1930,7 @@ export default function CampProfilesPage() {
               </h2>
 
               <div className="mb-[2vh]">
-                <div className="w-[6.5vw] h-[0.5vh] bg-[#2ca06c] rounded-full -mt-[0.5vh] mb-[1vh]" />
+                <div className="w-[6.5vw] h-[0.5vh] bg-[#9c5d00] rounded-full -mt-[0.5vh] mb-[1vh]" />
                 <p className="text-[1vw] text-gray-600 leading-[1.4vw]">
                   Sign up to receive the latest news about new camps,
                   activities, and exciting opportunities. Don’t miss out on
@@ -1931,7 +1950,7 @@ export default function CampProfilesPage() {
                 />
                 <button
                   type="submit"
-                  className="bg-[#2ca06c] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
+                  className="bg-[#9c5d00] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
                 >
                   <span>Subscribe</span>
                   <svg
@@ -1972,12 +1991,12 @@ export default function CampProfilesPage() {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
               <div className="uk-width-1-1@m">
-                <div className="uk-h5 uk-margin-small uk-text-center">
+                <div className="text-[2.5vw] uk-margin-small uk-text-center ">
                   Camp Adventure
                 </div>
-                <h3 className="uk-h1 uk-margin-small uk-text-center">
+                <div className="text-[3vw] uk-margin-small uk-text-center">
                   Cooperations & Memberships
-                </h3>
+                </div>
                 <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
               </div>
             </div>
@@ -2036,10 +2055,7 @@ export default function CampProfilesPage() {
                           >
                             <Image
                               src={getTemplateImageUrl(
-                                `yootheme/cache/${partner.img.substring(
-                                  0,
-                                  2
-                                )}/${partner.img}`
+                                partner.img.replace("../../templates/", "")
                               )}
                               width={partner.w}
                               height={partner.h}
@@ -2064,6 +2080,6 @@ export default function CampProfilesPage() {
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         strategy="afterInteractive"
       />
-    </>
+    </React.Fragment>
   );
 }

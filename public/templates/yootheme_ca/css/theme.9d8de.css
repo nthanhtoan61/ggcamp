@@ -6246,7 +6246,6 @@ ul.uk-nav-sub {
   bottom: 0;
   left: 0;
   z-index: 1010;
-  background: #000;
   opacity: 0;
   transition: opacity 0.15s linear;
   touch-action: pinch-zoom;

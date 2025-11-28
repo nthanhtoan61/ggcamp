@@ -42,7 +42,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
 }
 
