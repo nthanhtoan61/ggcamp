@@ -3,7 +3,7 @@
 import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { getTemplateImageUrl } from "@/lib/assets";
 import { programs } from "@/data/programs";
 import { Calendar, Users, MapPin } from "lucide-react";
@@ -52,7 +52,7 @@ export default function CampProfilesPage() {
   const [appliedSearchHolidaySeason, setAppliedSearchHolidaySeason] =
     useState("");
 
-  const programs = [
+  const programs = useMemo(() => [
     { value: "adventure", label: "Adventure, Sports & Creative", count: 0 },
     { value: "arts-crafts", label: "Arts & Crafts", count: 0 },
     { value: "climbing", label: "Climbing", count: 0 },
@@ -82,15 +82,15 @@ export default function CampProfilesPage() {
     { value: "swimming", label: "Swimming", count: 0 },
     { value: "tennis", label: "Tennis", count: 0 },
     { value: "windsurf", label: "Windsurfing", count: 0 },
-  ];
+  ], []);
 
-  const holidays = [
+  const holidays = useMemo(() => [
     { value: "autumn", label: "Autumn" },
     { value: "spring", label: "Spring" },
     { value: "summer", label: "Summer" },
-  ];
+  ], []);
 
-  const locations = [
+  const locations = useMemo(() => [
     { value: "philippines", label: "Philippines" },
     { value: "vietnam", label: "Vietnam" },
     { value: "portugal", label: "Portugal" },
@@ -98,10 +98,10 @@ export default function CampProfilesPage() {
     { value: "thailand", label: "Thailand" },
     { value: "malaysia", label: "Malaysia" },
     { value: "holiday", label: "Holiday" },
-  ];
+  ], []);
 
   // Camp data
-  const camps: Camp[] = [
+  const camps: Camp[] = useMemo(() => [
     {
       name: "Adventure, Sports & Creative",
       price: 395,
@@ -438,8 +438,9 @@ export default function CampProfilesPage() {
       program: "windsurf",
       rating: 5,
     },
-  ];
-  const setCount = () => {
+  ], []);
+  
+  const setCount = useCallback(() => {
     camps.forEach((camp) => {
       programs.forEach((program) => {
         if (camp.program === program.value) {
@@ -447,8 +448,11 @@ export default function CampProfilesPage() {
         }
       });
     });
-  };
-  setCount();
+  }, [camps, programs]);
+  
+  useEffect(() => {
+    setCount();
+  }, [setCount, programs]);
 
   const handleCheckboxChange = (
     value: string,
@@ -648,7 +652,6 @@ export default function CampProfilesPage() {
     ratingWise,
     appliedSearchLocation,
     appliedSearchHolidaySeason,
-    camps,
   ]);
 
   // Calculate items to display on current page
@@ -657,7 +660,6 @@ export default function CampProfilesPage() {
   const currentItems = filteredCamps.slice(indexOfFirstItem, indexOfLastItem);
   const totalPages = Math.ceil(filteredCamps.length / itemsPerPage);
 
-// No-op: this useEffect is redundant due to the main filter/sort useEffect above.
   // Handle reset
   const handleReset = () => {
     const form = document.getElementById("filter-form") as HTMLFormElement;
@@ -796,36 +798,6 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
     }
   }, []);
 
-  // Update form submission to handle multiselect properly
-  useEffect(() => {
-    const initializeMultiselect = () => {
-      // In a real implementation, this would initialize a multiselect plugin
-      // For now, we'll add event listeners to update hidden fields when selects change
-      const multiselects = document.querySelectorAll(".multiselect[multiple]");
-
-      multiselects.forEach((select) => {
-        select.addEventListener("change", function (this: HTMLSelectElement) {
-          const hiddenFieldId = this.getAttribute("data-hidden");
-          if (hiddenFieldId) {
-            const hiddenField = document.getElementById(hiddenFieldId);
-            if (hiddenField) {
-              const selectedValues = Array.from(this.selectedOptions).map(
-                (option) => option.value
-              );
-              (hiddenField as HTMLInputElement).value =
-                selectedValues.join(",");
-            }
-          }
-        });
-      });
-    };
-
-    // Run initialization after component mounts
-    if (typeof window !== "undefined") {
-      initializeMultiselect();
-    }
-  }, []);
-
   return (
     <React.Fragment>
       <style
@@ -909,13 +881,19 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             @media (max-width: 768px) {
               .search-bar-form {
                 flex-direction: column;
+                align-items: stretch;
               }
               .search-field-group {
                 width: 100%;
+                min-width: 0;
               }
               .search-button {
                 width: 100%;
                 justify-content: center;
+              }
+              .search-bar-container {
+                padding: 1.5rem;
+                margin: 1rem;
               }
             }
             #searchform .uk-button.uk-button-default,
@@ -1074,12 +1052,19 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               .filter-sort-panel,
               .cards-panel {
                 min-width: 100%;
+                flex: 1 1 auto;
               }
               .filter-sort-panel {
                 order: 2;
+                position: relative;
+                top: 0;
               }
               .cards-panel {
                 order: 1;
+              }
+              /* Allow panel title to be smaller on mobile */
+              .panel-title {
+                 font-size: 1.25rem;
               }
             }
             @media (max-width: 768px) {
@@ -1125,6 +1110,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               justify-content: center;
               gap: 0.5rem;
               margin: 2rem 0;
+              flex-wrap: wrap;
             }
             .pagination-arrow {
               width: 40px;
@@ -1155,6 +1141,8 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               background: #f5f5f5;
               padding: 0.25rem;
               border-radius: 8px;
+              flex-wrap: wrap;
+              justify-content: center;
             }
             .pagination-page {
               min-width: 40px;
@@ -1199,6 +1187,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               background: #e0e0e0;
               outline: none;
               transition: background 0.3s;
+              width: 100%;
             }
             .price-slider::-webkit-slider-thumb {
               -webkit-appearance: none;
@@ -1261,11 +1250,12 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         titleClass="uk-heading-large uk-text-center"
       />
 
-      {/* Intro Section */}
+      {/* Intro Section - Responsive text sizing */}
       <div className="uk-section-default uk-section-overlap uk-section uk-section-small">
         <div className="uk-container uk-container-large">
           <div className="text-center">
-            <p className="text-[1.67vw]">
+            {/* Fixed: text-base on mobile, vw on desktop */}
+            <p className="text-base md:text-[1.67vw]">
               Adventure & sports camps, vacation camps, as well as English & German
               language camps in Germany and England, since 2002
             </p>
@@ -1273,10 +1263,9 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         </div>
       </div>
 
-      {/* ProvenExpert Widget + Quote Section */}
-
-      <div className="uk-grid tm-grid-expand uk-grid-large uk-margin uk-padding ">
-        <div className="h-[30vh] md:h-[40vh]  uk-grid-item-match uk-flex-middle uk-width-1-3@m ">
+      {/* ProvenExpert Widget + Quote Section - Stack on mobile */}
+      <div className="uk-grid tm-grid-expand uk-grid-large uk-margin uk-padding">
+        <div className="h-[30vh] md:h-[40vh] uk-grid-item-match uk-flex-middle uk-width-1-3@m uk-width-1-1@s">
           <div className="uk-panel uk-width-1-1">
             <center>
               <a
@@ -1289,17 +1278,18 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                     width={465}
                     height={200}
                   alt="Customer reviews"
-                  style={{ border: 0, width: "100%", height: "100%" }}
+                  style={{ border: 0, width: "100%", height: "100%", objectFit: "contain" }}
                   unoptimized
                 />
               </a>
             </center>
           </div>
         </div>
-        <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m ">
+        <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m uk-width-1-1@s">
           <div className="uk-panel uk-width-1-1">
             <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
-              <p className="text-[1.7vw]">
+              {/* Fixed: text-lg on mobile, vw on desktop */}
+              <p className="text-lg md:text-[1.7vw]">
                 My son (age 11) absolutely loved Camp Adventure! After two
                 disastrous camp experiences, this was our last attempt. I am so
                 glad he went! He said he had the time of his life and can&apos;t
@@ -1308,7 +1298,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               <footer className="el-footer">
                 <cite className="el-author">
                   <a
-                    className="uk-link-muted text-[1.67vw]"
+                    className="uk-link-muted text-base md:text-[1.67vw]"
                     href="https://goo.gl/maps/6SUEPwPJtZofokoX7"
                     target="_blank"
                     rel="noreferrer"
@@ -1322,11 +1312,12 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         </div>
       </div>
 
-      {/* Description */}
-      <div className="uk-section-default uk-section  p-12 m-8">
+      {/* Description - Responsive text */}
+      <div className="uk-section-default uk-section p-6 md:p-12 m-0 md:m-8">
         <div className="uk-panel uk-text-large uk-dropcap uk-margin">
-          <p className="text-[1.7vw]">
-             I  In our international camps in Germany and England we offer various
+           {/* Fixed: text-base on mobile, vw on desktop */}
+          <p className="text-base md:text-[1.7vw] leading-relaxed">
+             In our international camps in Germany and England we offer various
             courses that you can book as additional options to our camp
             activities. Get an overview of what is taking place where and simply
             decide which camp you would like to spend next summer based on the
@@ -1335,7 +1326,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         </div>
       </div>
 
-      {/* Map Section */}
+      {/* Map Section - Adjusted height for mobile */}
       <div
         className="uk-section uk-padding-remove-vertical"
         style={{ paddingLeft: 0, paddingRight: 0 }}
@@ -1350,7 +1341,8 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
           >
             <div
               className="uk-position-relative uk-dark"
-              style={{ height: "600px", width: "100%", zIndex: 1 }}
+              // Adjusted height: 400px on mobile, 600px on desktop
+              style={{ height: "600px", minHeight: "400px", width: "100%", zIndex: 1 }}
             >
               <div
                 id="camp-profiles-map"
@@ -1586,72 +1578,6 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                 </div>
               </div>
 
-              {/* Holiday Section */}
-              {/* <div className="mb-6 px-6">
-                <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
-                  HOLIDAY
-                </h3>
-                <div className="space-y-2">
-                  {holidays.map((holiday) => (
-                    <label
-                      key={holiday.value}
-                      className="flex items-center justify-between cursor-pointer group hover:bg-gray-50 p-2 rounded transition-colors"
-                    >
-                      <div className="flex items-center flex-1">
-                        <input
-                          type="checkbox"
-                          checked={selectedHolidays.includes(holiday.value)}
-                          onChange={() =>
-                            handleCheckboxChange(
-                              holiday.value,
-                              selectedHolidays,
-                              setSelectedHolidays
-                            )
-                          }
-                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-2 focus:ring-green-500"
-                        />
-                        <span className="ml-3 text-sm text-gray-700 group-hover:text-gray-900">
-                          {holiday.label}
-                        </span>
-                      </div>
-                    </label>
-                  ))}
-                </div>
-              </div> */}
-
-              {/* Location Section */}
-              {/* <div className="mb-6 px-6">
-                <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
-                  LOCATION
-                </h3>
-                <div className="space-y-2">
-                  {locations.map((location) => (
-                    <label
-                      key={location.value}
-                      className="flex items-center justify-between cursor-pointer group hover:bg-gray-50 p-2 rounded transition-colors"
-                    >
-                      <div className="flex items-center flex-1">
-                        <input
-                          type="checkbox"
-                          checked={selectedLocations.includes(location.value)}
-                          onChange={() =>
-                            handleCheckboxChange(
-                              location.value,
-                              selectedLocations,
-                              setSelectedLocations
-                            )
-                          }
-                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-2 focus:ring-green-500"
-                        />
-                        <span className="ml-3 text-sm text-gray-700 group-hover:text-gray-900">
-                          {location.label}
-                        </span>
-                      </div>
-                    </label>
-                  ))}
-                </div>
-              </div> */}
-
               {/* Age Section */}
               <div className="mb-6 px-6">
                 <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
@@ -1715,10 +1641,10 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             <div className="space-y-6">
               {currentItems.map((camp, index) => (
                 <div key={indexOfFirstItem + index} className="camp-card">
-                  <div className="max-w-4xl mx-auto">
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow">
-                      {/* Image Section - Full left side */}
-                      <div className="relative md:w-1/2">
+                  <div className="max-w-4xl mx-auto w-full">
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow h-full">
+                      {/* Image Section - Full width on mobile, half on desktop */}
+                      <div className="relative w-full h-64 md:h-auto md:w-1/2 flex-shrink-0">
                         <div className="relative w-full h-full">
                           <Image
                             src={camp.image}
@@ -1728,26 +1654,26 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
                         </div>
-                        <span className="absolute top-4 left-0 bg-yellow-400 text-gray-900 font-semibold px-4 py-2 text-sm rounded-r-md">
+                        <span className="absolute top-4 left-0 bg-yellow-400 text-gray-900 font-semibold px-4 py-2 text-sm rounded-r-md z-10">
                           Featured
                         </span>
                       </div>
 
                       {/* Content Section */}
-                      <div className="md:w-1/2 p-6 flex flex-col justify-between">
+                      <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col justify-between">
                         {/* Holiday Season */}
                         <div className="flex items-center text-teal-600 text-sm mb-3">
                           <Calendar className="w-4 h-4 mr-2 flex-shrink-0" />
-                          <span>{camp.season.join(", ")}</span>
+                          <span className="text-sm md:text-[1vw] capitalize">{camp.season.join(", ")}</span>
                         </div>
 
                         {/* Camp Name */}
-                        <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                           {camp.name}
                         </h2>
 
                         {/* Description */}
-                        <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                        <p className="text-sm md:text-[1vw] text-gray-600 mb-4 leading-relaxed line-clamp-2">
                           Lorem, ipsum dolor sit amet consectetur adipisicing
                           elit. Laborum excepturi qui eum. Fugit sapiente
                           doloremque harum veniam nemo nulla voluptatibus in,
@@ -1759,19 +1685,25 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                         <div className="flex flex-col gap-2 text-sm text-gray-700 mb-6">
                           <div className="flex items-center">
                             <Users className="w-4 h-4 mr-2 flex-shrink-0" />
-                            <span>
+                            <span className="text-sm md:text-[1vw]">
                               From {camp.age[0]} - {camp.age[1]} years old
                             </span>
                           </div>
                           <div className="flex items-center">
                             <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                            <span>{camp.locations.join(", ")}</span>
+                            <span className="text-sm md:text-[1vw] capitalize">{camp.locations.join(", ")}</span>
                           </div>
                         </div>
-                        <div>
-                          <div className=" uk-button uk-button-default">
-                            Camp Details
+                        <div className="flex items-center justify-between mt-auto">
+                          <div>
+                            <div className="text-lg md:text-[1.67vw] font-semibold">${camp.price}</div>
                           </div>
+                          
+                          <a href={`/activities/${camp.program}`} className="block">
+                            <div className="uk-button uk-button-default">
+                              Camp Details                                         
+                            </div>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1789,29 +1721,23 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                   const maxVisible = 5;
 
                   if (totalPages <= maxVisible) {
-                    // Show all pages if total is small
                     for (let i = 1; i <= totalPages; i++) {
                       pages.push(i);
                     }
                   } else {
-                    // Always show first page
                     pages.push(1);
-
                     if (currentPage <= 3) {
-                      // Near the beginning
                       for (let i = 2; i <= 4; i++) {
                         pages.push(i);
                       }
                       pages.push("ellipsis");
                       pages.push(totalPages);
                     } else if (currentPage >= totalPages - 2) {
-                      // Near the end
                       pages.push("ellipsis");
                       for (let i = totalPages - 3; i <= totalPages; i++) {
                         pages.push(i);
                       }
                     } else {
-                      // In the middle
                       pages.push("ellipsis");
                       for (let i = currentPage - 1; i <= currentPage + 1; i++) {
                         pages.push(i);
@@ -1820,7 +1746,6 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                       pages.push(totalPages);
                     }
                   }
-
                   return pages;
                 };
 
@@ -1885,14 +1810,14 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         </div>
       </div>
 
-      {/* Newsletter Section */}
-
+      {/* Newsletter Section - Completely overhauled for Mobile */}
       <section>
-        <div className="py-[8vh] bg-[#fbf8f0] mt-[5vh]">
-          <div className="flex items-center gap-[4vw]">
+        <div className="py-8 md:py-[8vh] bg-[#fbf8f0] mt-[5vh]">
+          {/* Changed gap and flex direction for mobile */}
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-[4vw] px-4 md:px-0">
             {/* LEFT: image with play button */}
-            <div className="w-1/2 relative h-[45vh] rounded-[1.25vw] overflow-hidden bg-white">
-              <div className="absolute inset-[0.3vw] rounded-[calc(1.25vw-0.3vw)] overflow-hidden">
+            <div className="w-full md:w-1/2 relative h-64 md:h-[45vh] rounded-xl md:rounded-[1.25vw] overflow-hidden bg-white">
+              <div className="absolute inset-1 md:inset-[0.3vw] rounded-lg md:rounded-[calc(1.25vw-0.3vw)] overflow-hidden">
                 <Image
                   src={getTemplateImageUrl("yootheme/aboutImage/beach.jpg")}
                   alt="Beach"
@@ -1904,16 +1829,17 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               {/* circular play button */}
               <button
                 type="button"
-                className="absolute left-[45%] top-1/2 -translate-y-1/2 bg-white rounded-full p-[0.8vw] shadow-lg z-20 flex items-center justify-center"
+                className="absolute left-[50%] top-1/2 -translate-x-1/2 -translate-y-1/2 md:left-[45%] bg-white rounded-full p-3 md:p-[0.8vw] shadow-lg z-20 flex items-center justify-center"
                 aria-label="Play video"
               >
-                <div className="w-[3.2vw] h-[3.2vw] bg-transparent rounded-full flex items-center justify-center">
-                  <div className="w-[2.2vw] h-[2.2vw] bg-[#f3f3f3] rounded-full flex items-center justify-center shadow-inner">
+                <div className="w-12 h-12 md:w-[3.2vw] md:h-[3.2vw] bg-transparent rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 md:w-[2.2vw] md:h-[2.2vw] bg-[#f3f3f3] rounded-full flex items-center justify-center shadow-inner">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
-                      width="1.2vw"
-                      height="1.2vw"
+                      width="20" // Fixed px for mobile
+                      height="20"
+                      className="w-5 h-5 md:w-[1.2vw] md:h-[1.2vw]"
                       fill="#214a28"
                     >
                       <path d="M8 5v14l11-7z" />
@@ -1924,14 +1850,16 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             </div>
 
             {/* RIGHT: newsletter content */}
-            <div className="w-1/2">
-              <h2 className="text-[2.2vw] text-[#274423] font-bold leading-[1.05] mb-[1.5vh]">
+            <div className="w-full md:w-1/2 px-4 md:px-0 text-center md:text-left">
+              {/* Responsive Text Size */}
+              <h2 className="text-2xl md:text-[2.2vw] text-[#274423] font-bold leading-tight md:leading-[1.05] mb-4 md:mb-[1.5vh]">
                 Stay Updated with Our Monthly Newsletter
               </h2>
 
-              <div className="mb-[2vh]">
-                <div className="w-[6.5vw] h-[0.5vh] bg-[#9c5d00] rounded-full -mt-[0.5vh] mb-[1vh]" />
-                <p className="text-[1vw] text-gray-600 leading-[1.4vw]">
+              <div className="mb-6 md:mb-[2vh]">
+                 {/* Responsive Bar Size */}
+                <div className="w-24 h-1 md:w-[6.5vw] md:h-[0.5vh] bg-[#9c5d00] rounded-full -mt-2 mb-4 mx-auto md:mx-0" />
+                <p className="text-base md:text-[1vw] text-gray-600 leading-normal md:leading-[1.4vw]">
                   Sign up to receive the latest news about new camps,
                   activities, and exciting opportunities. Don’t miss out on
                   anything fun!
@@ -1939,25 +1867,26 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               </div>
 
               <form
-                className="flex items-center max-w-[28vw] shadow-sm rounded-full"
+                className="flex items-center w-full md:max-w-[28vw] shadow-sm rounded-full mx-auto md:mx-0"
                 onSubmit={(e) => e.preventDefault()}
               >
                 <input
                   type="email"
                   aria-label="Email address"
                   placeholder="Enter your email address"
-                  className="flex-1 py-[1.5vh] px-[1.5vw] rounded-l-[0.8vw] border border-gray-200 bg-white focus:outline-none text-[0.9vw]"
+                  className="flex-1 py-3 px-4 md:py-[1.5vh] md:px-[1.5vw] rounded-l-full md:rounded-l-[0.8vw] border border-gray-200 bg-white focus:outline-none text-sm md:text-[0.9vw]"
                 />
                 <button
                   type="submit"
-                  className="bg-[#9c5d00] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
+                  className="bg-[#9c5d00] text-white px-6 md:px-[3vw] py-3 md:py-[1.5vh] rounded-r-full md:rounded-lg shadow hover:bg-[#238a56] flex items-center gap-2 md:gap-[0.5vw] text-sm md:text-[0.9vw] font-medium"
                 >
                   <span>Subscribe</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    width="1.2vw"
-                    height="1.2vw"
+                    width="16"
+                    height="16"
+                    className="w-4 h-4 md:w-[1.2vw] md:h-[1.2vw]"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -1991,10 +1920,11 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
           <div className="uk-container uk-container-large uk-position-relative">
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
               <div className="uk-width-1-1@m">
-                <div className="text-[2.5vw] uk-margin-small uk-text-center ">
+                {/* Responsive text sizes */}
+                <div className="text-xl md:text-[2.5vw] uk-margin-small uk-text-center ">
                   Camp Adventure
                 </div>
-                <div className="text-[3vw] uk-margin-small uk-text-center">
+                <div className="text-2xl md:text-[3vw] uk-margin-small uk-text-center">
                   Cooperations & Memberships
                 </div>
                 <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
@@ -2004,7 +1934,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               <div className="uk-width-1-1@m">
                 <div className="uk-margin uk-text-center">
                   <div
-                    className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-collapse uk-grid-match"
+                    className="uk-grid uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-collapse uk-grid-match"
                     uk-grid=""
                   >
                     {[
@@ -2062,6 +1992,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                               alt="Partner"
                               className="el-image"
                               loading="lazy"
+                              style={{ maxWidth: '100%', height: 'auto' }}
                             />
                           </a>
                         </div>
@@ -2081,5 +2012,5 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         strategy="afterInteractive"
       />
     </React.Fragment>
-  );
+    );
 }
