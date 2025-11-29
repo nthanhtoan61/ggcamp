@@ -112,7 +112,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/53/00_Abenteuercamp-Hike-533b20fa.jpg"
       ),
-      link: "/activities/adventure-sports-creative",
+      link: "/adventure-sports-creative",
       program: "adventure",
       rating: 5,
     },
@@ -126,7 +126,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/c6/01-Kreativprogramm-in-der-Ferienfreizeit-c6e95722.jpg"
       ),
-      link: "/activities/arts-crafts",
+      link: "/arts-crafts",
       program: "arts-crafts",
       rating: 4,
     },
@@ -140,7 +140,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/40/00-Kletterkurs_Sommercamp_Bayern-40f1bd8d.jpg"
       ),
-      link: "/activities/climbing",
+      link: "/climbing",
       program: "climbing",
       rating: 5,
     },
@@ -154,7 +154,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/c1/00-Tanzen-im-Feriencamp-c1834fc7.jpg"
       ),
-      link: "/activities/dancing",
+      link: "/dancing",
       program: "dancing",
       rating: 4,
     },
@@ -168,7 +168,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/33/01-Tauchkurs-im-Sommercamp-3309e219.jpg"
       ),
-      link: "/activities/diving",
+      link: "/diving",
       program: "diving",
       rating: 5,
     },
@@ -182,7 +182,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/b9/07-Language-Camps-by-Camp-Adventure-b9f01b6a.jpg"
       ),
-      link: "/activities/englisch-toefl",
+      link: "/englisch-toefl",
       program: "englisch-toefl",
       rating: 5,
     },
@@ -196,7 +196,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/ad/00-Language-Camps-by-Camp-Adventure-add7aa60.jpg"
       ),
-      link: "/activities/englischcamps",
+      link: "/englischcamps",
       program: "englisch-camps",
       rating: 4,
     },
@@ -210,7 +210,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/02/01-Angeln-im-Ferienlager-02243939.jpg"
       ),
-      link: "/activities/fishing",
+      link: "/fishing",
       program: "fishing",
       rating: 4,
     },
@@ -224,7 +224,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/0e/Deutschcamps-in-Deutschland-0ed3ea07.jpg"
       ),
-      link: "/activities/german-camps",
+      link: "/german-camps",
       program: "german-camps",
       rating: 4,
     },
@@ -238,7 +238,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/69/00-Reiten-Sommercamp-Ausritt-6930f841.jpg"
       ),
-      link: "/activities/horseback-riding",
+      link: "/horseback-riding",
       program: "horseback",
       rating: 5,
     },
@@ -252,7 +252,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/9c/00-Husky%20Camp_sommercamp%20mit%20Hunden-9c098a17.jpg"
       ),
-      link: "/activities/husky-camp",
+      link: "/husky-camp",
       program: "husky",
       rating: 5,
     },
@@ -266,7 +266,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/3b/00-INTERNATIONAL%20COUNSELOR%20IN%20TRAINING_teambuilding-3b91547c.jpg"
       ),
-      link: "/activities/international-counsellor-in-training-icit",
+      link: "/international-counsellor-in-training-icit",
       program: "icit",
       rating: 5,
     },
@@ -280,7 +280,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/0d/00-Leadership-Camp-0d21c60a.jpg"
       ),
-      link: "/activities/senior-plus-leadership",
+      link: "/senior-plus-leadership",
       program: "leadership",
       rating: 5,
     },
@@ -294,7 +294,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/6a/00-Rettungsschwimmen-Feriencamp-6a364891.jpg"
       ),
-      link: "/activities/lifeguarding",
+      link: "/lifeguarding",
       program: "lifeguarding",
       rating: 4,
     },
@@ -308,7 +308,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/a4/00-Multi-Water-Adventure-im-Sommercamp-a47c08a3.jpg"
       ),
-      link: "/activities/multi-water-adventure",
+      link: "/multi-water-adventure",
       program: "multi-water",
       rating: 1,
     },
@@ -322,7 +322,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/e9/01-Segeln-im-Sommercamp-in-Spanien-e9d06b28.jpg"
       ),
-      link: "/activities/sailing",
+      link: "/sailing",
       program: "sailing",
       rating: 2,
     },
@@ -336,7 +336,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/82/00-Skaten im Sommercamp-8240a4c7.jpg"
       ),
-      link: "/activities/skating",
+      link: "/skating",
       program: "skating",
       rating: 3,
     },
@@ -350,7 +350,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/54/00-Soccer-Camps-543a1625.jpg"
       ),
-      link: "/activities/soccer",
+      link: "/soccer",
       program: "soccer",
       rating: 3,
     },
@@ -364,7 +364,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/59/00-Space-Exploration-Sommer-Camp-599962e5.jpg"
       ),
-      link: "/activities/space-exploration",
+      link: "/space-exploration",
       program: "space",
       rating: 4,
     },
@@ -378,7 +378,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/d1/Spanischcamp-in-Spanien-d118b0e9.jpg"
       ),
-      link: "/activities/spanish-camps",
+      link: "/spanish-camps",
       program: "spanish",
       rating: 4,
     },
@@ -392,7 +392,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/e0/03-Walsrode-Survival-e00c16d7.jpg"
       ),
-      link: "/activities/survival",
+      link: "/survival",
       program: "survival",
       rating: 4,
     },
@@ -406,7 +406,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/98/Schwimmen_camp-98f48b76.jpg"
       ),
-      link: "/activities/swimming",
+      link: "/swimming",
       program: "swimming",
       rating: 4,
     },
@@ -420,7 +420,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/57/00-Tenniscamp-57cd2c79.jpg"
       ),
-      link: "/activities/tennis",
+      link: "/tennis",
       program: "tennis",
       rating: 4,
     },
@@ -434,7 +434,7 @@ export default function CampProfilesPage() {
       image: getTemplateImageUrl(
         "yootheme/cache/ac/00-Windsurfen-im-Sommercamp-ac31b126.jpg"
       ),
-      link: "/activities/windsurfing",
+      link: "/windsurfing",
       program: "windsurf",
       rating: 5,
     },
@@ -1699,7 +1699,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                             <div className="text-lg md:text-[1.67vw] font-semibold">${camp.price}</div>
                           </div>
                           
-                          <a href={`/activities/${camp.program}`} className="block">
+                          <a href={`/activities/${camp.link}`} className="block">
                             <div className="uk-button uk-button-default">
                               Camp Details                                         
                             </div>
