@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Philosophy & Safety at Camp | Camp Adventure",
+  title: "Philosophy & Safety at Camp ",
   description:
     "Our comprehensive safety concept and philosophy for ensuring the well-being of all camp participants.",
 };

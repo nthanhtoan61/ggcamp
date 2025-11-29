@@ -1,47 +1,26 @@
 "use client";
 
-import type { Metadata } from "next";
-import Link from "next/link";
-import { getTemplateImageUrl } from "@/lib/assets";
+import { HeroSection } from "@/components/layouts";
 
 export default function TravelDocumentsPage() {
   return (
     <>
       {/* Hero Section */}
-      <div
-        className="uk-section-default uk-preserve-color uk-light uk-position-relative"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
-      >
-        <div
-          className="uk-background-norepeat uk-background-cover uk-background-bottom-center uk-section uk-section-xlarge"
-          style={{
-            backgroundImage: `url(${getTemplateImageUrl(
-              "yootheme/cache/9d/Reiseunterlagen-9d81dea5.jpeg"
-            )})`,
-          }}
-        >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-          ></div>
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <h1
-                  className="font-['Raleway'] text-[5vw] md:text-[4vw] lg:text-[5vw] xl:text-[5vw] leading-tight font-bold text-center max-[991px]:text-[8vw]"
-                  id="page#0"
-                  uk-scrollspy-class=""
-                  style={{ fontSize: "clamp(2.5rem, 5vw, 5vw)" }}
-                >
-                  Camp Adventure
-                  <br />
-                  Last travel informations
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        title={
+          <>
+            Camp Adventure
+            <br />
+            Last travel informations
+          </>
+        }
+        backgroundImage="yootheme/cache/9d/Reiseunterlagen-9d81dea5.jpeg"
+        overlayColor="rgba(0, 0, 0, 0)"
+        sectionClass="uk-section-default uk-preserve-color uk-light"
+        titleClass="uk-heading-large uk-text-center !text-[5vw]"
+        enableScrollspy={true}
+        backgroundPosition="bottom-center"
+      />
 
       {/* General Section */}
       <div id="allgemein" className="uk-section-default uk-section">

@@ -3,44 +3,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getTemplateImageUrl } from "@/lib/assets";
+import { HeroSection } from "@/components/layouts";
 
 export default function SafetyPage() {
   return (
     <>
       {/* Hero Section */}
-      <div
-        className="uk-section-secondary uk-section-overlap uk-preserve-color uk-light uk-position-relative"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
-      >
-        <div
-          className="uk-background-norepeat uk-background-cover uk-background-top-center uk-section uk-section-xlarge"
-          style={{
-            backgroundImage: `url(${getTemplateImageUrl(
-              "yootheme/cache/5e/sicherheit_header-5ede6167.jpeg"
-            )})`,
-          }}
-        >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-          ></div>
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <h1
-                  className="font-['Raleway'] text-[5vw] md:text-[4vw] lg:text-[5vw] xl:text-[5vw] leading-tight font-bold text-center max-[991px]:text-[8vw]"
-                  uk-scrollspy-class=""
-                  style={{ fontSize: "clamp(2.5rem, 5vw, 5vw)" }}
-                >
-                  Philosophy &<br />
-                  Safety at Camp
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        title={
+          <>
+            Philosophy &<br />
+            Safety at Camp
+          </>
+        }
+        backgroundImage="yootheme/cache/5e/sicherheit_header-5ede6167.jpeg"
+        overlayColor="rgba(0, 0, 0, 0)"
+        sectionClass="uk-section-secondary uk-section-overlap uk-preserve-color uk-light"
+        titleClass="uk-heading-large uk-text-center !text-[5vw]"
+        enableScrollspy={true}
+        backgroundPosition="top-center"
+      />
 
       {/* Concept Section */}
       <div className="uk-section-default uk-section-overlap uk-section">
