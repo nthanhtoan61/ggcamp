@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
                 <p className="!text-white mt-5 text-justify">
                   Welcome to Go and Grow Camp, where adventure, learning, and
                   friendships come together. Join us for unforgettable experiences that
-                  inspire confidence, creativity, and connection.
+                  inspire confidence, creativity, and connection
                 </p>
                 <p className="!text-white mt-5">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5 inline-block align-middle mr-2 fill-yellow-400"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" /></svg>
@@ -91,8 +91,7 @@ export const Footer: React.FC = () => {
                   <li><Link href="/" className="text-white no-underline">Home</Link></li>
                   <li><Link href="/destinations" className="text-white no-underline">Activities</Link></li>
                   <li><Link href="/camp-profiles" className="text-white no-underline">Camp Locations</Link></li>
-                  <li><Link href="/info" className="text-white no-underline">Spa &amp; About Camp</Link></li>
-                  <li><Link href="/info/about" className="text-white no-underline">About</Link></li>
+                  <li><Link href="/info" className="text-white no-underline">About Camp</Link></li>
                   <li><Link href="/info/contact" className="text-white no-underline">Contact</Link></li>
                 </ul>
               </div>

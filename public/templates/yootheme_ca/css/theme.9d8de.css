@@ -3834,7 +3834,9 @@ select.uk-form-width-xsmall {
 .uk-accordion > :nth-child(n + 2) {
   margin-top: 15px;
 }
-
+.uk-nav-default .nav-text {
+  text-transform: none !important;
+}
 .uk-accordion-title {
   display: block;
   font-size: 15px;
