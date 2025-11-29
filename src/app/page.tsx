@@ -657,7 +657,7 @@ export default function HomePage() {
 
             <h2
               ref={creatingCampsTitleRef}
-              className={`!about-subtitle !text-[1.667vw] md:text-4xl !mt-0 font-bold transition-all duration-700 ${isCreatingCampsTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              className={`!about-subtitle !text-[2.5vw] !mt-0 !font-bold  transition-all duration-700 ${isCreatingCampsTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
               Creating Amazing Camps
             </h2>
