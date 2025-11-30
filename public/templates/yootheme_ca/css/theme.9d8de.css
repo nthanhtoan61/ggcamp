@@ -2579,14 +2579,14 @@ select.uk-form-width-xsmall {
 
 .uk-section-primary {
   --uk-inverse: light;
-  background: #9c5d00;
+  /* background: #9c5d00; */
   background-image: url("../../yootheme/vendor/assets/uikit-themes/master-fjord/images/section-background-image-noise.png");
   background-position-x: 50%;
 }
 
 .uk-section-secondary {
   --uk-inverse: dark;
-  background: #adcfe0;
+  /* background: #adcfe0; */
   background-image: url("../../yootheme/vendor/assets/uikit-themes/master-fjord/images/section-background-image-noise.png");
   background-position-x: 50%;
 }
@@ -3834,9 +3834,7 @@ select.uk-form-width-xsmall {
 .uk-accordion > :nth-child(n + 2) {
   margin-top: 15px;
 }
-.uk-nav-default .nav-text {
-  text-transform: none !important;
-}
+
 .uk-accordion-title {
   display: block;
   font-size: 15px;
@@ -6248,6 +6246,7 @@ ul.uk-nav-sub {
   bottom: 0;
   left: 0;
   z-index: 1010;
+  background: #000;
   opacity: 0;
   transition: opacity 0.15s linear;
   touch-action: pinch-zoom;

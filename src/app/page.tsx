@@ -43,7 +43,7 @@ export default function HomePage() {
   // Refs for author images and counter
   const authorImagesRef = useRef<HTMLDivElement>(null);
   const adventurerTextRef = useRef<HTMLParagraphElement>(null);
-    
+
   // Visibility states for each element
   const isAboutUsTitleVisible = useScrollTrigger(aboutUsTitleRef);
   const isCreatingCampsTitleVisible = useScrollTrigger(creatingCampsTitleRef);
@@ -51,12 +51,12 @@ export default function HomePage() {
   const isIconListVisible = useScrollTrigger(iconListRef);
   const isQuoteTextVisible = useScrollTrigger(quoteTextRef);
   const isLearnMoreButtonVisible = useScrollTrigger(learnMoreButtonRef);
-    
+
   // Visibility states for image elements
   const isMainImage1Visible = useScrollTrigger(mainImage1Ref);
   const isMainImage2Visible = useScrollTrigger(mainImage2Ref);
   const isExtraImageVisible = useScrollTrigger(extraImageRef);
-    
+
   // Visibility states for author images and counter
   const isAuthorImagesVisible = useScrollTrigger(authorImagesRef);
   const isAdventurerTextVisible = useScrollTrigger(adventurerTextRef);
@@ -415,8 +415,8 @@ export default function HomePage() {
   };
 
   return (
- 
-    
+
+
     <main id="tm-main">
       {/* Hero Section với Background Image và Filter Form */}
       <style
@@ -637,7 +637,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <p 
+              <p
                 ref={adventurerTextRef}
                 className={`!text-[1.667vw] !ml-4 !mt-4 text-gray-700 !font-semibold transition-all duration-700 ${isAdventurerTextVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               >
@@ -710,7 +710,7 @@ export default function HomePage() {
                   ref={quoteTextRef}
                   className={`about-quote !font-semibold text-black transition-all duration-700 ${isQuoteTextVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 >
-                  “Your Journey, Your Comfort,<br/> Your Adventure.”
+                  “Your Journey, Your Comfort,<br /> Your Adventure.”
                 </p>
 
                 <Link href="/info/about">
@@ -766,7 +766,7 @@ export default function HomePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1">
               <h2 className="uk-h2 uk-text-center@m uk-text-center">
-                <p className="!text-[5.vw] !font-bold">Activities</p>
+                <p className="!text-[2.5vw] !font-bold">Activities</p>
               </h2>
             </div>
           </div>
@@ -832,1220 +832,276 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      
-<div
-  className="uk-background-norepeat uk-background-center-center"
-  style={{
-    backgroundImage: `url(${getTemplateImageUrl("yootheme/banner/b8.jpg")})`,
-    minHeight: "800px",
-    width: "100%",
-    backgroundSize: "contain",
-    height: "300px",
-    backgroundPosition: "left center",
-    position: "relative",
-  }}
->
-  <div style={{
-    width:"100%",
-    height:"100%",
-    position: "relative",
-  }}>
-    <div 
-      className="uk-text-center" 
-      style={{
-        position: "absolute",
-        top: "50%",
-        right: "0",
-        transform: "translateY(-50%)",
-        backgroundColor: "#f9f9f7",
-        padding: "3vw 4vw",
-        borderRadius: "0",
-        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
-        zIndex: 10,
-        border: "2px solid #f0f0f0",
-        height: "80%",
-        width: "70%",
-        marginRight: "1.5vw",
-      }}
-    >
-      <div style={{
-        width:"100%",
-        height:"100px"
-      }}>
-        <div style={{paddingLeft: "10px"}}>
-          <h2 style={{
-            textAlign: "left",
-            fontFamily: "Arial, sans-serif",
-            fontSize: "1.5vw",
-            fontWeight: "600",
-            marginBottom: "30px",
-            whiteSpace: "nowrap",
-            letterSpacing: "0px"
-          }}>02&nbsp;&nbsp;&nbsp;&nbsp;——&nbsp;&nbsp;&nbsp;&nbsp;Who&nbsp;We&nbsp;Are</h2>
-          
-          <h1 style={{
-            textAlign: "left",
-            fontFamily: "'Prompt', sans-serif",
-            fontSize: "3vw",
-            fontWeight: "600",
-            whiteSpace: "nowrap",
-            letterSpacing: "0px",
-            lineHeight: "0.9"
-          }}>Company Mission & Vision</h1>
-        </div>
 
-{/* 3 div hình vuông nằm ngang */}
-{/* 3 div hình vuông nằm ngang */}
-<div style={{
-  display: "flex",
-  justifyContent: "space-between",
-  gap: "1vw",
-  marginTop: "2vw"
-}}>
-  {/* Mission Box */}
-  <div style={{
-    flex: "1",
-    minHeight: "10vw",
-    backgroundColor: "#f9f9f7",
-    padding: "1vw",
-    display: "flex",
-    flexDirection: "column",
-    textAlign: "left",
-    transition: "all 0.3s ease",
-    cursor: "pointer",
-    borderRadius: "0.5vw",
-    
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundColor = "#f9f9f7";
-    e.currentTarget.style.boxShadow = "none";
-  }}>
-    {/* Mission Icon - Target/Compass */}
-    <div style={{
-      width: "3vw",
-      height: "3vw",
-      backgroundColor: "#9c5d00",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      marginBottom: "0.75vw",
-      borderRadius: "0.6vw",
-      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
-    }}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <circle cx="12" cy="12" r="6"/>
-        <circle cx="12" cy="12" r="2"/>
-        <line x1="12" y1="2" x2="12" y2="6"/>
-        <line x1="12" y1="18" x2="12" y2="22"/>
-        <line x1="2" y1="12" x2="6" y2="12"/>
-        <line x1="18" y1="12" x2="22" y2="12"/>
-      </svg>
-    </div>
-    <h3 style={{
-      fontFamily: "Arial, sans-serif",
-      fontSize: "1.5vw",
-      fontWeight: "700",
-      marginBottom: "0.75vw",
-      color: "#333"
-    }}>Our Mission</h3>
-    <p style={{
-      fontFamily: "Arial, sans-serif",
-      fontSize: "1vw",
-      fontWeight: "400",
-      color: "#666",
-      lineHeight: "1.5",
-      flex: "1"
-    }}>We provide a safe, inclusive, and inspiring environment where children and teens can explore, learn, and grow through adventure, creativity, and friendship.</p>
-    <div style={{
-      width: "4.25vw",
-      height: "0.15vw",
-      margin: "0px",
-      backgroundColor: "#9c5d00",
-    }}></div>
-  </div>
-
-  {/* Vision Box */}
-  <div style={{
-    flex: "1",
-    minHeight: "10vw",
-    backgroundColor: "#f9f9f7",
-    padding: "1vw",
-    display: "flex",
-    flexDirection: "column",
-    textAlign: "left",
-    transition: "all 0.3s ease",
-    cursor: "pointer",
-    borderRadius: "0.5vw",
-    
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundColor = "#f9f9f7";
-    e.currentTarget.style.boxShadow = "none";
-  }}>
-    {/* Vision Icon - Eye */}
-    <div style={{
-      width: "3vw",
-      height: "3vw",
-      backgroundColor: "#9c5d00",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      marginBottom: "0.75vw",
-      borderRadius: "0.6vw",
-      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
-    }}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-        <circle cx="12" cy="12" r="3"/>
-      </svg>
-    </div>
-    <h3 style={{
-      fontFamily: "Arial, sans-serif",
-      fontSize: "1.5vw",
-      fontWeight: "700",
-      marginBottom: "0.75vw",
-      color: "#333"
-    }}>Our Vision</h3>
-    <p style={{
-      fontFamily: "Arial, sans-serif",
-      fontSize: "1vw",
-      fontWeight: "400",
-      color: "#666",
-      lineHeight: "1.5",
-      flex: "1"
-    }}>We aim to be a leading international camp experience that nurtures onfident, responsible, and compassionate young individuals connected to nature and their communities.</p>
-    <div style={{
-      width: "4.25vw",
-      height: "0.15vw",
-      margin: "0px",
-      backgroundColor: "#9c5d00",
-    }}></div>
-  </div>
-
-  {/* Goals Box */}
-  <div style={{
-    flex: "1",
-    minHeight: "10vw",
-    backgroundColor: "#f9f9f7",
-    padding: "1vw",
-    display: "flex",
-    flexDirection: "column",
-    textAlign: "left",
-    transition: "all 0.3s ease",
-    cursor: "pointer",
-    borderRadius: "0.5vw",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundColor = "#ffffff";
-    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundColor = "#f9f9f7";
-    e.currentTarget.style.boxShadow = "none";
-  }}>
-    {/* Goals Icon - Trophy/Flag */}
-    <div style={{
-      width: "3vw",
-      height: "3vw",
-      backgroundColor: "#9c5d00",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      marginBottom: "0.75vw",
-      borderRadius: "0.6vw",
-      boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
-    }}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-        <path d="M4 22h16"/>
-        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
-      </svg>
-    </div>
-    <h3 style={{
-      fontFamily: "Arial, sans-serif",
-      fontSize: "1.5vw",
-      fontWeight: "700",
-      marginBottom: "0.75vw",
-      color: "#333"
-    }}>Company Goals</h3>
-    <p style={{
-      fontFamily: "Arial, sans-serif",
-      fontSize: "1vw",
-      fontWeight: "400",
-      color: "#666",
-      lineHeight: "1.5",
-      flex: "1"
-    }}>Through hands-on activities, community service, and outdoor adventures, we help campers build independence, teamwork, and lifelong memories.</p>
-    <div style={{
-      width: "4.25vw",
-      height: "0.15vw",
-      margin: "0px",
-      backgroundColor: "#9c5d00",
-    }}></div>
-  </div>
-</div>
-       
-      </div>
-    </div>
-  </div>
-</div>
-
-      {/* Go and Grow Camp has organised section */}
-      <div className="uk-section-default uk-section uk-section-small uk-padding-remove-bottom">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <h2 className="uk-h2 uk-text-center@m uk-text-center !font-bold">
-                <p>
-                  Go and Grow Camp has organised international summer camps and
-                  outdoor educational school trips in various countries
-                </p>
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Quote Section with Jan Vieth */}
       <div
-        className="uk-section-muted uk-section-overlap uk-section uk-section-small"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
+        className="uk-background-norepeat uk-background-center-center"
+        style={{
+          backgroundImage: `url(${getTemplateImageUrl("yootheme/banner/b8.jpg")})`,
+          minHeight: "800px",
+          width: "100%",
+          backgroundSize: "contain",
+          height: "300px",
+          backgroundPosition: "left center",
+          position: "relative",
+        }}
       >
-        <div className="uk-container uk-container-large">
+        <div style={{
+          width: "100%",
+          height: "100%",
+          position: "relative",
+        }}>
           <div
-            className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge"
-            uk-grid=""
+            className="uk-text-center"
+            style={{
+              position: "absolute",
+              top: "50%",
+              right: "0",
+              transform: "translateY(-50%)",
+              backgroundColor: "#f9f9f7",
+              padding: "3vw 4vw",
+              borderRadius: "0",
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+              zIndex: 10,
+              border: "2px solid #f0f0f0",
+              height: "80%",
+              width: "70%",
+              marginRight: "1.5vw",
+            }}
           >
-            <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
-              <div className="uk-panel uk-width-1-1">
-                <div
-                  className="uk-margin uk-text-center@s uk-text-center"
-                  uk-scrollspy-class="uk-animation-fade"
-                >
-                  <Image
-                    src={getTemplateImageUrl("yootheme/banner/b1.jpg")}
-                    width={250}
-                    height={166}
-                    className="el-image"
-                    alt="Jan Vieth, Founder & General Manager of Go and Grow"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
-              <div className="uk-panel uk-width-1-1">
-                <blockquote
-                  className="uk-margin-medium uk-text-left@m uk-text-center"
-                  uk-scrollspy-class=""
-                >
-                  <p>
-                    Regardless of which country or culture a child, teen or
-                    staff member comes from – they should all feel comfortable
-                    together and experience a unique and unforgettable time at
-                    camp.
-                  </p>
-                  <footer className="el-footer">
-                    <cite className="el-author">Go and Grow</cite>
-                  </footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            <div style={{
+              width: "100%",
+              height: "100px"
+            }}>
+              <div style={{ paddingLeft: "10px" }}>
+                <h2 style={{
+                  textAlign: "left",
+                  fontFamily: "Arial, sans-serif",
+                  fontSize: "1.5vw",
+                  fontWeight: "600",
+                  marginBottom: "30px",
+                  whiteSpace: "nowrap",
+                  letterSpacing: "0px"
+                }}>02&nbsp;&nbsp;&nbsp;&nbsp;——&nbsp;&nbsp;&nbsp;&nbsp;Who&nbsp;We&nbsp;Are</h2>
 
-      {/* Holidays that do more section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Holidays that do more – International language and specialty
-                  camps for kids & teens
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Outdoor adventures, language travel & unforgettable
-                    experiences in Germany, England & Spain – bilingual,
-                    media-free & full of camp vibes.
-                  </p>
-                  <p>
-                    For over 20 years, Go and Grow has stood for international
-                    summer camps that truly connect kids and teens. Founded by
-                    Jan Vieth and inspired by Canadian camp life, we bring young
-                    people from all over the world together – to learn, grow,
-                    and explore.
-                  </p>
-                  <p>
-                    Our language camps, sports camps, and specialty camps
-                    combine nature, community, and real learning by living.
-                    Here, you don't just learn a language – you learn life
-                    itself: outdoors, together, for real.
-                  </p>
-                  <p>
-                    Because with us, it's not just about what you learn – it's
-                    about what you experience.
-                  </p>
-                </div>
+                <h1 style={{
+                  textAlign: "left",
+                  fontFamily: "'Prompt', sans-serif",
+                  fontSize: "3vw",
+                  fontWeight: "600",
+                  whiteSpace: "nowrap",
+                  letterSpacing: "0px",
+                  lineHeight: "0.9"
+                }}>Company Mission & Vision</h1>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Holiday camps for every season section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Holiday camps for every season | Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Our outdoor, sports, and language camps run all year round –
-                    in Germany, England, and Spain.
-                    <br />
-                    When will your next adventure begin?
-                  </p>
-                  <p>
-                    Spring, Easter & Whitsun – kick off your holidays full of
-                    energy!
-                    <br />
-                    Our spring camps add some excitement to the short breaks:
-                    bilingual, active, and packed with that true camp feeling –
-                    from tent camps to language holidays in Germany or Spain.
-                    <br />
-                    Perfect to boost your English, Spanish, or German skills –
-                    in class or out in nature during epic outdoor adventures.
-                  </p>
-                  <p>
-                    Summer, summer camps – ready to go?
-                    <br />
-                    When the sun's out, Go and Grow is in its element!
-                    <br />
-                    Our summer camps in Germany, Spain, and England offer
-                    endless variety: watersports, horseback riding, climbing,
-                    football, creative camps, and so much more.
-                    <br />
-                    With our bilingual teamers, you'll improve your English
-                    naturally – the best prep for a confident school start!
-                    <br />
-                    Or dive straight into language and adventure with our
-                    English and Spanish language camps and youth travel programs
-                    in Germany, Barcelona, or England.
-                  </p>
-                  <p>
-                    Autumn, fall camps – days full of action?
-                    <br />
-                    Our autumn camp in Walsrode has become a true tradition –
-                    authentic Canadian camp life with kids from all over the
-                    world.
-                    <br />
-                    With over 20 activities, international teamers, and special
-                    programs like Husky, horseback riding, or English camps,
-                    there's something for everyone.
-                  </p>
-                  <p>
-                    Winter, winter break – when the world slows down?
-                    <br />
-                    We're busy creating new ideas, training our teamers, and
-                    planning fresh adventures – ready to welcome you back to
-                    camp next season.
-                  </p>
-                  <p>
-                    Find your perfect camp:
-                    <br />→ Easter camp, Whitsun camp, summer camp, autumn camp
-                    –
-                    <Link href="/camp-profiles" target="_blank" rel="noopener">
-                      your next adventure is waiting!
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              {/* 3 div hình vuông nằm ngang */}
+              {/* 3 div hình vuông nằm ngang */}
+              <div style={{
+                display: "flex",
+                justifyContent: "space-between",
+                gap: "1vw",
+                marginTop: "2vw"
+              }}>
+                {/* Mission Box */}
+                <div style={{
+                  flex: "1",
+                  minHeight: "10vw",
+                  backgroundColor: "#f9f9f7",
+                  padding: "1vw",
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "left",
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
+                  borderRadius: "0.5vw",
 
-      {/* The perfect camp for every age group section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  The perfect camp for every age group
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    At Go and Grow, kids and teens from all over the world come
-                    together – aged 7 to 17. Every age group brings its own
-                    unique spirit, and not every camp fits everyone – that's why
-                    we offer a wide range of summer camps and youth travel
-                    programs for every age and interest!
-                  </p>
-                  <p>
-                    Many start with our kids' camps and holiday programs,
-                    experiencing for the first time what it's like to spend a
-                    week away from home. It's a chance to grow courage,
-                    confidence, and real friendships – that's pure camp life.
-                    Our daily structure and activities are tailored to younger
-                    campers, helping them feel safe, supported, and right at
-                    home.
-                  </p>
-                  <p>
-                    For older participants, we offer summer camps, specialty
-                    programs, and international youth trips that encourage
-                    independence, adventure, and new connections – always
-                    active, inspiring, and full of opportunities to grow.
-                  </p>
-                  <p>
-                    Depending on the location and program, age groups mix
-                    differently – sometimes younger, sometimes older, but always
-                    international. In our outdoor, language, and adventure
-                    camps, everyone finds the perfect space to learn, explore,
-                    and have fun.
-                  </p>
-                  <p>
-                    Our{" "}
-                    <Link href="/camp-profiles" target="_blank" rel="noopener">
-                      specialty camps
-                    </Link>{" "}
-                    nurture talents, interests, and self-confidence – with no
-                    pressure, just plenty of motivation. Whether you're a
-                    first-time camper or already a seasoned pro, you'll be seen,
-                    supported, and appreciated – just as you are.
-                  </p>
-                  <p>
-                    Find your camp:
-                    <br />→ Discover the holiday camp that fits you best – and
-                    grow beyond your limits.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Specialty camps & adventure holidays section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Specialty camps & adventure holidays | Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Our outdoor, sports, and creative camps combine movement,
-                    community, and adventure – all powered by true passion.
-                    Whether you want to try something new, develop your talent,
-                    or simply experience unforgettable holidays, you'll find
-                    your personal highlight in our specialty camps.
-                  </p>
-                  <p>
-                    Choose from over 20 different specialty camps across
-                    multiple locations – from action to mindfulness, from sports
-                    to language. The following examples give you just a taste of
-                    our diverse camp world:
-                  </p>
-                  <p>
-                    <Link
-                      href="/camp-profiles/soccer"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Football Camp:
-                    </Link>{" "}
-                    Train with real coaches from our partner clubs, boost your
-                    skills, team spirit, and game understanding – all in an
-                    authentic camp atmosphere.
-                    <br />
-                    <Link
-                      href="/camp-profiles/multi-water-adventure"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Multiwater Camp:
-                    </Link>{" "}
-                    Sailing, windsurfing, diving, or SUP – it's all about sun,
-                    waves, and endless water fun.
-                    <br />
-                    <Link
-                      href="/camp-profiles/climbing"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Climbing Camp:
-                    </Link>{" "}
-                    Big climbs, high ropes, and our legendary climbing park –
-                    with experienced guides, you'll find out what you're truly
-                    capable of.
-                    <br />
-                    <Link
-                      href="/camp-profiles/horseback-riding"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Riding Camp:
-                    </Link>{" "}
-                    For all horse lovers – from grooming and care to riding
-                    technique. Intensive, warm-hearted, and full of horse
-                    passion.
-                    <br />
-                    <Link
-                      href="/camp-profiles/husky-camp"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Husky Camp:
-                    </Link>{" "}
-                    Connection, trust, and responsibility – experience pure
-                    energy side by side with our huskies. Action, mindfulness,
-                    and teamwork combined.
-                    <br />
-                    <Link
-                      href="/camp-profiles/senior-plus-leadership"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Leadership Camp
-                    </Link>
-                    <strong>:</strong> For teens ready to grow beyond themselves
-                    – with team challenges, communication training, and a
-                    wilderness hike that'll definitely push you out of your
-                    comfort zone.
-                  </p>
-                  <p>
-                    And if you don't choose a specialty camp? No worries! Every
-                    Go and Grow program includes our signature mix of{" "}
-                    <Link
-                      href="/camp-profiles/adventure-sports-creative"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      adventure, sports, and creativity
-                    </Link>{" "}
-                    – designed to spark movement, imagination, and team spirit
-                    for every age and interest.
-                  </p>
-                  <p>
-                    Because at Go and Grow, one thing's always true: no matter
-                    what you choose, you'll discover new things, build
-                    friendships, and make memories that last a lifetime.
-                  </p>
-                  <p>
-                    <strong>Find your specialty camp:</strong>
-                    <br />→ Football, watersports, horseback riding, huskies,
-                    climbing, or leadership –
-                    <Link href="/camp-profiles" target="_blank" rel="noopener">
-                      your adventure is waiting!
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Language camps & adventure trips section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Language camps & adventure trips | Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    At Go and Grow, language isn't just taught – it's lived. We
-                    go beyond vocabulary and grammar to focus on real-life
-                    communication, culture, and adventure – true Learning by
-                    Living.
-                  </p>
-                  <p>
-                    Our language programs take place in Germany, England, and
-                    Spain – for all ages and levels. Whether you're just
-                    starting with English or preparing for the TOEFL®, we'll
-                    help you grow from where you are.
-                  </p>
-                  <p>
-                    Language is more than grammar drills. Our native-speaking
-                    teamers take you out of the classroom and into real
-                    experiences: playing football in English, exploring cities
-                    in Spanish, connecting with locals – that's how your
-                    language holiday becomes a true adventure trip.
-                  </p>
-                  <p>
-                    In{" "}
-                    <Link
-                      href="/destinations/en-england-bath-university"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Bath
-                    </Link>{" "}
-                    and Cornwall, you'll enjoy multi-day excursions to London.
-                    In{" "}
-                    <Link
-                      href="/destinations/en-spain-barcelona"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Barcelona
-                    </Link>
-                    , you're right in the heart of the city. And our German
-                    locations are hand-picked to feel just as adventurous.
-                  </p>
-                  <p>
-                    <strong>Program overview:</strong>
-                    <br />•{" "}
-                    <Link
-                      href="/camp-profiles/englischcamps"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      English Classic
-                    </Link>{" "}
-                    – practical, everyday English with native coaches
-                    <br />•{" "}
-                    <Link
-                      href="/camp-profiles/german-camps"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      German Classic
-                    </Link>{" "}
-                    – hands-on learning for beginners & advanced learners
-                    <br />•{" "}
-                    <Link
-                      href="/camp-profiles/spanishcourse"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Spanish Classic
-                    </Link>{" "}
-                    – experience language, sunshine, and culture
-                    <br />•{" "}
-                    <Link
-                      href="/camp-profiles/englisch-toefl"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      TOEFL® Course
-                    </Link>{" "}
-                    – focused exam preparation with intensive training
-                  </p>
-                  <p>
-                    <strong>Find your language camp:</strong>
-                    <br />→
-                    <Link
-                      href="/camp-profiles/language-camps"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      English, Spanish, or German
-                    </Link>{" "}
-                    – in Germany, England, or Spain. Language, culture,
-                    adventure – all in one camp experience!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* School trips & group travel section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  School trips & group travel with Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Whether it's a school trip, group travel, or project days –
-                    at Go and Grow, students aged 7 to 17 experience
-                    unforgettable days full of teamwork, outdoor fun, and
-                    international spirit.
-                  </p>
-                  <p>
-                    Our proven camp concept is perfectly tailored for school
-                    groups:
-                  </p>
-                  <p>
-                    • <strong>Age-appropriate programs</strong>, clear daily
-                    routines, and diverse activities help every class grow
-                    closer together.
-                    <br />• Whether it's{" "}
-                    <strong>
-                      outdoor challenges, creative workshops, or teambuilding
-                      programs
-                    </strong>{" "}
-                    – at Camp Adventure, it's all about connection and
-                    collaboration.
-                    <br />• Teachers can relax: our internationally trained
-                    teamers take care of supervision and educational guidance,
-                    building confidence and strengthening group bonds.
-                  </p>
-                  <p>
-                    That's how every school trip becomes a true adventure
-                    journey – combining community, exploration, and learning.
-                  </p>
-                  <p>
-                    Our locations in{" "}
-                    <strong>Germany, England, and Spain</strong> offer the
-                    perfect setting: spacious outdoor areas, a wide range of
-                    activities, modern facilities, and plenty of room for real
-                    camp life.
-                  </p>
-                  <p>
-                    We also welcome <strong>international schools</strong>!
-                    Together, we create learning spaces where cultures,
-                    languages, and perspectives meet.
-                    <br />
-                    Openness and global exchange are part of our DNA – here, the
-                    world becomes tangible on a small scale: kids and teens from
-                    over 70 nations come together, learn from one another, and
-                    discover what global community truly means.
-                  </p>
-                  <p>
-                    <strong>Ready for an extraordinary school trip?</strong>
-                    <br />→{" "}
-                    <Link href="/schooltrips" target="_blank" rel="noopener">
-                      Learn more about our group programs
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Family weekends & parent-child camps section */}
-      <div className="uk-section-default uk-section uk-section-xsmall">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Family weekends & parent-child camps at Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Real camp life – this time, together!
-                    <br />
-                    At our family weekends, you'll enjoy three days full of
-                    adventure, campfires, nature, and connection. Whether it's
-                    canoeing, climbing, swimming, stand-up paddling, or archery
-                    – a fun-filled program awaits you from morning till night.
-                  </p>
-                  <p>
-                    The best part? You don't have to plan a thing!
-                    Accommodation, meals, and activities are all included – true
-                    to the Go and Grow motto: arrive, relax, experience.
-                  </p>
-                  <p>
-                    Our international teamers create the perfect camp vibe,
-                    guide you through every activity, and make sure it all feels
-                    like a real vacation.
-                    <br />
-                    Ideal for families who want to get a taste of camp life,
-                    spend quality time together, and share that unique Go and
-                    Grow feeling with their kids.
-                  </p>
-                  <p>
-                    Tip: We also offer <strong>father-child camps</strong> –
-                    perfect for creating lasting memories and sharing
-                    unforgettable adventures together.
-                  </p>
-                  <p>
-                    → Find your date &{" "}
-                    <Link
-                      href="/info/family-weekend"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      book your family weekend
-                    </Link>
-                    <br />→ Experience nature, adventure & togetherness – as a
-                    family
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Book your Holidaycamp CTA section */}
-      <div className="uk-section-default uk-section-overlap uk-section uk-padding-remove-top">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <div className="uk-panel uk-text-emphasis uk-margin">
-                  <p>
-                    Some holidays you forget. Others change you. At Go and Grow,
-                    you grow beyond yourself, discover new languages, cultures,
-                    and friends for life.
-                    <br />
-                    So – what's stopping you? Your next adventure is already
-                    waiting.
-                  </p>
-                </div>
-                <div className="uk-blend-difference uk-margin uk-text-center">
-                  <Link
-                    className="el-content uk-button uk-button-default"
-                    href="/booking"
-                  >
-                    Book your Holidaycamp
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* We love Camp section */}
-      <div
-        className="uk-section-muted uk-section-overlap uk-section"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
-      >
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-grid-medium uk-child-width-1-1 uk-grid-margin-medium">
-            <div className="uk-grid-item-match uk-flex-middle uk-width-1-1@m">
-              <div className="uk-panel uk-width-1-1">
-                <h4 className="uk-h2 uk-text-center !text-[2.22vw] !font-bold" uk-scrollspy-class="">
-                  <p>We love Camp</p>
-                </h4>
-                <div
-                  className="uk-divider-icon uk-width-medium uk-margin-auto"
-                  uk-scrollspy-class=""
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="uk-grid tm-grid-expand uk-grid-large uk-grid-margin-large"
-            uk-grid=""
-          >
-            <div className="uk-width-expand@m">
-              <div
-                className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
-                uk-scrollspy-class=""
-              >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
-                  Internationality
-                </h3>
-                <div className="el-content uk-panel uk-margin-top !text-black">
-                  <p>&nbsp;participants from more than 70 countries</p>
-                </div>
-              </div>
-              <div
-                className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
-                uk-scrollspy-class=""
-              >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
-                  Outdoors
-                </h3>
-                <div className="el-content uk-panel uk-margin-top !text-black">
-                  <p>feel the real nature in the best surroundings</p>
-                </div>
-              </div>
-            </div>
-            <div className="uk-width-medium@m">
-              <div className="uk-margin uk-text-center" uk-scrollspy-class="">
-                <Image
-                  src={getTemplateImageUrl(
-                    "yootheme/logo/logo.png"
-                  )}
-                  width={640}
-                  height={629}
-                  className="el-image"
-                  alt="Go and Grow"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="uk-width-expand@m">
-              <div
-                className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
-                uk-scrollspy-class=""
-              >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
-                  Friendship
-                </h3>
-                <div className="el-content uk-panel uk-margin-top !text-black">
-                  <p>make friends from all over the world</p>
-                </div>
-              </div>
-              <div
-                className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
-                uk-scrollspy-class=""
-              >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
-                  Challenge
-                </h3>
-                <div className="el-content uk-panel uk-margin-top !text-black">
-                  <p>leave your comfort zone, challenge yourself</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Join the Go and Grow team section */}
-      <div className="uk-section-default uk-section">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">Join the Go and Grow team</h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Since the very beginning, Go and Grow has stood for
-                    openness, diversity, and community – within our team, too!
-                    <br />
-                    People from all over the world work with us and grow with
-                    every season.
-                  </p>
-                  <p>
-                    We train our teamers ourselves – directly within the
-                    organization.
-                    <br />
-                    Our training follows Go and Grow's high standards in
-                    experiential education and is personally guided by founder
-                    Jan Vieth and our experienced trainers.
-                    <br />
-                    That's how we get to know every single teamer and build the
-                    trust that makes our camps so special.
-                  </p>
-                  <p>
-                    Whether as a <strong>counselor</strong>,{" "}
-                    <strong>camp leader</strong>, or <strong>trainer</strong>,
-                    you'll grow with us – take on responsibility, gain
-                    experience, and inspire kids from around the world.
-                  </p>
-                  <p>
-                    Grow with us – in the team, at camp, and in life.
-                    <br />→{" "}
-                    <Link href="/academy" target="_blank" rel="noopener">
-                      Learn more about our training programs
-                    </Link>
-                    <br />→{" "}
-                    <Link
-                      href="/academy/jobs#application"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Apply now and become part of the Camp Adventure family
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Partnerships & memberships section */}
-      <div
-        className="uk-section-default uk-section-overlap uk-position-relative"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-scale-up; delay: false;"
-      >
-        <div
-          data-src={getTemplateImageUrl(
-            "yootheme/cache/d1/background_campground-d13d89db.jpeg"
-          )}
-          uk-img=""
-          className="uk-background-norepeat uk-background-contain uk-background-bottom-center uk-section uk-section-small"
-          style={{
-            backgroundImage: `url(${getTemplateImageUrl(
-              "yootheme/cache/d1/background_campground-d13d89db.jpeg"
-            )})`,
-            backgroundSize: "contain",
-            backgroundPosition: "bottom center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.87)" }}
-          ></div>
-
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
-              <div className="uk-width-1-1@m">
-                <div
-                  className="uk-h5 uk-margin-small uk-text-center !text-[1.67vw] !font-semibold "
-                  uk-scrollspy-class="uk-animation-slide-top-medium"
-                >
-                  Go and Grow
-                </div>
-                <h2
-                  className="uk-h1 uk-margin-small uk-text-center !text-[5vw] !font-bold"
-                  uk-scrollspy-class="uk-animation-slide-bottom-medium"
-                >
-                  <p>Partnerships & memberships</p>
-                </h2>
-                <div
-                  className="uk-divider-icon uk-width-medium uk-margin-auto"
-                  uk-scrollspy-class=""
-                ></div>
-              </div>
-            </div>
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <div className="uk-margin uk-text-center">
-                  <div
-                    className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-3@l uk-grid-collapse uk-grid-match"
-                    uk-grid=""
-                  >
-                    <div>
-                      <div
-                        className="el-item uk-flex uk-flex-column"
-                        uk-scrollspy-class=""
-                      >
-                        <a
-                          className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
-                          href="https://simsswiss.ch/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <Image
-                            src={getTemplateImageUrl("yootheme/logo/sims.jpg")}
-                            width={120}
-                            height={120}
-                            alt="Sims"
-                            loading="lazy"
-                            className="el-image"
-                            style={{ display: "block", margin: "0 auto" }}
-                          />
-                        </a>
-                      </div>
-                    </div>
-                    <div>
-                      <div
-                        className="el-item uk-flex uk-flex-column"
-                        uk-scrollspy-class=""
-                      >
-                        <a
-                          className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
-                          href="#"
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <Image
-                            src={getTemplateImageUrl(
-                              "yootheme/logo/terranova.png"
-                            )}
-                            width={178}
-                            height={120}
-                            alt="Terra Nova"
-                            loading="lazy"
-                            className="el-image"
-                            style={{ display: "block", margin: "0 auto" }}
-                          />
-                        </a>
-                      </div>
-                    </div>
-                    <div>
-                      <div
-                        className="el-item uk-flex uk-flex-column"
-                        uk-scrollspy-class=""
-                      >
-                        <a
-                          className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
-                          href="#"
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <Image
-                            src={getTemplateImageUrl("yootheme/logo/lrn.png")}
-                            width={120}
-                            height={120}
-                            alt="LRN"
-                            loading="lazy"
-                            className="el-image"
-                            style={{ display: "block", margin: "0 auto" }}
-                          />
-                        </a>
-                      </div>
-                    </div>
-                    <div>
-                      <div
-                        className="el-item uk-flex uk-flex-column"
-                        uk-scrollspy-class=""
-                      >
-                        <a
-                          className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
-                          href="#"
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <Image
-                            src={getTemplateImageUrl(
-                              "yootheme/logo/salazar.jpg"
-                            )}
-                            width={112}
-                            height={120}
-                            alt="Salazar"
-                            loading="lazy"
-                            className="el-image"
-                            style={{ display: "block", margin: "0 auto" }}
-                          />
-                        </a>
-                      </div>
-                    </div>
+                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#ffffff";
+                    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#f9f9f7";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}>
+                  {/* Mission Icon - Target/Compass */}
+                  <div style={{
+                    width: "3vw",
+                    height: "3vw",
+                    backgroundColor: "#9c5d00",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "0.75vw",
+                    borderRadius: "0.6vw",
+                    boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <circle cx="12" cy="12" r="6" />
+                      <circle cx="12" cy="12" r="2" />
+                      <line x1="12" y1="2" x2="12" y2="6" />
+                      <line x1="12" y1="18" x2="12" y2="22" />
+                      <line x1="2" y1="12" x2="6" y2="12" />
+                      <line x1="18" y1="12" x2="22" y2="12" />
+                    </svg>
                   </div>
+                  <h3 style={{
+                    fontFamily: "Arial, sans-serif",
+                    fontSize: "1.5vw",
+                    fontWeight: "700",
+                    marginBottom: "0.75vw",
+                    color: "#333"
+                  }}>Our Mission</h3>
+                  <p style={{
+                    fontFamily: "Arial, sans-serif",
+                    fontSize: "1vw",
+                    fontWeight: "400",
+                    color: "#666",
+                    lineHeight: "1.5",
+                    flex: "1"
+                  }}>We provide a safe, inclusive, and inspiring environment where children and teens can explore, learn, and grow through adventure, creativity, and friendship.</p>
+                  <div style={{
+                    width: "4.25vw",
+                    height: "0.15vw",
+                    margin: "0px",
+                    backgroundColor: "#9c5d00",
+                  }}></div>
+                </div>
+
+                {/* Vision Box */}
+                <div style={{
+                  flex: "1",
+                  minHeight: "10vw",
+                  backgroundColor: "#f9f9f7",
+                  padding: "1vw",
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "left",
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
+                  borderRadius: "0.5vw",
+
+                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#ffffff";
+                    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#f9f9f7";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}>
+                  {/* Vision Icon - Eye */}
+                  <div style={{
+                    width: "3vw",
+                    height: "3vw",
+                    backgroundColor: "#9c5d00",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "0.75vw",
+                    borderRadius: "0.6vw",
+                    boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                  </div>
+                  <h3 style={{
+                    fontFamily: "Arial, sans-serif",
+                    fontSize: "1.5vw",
+                    fontWeight: "700",
+                    marginBottom: "0.75vw",
+                    color: "#333"
+                  }}>Our Vision</h3>
+                  <p style={{
+                    fontFamily: "Arial, sans-serif",
+                    fontSize: "1vw",
+                    fontWeight: "400",
+                    color: "#666",
+                    lineHeight: "1.5",
+                    flex: "1"
+                  }}>We aim to be a leading international camp experience that nurtures onfident, responsible, and compassionate young individuals connected to nature and their communities.</p>
+                  <div style={{
+                    width: "4.25vw",
+                    height: "0.15vw",
+                    margin: "0px",
+                    backgroundColor: "#9c5d00",
+                  }}></div>
+                </div>
+
+                {/* Goals Box */}
+                <div style={{
+                  flex: "1",
+                  minHeight: "10vw",
+                  backgroundColor: "#f9f9f7",
+                  padding: "1vw",
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "left",
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
+                  borderRadius: "0.5vw",
+                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#ffffff";
+                    e.currentTarget.style.boxShadow = "0 0 1vw rgba(0,0,0,0.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#f9f9f7";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}>
+                  {/* Goals Icon - Trophy/Flag */}
+                  <div style={{
+                    width: "3vw",
+                    height: "3vw",
+                    backgroundColor: "#9c5d00",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "0.75vw",
+                    borderRadius: "0.6vw",
+                    boxShadow: "0 0.2vw 0.4vw rgba(156, 93, 0, 0.2)"
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4vw" height="1.4vw" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                      <path d="M4 22h16" />
+                      <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                      <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                      <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                    </svg>
+                  </div>
+                  <h3 style={{
+                    fontFamily: "Arial, sans-serif",
+                    fontSize: "1.5vw",
+                    fontWeight: "700",
+                    marginBottom: "0.75vw",
+                    color: "#333"
+                  }}>Company Goals</h3>
+                  <p style={{
+                    fontFamily: "Arial, sans-serif",
+                    fontSize: "1vw",
+                    fontWeight: "400",
+                    color: "#666",
+                    lineHeight: "1.5",
+                    flex: "1"
+                  }}>Through hands-on activities, community service, and outdoor adventures, we help campers build independence, teamwork, and lifelong memories.</p>
+                  <div style={{
+                    width: "4.25vw",
+                    height: "0.15vw",
+                    margin: "0px",
+                    backgroundColor: "#9c5d00",
+                  }}></div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </main>
-  
+
   );
 }

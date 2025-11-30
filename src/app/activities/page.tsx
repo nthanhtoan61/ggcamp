@@ -499,34 +499,34 @@ export default function CampProfilesPage() {
           {
             lat: 53.5597,
             lng: 9.9601,
-            title: "Camp Adventure Office - Hamburg",
+            title: "Go and Grow Camp Office - Hamburg",
           },
           {
             lat: 52.8625,
             lng: 9.5883,
-            title: "Camp Adventure Academy - Lüneburger Heide",
+            title: "Go and Grow Camp Academy - Lüneburger Heide",
           },
           {
             lat: 48.9701,
             lng: 13.1263,
-            title: "Camp Adventure - Bayerischer Wald",
+            title: "Go and Grow Camp - Bayerischer Wald",
           },
           {
             lat: 53.9246,
             lng: -3.00764,
-            title: "Camp Adventure - Rossall School",
+            title: "Go and Grow Camp - Rossall School",
           },
           {
             lat: 51.3802,
             lng: -2.36674,
-            title: "Camp Adventure - Bath University",
+            title: "Go and Grow Camp - Bath University",
           },
           {
             lat: 53.6279,
             lng: 10.687,
-            title: "Camp Adventure - Lauenburgische Seen",
+            title: "Go and Grow Camp - Lauenburgische Seen",
           },
-          { lat: 54.627, lng: 8.38935, title: "Camp Adventure - Amrum" },
+          { lat: 54.627, lng: 8.38935, title: "Go and Grow Camp - Amrum" },
         ];
 
         markers.forEach((marker) => {
@@ -1290,7 +1290,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
               {/* Fixed: text-lg on mobile, vw on desktop */}
               <p className="text-lg md:text-[1.7vw]">
-                My son (age 11) absolutely loved Camp Adventure! After two
+                My son (age 11) absolutely loved Go and Grow Camp! After two
                 disastrous camp experiences, this was our last attempt. I am so
                 glad he went! He said he had the time of his life and can&apos;t
                 wait to come back.
@@ -1902,109 +1902,6 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
           </div>
         </div>
       </section>
-
-      {/* Cooperations & Memberships Section */}
-      <div className="uk-section-default uk-section-overlap uk-position-relative">
-        <div
-          className="uk-background-norepeat uk-background-contain uk-background-bottom-center uk-section uk-section-large"
-          style={{
-            backgroundImage: `url(${getTemplateImageUrl(
-              "yootheme/cache/d1/background_campground-d13d89db.jpeg"
-            )})`,
-          }}
-        >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.87)" }}
-          ></div>
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
-              <div className="uk-width-1-1@m">
-                {/* Responsive text sizes */}
-                <div className="text-xl md:text-[2.5vw] uk-margin-small uk-text-center ">
-                  Camp Adventure
-                </div>
-                <div className="text-2xl md:text-[3vw] uk-margin-small uk-text-center">
-                  Cooperations & Memberships
-                </div>
-                <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
-              </div>
-            </div>
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <div className="uk-margin uk-text-center">
-                  <div
-                    className="uk-grid uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-collapse uk-grid-match"
-                    uk-grid=""
-                  >
-                    {[
-                      {
-                        img: "../../templates/yootheme/cache/98/reisenetz2-98f3b127.png",
-                        link: "https://www.reisenetz.org/",
-                        w: 120,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/7a/icf2-7a52c185.png",
-                        link: "http://www.campingfellowship.org/",
-                        w: 178,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/5f/toefl2-5f52dff4.png",
-                        link: "https://www.ets.org/toefl",
-                        w: 120,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/bd/kmdd2-bdeae52d.png",
-                        link: "https://www.kmdd.de/Home.htm",
-                        w: 112,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/f8/dofe2-f84c724b.png",
-                        link: "https://dofe-germany.de/",
-                        w: 362,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/00/erca2-0047e06a.png",
-                        link: "https://www.erca.uk/index.php/de/",
-                        w: 276,
-                        h: 120,
-                      },
-                    ].map((partner, idx) => (
-                      <div key={idx}>
-                        <div className="el-item uk-flex uk-flex-column">
-                          <a
-                            className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
-                            href={partner.link}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image
-                              src={getTemplateImageUrl(
-                                partner.img.replace("../../templates/", "")
-                              )}
-                              width={partner.w}
-                              height={partner.h}
-                              alt="Partner"
-                              className="el-image"
-                              loading="lazy"
-                              style={{ maxWidth: '100%', height: 'auto' }}
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Leaflet Scripts */}
       <Script
