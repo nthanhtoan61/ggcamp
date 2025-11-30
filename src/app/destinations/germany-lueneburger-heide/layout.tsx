@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "International Summer Camp in Northern Germany - Lüneburger Heide | Camp Adventure",
+  title: "International Summer Camp in Northern Germany - Lüneburger Heide | Go and Grow Camp",
   description:
     "International summer camp in Lüneburger Heide, Niedersachsen for children & teenagers from 7-17 years. Book now!",
 };

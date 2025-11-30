@@ -199,7 +199,7 @@ export default function ClimbingPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Brave teens conquer the climbing wall at the outdoor summer camp in Bavaria with Camp Adventure."
+                            alt="Brave teens conquer the climbing wall at the outdoor summer camp in Bavaria with Go and Grow Camp."
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -267,7 +267,7 @@ export default function ClimbingPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Large group of teenagers getting to know each other at Camp Adventure in the Bavarian Forest."
+                            alt="Large group of teenagers getting to know each other at Go and Grow Camp in the Bavarian Forest."
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -301,7 +301,7 @@ export default function ClimbingPage() {
                             )}
                             width={1260}
                             height={837}
-                            alt="Boys relaxing on water cushions in the outdoor pool – water fun at Camp Adventure summer camp."
+                            alt="Boys relaxing on water cushions in the outdoor pool – water fun at Go and Grow Camp summer camp."
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -481,11 +481,11 @@ export default function ClimbingPage() {
                             <strong>Well Protected for Your Adventure!</strong>
                             <br />
                             Whether it&apos;s minor mishaps or unexpected
-                            incidents — with our Camp Adventure insurance,
+                            incidents — with our Go and Grow Camp insurance,
                             you&apos;re fully covered.
                           </p>
                           <p>
-                            <em>Camp Adventure Insurance Package:</em>
+                            <em>Go and Grow Camp Insurance Package:</em>
                             <br />
                             Liability, accident, and health insurance for the
                             entire travel period.
@@ -508,12 +508,12 @@ export default function ClimbingPage() {
                             </strong>
                           </p>
                           <p>
-                            <em>Camp Adventure Trip Cancellation Guarantee:</em>
+                            <em>Go and Grow Camp Trip Cancellation Guarantee:</em>
                             <br />
                             Our guarantee against homesickness, illness & more.
                             Need to cancel your trip? No problem! With our
                             cancellation guarantee, you get a full refund of the
-                            Camp Adventure trip price — minus a deductible of
+                            Go and Grow Camp trip price — minus a deductible of
                             USD50 (Germany) or USD100 (England/Spain).
                             <br />✔ Valid until one day before the trip starts
                             <br />✔ Applies regardless of reason: illness,
@@ -589,7 +589,7 @@ export default function ClimbingPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/climbingreg"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

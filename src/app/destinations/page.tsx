@@ -144,7 +144,7 @@ export default function DestinationsPage() {
                 <p>
                   Our international Adventure, Sports & Language Camps in
                   Germany, England and Spain combine a welcoming, inclusive
-                  atmosphere with unique Camp Adventure energy! Fun, stress-free
+                  atmosphere with unique Go and Grow Camp energy! Fun, stress-free
                   language workshops and the mixture of original camp games
                   along with traditional sports lead to an unforgettable
                   experience. Join in and meet plenty of new friends your age

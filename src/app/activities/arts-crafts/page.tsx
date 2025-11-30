@@ -206,7 +206,7 @@ export default function ArtsCraftsPage() {
                     Create, experiment, be creative! Whether it&apos;s painting,
                     crafting, or DIY projects – you&apos;ll find just the right
                     spark for your ideas. An international community comes
-                    together here at Camp Adventure in Lüneburg!
+                    together here at Go and Grow Camp in Lüneburg!
                   </p>
                   <p>
                     Let your creative potential shine – we can&apos;t wait to
@@ -523,11 +523,11 @@ export default function ArtsCraftsPage() {
                           <h4>Stay Safe While You Explore!</h4>
                           <p>
                             From small scrapes to bigger surprises – with our
-                            Camp Adventure Insurance Package, you&apos;re
+                            Go and Grow Camp Insurance Package, you&apos;re
                             protected throughout your entire stay.
                           </p>
                           <p>
-                            Camp Adventure Insurance Package includes:
+                            Go and Grow Camp Insurance Package includes:
                             <br />
                             ✔ Comprehensive coverage: liability, accident, and
                             health insurance for the full duration of your camp
@@ -555,14 +555,14 @@ export default function ArtsCraftsPage() {
                             of personal insurance is required before your trip.
                           </p>
                           <p>
-                            Camp Adventure Travel Cancellation Guarantee
+                            Go and Grow Camp Travel Cancellation Guarantee
                             <br />
                             For peace of mind before your trip starts: If
                             something unexpected happens – like illness, exams,
                             or homesickness – you&apos;re covered.
                           </p>
                           <p>
-                            ✔ Full refund of the Camp Adventure fee (minus USD50
+                            ✔ Full refund of the Go and Grow Camp fee (minus USD50
                             for German camps or USD100 for camps in the UK and
                             Spain)
                             <br />
@@ -670,7 +670,7 @@ export default function ArtsCraftsPage() {
                 <div className="uk-margin-small-top">
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/creativewal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="100%"
                     height="800"
@@ -710,7 +710,7 @@ export default function ArtsCraftsPage() {
                     Create, experiment, be creative! Whether it&apos;s painting,
                     crafting, or DIY projects – you&apos;ll find just the right
                     spark for your ideas. Join a vibrant international community
-                    at Camp Adventure in Southern Germany, just a short trip
+                    at Go and Grow Camp in Southern Germany, just a short trip
                     from Munich and Nuremberg!
                   </p>
                   <p>
@@ -769,7 +769,7 @@ export default function ArtsCraftsPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Children on a canoeing trip through nature – outdoor language camp adventure with expert supervision in Regen"
+                            alt="Children on a canoeing trip through nature – outdoor language Go and Grow Camp with expert supervision in Regen"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -897,7 +897,7 @@ export default function ArtsCraftsPage() {
                 <div className="uk-margin-small-top">
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/creativereg"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="100%"
                     height="800"
@@ -922,7 +922,7 @@ export default function ArtsCraftsPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/creativewal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

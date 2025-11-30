@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
                       className="uk-logo uk-navbar-item"
                     >
                       <Image
-                        alt="Camp Adventure"
+                        alt="Go and Grow Camp"
                         loading="eager"
                         src={logoUrl}
                         width={100}
@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
                         className="uk-logo"
                       >
                         <Image
-                          alt="Camp Adventure"
+                          alt="Go and Grow Camp"
                           loading="eager"
                           src={logoUrl}
                           width={100}
@@ -348,7 +348,7 @@ export const Header: React.FC = () => {
               }}
             >
               <Image
-                alt="Camp Adventure"
+                alt="Go and Grow Camp"
                 loading="eager"
                 src={logoUrl}
                 width={100}
@@ -599,7 +599,7 @@ export const Header: React.FC = () => {
         <div className="uk-panel" id="module-tm-3">
           <Link href="/" aria-label="Back to home" className="uk-logo">
             <Image
-              alt="Camp Adventure"
+              alt="Go and Grow Camp"
               loading="eager"
               src={logoUrl}
               width={100}

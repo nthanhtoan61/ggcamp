@@ -102,7 +102,7 @@ export default function GermanyBayerischerWaldPage() {
                           {
                             lat: 48.9666,
                             lng: 13.1129,
-                            title: "Camp Adventure",
+                            title: "Go and Grow Camp",
                           },
                         ],
                         controls: true,
@@ -124,7 +124,7 @@ export default function GermanyBayerischerWaldPage() {
                   <template>
                     <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                        Camp Adventure
+                        Go and Grow Camp
                       </h3>
                       <div className="el-content uk-panel uk-margin-top">
                         <p>Starting location</p>
@@ -463,7 +463,7 @@ export default function GermanyBayerischerWaldPage() {
                   <div style={{ textAlign: "center" }}>
                     <iframe
                       src="https://bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/regenac"
-                      title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                      title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                       allowFullScreen={true}
                       width="1000"
                       height="1700"

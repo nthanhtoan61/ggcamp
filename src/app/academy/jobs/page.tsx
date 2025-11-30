@@ -105,7 +105,7 @@ export default function JobsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1">
               <h2 className="uk-h1 uk-text-center">
-                Camp Adventure Academy in cooperation with Camp Europe e.V.
+                Go and Grow Camp Academy in cooperation with Camp Europe e.V.
                 offers positions for Camp Counselors in Europe and office
                 internships in Germany
               </h2>
@@ -136,7 +136,7 @@ export default function JobsPage() {
                       width={250}
                       height={166}
                       className="el-image"
-                      alt="Jan Vieth is the founder of Camp Adventure"
+                      alt="Jan Vieth is the founder of Go and Grow Camp"
                       loading="lazy"
                     />
                   </div>
@@ -152,7 +152,7 @@ export default function JobsPage() {
                 <div className="uk-panel uk-width-1-1">
                   <div className="uk-panel uk-margin" uk-scrollspy-class="">
                     <p>
-                      Welcome to Camp Adventure Academy in cooperation with our
+                      Welcome to Go and Grow Camp Academy in cooperation with our
                       partner Camp Europe e.V., a non-profit association that is
                       responsible for the recruiting of our teamers
                       (International Camp Counselors), we create an
@@ -217,7 +217,7 @@ export default function JobsPage() {
                   width={271}
                   height={271}
                   className="el-image"
-                  alt="Camp Adventure Academy - one of Europe's leading training centers in Outdoor Education"
+                  alt="Go and Grow Camp Academy - one of Europe's leading training centers in Outdoor Education"
                   loading="lazy"
                 />
               </div>
@@ -267,7 +267,7 @@ export default function JobsPage() {
                   camps in Germany, England, or Northern Ireland to
                   administration within our office in Hamburg. Whether
                   you&apos;re looking to step out of your comfort zone or hone
-                  your skills, Camp Adventure Academy is the place for you.
+                  your skills, Go and Grow Camp Academy is the place for you.
                 </p>
               </div>
             </div>
@@ -367,12 +367,12 @@ export default function JobsPage() {
                               Combined internship as a Teamer (international
                               Camp Counselor) in our camp & in office
                               administration with interesting insights into the
-                              organizational processes of Camp Adventure
+                              organizational processes of Go and Grow Camp
                               Academy. Discover what it takes to keep a Camp
                               Adventure running in high season. Train as a
                               Teamer (Camp Counselor) and immerse yourself into
                               the active environment on site and gain a deeper
-                              understanding of Camp Adventure.
+                              understanding of Go and Grow Camp.
                             </p>
                           </div>
                         </div>
@@ -420,11 +420,11 @@ export default function JobsPage() {
                     or love to cook, you are an enthusiastic writer and like to
                     create children&apos;s magazines, love climbing or crafts -
                     then you are exactly who we are looking for. Get carried
-                    away by our unique Camp Adventure spirit and spend an
+                    away by our unique Go and Grow Camp spirit and spend an
                     unforgettable summer as a teamer in our international camps.
                     Here is a first taste of our main teamer training which
                     takes place every year at the end of June at our flagship
-                    site, Camp Adventure Academy in the Lüneburger Heide.
+                    site, Go and Grow Camp Academy in the Lüneburger Heide.
                   </p>
                 </div>
               </div>
@@ -483,7 +483,7 @@ export default function JobsPage() {
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
                 <div className="el-item">
                   <a className="el-title uk-accordion-title" href="#">
-                    2 – 12 exciting weeks with Camp Adventure!
+                    2 – 12 exciting weeks with Go and Grow Camp!
                   </a>
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
@@ -596,7 +596,7 @@ export default function JobsPage() {
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
                 <div className="el-item">
                   <a className="el-title uk-accordion-title" href="#">
-                    2 – 12 lively weeks with Camp Adventure!
+                    2 – 12 lively weeks with Go and Grow Camp!
                   </a>
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
@@ -710,7 +710,7 @@ export default function JobsPage() {
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
                 <div className="el-item">
                   <a className="el-title uk-accordion-title" href="#">
-                    2 – 12 meaningful weeks with Camp Adventure!
+                    2 – 12 meaningful weeks with Go and Grow Camp!
                   </a>
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
@@ -829,7 +829,7 @@ export default function JobsPage() {
               <div uk-accordion="collapsible: true;" uk-scrollspy-class="">
                 <div className="el-item">
                   <a className="el-title uk-accordion-title" href="#">
-                    2 – 4 dynamic weeks with Camp Adventure! (from 18 years)
+                    2 – 4 dynamic weeks with Go and Grow Camp! (from 18 years)
                   </a>
                   <div className="uk-accordion-content">
                     <div className="el-content uk-panel">
@@ -838,7 +838,7 @@ export default function JobsPage() {
                         be part of or Mr & Mrs Clean team in our Luneburger
                         Heide (Walsrode) location. Join our international staff
                         in creating an unforgettable experience for everyone
-                        involved at Camp Adventure.
+                        involved at Go and Grow Camp.
                       </p>
                       <p>
                         <br /> Maybe there are no more counselor positions
@@ -972,7 +972,7 @@ export default function JobsPage() {
                       </ul>
                       <p>
                         <strong>
-                          Opportunities offered by Camp Adventure during the
+                          Opportunities offered by Go and Grow Camp during the
                           perennial leader program:
                         </strong>
                       </p>
@@ -1192,7 +1192,7 @@ export default function JobsPage() {
                         applicants. The training takes place on the premises of{" "}
                         <a href="mailto:https://www.google.com/maps/place/Camp+Adventure+Academy+GmbH/@52.8477966,9.4722473,15z/data=!4m2!3m1!1s0x0:0x98a82d59e2bd2e2c">
                           {" "}
-                          Camp Adventure Academy
+                          Go and Grow Camp Academy
                         </a>{" "}
                         in the Lüneburger Heide (Walsrode) on the following
                         dates:
@@ -1303,7 +1303,7 @@ export default function JobsPage() {
                       className="uk-h1 uk-text-left@m uk-text-center"
                       uk-scrollspy-class=""
                     >
-                      ... that is Camp Adventure
+                      ... that is Go and Grow Camp
                     </div>
                   </div>
                 </div>

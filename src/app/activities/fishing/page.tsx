@@ -372,7 +372,7 @@ export default function FishingPage() {
                             Heide!
                           </h4>
                           <p>
-                            Our Camp Adventure (Academy) in Walsrode is
+                            Our Go and Grow Camp (Academy) in Walsrode is
                             beautifully located in the Lüneburg Heath, right
                             between Bremen, Hamburg, and Hanover. Just a short
                             walk away, you&apos;ll find a charming northern
@@ -827,12 +827,12 @@ export default function FishingPage() {
                           <h4>Well Covered for Your Adventure!</h4>
                           <p>
                             Whether it&apos;s a small mishap or an unexpected
-                            incident – with our Camp Adventure insurance
+                            incident – with our Go and Grow Camp insurance
                             package, you&apos;re fully protected.
                           </p>
                           <p>
                             <strong>
-                              The Camp Adventure Insurance Package:
+                              The Go and Grow Camp Insurance Package:
                             </strong>
                             <br />
                             Liability, accident, and health insurance for the
@@ -857,13 +857,13 @@ export default function FishingPage() {
                           </p>
                           <p>
                             <strong>
-                              The Camp Adventure Travel Cancellation Guarantee:
+                              The Go and Grow Camp Travel Cancellation Guarantee:
                             </strong>
                             <br />
                             Our guarantee for homesickness, illness & more. Need
                             to cancel your trip? No problem! With our
                             cancellation guarantee, you&apos;ll get a full
-                            refund of the Camp Adventure travel price – minus a
+                            refund of the Go and Grow Camp travel price – minus a
                             deductible of USD50 (Germany) or USD100 (UK/Spain).
                             <br />
                             ✔ Valid until one day before the trip begins
@@ -886,7 +886,7 @@ export default function FishingPage() {
                     <div id="js-2_8" className="el-item jp_">
                       <a className="uk-accordion-title" href="#">
                         <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Book a fishing course at Camp Adventure
+                          Book a fishing course at Go and Grow Camp
                         </h3>
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
@@ -973,7 +973,7 @@ export default function FishingPage() {
                 >
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/fishingwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

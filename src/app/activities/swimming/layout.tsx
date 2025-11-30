@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Swimming Camps in Germany | Camp Adventure",
+  title: "Swimming Camps in Germany | Go and Grow Camp",
   description:
     "Swimming camps in Germany for children & teenagers from 7-17 years. Learn to swim or improve your skills!",
 };

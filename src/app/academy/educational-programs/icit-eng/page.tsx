@@ -347,7 +347,7 @@ export default function IcitEngPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Diverse international counselor team posing for a group photo at Camp Adventure summer camp"
+                            alt="Diverse international counselor team posing for a group photo at Go and Grow Camp summer camp"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -364,7 +364,7 @@ export default function IcitEngPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Teenagers in a group huddle during team-building activity at Camp Adventure youth camp"
+                            alt="Teenagers in a group huddle during team-building activity at Go and Grow Camp youth camp"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -381,7 +381,7 @@ export default function IcitEngPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Spacious tent camp on a grassy field in Walsrode at Camp Adventure summer camp"
+                            alt="Spacious tent camp on a grassy field in Walsrode at Go and Grow Camp summer camp"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -449,7 +449,7 @@ export default function IcitEngPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Happy female camp counselors enjoying a break at Camp Adventure summer camp in Walsrode"
+                            alt="Happy female camp counselors enjoying a break at Go and Grow Camp summer camp in Walsrode"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -592,7 +592,7 @@ export default function IcitEngPage() {
                                 Lüneburger Heide!
                               </h4>
                               <p>
-                                Our Camp Adventure (Academy) in Walsrode is
+                                Our Go and Grow Camp (Academy) in Walsrode is
                                 nestled in the beautiful Lüneburger Heide, right
                                 between Bremen, Hamburg, and Hannover. Just a
                                 short walk away, you&apos;ll find a charming
@@ -656,7 +656,7 @@ export default function IcitEngPage() {
                                 width={1080}
                                 height={720}
                                 className="el-image"
-                                alt="Spacious tent camp on a grassy field in Walsrode at Camp Adventure summer camp"
+                                alt="Spacious tent camp on a grassy field in Walsrode at Go and Grow Camp summer camp"
                                 loading="lazy"
                               />
                             </div>
@@ -715,7 +715,7 @@ export default function IcitEngPage() {
                                 width={1080}
                                 height={720}
                                 className="el-image"
-                                alt="Campers having fun with movement and warm-up games at Camp Adventure summer camp in the woods"
+                                alt="Campers having fun with movement and warm-up games at Go and Grow Camp summer camp in the woods"
                                 loading="lazy"
                               />
                             </div>
@@ -727,7 +727,7 @@ export default function IcitEngPage() {
                                 width={1080}
                                 height={720}
                                 className="el-image"
-                                alt="Camp Adventure staff having an outdoor team meeting surrounded by nature during summer camp"
+                                alt="Go and Grow Camp staff having an outdoor team meeting surrounded by nature during summer camp"
                                 loading="lazy"
                               />
                             </div>
@@ -888,7 +888,7 @@ export default function IcitEngPage() {
                                 width={1920}
                                 height={1280}
                                 className="el-image"
-                                alt="Camp counselors warmly welcoming children – dedicated Camp Adventure team for supervised holiday programs"
+                                alt="Camp counselors warmly welcoming children – dedicated Go and Grow Camp team for supervised holiday programs"
                                 loading="lazy"
                               />
                             </div>
@@ -1003,11 +1003,11 @@ export default function IcitEngPage() {
                           <h4>Adventure with Peace of Mind!</h4>
                           <p>
                             Whether it&apos;s minor mishaps or unexpected
-                            incidents – with our Camp Adventure Insurance
+                            incidents – with our Go and Grow Camp Insurance
                             Package, you&apos;re fully covered throughout your
                             stay.
                           </p>
-                          <p>Camp Adventure Insurance Package:</p>
+                          <p>Go and Grow Camp Insurance Package:</p>
                           <p>
                             Liability, accident, and health insurance for the
                             entire trip duration.
@@ -1031,12 +1031,12 @@ export default function IcitEngPage() {
                             Participants from outside the EU must submit proof
                             of their own insurance before traveling.
                           </p>
-                          <p>Camp Adventure Travel Cancellation Guarantee:</p>
+                          <p>Go and Grow Camp Travel Cancellation Guarantee:</p>
                           <p>
                             Our safety net for homesickness, illness &amp; more.
                             If you need to cancel your trip – no problem! With
                             our Travel Cancellation Guarantee, you&apos;ll get
-                            your full Camp Adventure fee refunded with a
+                            your full Go and Grow Camp fee refunded with a
                             deduction of 50,00 USD for the German camps or
                             100,00 USD for the british and spanish camps.
                           </p>
@@ -1082,7 +1082,7 @@ export default function IcitEngPage() {
                             your talents will be a great addition to our team!
                           </p>
                           <p>
-                            Book Now! And join the future Camp Adventure team!
+                            Book Now! And join the future Go and Grow Camp team!
                             🌞🏕️🎉
                           </p>
                         </div>
@@ -1213,7 +1213,7 @@ export default function IcitEngPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Diverse international counselor team posing for a group photo at Camp Adventure summer camp"
+                            alt="Diverse international counselor team posing for a group photo at Go and Grow Camp summer camp"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -1792,7 +1792,7 @@ export default function IcitEngPage() {
                                 width={1920}
                                 height={1280}
                                 className="el-image"
-                                alt="Camp counselors warmly welcoming children – dedicated Camp Adventure team for supervised holiday programs"
+                                alt="Camp counselors warmly welcoming children – dedicated Go and Grow Camp team for supervised holiday programs"
                                 loading="lazy"
                               />
                             </div>
@@ -1894,10 +1894,10 @@ export default function IcitEngPage() {
                       </a>
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
-                          <h4>Start Your Camp Adventure with Peace of Mind!</h4>
+                          <h4>Start Your Go and Grow Camp with Peace of Mind!</h4>
                           <p>
                             Whether it&apos;s illness, minor accidents, or
-                            unexpected events – our Camp Adventure Insurance
+                            unexpected events – our Go and Grow Camp Insurance
                             Package ensures you&apos;re well protected.
                           </p>
                           <p>
@@ -1976,7 +1976,7 @@ export default function IcitEngPage() {
                           </p>
                           <p>
                             <strong>Make this your year</strong> – kick off your
-                            Camp Adventure as a future team leader at the
+                            Go and Grow Camp as a future team leader at the
                             Leadership Camp in Bischofsgrün! 🌞🏕️🎉
                           </p>
                         </div>
@@ -2042,7 +2042,7 @@ export default function IcitEngPage() {
                   <div style={{ textAlign: "center" }}>
                     <iframe
                       src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/nobicit"
-                      title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                      title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                       allowFullScreen={true}
                       width="1000"
                       height="1700"

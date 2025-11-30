@@ -70,7 +70,7 @@ export default function FAQPage() {
                   className="text-[5vw] text-white font-bold uk-text-center drop-shadow-lg" 
                   uk-scrollspy-class=""
                 >
-                  Camp Adventure
+                  Go and Grow Camp
                 </div>
                 <div
                   className="uk-panel font-[Raleway] italic text-[1.5vw] text-white uk-margin uk-text-center drop-shadow-md"
@@ -513,7 +513,7 @@ export default function FAQPage() {
                                 <strong>Walsrode/Lüneburger Heide - Germany:</strong>
                               </p>
                               <p>
-                                Camp Adventure, Vethem 58, 29664 Walsrode, Germany
+                                Go and Grow Camp, Vethem 58, 29664 Walsrode, Germany
                               </p>
                               <p>
                                 <a href="mailto:walsrode@campadventure.de">
@@ -523,7 +523,7 @@ export default function FAQPage() {
                               <p>
                                 <strong>Regen/Bavarian Forest - Germany</strong>
                               </p>
-                              <p>Camp Adventure, Badstrasse 18, 94209 Regen</p>
+                              <p>Go and Grow Camp, Badstrasse 18, 94209 Regen</p>
                               <p>
                                 <a href="mailto:regen@campadventure.de">
                                   regen@campadventure.de
@@ -533,7 +533,7 @@ export default function FAQPage() {
                                 <strong>Barcelona - Spain</strong>
                               </p>
                               <p>
-                                BISC International Sailing Center, c/o Camp Adventure, Parc del Fòrum Sota plaça fotovoltàica, 08930 Sant Adrià de Besòs, Barcelona, Spanien
+                                BISC International Sailing Center, c/o Go and Grow Camp, Parc del Fòrum Sota plaça fotovoltàica, 08930 Sant Adrià de Besòs, Barcelona, Spanien
                               </p>
                               <p>
                                 <a href="mailto:barcelona@campadventure.de">
@@ -544,7 +544,7 @@ export default function FAQPage() {
                                 <strong>Bath - England</strong>
                               </p>
                               <p>
-                                University of Bath, c/o Camp Adventure, Claverton Down, Bath BA2 7AY, England
+                                University of Bath, c/o Go and Grow Camp, Claverton Down, Bath BA2 7AY, England
                               </p>
                               <p>
                                 <a href="mailto:england@campadventure.de">
@@ -619,7 +619,7 @@ export default function FAQPage() {
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
                             <div className="text-[0.9vw]! uk-panel rounded-b-lg" style={{ padding: '0 15px 15px 15px', backgroundColor: '#cbca7b', paddingLeft: '40px', }}>
                               <p>
-                                Camp Adventure attatches great importance to internationality. The participants and supervisors in our camps come from many different countries. Last year, for example, we had participants from over 60 different countries and counselors from 25 different nations. Of course, we don&apos;t know where they will come from this year. So we are at least as excited as you are.
+                                Go and Grow Camp attatches great importance to internationality. The participants and supervisors in our camps come from many different countries. Last year, for example, we had participants from over 60 different countries and counselors from 25 different nations. Of course, we don&apos;t know where they will come from this year. So we are at least as excited as you are.
                                 Through our office in Hamburg and our branch office in Canada, we reach motivated and committed counselors from all over the world. Canadian and Australian teamers can therefore be found as well as German or Spanish teamers.
                                 Due to the different experiences and cultural backgrounds an indescribably fantastic, international atmosphere is created.
                               </p>
@@ -1040,7 +1040,7 @@ export default function FAQPage() {
                             <div className="text-[0.9vw]! uk-panel rounded-b-lg" style={{ padding: '0 15px 15px 15px', backgroundColor: '#cbca7b', paddingLeft: '40px', }}>
                               <p>Dear parents</p>
                               <p>
-                                now it&apos;s almost time: In summer your child travels for the first time with Camp Adventure. Maybe it will be the first time that he travels alone without parents or relatives. As we are getting more and more questions, we have decided to put together a small package for you parents with little tips from experts to make everything as easy as possible for you and your child. Follow our tips and your child will have a fantastic holiday, have many new experiences and make friends from all over the world! All these tips have been developed together with the International Camping Fellowship. And the more you think your child will be a &quot;homesick candidate&quot; - or your child even claims to be one - the more you consider the following tips.
+                                now it&apos;s almost time: In summer your child travels for the first time with Go and Grow Camp. Maybe it will be the first time that he travels alone without parents or relatives. As we are getting more and more questions, we have decided to put together a small package for you parents with little tips from experts to make everything as easy as possible for you and your child. Follow our tips and your child will have a fantastic holiday, have many new experiences and make friends from all over the world! All these tips have been developed together with the International Camping Fellowship. And the more you think your child will be a &quot;homesick candidate&quot; - or your child even claims to be one - the more you consider the following tips.
                               </p>
                               <p>
                                 <span style={{ textDecoration: "underline" }}>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Travel Documents | Camp Adventure",
+  title: "Travel Documents | Go and Grow Camp",
   description:
     "Information about required travel documents for international participants.",
 };

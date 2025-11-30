@@ -199,7 +199,7 @@ export default function EnglischcampsPage() {
                           )}
                           width={1260}
                           height={840}
-                          alt="Group of kids participating in interactive English class at Camp Adventure language camp in Germany"
+                          alt="Group of kids participating in interactive English class at Go and Grow Camp language camp in Germany"
                           loading="lazy"
                           className="el-image uk-transition-opaque"
                         />
@@ -591,7 +591,7 @@ export default function EnglischcampsPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/englishclassicwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

@@ -5,9 +5,9 @@ import Image from "next/image";
 import { getTemplateImageUrl } from "@/lib/assets";
 
 export const metadata: Metadata = {
-  title: "Camp Adventure Academy - Outdoor Education at its best",
+  title: "Go and Grow Camp Academy - Outdoor Education at its best",
   description:
-    "Camp Adventure Academy is one of Europe's top Training Centres for educational Programs in Outdoor & Adventure ► Join us",
+    "Go and Grow Camp Academy is one of Europe's top Training Centres for educational Programs in Outdoor & Adventure ► Join us",
 };
 
 export default function AcademyPage() {
@@ -32,7 +32,7 @@ export default function AcademyPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
                 <div className="uk-heading-large uk-text-center" uk-scrollspy-class="">
-                  Camp Adventure Academy
+                  Go and Grow Camp Academy
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function AcademyPage() {
                   />
                 </div>
                 <h1 className="uk-text-center">
-                  The Camp Adventure Academy - one of Europe&apos;s leading
+                  The Go and Grow Camp Academy - one of Europe&apos;s leading
                   Training centres in Outdoor Education
                 </h1>
                 <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
@@ -190,14 +190,14 @@ export default function AcademyPage() {
                           )}
                           width={850}
                           height={850}
-                          alt="a map of the Camp Adventure Academy"
+                          alt="a map of the Go and Grow Camp Academy"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
                         <div className="uk-position-center uk-position-large uk-overlay-default">
                           <div className="uk-overlay uk-padding-large uk-width-large uk-margin-remove-first-child">
                             <h2 className="el-title uk-h5 uk-margin-top uk-margin-remove-bottom">
-                              Location of Camp Adventure Academy
+                              Location of Go and Grow Camp Academy
                             </h2>
                           </div>
                         </div>

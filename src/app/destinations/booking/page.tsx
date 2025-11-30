@@ -75,7 +75,7 @@ export default function DestinationsBookingPage() {
                       height="5700"
                       frameBorder="0"
                       allowFullScreen={true}
-                      title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                      title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                       style={{ maxWidth: "100%", width: "100%" }}
                     ></iframe>
                   </div>

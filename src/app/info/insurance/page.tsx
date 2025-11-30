@@ -44,7 +44,7 @@ export default function InsurancePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <div className="text-[3vw] text-[#292c3d] font-bold uk-margin-small uk-text-center">
-                Our Camp Adventure Insurance Package
+                Our Go and Grow Camp Insurance Package
               </div>
               <div className="text-[2.5vw] text-[#292c3d] uk-margin-small uk-text-center">
                 Liability, casualty and health insurance
@@ -71,7 +71,7 @@ export default function InsurancePage() {
                   Please note that all participants without an EU insurance
                   card/private health insurance or without a travel insurance
                   package have to be prepared to cover the costs for medical
-                  treatment themselves. Camp Adventure does not provide any
+                  treatment themselves. Go and Grow Camp does not provide any
                   advance payment for doctor&apos;s bills. Non EU residents who
                   do not book our insurance package have to submit a confirmation
                   of their travel insurance.
@@ -81,7 +81,7 @@ export default function InsurancePage() {
                 <a
                   className="el-content uk-button uk-button-primary text-[1vw]!"
                   title="Insurance confirmation 2020"
-                  href="https://www.campadventure.de/images/f_infos/versicherung/DrWalter_Camp Adventure_2024.pdf"
+                  href="https://www.campadventure.de/images/f_infos/versicherung/DrWalter_Go and Grow Camp_2024.pdf"
                   target="_blank"
                 >
                   further information
@@ -98,14 +98,14 @@ export default function InsurancePage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <div className="text-[2.5vw] text-[#292c3d] uk-text-center">
-                Camp Adventure Travel Cancellation Guarantee
+                Go and Grow Camp Travel Cancellation Guarantee
               </div>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
               <div className="uk-margin uk-text-center">
                 <a
                   className="el-content uk-button uk-button-primary text-[1vw]!"
                   title="Travel Cancellation Guarantee"
-                  href="https://www.campadventure.de/images/f_infos/versicherung/Camp Adventures Garantie gegen Heimweh_2025.pdf"
+                  href="https://www.campadventure.de/images/f_infos/versicherung/Go and Grow Camps Garantie gegen Heimweh_2025.pdf"
                   target="_blank"
                 >
                   further information
@@ -132,7 +132,7 @@ export default function InsurancePage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
               <div className="uk-width-1-1@m">
                 <div className="text-[2.5vw] text-[#292c3d] font-bold uk-margin-small uk-text-center" uk-scrollspy-class="uk-animation-slide-top-medium">
-                  Camp Adventure
+                  Go and Grow Camp
                 </div>
                 <div className="text-[3vw] text-[#292c3d] uk-margin-small uk-text-center" uk-scrollspy-class="uk-animation-slide-bottom-medium">
                   Cooperations & Memberships

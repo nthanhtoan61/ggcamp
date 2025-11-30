@@ -444,7 +444,7 @@ export default function HuskyCampPage() {
                                   LÜNEBURGER HEIDE!
                                 </h4>
                                 <p>
-                                  Our Camp Adventure (Academy) in Walsrode is
+                                  Our Go and Grow Camp (Academy) in Walsrode is
                                   nestled in the beautiful Lüneburg Heath, right
                                   between Bremen, Hamburg, and Hanover in
                                   northern germany. Just a short walk away,
@@ -770,7 +770,7 @@ export default function HuskyCampPage() {
                                   )}
                                   width={1080}
                                   height={717}
-                                  alt="Fun beach water challenge game at Camp Adventure summer camp in Germany"
+                                  alt="Fun beach water challenge game at Go and Grow Camp summer camp in Germany"
                                   loading="lazy"
                                   className="el-image"
                                 />
@@ -905,11 +905,11 @@ export default function HuskyCampPage() {
                           <h4>Fully Covered for Your Adventure!</h4>
                           <p>
                             Whether it&apos;s a small mishap or an unexpected
-                            event – with our Camp Adventure Insurance Package,
+                            event – with our Go and Grow Camp Insurance Package,
                             you&apos;ll be well protected during your trip.
                           </p>
                           <p>
-                            <em>Camp Adventure Insurance Package</em>
+                            <em>Go and Grow Camp Insurance Package</em>
                             <br />
                             Includes liability, accident, and health insurance
                             for the entire duration of your camp stay.
@@ -939,7 +939,7 @@ export default function HuskyCampPage() {
                             trip.
                           </p>
                           <p>
-                            <em>Camp Adventure Trip Cancellation Guarantee</em>
+                            <em>Go and Grow Camp Trip Cancellation Guarantee</em>
                             <br />
                             Your safety net against homesickness, illness &
                             more.
@@ -1060,7 +1060,7 @@ export default function HuskyCampPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/huskywal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="2000"

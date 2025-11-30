@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sailing Camps in Spain | Camp Adventure",
+  title: "Sailing Camps in Spain | Go and Grow Camp",
   description:
     "Sailing camps in Barcelona, Spain for children & teenagers from 10-16 years. Learn to sail in the Mediterranean!",
 };

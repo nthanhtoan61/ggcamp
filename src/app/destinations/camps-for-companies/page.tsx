@@ -17,7 +17,7 @@ export default function CampsForCompaniesPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <h2 className="uk-h1 uk-margin-small uk-text-center">
-                Camp Adventure for your company
+                Go and Grow Camp for your company
               </h2>
               <div className="uk-h5 uk-margin-small uk-text-center">
                 Our service for your employees – making school holidays

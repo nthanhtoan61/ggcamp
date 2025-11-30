@@ -92,7 +92,7 @@ export default function EnglandRossallSchoolPage() {
                           {
                             lat: 53.9246,
                             lng: -3.00764,
-                            title: "Camp Adventure - Rossall School",
+                            title: "Go and Grow Camp - Rossall School",
                           },
                         ],
                         controls: true,
@@ -114,7 +114,7 @@ export default function EnglandRossallSchoolPage() {
                   <template>
                     <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                        Camp Adventure - Rossall School
+                        Go and Grow Camp - Rossall School
                       </h3>
                     </div>
                   </template>
@@ -384,7 +384,7 @@ export default function EnglandRossallSchoolPage() {
                   <div style={{ textAlign: "center" }}>
                     <iframe
                       src="https://bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/ros"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

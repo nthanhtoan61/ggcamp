@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Scuba Diving Camps in Spain | Camp Adventure",
+  title: "Scuba Diving Camps in Spain | Go and Grow Camp",
   description:
     "Scuba diving camps in Barcelona, Spain for children & teenagers from 10-16 years. PADI certification courses!",
 };

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "English Language Camps | Camp Adventure",
+  title: "English Language Camps | Go and Grow Camp",
   description:
     "English language camps in Germany, England & Spain for children & teenagers from 7-17 years. Learn English with native speakers!",
 };

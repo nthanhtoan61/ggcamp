@@ -242,7 +242,7 @@ export default function TennisPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Large group of teens socializing during meet-and-greet – community experience at Camp Adventure in the Bavarian Forest"
+                            alt="Large group of teens socializing during meet-and-greet – community experience at Go and Grow Camp in the Bavarian Forest"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -387,7 +387,7 @@ export default function TennisPage() {
                     </strong>
                   </h4>
                   <p>
-                    Our Camp Adventure in Regen is nestled in the heart of the
+                    Our Go and Grow Camp in Regen is nestled in the heart of the
                     Bavarian Forest, one of Southern Germany&apos;s most
                     stunning natural paradises. Surrounded by forests, rolling
                     hills, and crystal-clear rivers, it&apos;s the perfect place
@@ -612,7 +612,7 @@ export default function TennisPage() {
                         spirit, and mountain views!
                         <br />
                         Once your booked activity wraps up, the second part of
-                        the real Camp Adventure feeling begins: in the heart of
+                        the real Go and Grow Camp feeling begins: in the heart of
                         the Bavarian Forest, you&apos;ll dive into exciting
                         activities and pure nature.
                       </p>
@@ -856,7 +856,7 @@ export default function TennisPage() {
                     your trip.
                   </p>
                   <p>
-                    <strong>Camp Adventure Insurance Package:</strong>
+                    <strong>Go and Grow Camp Insurance Package:</strong>
                     <br />
                     Liability, accident, and health insurance for the entire
                     duration of the trip.
@@ -879,7 +879,7 @@ export default function TennisPage() {
                     proof of their own insurance before departure.
                   </p>
                   <p>
-                    <strong>Camp Adventure Trip Cancellation Guarantee:</strong>
+                    <strong>Go and Grow Camp Trip Cancellation Guarantee:</strong>
                     <br />
                     Our safety net for homesickness, illness & more.
                     <br />
@@ -1049,7 +1049,7 @@ export default function TennisPage() {
                 >
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/tennisreg"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

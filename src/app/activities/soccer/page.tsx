@@ -184,12 +184,12 @@ export default function SoccerPage() {
                         )}
                         width={400}
                         height={300}
-                        alt="Soccer with Camp Adventure Academy"
+                        alt="Soccer with Go and Grow Camp Academy"
                         loading="lazy"
                         className="el-image uk-border-rounded"
                       />
                       <div className="el-title uk-h4 uk-margin-top uk-margin-remove-bottom">
-                        Camp Adventure Academy
+                        Go and Grow Camp Academy
                       </div>
                       <div className="el-meta uk-h5 uk-margin-top uk-margin-remove-bottom">
                         7 - 17 years
@@ -348,7 +348,7 @@ export default function SoccerPage() {
                 >
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/soccerwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1550"

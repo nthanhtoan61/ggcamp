@@ -105,7 +105,7 @@ import { getTemplateImageUrl } from "@/lib/assets";
    {
      title: "Cooperation",
      description:
-     "Cooperation with the independent representative for questions of sexual child abuse via our umbrella organisation Reisenetz e.V.: Camp Adventure was one of the first tour operators for children and young people to develop a protection concept that prevents sexual abuse among children and young people. Today, this concept is considered important by many other tour operators, also due to our personal commitment in various associations and professional circles. Of course, the background check and the '6-eyes principle', which states that a child must never be alone with a caregiver, is also an essential part of our protection concept. The most important thing, however, is to create an 'open system' in which everyone knows that sexual abuse should not be a taboo subject, but that simple instruments such as a grievance box and feedback system can immediately address grievances and that they do not have to be denied.",
+     "Cooperation with the independent representative for questions of sexual child abuse via our umbrella organisation Reisenetz e.V.: Go and Grow Camp was one of the first tour operators for children and young people to develop a protection concept that prevents sexual abuse among children and young people. Today, this concept is considered important by many other tour operators, also due to our personal commitment in various associations and professional circles. Of course, the background check and the '6-eyes principle', which states that a child must never be alone with a caregiver, is also an essential part of our protection concept. The most important thing, however, is to create an 'open system' in which everyone knows that sexual abuse should not be a taboo subject, but that simple instruments such as a grievance box and feedback system can immediately address grievances and that they do not have to be denied.",
      avatar: "https://i.pravatar.cc/150?img=16",
      name: "Robert Fox",
      role: "Director",
@@ -163,7 +163,7 @@ export default function SafetyPage() {
                 <p
                   className="font-['Raleway'] text-3xl! md:text-[2vw]!  leading-tight font-semibold!"
                 >
-                  The concept of Camp Adventure
+                  The concept of Go and Grow Camp
                 </p>
               </h1>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
@@ -373,7 +373,7 @@ export default function SafetyPage() {
           className="uk-h5 uk-margin-small uk-text-center font-['Raleway'] text-[1.5vw] md:text-[1.2vw] "
           uk-scrollspy-class="uk-animation-slide-top-medium"
         >
-          Camp Adventure
+          Go and Grow Camp
         </div>
         <div
           className=" uk-margin-small uk-text-center font-['Raleway'] text-md md:text-[1.5vw] leading-tight font-semibold"
@@ -472,7 +472,7 @@ export default function SafetyPage() {
                 className="uk-h5 uk-margin-small uk-text-center font-['Raleway'] text-[1.5vw] md:text-[1.2vw]"
                 uk-scrollspy-class="uk-animation-slide-top-medium"
               >
-                Camp Adventure
+                Go and Grow Camp
               </div>
               <div
                 className="uk-margin-small uk-text-center font-['Raleway'] text-md md:text-[1.5vw] leading-tight font-semibold "

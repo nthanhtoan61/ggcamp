@@ -229,7 +229,7 @@ export default function SwimmingPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Large group of teens socializing during meet-and-greet – community experience at Camp Adventure in the Bavarian Forest"
+                            alt="Large group of teens socializing during meet-and-greet – community experience at Go and Grow Camp in the Bavarian Forest"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -263,7 +263,7 @@ export default function SwimmingPage() {
                             )}
                             width={1260}
                             height={837}
-                            alt="Group of boys enjoying a giant water cushion at the outdoor pool – summer adventure at Camp Adventure youth camp"
+                            alt="Group of boys enjoying a giant water cushion at the outdoor pool – summer adventure at Go and Grow Camp youth camp"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -280,7 +280,7 @@ export default function SwimmingPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Children on a canoeing trip through nature – outdoor language camp adventure with expert supervision in Regen"
+                            alt="Children on a canoeing trip through nature – outdoor language Go and Grow Camp with expert supervision in Regen"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -374,7 +374,7 @@ export default function SwimmingPage() {
                             Forest!
                           </h4>
                           <p>
-                            Our Camp Adventure in Regen is located right in the
+                            Our Go and Grow Camp in Regen is located right in the
                             heart of the Bavarian Forest, one of southern
                             Germany&apos;s most beautiful natural paradises.
                             Surrounded by forests, hills, and crystal-clear
@@ -623,7 +623,7 @@ export default function SwimmingPage() {
                                   Water fun meets nature & creativity
                                 </strong>
                                 <br />
-                                After swim training, the real camp adventure
+                                After swim training, the real Go and Grow Camp
                                 begins: surrounded by the Bavarian Forest,
                                 unleash your creativity with natural materials,
                                 colors, and exciting techniques. Plus, enjoy
@@ -858,11 +858,11 @@ export default function SwimmingPage() {
                           <h4>Well protected for your adventure!</h4>
                           <p>
                             Whether small mishaps or unexpected incidents — with
-                            our Camp Adventure insurance, you&apos;re fully
+                            our Go and Grow Camp insurance, you&apos;re fully
                             covered.
                           </p>
                           <p>
-                            <em>Camp Adventure Insurance Package:</em>
+                            <em>Go and Grow Camp Insurance Package:</em>
                             <br />
                             Liability, accident, and health insurance for the
                             entire trip duration.
@@ -885,12 +885,12 @@ export default function SwimmingPage() {
                             departure.
                           </p>
                           <p>
-                            <em>Camp Adventure Cancellation Guarantee:</em>
+                            <em>Go and Grow Camp Cancellation Guarantee:</em>
                             <br />
                             Our guarantee against homesickness, illness & more.
                             Need to cancel your trip? No problem! With our
                             cancellation guarantee, you&apos;ll receive a full
-                            refund of the Camp Adventure price — minus a
+                            refund of the Go and Grow Camp price — minus a
                             deductible of USD50 (Germany) or USD100
                             (England/Spain).
                             <br />
@@ -1090,7 +1090,7 @@ export default function SwimmingPage() {
                 >
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/swimmingbegreg"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1500"

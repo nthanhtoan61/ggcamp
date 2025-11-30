@@ -245,7 +245,7 @@ export default function SkatingPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Large group of teens socializing during meet-and-greet – community experience at Camp Adventure in the Bavarian Forest"
+                            alt="Large group of teens socializing during meet-and-greet – community experience at Go and Grow Camp in the Bavarian Forest"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -341,7 +341,7 @@ export default function SkatingPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/skateninclreg"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"
