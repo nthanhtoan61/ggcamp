@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "English TOEFL® Courses | Camp Adventure",
+  title: "English TOEFL® Courses | Go and Grow Camp",
   description:
     "English TOEFL® courses in Germany & England for children & teenagers from 10-17 years. Get an internationally recognized certificate!",
 };

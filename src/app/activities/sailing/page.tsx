@@ -296,7 +296,7 @@ export default function SailingPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Teen group in Camp Adventure 2024 shirts posing by the sea during international summer camp in Barcelona"
+                            alt="Teen group in Go and Grow Camp 2024 shirts posing by the sea during international summer camp in Barcelona"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -454,11 +454,11 @@ export default function SailingPage() {
                           <h4>Well protected for your adventure</h4>
                           <p>
                             Whether minor mishaps or unexpected incidents – with
-                            our Camp Adventure insurance, you&apos;re fully
+                            our Go and Grow Camp insurance, you&apos;re fully
                             covered.
                           </p>
                           <p>
-                            Camp Adventure Insurance Package:
+                            Go and Grow Camp Insurance Package:
                             <br />
                             Liability, accident, and health insurance for the
                             entire duration of your trip.
@@ -478,12 +478,12 @@ export default function SailingPage() {
                             insurance before travel.
                           </p>
                           <p>
-                            Camp Adventure Trip Cancellation Guarantee:
+                            Go and Grow Camp Trip Cancellation Guarantee:
                             <br />
                             Our guarantee against homesickness, illness &amp;
                             more. Need to cancel your trip? No problem! With our
                             cancellation guarantee, you&apos;ll receive a full
-                            refund of the Camp Adventure trip price—minus a
+                            refund of the Go and Grow Camp trip price—minus a
                             deductible of USD50 (Germany) or USD100
                             (England/Spain).
                             <br />✔ Valid up to one day before departure
@@ -509,7 +509,7 @@ export default function SailingPage() {
                       <div className="uk-accordion-content uk-margin-remove-first-child">
                         <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
                           <h4>
-                            Sailing at Camp Adventure – experience the wind and
+                            Sailing at Go and Grow Camp – experience the wind and
                             water up close! ⛵🌊
                           </h4>
                           <p>
@@ -582,7 +582,7 @@ export default function SailingPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/sailing"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"
@@ -606,7 +606,7 @@ export default function SailingPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/sailing"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

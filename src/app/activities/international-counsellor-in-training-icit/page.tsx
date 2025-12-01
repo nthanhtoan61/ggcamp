@@ -161,7 +161,7 @@ export default function InternationalCounsellorInTrainingIcitPage() {
               <div className="uk-card uk-card-default uk-card-body">
                 <h3 className="uk-h3">Lüneburger Heide</h3>
                 <p>
-                  ICIT program at our Camp Adventure Academy in Lüneburger
+                  ICIT program at our Go and Grow Camp Academy in Lüneburger
                   Heide.
                 </p>
                 <Link
@@ -187,7 +187,7 @@ export default function InternationalCounsellorInTrainingIcitPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/walicit"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

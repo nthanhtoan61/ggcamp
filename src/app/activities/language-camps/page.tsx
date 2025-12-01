@@ -316,7 +316,7 @@ export default function LanguageCampsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
             <div className="uk-width-1-1@m">
               <h2 className="uk-h2 uk-text-center" uk-scrollspy-class="">
-                Details of Camp Adventure&apos;s Language Programs
+                Details of Go and Grow Camp&apos;s Language Programs
               </h2>
               <div
                 className="uk-divider-icon uk-width-medium uk-margin-auto"
@@ -509,7 +509,7 @@ export default function LanguageCampsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <div className="uk-h2 uk-text-center" uk-scrollspy-class="">
-                Language Camp Locations of Camp Adventure
+                Language Camp Locations of Go and Grow Camp
               </div>
               <div className="uk-divider-icon" uk-scrollspy-class=""></div>
               <h2 className="uk-h5 uk-text-center" uk-scrollspy-class="">
@@ -549,7 +549,7 @@ export default function LanguageCampsPage() {
                         Germany
                       </div>
                       <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom">
-                        Camp Adventure Academy - Lüneburger Heide
+                        Go and Grow Camp Academy - Lüneburger Heide
                       </h3>
                       <div className="uk-margin-top">
                         <Link
@@ -1047,7 +1047,7 @@ export default function LanguageCampsPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/wal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

@@ -196,7 +196,7 @@ export default function GermanCampsPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Group of kids participating in interactive English class at Camp Adventure language camp in Germany"
+                            alt="Group of kids participating in interactive English class at Go and Grow Camp language camp in Germany"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -474,11 +474,11 @@ export default function GermanCampsPage() {
                           <h4>Well protected for the Adventure</h4>
                           <p>
                             Whether it&apos;s a small mishap or an unexpected
-                            incident – with our Camp Adventure Insurance,
+                            incident – with our Go and Grow Camp Insurance,
                             you&apos;re fully covered.
                           </p>
                           <p>
-                            <em>The Camp Adventure Insurance Package:</em>
+                            <em>The Go and Grow Camp Insurance Package:</em>
                             <br />
                             Liability, accident, and health insurance for the
                             entire duration of the trip.
@@ -500,7 +500,7 @@ export default function GermanCampsPage() {
                           </p>
                           <p>
                             <em>
-                              The Camp Adventure Trip Cancellation Guarantee:
+                              The Go and Grow Camp Trip Cancellation Guarantee:
                             </em>
                             <br />
                             Our guarantee against homesickness, illness, and
@@ -508,7 +508,7 @@ export default function GermanCampsPage() {
                             <br />
                             Need to cancel your trip? No problem! With our trip
                             cancellation guarantee, you&apos;ll get the full
-                            Camp Adventure price back – minus a deductible of
+                            Go and Grow Camp price back – minus a deductible of
                             USD50 (Germany) or USD100 (England/Spain).
                             <br />✔ Valid until one day before departure
                             <br />✔ No matter the reason: illness, accident,
@@ -606,7 +606,7 @@ export default function GermanCampsPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/germanclassicwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"
@@ -630,7 +630,7 @@ export default function GermanCampsPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/germanclassicwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

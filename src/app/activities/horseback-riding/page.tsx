@@ -200,7 +200,7 @@ export default function HorsebackRidingPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Kids ride ponies and walk them through the forest during horse camp adventure"
+                            alt="Kids ride ponies and walk them through the forest during horse Go and Grow Camp"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />

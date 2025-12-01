@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FAQ | Camp Adventure",
+  title: "FAQ | Go and Grow Camp",
   description:
     "Frequently Asked Questions about our camps, programs, and services.",
 };

@@ -205,7 +205,7 @@ export default function OutdoorEducationDiplomaPage() {
                             experiential learning environment where you can grow
                             both professionally and personally. The program
                             facilitates training, development, and certification
-                            though our partners at Camp Adventure Academy. If
+                            though our partners at Go and Grow Camp Academy. If
                             you are 21+ years old and looking for an amazing
                             program in Europe, this is the place for you.
                           </p>
@@ -499,7 +499,7 @@ export default function OutdoorEducationDiplomaPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
               <div className="uk-width-1-1@m">
                 <div className="uk-h5" uk-scrollspy-class="">
-                  <div style={{ textAlign: "center" }}>Camp Adventure</div>
+                  <div style={{ textAlign: "center" }}>Go and Grow Camp</div>
                 </div>
                 <h2
                   className="uk-h1 uk-margin-small uk-text-center"

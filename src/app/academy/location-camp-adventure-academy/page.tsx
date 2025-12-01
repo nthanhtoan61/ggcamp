@@ -42,7 +42,7 @@ export default function LocationCampAdventureAcademyPage() {
         window.L.marker([52.8481, 9.4724])
           .addTo(map)
           .bindPopup(
-            "Camp Adventure Academy - Walsrode<br/>Schooltrips, Events, Camping"
+            "Go and Grow Camp Academy - Walsrode<br/>Schooltrips, Events, Camping"
           )
           .openPopup();
 
@@ -105,7 +105,7 @@ export default function LocationCampAdventureAcademyPage() {
                   className="uk-heading-large uk-text-center"
                   uk-scrollspy-class=""
                 >
-                  Camp Adventure Academy&apos;s Location
+                  Go and Grow Camp Academy&apos;s Location
                 </h1>
                 <div
                   className="uk-panel uk-text-lead uk-margin uk-text-center"
@@ -131,7 +131,7 @@ export default function LocationCampAdventureAcademyPage() {
                 className="uk-h2 uk-text-left@m uk-text-center"
                 uk-scrollspy-class=""
               >
-                Welcome to Camp Adventure Academy in the Lüneburger Heide
+                Welcome to Go and Grow Camp Academy in the Lüneburger Heide
               </h2>
               <div
                 className="uk-divider-small uk-text-left@m uk-text-center"
@@ -144,7 +144,7 @@ export default function LocationCampAdventureAcademyPage() {
                 uk-scrollspy-class="uk-animation-slide-left-medium"
               >
                 <p>
-                  The Camp Adventure Academy was founded in 2002. As a
+                  The Go and Grow Camp Academy was founded in 2002. As a
                   specialist in experiential education and outdoor sports, many
                   students and professionals have used it to expand their skills
                   in the fascinating fields of outdoor and adventure and/or to
@@ -153,7 +153,7 @@ export default function LocationCampAdventureAcademyPage() {
                   Germany: in the Lüneburger Heide in Vethem/Walsrode. Due to
                   its diversity and size, the site is suitable for a variety of
                   activities and events. In addition to class trips and youth
-                  camps, the Camp Adventure Academy also offers the right
+                  camps, the Go and Grow Camp Academy also offers the right
                   location for training and further education, company events,
                   trade fairs and survival courses.
                 </p>
@@ -192,7 +192,7 @@ export default function LocationCampAdventureAcademyPage() {
                 uk-scrollspy-class=""
               >
                 <p>
-                  The Camp Adventure Academy in Walsrode is set in the beautiful
+                  The Go and Grow Camp Academy in Walsrode is set in the beautiful
                   Lüneburger Heide national park, between the cities of Hamburg,
                   Bremen and Hannover
                 </p>

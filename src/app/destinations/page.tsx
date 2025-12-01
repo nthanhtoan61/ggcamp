@@ -106,7 +106,7 @@ export default function DestinationsPage() {
                   className="uk-h1 uk-text-left@m uk-text-center !text-[2.12vw]"
                   uk-scrollspy-class=""
                 >
-                  Welcome to Camp Adventure
+                  Welcome to Go and Grow Camp
                 </div>
                 <div
                   className="uk-divider-small uk-text-left@m uk-text-center"
@@ -121,7 +121,7 @@ export default function DestinationsPage() {
                   uk-scrollspy-class=""
                 >
                   <p>
-                    Both my children really enjoyed Camp Adventure. The teamers
+                    Both my children really enjoyed Go and Grow Camp. The teamers
                     did a great job making them feel comfortable and at home. My
                     son was unsure if he wanted to stay at first but he felt
                     part of his tent group and camp very quickly and loved it.
@@ -144,7 +144,7 @@ export default function DestinationsPage() {
                 <p>
                   Our international Adventure, Sports & Language Camps in
                   Germany, England and Spain combine a welcoming, inclusive
-                  atmosphere with unique Camp Adventure energy! Fun, stress-free
+                  atmosphere with unique Go and Grow Camp energy! Fun, stress-free
                   language workshops and the mixture of original camp games
                   along with traditional sports lead to an unforgettable
                   experience. Join in and meet plenty of new friends your age
@@ -167,7 +167,7 @@ export default function DestinationsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <h2
-                className="uk-h2 uk-text-center !text-[1.67vw]"
+                className="uk-h2 uk-text-center !text-[2.5vw]"
                 uk-scrollspy-class="uk-animation-slide-left-medium"
               >
                 Our Camp Locations & Program Options
@@ -201,7 +201,7 @@ export default function DestinationsPage() {
                         )}
                         width={920}
                         height={613}
-                        alt="Camp Adventure Academy - Lüneburger Heide"
+                        alt="Go and Grow Camp"
                         className="el-image uk-flex-1 uk-object-cover"
                         loading="lazy"
                       />
@@ -213,7 +213,7 @@ export default function DestinationsPage() {
                         Germany
                       </div>
                       <h3 className="el-title uk-card-title uk-margin-small-top uk-margin-remove-bottom !text-[1.67vw]">
-                        Camp Adventure Academy - Lüneburger Heide
+                        Go and Grow Camp
                       </h3>
                       <div className="uk-margin-top">
                         <Link
@@ -1166,7 +1166,7 @@ export default function DestinationsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <h2
-                className="uk-h2 uk-text-center !text-[1.67vw] !font-bold"
+                className="uk-h2 uk-text-center !text-[2.5vw] !font-bold"
                 uk-scrollspy-class="uk-animation-slide-right-medium"
               >
                 Frequently Asked Questions
@@ -1308,7 +1308,7 @@ export default function DestinationsPage() {
                         Where do kids and camp counselors come from?
                       </h3>
                       <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
-                        Camp Adventure attaches great importance to
+                        Go and Grow Camp attaches great importance to
                         internationality. The participants and supervisors in
                         our camps come from many different countries. Last year,
                         for example, we had participants from over 60 different
@@ -1424,7 +1424,7 @@ export default function DestinationsPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <h2
-                className="uk-h1 uk-margin-small uk-text-center !text-[5vw] !font-bold"
+                className="uk-h1 uk-margin-small uk-text-center !text-[2.5vw] !font-bold"
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
               >
                 Security Concept
@@ -1582,7 +1582,7 @@ export default function DestinationsPage() {
                         <p>
                           Cooperation with the independent representative for
                           questions of sexual child abuse via our umbrella
-                          organisation Reisenetz e.V.: Camp Adventure was one of
+                          organisation Reisenetz e.V.: Go and Grow Camp was one of
                           the first tour operators for children and young people
                           to develop a protection concept that prevents sexual
                           abuse among children and young people. Today, this

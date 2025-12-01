@@ -92,7 +92,7 @@ export default function CornwallPage() {
                   <center>
                     <a
                       href="https://www.provenexpert.com/camp-adventure/?utm_source=Widget&utm_medium=Widget&utm_campaign=Widget"
-                      title="Customer reviews & experiences for Camp Adventure. Show more info."
+                      title="Customer reviews & experiences for Go and Grow Camp. Show more info."
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -100,7 +100,7 @@ export default function CornwallPage() {
                         src="https://images.provenexpert.com/93/fc/d5e99b2883e0bb405862d9993db6/widget_recommendation_465_04f6f.png?t=1662145244032"
                         width={465}
                         height={200}
-                        alt="Customer reviews & experiences for Camp Adventure. Show more info."
+                        alt="Customer reviews & experiences for Go and Grow Camp. Show more info."
                         style={{ border: 0 }}
                         unoptimized
                       />
@@ -377,7 +377,7 @@ export default function CornwallPage() {
                         }).addTo(map);
                         L.marker([50.1484375, -5.0690813064575195])
                           .addTo(map)
-                          .bindPopup('Rossall School - Camp Adventure<br/>International Sports & Language Camps')
+                          .bindPopup('Rossall School - Go and Grow Camp<br/>International Sports & Language Camps')
                           .openPopup();
                       }
                     `}
@@ -500,7 +500,7 @@ export default function CornwallPage() {
                   course (15 hours/week) with native speakers – relaxed,
                   interactive and without a school atmosphere. If you don&apos;t
                   take the course, exciting activities await where you
-                  automatically speak English – in true Camp Adventure style:
+                  automatically speak English – in true Go and Grow Camp style:
                   Learning by Living!
                 </p>
                 <p>
@@ -566,7 +566,7 @@ export default function CornwallPage() {
                             )}
                             width={250}
                             height={300}
-                            alt="The English Classic language course from Camp Adventure"
+                            alt="The English Classic language course from Go and Grow Camp"
                             loading="lazy"
                             className="el-image uk-border-rounded"
                           />
@@ -605,7 +605,7 @@ export default function CornwallPage() {
                             )}
                             width={250}
                             height={300}
-                            alt="Improve your English with a language course from Camp Adventure"
+                            alt="Improve your English with a language course from Go and Grow Camp"
                             loading="lazy"
                             className="el-image uk-border-rounded"
                           />
@@ -795,7 +795,7 @@ export default function CornwallPage() {
                           <tr>
                             <td style={{ width: "445.933px" }}>
                               <a
-                                href="https://www.campadventure.de/images/f_infos/versicherung/Camp Adventures Garantie gegen Heimweh_2025.pdf"
+                                href="https://www.campadventure.de/images/f_infos/versicherung/Go and Grow Camps Garantie gegen Heimweh_2025.pdf"
                                 target="_blank"
                                 rel="noopener"
                               >
@@ -806,7 +806,7 @@ export default function CornwallPage() {
                           </tr>
                           <tr>
                             <td style={{ width: "445.933px" }}>
-                              Camp Adventure Sweater
+                              Go and Grow Camp Sweater
                             </td>
                             <td style={{ width: "41.0667px" }}>50 USD</td>
                           </tr>

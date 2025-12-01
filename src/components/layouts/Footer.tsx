@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
             {/* Column 1: About Hotel */}
             <div className="uk-grid-item-match uk-width-1-3@m footer-social">
               <div className="uk-panel uk-width-1-1">
-                <h3 className="uk-h4 inline-block pb-[5px] relative !text-white">
+                <h3 className="uk-h4 inline-block pb-[5px] relative !text-white !text-[1.7vw]">
                   About GGC
                   <span
                     className="
@@ -49,18 +49,35 @@ export const Footer: React.FC = () => {
                     "
                   ></span>
                 </h3>
-                <p className="!text-white mt-5 text-justify">
+                <p className="!text-white mt-5 text-justify !text-[0.79vw]">
                   Welcome to Go and Grow Camp, where adventure, learning, and
                   friendships come together. Join us for unforgettable
                   experiences that inspire confidence, creativity, and
-                  connection.
+                  connection
+                </p>
+                <p className="!text-white mt-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="w-5 h-5 inline-block align-middle mr-2 fill-yellow-400"
+                  >
+                    <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" />
+                  </svg>
+                  <a
+                    href="https://share.google/8G4LFRq82OwOmlFlN"
+                    target="_blank"
+                    rel="noopener"
+                    className="text-white no-underline !text-[0.79vw]"
+                  >
+                    Check on google map
+                  </a>
                 </p>
               </div>
             </div>
             {/* Column 2: Explore */}
             <div className="uk-grid-item-match uk-width-1-3@m footer-social">
               <div className="uk-panel uk-width-1-1 pl-20">
-                <h3 className="uk-h4 !text-white inline-block pb-[5px] relative">
+                <h3 className="uk-h4 !text-white inline-block pb-[5px] relative !text-[1.7vw]">
                   Explore
                   <span
                     className="
@@ -128,7 +145,7 @@ export const Footer: React.FC = () => {
             {/* Column 3: Contact */}
             <div className="uk-grid-item-match uk-width-1-3@m">
               <div className="uk-panel uk-width-1-1">
-                <h3 className="uk-h4 !text-white inline-block pb-1 relative">
+                <h3 className="uk-h4 !text-white inline-block pb-1 relative !text-[1.7vw]">
                   Contact
                   <span
                     className="
@@ -177,7 +194,7 @@ export const Footer: React.FC = () => {
                   <p>
                     <a
                       href="office@ggcamp.org"
-                      className="footer-email-underline !text-white no-underline relative inline-block"
+                      className="footer-email-underline !text-white no-underline relative inline-block !text-[0.79vw]"
                     >
                       office@ggcamp.org
                     </a>
@@ -194,7 +211,7 @@ export const Footer: React.FC = () => {
                           aria-label="Facebook"
                           target="_blank"
                           rel="noreferrer"
-                          className="text-white"
+                          className="text-white !text-[0.79vw]"
                         >
                           <span uk-icon="icon: facebook; width: 24; height: 24;"></span>
                         </a>
@@ -205,7 +222,7 @@ export const Footer: React.FC = () => {
                           aria-label="Twitter"
                           target="_blank"
                           rel="noreferrer"
-                          className="text-white"
+                          className="text-white !text-[0.79vw]"
                         >
                           <span uk-icon="icon: twitter; width: 24; height: 24;"></span>
                         </a>
@@ -216,7 +233,7 @@ export const Footer: React.FC = () => {
                           aria-label="Instagram"
                           target="_blank"
                           rel="noreferrer"
-                          className="text-white"
+                          className="text-white !text-[0.79vw]"
                         >
                           <span uk-icon="icon: instagram; width: 24; height: 24;"></span>
                         </a>
@@ -227,7 +244,7 @@ export const Footer: React.FC = () => {
                           aria-label="Behance"
                           target="_blank"
                           rel="noreferrer"
-                          className="text-white"
+                          className="text-white !text-[0.79vw]"
                         >
                           <span uk-icon="icon: behance; width: 24; height: 24;"></span>
                         </a>
@@ -238,7 +255,7 @@ export const Footer: React.FC = () => {
                           aria-label="LinkedIn"
                           target="_blank"
                           rel="noreferrer"
-                          className="text-white"
+                          className="text-white !text-[0.79vw]"
                         >
                           <span uk-icon="icon: linkedin; width: 24; height: 24;"></span>
                         </a>

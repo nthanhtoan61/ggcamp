@@ -412,7 +412,7 @@ export default function SpaceExplorationPage() {
                             Lüneburger Heide!
                           </h4>
                           <p>
-                            Our Camp Adventure (Academy) in Walsrode is nestled
+                            Our Go and Grow Camp (Academy) in Walsrode is nestled
                             idyllically in the Lüneburg Heath, right between
                             Bremen, Hamburg, and Hanover. Just a short walk
                             away, you&apos;ll find a charming North German
@@ -881,12 +881,12 @@ export default function SpaceExplorationPage() {
                           <h4>Well insured for your adventure!</h4>
                           <p>
                             Whether it&apos;s minor mishaps or unexpected
-                            incidents – with our Camp Adventure insurance,
+                            incidents – with our Go and Grow Camp insurance,
                             you&apos;re fully protected throughout your trip.
                           </p>
                           <p>
                             <em>
-                              <strong>Camp Adventure Insurance Package:</strong>
+                              <strong>Go and Grow Camp Insurance Package:</strong>
                             </em>
                             <br />
                             Liability, accident, and health insurance for the
@@ -912,14 +912,14 @@ export default function SpaceExplorationPage() {
                           <p>
                             <em>
                               <strong>
-                                Camp Adventure Trip Cancellation Guarantee:
+                                Go and Grow Camp Trip Cancellation Guarantee:
                               </strong>
                             </em>
                             <br />
                             Our guarantee against homesickness, illness & more.
                             Need to cancel your trip? No problem! With our
                             cancellation guarantee, you&apos;ll receive a full
-                            refund of your Camp Adventure trip price – minus a
+                            refund of your Go and Grow Camp trip price – minus a
                             deductible of USD50 (Germany) or USD100 (UK/Spain).
                             <br />
                             ✔ Valid up to one day before departure
@@ -1020,7 +1020,7 @@ export default function SpaceExplorationPage() {
                 <div className="uk-margin-small-top">
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/spaceexplorationwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="100%"
                     height="800"
@@ -1157,7 +1157,7 @@ export default function SpaceExplorationPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Large group of teens socializing during meet-and-greet – community experience at Camp Adventure in the Bavarian Forest"
+                            alt="Large group of teens socializing during meet-and-greet – community experience at Go and Grow Camp in the Bavarian Forest"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -1191,7 +1191,7 @@ export default function SpaceExplorationPage() {
                             )}
                             width={1260}
                             height={837}
-                            alt="Group of boys enjoying a giant water cushion at the outdoor pool – summer adventure at Camp Adventure youth camp"
+                            alt="Group of boys enjoying a giant water cushion at the outdoor pool – summer adventure at Go and Grow Camp youth camp"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -1208,7 +1208,7 @@ export default function SpaceExplorationPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Children on a canoeing trip through nature – outdoor language camp adventure with expert supervision in Regen"
+                            alt="Children on a canoeing trip through nature – outdoor language Go and Grow Camp with expert supervision in Regen"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -1310,7 +1310,7 @@ export default function SpaceExplorationPage() {
                 <div className="uk-margin-small-top">
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/spacereg"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="100%"
                     height="800"

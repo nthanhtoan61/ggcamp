@@ -9,7 +9,7 @@ export default function TravelDocumentsPage() {
       <HeroSection
         title={
           <>
-            Camp Adventure
+            Go and Grow Camp
             <br />
             Last travel informations
           </>
@@ -38,7 +38,7 @@ export default function TravelDocumentsPage() {
                   className="el-title font-['Raleway'] text-[2.1vw] md:text-[1.5vw] lg:text-[2.1vw] xl:text-[2.1vw] leading-tight font-semibold max-[991px]:text-[6vw]"
                   style={{ fontSize: "clamp(1.25rem, 1.7vw, 2.1vw)" }}
                 >
-                  Camp Adventure Travel Information
+                  Go and Grow Camp Travel Information
                 </h2>
               </div>
               <div className="uk-panel uk-text-meta uk-margin">
@@ -105,7 +105,7 @@ export default function TravelDocumentsPage() {
                         >
                           <strong>Address:</strong>
                           <br />
-                          Camp Adventure Academy
+                          Go and Grow Camp Academy
                           <br />
                           Vethem 58
                           <br />
@@ -171,7 +171,7 @@ export default function TravelDocumentsPage() {
                         >
                           <strong>Address:</strong>
                           <br />
-                          Camp Adventure
+                          Go and Grow Camp
                           <br />
                           Badstrasse 18
                           <br />
@@ -227,7 +227,7 @@ export default function TravelDocumentsPage() {
                           <br />
                           University of Bath
                           <br />
-                          c/o Camp Adventure
+                          c/o Go and Grow Camp
                           <br />
                           Claverton Down
                           <br />
@@ -283,7 +283,7 @@ export default function TravelDocumentsPage() {
                           <br />
                           BISC International Sailing Center
                           <br />
-                          c/o Camp Adventure
+                          c/o Go and Grow Camp
                           <br />
                           Parc del Fòrum Sota plaça fotovoltàica
                           <br />

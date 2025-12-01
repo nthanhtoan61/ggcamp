@@ -109,7 +109,7 @@ export default function EnglandBathUniversityPage() {
                           {
                             lat: 51.3778,
                             lng: -2.3266,
-                            title: "Bath University - Camp Adventure",
+                            title: "Bath University - Go and Grow Camp",
                           },
                         ],
                         controls: true,
@@ -131,7 +131,7 @@ export default function EnglandBathUniversityPage() {
                   <template>
                     <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                        Bath University - Camp Adventure
+                        Bath University - Go and Grow Camp
                       </h3>
                       <div className="el-content uk-panel uk-margin-top">
                         <p>Internationale Sport- & Sprachcamps</p>
@@ -353,7 +353,7 @@ export default function EnglandBathUniversityPage() {
                     Our teamers are always nearby – with heart, humor, and an
                     open ear for whatever&apos;s on your mind. That way,
                     you&apos;ll feel safe, free, and completely at ease – the
-                    true Camp Adventure way.
+                    true Go and Grow Camp way.
                   </p>
                   <p>
                     After campus life, it&apos;s time for London calling!
@@ -499,7 +499,7 @@ export default function EnglandBathUniversityPage() {
                   <div style={{ textAlign: "center" }}>
                     <iframe
                       src="https://bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/bath"
-                      title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                      title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                       allowFullScreen={true}
                       width="1000"
                       height="1000"

@@ -297,7 +297,7 @@ export default function WindsurfingPage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Teen group in Camp Adventure 2024 shirts posing by the sea during international summer camp in Barcelona"
+                            alt="Teen group in Go and Grow Camp 2024 shirts posing by the sea during international summer camp in Barcelona"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -460,11 +460,11 @@ export default function WindsurfingPage() {
                           <h4>Well Protected for Your Adventure</h4>
                           <p>
                             Whether it&apos;s minor mishaps or unexpected
-                            incidents – with our Camp Adventure Insurance,
+                            incidents – with our Go and Grow Camp Insurance,
                             you&apos;re fully covered throughout your trip.
                           </p>
                           <p>
-                            The Camp Adventure Insurance Package includes:
+                            The Go and Grow Camp Insurance Package includes:
                             <br />
                             Liability, accident, and health insurance for the
                             entire duration of the trip.
@@ -491,14 +491,14 @@ export default function WindsurfingPage() {
                             of their own insurance before the trip.
                           </p>
                           <p>
-                            The Camp Adventure Travel Cancellation Guarantee
+                            The Go and Grow Camp Travel Cancellation Guarantee
                             <br />
                             Our safety net in case of homesickness, illness
                             &amp; more.
                             <br />
                             Need to cancel your trip? No problem! With our
                             Travel Cancellation Guarantee, you&apos;ll get a
-                            full refund of your Camp Adventure fee – minus a
+                            full refund of your Go and Grow Camp fee – minus a
                             deductible of USD50 (Germany) or USD100 (UK/Spain).
                           </p>
                           <p>
@@ -598,7 +598,7 @@ export default function WindsurfingPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/windsurfing"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"
@@ -669,7 +669,7 @@ export default function WindsurfingPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/survivalwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"
@@ -694,7 +694,7 @@ export default function WindsurfingPage() {
                   uk-scrollspy-class=""
                 >
                   <p>
-                    Amazing windsurfing experience at Camp Adventure! The
+                    Amazing windsurfing experience at Go and Grow Camp! The
                     instructors were patient and skilled, helping our son
                     progress quickly. The combination of windsurfing lessons and
                     camp activities was perfect. He came back confident and

@@ -77,7 +77,7 @@ export default function SpainBarcelonaPage() {
                   <center>
                     <a
                       href="https://www.provenexpert.com/camp-adventure/?utm_source=Widget&utm_medium=Widget&utm_campaign=Widget"
-                      title="Kundenbewertungen & Erfahrungen zu Camp Adventure. Mehr Infos anzeigen."
+                      title="Kundenbewertungen & Erfahrungen zu Go and Grow Camp. Mehr Infos anzeigen."
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -85,7 +85,7 @@ export default function SpainBarcelonaPage() {
                         src="https://images.provenexpert.com/93/fc/d5e99b2883e0bb405862d9993db6/widget_recommendation_465_04f6f.png?t=1662145244032"
                         width={465}
                         height={200}
-                        alt="Kundenbewertungen & Erfahrungen zu Camp Adventure. Mehr Infos anzeigen."
+                        alt="Kundenbewertungen & Erfahrungen zu Go and Grow Camp. Mehr Infos anzeigen."
                         style={{ border: 0 }}
                       />
                     </a>
@@ -98,7 +98,7 @@ export default function SpainBarcelonaPage() {
                 <blockquote className="uk-margin-medium uk-text-left@m uk-text-center" uk-scrollspy-class="">
                   <p>
                     My 2 daughters (13) cannot wait to join another year with
-                    Camp Adventure! Thank you so much for the great experiences
+                    Go and Grow Camp! Thank you so much for the great experiences
                     they had the last 2 summers in Germany and the UK!
                   </p>
                   <footer className="el-footer">
@@ -320,7 +320,7 @@ export default function SpainBarcelonaPage() {
                           {
                             lat: 41.4113,
                             lng: 2.2285,
-                            title: "Camp Adventure",
+                            title: "Go and Grow Camp",
                           },
                         ],
                         controls: true,
@@ -342,7 +342,7 @@ export default function SpainBarcelonaPage() {
                   <template>
                     <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                        Camp Adventure
+                        Go and Grow Camp
                       </h3>
                       <div className="el-content uk-panel uk-margin-top">
                         <p>Abenteuer Camp Regental</p>
@@ -625,7 +625,7 @@ export default function SpainBarcelonaPage() {
                   <div style={{ textAlign: "center" }}>
                     <iframe
                       src="https://bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/beachcamp"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="850"

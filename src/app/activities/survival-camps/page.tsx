@@ -482,11 +482,11 @@ export default function SurvivalCampsPage() {
                           <h4>Well insured for your adventure!</h4>
                           <p>
                             Whether it&apos;s minor mishaps or unexpected
-                            incidents – with our Camp Adventure insurance,
+                            incidents – with our Go and Grow Camp insurance,
                             you&apos;re fully protected throughout your trip.
                           </p>
                           <p>
-                            <em>Camp Adventure Insurance Package:</em>
+                            <em>Go and Grow Camp Insurance Package:</em>
                             <br />
                             Liability, accident, and health insurance for the
                             entire duration of your trip
@@ -508,12 +508,12 @@ export default function SurvivalCampsPage() {
                             before departure.
                           </p>
                           <p>
-                            <em>Camp Adventure Trip Cancellation Guarantee:</em>
+                            <em>Go and Grow Camp Trip Cancellation Guarantee:</em>
                             <br />
                             Our guarantee against homesickness, illness &amp;
                             more. Need to cancel your trip? No problem! With our
                             cancellation guarantee, you&apos;ll receive a full
-                            refund of the Camp Adventure trip price – minus a
+                            refund of the Go and Grow Camp trip price – minus a
                             deductible of USD50 (Germany) or USD100 (UK/Spain).
                             <br />✔ Valid up to one day before departure
                             <br />✔ No matter the reason: illness, accident,
@@ -609,7 +609,7 @@ export default function SurvivalCampsPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/survivalwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"
@@ -633,7 +633,7 @@ export default function SurvivalCampsPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/survivalwal"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"
@@ -658,7 +658,7 @@ export default function SurvivalCampsPage() {
                   uk-scrollspy-class=""
                 >
                   <p>
-                    Our kids loooove Camp Adventure. Our daughter is going for
+                    Our kids loooove Go and Grow Camp. Our daughter is going for
                     the 4th time this year, our son for the 3rd, and even our
                     little one has been once - a wonderfully organized camp with
                     a super friendly team, a great location (Walsrode), and even
@@ -666,7 +666,7 @@ export default function SurvivalCampsPage() {
                     happily dirty, with new friendships and some puzzling games
                     we couldn&apos;t solve for ages (I&apos;m talking about:
                     &quot;I&apos;m making a triangle from...&quot;). Since then,
-                    our summer holidays are always planned around Camp Adventure
+                    our summer holidays are always planned around Go and Grow Camp
                     - because C.A. is definitely booked every year :-) Huge
                     thanks to all the amazing helpers!
                   </p>

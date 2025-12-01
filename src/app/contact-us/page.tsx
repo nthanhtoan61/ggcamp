@@ -130,7 +130,7 @@ export default function ContactUsPage() {
         </svg>
       ),
       title: "Phone Number",
-      content: ["+(456)789 254", "+(123) 56789"],
+      content: ["+123456789"],
     },
     {
       icon: (
@@ -149,7 +149,7 @@ export default function ContactUsPage() {
         </svg>
       ),
       title: "Email Address",
-      content: ["support@domain.com", "info@domainname.com"],
+      content: ["office@ggcamp.org"],
     },
     {
       icon: (
@@ -168,7 +168,7 @@ export default function ContactUsPage() {
         </svg>
       ),
       title: "Our Location",
-      content: ["Evergreen Trails Luxury Glamping Retreat, 123 Wilderness"],
+      content: ["Poblacion, Madridejos 22, Cebu City, Philippines"],
     },
     {
       icon: (
@@ -237,7 +237,7 @@ export default function ContactUsPage() {
               align-items: center;
               justify-content: center;
               margin-bottom: 1.5vw;
-              color: #274423;
+              color: #9c5d00;
             }
             .contact-card-title {
               font-size: 1.25vw;
@@ -349,7 +349,7 @@ export default function ContactUsPage() {
             }
             .contact-form-input:focus {
               outline: none;
-              border-color: #4CAF50;
+              border-color: #9c5d00;
               box-shadow: 0 0 0 0.1875vw rgba(76, 175, 80, 0.1);
             }
             .contact-form-textarea {
@@ -366,11 +366,11 @@ export default function ContactUsPage() {
             }
             .contact-form-textarea:focus {
               outline: none;
-              border-color: #4CAF50;
+              border-color: #9c5d00;
               box-shadow: 0 0 0 0.1875vw rgba(76, 175, 80, 0.1);
             }
             .contact-form-button {
-              background: #4CAF50;
+              background: #9c5d00;
               color: white;
               padding: 0.75vw 1.5vw;
               border: none;
@@ -384,7 +384,7 @@ export default function ContactUsPage() {
               gap: 0.5vw;
             }
             .contact-form-button:hover {
-              background: #45a049;
+              background: #9c5d00;
               transform: translateY(-0.125vw);
               box-shadow: 0 0.25vw 0.75vw rgba(76, 175, 80, 0.3);
             }

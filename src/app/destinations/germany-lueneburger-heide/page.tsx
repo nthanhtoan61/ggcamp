@@ -90,7 +90,7 @@ export default function GermanyLueneburgerHeidePage() {
                   <center>
                     <a
                       href="https://www.provenexpert.com/camp-adventure/?utm_source=Widget&utm_medium=Widget&utm_campaign=Widget"
-                      title="Customer reviews & experiences for Camp Adventure. Show more information."
+                      title="Customer reviews & experiences for Go and Grow Camp. Show more information."
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -98,7 +98,7 @@ export default function GermanyLueneburgerHeidePage() {
                         src="https://images.provenexpert.com/93/fc/d5e99b2883e0bb405862d9993db6/widget_recommendation_465_086c7.png?t=1721639089410"
                         width={465}
                         height={200}
-                        alt="Customer reviews & experiences for Camp Adventure. Show more information."
+                        alt="Customer reviews & experiences for Go and Grow Camp. Show more information."
                         style={{ border: 0 }}
                         loading="lazy"
                       />
@@ -304,7 +304,7 @@ export default function GermanyLueneburgerHeidePage() {
               <div className="uk-width-1-1@m">
                 <div className="uk-panel uk-text-lead uk-margin" uk-scrollspy-class="">
                   <p>
-                    Our Camp Adventure Academy is located almost halfway between
+                    Our Go and Grow Camp Academy is located almost halfway between
                     Bremen, Hamburg and Hanover in the beautiful Lüneburger Heide.
                     The site is our biggest international summer camp in Northern
                     Germany, Niedersachsen
@@ -341,7 +341,7 @@ export default function GermanyLueneburgerHeidePage() {
                           {
                             lat: 52.8481,
                             lng: 9.4724,
-                            title: "Camp Adventure Academy - Walsrode",
+                            title: "Go and Grow Camp Academy - Walsrode",
                           },
                         ],
                         controls: true,
@@ -363,7 +363,7 @@ export default function GermanyLueneburgerHeidePage() {
                   <template>
                     <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                        Camp Adventure Academy - Walsrode
+                        Go and Grow Camp Academy - Walsrode
                       </h3>
                       <div className="el-content uk-panel uk-margin-top">
                         <p>Internationale Sport-, Sprach & Abenteuer Camps</p>
@@ -766,7 +766,7 @@ export default function GermanyLueneburgerHeidePage() {
                   <div style={{ textAlign: "center" }}>
                     <iframe
                       src="https://bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/walsrode"
-                      title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                      title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                       allowFullScreen={true}
                       width="1000"
                       height="1700"

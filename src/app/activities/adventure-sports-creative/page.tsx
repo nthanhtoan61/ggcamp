@@ -403,7 +403,7 @@ export default function AdventureSportsCreativePage() {
                                     Lüneburger Heide!
                                   </h4>
                                   <p>
-                                    Our Camp Adventure (Academy) in Walsrode is
+                                    Our Go and Grow Camp (Academy) in Walsrode is
                                     set in the beautiful Lüneburger Heide, right
                                     between Bremen, Hamburg, and Hanover. Just a
                                     short walk away, you&apos;ll find a charming
@@ -742,7 +742,7 @@ export default function AdventureSportsCreativePage() {
                                     )}
                                     width={1920}
                                     height={1280}
-                                    alt="Camp counselors warmly welcoming children – dedicated Camp Adventure team for supervised holiday programs"
+                                    alt="Camp counselors warmly welcoming children – dedicated Go and Grow Camp team for supervised holiday programs"
                                     loading="lazy"
                                     className="el-image"
                                   />
@@ -835,11 +835,11 @@ export default function AdventureSportsCreativePage() {
                           <h4>Peace of Mind for Every Adventure!</h4>
                           <p>
                             From little mishaps to unexpected situations – with
-                            our Camp Adventure insurance package, your child is
+                            our Go and Grow Camp insurance package, your child is
                             fully covered.
                           </p>
                           <p>
-                            Camp Adventure Insurance Package
+                            Go and Grow Camp Insurance Package
                             <br />
                             Includes liability, accident, and health insurance
                             for the entire duration of the trip.
@@ -1057,7 +1057,7 @@ export default function AdventureSportsCreativePage() {
                             )}
                             width={1260}
                             height={840}
-                            alt="Children on a canoeing trip through nature – outdoor language camp adventure with expert supervision in Regen"
+                            alt="Children on a canoeing trip through nature – outdoor language Go and Grow Camp with expert supervision in Regen"
                             loading="lazy"
                             className="el-image uk-transition-scale-up uk-transition-opaque"
                           />
@@ -1208,7 +1208,7 @@ export default function AdventureSportsCreativePage() {
                                     Bavarian Forest!
                                   </h4>
                                   <p>
-                                    Our Camp Adventure in Regen is located right
+                                    Our Go and Grow Camp in Regen is located right
                                     in the heart of the Bavarian Forest – one of
                                     South Germany&apos;s most beautiful natural
                                     landscapes. Surrounded by forests, rolling
@@ -1351,7 +1351,7 @@ export default function AdventureSportsCreativePage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/walsrode"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"

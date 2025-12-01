@@ -26,7 +26,7 @@ export default function TermsConditionsPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1@m">
                 <div className="text-white text-[5vw] uk-text-center" uk-scrollspy-class="">
-                  Camp Adventure
+                  Go and Grow Camp
                 </div>
                 <div
                   className="uk-panel font-[Raleway] italic text-[1.5vw] uk-margin uk-text-center"
@@ -52,7 +52,7 @@ export default function TermsConditionsPage() {
                 >
                   Terms & Conditions
                   <br />
-                  Camp Adventure e.K.
+                  Go and Grow Camp e.K.
                 </div>
                 <div
                   className="uk-divider-small uk-text-left@m uk-text-center"
@@ -73,7 +73,7 @@ export default function TermsConditionsPage() {
                 <p>
                   This is an English translation of the original and legally
                   binding German document &quot;Allgemeine Geschäftsbedingungen
-                  Camp Adventure e.K.&quot;, which can be viewed at{" "}
+                  Go and Grow Camp e.K.&quot;, which can be viewed at{" "}
                   <a
                     href="https://www.campadventure.de/de/infos/agb"
                     target="_self"
@@ -85,7 +85,7 @@ export default function TermsConditionsPage() {
                   <br />
                   <strong>
                     <br />
-                    Camp Adventure e.K. is the tour operator for individuals,
+                    Go and Grow Camp e.K. is the tour operator for individuals,
                     for camps in Germany, England and Northern Ireland.
                   </strong>
                   <br />
@@ -147,7 +147,7 @@ export default function TermsConditionsPage() {
                   <br />
                   <strong>2. Terms of payment</strong>
                   <br />
-                  Camp Adventure e.K. shall only request or accept payments
+                  Go and Grow Camp e.K. shall only request or accept payments
                   towards the travel price before the completion of the trip if
                   the traveler has been provided with a guarantee certificate,
                   stating the name and contact details of the credit institution,
@@ -382,7 +382,7 @@ export default function TermsConditionsPage() {
                   the tour operator directly. Should a representative of the
                   tour operator not be available or contractually obliged, the
                   tour operator must be informed of any defects relating to the
-                  trip at the following address: Camp Adventure e.K., Museumstr.
+                  trip at the following address: Go and Grow Camp e.K., Museumstr.
                   39, 22765 Hamburg. It is recommended that such notifications
                   are made in a durable medium. In accordance with § 651 j BGB,
                   claims shall lapse two years after the final day of the trip,
@@ -476,7 +476,7 @@ export default function TermsConditionsPage() {
                   <strong>12. Data protection</strong>
                   <br />
                   The protection of clients&apos; privacy and personal data is
-                  very important to Camp Adventure. Camp Adventure collects and
+                  very important to Go and Grow Camp. Go and Grow Camp collects and
                   processes data according to legal regulations. Personal data is
                   only stored when necessary for the performance of booked
                   services or to comply with legal regulations.
@@ -542,7 +542,7 @@ export default function TermsConditionsPage() {
                   <br />
                   The invalidity of individual terms does not render other
                   conditions or the contract as a whole invalid. 16. VAT
-                  Exemption in accordance with § 4 Nr. 23 UstG, Camp Adventure
+                  Exemption in accordance with § 4 Nr. 23 UstG, Go and Grow Camp
                   e.K. is exempt from sales tax for all child and youth travel.
                   <br />
                   <br />

@@ -19,6 +19,86 @@ export default function HomePage() {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [seeMoreHovered, setSeeMoreHovered] = useState(false);
   const [seeMoreCoords, setSeeMoreCoords] = useState({ x: 0, y: 0 });
+  const avatars = [
+    "yootheme/aboutImage/profile-face_1.jpg",
+    "yootheme/aboutImage/young-tourist-sitting-tent.jpg",
+    "yootheme/aboutImage/portrait-young-male-tourist-standing-forest-with-tent.jpg",
+  ];
+  // Refs for scroll-triggered animations in About Us section
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useScrollTrigger(ref);
+
+  // Individual refs for each animated element
+  const aboutUsTitleRef = useRef<HTMLHeadingElement>(null);
+  const creatingCampsTitleRef = useRef<HTMLHeadingElement>(null);
+  const descriptionTextRef = useRef<HTMLParagraphElement>(null);
+  const iconListRef = useRef<HTMLUListElement>(null);
+  const quoteTextRef = useRef<HTMLParagraphElement>(null);
+  const learnMoreButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Refs for image elements
+  const mainImage1Ref = useRef<HTMLDivElement>(null);
+  const mainImage2Ref = useRef<HTMLDivElement>(null);
+  const extraImageRef = useRef<HTMLDivElement>(null);
+
+  // Refs for author images and counter
+  const authorImagesRef = useRef<HTMLDivElement>(null);
+  const adventurerTextRef = useRef<HTMLParagraphElement>(null);
+
+  // Visibility states for each element
+  const isAboutUsTitleVisible = useScrollTrigger(aboutUsTitleRef);
+  const isCreatingCampsTitleVisible = useScrollTrigger(creatingCampsTitleRef);
+  const isDescriptionTextVisible = useScrollTrigger(descriptionTextRef);
+  const isIconListVisible = useScrollTrigger(iconListRef);
+  const isQuoteTextVisible = useScrollTrigger(quoteTextRef);
+  const isLearnMoreButtonVisible = useScrollTrigger(learnMoreButtonRef);
+
+  // Visibility states for image elements
+  const isMainImage1Visible = useScrollTrigger(mainImage1Ref);
+  const isMainImage2Visible = useScrollTrigger(mainImage2Ref);
+  const isExtraImageVisible = useScrollTrigger(extraImageRef);
+
+  // Visibility states for author images and counter
+  const isAuthorImagesVisible = useScrollTrigger(authorImagesRef);
+  const isAdventurerTextVisible = useScrollTrigger(adventurerTextRef);
+  const [count, setCount] = useState(0);
+  const countedRef = useRef(false); // đảm bảo chỉ count 1 lần
+
+  const circleRef = (el: HTMLDivElement | null) => {
+    if (!el || countedRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            countedRef.current = true;
+            const target = 50;
+            const duration = 3000;
+            let startTime: number | null = null;
+
+            const step = (timestamp: number) => {
+              if (!startTime) startTime = timestamp;
+              const progress = timestamp - startTime;
+              const current = Math.min(
+                Math.floor((progress / duration) * target),
+                target
+              );
+              setCount(current);
+              if (current < target) {
+                requestAnimationFrame(step);
+              }
+            };
+
+            requestAnimationFrame(step);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(el);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -488,221 +568,290 @@ export default function HomePage() {
                   <path d="M8.8457 5.93115C8.84567 5.64689 8.73343 5.37413 8.53418 5.17139L5.28808 1.92432L5.208 1.85303C5.01329 1.69665 4.76943 1.61084 4.51757 1.61084C4.23001 1.61094 3.95373 1.72334 3.74804 1.92432L3.00586 2.68408L2.99609 2.69385C2.22454 3.45523 1.73864 4.45915 1.62011 5.53662C1.50186 6.61196 1.75664 7.69523 2.34179 8.60498C5.83558 13.7515 10.2803 18.1831 15.4365 21.6626C16.3449 22.2448 17.4253 22.4983 18.498 22.3804C19.5755 22.2619 20.5794 21.7759 21.3408 21.0044L21.3506 20.9946L22.1113 20.2495C22.3112 20.044 22.4238 19.7696 22.4238 19.4829C22.4238 19.1951 22.3115 18.9182 22.1103 18.7124L18.8447 15.4819C18.6423 15.284 18.3701 15.1725 18.0869 15.1724C17.8026 15.1724 17.5289 15.2837 17.3262 15.4829L16.8008 14.9487L17.3252 15.4849C16.8392 15.96 16.1865 16.226 15.5068 16.2261C14.8271 16.2261 14.1736 15.9601 13.6875 15.4849L8.53906 10.3354C8.29886 10.0975 8.1071 9.81434 7.97656 9.50244C7.84519 9.18854 7.77734 8.85152 7.77734 8.51123C7.77734 8.17096 7.84519 7.83391 7.97656 7.52002C8.10639 7.20982 8.29582 6.92801 8.53418 6.69092C8.73343 6.48815 8.8457 6.21544 8.8457 5.93115Z" />
                 </svg>
               </div>
-              <div className="text-left">
-                <p className="text-xs text-white/80">Call Us Now</p>
-                <p className="text-sm font-bold text-white">+123 456 789</p>
+
+              {/* Text */}
+              <div className="flex flex-col gap-y-1 items-start">
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">
+                  Call us
+                </h3>
+                <span className="!text-[1.667vw] text-white text-base font-semibold">
+                  +(123) 456 789
+                </span>
+              </div>
+            </a>
+            <div className="w-px h-6 bg-white/30"></div> {/* Divider */}
+            {/* Email */}
+            <a
+              href="mailto:office@ggcamp.org"
+              className="group flex items-center gap-3"
+            >
+              <div className="p-3 rounded-full transition-colors duration-300 group-hover:bg-[#9c5d00]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="text-white"
+                >
+                  <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zm0 12H4V8.489l8 5.333 8-5.333V18z" />
+                </svg>
+              </div>
+              <div className="flex flex-col gap-y-1 items-start">
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">
+                  Email
+                </h3>
+                <span className="text-white text-base font-semibold">
+                  office@ggcamp.org
+                </span>
+              </div>
+            </a>
+            <div className="w-px h-6 bg-white/30"></div> {/* Divider */}
+            {/* Working Hours */}
+            <a href="#" className="group flex items-center gap-3">
+              <div className="p-3 rounded-full transition-colors duration-300 group-hover:bg-[#9c5d00]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="text-white"
+                >
+                  <path d="M12 1.75C6.072 1.75 1.25 6.572 1.25 12.5S6.072 23.25 12 23.25 22.75 18.428 22.75 12.5 17.928 1.75 12 1.75zm0 20c-4.69 0-8.5-3.81-8.5-8.5s3.81-8.5 8.5-8.5 8.5 3.81 8.5 8.5-3.81 8.5-8.5 8.5z" />
+                  <path d="M12.75 7h-1.5v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+                </svg>
+              </div>
+              <div className="flex flex-col gap-y-1 items-start">
+                <h3 className="!text-white !font-semibold !text-[1.667vw] !mb-1 !mt-1">
+                  Working Hours
+                </h3>
+                <span className="!text-[1.667vw] text-white text-base font-semibold">
+                  Mon-Sat 08:pm - 05:am
+                </span>
               </div>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Filter Form Section */}
-      <div
-        id="searchform"
-        className="uk-section-primary uk-section-overlap uk-position-relative"
-      >
-        <div className="uk-container uk-position-relative">
-          {/* Filter Form */}
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1">
-              <div id="page#1">
-                <form
-                  id="filter-form"
-                  method="GET"
-                  action="/#searchform"
-                  onSubmit={handleFilterSubmit}
-                  uk-grid=""
+      {/*About Us*/}
+      <div className="relative w-full bg-gray-50 py-20">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10 px-4">
+          {/* Left Images */}
+          <div className="relative flex-1 flex flex-col gap-6 items-center lg:items-start">
+            {/* Main Image */}
+            <div
+              ref={mainImage1Ref}
+              className={`about-main-img relative w-80 h-[250px] overflow-hidden rounded-xl shadow-lg transform transition-all duration-700 hover:scale-105 ${
+                isMainImage1Visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
+              <img
+                src={getTemplateImageUrl("yootheme/aboutImage/act2.jpg")}
+                alt="About Image 1"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            </div>
+
+            {/* Main Image */}
+            <div
+              ref={mainImage2Ref}
+              className={`about-main-img relative w-80 h-[250px] overflow-hidden rounded-xl shadow-lg transform transition-all duration-700 hover:scale-105 ${
+                isMainImage2Visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
+              <img
+                src={getTemplateImageUrl("yootheme/aboutImage/act3.jpg")}
+                alt="About Image 1"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            </div>
+
+            {/* Extra Image on Right Corner */}
+            <div
+              ref={extraImageRef}
+              className={`about-extra-img absolute right-35 top-0 w-60 h-140 rounded-xl overflow-hidden shadow-xl border-4 border-white transform transition-all duration-700 hover:scale-105 ${
+                isExtraImageVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
+              <img
+                src={getTemplateImageUrl("yootheme/aboutImage/man-camping.jpg")}
+                alt="Extra Corner Image"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Small Author Images + Counter */}
+            <div className="flex items-center gap-4 mt-4 about-author-group">
+              <div
+                ref={authorImagesRef}
+                className={` flex items-center transition-all duration-700 ${
+                  isAuthorImagesVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                }`}
+              >
+                {avatars.map((src, i) => (
+                  <img
+                    key={i}
+                    src={getTemplateImageUrl(src)}
+                    alt={`Author ${i + 1}`}
+                    style={{ animationDelay: `${i * 300}ms` }} // delay tăng dần
+                    className="w-15 !h-15 rounded-full border-2 border-white shadow-md -mr-4 object-cover opacity-0 animate-fadeUp transform transition-all duration-700 hover:scale-105"
+                  />
+                ))}
+
+                {/* Count Circle */}
+                <div
+                  ref={circleRef}
+                  className="w-15 h-15 flex items-center justify-center rounded-full bg-[#9c5d00] text-white font-bold shadow-md -mr-4 opacity-0 animate-fadeUp about-author-count"
+                  style={{ animationDelay: "1000ms" }}
                 >
-                  <div className="uk-width-1-4@m">
-                    <label className="uk-form-label" style={{ color: "#fff" }}>
-                      Programs & Courses
-                    </label>
-                    {/* MultiSelect cho Programs */}
-                    <select
-                      id="field_4_select"
-                      className="multiselect"
-                      data-hidden="field_4"
-                      multiple
+                  <span className="text-2xl">{count}</span>+
+                </div>
+              </div>
+
+              <p
+                ref={adventurerTextRef}
+                className={`!text-[1.667vw] !ml-4 !mt-4 text-gray-700 !font-semibold transition-all duration-700 ${
+                  isAdventurerTextVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                }`}
+              >
+                Adventurer with happy customer
+              </p>
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className="flex-1 flex flex-col gap-4">
+            <h3
+              ref={aboutUsTitleRef}
+              className={`!about-title !text[5vw] md:!text-[5vw] text-[#9c5d00] !font-bold uppercase tracking-wider about-author-text transition-all duration-700 ${
+                isAboutUsTitleVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
+              About Us
+            </h3>
+
+            <h2
+              ref={creatingCampsTitleRef}
+              className={`!about-subtitle !text-[2.5vw] !mt-0 !font-bold  transition-all duration-700 ${
+                isCreatingCampsTitleVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
+              Creating Amazing Camps
+            </h2>
+
+            <p
+              ref={descriptionTextRef}
+              className={`!about-description text-gray-600 mt-1 transition-all duration-700 ${
+                isDescriptionTextVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
+              Learning is closely tied to practical experience—summer is the
+              perfect time for hands-on opportunities. While knowledge must
+              still be nurtured, it can take on new and more engaging forms.
+            </p>
+            <hr className="border-t border-gray-300 my-6" />
+            {/* --- WRAPPER CHO ICON LIST + TEXT/BUTTON --- */}
+            <div className="flex flex-col md:flex-row mt-3 gap-8">
+              {" "}
+              {/* gap-8 để cách icon list ra xa */}
+              {/* Left: Icon List */}
+              <ul
+                ref={iconListRef}
+                className={`about-icon-list flex flex-col gap-4 flex-[0_0_55%] !p-0 transition-all duration-700 ${
+                  isIconListVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                }`}
+              >
+                <li className="flex items-center gap-4 text-gray-700">
+                  <div className="min-w-8 w-8 h-8 rounded-full bg-[#9c5d00] flex items-center justify-center text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="3"
                     >
-                      <option value="adventure">
-                        Adventure, Sport and Creative
-                      </option>
-                      <option value="fishing">Fishing</option>
-                      <option value="arts-crafts">Arts & Crafts</option>
-                      <option value="coding">Coding</option>
-                      <option value="german">German course</option>
-                      <option value="englisch">English course</option>
-                      <option value="englisch-toefl">
-                        English course (TOEFL exam)
-                      </option>
-                      <option value="soccer">Soccer</option>
-                      <option value="husky">Husky</option>
-                      <option value="icit">
-                        International Counselor in Training (ICIT)
-                      </option>
-                      <option value="top-rope">
-                        Climbing course (Top Rope certificate)
-                      </option>
-                      <option value="leadership">Leadership</option>
-                      <option value="water-sports">
-                        Multi Water Adventure
-                      </option>
-                      <option value="horseback">Horseback Riding</option>
-                      <option value="dlrg">
-                        Lifeguard course (DLRG bronze)
-                      </option>
-                      <option value="swimming">Swimming course</option>
-                      <option value="sailing">Sailing</option>
-                      <option value="skating">Skating</option>
-                      <option value="space">Space Exploration</option>
-                      <option value="spanish">Spanish course</option>
-                      <option value="survival">Survival</option>
-                      <option value="dancing">Dancing</option>
-                      <option value="diving">
-                        Diving course (PADI Open Water)
-                      </option>
-                      <option value="climbing">Climbing</option>
-                      <option value="tennis">Tennis</option>
-                      <option value="windsurf">Windsurfing</option>
-                    </select>
-                    {/* Hidden field để lưu giá trị đã chọn */}
-                    <input type="hidden" id="field_4" name="field_4" value="" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
-
-                  <div className="uk-width-1-4@m">
-                    <label className="uk-form-label" style={{ color: "#fff" }}>
-                      Holiday
-                    </label>
-                    {/* MultiSelect cho Holiday */}
-                    <select
-                      id="field_5_select"
-                      className="multiselect"
-                      data-hidden="field_5"
-                      multiple
+                  Fun-Filled Experiences for Every Camper
+                </li>
+                <li className="flex items-center gap-4 text-gray-700">
+                  <div className="min-w-8 w-8 h-8 rounded-full bg-[#9c5d00] flex items-center justify-center text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="3"
                     >
-                      <option value="spring">Spring</option>
-                      <option value="summer">Summer</option>
-                      <option value="autumn">Autumn</option>
-                    </select>
-                    {/* Hidden field để lưu giá trị đã chọn */}
-                    <input type="hidden" id="field_5" name="field_5" value="" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
-
-                  <div className="uk-width-1-4@m">
-                    <label className="uk-form-label" style={{ color: "#fff" }}>
-                      Location
-                    </label>
-                    {/* MultiSelect cho Location */}
-                    <select
-                      id="field_6_select"
-                      className="multiselect"
-                      data-hidden="field_6"
-                      multiple
+                  Adventures That Inspire Confidence and Growth
+                </li>
+                <li className="flex items-center gap-4 text-gray-700">
+                  <div className="min-w-8 w-8 h-8 rounded-full bg-[#9c5d00] flex items-center justify-center text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="3"
                     >
-                      <option value="northern-germany">Northern Germany</option>
-                      <option value="west-germany">West Germany</option>
-                      <option value="south-germany">South Germany</option>
-                      <option value="england">England</option>
-                      <option value="spain">Spain</option>
-                    </select>
-                    {/* Hidden field để lưu giá trị đã chọn */}
-                    <input type="hidden" id="field_6" name="field_6" value="" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
-
-                  <div className="uk-width-1-4@m">
-                    <label className="uk-form-label" style={{ color: "#fff" }}>
-                      Age
-                    </label>
-                    {/* UIkit Select cho Age (single select) */}
-                    <select
-                      id="field_7_select"
-                      name="field_7"
-                      className="uk-select"
-                    >
-                      <option value=""></option>
-                      {Array.from({ length: 12 }, (_, i) => i + 7).map(
-                        (age) => (
-                          <option key={age} value={age}>
-                            {age}
-                          </option>
-                        )
-                      )}
-                    </select>
-                  </div>
-
-                  <div className="uk-width-1-1">
-                    <button
-                      className="uk-button uk-button-default"
-                      type="submit"
-                    >
-                      Apply filter
-                    </button>
-                    <button
-                      className="uk-button uk-button-secondary"
-                      type="button"
-                      onClick={() => {
-                        window.location.href = "/#searchform";
-                      }}
-                    >
-                      Reset
-                    </button>
-                  </div>
-                </form>
-
-                {/* Script để khởi tạo multiselect và xử lý form submission */}
-                <script
-                  dangerouslySetInnerHTML={{
-                    __html: `
-                        (function() {
-                          function initMultiselect() {
-                            if (typeof jQuery !== 'undefined' && jQuery.fn.multiselect) {
-                              jQuery(document).ready(function($) {
-                                // Khởi tạo MultiSelect nếu chưa được khởi tạo
-                                if (!$('.multiselect[multiple]').data('plugin_multiselect')) {
-                                  $('.multiselect[multiple]').multiselect({
-                                    texts: {
-                                      placeholder: '',
-                                      selectedOptions: ''
-                                    },
-                                    selectAll: false,
-                                    selectGroup: true
-                                  });
-                                }
-
-                                // Update hidden fields before form submission
-                                // Lấy giá trị từ multiselect và đưa vào hidden fields
-                                document.querySelectorAll('.multiselect').forEach(function(select) {
-                                  const hiddenFieldId = select.getAttribute('data-hidden');
-                                  const hiddenField = document.getElementById(hiddenFieldId);
-                                  const selectedValues = $(select).val(); // Lấy giá trị từ MultiSelect
-
-                                  if (hiddenField) {
-                                    hiddenField.value = selectedValues ? selectedValues.join(',') : '';
-                                  }
-                                });
-
-                                // Also update the multiselect values when they change
-                                $('.multiselect[multiple]').on('change', function() {
-                                  const hiddenFieldId = $(this).attr('data-hidden');
-                                  const hiddenField = document.getElementById(hiddenFieldId);
-                                  const selectedValues = $(this).val();
-
-                                  if (hiddenField) {
-                                    hiddenField.value = selectedValues ? selectedValues.join(',') : '';
-                                  }
-                                });
-                              });
-                            } else {
-                              // Retry sau 100ms nếu jQuery chưa sẵn sàng
-                              setTimeout(initMultiselect, 100);
-                            }
-                          }
-                          initMultiselect();
-                        })();
-                      `,
-                  }}
-                />
+                  Memories and Friendships That Last a Lifetime
+                </li>
+              </ul>
+              {/* Right: Text + Button */}
+              <div className="flex flex-col justify-start flex-[0_0_auto] gap-0 mt-2 md:mt-0 max-w-xs md:ml-12">
+                <p
+                  ref={quoteTextRef}
+                  className={`about-quote !font-semibold text-black transition-all duration-700 ${
+                    isQuoteTextVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-10"
+                  }`}
+                >
+                  "Your Journey, Your Comfort,
+                  <br /> Your Adventure."
+                </p>
               </div>
             </div>
           </div>
@@ -1147,782 +1296,6 @@ export default function HomePage() {
                       backgroundColor: "#9c5d00",
                     }}
                   ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Go and Grow Camp has organised section */}
-      <div className="uk-section-default uk-section uk-section-small uk-padding-remove-bottom">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <h2 className="uk-h2 uk-text-center@m uk-text-center !font-bold">
-                <p>
-                  Go and Grow Camp has organised international summer camps and
-                  outdoor educational school trips in various countries
-                </p>
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Quote Section with Jan Vieth */}
-      <div
-        className="uk-section-muted uk-section-overlap uk-section uk-section-small"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
-      >
-        <div className="uk-container uk-container-large">
-          <div
-            className="uk-grid tm-grid-expand uk-grid-large uk-margin-xlarge"
-            uk-grid=""
-          >
-            <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@m">
-              <div className="uk-panel uk-width-1-1">
-                <div
-                  className="uk-margin uk-text-center@s uk-text-center"
-                  uk-scrollspy-class="uk-animation-fade"
-                >
-                  <Image
-                    src={getTemplateImageUrl("yootheme/banner/b1.jpg")}
-                    width={250}
-                    height={166}
-                    className="el-image"
-                    alt="Jan Vieth, Founder & General Manager of Go and Grow"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m">
-              <div className="uk-panel uk-width-1-1">
-                <blockquote
-                  className="uk-margin-medium uk-text-left@m uk-text-center"
-                  uk-scrollspy-class=""
-                >
-                  <p>
-                    Regardless of which country or culture a child, teen or
-                    staff member comes from – they should all feel comfortable
-                    together and experience a unique and unforgettable time at
-                    camp.
-                  </p>
-                  <footer className="el-footer">
-                    <cite className="el-author">Go and Grow</cite>
-                  </footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Holidays that do more section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Holidays that do more – International language and specialty
-                  camps for kids & teens
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Outdoor adventures, language travel & unforgettable
-                    experiences in Germany, England & Spain – bilingual,
-                    media-free & full of camp vibes.
-                  </p>
-                  <p>
-                    For over 20 years, Go and Grow has stood for international
-                    summer camps that truly connect kids and teens. Founded by
-                    Jan Vieth and inspired by Canadian camp life, we bring young
-                    people from all over the world together – to learn, grow,
-                    and explore.
-                  </p>
-                  <p>
-                    Our language camps, sports camps, and specialty camps
-                    combine nature, community, and real learning by living.
-                    Here, you don't just learn a language – you learn life
-                    itself: outdoors, together, for real.
-                  </p>
-                  <p>
-                    Because with us, it's not just about what you learn – it's
-                    about what you experience.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Holiday camps for every season section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Holiday camps for every season | Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Our outdoor, sports, and language camps run all year round –
-                    in Germany, England, and Spain.
-                    <br />
-                    When will your next adventure begin?
-                  </p>
-                  <p>
-                    Spring, Easter & Whitsun – kick off your holidays full of
-                    energy!
-                    <br />
-                    Our spring camps add some excitement to the short breaks:
-                    bilingual, active, and packed with that true camp feeling –
-                    from tent camps to language holidays in Germany or Spain.
-                    <br />
-                    Perfect to boost your English, Spanish, or German skills –
-                    in class or out in nature during epic outdoor adventures.
-                  </p>
-                  <p>
-                    Summer, summer camps – ready to go?
-                    <br />
-                    When the sun's out, Go and Grow is in its element!
-                    <br />
-                    Our summer camps in Germany, Spain, and England offer
-                    endless variety: watersports, horseback riding, climbing,
-                    football, creative camps, and so much more.
-                    <br />
-                    With our bilingual teamers, you'll improve your English
-                    naturally – the best prep for a confident school start!
-                    <br />
-                    Or dive straight into language and adventure with our
-                    English and Spanish language camps and youth travel programs
-                    in Germany, Barcelona, or England.
-                  </p>
-                  <p>
-                    Autumn, fall camps – days full of action?
-                    <br />
-                    Our autumn camp in Walsrode has become a true tradition –
-                    authentic Canadian camp life with kids from all over the
-                    world.
-                    <br />
-                    With over 20 activities, international teamers, and special
-                    programs like Husky, horseback riding, or English camps,
-                    there's something for everyone.
-                  </p>
-                  <p>
-                    Winter, winter break – when the world slows down?
-                    <br />
-                    We're busy creating new ideas, training our teamers, and
-                    planning fresh adventures – ready to welcome you back to
-                    camp next season.
-                  </p>
-                  <p>
-                    Find your perfect camp:
-                    <br />→ Easter camp, Whitsun camp, summer camp, autumn camp
-                    –
-                    <Link href="/camp-profiles" target="_blank" rel="noopener">
-                      your next adventure is waiting!
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* The perfect camp for every age group section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  The perfect camp for every age group
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    At Go and Grow, kids and teens from all over the world come
-                    together – aged 7 to 17. Every age group brings its own
-                    unique spirit, and not every camp fits everyone – that's why
-                    we offer a wide range of summer camps and youth travel
-                    programs for every age and interest!
-                  </p>
-                  <p>
-                    Many start with our kids' camps and holiday programs,
-                    experiencing for the first time what it's like to spend a
-                    week away from home. It's a chance to grow courage,
-                    confidence, and real friendships – that's pure camp life.
-                    Our daily structure and activities are tailored to younger
-                    campers, helping them feel safe, supported, and right at
-                    home.
-                  </p>
-                  <p>
-                    For older participants, we offer summer camps, specialty
-                    programs, and international youth trips that encourage
-                    independence, adventure, and new connections – always
-                    active, inspiring, and full of opportunities to grow.
-                  </p>
-                  <p>
-                    Depending on the location and program, age groups mix
-                    differently – sometimes younger, sometimes older, but always
-                    international. In our outdoor, language, and adventure
-                    camps, everyone finds the perfect space to learn, explore,
-                    and have fun.
-                  </p>
-                  <p>
-                    Our{" "}
-                    <Link href="/camp-profiles" target="_blank" rel="noopener">
-                      specialty camps
-                    </Link>{" "}
-                    nurture talents, interests, and self-confidence – with no
-                    pressure, just plenty of motivation. Whether you're a
-                    first-time camper or already a seasoned pro, you'll be seen,
-                    supported, and appreciated – just as you are.
-                  </p>
-                  <p>
-                    Find your camp:
-                    <br />→ Discover the holiday camp that fits you best – and
-                    grow beyond your limits.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Specialty camps & adventure holidays section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Specialty camps & adventure holidays | Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Our outdoor, sports, and creative camps combine movement,
-                    community, and adventure – all powered by true passion.
-                    Whether you want to try something new, develop your talent,
-                    or simply experience unforgettable holidays, you'll find
-                    your personal highlight in our specialty camps.
-                  </p>
-                  <p>
-                    Choose from over 20 different specialty camps across
-                    multiple locations – from action to mindfulness, from sports
-                    to language. The following examples give you just a taste of
-                    our diverse camp world:
-                  </p>
-                  <p>
-                    <Link
-                      href="/camp-profiles/soccer"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Football Camp:
-                    </Link>{" "}
-                    Train with real coaches from our partner clubs, boost your
-                    skills, team spirit, and game understanding – all in an
-                    authentic camp atmosphere.
-                    <br />
-                    <Link
-                      href="/camp-profiles/multi-water-adventure"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Multiwater Camp:
-                    </Link>{" "}
-                    Sailing, windsurfing, diving, or SUP – it's all about sun,
-                    waves, and endless water fun.
-                    <br />
-                    <Link
-                      href="/camp-profiles/climbing"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Climbing Camp:
-                    </Link>{" "}
-                    Big climbs, high ropes, and our legendary climbing park –
-                    with experienced guides, you'll find out what you're truly
-                    capable of.
-                    <br />
-                    <Link
-                      href="/camp-profiles/horseback-riding"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Riding Camp:
-                    </Link>{" "}
-                    For all horse lovers – from grooming and care to riding
-                    technique. Intensive, warm-hearted, and full of horse
-                    passion.
-                    <br />
-                    <Link
-                      href="/camp-profiles/husky-camp"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Husky Camp:
-                    </Link>{" "}
-                    Connection, trust, and responsibility – experience pure
-                    energy side by side with our huskies. Action, mindfulness,
-                    and teamwork combined.
-                    <br />
-                    <Link
-                      href="/camp-profiles/senior-plus-leadership"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Leadership Camp
-                    </Link>
-                    <strong>:</strong> For teens ready to grow beyond themselves
-                    – with team challenges, communication training, and a
-                    wilderness hike that'll definitely push you out of your
-                    comfort zone.
-                  </p>
-                  <p>
-                    And if you don't choose a specialty camp? No worries! Every
-                    Go and Grow program includes our signature mix of{" "}
-                    <Link
-                      href="/camp-profiles/adventure-sports-creative"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      adventure, sports, and creativity
-                    </Link>{" "}
-                    – designed to spark movement, imagination, and team spirit
-                    for every age and interest.
-                  </p>
-                  <p>
-                    Because at Go and Grow, one thing's always true: no matter
-                    what you choose, you'll discover new things, build
-                    friendships, and make memories that last a lifetime.
-                  </p>
-                  <p>
-                    <strong>Find your specialty camp:</strong>
-                    <br />→ Football, watersports, horseback riding, huskies,
-                    climbing, or leadership –
-                    <Link href="/camp-profiles" target="_blank" rel="noopener">
-                      your adventure is waiting!
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Language camps & adventure trips section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Language camps & adventure trips | Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    At Go and Grow, language isn't just taught – it's lived. We
-                    go beyond vocabulary and grammar to focus on real-life
-                    communication, culture, and adventure – true Learning by
-                    Living.
-                  </p>
-                  <p>
-                    Our language programs take place in Germany, England, and
-                    Spain – for all ages and levels. Whether you're just
-                    starting with English or preparing for the TOEFL®, we'll
-                    help you grow from where you are.
-                  </p>
-                  <p>
-                    Language is more than grammar drills. Our native-speaking
-                    teamers take you out of the classroom and into real
-                    experiences: playing football in English, exploring cities
-                    in Spanish, connecting with locals – that's how your
-                    language holiday becomes a true adventure trip.
-                  </p>
-                  <p>
-                    In{" "}
-                    <Link
-                      href="/destinations/en-england-bath-university"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Bath
-                    </Link>{" "}
-                    and Cornwall, you'll enjoy multi-day excursions to London.
-                    In{" "}
-                    <Link
-                      href="/destinations/en-spain-barcelona"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Barcelona
-                    </Link>
-                    , you're right in the heart of the city. And our German
-                    locations are hand-picked to feel just as adventurous.
-                  </p>
-                  <p>
-                    <strong>Program overview:</strong>
-                    <br />•{" "}
-                    <Link
-                      href="/camp-profiles/englischcamps"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      English Classic
-                    </Link>{" "}
-                    – practical, everyday English with native coaches
-                    <br />•{" "}
-                    <Link
-                      href="/camp-profiles/german-camps"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      German Classic
-                    </Link>{" "}
-                    – hands-on learning for beginners & advanced learners
-                    <br />•{" "}
-                    <Link
-                      href="/camp-profiles/spanishcourse"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Spanish Classic
-                    </Link>{" "}
-                    – experience language, sunshine, and culture
-                    <br />•{" "}
-                    <Link
-                      href="/camp-profiles/englisch-toefl"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      TOEFL® Course
-                    </Link>{" "}
-                    – focused exam preparation with intensive training
-                  </p>
-                  <p>
-                    <strong>Find your language camp:</strong>
-                    <br />→
-                    <Link
-                      href="/camp-profiles/language-camps"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      English, Spanish, or German
-                    </Link>{" "}
-                    – in Germany, England, or Spain. Language, culture,
-                    adventure – all in one camp experience!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* School trips & group travel section */}
-      <div className="uk-section-default uk-section uk-section-xsmall uk-padding-remove-bottom">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  School trips & group travel with Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Whether it's a school trip, group travel, or project days –
-                    at Go and Grow, students aged 7 to 17 experience
-                    unforgettable days full of teamwork, outdoor fun, and
-                    international spirit.
-                  </p>
-                  <p>
-                    Our proven camp concept is perfectly tailored for school
-                    groups:
-                  </p>
-                  <p>
-                    • <strong>Age-appropriate programs</strong>, clear daily
-                    routines, and diverse activities help every class grow
-                    closer together.
-                    <br />• Whether it's{" "}
-                    <strong>
-                      outdoor challenges, creative workshops, or teambuilding
-                      programs
-                    </strong>{" "}
-                    – at Camp Adventure, it's all about connection and
-                    collaboration.
-                    <br />• Teachers can relax: our internationally trained
-                    teamers take care of supervision and educational guidance,
-                    building confidence and strengthening group bonds.
-                  </p>
-                  <p>
-                    That's how every school trip becomes a true adventure
-                    journey – combining community, exploration, and learning.
-                  </p>
-                  <p>
-                    Our locations in{" "}
-                    <strong>Germany, England, and Spain</strong> offer the
-                    perfect setting: spacious outdoor areas, a wide range of
-                    activities, modern facilities, and plenty of room for real
-                    camp life.
-                  </p>
-                  <p>
-                    We also welcome <strong>international schools</strong>!
-                    Together, we create learning spaces where cultures,
-                    languages, and perspectives meet.
-                    <br />
-                    Openness and global exchange are part of our DNA – here, the
-                    world becomes tangible on a small scale: kids and teens from
-                    over 70 nations come together, learn from one another, and
-                    discover what global community truly means.
-                  </p>
-                  <p>
-                    <strong>Ready for an extraordinary school trip?</strong>
-                    <br />→{" "}
-                    <Link href="/schooltrips" target="_blank" rel="noopener">
-                      Learn more about our group programs
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Family weekends & parent-child camps section */}
-      <div className="uk-section-default uk-section uk-section-xsmall">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Family weekends & parent-child camps at Go and Grow
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Real camp life – this time, together!
-                    <br />
-                    At our family weekends, you'll enjoy three days full of
-                    adventure, campfires, nature, and connection. Whether it's
-                    canoeing, climbing, swimming, stand-up paddling, or archery
-                    – a fun-filled program awaits you from morning till night.
-                  </p>
-                  <p>
-                    The best part? You don't have to plan a thing!
-                    Accommodation, meals, and activities are all included – true
-                    to the Go and Grow motto: arrive, relax, experience.
-                  </p>
-                  <p>
-                    Our international teamers create the perfect camp vibe,
-                    guide you through every activity, and make sure it all feels
-                    like a real vacation.
-                    <br />
-                    Ideal for families who want to get a taste of camp life,
-                    spend quality time together, and share that unique Go and
-                    Grow feeling with their kids.
-                  </p>
-                  <p>
-                    Tip: We also offer <strong>father-child camps</strong> –
-                    perfect for creating lasting memories and sharing
-                    unforgettable adventures together.
-                  </p>
-                  <p>
-                    → Find your date &{" "}
-                    <Link
-                      href="/info/family-weekend"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      book your family weekend
-                    </Link>
-                    <br />→ Experience nature, adventure & togetherness – as a
-                    family
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Book your Holidaycamp CTA section */}
-      <div className="uk-section-default uk-section-overlap uk-section uk-padding-remove-top">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <div className="uk-panel uk-text-emphasis uk-margin">
-                  <p>
-                    Some holidays you forget. Others change you. At Go and Grow,
-                    you grow beyond yourself, discover new languages, cultures,
-                    and friends for life.
-                    <br />
-                    So – what's stopping you? Your next adventure is already
-                    waiting.
-                  </p>
-                </div>
-                <div className="uk-blend-difference uk-margin uk-text-center">
-                  <Link
-                    className="el-content uk-button uk-button-default"
-                    href="/booking"
-                  >
-                    Book your Holidaycamp
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* We love Camp section */}
-      <div
-        className="uk-section-muted uk-section-overlap uk-section"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
-      >
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-grid-medium uk-child-width-1-1 uk-grid-margin-medium">
-            <div className="uk-grid-item-match uk-flex-middle uk-width-1-1@m">
-              <div className="uk-panel uk-width-1-1">
-                <h4
-                  className="uk-h2 uk-text-center !text-[2.22vw] !font-bold"
-                  uk-scrollspy-class=""
-                >
-                  <p>We love Camp</p>
-                </h4>
-                <div
-                  className="uk-divider-icon uk-width-medium uk-margin-auto"
-                  uk-scrollspy-class=""
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="uk-grid tm-grid-expand uk-grid-large uk-grid-margin-large"
-            uk-grid=""
-          >
-            <div className="uk-width-expand@m">
-              <div
-                className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
-                uk-scrollspy-class=""
-              >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
-                  Internationality
-                </h3>
-                <div className="el-content uk-panel uk-margin-top !text-black">
-                  <p>&nbsp;participants from more than 70 countries</p>
-                </div>
-              </div>
-              <div
-                className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
-                uk-scrollspy-class=""
-              >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
-                  Outdoors
-                </h3>
-                <div className="el-content uk-panel uk-margin-top !text-black">
-                  <p>feel the real nature in the best surroundings</p>
-                </div>
-              </div>
-            </div>
-            <div className="uk-width-medium@m">
-              <div className="uk-margin uk-text-center" uk-scrollspy-class="">
-                <Image
-                  src={getTemplateImageUrl("yootheme/logo/logo.png")}
-                  width={640}
-                  height={629}
-                  className="el-image"
-                  alt="Go and Grow"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="uk-width-expand@m">
-              <div
-                className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
-                uk-scrollspy-class=""
-              >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
-                  Friendship
-                </h3>
-                <div className="el-content uk-panel uk-margin-top !text-black">
-                  <p>make friends from all over the world</p>
-                </div>
-              </div>
-              <div
-                className="uk-panel uk-margin-remove-first-child uk-margin-large uk-text-center@m uk-text-center"
-                uk-scrollspy-class=""
-              >
-                <h3 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
-                  Challenge
-                </h3>
-                <div className="el-content uk-panel uk-margin-top !text-black">
-                  <p>leave your comfort zone, challenge yourself</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Join the Go and Grow team section */}
-      <div className="uk-section-default uk-section">
-        <div className="uk-container">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-heading-bullet !text-[1.67vw] !font-semibold">
-                  Join the Go and Grow team
-                </h3>
-                <div className="uk-panel uk-margin">
-                  <p>
-                    Since the very beginning, Go and Grow has stood for
-                    openness, diversity, and community – within our team, too!
-                    <br />
-                    People from all over the world work with us and grow with
-                    every season.
-                  </p>
-                  <p>
-                    We train our teamers ourselves – directly within the
-                    organization.
-                    <br />
-                    Our training follows Go and Grow's high standards in
-                    experiential education and is personally guided by founder
-                    Jan Vieth and our experienced trainers.
-                    <br />
-                    That's how we get to know every single teamer and build the
-                    trust that makes our camps so special.
-                  </p>
-                  <p>
-                    Whether as a <strong>counselor</strong>,{" "}
-                    <strong>camp leader</strong>, or <strong>trainer</strong>,
-                    you'll grow with us – take on responsibility, gain
-                    experience, and inspire kids from around the world.
-                  </p>
-                  <p>
-                    Grow with us – in the team, at camp, and in life.
-                    <br />→{" "}
-                    <Link href="/academy" target="_blank" rel="noopener">
-                      Learn more about our training programs
-                    </Link>
-                    <br />→{" "}
-                    <Link
-                      href="/academy/jobs#application"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Apply now and become part of the Camp Adventure family
-                    </Link>
-                  </p>
                 </div>
               </div>
             </div>
@@ -2751,6 +2124,8 @@ export default function HomePage() {
                     </form>
                   </div>
                 </div>
+
+                {/* Goals Box */}
               </div>
             </div>
           </div>

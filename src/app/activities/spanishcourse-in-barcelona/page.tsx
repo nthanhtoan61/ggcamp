@@ -124,7 +124,7 @@ export default function SpanishcourseInBarcelonaPage() {
             <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
               <div className="uk-width-1-1">
                 <h2 className="uk-h2 uk-text-center">
-                  <p>Learn Spanish with Native Speakers at Camp Adventure</p>
+                  <p>Learn Spanish with Native Speakers at Go and Grow Camp</p>
                 </h2>
                 <div className="uk-panel uk-text-large uk-dropcap uk-margin uk-text-center">
                   <p>
@@ -143,7 +143,7 @@ export default function SpanishcourseInBarcelonaPage() {
                     sunshine, sea, and Mediterranean vibes, or the Spanish camp
                     in Walsrode surrounded by the beautiful nature of the
                     Lüneburger Heide in Northern Germany, one thing&apos;s for
-                    sure: Camp Adventure means international friendships, tons
+                    sure: Go and Grow Camp means international friendships, tons
                     of fun, and the perfect mix of language learning and holiday
                     adventure.
                   </p>
@@ -176,7 +176,7 @@ export default function SpanishcourseInBarcelonaPage() {
                           )}
                           width={1260}
                           height={840}
-                          alt="Kids playing bubble soccer at Camp Adventure summer camp Germany"
+                          alt="Kids playing bubble soccer at Go and Grow Camp summer camp Germany"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
@@ -193,7 +193,7 @@ export default function SpanishcourseInBarcelonaPage() {
                           )}
                           width={1260}
                           height={840}
-                          alt="Children learning English in class at Camp Adventure language camp"
+                          alt="Children learning English in class at Go and Grow Camp language camp"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
@@ -227,7 +227,7 @@ export default function SpanishcourseInBarcelonaPage() {
                           )}
                           width={1260}
                           height={840}
-                          alt="Outdoor Spanish class for teens at Camp Adventure summer camp"
+                          alt="Outdoor Spanish class for teens at Go and Grow Camp summer camp"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
@@ -244,7 +244,7 @@ export default function SpanishcourseInBarcelonaPage() {
                           )}
                           width={1260}
                           height={840}
-                          alt="Teenagers learning Spanish in classroom at Camp Adventure camp Germany"
+                          alt="Teenagers learning Spanish in classroom at Go and Grow Camp camp Germany"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
@@ -261,7 +261,7 @@ export default function SpanishcourseInBarcelonaPage() {
                           )}
                           width={1260}
                           height={840}
-                          alt="Teenagers learning English with native teacher at Camp Adventure"
+                          alt="Teenagers learning English with native teacher at Go and Grow Camp"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
@@ -295,7 +295,7 @@ export default function SpanishcourseInBarcelonaPage() {
                           )}
                           width={1260}
                           height={840}
-                          alt="Girl writing during Spanish language class at Camp Adventure Germany"
+                          alt="Girl writing during Spanish language class at Go and Grow Camp Germany"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
@@ -312,7 +312,7 @@ export default function SpanishcourseInBarcelonaPage() {
                           )}
                           width={1260}
                           height={840}
-                          alt="Spanish lesson with native-speaking teacher at Camp Adventure camp"
+                          alt="Spanish lesson with native-speaking teacher at Go and Grow Camp camp"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
@@ -346,7 +346,7 @@ export default function SpanishcourseInBarcelonaPage() {
                           )}
                           width={1260}
                           height={837}
-                          alt="ids doing fun water team challenge at Camp Adventure summer camp Germany"
+                          alt="ids doing fun water team challenge at Go and Grow Camp summer camp Germany"
                           loading="lazy"
                           className="el-image uk-transition-scale-up uk-transition-opaque"
                         />
@@ -405,7 +405,7 @@ export default function SpanishcourseInBarcelonaPage() {
                             )}
                             width={1920}
                             height={1280}
-                            alt="Teens exploring Barcelona on a Spanish language camp with Camp Adventure"
+                            alt="Teens exploring Barcelona on a Spanish language camp with Go and Grow Camp"
                             loading="lazy"
                             className="el-image"
                           />
@@ -464,7 +464,7 @@ export default function SpanishcourseInBarcelonaPage() {
                             )}
                             width={1080}
                             height={720}
-                            alt="Kids practicing Spanish outdoors at Camp Adventure bilingual summer camp"
+                            alt="Kids practicing Spanish outdoors at Go and Grow Camp bilingual summer camp"
                             loading="lazy"
                             className="el-image"
                           />
@@ -525,14 +525,14 @@ export default function SpanishcourseInBarcelonaPage() {
               <div className="uk-card-default uk-card uk-card-body">
                 <h3 className="uk-heading-bullet">
                   {" "}
-                  Your Holidays. Your Spanish. Your Camp Adventure.{" "}
+                  Your Holidays. Your Spanish. Your Go and Grow Camp.{" "}
                 </h3>
                 <div className="uk-panel uk-margin">
                   <p>
                     ¡Hola, future explorador! You want to learn Spanish, finally
                     speak with confidence, make new friends, and enjoy holidays
                     full of sunshine, fun, and adventure? Then our Spanish Camp
-                    by Camp Adventure is exactly what you&apos;re looking for.
+                    by Go and Grow Camp is exactly what you&apos;re looking for.
                     And the best part: you can choose between two amazing
                     locations – Barcelona and Walsrode (Lüneburger Heide,
                     Northern Germany) – to create your own perfect Spanish
@@ -609,7 +609,7 @@ export default function SpanishcourseInBarcelonaPage() {
                     ! Yes, you heard right: now you can enjoy an amazing Spanish
                     learning experience right here in Germany. Located in the
                     beautiful Lüneburger Heide between Hamburg, Bremen, and
-                    Hanover, our Camp Adventure Academy in Walsrode has long
+                    Hanover, our Go and Grow Camp Academy in Walsrode has long
                     been famous for its adventure and sports camps. Now
                     it&apos;s time to add something new – Spanish meets
                     adventure!
@@ -632,7 +632,7 @@ export default function SpanishcourseInBarcelonaPage() {
                 <div style={{ textAlign: "center" }}>
                   <iframe
                     src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/bcnspanish"
-                    title="Bookacamp, die Buchungsplattform von Camp Adventure"
+                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
                     allowFullScreen={true}
                     width="1000"
                     height="1700"
