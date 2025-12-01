@@ -69,16 +69,16 @@ export default function AdventureSportsCreativePage({}) {
 
   const slides = [
     {
-      url: "https://demo.awaikenthemes.com/wildex/wp-content/uploads/2025/10/service-image-2.jpg",
+      url: "/templates/yootheme/activities/activity-details/bg-ad1.png",
       alt: "Smiling boys sitting inside a shared camp tent",
     },
     {
-      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1260&h=840&fit=crop",
+      url: "/templates/yootheme/activities/activity-details/bg-ad2.png",
       alt: "Child practicing archery in a forest setting",
     },
 
     {
-      url: "https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=1260&h=840&fit=crop",
+      url: "/templates/yootheme/activities/activity-details/bg-ad3.png",
       alt: "Cozy wooden cabin with bunk beds",
     },
   ];
@@ -460,7 +460,7 @@ export default function AdventureSportsCreativePage({}) {
             >
               {/* Main Image */}
               <div
-                className="fadeInUp"
+                className="fadeInUp relative z-10 rounded-2xl overflow-hidden group cursor-pointer"
                 style={{
                   position: "relative",
                   borderRadius: "8px",
@@ -470,6 +470,7 @@ export default function AdventureSportsCreativePage({}) {
               >
                 <img
                   src={slides[currentSlide].url}
+               
                   alt={slides[currentSlide].alt}
                   style={{
                     width: "100%",
@@ -478,6 +479,7 @@ export default function AdventureSportsCreativePage({}) {
                     display: "block", 
                   }}
                 />
+                <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
                 
 
                 {/* Overlay Gradient */}
@@ -493,6 +495,7 @@ export default function AdventureSportsCreativePage({}) {
                     pointerEvents: "none",
                   }}
                 />
+                
 
                 {/* Title and Info - Bottom Left */}
                 <div
@@ -815,17 +818,18 @@ export default function AdventureSportsCreativePage({}) {
                       ))}
                     </ul>
                   </div>
-                  <div>
-                    <img
-                      src="https://demo.awaikenthemes.com/wildex/wp-content/uploads/2025/10/service-overview-image.jpg"
-                      alt="Adventure camp activities"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        borderRadius: "8px",
-                      }}
-                    />
+                  <div className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer">
+                      <img
+                        src="/templates/yootheme/activities/activity-details/bg-ad4.png"
+                        alt="Adventure camp activities"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                        }}
+                      />
+                     <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
                   </div>
                 </div>
               </div>
@@ -871,6 +875,7 @@ export default function AdventureSportsCreativePage({}) {
                 </div>
                 <div style={{ display: "flex", gap: "30px", height: "400px" }}>
                   <div
+                    className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer"
                     style={{
                       flex: "7 1 0",
                       overflow: "hidden",
@@ -878,7 +883,7 @@ export default function AdventureSportsCreativePage({}) {
                     }}
                   >
                     <img
-                      src="https://img.freepik.com/premium-photo/traditional-house-with-rustic-thatched-roof-netherlands_1268-6661.jpg"
+                      src="/templates/yootheme/activities/activity-details/bg-ad5.png"
                       alt="Adventure camp activities"
                       style={{
                         width: "100%",
@@ -886,8 +891,11 @@ export default function AdventureSportsCreativePage({}) {
                         objectFit: "cover",
                       }}
                     />
+                   <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
+
                   </div>
                   <div
+                    className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer"
                     style={{
                       flex: "3 1 0",
                       overflow: "hidden",
@@ -895,7 +903,7 @@ export default function AdventureSportsCreativePage({}) {
                     }}
                   >
                     <img
-                      src="https://www.air-dr.com/wp-content/uploads/2020/02/visiting-giethoorn-879x879.jpg"
+                      src="/templates/yootheme/activities/activity-details/bg-ad6.png"
                       alt="Adventure camp activities"
                       style={{
                         width: "100%",
@@ -903,6 +911,8 @@ export default function AdventureSportsCreativePage({}) {
                         objectFit: "cover",
                       }}
                     />
+                    <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
+
                   </div>
                 </div>
               </div>
