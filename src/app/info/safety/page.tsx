@@ -142,12 +142,11 @@ export default function SafetyPage() {
       <HeroSection
         title={
           <>
-            Philosophy &<br />
-            Safety at Camp
+            Safety
           </>
         }
-        backgroundImage="yootheme/cache/5e/sicherheit_header-5ede6167.jpeg"
-        overlayColor="rgba(0, 0, 0, 0)"
+        backgroundImage="yootheme/cache/18/faqs_header_new.jpg"
+        overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-secondary uk-section-overlap uk-preserve-color uk-light"
         titleClass="uk-heading-large uk-text-center !text-[5vw]"
         enableScrollspy={true}
@@ -155,13 +154,15 @@ export default function SafetyPage() {
       />
 
       {/* Concept Section */}
-      <div className="uk-section-default uk-section-overlap uk-section">
+      <div className="uk-section-default uk-section-overlap uk-section"
+       uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;">
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
             <div className="uk-width-1-3@m">
-              <h1>
+              <h1> 
                 <p
-                  className="font-['Raleway'] text-3xl! md:text-[2vw]!  leading-tight font-semibold!"
+                  className="font-['Raleway'] text-3xl! md:text-[2vw]! leading-tight font-semibold! "
+                  uk-scrollspy-class="uk-animation-slide-bottom-medium"
                 >
                   The concept of Go and Grow Camp
                 </p>
@@ -171,7 +172,8 @@ export default function SafetyPage() {
             <div className="uk-width-2-3@m">
               <blockquote>
                 <p
-                  className="font-['Raleway'] text-sm! md:text-[1.2vw]! leading-relaxed"
+                  className="font-['Raleway'] text-sm! md:text-[1.2vw]! leading-relaxed "
+                  uk-scrollspy-class="uk-animation-slide-bottom-medium"
                 >
                   Dear parents,
                   <br />
@@ -191,13 +193,15 @@ export default function SafetyPage() {
       </div>
 
       {/* Glamping Section */}
-      <section className="w-full px-10 md:px-[3vw] py-16 md:py-24 bg-white">
+      <section className="w-full px-10 md:px-[3vw] py-16 md:py-24 bg-white"
+      uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-[4vw]">
           <div className="relative w-full h-full">
             {/* Row 1: Forest Image & Stats Card side-by-side */}
             <div className="flex items-start justify-between gap-5 md:gap-[1vw]">
               {/* Ảnh to bên trái */}
-              <div className="w-2/3 md:w-[32vw] md:h-[70vh] relative z-10 rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="w-2/3 md:w-[32vw] md:h-[70vh] relative z-10 rounded-2xl overflow-hidden group cursor-pointer"
+              uk-scrollspy-class="uk-animation-slide-left-medium">
                 <img
                   src="/templates/yootheme/safety/pic2.jpg"
                   alt="Forest Landscape"
@@ -240,7 +244,8 @@ export default function SafetyPage() {
             </div>
 
             {/* Ảnh dưới bên phải dưới */}
-            <div className="md:absolute md:w-[70%] md:h-[50%] z-20 rounded-2xl overflow-hidden md:border-[6px] md:ml-[13vw] mt-3 md:-mt-[35vh] border-white md:translate-y-8 group cursor-pointer">
+            <div className="md:absolute md:w-[70%] md:h-[50%] z-20 rounded-2xl overflow-hidden md:border-[6px] md:ml-[13vw] mt-3 md:-mt-[35vh] border-white md:translate-y-8 group cursor-pointer"
+            uk-scrollspy-class="uk-animation-slide-bottom-medium">
               <img
                 src="/templates/yootheme/safety/pic1.jpg"
                 alt="Glamping Tents"
@@ -253,10 +258,12 @@ export default function SafetyPage() {
           </div>
 
           {/* RIGHT COLUMN: Content */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6"
+          uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;">
             {/* Header */}
             <div>
-              <span className="text-[#cbca7b] font-bold text-sm md:text-[1vw] tracking-widest uppercase mb-2 block">
+              <span className="text-[#cbca7b] font-bold text-sm md:text-[1vw] tracking-widest uppercase mb-2 block animate-fadeUp"
+              uk-scrollspy-class="uk-animation-slide-bottom-medium">
                 ✦ Our Approach
               </span>
               <div className="text-4xl md:text-[2vw] font-extrabold text-gray-900 leading-tight">
@@ -265,7 +272,8 @@ export default function SafetyPage() {
             </div>
 
             {/* Description */}
-            <p className="text-gray-500 leading-relaxed md:text-[1vw]">
+            <p className="text-gray-500 leading-relaxed md:text-[1vw] animate-fadeUp "
+            uk-scrollspy-class="uk-animation-slide-bottom-medium">
               Our camp philosophy ensures that every experience is exciting,
               engaging, and safe. We combine the thrill of outdoor exploration
               with a secure, well-managed environment where campers can grow,
@@ -273,7 +281,8 @@ export default function SafetyPage() {
             </p>
 
             {/* Features List */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-4 animate-fadeUp "
+            uk-scrollspy-class="uk-animation-slide-bottom-medium">
               {[
                 "Community built on trust and respect",
                 "Shared responsibility for a safe environment",
@@ -295,9 +304,11 @@ export default function SafetyPage() {
             </div>
 
             {/* Vision & Mission Cards Container */}
-            <div className="mt-3 md:mt-0 bg-gray-50 rounded-3xl md:p-[2vw] p-6 flex flex-col md:flex-row gap-6">
+            <div className="mt-3 md:mt-0 bg-gray-50 rounded-3xl md:p-[2vw] p-6 flex flex-col md:flex-row gap-6"
+            uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;">
               {/* Card 1: Vision */}
-              <div className="bg-white p-6 rounded-2xl shadow-sm flex-1">
+              <div className="bg-white p-6 rounded-2xl shadow-sm flex-1"
+              uk-scrollspy-class="uk-animation-slide-bottom-medium">
                 <div className="flex flex-row justify-start items-center mb-[2vh]">
                   <div className="w-12 h-12 md:w-[3vw] md:h-[6vh] bg-[#cbca7b] hover:bg-black hover:text-white transition-all duration-300 ease-in-out  rounded-full flex items-center justify-center text-gray-800">
                     {/* SVG Icon from your design */}
@@ -328,7 +339,8 @@ export default function SafetyPage() {
               </div>
 
               {/* Card 2: Mission */}
-              <div className="bg-white p-6 rounded-2xl shadow-sm flex-1">
+              <div className="bg-white p-6 rounded-2xl shadow-sm flex-1"
+              uk-scrollspy-class="uk-animation-slide-bottom-medium">
                 <div className="flex flex-row justify-start items-center mb-[2vh]">
                   <div className="w-12 h-12 md:w-[3vw] md:h-[6vh] bg-[#cbca7b] hover:bg-black hover:text-white transition-all duration-300 ease-in-out rounded-full flex items-center justify-center text-gray-800 ">
                     <svg
@@ -393,7 +405,8 @@ export default function SafetyPage() {
             {philosophyCards.map((card, idx) => (
               <div key={idx}>
                 {/* --- BẮT ĐẦU CARD --- */}
-                <div className="el-item uk-card uk-card-default uk-card-body flex! flex-col! h-full!">
+                <div className="el-item uk-card uk-card-default uk-card-body flex! flex-col! h-full!"
+                uk-scrollspy-class="uk-animation-slide-bottom-medium">
                   {/* Header: Quote & Stars */}
                   <div className="flex justify-between items-start mb-6">
                     <Quote
@@ -495,7 +508,8 @@ export default function SafetyPage() {
                 >
                   {securityCards.map((card, idx) => (
                     <div key={idx}>
-                      <div className="el-item uk-card uk-card-default uk-card-body flex! flex-col! h-full!">
+                      <div className="el-item uk-card uk-card-default uk-card-body flex! flex-col! h-full!"
+                      uk-scrollspy-class="uk-animation-slide-bottom-medium">
                         {/* Header: Quote Icon & Stars */}
                         <div className="flex justify-between items-start mb-6">
                           <Quote
