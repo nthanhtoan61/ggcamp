@@ -206,7 +206,7 @@ export default function SafetyPage() {
 
                 {/* Shiny Glass Effect */}
                 <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
-              </div>
+                </div>
 
               {/* Ảnh nhỏ bên phải trên */}
               <div className="w-[34%] bg-[#f8f9fa] p-[1vw] md:p-[2vw] rounded-2xl flex flex-col justify-center items-start">
