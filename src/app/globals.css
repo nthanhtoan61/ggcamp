@@ -238,10 +238,9 @@ footer .uk-margin .el-link .el-image img {
 
 /* Footer bottom styling with side margins */
 .footer-bottom {
-
   padding: 20px 0;
   text-align: center;
-  margin: 0 100px;
+  margin: 200px 100px 0;
   /* reduce sides */
   border-top: 2px solid #f59e0b;
   position: relative;
@@ -410,7 +409,6 @@ footer .uk-margin .el-link .el-image img {
    RESPONSIVE ≥ 1536px (2K)
    ================================ */
 @media (min-width: 1536px) {
-
   .about-main-img {
     width: 19.53vw !important;
     height: 16.28vw !important;
@@ -548,7 +546,6 @@ footer .uk-margin .el-link .el-image img {
    RESPONSIVE ≥ 1280px (XL)
    ================================ */
 @media (min-width: 1280px) and (max-width: 1535px) {
-
   .about-main-img {
     width: 19.53vw !important;
     height: 16.28vw !important;
@@ -678,7 +675,6 @@ footer .uk-margin .el-link .el-image img {
    RESPONSIVE ≥ 1024px (LG)
    ================================ */
 @media (min-width: 1024px) and (max-width: 1279px) {
-
   .about-main-img {
     width: 19.53vw !important;
     height: 16.28vw !important;
@@ -808,7 +804,6 @@ footer .uk-margin .el-link .el-image img {
    RESPONSIVE ≥ 768px (MD – Tablet)
    ================================ */
 @media (min-width: 992px) and (max-width: 1023px) {
-
   .about-main-img {
     width: 18vw !important;
     height: 15vw !important;
@@ -941,7 +936,6 @@ footer .uk-margin .el-link .el-image img {
    RESPONSIVE ≥ 768px (MD – Tablet)
    ================================ */
 @media (min-width: 768px) and (max-width: 991px) {
-
   .about-main-img {
     width: 18vw !important;
     height: 15vw !important;
@@ -1108,7 +1102,6 @@ footer .uk-margin .el-link .el-image img {
    RESPONSIVE ≥ 640px (SM – Large mobile)
    ================================ */
 @media (min-width: 640px) and (max-width: 767px) {
-
   .about-main-img {
     width: 19.53vw !important;
     height: 16.28vw !important;
@@ -1238,12 +1231,10 @@ footer .uk-margin .el-link .el-image img {
   }
 }
 
-
 /* ================================
    RESPONSIVE ≤ 480px (Small mobile)
    ================================ */
 @media (max-width: 480px) {
-
   .about-main-img {
     width: 19.53vw !important;
     height: 16.28vw !important;
