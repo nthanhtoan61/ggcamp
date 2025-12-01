@@ -16,6 +16,8 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import Newsletter from "@/components/layouts/Newsletter";
 import PartnersSection from "@/components/home/PartnersSection";
+import { AboutSection } from "@/components/features/AboutSection";
+import { HeroSection } from "@/components/layouts";
 
 // Declare jQuery for TypeScript
 declare const jQuery: any;

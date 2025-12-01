@@ -6,7 +6,6 @@
 }
 
 @theme inline {
-  --color-primary: #cbca7b;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
@@ -239,9 +238,10 @@ footer .uk-margin .el-link .el-image img {
 
 /* Footer bottom styling with side margins */
 .footer-bottom {
+
   padding: 20px 0;
   text-align: center;
-  margin: 200px 100px 0;
+  margin: 0 100px;
   /* reduce sides */
   border-top: 2px solid #f59e0b;
   position: relative;
