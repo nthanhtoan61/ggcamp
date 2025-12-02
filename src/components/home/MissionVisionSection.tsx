@@ -61,7 +61,7 @@ export function MissionVisionSection() {
                 }}
               >
                 {/* Mission Icon - Target/Compass */}
-                <div className="bg-[#9c5d00] flex items-center justify-center rounded-xl md:rounded-lg shadow-md"
+                <div className="bg-[var(--color-primary)] flex items-center justify-center rounded-xl md:rounded-lg shadow-md"
                   style={{
                     width: 'clamp(3rem, 4vw, 3.5rem)',
                     height: 'clamp(3rem, 4vw, 3.5rem)',
@@ -107,7 +107,7 @@ export function MissionVisionSection() {
                   where children and teens can explore, learn, and grow
                   through adventure, creativity, and friendship.
                 </p>
-                <div className="bg-[#9c5d00]"
+                <div className="bg-[var(--color-primary)]"
                   style={{
                     width: 'clamp(3rem, 5vw, 4rem)',
                     height: 'clamp(2px, 0.3vh, 4px)',
@@ -124,7 +124,7 @@ export function MissionVisionSection() {
                 }}
               >
                 {/* Vision Icon - Eye */}
-                <div className="bg-[#9c5d00] flex items-center justify-center rounded-xl md:rounded-lg shadow-md"
+                <div className="bg-[var(--color-primary)] flex items-center justify-center rounded-xl md:rounded-lg shadow-md"
                   style={{
                     width: 'clamp(3rem, 4vw, 3.5rem)',
                     height: 'clamp(3rem, 4vw, 3.5rem)',
@@ -165,7 +165,7 @@ export function MissionVisionSection() {
                   nurtures confident, responsible, and compassionate young
                   individuals connected to nature and their communities.
                 </p>
-                <div className="bg-[#9c5d00]"
+                <div className="bg-[var(--color-primary)]"
                   style={{
                     width: 'clamp(3rem, 5vw, 4rem)',
                     height: 'clamp(2px, 0.3vh, 4px)',
@@ -182,7 +182,7 @@ export function MissionVisionSection() {
                 }}
               >
                 {/* Goals Icon - Trophy/Flag */}
-                <div className="bg-[#9c5d00] flex items-center justify-center rounded-xl md:rounded-lg shadow-md"
+                <div className="bg-[var(--color-primary)] flex items-center justify-center rounded-xl md:rounded-lg shadow-md"
                   style={{
                     width: 'clamp(3rem, 4vw, 3.5rem)',
                     height: 'clamp(3rem, 4vw, 3.5rem)',
@@ -227,7 +227,7 @@ export function MissionVisionSection() {
                   adventures, we help campers build independence, teamwork,
                   and lifelong memories.
                 </p>
-                <div className="bg-[#9c5d00]"
+                <div className="bg-[var(--color-primary)]"
                   style={{
                     width: 'clamp(3rem, 5vw, 4rem)',
                     height: 'clamp(2px, 0.3vh, 4px)',

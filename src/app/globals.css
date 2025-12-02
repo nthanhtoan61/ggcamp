@@ -406,3 +406,7 @@ footer .uk-margin .el-link .el-image img {
     gap: 3rem;
   }
 }
+
+.uk-heading-bullet::before {
+  border-left-color: var(--color-primary) !important;
+}
