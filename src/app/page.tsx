@@ -368,13 +368,13 @@ export default function HomePage() {
         backgroundImage="yootheme/banner/b3.jpg"
         overlayColor="rgba(0, 0, 0, 0)"
         sectionClass="uk-section-secondary uk-section-overlap uk-preserve-color uk-light"
-        titleClass="uk-heading-large uk-text-center !text-[5vw]"
+        titleClass="uk-heading-large uk-text-center !text-[8vw] md:!text-[5vw] max-sm:leading-tight"
         enableScrollspy={true}
         backgroundPosition="top-center"
         buttonContent={
           <Link href="/booking">
               <button
-                className="ripple-button mt-6 hero-button"
+                className="ripple-button mt-6 max-sm:mt-4 hero-button max-sm:text-[3.8vw] max-sm:px-[5vw] max-sm:py-[2.5vw]"
                 onMouseEnter={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
                   setCoords({
@@ -392,7 +392,7 @@ export default function HomePage() {
                 }}
                 onMouseLeave={() => setHovered(false)}
               >
-                <span className={`button-text ${hovered ? "hovered" : ""}`}>
+                <span className={`button-text ${hovered ? "hovered" : ""} max-sm:gap-[1.5vw]`}>
                   Book Your Smile
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -400,7 +400,7 @@ export default function HomePage() {
                     height="22"
                     viewBox="0 0 22 22"
                     fill="currentColor"
-                    className="button-icon"
+                    className="button-icon max-sm:w-[4.5vw] max-sm:h-[4.5vw]"
                   >
                     <path
                       fillRule="evenodd"
