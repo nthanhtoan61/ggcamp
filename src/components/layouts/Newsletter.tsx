@@ -85,7 +85,9 @@ export default function Newsletter({
             </h2>
 
             <div className="mb-[2vh]">
-              <p className="text-base md:text-[1vw] text-gray-600">{description}</p>
+              <p className="text-base md:text-[1vw] text-gray-600">
+                {description}
+              </p>
             </div>
 
             <form
@@ -99,6 +101,7 @@ export default function Newsletter({
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 py-[1.5vh] px-[1.5vw] rounded-l-[0.8vw] border border-gray-200 bg-white focus:outline-none text-base md:text-[0.9vw]"
+                suppressHydrationWarning
               />
               <button
                 type="submit"
