@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Script from "next/script";
 import { HeroSection } from "@/components/layouts";
+import { getTemplateImageUrl } from "@/lib/assets";
 
 // Extend Window interface for Leaflet
 declare global {
@@ -215,7 +216,30 @@ export default function ContactUsPage() {
         titleClass="uk-heading-large uk-text-center !text-[5vw]"
         enableScrollspy={true}
         backgroundPosition="top-center"
+        style={{
+          backgroundImage: `url(${getTemplateImageUrl(
+            "yootheme/aboutImage/bg_about.jpg"
+          )})`,
+          animation: "fadeInUp 1s ease-out 0.2s both",
+          maxHeight: "0.1vh",
+          minHeight: "0.1vh",
+        }}
       />
+
+      {/* Background Section */}
+      <section
+        className="uk-section-default uk-section-overlap uk-section uk-section-small bg-contain bg-center bg-no-repeat animate-fade-in-up"
+        style={{
+          backgroundImage: `url(${getTemplateImageUrl(
+            "yootheme/aboutImage/bg_about.jpg"
+          )})`,
+          animation: "fadeInUp 1s ease-out 0.2s both",
+          maxHeight: "0.1vh",
+          minHeight: "0.1vh",
+        }}
+      >
+        <div className="uk-container"></div>
+      </section>
 
       {/* Contact Cards Section */}
       <section className="relative overflow-hidden py-[4vh] sm:py-[6vh] lg:py-[8vh] bg-[#f5f5f5]">
