@@ -164,7 +164,7 @@ export default function SafetyPage() {
                   className="font-['Raleway'] text-3xl! md:text-[2vw]! leading-tight font-semibold! "
                   uk-scrollspy-class="uk-animation-slide-bottom-medium"
                 >
-                  The concept of Go and Grow Camp
+                  Go and Grow Camp
                 </p>
               </h1>
               <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
@@ -258,11 +258,11 @@ export default function SafetyPage() {
           </div>
 
           {/* RIGHT COLUMN: Content */}
-          <div className="flex flex-col gap-6"
+          <div className="flex flex-col gap-6 mt-10 md:mt-0"
           uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;">
             {/* Header */}
             <div>
-              <span className="text-[#cbca7b] font-bold text-sm md:text-[1vw] tracking-widest uppercase mb-2 block animate-fadeUp"
+              <span className="text-primary font-bold text-sm md:text-[1vw] tracking-widest uppercase mb-2 block animate-fadeUp"
               uk-scrollspy-class="uk-animation-slide-bottom-medium">
                 ✦ Our Approach
               </span>
@@ -310,7 +310,7 @@ export default function SafetyPage() {
               <div className="bg-white p-6 rounded-2xl shadow-sm flex-1"
               uk-scrollspy-class="uk-animation-slide-bottom-medium">
                 <div className="flex flex-row justify-start items-center mb-[2vh]">
-                  <div className="w-12 h-12 md:w-[3vw] md:h-[6vh] bg-[#cbca7b] hover:bg-black hover:text-white transition-all duration-300 ease-in-out  rounded-full flex items-center justify-center text-gray-800">
+                  <div className="w-12 h-12 md:w-[3vw] md:h-[6vh] bg-primary hover:bg-black hover:text-white transition-all duration-300 ease-in-out  rounded-full flex items-center justify-center text-gray-800">
                     {/* SVG Icon from your design */}
                     <svg
                       width="2vw"
@@ -342,7 +342,7 @@ export default function SafetyPage() {
               <div className="bg-white p-6 rounded-2xl shadow-sm flex-1"
               uk-scrollspy-class="uk-animation-slide-bottom-medium">
                 <div className="flex flex-row justify-start items-center mb-[2vh]">
-                  <div className="w-12 h-12 md:w-[3vw] md:h-[6vh] bg-[#cbca7b] hover:bg-black hover:text-white transition-all duration-300 ease-in-out rounded-full flex items-center justify-center text-gray-800 ">
+                  <div className="w-12 h-12 md:w-[3vw] md:h-[6vh] bg-primary hover:bg-black hover:text-white transition-all duration-300 ease-in-out rounded-full flex items-center justify-center text-gray-800 ">
                     <svg
                       width="2vw"
                       height="3vh"
