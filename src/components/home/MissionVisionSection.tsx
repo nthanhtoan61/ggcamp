@@ -92,7 +92,7 @@ export function MissionVisionSection() {
                 </div>
                 <h3 className="!font-bold text-[#333]"
                   style={{
-                    fontSize: '1.2vw',
+                    fontSize: 'clamp(1rem, 1.2vw, 1.25rem)',
                     marginBottom: 'clamp(0.5rem, 1vh, 0.75rem)',
                   }}
                 >
@@ -100,7 +100,7 @@ export function MissionVisionSection() {
                 </h3>
                 <p className="font-normal text-[#666] leading-[1.5] flex-1"
                   style={{
-                    fontSize: '1vw',
+                    fontSize: 'clamp(0.875rem, 1vw, 0.875rem)',
                   }}
                 >
                   We provide a safe, inclusive, and inspiring environment
@@ -150,7 +150,7 @@ export function MissionVisionSection() {
                 </div>
                 <h3 className="!font-bold text-[#333]"
                   style={{
-                    fontSize: '1.2vw',
+                    fontSize: 'clamp(1rem, 1.2vw, 1.25rem)',
                     marginBottom: 'clamp(0.5rem, 1vh, 0.75rem)',
                   }}
                 >
@@ -158,7 +158,7 @@ export function MissionVisionSection() {
                 </h3>
                 <p className="font-normal text-[#666] leading-[1.5] flex-1"
                   style={{
-                    fontSize: '1vw',
+                    fontSize: 'clamp(0.875rem, 1vw, 0.875rem)',
                   }}
                 >
                   We aim to be a leading international camp experience that
@@ -212,7 +212,7 @@ export function MissionVisionSection() {
                 </div>
                 <h3 className="!font-bold text-[#333]"
                   style={{
-                    fontSize: '1.2vw',
+                    fontSize: 'clamp(1rem, 1.2vw, 1.25rem)',
                     marginBottom: 'clamp(0.5rem, 1vh, 0.75rem)',
                   }}
                 >
@@ -220,7 +220,7 @@ export function MissionVisionSection() {
                 </h3>
                 <p className="font-normal text-[#666] leading-[1.5] flex-1"
                   style={{
-                    fontSize: '1vw',
+                    fontSize: 'clamp(0.875rem, 1vw, 0.875rem)',
                   }}
                 >
                   Through hands-on activities, community service, and outdoor
