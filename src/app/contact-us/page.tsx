@@ -216,14 +216,6 @@ export default function ContactUsPage() {
         titleClass="uk-heading-large uk-text-center !text-[5vw]"
         enableScrollspy={true}
         backgroundPosition="top-center"
-        style={{
-          backgroundImage: `url(${getTemplateImageUrl(
-            "yootheme/aboutImage/bg_about.jpg"
-          )})`,
-          animation: "fadeInUp 1s ease-out 0.2s both",
-          maxHeight: "0.1vh",
-          minHeight: "0.1vh",
-        }}
       />
 
       {/* Background Section */}
@@ -373,6 +365,7 @@ export default function ContactUsPage() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
+                  suppressHydrationWarning
                   className="w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-gray-300 rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh]
                 focus:outline-none focus:ring-2 focus:ring-[#9c5d00] focus:border-[#9c5d00]"
                 />
