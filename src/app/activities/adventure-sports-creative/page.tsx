@@ -7,7 +7,8 @@ import Image from "next/image";
 import Script from "next/script";
 import { getTemplateImageUrl } from "@/lib/assets";
 import { HeroSection } from "@/components";
-import { Star, MapPin ,Clock, Moon, Ticket } from "lucide-react";
+import { Star, MapPin, Clock, Moon, Ticket } from "lucide-react";
+import ActivityDetailSections from "@/components/features/ActivityDetailSections";
 
 export default function AdventureSportsCreativePage({}) {
   const [activeAccordion, setActiveAccordion] = useState(1);
@@ -92,6 +93,16 @@ export default function AdventureSportsCreativePage({}) {
     { name: "Team and Supervision", href: "#team" },
     { name: "Coverage and Insurance", href: "#coverage" },
   ];
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id.replace('#', ''));
+    if (element) {
+      const offsetTop = element.offsetTop - 20; // Adjust for any fixed header
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+    }
+  };
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -209,86 +220,118 @@ export default function AdventureSportsCreativePage({}) {
               display: "grid",
               gridTemplateColumns: "1fr 2fr",
               gap: "30px",
+              alignItems: "start",
             }}
           >
             {/* Left Sidebar */}
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "20px" }}
+              style={{
+                position: "sticky",
+                top: "120px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+              }}
             >
               {/* Explore Services Card */}
-              <div
-                className="fadeInUp"
-                style={{
-                  background: "black",
-                  borderRadius: "8px",
-                  padding: "30px",
-                  animation: "fadeInUp 0.6s ease-out",
-                }}
-              >
-                <h3
+             
+                <style jsx>{`
+                  .group:hover .nav-text {
+                    color: #ffff !important;
+                    font-weight: 600 !important;
+                  }
+                  .group:hover .sidebar-arrow {
+                    color: #ffff !important;
+                    transform: rotate(45deg) !important;
+                  }
+                `}</style>
+
+                <div
+                  className="uk-panel uk-padding uk-background-muted uk-border-rounded"
                   style={{
-                    color: "#fff",
-                    fontSize: "24px",
-                    fontWeight: "600",
-                    marginBottom: "30px",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    backgroundColor: "#cbca7b",
+                    borderRadius: "15px",
+                    color: "#808080",
+                    width: "443.33px",
+                    marginBottom: "20px",
                   }}
                 >
-                  Explore Our services
-                </h3>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {services.map((service, idx) => (
-                    <li key={idx} style={{ marginBottom: "15px" }}>
-                      <a
-                        href={service.href}
+                  <ul className="uk-nav uk-nav-default">
+                    <div></div>
+                    {services.map((item, index, array) => (
+                      <li
+                        key={item.href}
+                        className="uk-margin-small-bottom group"
                         style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "12px",
-                          color: "#999",
-                          textDecoration: "none",
-                          fontSize: "16px",
-                          transition: "all 0.3s ease",
-                          padding: "5px 0",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.color = "#fff";
-                          e.currentTarget.style.paddingLeft = "5px";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.color = "#999";
-                          e.currentTarget.style.paddingLeft = "0";
+                          borderBottom:
+                            index < array.length - 1
+                              ? "1px solid #e5e5e5"
+                              : "none",
+                          paddingBottom: "12px",
                         }}
                       >
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="currentColor"
+                        <button
+                          onClick={() => scrollToSection(item.href.substring(1))}
+                          className="uk-button uk-button-link uk-text-left uk-padding-remove-left uk-width-1-1 text-[1.1rem] uk-text-normal"
+                          style={{
+                            textDecoration: "none",
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            width: "100%",
+                            background: "none",
+                            border: "none",
+                            cursor: "pointer",
+                            fontWeight: "400",
+                            color: "black",
+                          }}
                         >
-                          <path d="M11.7495 0.251043C12.0842 0.585767 12.0842 1.12847 11.7495 1.4632L2.03546 11.1772C1.70074 11.512 1.15803 11.512 0.823308 11.1772C0.488585 10.8425 0.488585 10.2999 0.823308 9.96514L10.5374 0.251043C10.8721 -0.0836809 11.4148 -0.0836809 11.7495 0.251043Z" />
-                          <path d="M0 0.857123C0 0.383751 0.383751 0 0.857123 0H11.1426C11.616 0 11.9997 0.383751 11.9997 0.857123V11.1426C11.9997 11.616 11.616 11.9997 11.1426 11.9997C10.6692 11.9997 10.2855 11.616 10.2855 11.1426V1.71425H0.857123C0.383751 1.71425 0 1.3305 0 0.857123Z" />
-                        </svg>
-                        <span>{service.name}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <div className="p-4">
-                  <a href={`/booking`} className="block">
-                    <div className="uk-button uk-button-default w-full">
-                      Booking
-                    </div>
-                  </a>
+                          <span
+                            className="nav-text"
+                            style={{ flex: 1, transition: "color 0.3s ease" }}
+                          >
+                            {item.name}
+                          </span>
+                          <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="13"
+                              height="13"
+                              viewBox="0 0 12 12"
+                              fill="currentColor"
+                              className="sidebar-arrow"
+                              style={{
+                                color: "#bebc1bff",
+                                transform: "rotate(0deg)",
+                                transition:
+                                  "transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s ease",
+                              }}
+                            >
+                              <path d="M11.7495 0.251043C12.0842 0.585767 12.0842 1.12847 11.7495 1.4632L2.03546 11.1772C1.70074 11.512 1.15803 11.512 0.823308 11.1772C0.488585 10.8425 0.488585 10.2999 0.823308 9.96514L10.5374 0.251043C10.8721 -0.0836809 11.4148 -0.0836809 11.7495 0.251043Z" />
+                              <path d="M0 0.857123C0 0.383751 0.383751 0 0.857123 0H11.1426C11.616 0 11.9997 0.383751 11.9997 0.857123V11.1426C11.9997 11.616 11.616 11.9997 11.1426 11.9997C10.6692 11.9997 10.2855 11.616 10.2855 11.1426V1.71425H0.857123C0.383751 1.71425 0 1.3305 0 0.857123Z" />
+                            </svg>
+                          </div>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="p-4">
+                    <a href={`/booking`} className="block">
+                      <div className="uk-button uk-button-default w-full">
+                        Booking
+                      </div>
+                    </a>
+                  </div>
                 </div>
-              </div>
+              
 
               {/* Contact Card */}
 
               <div
                 className="fadeInUp"
                 style={{
-                  background: "black",
+                  background: "#cbca7b",
                   borderRadius: "8px",
                   padding: "40px 30px",
                   animation: "fadeInUp 0.6s ease-out 0.1s backwards",
@@ -302,7 +345,7 @@ export default function AdventureSportsCreativePage({}) {
                       height="50"
                       viewBox="0 0 50 50"
                       fill="currentColor"
-                      style={{ color: "yellow" }}
+                      style={{ color: "black" }}
                     >
                       <path d="M9.96387 23.2148C9.96387 22.9402 9.85433 22.6766 9.66016 22.4824C9.46597 22.2882 9.20247 22.1787 8.92773 22.1787H5.35645C4.60821 22.1787 3.89044 22.4758 3.36133 23.0049C2.83224 23.534 2.53519 24.2518 2.53516 25V30.3574C2.53519 31.1057 2.83227 31.8235 3.36133 32.3525C3.89043 32.8816 4.60823 33.1787 5.35645 33.1787H8.92773C9.20247 33.1787 9.46597 33.0692 9.66016 32.875C9.85433 32.6808 9.96387 32.4173 9.96387 32.1426V23.2148ZM11.4639 32.1426C11.4639 32.8151 11.1963 33.4609 10.7207 33.9365L10.7197 33.9355C10.2442 34.4109 9.60001 34.6787 8.92773 34.6787H5.35645C4.21037 34.6787 3.11117 34.2235 2.30078 33.4131C1.49035 32.6027 1.03519 31.5035 1.03516 30.3574V25C1.03519 23.8539 1.4904 22.7548 2.30078 21.9443C3.11116 21.1341 4.21036 20.6787 5.35645 20.6787H8.92773C9.60001 20.6787 10.2442 20.9465 10.7197 21.4219L10.7207 21.4209C11.1963 21.8965 11.4639 22.5424 11.4639 23.2148V32.1426Z"></path>
                       <path d="M38.5352 23.2148C38.5352 22.5425 38.8023 21.8973 39.2773 21.4219V21.4209C39.7529 20.9453 40.3988 20.6787 41.0713 20.6787H44.6426C45.7886 20.6788 46.8879 21.134 47.6982 21.9443C48.5086 22.7547 48.9638 23.854 48.9639 25V30.3574C48.9638 31.5035 48.5086 32.6028 47.6982 33.4131C46.8879 34.2235 45.7886 34.6787 44.6426 34.6787H41.0713C40.3988 34.6787 39.7529 34.4121 39.2773 33.9365V33.9355C38.8023 33.4601 38.5352 32.815 38.5352 32.1426V23.2148ZM40.0352 32.1426C40.0352 32.4172 40.1447 32.6807 40.3389 32.875C40.5331 33.0692 40.7966 33.1787 41.0713 33.1787H44.6426C45.3908 33.1787 46.1087 32.8816 46.6377 32.3525C47.1668 31.8235 47.4638 31.1057 47.4639 30.3574V25C47.4638 24.2518 47.1668 23.534 46.6377 23.0049C46.1087 22.4759 45.3908 22.1788 44.6426 22.1787H41.0713C40.7966 22.1787 40.5331 22.2882 40.3389 22.4824C40.1447 22.6767 40.0352 22.9403 40.0352 23.2148V32.1426Z"></path>
@@ -316,7 +359,7 @@ export default function AdventureSportsCreativePage({}) {
                   </div>
                   <h3
                     style={{
-                      color: "#fff",
+                      color: "black",
                       fontSize: "20px",
                       fontWeight: "600",
                       lineHeight: "1.4",
@@ -333,7 +376,7 @@ export default function AdventureSportsCreativePage({}) {
                         display: "flex",
                         alignItems: "center",
                         gap: "12px",
-                        color: "#999",
+                        color: "black",
                         textDecoration: "none",
                         fontSize: "16px",
                         transition: "color 0.3s ease",
@@ -342,7 +385,7 @@ export default function AdventureSportsCreativePage({}) {
                         (e.currentTarget.style.color = "#fff")
                       }
                       onMouseLeave={(e) =>
-                        (e.currentTarget.style.color = "#999")
+                        (e.currentTarget.style.color = "black")
                       }
                     >
                       <svg
@@ -363,7 +406,7 @@ export default function AdventureSportsCreativePage({}) {
                         display: "flex",
                         alignItems: "center",
                         gap: "12px",
-                        color: "#999",
+                        color: "black",
                         textDecoration: "none",
                         fontSize: "16px",
                         transition: "color 0.3s ease",
@@ -372,7 +415,7 @@ export default function AdventureSportsCreativePage({}) {
                         (e.currentTarget.style.color = "#fff")
                       }
                       onMouseLeave={(e) =>
-                        (e.currentTarget.style.color = "#999")
+                        (e.currentTarget.style.color = "black")
                       }
                     >
                       <svg
@@ -408,7 +451,7 @@ export default function AdventureSportsCreativePage({}) {
                           <img
                             src={tour.image}
                             alt={tour.title}
-                            className="w-24 h-24 rounded-lg object-cover"
+                            className="w-18 h-18 rounded-lg object-cover"
                           />
                         </div>
 
@@ -470,17 +513,15 @@ export default function AdventureSportsCreativePage({}) {
               >
                 <img
                   src={slides[currentSlide].url}
-               
                   alt={slides[currentSlide].alt}
                   style={{
                     width: "100%",
                     height: "500px",
                     objectFit: "cover",
-                    display: "block", 
+                    display: "block",
                   }}
                 />
                 <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
-                
 
                 {/* Overlay Gradient */}
                 <div
@@ -495,7 +536,6 @@ export default function AdventureSportsCreativePage({}) {
                     pointerEvents: "none",
                   }}
                 />
-                
 
                 {/* Title and Info - Bottom Left */}
                 <div
@@ -518,21 +558,16 @@ export default function AdventureSportsCreativePage({}) {
                       letterSpacing: "-0.5px",
                     }}
                   >
-                    {camp?.locations.map((item: string) => {
-                      const capitalize =
-                        item.charAt(0).toUpperCase() + item.slice(1);
-                      const comma =
-                        camp?.locations.indexOf(item) <
-                        camp?.locations.length - 1
-                          ? ", "
-                          : "";
-                      return (
-                        <span key={item}>
-                          {capitalize}
-                          {comma}
-                        </span>
-                      );
-                    })}
+                    <span>
+                      {camp?.locations
+                        ? camp.locations
+                            .map(
+                              (item: string) =>
+                                item.charAt(0).toUpperCase() + item.slice(1)
+                            )
+                            .join(", ")
+                        : "Thailand"}
+                    </span>
                   </div>
                   <div
                     style={{
@@ -570,19 +605,16 @@ export default function AdventureSportsCreativePage({}) {
                         <line x1="8" y1="2" x2="8" y2="6" />
                         <line x1="3" y1="10" x2="21" y2="10" />
                       </svg>
-                      {camp?.season.map((item: string, index: number) => {
-                        const capitalize =
-                          item.charAt(0).toUpperCase() + item.slice(1);
-                        const comma =
-                          index < camp.season.length - 1 ? ", " : "";
-
-                        return (
-                          <div className="text-[1vw]" key={item}>
-                            {capitalize}
-                            {comma}
-                          </div>
-                        );
-                      })}
+                      <div className="text-[1vw]">
+                        {camp?.season
+                          ? camp.season
+                              .map(
+                                (item: string) =>
+                                  item.charAt(0).toUpperCase() + item.slice(1)
+                              )
+                              .join(", ")
+                          : "Spring, Summer, Autumn"}
+                      </div>
                     </div>
                     <div
                       style={{
@@ -603,12 +635,10 @@ export default function AdventureSportsCreativePage({}) {
                         <line x1="2" y1="12" x2="22" y2="12" />
                         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                       </svg>
-                      <div className="text-[1w]">GER</div>
+                      <div className="text-[1w]">GER & EN</div>
                     </div>
                   </div>
                 </div>
-
-                
 
                 {/* Slider Dots - Bottom Center */}
                 <div
@@ -643,40 +673,46 @@ export default function AdventureSportsCreativePage({}) {
                 </div>
               </div>
 
-                <div className="w-full mt-5">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Event Schedule</h2>
-      
-      <div className="border-t border-b border-gray-200 py-6">
-        <div className="flex flex-row items-center justify-between gap-8">
-          {/* Start Date */}
-          <div className="flex items-start gap-3">
-            <Clock className="w-6 h-6 text-gray-700 mt-1" />
-            <div style={{ color: " #9c5d00" }}>
-              <h3 className="text-sm font-semibold mb-1">Start Date</h3>
-              <p className="text-base  font-medium">06/15/2024</p>
-            </div>
-          </div>
-          
-          {/* Duration */}
-          <div className="flex items-start gap-3">
-            <Moon className="w-6 h-6 text-gray-700 mt-1" />
-            <div style={{ color: " #9c5d00" }}>
-              <h3 className="text-sm font-semibold mb-1">Duration</h3>
-              <p className="text-base font-medium">7 Days 6 Nights</p>
-            </div>
-          </div>
-          
-          {/* Total Ticket */}
-          <div className="flex items-start gap-3">
-            <Ticket className="w-6 h-6 text-gray-700 mt-1" />
-            <div style={{ color: " #9c5d00" }}>
-              <h3 className="text-sm font-semibold mb-1">Total Ticket</h3>
-              <p className="text-base font-medium">$48/50</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              <div className="w-full mt-5">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Event Schedule
+                </h2>
+
+                <div className="border-t border-b border-gray-200 py-6">
+                  <div className="flex flex-row items-center justify-between gap-8">
+                    {/* Start Date */}
+                    <div className="flex items-start gap-3">
+                      <Clock className="w-6 h-6 text-gray-700 mt-1" />
+                      <div style={{ color: " #9c5d00" }}>
+                        <h3 className="text-sm font-semibold mb-1">
+                          Start Date
+                        </h3>
+                        <p className="text-base  font-medium">06/15/2024</p>
+                      </div>
+                    </div>
+
+                    {/* Duration */}
+                    <div className="flex items-start gap-3">
+                      <Moon className="w-6 h-6 text-gray-700 mt-1" />
+                      <div style={{ color: " #9c5d00" }}>
+                        <h3 className="text-sm font-semibold mb-1">Duration</h3>
+                        <p className="text-base font-medium">7 Days 6 Nights</p>
+                      </div>
+                    </div>
+
+                    {/* Total Ticket */}
+                    <div className="flex items-start gap-3">
+                      <Ticket className="w-6 h-6 text-gray-700 mt-1" />
+                      <div style={{ color: " #9c5d00" }}>
+                        <h3 className="text-sm font-semibold mb-1">
+                          Total Ticket
+                        </h3>
+                        <p className="text-base font-medium">$48/50</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               {/* Description */}
               <div
@@ -819,17 +855,17 @@ export default function AdventureSportsCreativePage({}) {
                     </ul>
                   </div>
                   <div className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer">
-                      <img
-                        src="/templates/yootheme/activities/activity-details/bg-ad4.png"
-                        alt="Adventure camp activities"
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          borderRadius: "8px",
-                        }}
-                      />
-                     <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
+                    <img
+                      src="/templates/yootheme/activities/activity-details/bg-ad4.png"
+                      alt="Adventure camp activities"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "8px",
+                      }}
+                    />
+                    <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
                   </div>
                 </div>
               </div>
@@ -852,6 +888,7 @@ export default function AdventureSportsCreativePage({}) {
                 >
                   Location
                 </div>
+
                 <div
                   className="text-[1vw]"
                   style={{
@@ -891,8 +928,7 @@ export default function AdventureSportsCreativePage({}) {
                         objectFit: "cover",
                       }}
                     />
-                   <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
-
+                    <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
                   </div>
                   <div
                     className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer"
@@ -912,10 +948,74 @@ export default function AdventureSportsCreativePage({}) {
                       }}
                     />
                     <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
-
                   </div>
                 </div>
               </div>
+
+              <ActivityDetailSections
+                id="accommodation"
+                heroImage={{
+                  src: "/templates/yootheme/cache/1e/08-Sommercamp-Walsrode-tents-inside-1e26262a.jpg",
+                  alt: "accommodation img",
+                }}
+                title="Accommodation Options"
+                subtitle="Camp Life – Like a Little Village!"
+                introText={[
+                  "At our international summer camp in Lower Saxony, you can choose between our cozy tent village or the comfy Adventure Lodges – it all depends on your sense of adventure!",
+                ]}
+                outroText={[
+                  "🏕️ Tent Village: Spacious tents for 6–7 campers with wooden floors and a loft area – the ultimate outdoor experience under the stars.",
+                  "🏡 Adventure Lodges: Comfortable cabins with 4–8 beds, storage shelves, and seating areas. (Please note: staying in a lodge comes at an extra charge.)",
+                ]}
+                quote=""
+                mainHeading=""
+                mainDescription={[
+                  "Accommodations are separated by gender, so girls and boys stay in their own tents or lodges. We also organize by age group to make sure everyone feels right at home:",
+                ]}
+                principles={[
+                  "Junior (7–12 years)",
+                  " Senior (12–15 years)",
+                  " Senior Plus (15–17 years)",
+                ]}
+                footerText={[
+                  "Restroom and shower facilities are also separated by gender and always close by.",
+                  "Best of all: Our teamers live right next door – they’re available for you 24/7!",
+                  "Good to know:",
+                  "For tents, bring your own sleeping bag and sleeping mat.",
+                  "For lodges, bring a fitted sheet and either a sleeping bag or bedding set (available for rent if needed).",
+                  "You can choose your preferred accommodation during the booking process – secure your spot now!",
+                ]}
+              />
+
+              <ActivityDetailSections
+                id="program"
+                heroImage={{
+                  src: "/templates/yootheme/cache/7e/10-Abenteuercamp-Climbing-Tree-7e2c8878.jpg",
+                  alt: "program img",
+                }}
+                title="Program"
+                subtitle="A Full Day of Adventure, Sports & Creativity!"
+                introText={[
+                  '"Adventure, Sports & Creativity" is the base program at our Lüneburger Heide Camp – no extra booking needed! If you don’t choose an additional profile like Horseback Riding or Survival, this is your go-to for an action-packed and varied camp experience.',
+                ]}
+                outroText={[
+                  "Learn English – Without Even Trying!",
+                  "Our international team brings the real camp spirit – full of energy, adventure, and fun. And the best part? English becomes a natural part of the day – whether you're playing sports, doing creative projects, or chilling by the campfire.",
+                  "Friendships That Last!",
+                  "Shared adventures  \ncreate real connections – and many campers already plan their return together for next summer. These are friendships that stick!",
+                ]}
+                quote=""
+                mainHeading="Every morning, you get to pick a new exciting activity – whatever you’re in the mood for!"
+                mainDescription={[""]}
+                principles={[
+                  "Outdoor Action & Adventure: High ropes course, archery, raft building, or survival training – challenge your limits!",
+                  "Sports & Movement: Soccer, volleyball, basketball, or splashing around in the lake – get moving and have fun!",
+                  " Creativity & Chill: Crafts, painting, reading, or baking – perfect for relaxing moments at camp.",
+                ]}
+                footerText={[
+                  "There’s no room for boredom here – every day brings fresh adventures, new sports challenges, and creative highlights just for you!",
+                ]}
+              />
               <div id="meals"></div>
               <div
                 className="fadeInUp "
@@ -1045,6 +1145,30 @@ export default function AdventureSportsCreativePage({}) {
                   cuisine to fuel your adventures!
                 </div>
               </div>
+
+              <ActivityDetailSections
+                id="team"
+                heroImage={{
+                  src: "/templates/yootheme/cache/2e/Teamertraining_2017_60-2e2ec36d.jpg",
+                  alt: "team img",
+                }}
+                title="Team and Supervision"
+                subtitle="Cared for Around the Clock!"
+                introText={[
+                  "Our experienced and passionate teamers are there for you 24/7 – full of energy, positivity, and always ready to listen. Whether it’s a quick question or a bigger worry, you can count on them anytime.",
+                  "The best part?",
+                  "Our team comes from all over the world and brings that true international camp spirit – that’s why we speak both English and German!",
+                ]}
+                outroText={[]}
+                quote=""
+                mainHeading=""
+                mainDescription={[""]}
+                principles={[]}
+                footerText={[
+                  "This way, you’ll naturally pick up both languages – while playing sports, chatting by the campfire, or just hanging out.  ",
+                  "Our supervision ratio is between 1:7 and 1:10, so you’re always in good hands with our all-around care package!",
+                ]}
+              />
 
               {/* Package at a Glance */}
               <div
@@ -1253,476 +1377,6 @@ export default function AdventureSportsCreativePage({}) {
           animation-fill-mode: backwards;
         }
       `}</style>
-      </div>
-
-      {/* Bayerischer Wald Section */}
-      <div
-        id="Regen"
-        className="uk-section-muted uk-section uk-padding-remove-bottom"
-      >
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
-            <div className="uk-grid-item-match uk-width-2-3@m">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h2 className="uk-h2">
-                  Adventure Camp Regen – Your Summer Camp in Bavaria!
-                </h2>
-                <div className="uk-panel uk-dropcap uk-column-1-2@m uk-column-1-1@s uk-margin">
-                  <p>
-                    Action, Sports &amp; Creativity – Our Kids &amp; Teen Camps
-                    in the Bavarian Forest Have It All!
-                    <br />
-                    Climbing, outdoor challenges, team games, and creative
-                    workshops make your holidays truly unforgettable.
-                  </p>
-                  <p>
-                    No extra profile needed – if you don&apos;t choose Horseback
-                    Riding or Survival, you&apos;ll automatically be part of the
-                    Adventure Base Program!
-                    <br />
-                    Experience nature, sports, and an international community at
-                    its best.
-                  </p>
-                  <p>Book your Adventure Camp and safe your spot!</p>
-                </div>
-                <div
-                  className="uk-slider-container uk-margin uk-text-center"
-                  uk-slider="sets: 1; center: 1; velocity: 1; autoplay: 1;  autoplayInterval: 4000;"
-                >
-                  <div className="uk-position-relative">
-                    <div className="uk-slider-items uk-grid">
-                      <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div
-                          className="el-item uk-inline-clip uk-transition-toggle"
-                          tabIndex={0}
-                        >
-                          <Image
-                            src={getTemplateImageUrl(
-                              "yootheme/cache/d3/reg_programm_archery-d31dea56.jpg"
-                            )}
-                            width={1260}
-                            height={837}
-                            alt="Girl aiming with bow and arrow – archery activity for kids at outdoor summer camp"
-                            loading="lazy"
-                            className="el-image uk-transition-scale-up uk-transition-opaque"
-                          />
-                        </div>
-                      </div>
-                      <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div
-                          className="el-item uk-inline-clip uk-transition-toggle"
-                          tabIndex={0}
-                        >
-                          <Image
-                            src={getTemplateImageUrl(
-                              "yootheme/cache/d3/reg_programm_games-d3b4af4a.jpg"
-                            )}
-                            width={1260}
-                            height={840}
-                            alt="Group of children being welcomed at language camp – beginning of an exciting adventure week in Regen"
-                            loading="lazy"
-                            className="el-image uk-transition-scale-up uk-transition-opaque"
-                          />
-                        </div>
-                      </div>
-                      <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div
-                          className="el-item uk-inline-clip uk-transition-toggle"
-                          tabIndex={0}
-                        >
-                          <Image
-                            src={getTemplateImageUrl(
-                              "yootheme/cache/d6/01-Regen-Sport-Camp-Location-d6d81402.jpg"
-                            )}
-                            width={1260}
-                            height={840}
-                            alt="Aerial view of Sportcamp Regen with sports fields and scenic nature – active summer camp in the Bavarian Forest"
-                            loading="lazy"
-                            className="el-image uk-transition-scale-up uk-transition-opaque"
-                          />
-                        </div>
-                      </div>
-                      <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div
-                          className="el-item uk-inline-clip uk-transition-toggle"
-                          tabIndex={0}
-                        >
-                          <Image
-                            src={getTemplateImageUrl(
-                              "yootheme/cache/fc/03-Regen-Sport-Camp-Bridge-fc7e5448.jpg"
-                            )}
-                            width={1260}
-                            height={840}
-                            alt="Outdoor climbing and ziplining under a stone viaduct – thrilling activities at summer camp in the Bavarian Forest"
-                            loading="lazy"
-                            className="el-image uk-transition-scale-up uk-transition-opaque"
-                          />
-                        </div>
-                      </div>
-                      <div className="uk-width-1-1 uk-width-3-5@s uk-width-1-2@m">
-                        <div
-                          className="el-item uk-inline-clip uk-transition-toggle"
-                          tabIndex={0}
-                        >
-                          <Image
-                            src={getTemplateImageUrl(
-                              "yootheme/cache/cd/02-Regen-Language-Camp-Kayak-cd591e8f.jpg"
-                            )}
-                            width={1260}
-                            height={840}
-                            alt="Children on a canoeing trip through nature – outdoor language Go and Grow Camp with expert supervision in Regen"
-                            loading="lazy"
-                            className="el-image uk-transition-scale-up uk-transition-opaque"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="uk-margin-top" uk-inverse="">
-                    <ul
-                      className="el-nav uk-slider-nav uk-dotnav uk-flex-center"
-                      uk-margin=""
-                    ></ul>
-                  </div>
-                </div>
-                {/* Accordion for Regen - Similar structure to Walsrode but with Regen-specific content */}
-                <div id="AccordionRegen">
-                  <div
-                    uk-accordion="collapsible: false;"
-                    id="js-4"
-                    className="custom_acc_691a9ce46a7b9"
-                  >
-                    <div id="js-4_0" className="el-item jp_">
-                      <a className="uk-accordion-title" href="#">
-                        <h3 className="el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          All the Key Facts at a Glance
-                        </h3>
-                      </a>
-                      <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div className="el-content uk-panel uk-column-1-2@m uk-margin-top">
-                          <ul style={{ listStyleType: "disc" }}>
-                            <li>
-                              <strong>Choose your focus:</strong> 4 exciting
-                              profile sessions (2.5 hrs each) packed with
-                              sports, adventure, or creative fun
-                            </li>
-                            <li>
-                              <strong>Daily variety:</strong> Enjoy even more
-                              activities outside your profile – outdoor games,
-                              sports, creativity, campfires, disco nights & more
-                            </li>
-                            <li>
-                              <strong>Awesome excursions</strong> for 2-week
-                              campers: overnight hike under the stars or a trip
-                              to Munich
-                            </li>
-                            <li>
-                              <strong>Bilingual camp vibe:</strong> English &
-                              German – learn languages naturally in an
-                              international setting
-                            </li>
-                            <li>
-                              <strong>Accommodation:</strong> Stay in tents &
-                              tiny houses at the campsite, or in wooden cabins &
-                              solid lodges at the BLSV grounds
-                            </li>
-                            <li>
-                              <strong>Full board:</strong> 7-day stay (Sun–Sat),
-                              6 nights with freshly prepared meals
-                            </li>
-                            <li>
-                              <strong>24/7 support:</strong> Our dedicated
-                              teamers are always nearby and happy to help
-                            </li>
-                            <li>
-                              <strong>Digital Detox:</strong> Phones and
-                              electronics only allowed during siesta
-                            </li>
-                            <li>
-                              <strong>Arrival & departure made easy:</strong>{" "}
-                              Shuttle service from train stations and airports
-                              available
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="js-4_1" className="el-item jp_">
-                      <a className="uk-accordion-title" href="#">
-                        <div className="text-[1.7vw] el-accordion-title uk-h3 uk-margin-remove-bottom">
-                          Location
-                        </div>
-                      </a>
-                      <div className="uk-accordion-content uk-margin-remove-first-child">
-                        <div
-                          id="jp_accordation_section_691a9ce46aac7"
-                          className="jp_section_content"
-                        >
-                          <div className="uk-container">
-                            <div
-                              className="uk-grid tm-grid-expand uk-grid-margin"
-                              uk-grid=""
-                            >
-                              <div className="uk-width-1-2@m">
-                                <div
-                                  className="uk-position-relative uk-position-z-index uk-dark uk-margin"
-                                  style={{ minHeight: "50vh" }}
-                                  uk-map=""
-                                  data-map-type="leaflet"
-                                >
-                                  <script
-                                    type="application/json"
-                                    dangerouslySetInnerHTML={{
-                                      __html: JSON.stringify({
-                                        markers: [
-                                          {
-                                            lat: 48.9666,
-                                            lng: 13.1128,
-                                            title: "Bayerischer Wald",
-                                            show_popup: true,
-                                          },
-                                        ],
-                                        controls: true,
-                                        dragging: true,
-                                        max_zoom: "18",
-                                        min_zoom: "0",
-                                        poi: false,
-                                        type: "roadmap",
-                                        zoom: "5",
-                                        zooming: false,
-                                        center: { lat: 48.9666, lng: 13.1128 },
-                                        lazyload: true,
-                                        library: "leaflet",
-                                        baseUrl:
-                                          "/templates/yootheme/vendor/assets/leaflet/leaflet/dist",
-                                      }),
-                                    }}
-                                  />
-                                  <div className="el-item uk-text-default uk-font-default uk-margin-remove-first-child">
-                                    <h3 className="el-title uk-margin-top uk-margin-remove-bottom">
-                                      Bayerischer Wald
-                                    </h3>
-                                    <div className="uk-margin-top">
-                                      <Link
-                                        href="/destinations/germany-adventure-camp-bayerischer-wald"
-                                        target="_blank"
-                                        className="el-link uk-button uk-button-default"
-                                      >
-                                        Info - Location
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="uk-width-1-2@m">
-                                <div className="uk-panel uk-margin">
-                                  <h4>
-                                    Welcome to Regen – Your Adventure in the
-                                    Bavarian Forest!
-                                  </h4>
-                                  <p>
-                                    Our Go and Grow Camp in Regen is located
-                                    right in the heart of the Bavarian Forest –
-                                    one of South Germany&apos;s most beautiful
-                                    natural landscapes. Surrounded by forests,
-                                    rolling hills, and crystal-clear rivers,
-                                    it&apos;s the perfect place for adventure,
-                                    sports, and creative camps in southern
-                                    Germany.
-                                  </p>
-                                  <p>
-                                    <strong>Pure action &amp; nature!</strong>
-                                    <br />
-                                    Whether it&apos;s canoeing, kayaking,
-                                    climbing, or team-building – this is where
-                                    the fun really begins!
-                                    <br />
-                                    In cooperation with the Bavarian Sports
-                                    Association (BLSV), we use top-class sports
-                                    facilities on-site and nearby to offer even
-                                    more variety and excitement.
-                                  </p>
-                                  <p>
-                                    <strong>
-                                      International community &amp; real camp
-                                      spirit!
-                                    </strong>
-                                    <br />
-                                    Our bilingual teamers (English/German)
-                                    create an inspiring and welcoming
-                                    atmosphere.
-                                  </p>
-                                  <p>
-                                    Whether you&apos;re an outdoor enthusiast,
-                                    sports lover, or language explorer – this
-                                    camp is one-of-a-kind!
-                                    <br />
-                                    <strong>
-                                      We can&apos;t wait to welcome you!
-                                    </strong>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={{
-                    __html: `
-                    .custom_acc_691a9ce46a7b9 .uk-accordion-title * {
-                      color: #000000 !important;
-                    }
-                    .custom_acc_691a9ce46a7b9 .uk-accordion-title {
-                      padding: 10px !important;
-                      color: #000000 !important;
-                      background: #ffffff !important;
-                      border: 1px solid #ffaa00 !important;
-                      position: relative;
-                      padding-left: 60px !important;
-                    }
-                    .custom_acc_691a9ce46a7b9 .uk-accordion-title::before {
-                      display: block;
-                      position: absolute;
-                      top: 0;
-                      bottom: 0;
-                      background-color: #ffaa00 !important;
-                      background-size: 30px !important;
-                      margin-left: 0px;
-                      background-repeat: repeat;
-                      width: 50px;
-                      height: 100%;
-                      background-repeat: no-repeat;
-                      background-position: center center;
-                      left: 0;
-                      margin-right: 15px;
-                      margin-left: 0px;
-                      content: "+";
-                      color: white;
-                      font-size: 24px;
-                      font-weight: bold;
-                      text-align: center;
-                      line-height: 1;
-                    }
-                    .custom_acc_691a9ce46a7b9 .uk-open > .uk-accordion-title::before {
-                      content: "−";
-                    }
-                    .custom_acc_691a9ce46a7b9 .uk-accordion-content {
-                      border: 1px solid #ffaa00 !important;
-                      background: #ffffff !important;
-                      padding: 15px !important;
-                      margin-top: 15px !important;
-                    }
-                    .custom_acc_691a9ce46a7b9 > :nth-child(n + 2) {
-                      border: unset !important;
-                      box-shadow: unset !important;
-                    }
-                  `,
-                  }}
-                />
-              </div>
-            </div>
-            <div className="uk-width-1-3@m">
-              <div className="uk-card-default uk-card uk-card-body">
-                <h3 className="uk-h3">Quick Facts</h3>
-                <ul className="uk-list uk-list-divider">
-                  <li>
-                    <strong>Location:</strong> Bayerischer Wald (Regen)
-                  </li>
-                  <li>
-                    <strong>Ages:</strong> 7 - 16 years
-                  </li>
-                  <li>
-                    <strong>Price:</strong> from 395 USD
-                  </li>
-                  <li>
-                    <strong>Duration:</strong> from 7 days
-                  </li>
-                </ul>
-                <Link
-                  href="/destinations/germany-adventure-camp-bayerischer-wald"
-                  className="uk-button uk-button-primary uk-width-1-1 uk-margin-small-top"
-                >
-                  View Location
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Booking Section */}
-      {/* <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-width-1-1@m">
-              <h2 className="uk-h2 uk-text-center">Booking</h2>
-              <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
-              <div className="uk-panel uk-margin">
-                <div style={{ textAlign: "center" }}>
-                  <iframe
-                    src="https://www.bookacamp.de/en/booking/form/view-by-camp/ds7fdn347dsfndsf74n37en37en37dnd/walsrode"
-                    title="Bookacamp, die Buchungsplattform von Go and Grow Camp"
-                    allowFullScreen={true}
-                    width="1000"
-                    height="1700"
-                    frameBorder="0"
-                    allowFullScreen={true}
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-      {/* Testimonial Section */}
-      <div className="uk-section-default uk-section">
-        <div className="uk-container uk-container-small">
-          <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-            <div className="uk-grid-item-match uk-width-1-1">
-              <div className="uk-card-default uk-card uk-card-body">
-                <blockquote
-                  className="uk-width-2xlarge uk-text-left uk-scrollspy-inview"
-                  uk-scrollspy-class=""
-                >
-                  <p>
-                    Perfect Adventure & Sports Camp! Our children tried so many
-                    exciting activities - climbing, canoeing, archery, and more.
-                    The variety kept them engaged and active all week. They
-                    learned new skills, pushed their limits, and had an absolute
-                    blast. The best summer camp experience!
-                  </p>
-                  <footer className="el-footer">
-                    <cite className="el-author">
-                      <a
-                        href="https://maps.app.goo.gl/FdniYSE33xQapbBs5"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Lisa G. auf Google
-                      </a>
-                    </cite>
-                  </footer>
-                </blockquote>
-                <div uk-scrollspy-class="" className="uk-scrollspy-inview">
-                  <center>
-                    <div className="pe-richsnippets"></div>
-                    <Script
-                      type="text/javascript"
-                      src="https://www.provenexpert.com/widget/richsnippet497f.js?l=en&u=1Z3p4tQZkSQphSwAi92ZltwA0ZwAkWUZ&v=2"
-                      async
-                    />
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
