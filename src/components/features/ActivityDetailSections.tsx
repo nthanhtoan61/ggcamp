@@ -37,7 +37,7 @@ export default function ActivityDetailSections({
           className="text-[1.7vw]"
           style={{
             fontWeight: "600",
-            color: "#1a1a1a",
+           
             marginBottom: "20px",
           }}
         >
@@ -57,7 +57,7 @@ export default function ActivityDetailSections({
           className="text-[1vw] mt-10"
           style={{
             fontWeight: "600",
-            color: "#1a1a1a",
+           
             marginBottom: "20px",
           }}
         >
@@ -79,7 +79,7 @@ export default function ActivityDetailSections({
         {/* Quote Block */}
         <div
           className="p-6 rounded-2xl mb-8 max-w-5xl mx-auto"
-          style={{ backgroundColor: "#CBCA7B" }}
+          style={{ backgroundColor: "var(--color-primary)" }}
         >
           <div className="flex  ">
             <svg
@@ -88,7 +88,7 @@ export default function ActivityDetailSections({
               viewBox="0 0 50 50"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect width="50" height="50" rx="8" fill="#CBCA7B" />
+              <rect width="50" height="50" rx="8" fill="var(--color-primary)" />
               <text
                 x="14"
                 y="34"
@@ -146,7 +146,7 @@ export default function ActivityDetailSections({
                   viewBox="0 0 18 18"
                   fill="none"
                 >
-                  <circle cx="9" cy="9" r="9" fill="#9c5d00" />
+                  <circle cx="9" cy="9" r="9" fill="var(--color-primary)" />
                 </svg>
                 <p className="text-gray-600 text-base leading-relaxed">
                   {principle}

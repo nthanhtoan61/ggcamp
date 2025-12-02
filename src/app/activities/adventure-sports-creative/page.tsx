@@ -13,7 +13,7 @@ import ActivityDetailSections from "@/components/features/ActivityDetailSections
 export default function AdventureSportsCreativePage({}) {
   const [activeAccordion, setActiveAccordion] = useState(1);
   const [currentSlide, setCurrentSlide] = useState(0);
-  // Fix: Use lazy initialization to read from localStorage only once during component initialization
+  
   const [camp, setCamp] = useState(() => {
     if (typeof window !== "undefined") {
       const stored = localStorage.getItem("campData");
@@ -21,6 +21,7 @@ export default function AdventureSportsCreativePage({}) {
     }
     return null;
   });
+
   const tours = [
     {
       id: 1,
@@ -127,7 +128,8 @@ export default function AdventureSportsCreativePage({}) {
         id="Start"
         className="uk-section-default uk-section uk-padding-remove-bottom "
       >
-        <div className="uk-container ">
+        <div className="uk-container" 
+          style={{ color: "var(--color-primary)" }}>
           <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
             <div className="uk-light uk-width-1-3@s uk-width-1-6@m">
               <div>
@@ -207,7 +209,7 @@ export default function AdventureSportsCreativePage({}) {
 
       <div
         style={{
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-background)",
           minHeight: "100vh",
           padding: "60px 0",
         }}
@@ -215,23 +217,13 @@ export default function AdventureSportsCreativePage({}) {
         <div
           style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 20px" }}
         >
+          {/* Main Layout Grid: Single col on mobile, 1fr 2fr on desktop */}
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 2fr",
-              gap: "30px",
-              alignItems: "start",
-            }}
+            className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 items-start"
           >
             {/* Left Sidebar */}
             <div
-              style={{
-                position: "sticky",
-                top: "120px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-              }}
+              className="lg:sticky lg:top-[120px] flex flex-col gap-5 w-full"
             >
               {/* Explore Services Card */}
              
@@ -247,12 +239,11 @@ export default function AdventureSportsCreativePage({}) {
                 `}</style>
 
                 <div
-                  className="uk-panel uk-padding uk-background-muted uk-border-rounded"
+                  className="uk-panel uk-padding uk-background-muted uk-border-rounded w-full"
                   style={{
-                    backgroundColor: " #cbca7b",
+                    backgroundColor: "var(--color-primary)",
                     borderRadius: "15px",
                     color: "#808080",
-                    width: "443.33px",
                     marginBottom: "20px",
                   }}
                 >
@@ -331,7 +322,7 @@ export default function AdventureSportsCreativePage({}) {
               <div
                 className="fadeInUp"
                 style={{
-                  background: "#cbca7b",
+                  background: "var(--color-primary)",
                   borderRadius: "8px",
                   padding: "40px 30px",
                   animation: "fadeInUp 0.6s ease-out 0.1s backwards",
@@ -434,8 +425,8 @@ export default function AdventureSportsCreativePage({}) {
                   </li>
                 </ul>
               </div>
-              <div className="max-w-md mx-auto p-6 bg-gray-50 min-h-screen">
-                <div className="text-[1.7vw] font-bold text-gray-900 mb-6">
+              <div className="mx-auto w-full p-6 bg-gray-50 rounded-lg">
+                <div className="text-xl md:text-[1.7vw] font-bold text-gray-900 mb-6">
                   Upcoming Tour
                 </div>
 
@@ -499,7 +490,7 @@ export default function AdventureSportsCreativePage({}) {
 
             {/* Main Content */}
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "30px" }}
+              className="flex flex-col gap-8 w-full"
             >
               {/* Main Image */}
               <div
@@ -516,7 +507,9 @@ export default function AdventureSportsCreativePage({}) {
                   alt={slides[currentSlide].alt}
                   style={{
                     width: "100%",
-                    height: "500px",
+                    height: "auto",
+                    minHeight: "300px",
+                    maxHeight: "500px",
                     objectFit: "cover",
                     display: "block",
                   }}
@@ -548,7 +541,7 @@ export default function AdventureSportsCreativePage({}) {
                   }}
                 >
                   <div
-                    className="text-[3vw]"
+                    className="text-2xl md:text-[3vw]"
                     style={{
                       color: "#fff",
 
@@ -605,7 +598,7 @@ export default function AdventureSportsCreativePage({}) {
                         <line x1="8" y1="2" x2="8" y2="6" />
                         <line x1="3" y1="10" x2="21" y2="10" />
                       </svg>
-                      <div className="text-[1vw]">
+                      <div className="text-xs md:text-[1vw]">
                         {camp?.season
                           ? camp.season
                               .map(
@@ -635,7 +628,7 @@ export default function AdventureSportsCreativePage({}) {
                         <line x1="2" y1="12" x2="22" y2="12" />
                         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                       </svg>
-                      <div className="text-[1w]">GER & EN</div>
+                      <div className="text-xs md:text-[1w]">GER & EN</div>
                     </div>
                   </div>
                 </div>
@@ -679,11 +672,11 @@ export default function AdventureSportsCreativePage({}) {
                 </h2>
 
                 <div className="border-t border-b border-gray-200 py-6">
-                  <div className="flex flex-row items-center justify-between gap-8">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8" style={{ color: "var(--color-primary)" }}>
                     {/* Start Date */}
                     <div className="flex items-start gap-3">
                       <Clock className="w-6 h-6 text-gray-700 mt-1" />
-                      <div style={{ color: " #9c5d00" }}>
+                      <div>
                         <h3 className="text-sm font-semibold mb-1">
                           Start Date
                         </h3>
@@ -694,7 +687,7 @@ export default function AdventureSportsCreativePage({}) {
                     {/* Duration */}
                     <div className="flex items-start gap-3">
                       <Moon className="w-6 h-6 text-gray-700 mt-1" />
-                      <div style={{ color: " #9c5d00" }}>
+                      <div >
                         <h3 className="text-sm font-semibold mb-1">Duration</h3>
                         <p className="text-base font-medium">7 Days 6 Nights</p>
                       </div>
@@ -703,7 +696,7 @@ export default function AdventureSportsCreativePage({}) {
                     {/* Total Ticket */}
                     <div className="flex items-start gap-3">
                       <Ticket className="w-6 h-6 text-gray-700 mt-1" />
-                      <div style={{ color: " #9c5d00" }}>
+                      <div >
                         <h3 className="text-sm font-semibold mb-1">
                           Total Ticket
                         </h3>
@@ -723,7 +716,7 @@ export default function AdventureSportsCreativePage({}) {
               >
                 <div
                   id="overview"
-                  className="text-[1w]"
+                  className="text-base md:text-[1w]"
                   style={{
                     lineHeight: "1.8",
                     color: "#666",
@@ -746,7 +739,7 @@ export default function AdventureSportsCreativePage({}) {
                 }}
               >
                 <div
-                  className="text-[1.7vw]"
+                  className="text-xl md:text-[1.7vw]"
                   style={{
                     fontWeight: "600",
                     color: "#1a1a1a",
@@ -757,7 +750,7 @@ export default function AdventureSportsCreativePage({}) {
                   Overview
                 </div>
                 <div
-                  className="text-[1vw]"
+                  className="text-base md:text-[1vw]"
                   style={{
                     lineHeight: "1.8",
                     color: "#666",
@@ -775,12 +768,7 @@ export default function AdventureSportsCreativePage({}) {
 
                 {/* Features Grid */}
                 <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "30px",
-                    marginTop: "40px",
-                  }}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10"
                 >
                   <div>
                     <div
@@ -791,10 +779,10 @@ export default function AdventureSportsCreativePage({}) {
                       }}
                     >
                       <div
-                        className="text-[1.7vw]"
+                        className="text-xl md:text-[1.7vw]"
                         style={{
                           fontWeight: "600",
-                          color: "#1a1a1a",
+                          
                           marginBottom: "15px",
                         }}
                       >
@@ -840,7 +828,7 @@ export default function AdventureSportsCreativePage({}) {
                             viewBox="0 0 20 20"
                             fill="none"
                           >
-                            <circle cx="10" cy="10" r="10" fill="#9c5d00" />
+                            <circle cx="10" cy="10" r="10" fill="var(--color-primary)" />
                             <path
                               d="M6 10l3 3 5-6"
                               stroke="white"
@@ -849,12 +837,12 @@ export default function AdventureSportsCreativePage({}) {
                               strokeLinejoin="round"
                             />
                           </svg>
-                          <div className="text-[1vw]">{feature}</div>
+                          <div className="text-base md:text-[1vw]">{feature}</div>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer">
+                  <div className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer h-[300px] md:h-auto">
                     <img
                       src="/templates/yootheme/activities/activity-details/bg-ad4.png"
                       alt="Adventure camp activities"
@@ -879,7 +867,7 @@ export default function AdventureSportsCreativePage({}) {
                 }}
               >
                 <div
-                  className="text-[1.7vw]"
+                  className="text-xl md:text-[1.7vw]"
                   style={{
                     fontWeight: "600",
                     color: "#1a1a1a",
@@ -890,7 +878,7 @@ export default function AdventureSportsCreativePage({}) {
                 </div>
 
                 <div
-                  className="text-[1vw]"
+                  className="text-base md:text-[1vw]"
                   style={{
                     lineHeight: "1.8",
                     color: "#666",
@@ -910,11 +898,10 @@ export default function AdventureSportsCreativePage({}) {
                   improve your English skills, forge lasting friendships, and
                   immerse yourself in the authentic spirit of camp.
                 </div>
-                <div style={{ display: "flex", gap: "30px", height: "400px" }}>
+                <div className="flex flex-col md:flex-row gap-8 h-auto md:h-[400px]">
                   <div
-                    className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer"
+                    className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer w-full md:flex-[7] h-[250px] md:h-full"
                     style={{
-                      flex: "7 1 0",
                       overflow: "hidden",
                       borderRadius: "8px",
                     }}
@@ -931,9 +918,8 @@ export default function AdventureSportsCreativePage({}) {
                     <div className="absolute top-1/2 left-1/2 w-[200%] h-0 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white/30  z-20 pointer-events-none group-hover:transition-all group-hover:duration-600 group-hover:ease-linear group-hover:h-[250%] group-hover:bg-transparent" />
                   </div>
                   <div
-                    className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer"
+                    className="relative z-10 rounded-2xl overflow-hidden group cursor-pointer w-full md:flex-[3] h-[250px] md:h-full"
                     style={{
-                      flex: "3 1 0",
                       overflow: "hidden",
                       borderRadius: "8px",
                     }}
@@ -1024,7 +1010,7 @@ export default function AdventureSportsCreativePage({}) {
                 }}
               >
                 <div
-                  className="text-[1.7vw]"
+                  className="text-xl md:text-[1.7vw]"
                   style={{
                     fontWeight: "600",
                     color: "#1a1a1a",
@@ -1034,7 +1020,7 @@ export default function AdventureSportsCreativePage({}) {
                   Meal On Site
                 </div>
                 <div
-                  className="text-[1vw]"
+                  className="text-base md:text-[1vw]"
                   style={{
                     lineHeight: "1.8",
                     color: "#666",
@@ -1048,11 +1034,7 @@ export default function AdventureSportsCreativePage({}) {
                 </div>
 
                 <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "30px",
-                  }}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8"
                 >
                   {[
                     {
@@ -1097,7 +1079,7 @@ export default function AdventureSportsCreativePage({}) {
                           viewBox="0 0 20 20"
                           fill="none"
                         >
-                          <circle cx="10" cy="10" r="10" fill="#9c5d00" />
+                          <circle cx="10" cy="10" r="10" fill="var(--color-primary)" />
                           <path
                             d="M6 10l3 3 5-6"
                             stroke="white"
@@ -1107,7 +1089,7 @@ export default function AdventureSportsCreativePage({}) {
                           />
                         </svg>
                         <div
-                          className="text-[1.7vw]"
+                          className="text-lg md:text-[1.7vw]"
                           style={{
                             fontWeight: "600",
                             color: "#1a1a1a",
@@ -1118,7 +1100,7 @@ export default function AdventureSportsCreativePage({}) {
                         </div>
                       </div>
                       <div
-                        className="text-[1vw]"
+                        className="text-base md:text-[1vw]"
                         style={{
                           lineHeight: "1.7",
                           color: "#666",
@@ -1131,8 +1113,8 @@ export default function AdventureSportsCreativePage({}) {
                   ))}
                 </div>
                 <div
-                  id="coverage"
-                  className="text-[1vw]"
+                
+                  className="text-base md:text-[1vw]"
                   style={{
                     lineHeight: "1.8",
                     color: "#666",
@@ -1169,6 +1151,9 @@ export default function AdventureSportsCreativePage({}) {
                   "Our supervision ratio is between 1:7 and 1:10, so you’re always in good hands with our all-around care package!",
                 ]}
               />
+              <div id="coverage">
+
+              </div>
 
               {/* Package at a Glance */}
               <div
@@ -1178,7 +1163,8 @@ export default function AdventureSportsCreativePage({}) {
                 }}
               >
                 <div
-                  className="text-[1.7vw]"
+               
+                  className="text-xl md:text-[1.7vw]"
                   style={{
                     fontWeight: "600",
                     color: "#1a1a1a",
@@ -1188,7 +1174,7 @@ export default function AdventureSportsCreativePage({}) {
                   Coverage and Insurance
                 </div>
                 <div
-                  className="text-[1vw]"
+                  className="text-base md:text-[1vw]"
                   style={{
                     lineHeight: "1.7",
                     color: "#999",
@@ -1204,11 +1190,7 @@ export default function AdventureSportsCreativePage({}) {
                 </div>
 
                 <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "30px",
-                  }}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8"
                 >
                   {/* Include Column */}
                   <div
@@ -1219,7 +1201,7 @@ export default function AdventureSportsCreativePage({}) {
                     }}
                   >
                     <div
-                      className="text-[1.7vw]"
+                      className="text-lg md:text-[1.7vw]"
                       style={{
                         fontWeight: "700",
                         color: "#1a1a1a",
@@ -1229,7 +1211,7 @@ export default function AdventureSportsCreativePage({}) {
                       Camp Insurance Package
                     </div>
                     <div
-                      className="text-[1vw]"
+                      className="text-base md:text-[1vw]"
                       style={{
                         lineHeight: "1.6",
                         color: "#999",
@@ -1274,9 +1256,9 @@ export default function AdventureSportsCreativePage({}) {
                             viewBox="0 0 18 18"
                             fill="none"
                           >
-                            <circle cx="9" cy="9" r="9" fill="#9c5d00" />
+                            <circle cx="9" cy="9" r="9" fill="var(--color-primary)" />
                           </svg>
-                          <div className="text-[0.86vw]">{item}</div>
+                          <div className="text-sm md:text-[0.86vw]">{item}</div>
                         </li>
                       ))}
                     </ul>
@@ -1291,7 +1273,7 @@ export default function AdventureSportsCreativePage({}) {
                     }}
                   >
                     <div
-                      className="text-[1.7vw]"
+                      className="text-lg md:text-[1.7vw]"
                       style={{
                         fontWeight: "700",
                         color: "#1a1a1a",
@@ -1301,7 +1283,7 @@ export default function AdventureSportsCreativePage({}) {
                       Travel Cancellation Guarantee
                     </div>
                     <div
-                      className="text-[1vw]"
+                      className="text-base md:text-[1vw]"
                       style={{
                         lineHeight: "1.6",
                         color: "#999",
@@ -1346,9 +1328,9 @@ export default function AdventureSportsCreativePage({}) {
                             viewBox="0 0 18 18"
                             fill="none"
                           >
-                            <circle cx="9" cy="9" r="9" fill="#9c5d00" />
+                            <circle cx="9" cy="9" r="9" fill="var(--color-primary)" />
                           </svg>
-                          <div className="text-[0.86vw]">{item}</div>
+                          <div className="text-sm md:text-[0.86vw]">{item}</div>
                         </li>
                       ))}
                     </ul>
