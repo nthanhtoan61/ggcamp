@@ -432,7 +432,7 @@ export function AboutSection() {
 
           <hr className="border-t border-gray-300 my-[1.5vw] max-sm:my-[3vw] w-full" />
 
-          <div className="flex flex-col md:flex-row mt-[0.75vw] max-sm:mt-[2vw] gap-[2vw] max-sm:gap-[4vw]">
+          <div className="flex flex-col md:flex-row mt-[0.75vw] max-sm:mt-[2vw] gap-[1vw] max-sm:gap-[4vw]">
             {/* Left: Icon List */}
             <ul
               ref={iconListRef}
@@ -498,10 +498,10 @@ export function AboutSection() {
             </ul>
 
             {/* Right: Text + Button */}
-            <div className="flex flex-col justify-start max-sm:items-center flex-[0_0_auto] gap-0 mt-[0.5vw] max-sm:mt-[4vw] md:mt-0 max-w-xs max-sm:max-w-full md:ml-[2vw] 2xl:md:ml-[3vw]">
+            <div className="flex flex-col justify-start max-sm:items-center flex-[0_0_auto] gap-0 mt-[0.5vw] max-sm:mt-[4vw] md:mt-0 max-w-xs max-sm:max-w-full md:ml-[2vw] 2xl:md:ml-[3vw] min-w-0">
               <p
                 ref={quoteTextRef}
-                className="about-quote !font-semibold text-black text-[1vw] max-sm:text-[4vw] leading-[1.5] max-sm:text-center"
+                className="about-quote !font-semibold text-black text-[0.95rem] lg:text-[1.1rem] max-sm:text-[4vw] leading-[1.5] max-sm:text-center"
               >
                 "Your Journey, Your Comfort,
                 <br /> Your Adventure."
@@ -510,7 +510,7 @@ export function AboutSection() {
               <Link href="/info/about">
                 <button
                   ref={learnMoreButtonRef}
-                  className="about-button inline-flex items-center ripple-button mt-0 max-sm:mt-[2vw] px-[1.625vw] py-[0.625vw] max-sm:px-[4vw] max-sm:py-[2vw] text-[1rem] max-sm:text-[3.5vw]"
+                  className="about-button inline-flex items-center ripple-button mt-0 max-sm:mt-[2vw] px-[1.625vw] py-[0.625vw] max-sm:px-[5vw] max-sm:py-[2.5vw] text-[0.9rem] lg:text-[1rem] max-sm:text-[3.8vw] max-sm:rounded-[1.5vw] whitespace-nowrap"
                   onMouseEnter={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     setCoords({
@@ -528,7 +528,7 @@ export function AboutSection() {
                   }}
                   onMouseLeave={() => setHovered(false)}
                 >
-                  <span className={`button-text ${hovered ? "hovered" : ""}`}>
+                  <span className={`button-text ${hovered ? "hovered" : ""} max-sm:gap-[1.5vw]`}>
                     Learn More About
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -536,7 +536,7 @@ export function AboutSection() {
                       height="22"
                       viewBox="0 0 22 22"
                       fill="currentColor"
-                      className="button-icon"
+                      className="button-icon max-sm:w-[4.5vw] max-sm:h-[4.5vw]"
                     >
                       <path
                         fillRule="evenodd"

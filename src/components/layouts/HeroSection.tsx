@@ -91,7 +91,7 @@ export function HeroSection({
               </h1>
               {subtitle && (
                 <div
-                  className="uk-panel uk-text-lead uk-margin uk-text-center"
+                  className="uk-panel uk-text-lead uk-margin uk-text-center max-sm:text-[3.5vw] max-sm:leading-relaxed max-sm:px-4"
                   {...(enableScrollspy &&
                     ({
                       "uk-scrollspy-class": "",
