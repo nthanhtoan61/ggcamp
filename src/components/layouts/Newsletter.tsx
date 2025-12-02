@@ -105,7 +105,7 @@ export default function Newsletter({
               />
               <button
                 type="submit"
-                className="bg-[#9c5d00] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] hover:shadow-xl hover:scale-105 transform transition-all duration-300 flex items-center gap-[0.5vw] text-base md:text-[0.9vw] relative overflow-hidden group"
+                className="bg-primary text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] hover:shadow-xl hover:scale-105 transform transition-all duration-300 flex items-center gap-[0.5vw] text-base md:text-[0.9vw] relative overflow-hidden group"
               >
                 <span>{buttonText}</span>
                 <svg
