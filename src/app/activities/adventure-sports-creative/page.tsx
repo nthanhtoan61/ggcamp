@@ -249,7 +249,7 @@ export default function AdventureSportsCreativePage({}) {
                 <div
                   className="uk-panel uk-padding uk-background-muted uk-border-rounded"
                   style={{
-                    backgroundColor: "#cbca7b",
+                    backgroundColor: " #cbca7b",
                     borderRadius: "15px",
                     color: "#808080",
                     width: "443.33px",
