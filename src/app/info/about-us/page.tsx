@@ -288,7 +288,7 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[2vw] py-[10vh] w-full">
             {/* LEFT CONTENT */}
             <div className="lg:w-2/5 w-full">
-              <p className="text-base md:text-[1vw] text-[#E9A919] font-medium mb-[1vw] md:leading-[1.6vw] leading-normal">
+              <p className="text-base md:text-[1vw] text-primary! font-medium mb-[1vw] md:leading-[1.6vw] leading-normal">
                 Go & Grow Camp A Place to Learn, Connect, and Grow
               </p>
 
@@ -376,7 +376,7 @@ export default function AboutPage() {
 
       {/* number */}
       <section className="overflow-hidden">
-        <div className="py-[5vh] w-full lg:px-[20vw] px-[4vw] flex flex-col lg:flex-row lg:justify-between items-center bg-[#E9A919] text-white! gap-4 lg:gap-0">
+        <div className="py-[5vh] w-full lg:px-[20vw] px-[4vw] flex flex-col lg:flex-row lg:justify-between items-center bg-primary text-white! gap-4 lg:gap-0">
           {pageData.stats.map((stat: any, index: number) => (
             <div
               key={index}
@@ -406,7 +406,7 @@ export default function AboutPage() {
         <div className="py-[10vh] w-full px-[5vw] relative z-10">
           {/* Header */}
           <div className="text-center max-w-[80vw] mx-auto flex flex-col items-center justify-center">
-            <p className="text-[#E9A919]! text-sm md:text-[1.5vw] leading-[1.2] mt-0 mb-[0.5vh]">
+            <p className="text-primary! text-sm md:text-[1.5vw] leading-[1.2] mt-0 mb-[0.5vh]">
               Accommodation
             </p>
 
@@ -473,7 +473,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row items-start justify-between py-[5vh]">
             {/* LEFT */}
             <div className="lg:w-2/3 w-full flex flex-col items-start justify-center space-y-[1vh]">
-              <p className="text-xl text-[#E9A919]!">Activities</p>
+              <p className="text-xl text-primary!">Activities</p>
               <p className="text-black text-md! lg:text-[1.667vw] font-bold!">
                 Enjoy unforgettable experiences at Go and Grow Camp
               </p>
@@ -532,12 +532,12 @@ export default function AboutPage() {
               <h2 className="text-lg! md:text-[2vw]! font-bold text-[#274423]">
                 Tour Events for you
               </h2>
-              <div className="w-[7vw] h-[0.6vh] bg-[#9c5d00] rounded-full -mt-[0.5vh]" />
+              <div className="w-[7vw] h-[0.6vh] bg-primary! rounded-full -mt-[0.5vh]" />
             </div>
 
             <a
               href="#"
-              className="text-[#9c5d00] flex items-center gap-[0.5vw] text-xs! lg:text-[1vw]! translate-y-[6vh]"
+              className="text-primary! flex items-center gap-[0.5vw] text-xs! lg:text-[1vw]! translate-y-[6vh]"
             >
               See All Event
               <svg

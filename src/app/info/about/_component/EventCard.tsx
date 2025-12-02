@@ -30,7 +30,7 @@ export default function EventCard({
       </div>
 
       <div className="p-[2vw]">
-        <div className="text-[0.9vw] text-[#9c5d00] mb-[1vw] flex items-center gap-[0.5vw]">
+        <div className="text-[0.9vw] text-primary! mb-[1vw] flex items-center gap-[0.5vw]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
