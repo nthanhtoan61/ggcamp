@@ -367,7 +367,7 @@ export function AboutSection() {
 
               <p
                 ref={adventurerTextRef}
-                className="text-[1vw] max-sm:text-[3.5vw] !ml-[0.5vw] max-sm:!ml-[1.5vw] !font-semibold text-white font-semibold leading-tight !m-0"
+                className="text-[1vw] max-sm:text-[3.5vw] !ml-[0.5vw] max-sm:!ml-[1.5vw] !font-semibold !text-white font-semibold leading-tight !m-0"
               >
                 Adventurer with<br />happy customer
               </p>

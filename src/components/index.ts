@@ -10,5 +10,5 @@ export * from "./ui";
 export * from "./layouts";
 
 // Feature Components
-export * from "./features/AboutSection";
+export * from "./home/AboutSection";
 export * from "./features/ProgramCard";
