@@ -12,6 +12,8 @@ interface HeroSectionProps {
   titleClass?: string;
   enableScrollspy?: boolean;
   backgroundPosition?: "top-center" | "center-center" | "bottom-center";
+  buttonContent?: ReactNode;
+  children?: ReactNode;
 }
 
 export function HeroSection({
@@ -23,6 +25,8 @@ export function HeroSection({
   titleClass = "uk-heading-large uk-text-center !text-[5vw]",
   enableScrollspy = true,
   backgroundPosition = "top-center",
+  buttonContent,
+  children,
 }: HeroSectionProps) {
   const imageUrl = getTemplateImageUrl(backgroundImage);
   const bgPositionClass =
@@ -61,7 +65,8 @@ export function HeroSection({
           minHeight: "50vw",
           position: "relative",
           display: "flex",
-          alignItems: "center",
+          flexDirection: "column",
+          justifyContent: "center",
           paddingBottom: "8vw", // Extra padding to ensure image bottom is visible
         }}
       >
@@ -70,8 +75,8 @@ export function HeroSection({
           style={{ backgroundColor: overlayColor }}
         ></div>
         <div
-          className="uk-container uk-container-large uk-position-relative"
-          style={{ zIndex: 1, width: "100%" }}
+          className="uk-container uk-position-relative"
+          style={{ zIndex: 1, maxWidth: "65.25rem", margin: "0 auto" }}
         >
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
@@ -86,7 +91,7 @@ export function HeroSection({
               </h1>
               {subtitle && (
                 <div
-                  className="uk-panel uk-text-lead uk-margin uk-text-center"
+                  className="uk-panel uk-text-lead uk-margin uk-text-center max-sm:text-[3.5vw] max-sm:leading-relaxed max-sm:px-4"
                   {...(enableScrollspy &&
                     ({
                       "uk-scrollspy-class": "",
@@ -95,9 +100,21 @@ export function HeroSection({
                   {subtitle}
                 </div>
               )}
+              {buttonContent && (
+                <div className="flex flex-col items-center justify-center text-center w-full mt-4">
+                  {buttonContent}
+                </div>
+              )}
             </div>
           </div>
         </div>
+        {children && (
+          <div className="uk-container uk-container-large" style={{ zIndex: 1, maxWidth: "100%", marginTop: "8rem", position: "relative", paddingLeft: "0.5rem", paddingRight: "0.5rem" }}>
+            <div className="flex flex-col items-center justify-center w-full">
+              {children}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
