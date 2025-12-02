@@ -186,8 +186,7 @@ footer .uk-margin .el-link .el-image img {
 /* social icons: inherit theme color by default; change color on hover using existing theme yellow */
 .footer-social a {
   transition: color 240ms ease, transform 200ms ease;
-  color: inherit;
-  /* keep default */
+  color: #ffffff; /* keep default */
 }
 
 .footer-social li {

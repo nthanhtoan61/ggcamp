@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import type {Metadata} from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,7 +10,8 @@ import Feature from "@/app/info/about/_component/Feature";
 import StatCard from "@/app/info/about/_component/StatCard";
 import ServiceBox from "@/app/info/about/_component/ServiceBox";
 import EventCard from "@/app/info/about/_component/EventCard";
-import { HeroSection } from "@/components/layouts";
+import Newsletter from "@/components/layouts/Newsletter";
+import {HeroSection} from "@/components/layouts";
 
 // Single page data object
 const pageData = {
@@ -43,88 +45,31 @@ const pageData = {
       title: "Safe Environment",
       description:
         "Safety is our top priority, with secure facilities and connecting with nature.",
-      icon: (
-        <svg
-          className="w-[2.5vw] h-[2.5vw] text-[#274423]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M12 2l7 4v6c0 5-3.8 9.7-7 10-3.2-.3-7-5-7-10V6l7-4z" />
-          <path d="M9.5 12.5l1.5 1.5L15 10" />
-        </svg>
-      ),
+      icon: "yootheme/aboutImage/act2.jpg",
     },
     {
       title: "Family Atmosphere",
       description:
         "Every camper is part of our big camp family, where friendships grow and everyone feels included.",
-      icon: (
-        <svg
-          className="w-[2.5vw] h-[2.5vw] text-[#274423]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z" />
-          <path d="M8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3z" />
-          <path d="M2 20c0-3.3 2.7-6 6-6h8c3.3 0 6 2.7 6 6" />
-        </svg>
-      ),
+      icon: "yootheme/aboutImage/act2.jpg",
     },
     {
       title: "Cultural Exchange",
       description:
         "Experience diversity and learn about different cultures from campers around the world.",
-      icon: (
-        <svg
-          className="w-[2.5vw] h-[2.5vw] text-[#274423]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <path d="M2 12h20" />
-          <path d="M12 2v20" />
-        </svg>
-      ),
+      icon: "yootheme/aboutImage/act2.jpg",
     },
     {
       title: "Personal Growth",
       description:
         "Activities encourage confidence, independence, and learning through fun challenges.",
-      icon: (
-        <svg
-          className="w-[2.5vw] h-[2.5vw] text-[#274423]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M21 11c0 5-9 11-9 11S3 16 3 11a9 9 0 0118 0z" />
-          <path d="M12 6v10" />
-        </svg>
-      ),
+      icon: "yootheme/aboutImage/act2.jpg",
     },
     {
       title: "Creativity & Fun",
       description:
         "Express yourself through games, arts, and exciting hands-on experiences.",
-      icon: (
-        <svg
-          className="w-[2.5vw] h-[2.5vw] text-[#274423]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M2 22s4-1 6-3 5-5 8-8 3-6 3-6l-6 3-8 8-3 6z" />
-          <path d="M14 4l6 6" />
-        </svg>
-      ),
+      icon: "yootheme/aboutImage/act2.jpg",
     },
   ],
 
@@ -135,8 +80,7 @@ const pageData = {
       title: "The Bottom Line on Dietary Supplements",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet tristique neque, in suscipit sem. Fusce ut tellus neque. Suspendisse ...",
-      authorName: "John Singleton",
-      authorRole: "Nutritionist",
+      age: "Age Group: 10–14",
     },
     {
       imageUrl: "yootheme/aboutImage/act2.jpg",
@@ -144,8 +88,7 @@ const pageData = {
       title: "The Bottom Line on Dietary Supplements",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet tristique neque, in suscipit sem. Fusce ut tellus neque. Suspendisse ...",
-      authorName: "John Singleton",
-      authorRole: "Nutritionist",
+      age: "Age Group: 10–14",
     },
     {
       imageUrl: "yootheme/aboutImage/act3.jpg",
@@ -153,13 +96,78 @@ const pageData = {
       title: "The Bottom Line on Dietary Supplements",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet tristique neque, in suscipit sem. Fusce ut tellus neque. Suspendisse ...",
-      authorName: "John Singleton",
-      authorRole: "Nutritionist",
+      age: "Age Group: 10–14",
     },
   ],
 };
 
 export default function AboutPage() {
+  // Add CSS animations
+  React.useEffect(() => {
+    const style = document.createElement("style");
+    style.textContent = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes breathe {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+      
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      
+      .animate-shimmer {
+        animation: shimmer 3s ease-in-out infinite;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   // Reusable image panel that opens a modal-like panel constrained to the image
   const ImagePanel = ({
     src,
@@ -204,11 +212,11 @@ export default function AboutPage() {
       "
           >
             {/* Nội dung modal */}
-            <div className="relative text-white p-[2vw] h-full flex flex-col justify-center z-20">
-              <p className="text-[1.677vw] opacity-0 transform -translate-x-[2vw] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-150">
+            <div className="relative p-[2vw] h-full flex flex-col justify-center z-20">
+              <p className="text-[1.677vw] text-white! opacity-0 transform -translate-x-[2vw] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-150">
                 {title}
               </p>
-              <p className="text-[1vw] mt-[1vw] opacity-0 transform -translate-x-[2vw] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-300">
+              <p className="text-[1vw] mt-[1vw] text-white! opacity-0 transform -translate-x-[2vw] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-300">
                 {desc}
               </p>
             </div>
@@ -267,151 +275,206 @@ export default function AboutPage() {
       />
 
       {/* Go & Grow Camp */}
-      <section className="uk-section-default uk-section-overlap uk-section uk-section-small">
+      <section
+        className="uk-section-default uk-section-overlap uk-section uk-section-small bg-cover bg-center animate-fade-in-up"
+        style={{
+          backgroundImage: `url(${getTemplateImageUrl(
+            "yootheme/aboutImage/bg_about.jpg"
+          )})`,
+          animation: "fadeInUp 1s ease-out 0.2s both",
+        }}
+      >
         <div className="uk-container uk-container-large">
-          <div className="flex items-center justify-between gap-[2vw] py-[10vh] w-full">
-          {/* LEFT CONTENT */}
-          <div className="w-2/5">
-            <p className="text-[1vw] text-[#E9A919] font-medium mb-[1vw] leading-[1.6vw]">
-              Go & Grow Camp A Place to Learn, Connect, and Grow
-            </p>
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[2vw] py-[10vh] w-full">
+            {/* LEFT CONTENT */}
+            <div className="lg:w-2/5 w-full">
+              <p className="text-base md:text-[1vw] text-[#E9A919] font-medium mb-[1vw] md:leading-[1.6vw] leading-normal">
+                Go & Grow Camp A Place to Learn, Connect, and Grow
+              </p>
 
-            <p className="text-[1.458vw]">
-              Go & Grow Camp brings together young people from different
-              countries and cultures to enjoy fun activities, meaningful
-              projects, and positive community experiences. Every camper—new or
-              returning—quickly feels included thanks to our welcoming
-              environment and supportive team.
-            </p>
+              <p className="text-base md:text-[1.458vw]">
+                Go & Grow Camp brings together young people from different
+                countries and cultures to enjoy fun activities, meaningful
+                projects, and positive community experiences. Every camper—new
+                or returning—quickly feels included thanks to our welcoming
+                environment and supportive team.
+              </p>
 
-            <p className="text-[1vw] text-gray-600 leading-[1.8vw] mb-[2vw]">
-              Camp is where real friendships begin. Many campers stay in touch
-              long after the program ends, forming connections that cross
-              borders and cultures. Parents often share that after camp, their
-              children return more confident, independent, and motivated to
-              improve their English so they can communicate even better the next
-              time. The friendships and experiences at camp leave a lasting
-              impact that goes far beyond the session itself.
-            </p>
+              <p className="text-base md:text-[1vw] text-gray-600 md:leading-[1.8vw] leading-normal mb-[2vw]">
+                Camp is where real friendships begin. Many campers stay in touch
+                long after the program ends, forming connections that cross
+                borders and cultures. Parents often share that after camp, their
+                children return more confident, independent, and motivated to
+                improve their English so they can communicate even better the
+                next time. The friendships and experiences at camp leave a
+                lasting impact that goes far beyond the session itself.
+              </p>
 
-            <Button>Discover More</Button>
-          </div>
-
-          {/* CENTER IMAGE */}
-          <div className="relative w-2/5 h-[65vh] rounded-[2vw] overflow-visible bg-white">
-            {/* Image positioned inside to create a white border effect */}
-            <div className="absolute inset-[6px] rounded-[calc(2vw-6px)] overflow-hidden">
-              <Image
-                src={getTemplateImageUrl("yootheme/aboutImage/section2.jpg")}
-                alt="Cottage"
-                fill
-                className="object-cover"
-              />
+              <Button>Discover More</Button>
             </div>
 
-            {/* --- PLAY BUTTON ASSEMBLY (cut into corner) --- */}
-            <div className="absolute bottom-0 left-0 z-10 bg-white p-[1vw] rounded-tr-4xl -translate-x-[0.5vw] translate-y-[1.3vh]">
-              {/* 1) Main green play button (sits on top) */}
-              <div className="relative z-20 flex h-[6vh] w-[3vw] items-center justify-center rounded-xl bg-[#214a28] shadow-lg cursor-pointer transition-transform hover:scale-110  ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="white"
-                  viewBox="0 0 24 24"
-                  width="48"
-                  height="48"
-                  aria-hidden="true"
+            {/* CENTER IMAGE */}
+            <div className="relative lg:w-2/5 w-full lg:h-[65vh] h-[40vh] rounded-[2vw] overflow-visible bg-white">
+              {/* Image positioned inside to create a white border effect */}
+              <div className="absolute inset-[6px] rounded-[calc(2vw-6px)] overflow-hidden">
+                <Image
+                  src={getTemplateImageUrl("yootheme/aboutImage/section2.jpg")}
+                  alt="Cottage"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* --- PLAY BUTTON ASSEMBLY (cut into corner) --- */}
+              <div className="absolute bottom-0 left-0 z-10 bg-white p-3 rounded-tr-3xl -translate-x-2 translate-y-2 lg:p-[1vw] lg:rounded-tr-4xl lg:-translate-x-[0.5vw] lg:translate-y-[1.3vh]">
+                {/* 1) Main green play button (sits on top) */}
+                <button
+                  type="button"
+                  aria-label="Play video"
+                  className="relative z-20 flex items-center justify-center rounded-xl bg-[#214a28] shadow-lg cursor-pointer transition-transform hover:scale-110 h-12 w-12 lg:h-[6vh] lg:w-[3vw]"
                 >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="1.2rem"
+                    height="1.2rem"
+                    fill="white"
+                    aria-hidden="true"
+                    className="w-6 h-6 lg:w-[1.5vw] lg:h-[1.5vw]"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
               </div>
             </div>
-          </div>
 
-          <div className="text-lg xl:text-md"></div>
+            <div className="text-lg xl:text-md"></div>
 
-          {/* RIGHT SIDE SERVICES */}
-          <div className="w-1/5 grid grid-cols-1 gap-[1.5vw]">
-            {pageData.services.map((service: any, index: number) => (
-              <ServiceBox
-                key={index}
-                title={service.title}
-                description={service.description}
-              />
-            ))}
+            {/* RIGHT SIDE SERVICES */}
+            <div className="lg:w-1/5 w-full h-full flex flex-col items-between justify-center gap-4 lg:gap-[1.5vw] lg:mt-0 mt-6">
+              {pageData.services.map((service: any, index: number) => (
+                <div
+                  key={index}
+                  className="rounded-[1rem] p-4 sm:p-2 transform transition-all duration-500 hover:scale-105 hover:rotate-1"
+                  style={{
+                    animation: `slideInRight 0.8s ease-out ${
+                      0.3 + index * 0.2
+                    }s both`,
+                  }}
+                >
+                  <ServiceBox
+                    bgColor="bg-[#f8f8f8]"
+                    title={service.title}
+                    description={service.description}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         </div>
       </section>
 
       {/* number */}
-      <section>
-        <div className="py-[5vh] w-full px-[20vw] flex justify-between items-center  bg-[#E9A919] text-white">
+      <section className="overflow-hidden">
+        <div className="py-[5vh] w-full lg:px-[20vw] px-[4vw] flex flex-col lg:flex-row lg:justify-between items-center bg-[#E9A919] text-white! gap-4 lg:gap-0">
           {pageData.stats.map((stat: any, index: number) => (
-            <StatCard
+            <div
               key={index}
-              number={stat.number}
-              description={stat.description}
-            />
+              className="transform transition-all duration-700 hover:scale-110 hover:-translate-y-2"
+              style={{
+                animation: `fadeInUp 0.8s ease-out ${
+                  0.2 + index * 0.1
+                }s both, breathe 3s ease-in-out ${index * 0.5}s infinite`,
+              }}
+            >
+              <StatCard number={stat.number} description={stat.description} />
+            </div>
           ))}
         </div>
       </section>
 
       {/* Safe Environment / Features */}
-      <section>
-        <div className="py-[10vh] w-full px-[5vw] bg-gray-100">
+      <section
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${getTemplateImageUrl(
+            "yootheme/aboutImage/bg_about.jpg"
+          )})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-transparent animate-pulse"></div>
+        <div className="py-[10vh] w-full px-[5vw] relative z-10">
           {/* Header */}
           <div className="text-center max-w-[80vw] mx-auto flex flex-col items-center justify-center">
-            <p className="text-[#E9A919] text-[1.5vw] leading-[1.2] mt-0 mb-[0.5vh]">
+            <p className="text-[#E9A919]! text-sm md:text-[1.5vw] leading-[1.2] mt-0 mb-[0.5vh]">
               Accommodation
             </p>
 
-            <p className="text-[1.7vw] text-[#274423] leading-[1.05] mt-0 mb-[0.5vh]">
+            <p className="text-lg md:text-[1.7vw] text-[#274423]! font-bold! leading-[1.05] mt-0 mb-[0.5vh]">
               Blending Comfort With Responsible Living
             </p>
 
-            <p className="text-[1vw] text-gray-600 w-[60vw] leading-[1.2] mt-0">
+            <p className="text-sm md:text-[1vw] text-gray-600 w-full md:w-[60vw] leading-[1.2] mt-0">
               Enjoy a tranquil atmosphere with beautiful views, modern
               facilities, and personal touches that make you feel at home.
             </p>
           </div>
 
           {/* Features grid */}
-          <div className="mt-[5vh] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[3vw]">
+          <div className="mt-[5vh] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[5vw] sm:gap-[3vw]">
             {pageData.features
               .slice(0, 3)
               .map((feature: any, index: number) => (
-                <Feature
+                <div
                   key={index}
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                />
+                  className="transform transition-all duration-700"
+                  style={{
+                    animation: `slideInUp 0.8s ease-out ${
+                      0.3 + index * 0.2
+                    }s both`,
+                  }}
+                >
+                  <Feature
+                    icon={feature.icon}
+                    title={feature.title}
+                    description={feature.description}
+                  />
+                </div>
               ))}
           </div>
 
           {/* Features grid 2 */}
-          <div className="mt-[5vh] grid grid-cols-1 sm:grid-cols-2 gap-[3vw]">
+          <div className="mt-[5vh] grid grid-cols-1 sm:grid-cols-2 gap-[5vw] sm:gap-[3vw]">
             {pageData.features
               .slice(3, 5)
               .map((feature: any, index: number) => (
-                <Feature
+                <div
                   key={index + 3}
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                />
+                  className="transform transition-all duration-700"
+                  style={{
+                    animation: `slideInUp 0.8s ease-out ${
+                      0.9 + index * 0.2
+                    }s both`,
+                  }}
+                >
+                  <Feature
+                    icon={feature.icon}
+                    title={feature.title}
+                    description={feature.description}
+                  />
+                </div>
               ))}
           </div>
         </div>
       </section>
 
       <section>
-        <div className="py-[10vh] w-full px-[10vw]">
-          <div className="flex items-center justify-between py-[5vh]">
+        <div className="py-[10vh] w-full lg:px-[10vw] px-[4vw]">
+          <div className="flex flex-col md:flex-row items-start justify-between py-[5vh]">
             {/* LEFT */}
-            <div className="w-2/3 flex flex-col items-start justify-center space-y-[1vh]">
-              <p className="text-xl text-[#E9A919]">Activities</p>
-              <p className="text-black text-[1.667vw] font-bold">
+            <div className="lg:w-2/3 w-full flex flex-col items-start justify-center space-y-[1vh]">
+              <p className="text-xl text-[#E9A919]!">Activities</p>
+              <p className="text-black text-md! lg:text-[1.667vw] font-bold!">
                 Enjoy unforgettable experiences at Go and Grow Camp
               </p>
               <p className="">
@@ -423,17 +486,17 @@ export default function AboutPage() {
             </div>
 
             {/* RIGHT */}
-            <div className="w-1/3 flex justify-end">
+            <div className="lg:w-1/3 w-full flex justify-end lg:justify-end mt-4 md:mt-0">
               <Button className="px-8 py-3">View All</Button>
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <ImagePanel
               src={getTemplateImageUrl("yootheme/aboutImage/act1.jpg")}
               title="Outdoor Adventures"
               desc="Climb, paddle and explore with our experienced team."
-              className="col-span-2 h-[40vh]"
+              className="md:col-span-2 col-span-1 h-[40vh]"
             />
 
             <ImagePanel
@@ -454,104 +517,19 @@ export default function AboutPage() {
               src={getTemplateImageUrl("yootheme/aboutImage/act4.jpg")}
               title="Campfire Nights"
               desc="Evening stories, music, and marshmallow roasting."
-              className="col-span-2 h-[40vh]"
+              className="md:col-span-2 col-span-1 h-[40vh]"
             />
           </div>
         </div>
       </section>
 
-      <section>
-        <div className="py-[8vh] bg-[#fbf8f0]">
-          <div className="flex items-center gap-[4vw]">
-            {/* LEFT: image with play button */}
-            <div className="w-1/2 relative h-[45vh] rounded-[1.25vw] overflow-hidden bg-white">
-              <div className="absolute inset-[0.3vw] rounded-[calc(1.25vw-0.3vw)] overflow-hidden">
-                <Image
-                  src={getTemplateImageUrl("yootheme/aboutImage/beach.jpg")}
-                  alt="Beach"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* circular play button */}
-              <button
-                type="button"
-                className="absolute left-[45%] top-1/2 -translate-y-1/2 bg-white rounded-full p-[0.8vw] shadow-lg z-20 flex items-center justify-center"
-                aria-label="Play video"
-              >
-                <div className="w-[3.2vw] h-[3.2vw] bg-transparent rounded-full flex items-center justify-center">
-                  <div className="w-[2.2vw] h-[2.2vw] bg-[#f3f3f3] rounded-full flex items-center justify-center shadow-inner">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="1.2vw"
-                      height="1.2vw"
-                      fill="#214a28"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
-              </button>
-            </div>
-
-            {/* RIGHT: newsletter content */}
-            <div className="w-1/2">
-              <h2 className="text-[2.2vw] text-[#274423] font-bold leading-[1.05] mb-[1.5vh]">
-                Stay Updated with Our Monthly Newsletter
-              </h2>
-
-              <div className="mb-[2vh]">
-                <div className="w-[6.5vw] h-[0.5vh] bg-[#9c5d00] rounded-full -mt-[0.5vh] mb-[1vh]" />
-                <p className="text-[1vw] text-gray-600 leading-[1.4vw]">
-                  Sign up to receive the latest news about new camps,
-                  activities, and exciting opportunities. Don’t miss out on
-                  anything fun!
-                </p>
-              </div>
-
-              <form
-                className="flex items-center max-w-[28vw] shadow-sm rounded-full"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <input
-                  type="email"
-                  aria-label="Email address"
-                  placeholder="Enter your email address"
-                  className="flex-1 py-[1.5vh] px-[1.5vw] rounded-l-[0.8vw] border border-gray-200 bg-white focus:outline-none text-[0.9vw]"
-                />
-                <button
-                  type="submit"
-                  className="bg-[#9c5d00] text-white px-[3vw] py-[1.5vh] rounded-lg shadow hover:bg-[#238a56] flex items-center gap-[0.5vw] text-[0.9vw] "
-                >
-                  <span>Subscribe</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="1.2vw"
-                    height="1.2vw"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="22" y1="2" x2="11" y2="13" />
-                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                  </svg>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Newsletter />
 
       <section>
-        <div className="py-[8vh] w-full px-[15vw]">
+        <div className="py-[8vh] w-full lg:px-[15vw] px-[4vw]">
           <div className="flex items-center justify-between mb-[4vh] mx-[2vw]">
             <div>
-              <h2 className="text-[2vw] font-bold text-[#274423]">
+              <h2 className="text-lg! md:text-[2vw]! font-bold text-[#274423]">
                 Tour Events for you
               </h2>
               <div className="w-[7vw] h-[0.6vh] bg-[#9c5d00] rounded-full -mt-[0.5vh]" />
@@ -559,14 +537,14 @@ export default function AboutPage() {
 
             <a
               href="#"
-              className="text-[#9c5d00] flex items-center gap-[0.5vw] text-[1vw]"
+              className="text-[#9c5d00] flex items-center gap-[0.5vw] text-xs! lg:text-[1vw]! translate-y-[6vh]"
             >
               See All Event
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="1.2vw"
-                height="1.2vw"
+                width="15px"
+                height="15px"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -579,17 +557,25 @@ export default function AboutPage() {
             </a>
           </div>
 
-          <div className="grid grid-cols-3 gap-[2vw] mx-[2vw]">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[2vw] mx-[2vw]">
             {pageData.events.map((event: any, index: number) => (
-              <EventCard
+              <div
                 key={index}
-                imageUrl={event.imageUrl}
-                date={event.date}
-                title={event.title}
-                description={event.description}
-                authorName={event.authorName}
-                authorRole={event.authorRole}
-              />
+                className="transform transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:shadow-xl"
+                style={{
+                  animation: `slideInUp 0.8s ease-out ${
+                    0.3 + index * 0.2
+                  }s both`,
+                }}
+              >
+                <EventCard
+                  imageUrl={event.imageUrl}
+                  date={event.date}
+                  title={event.title}
+                  description={event.description}
+                  age={event.age}
+                />
+              </div>
             ))}
           </div>
         </div>
