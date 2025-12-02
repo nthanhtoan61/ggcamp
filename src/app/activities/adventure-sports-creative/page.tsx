@@ -448,9 +448,9 @@ export default function AdventureSportsCreativePage({}) {
 
                         {/* Tour Details */}
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                          <div className="text-[1.5vw] font-semibold text-gray-900 mb-1">
                             {tour.title}
-                          </h3>
+                          </div>
 
                           {/* Rating */}
                           <div className="flex items-center gap-1 mb-2">
