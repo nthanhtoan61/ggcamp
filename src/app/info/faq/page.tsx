@@ -17,7 +17,6 @@ export default function FAQPage() {
 
   // Thêm useEffect để xử lý CSS cho accordion
   useEffect(() => {
-  // Thêm CSS để ẩn dấu + mặc định và style mũi tên
   const style = document.createElement('style');
   style.textContent = `
     /* Ẩn dấu + mặc định của UIkit accordion */
@@ -40,100 +39,7 @@ export default function FAQPage() {
       padding-right: 40px !important;
     }
       /* ========== ADJUSTMENTS FOR 1024px - 1279px ========== */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  /* Xóa sticky và điều chỉnh layout */
-  .uk-grid.tm-grid-expand.uk-grid-margin {
-    display: flex;
-    flex-direction: column !important;
-  }
-  
-  /* Sidebar container - không sticky, chiếm toàn bộ chiều rộng */
-  .uk-width-1-4\\@m {
-    position: static !important;
-    top: 0 !important;
-    align-self: stretch !important;
-    height: auto !important;
-    width: 100% !important;
-    margin-bottom: 30px !important;
-  }
-  
-  /* Navigation box - chiếm toàn bộ chiều rộng */
-  .uk-width-1-4\\@m > div:first-child {
-    position: static !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 20px !important;
-  }
-  
-  /* Contact box - chiếm toàn bộ chiều rộng, không sticky */
-  .uk-width-1-4\\@m > div:last-child {
-    position: static !important;
-    top: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 20px !important;
-  }
-  
-  /* Content section - chiếm toàn bộ chiều rộng, giảm padding */
-  .uk-width-3-4\\@m {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    width: 100% !important;
-  }
-  
-  /* Điều chỉnh các FAQ sections */
-  .uk-section-default {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  
-  /* Đảm bảo grid không có margin gây lệch */
-  .uk-grid-margin {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  
-  /* Điều chỉnh font size cho kích thước màn hình này */
-  .uk-accordion-title {
-    font-size: 1rem !important;
-  }
-  
-  .text-\\[0\\.9vw\\]\\!, .text-\\[1\\.2vw\\]\\! {
-    font-size: 1rem !important;
-  }
-  
-  /* Điều chỉnh padding cho accordion */
-  .el-item.uk-margin-bottom .uk-accordion-title {
-    padding-left: 30px !important;
-  }
-  
-  .uk-accordion-content .uk-panel {
-    padding: 15px 30px !important;
-  }
-  
-  /* Điều chỉnh h2 */
-  h2.text-\\[2\\.5vw\\]\\!,
-  .sm\\:text-\\[4vw\\]\\!,
-  .md\\:text-\\[3\\.5vw\\]\\!,
-  .2xl\\:text-\\[2\\.5vw\\]\\! {
-    font-size: 2rem !important;
-    text-align: center !important;
-  }
-  
-  /* Điều chỉnh kích thước font cho các accordion title */
-  .sm\\:text-\\[3\\.0vw\\]\\!,
-  .md\\:text-\\[2vw\\]\\!,
-  .2xl\\:text-\\[1vw\\]\\! {
-    font-size: 1.1rem !important;
-  }
-  
-  /* Điều chỉnh kích thước font cho content */
-  .sm\\:text-\\[2\\.5vw\\]\\!,
-  .md\\:text-\\[2vw\\]\\!,
-  .lg\\:text-\\[2vw\\]\\! {
-    font-size: 0.95rem !important;
-  }
-}
+
   /* ========== ADJUSTMENTS FOR 769px - 1023px ========== */
 @media (min-width: 769px) and (max-width: 1023px) {
   /* Xóa sticky và điều chỉnh layout thành dạng column */
@@ -381,12 +287,7 @@ export default function FAQPage() {
               title={
                 <>
                   Camp Adventure<br />
-                  <div
-                  className="uk-panel font-[Raleway] italic text-[1.7vw] text-white uk-margin uk-text-center drop-shadow-md"
-                  uk-scrollspy-class=""
-                >
-                  Frequently Asked Questions
-                </div>
+                  
                 </>
               }
               backgroundImage="yootheme\cache\18\faqs_header_new.jpg"
@@ -525,7 +426,7 @@ export default function FAQPage() {
 
                 </svg>
                 
-             <h2 className="sm:text-4xl md:text-[4vw]! xl:text-[2vw]! 2xl:text-[1.5vw]! text-[#292c3d] uk-text-left@m uk-text-left" style={{color:"black"}}><strong>Let's plan your perfect nature escape</strong></h2>
+             <h2 className="md:text-[2vw]! xl:text-[2vw]! 2xl:text-[1.5vw]! text-[#292c3d] uk-text-left@m uk-text-left" style={{color:"black"}}><strong>Let's plan your perfect nature escape</strong></h2>
                 <div className="flex items-center justify-left gap-3 mt-4" style={{color:"white"}}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" color="black">
                     <path d="M8.8457 5.93115C8.84567 5.64689 8.73343 5.37413 8.53418 5.17139L5.28808 1.92432L5.208 1.85303C5.01329 1.69665 4.76943 1.61084 4.51757 1.61084C4.23001 1.61094 3.95373 1.72334 3.74804 1.92432L3.00586 2.68408L2.99609 2.69385C2.22454 3.45523 1.73864 4.45915 1.62011 5.53662C1.50186 6.61196 1.75664 7.69523 2.34179 8.60498C5.83558 13.7515 10.2803 18.1831 15.4365 21.6626C16.3449 22.2448 17.4253 22.4983 18.498 22.3804C19.5755 22.2619 20.5794 21.7759 21.3408 21.0044L21.3506 20.9946L22.1113 20.2495C22.3112 20.044 22.4238 19.7696 22.4238 19.4829C22.4238 19.1951 22.3115 18.9182 22.1103 18.7124L18.8447 15.4819C18.6423 15.284 18.3701 15.1725 18.0869 15.1724C17.8026 15.1724 17.5289 15.2837 17.3262 15.4829L16.8008 14.9487L17.3252 15.4849C16.8392 15.96 16.1865 16.226 15.5068 16.2261C14.8271 16.2261 14.1736 15.9601 13.6875 15.4849L8.53906 10.3354C8.29886 10.0975 8.1071 9.81434 7.97656 9.50244C7.84519 9.18854 7.77734 8.85152 7.77734 8.51123C7.77734 8.17096 7.84519 7.83391 7.97656 7.52002C8.10639 7.20982 8.29582 6.92801 8.53418 6.69092C8.73343 6.48815 8.8457 6.21544 8.8457 5.93115ZM10.3457 5.93115C10.3457 6.60872 10.0794 7.25939 9.60449 7.74268L9.06933 7.21729L9.5957 7.75146C9.49507 7.85069 9.41492 7.96876 9.36035 8.09912C9.30574 8.2296 9.27735 8.36979 9.27734 8.51123C9.27734 8.65268 9.30574 8.79285 9.36035 8.92334C9.41492 9.05371 9.49507 9.17177 9.5957 9.271L14.7363 14.4126L14.8174 14.4829C15.0121 14.6392 15.255 14.7261 15.5068 14.7261C15.7944 14.726 16.0707 14.6135 16.2764 14.4126C16.7595 13.9383 17.4098 13.6724 18.0869 13.6724C18.6797 13.6725 19.2515 13.8765 19.709 14.2456L19.8975 14.4136L19.8994 14.4155L23.1738 17.6558L23.1826 17.6636C23.6577 18.1496 23.9238 18.8032 23.9238 19.4829C23.9238 20.1626 23.6578 20.8153 23.1826 21.3013C23.1787 21.3052 23.1748 21.3091 23.1709 21.313L22.3994 22.0679C21.3971 23.0791 20.0776 23.7159 18.6621 23.8716C17.2422 24.0277 15.8117 23.6899 14.6113 22.9155L15.0176 22.2856L14.5986 22.9077C9.28048 19.3191 4.69701 14.7469 1.09472 9.43799C1.09146 9.43318 1.08811 9.42822 1.08496 9.42334C0.310554 8.22291 -0.0272675 6.79254 0.128903 5.37256C0.285092 3.95266 0.925676 2.62986 1.94238 1.62646L2.6875 0.86377L2.69922 0.852051C3.18519 0.376934 3.83795 0.110939 4.51757 0.11084C5.11236 0.11084 5.68662 0.314818 6.14648 0.684082L6.33691 0.852051L9.60449 4.11963C10.0794 4.6029 10.3457 5.25358 10.3457 5.93115Z"> </path>
