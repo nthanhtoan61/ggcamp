@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import Script from "next/script";
 import { HeroSection } from "@/components/layouts";
 import { ContactData } from "@/types";
-import { fetchContactData } from "@/api/contact";
+// Comment import API - sẽ dùng lại khi deploy lên server
+// import { fetchContactData } from "@/api/contact";
+import contactDataJson from "./contact-data.json";
 
 // Extend Window interface for Leaflet
 declare global {
@@ -107,33 +109,39 @@ const getIcon = (iconType: string, iconSource?: string) => {
 };
 
 export default function ContactUsPage() {
-  const [contactData, setContactData] = useState<ContactData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // Sử dụng dữ liệu từ contact-data.json
+  const contactData = contactDataJson as ContactData;
+
+  // Giữ lại state cho form
   const [formData, setFormData] = useState<Record<string, string>>({});
 
-  // Fetch contact data from API
-  useEffect(() => {
-    const loadContactData = async () => {
-      try {
-        setLoading(true);
-        const data = await fetchContactData();
-        setContactData(data);
-        setError(null);
-      } catch (err) {
-        console.error("Error fetching contact data:", err);
-        setError(
-          err instanceof Error ? err.message : "Failed to load contact data"
-        );
-        // Fallback to default data structure if API fails
-        setContactData(null);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // Comment useEffect fetch data - sẽ dùng lại khi deploy lên server
+  // const [contactData, setContactData] = useState<ContactData | null>(null);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState<string | null>(null);
 
-    loadContactData();
-  }, []);
+  // // Fetch contact data from API
+  // useEffect(() => {
+  //   const loadContactData = async () => {
+  //     try {
+  //       setLoading(true);
+  //       const data = await fetchContactData();
+  //       setContactData(data);
+  //       setError(null);
+  //     } catch (err) {
+  //       console.error("Error fetching contact data:", err);
+  //       setError(
+  //         err instanceof Error ? err.message : "Failed to load contact data"
+  //       );
+  //       // Fallback to default data structure if API fails
+  //       setContactData(null);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   loadContactData();
+  // }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -244,31 +252,32 @@ export default function ContactUsPage() {
     return () => clearTimeout(timeout1);
   }, [contactData]);
 
-  // Show loading state
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#9c5d00] mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading contact information...</p>
-        </div>
-      </div>
-    );
-  }
+  // Comment loading và error state - không cần khi dùng JSON file
+  // // Show loading state
+  // if (loading) {
+  //   return (
+  //     <div className="flex items-center justify-center min-h-screen">
+  //       <div className="text-center">
+  //         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#9c5d00] mx-auto mb-4"></div>
+  //         <p className="text-gray-600">Loading contact information...</p>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
-  // Show error state
-  if (error || !contactData) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <p className="text-red-600 mb-4">
-            Error: {error || "Failed to load contact data"}
-          </p>
-          <p className="text-gray-600">Please try refreshing the page.</p>
-        </div>
-      </div>
-    );
-  }
+  // // Show error state
+  // if (error || !contactData) {
+  //   return (
+  //     <div className="flex items-center justify-center min-h-screen">
+  //       <div className="text-center">
+  //         <p className="text-red-600 mb-4">
+  //           Error: {error || "Failed to load contact data"}
+  //         </p>
+  //         <p className="text-gray-600">Please try refreshing the page.</p>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
