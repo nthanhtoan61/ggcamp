@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
       />
       <div
         id="contact"
-        className="uk-padding-remove-bottom footer-main contact-section translate-y-[40vh] lg:translate-y-0"
+        className="uk-padding-remove-bottom footer-main translate-y-[40vh] lg:translate-y-[25vh]"
         uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-medium; delay: 200;"
       >
         <div className="uk-container footer-animated-container relative z-10">

@@ -339,7 +339,7 @@ export function AboutSection() {
             </div>
 
             {/* Small Author Images + Counter */}
-            <div className="flex items-center gap-[0.5vw] max-sm:gap-[1.5vw] about-author-group bg-[#9c5d00] p-[0.5vw] max-sm:p-[2vw] rounded-lg max-sm:rounded-[2vw] shadow-md w-[19.58vw] max-sm:w-full mt-[0.75vw] max-sm:mt-0">
+            <div className="flex items-center gap-[0.5vw] max-sm:gap-[1.5vw] about-author-group bg-[var(--color-primary)] p-[0.5vw] max-sm:p-[2vw] rounded-lg max-sm:rounded-[2vw] shadow-md w-[19.58vw] max-sm:w-full mt-[0.75vw] max-sm:mt-0">
               <div
                 ref={authorImagesRef}
                 className="flex items-center"
@@ -367,7 +367,7 @@ export function AboutSection() {
 
               <p
                 ref={adventurerTextRef}
-                className="text-[1vw] max-sm:text-[3.5vw] !ml-[0.5vw] max-sm:!ml-[1.5vw] !font-semibold text-white font-semibold leading-tight !m-0"
+                className="text-[1vw] max-sm:text-[3.5vw] !ml-[0.5vw] max-sm:!ml-[1.5vw] !font-semibold !text-white font-semibold leading-tight !m-0"
               >
                 Adventurer with<br />happy customer
               </p>
@@ -439,7 +439,7 @@ export function AboutSection() {
               className="about-icon-list flex flex-col gap-[1vw] max-sm:gap-[3vw] flex-[0_0_67%] max-sm:flex-[0_0_100%] !p-0 !mr-[1vw] max-sm:!mr-0 list-none !m-0"
             >
               <li className="flex items-start max-sm:items-center gap-[0.75vw] max-sm:gap-[2vw] text-gray-700 text-[1vw] max-sm:text-[3.5vw] !font-semibold">
-                <div className="min-w-[1.5vw] w-[1.5vw] h-[1.5vw] max-sm:min-w-[5vw] max-sm:w-[5vw] max-sm:h-[5vw] rounded-full bg-[#9c5d00] flex items-center justify-center text-white flex-shrink-0 mt-[0.1vw] max-sm:mt-0">
+                <div className="min-w-[1.5vw] w-[1.5vw] h-[1.5vw] max-sm:min-w-[5vw] max-sm:w-[5vw] max-sm:h-[5vw] rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white flex-shrink-0 mt-[0.1vw] max-sm:mt-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-[0.5vw] h-[0.5vw] max-sm:w-[2vw] max-sm:h-[2vw]"
@@ -458,7 +458,7 @@ export function AboutSection() {
                 Fun-Filled Experiences for Every Camper
               </li>
               <li className="flex items-start max-sm:items-center gap-[0.75vw] max-sm:gap-[2vw] text-gray-700 text-[1vw] max-sm:text-[3.5vw] !font-semibold">
-                <div className="min-w-[1.5vw] w-[1.5vw] h-[1.5vw] max-sm:min-w-[5vw] max-sm:w-[5vw] max-sm:h-[5vw] rounded-full bg-[#9c5d00] flex items-center justify-center text-white flex-shrink-0 mt-[0.1vw] max-sm:mt-0">
+                <div className="min-w-[1.5vw] w-[1.5vw] h-[1.5vw] max-sm:min-w-[5vw] max-sm:w-[5vw] max-sm:h-[5vw] rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white flex-shrink-0 mt-[0.1vw] max-sm:mt-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-[0.5vw] h-[0.5vw] max-sm:w-[2vw] max-sm:h-[2vw]"
@@ -477,7 +477,7 @@ export function AboutSection() {
                 Adventures That Inspire Confidence and Growth
               </li>
               <li className="flex items-start max-sm:items-center gap-[0.75vw] max-sm:gap-[2vw] text-gray-700 text-[1vw] max-sm:text-[3.5vw] !font-semibold">
-                <div className="min-w-[1.5vw] w-[1.5vw] h-[1.5vw] max-sm:min-w-[5vw] max-sm:w-[5vw] max-sm:h-[5vw] rounded-full bg-[#9c5d00] flex items-center justify-center text-white flex-shrink-0 mt-[0.1vw] max-sm:mt-0">
+                <div className="min-w-[1.5vw] w-[1.5vw] h-[1.5vw] max-sm:min-w-[5vw] max-sm:w-[5vw] max-sm:h-[5vw] rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white flex-shrink-0 mt-[0.1vw] max-sm:mt-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-[0.5vw] h-[0.5vw] max-sm:w-[2vw] max-sm:h-[2vw]"
@@ -509,8 +509,7 @@ export function AboutSection() {
 
               <Link href="/info/about">
                 <button
-                  ref={learnMoreButtonRef}
-                  className="about-button inline-flex items-center ripple-button mt-0 max-sm:mt-[2vw] px-[1.625vw] py-[0.625vw] max-sm:px-[5vw] max-sm:py-[2.5vw] text-[0.9rem] lg:text-[1rem] max-sm:text-[3.8vw] max-sm:rounded-[1.5vw] whitespace-nowrap"
+                  className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-[1vw] md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
                   onMouseEnter={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     setCoords({
@@ -528,15 +527,18 @@ export function AboutSection() {
                   }}
                   onMouseLeave={() => setHovered(false)}
                 >
-                  <span className={`button-text ${hovered ? "hovered" : ""} max-sm:gap-[1.5vw]`}>
-                    Learn More About
+                  <span className="relative z-10 flex items-center gap-2 md:gap-[0.5vw] transition-colors duration-300">
+                    Learn more About
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="22"
                       height="22"
                       viewBox="0 0 22 22"
                       fill="currentColor"
-                      className="button-icon max-sm:w-[4.5vw] max-sm:h-[4.5vw]"
+                      className="w-4 h-4 md:w-[1.2vw] md:h-[1.2vw] transition-transform duration-500"
+                      style={{
+                        transform: hovered ? "rotate(45deg)" : "rotate(0deg)",
+                      }}
                     >
                       <path
                         fillRule="evenodd"
@@ -547,10 +549,15 @@ export function AboutSection() {
                   </span>
 
                   <span
-                    className={`ripple-circle ${
-                      hovered ? "ripple-in" : "ripple-out"
-                    }`}
-                    style={{ left: coords.x, top: coords.y }}
+                    className="absolute w-5 h-5 bg-white rounded-full pointer-events-none z-[5] transition-all duration-500 ease-out"
+                    style={{
+                      left: coords.x,
+                      top: coords.y,
+                      transform: hovered
+                        ? "translate(-50%, -50%) scale(20)"
+                        : "translate(-50%, -50%) scale(0)",
+                      opacity: hovered ? 1 : 0,
+                    }}
                   ></span>
                 </button>
               </Link>

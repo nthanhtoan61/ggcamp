@@ -293,6 +293,45 @@ export default function FAQSection() {
                   </div>
                 )}
               </div>
+              <div className="bg-white shadow-sm rounded-[1vw] overflow-hidden">
+                <div
+                  className="!p-[1vw] cursor-pointer hover:shadow-md transition-shadow"
+                  onClick={() => setOpenFaqIndex(openFaqIndex === 5 ? null : 5)}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-start gap-[1vw]">
+                      <h3 className="text-gray-900 !font-bold !text-[1.2vw] !mt-[0.5vh]">
+                        6. Can I bring my own food or cook at the campsite?
+                      </h3>
+                    </div>
+                    <svg
+                      className="w-[1.2vw] h-[1.2vw] min-w-[20px] min-h-[20px] text-[var(--color-primary)] flex-shrink-0 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d={
+                          openFaqIndex === 4 ? "M19 9l-7 7-7-7" : "M9 5l7 7-7 7"
+                        }
+                      />
+                    </svg>
+                  </div>
+                </div>
+                {openFaqIndex === 4 && (
+                  <div className="bg-[var(--color-primary)] px-[0.5vw] pb-[0.5vh]">
+                    <div className="px-[1vw] py-[1.5vh] rounded-[1vw]">
+                      <p className="text-gray-900 !text-[1vw] !font-semibold leading-relaxed">
+                        Yes, you can bring your own food or cook at the
+                        campsite.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
