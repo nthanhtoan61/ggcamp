@@ -20,28 +20,28 @@ export default function WhyChooseUs() {
       <div className="absolute inset-x-0 bottom-0 h-[25vh] bg-gradient-to-t from-gray-300/20 to-transparent pointer-events-none"></div>
 
       <div className="w-full px-[5vw] md:px-[10vw] relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[3vw] md:gap-[5vw] items-start py-[5vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[5vw] items-start py-8 md:py-[5vh]">
           {/* === CỘT TRÁI: WHY CHOOSE US + TIÊU ĐỀ === */}
-          <div className="space-y-0">
-            <p className="inline-flex items-center gap-[0.5vw] !text-primary !font-bold tracking-widest uppercase text-[1.7vw] mb-0 leading-none">
+          <div className="space-y-2 md:space-y-0">
+            <p className="inline-flex items-center gap-2 md:gap-[0.5vw] !text-primary !font-bold tracking-widest uppercase text-xl md:text-[2vw] mb-2 md:mb-0 leading-none">
               <img
                 src="https://demo.awaikenthemes.com/wildex/wp-content/themes/wildex/assets/images/icon-sub-heading.svg"
                 alt="icon"
-                className="w-[2vw] h-[2vw] object-contain"
+                className="w-6 h-6 md:w-[2vw] md:h-[2vw] object-contain"
               />
               Why Choose Us
             </p>
 
-            <h2 className="!mt-0 !pt-0 !text-[2.5vw] !sm:text-[2.5vw] !md:text-[2.5vw] !font-bold text-gray-900 leading-tight">
+            <div className="!mt-0 !pt-0 text-2xl md:text-[2.5vw] !font-bold  text-gray-900 leading-tight">
               Creating unforgettable camp experiences
               <br className="hidden md:block" />
               with safety, fun, and friendship.
-            </h2>
+            </div>
           </div>
 
           {/* === CỘT PHẢI: MÔ TẢ + NÚT LEARN MORE === */}
           <div className="flex flex-col items-start">
-            <p className="text-gray-600 !text-[1vw] !sm:text-[1vw] !md:text-[1vw] leading-relaxed mb-[3vh] ">
+            <p className="text-gray-600 text-lg md:text-[1.2vw] leading-relaxed mb-4 md:mb-[3vh]">
               Go and Grow Camp has organized international summer camps and
               educational outdoor trips across multiple countries. We are
               committed to providing a safe, inclusive, and inspiring
@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
 
             <Link href="/booking">
               <button
-                className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-[1vw] md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
+                className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-base md:text-[1vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
                 onMouseEnter={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
                   setCoords({
@@ -107,10 +107,10 @@ export default function WhyChooseUs() {
         </div>
 
         {/* 4 Feature Cards - Grid 4 cột trên desktop */}
-        <div className="mt-[5vh] grid grid-cols-1 md:grid-cols-4 gap-[3vw] mb-[5vh]">
+        <div className="mt-8 md:mt-[5vh] grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-[3vw] mb-8 md:mb-[5vh]">
           {/* Card 1 */}
-          <div className="relative overflow-hidden bg-white rounded-[2vw] !p-[1vw] shadow-lg hover:shadow-xl transition-all duration-300 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-[var(--color-primary)] before:to-transparent before:translate-y-full hover:before:translate-y-0 before:transition-transform before:duration-500 before:rounded-[2vw]">
-            <div className="relative z-10 w-[4vw] h-[4vw] min-w-[60px] min-h-[60px] !bg-[var(--color-primary)] rounded-full mx-auto mb-[1.5vh] flex items-center justify-center shadow-md">
+          <div className="relative overflow-hidden bg-white rounded-2xl md:rounded-[2vw] p-6 md:p-[1vw] shadow-lg hover:shadow-xl transition-all duration-300 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-[var(--color-primary)] before:to-transparent before:translate-y-full hover:before:translate-y-0 before:transition-transform before:duration-500 before:rounded-2xl md:before:rounded-[2vw]">
+            <div className="relative z-10 w-16 h-16 md:w-[4vw] md:h-[4vw] !bg-[var(--color-primary)] rounded-full mx-auto mb-4 md:mb-[1.5vh] flex items-center justify-center shadow-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="28"
@@ -123,14 +123,14 @@ export default function WhyChooseUs() {
                 <path d="M11.8916 0.710938C12.117 0.711049 12.3303 0.812566 12.4727 0.987305C15.1473 4.27643 16.7071 8.33169 16.9258 12.5654C16.9271 12.5911 16.9271 12.6169 16.9258 12.6426C16.7071 16.8762 15.1473 20.9307 12.4727 24.2197C12.3303 24.3947 12.1171 24.497 11.8916 24.4971C11.6659 24.4971 11.452 24.3948 11.3096 24.2197C8.63485 20.9307 7.07519 16.8762 6.85646 12.6426C6.85513 12.6169 6.85514 12.5911 6.85646 12.5654C7.07518 8.33169 8.63484 4.27643 11.3096 0.987305L11.3662 0.925781C11.5056 0.788999 11.6941 0.710936 11.8916 0.710938ZM11.8906 2.69336C9.78175 5.57983 8.54913 9.0208 8.35646 12.6035C8.54902 16.1863 9.7818 19.6272 11.8906 22.5137C13.9997 19.6271 15.2322 16.1865 15.4248 12.6035C15.2321 9.02059 13.9997 5.57993 11.8906 2.69336Z" />
               </svg>
             </div>
-            <h3 className="relative z-10 font-bold text-gray-900 !text-[1.7vw] mb-[1vh] text-center">
+            <div className="relative z-10 font-bold text-gray-900 text-xl md:text-[1.5vw] mb-2 md:mb-[1vh] text-center">
               Inclusive & Welcoming
-            </h3>
-            <p className="relative z-10 text-gray-600 text-[1vw] leading-relaxed text-center">
+            </div>
+            <div className="relative z-10 text-gray-600 text-lg md:text-[1vw] leading-relaxed text-center">
               Every child, teen, and staff member, regardless of country or
               culture, feels comfortable and valued, creating a unique and
               unforgettable camp experience.
-            </p>
+            </div>
           </div>
 
           {/* Card 2 */}
@@ -148,14 +148,14 @@ export default function WhyChooseUs() {
                 <path d="M21.0881 4.4055C21.471 4.24761 21.9097 4.42986 22.0676 4.81272C22.2255 5.19553 22.0431 5.63416 21.6604 5.79221L11.4358 10.009C11.2527 10.0845 11.0476 10.0844 10.8645 10.009L0.63987 5.79221C0.257033 5.63423 0.0747161 5.1956 0.232644 4.81272C0.39063 4.42988 0.829257 4.24757 1.21214 4.4055L11.1496 8.50413L21.0881 4.4055Z" />
               </svg>
             </div>
-            <h3 className="relative z-10 font-bold text-gray-900 !text-[1.7vw] mb-[1vh] text-center">
+            <div className="relative z-10 font-bold text-gray-900 text-xl md:text-[1.5vw] mb-2 md:mb-[1vh] text-center">
               Adventure-Ready Experiences
-            </h3>
-            <p className="relative z-10 text-gray-600 text-[1vw] leading-relaxed text-center">
+            </div>
+            <div className="relative z-10 text-gray-600 text-lg md:text-[1vw] leading-relaxed text-center">
               From team challenges to outdoor exploration, creative workshops,
               and water sports, we offer a wide range of activities that build
               confidence, teamwork, and independence.
-            </p>
+            </div>
           </div>
 
           {/* Card 3 */}
@@ -173,13 +173,13 @@ export default function WhyChooseUs() {
                 <path d="M0 12.3896C0 11.9754 0.335786 11.6396 0.75 11.6396C1.16421 11.6396 1.5 11.9754 1.5 12.3896C1.5 12.6969 1.65916 13.0738 2.12988 13.502C2.60108 13.9304 3.3254 14.3513 4.2832 14.7197C6.19374 15.4546 8.88377 15.9258 11.8926 15.9258C14.9017 15.9258 17.5923 15.4547 19.5029 14.7197C20.4607 14.3513 21.1841 13.9304 21.6553 13.502C22.1262 13.0737 22.2861 12.697 22.2861 12.3896C22.2861 11.9754 22.6219 11.6396 23.0361 11.6396C23.4502 11.6399 23.7861 11.9756 23.7861 12.3896C23.7861 13.2651 23.3216 14.0153 22.665 14.6123C22.0086 15.2092 21.0996 15.7119 20.041 16.1191C17.9188 16.9355 15.0377 17.4258 11.8926 17.4258C8.7475 17.4258 5.86633 16.9355 3.74414 16.1191C2.68567 15.7119 1.77751 15.2091 1.12109 14.6123C0.464442 14.0152 0 13.2652 0 12.3896Z" />
               </svg>
             </div>
-            <h3 className="relative z-10 font-bold text-gray-900 !text-[1.7vw] mb-[1vh] text-center">
+            <div className="relative z-10 font-bold text-gray-900 text-xl md:text-[1.5vw] mb-2 md:mb-[1vh] text-center">
               Personal Growth & Friendship
-            </h3>
-            <p className="relative z-10 text-gray-600 text-[1vw] leading-relaxed text-center">
+            </div>
+            <div className="relative z-10 text-gray-600 text-lg md:text-[1vw] leading-relaxed text-center">
               Campers develop life skills, make lifelong friends, and return
               home more confident, motivated, and inspired.
-            </p>
+            </div>
           </div>
 
           {/* Card 4 */}
@@ -198,46 +198,46 @@ export default function WhyChooseUs() {
                 <path d="M11.1747 9.76454C11.594 9.74324 12.0132 9.81161 12.4032 9.96766C12.8023 10.1274 13.1613 10.3733 13.454 10.6884C13.7359 10.9918 13.7184 11.467 13.4149 11.7489C13.1115 12.0305 12.6372 12.013 12.3554 11.7099C12.2136 11.5572 12.0392 11.4377 11.8456 11.3602C11.6522 11.2829 11.4442 11.2489 11.2362 11.2616C11.2018 11.2637 11.1671 11.2633 11.1327 11.2606C10.8694 11.2404 10.6084 11.3118 10.3925 11.4599L10.3026 11.5282C10.091 11.706 9.95147 11.9533 9.90712 12.2245C9.95383 12.4962 10.0952 12.7434 10.3075 12.9218C10.5392 13.1165 10.8374 13.2138 11.1395 13.1932C11.8289 13.1463 12.51 13.3688 13.039 13.8134C13.5678 14.2579 13.904 14.8908 13.9765 15.578C13.9819 15.6301 13.9819 15.6831 13.9765 15.7352C13.9039 16.4223 13.5677 17.0545 13.039 17.4989C12.526 17.93 11.87 18.1498 11.202 18.12C10.8245 18.1332 10.4487 18.0722 10.0956 17.9403L9.94325 17.8788C9.54117 17.7019 9.18508 17.4352 8.90224 17.0995C8.63541 16.7827 8.67631 16.3097 8.99306 16.0429C9.3098 15.7761 9.78282 15.816 10.0497 16.1327C10.1852 16.2935 10.3556 16.4212 10.5477 16.5057C10.74 16.5904 10.949 16.6297 11.1591 16.621C11.1864 16.6198 11.2138 16.6201 11.2411 16.622C11.5431 16.6426 11.8414 16.5452 12.0731 16.3505C12.2846 16.1728 12.4243 15.9265 12.4716 15.6561C12.4243 15.3858 12.2846 15.1395 12.0731 14.9618C11.8414 14.7671 11.5431 14.6697 11.2411 14.6903C10.5518 14.7373 9.87071 14.5148 9.34169 14.0702C8.81293 13.6257 8.47669 12.9935 8.40419 12.3065C8.39891 12.2564 8.39935 12.2053 8.40419 12.1552C8.47105 11.464 8.806 10.8266 9.33778 10.3798C9.85082 9.94866 10.507 9.73164 11.1747 9.76454Z" />
               </svg>
             </div>
-            <h3 className="relative z-10 font-bold text-gray-900 !text-[1.7vw] mb-[1vh] text-center">
+            <div className="relative z-10 font-bold text-gray-900 text-xl md:text-[1.5vw] mb-2 md:mb-[1vh] text-center">
               Safe & Responsible Environment
-            </h3>
-            <p className="relative z-10 text-gray-600 text-[1vw] leading-relaxed text-center">
+            </div>
+            <div className="relative z-10 text-gray-600 text-lg md:text-[1vw] leading-relaxed text-center">
               Our trained staff ensure every camper enjoys a secure, supportive,
               and funfilled experience.
-            </p>
+            </div>
           </div>
         </div>
 
         {/* Tags + CTA cuối trang */}
         <div className="text-center">
-          <div className="grid grid-cols-4 gap-[2vw] md:flex md:flex-wrap md:justify-center mb-[5vh]">
-            <span className="px-[2vw] py-[1vh] bg-white rounded-full shadow-sm flex items-center gap-[0.5vw] text-gray-700 font-medium !text-[0.5vw] md:text-[1vw]">
-              <span className="w-[0.5vw] h-[0.5vw] min-w-[8px] min-h-[8px] !bg-[var(--color-primary)] rounded-full"></span>
+          <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-[2vw] mb-6 md:mb-[5vh]">
+            <div className="px-4 md:px-[2vw] py-2 md:py-[1vh] bg-white rounded-full shadow-sm flex items-center gap-2 md:gap-[0.5vw] text-gray-700 font-medium text-base md:text-[1vw]">
+              <span className="w-2 h-2 md:w-[0.5vw] md:h-[0.5vw] min-w-[8px] min-h-[8px] !bg-[var(--color-primary)] rounded-full"></span>
               Nature-Friendly
-            </span>
-            <span className="px-[2vw] py-[1vh] bg-white rounded-full shadow-sm flex items-center gap-[0.5vw] text-gray-700 font-medium !text-[0.5vw] md:text-[1vw]">
-              <span className="w-[0.5vw] h-[0.5vw] min-w-[8px] min-h-[8px] !bg-[var(--color-primary)] rounded-full"></span>
+            </div>
+            <div className="px-4 md:px-[2vw] py-2 md:py-[1vh] bg-white rounded-full shadow-sm flex items-center gap-2 md:gap-[0.5vw] text-gray-700 font-medium text-base md:text-[1vw]">
+              <span className="w-2 h-2 md:w-[0.5vw] md:h-[0.5vw] min-w-[8px] min-h-[8px] !bg-[var(--color-primary)] rounded-full"></span>
               Adventure-Ready
-            </span>
-            <span className="px-[2vw] py-[1vh] bg-white rounded-full shadow-sm flex items-center gap-[0.5vw] text-gray-700 font-medium !text-[0.5vw] md:text-[1vw]">
-              <span className="w-[0.5vw] h-[0.5vw] min-w-[8px] min-h-[8px] !bg-[var(--color-primary)] rounded-full"></span>
+            </div>
+            <div className="px-4 md:px-[2vw] py-2 md:py-[1vh] bg-white rounded-full shadow-sm flex items-center gap-2 md:gap-[0.5vw] text-gray-700 font-medium text-base md:text-[1vw]">
+              <span className="w-2 h-2 md:w-[0.5vw] md:h-[0.5vw] min-w-[8px] min-h-[8px] !bg-[var(--color-primary)] rounded-full"></span>
               Community Service
-            </span>
-            <span className="px-[2vw] py-[1vh] bg-white rounded-full shadow-sm flex items-center gap-[0.5vw] text-gray-700 font-medium !text-[0.5vw] md:text-[1vw]">
-              <span className="w-[0.5vw] h-[0.5vw] min-w-[8px] min-h-[8px] !bg-[var(--color-primary)] rounded-full"></span>
+            </div>
+            <div className="px-4 md:px-[2vw] py-2 md:py-[1vh] bg-white rounded-full shadow-sm flex items-center gap-2 md:gap-[0.5vw] text-gray-700 font-medium text-base md:text-[1vw]">
+              <span className="w-2 h-2 md:w-[0.5vw] md:h-[0.5vw] min-w-[8px] min-h-[8px] !bg-[var(--color-primary)] rounded-full"></span>
               Inspiring Locations
-            </span>
+            </div>
           </div>
 
-          <p className="text-gray-700 text-[1vw]">
-            Let's make something great work together.{" "}
-            <a
+          <div className="text-gray-700 text-base md:text-[1vw] flex flex-wrap items-center justify-center gap-1">
+            <span>Let's make something great work together.</span>
+            <Link
               href="#"
-              className="!text-[var(--color-primary)] font-bold hover:underline"
+              className="!text-[var(--color-primary)] font-bold hover:underline whitespace-nowrap"
             >
               Get Free Quote
-            </a>
-          </p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -177,7 +177,10 @@ export function AboutSection() {
       const text = subtitleText.textContent || "";
       subtitleText.innerHTML = text
         .split("")
-        .map((char) => `<span class="char">${char === " " ? "&nbsp;" : char}</span>`)
+        .map(
+          (char) =>
+            `<span class="char">${char === " " ? "&nbsp;" : char}</span>`
+        )
         .join("");
 
       gsap.fromTo(
@@ -208,7 +211,10 @@ export function AboutSection() {
       const text = descriptionText.textContent || "";
       descriptionText.innerHTML = text
         .split(" ")
-        .map((word) => `<span class="word" style="display: inline-block;">${word}</span>`)
+        .map(
+          (word) =>
+            `<span class="word" style="display: inline-block;">${word}</span>`
+        )
         .join(" ");
 
       gsap.fromTo(
@@ -340,16 +346,16 @@ export function AboutSection() {
 
             {/* Small Author Images + Counter */}
             <div className="flex items-center gap-[0.5vw] max-sm:gap-[1.5vw] about-author-group bg-[var(--color-primary)] p-[0.5vw] max-sm:p-[2vw] rounded-lg max-sm:rounded-[2vw] shadow-md w-[19.58vw] max-sm:w-full mt-[0.75vw] max-sm:mt-0">
-              <div
-                ref={authorImagesRef}
-                className="flex items-center"
-              >
+              <div ref={authorImagesRef} className="flex items-center">
                 {avatars.map((src, i) => (
                   <img
                     key={i}
                     src={getTemplateImageUrl(src)}
                     alt={`Author ${i + 1}`}
-                    style={{ animationDelay: `${i * 300}ms`, aspectRatio: '1/1' }}
+                    style={{
+                      animationDelay: `${i * 300}ms`,
+                      aspectRatio: "1/1",
+                    }}
                     className="w-[2.5vw] h-[2.5vw] max-sm:w-[8vw] max-sm:h-[8vw] rounded-full border-2 border-white shadow-md -mr-[0.5vw] max-sm:-mr-[2vw] object-cover opacity-0 animate-fadeUp transform transition-all duration-700 hover:scale-105 flex-shrink-0"
                   />
                 ))}
@@ -360,7 +366,9 @@ export function AboutSection() {
                   className="w-[2.5vw] h-[2.5vw] max-sm:w-[8vw] max-sm:h-[8vw] flex items-center justify-center rounded-full bg-white text-[#cbca7b] font-bold opacity-0 animate-fadeUp flex-shrink-0"
                   style={{ animationDelay: "1000ms" }}
                 >
-                  <span className="text-[0.8vw] max-sm:text-[2.5vw] font-bold">{count}</span>
+                  <span className="text-[0.8vw] max-sm:text-[2.5vw] font-bold">
+                    {count}
+                  </span>
                   <span className="text-[0.6vw] max-sm:text-[2vw]">+</span>
                 </div>
               </div>
@@ -369,7 +377,9 @@ export function AboutSection() {
                 ref={adventurerTextRef}
                 className="text-[1vw] max-sm:text-[3.5vw] !ml-[0.5vw] max-sm:!ml-[1.5vw] !font-semibold !text-white font-semibold leading-tight !m-0"
               >
-                Adventurer with<br />happy customer
+                Adventurer with
+                <br />
+                happy customer
               </p>
             </div>
           </div>
@@ -377,9 +387,7 @@ export function AboutSection() {
           {/* Right Sub-Container: Small Images */}
           <div className="flex flex-col gap-[1.25vw] max-sm:gap-[3vw] mt-[1vw] max-sm:mt-0 max-sm:w-full">
             {/* Small Image Above Extra Image */}
-            <div
-              className="about-small-img w-[6.3vw] h-[9vw] rounded-xl overflow-hidden max-sm:hidden"
-            >
+            <div className="about-small-img w-[6.3vw] h-[9vw] rounded-xl overflow-hidden max-sm:hidden">
               <img
                 src={getTemplateImageUrl(
                   "yootheme/aboutImage/about-bg-image-royal.png"
@@ -509,7 +517,7 @@ export function AboutSection() {
 
               <Link href="/info/about">
                 <button
-                  className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-[1vw] md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
+                  className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-base md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
                   onMouseEnter={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     setCoords({
