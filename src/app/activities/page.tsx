@@ -1245,113 +1245,11 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
       <HeroSection
         title="Activities"
         backgroundImage="yootheme/banner/b9.jpg"
-        overlayColor="rgba(0, 0, 0, 0.19)"
+        overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
         titleClass="uk-heading-large uk-text-center"
       />
 
-      {/* Intro Section - Responsive text sizing */}
-      <div className="uk-section-default uk-section-overlap uk-section uk-section-small">
-        <div className="uk-container uk-container-large">
-          <div className="text-center">
-            {/* Fixed: text-base on mobile, vw on desktop */}
-            <p className="text-base md:text-[1.67vw]">
-              Adventure & sports camps, vacation camps, as well as English & German
-              language camps in Germany and England, since 2002
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* ProvenExpert Widget + Quote Section - Stack on mobile */}
-      <div className="uk-grid tm-grid-expand uk-grid-large uk-margin uk-padding">
-        <div className="h-[30vh] md:h-[40vh] uk-grid-item-match uk-flex-middle uk-width-1-3@m uk-width-1-1@s">
-          <div className="uk-panel uk-width-1-1">
-            <center>
-              <a
-                href="https://www.provenexpert.com/camp-adventure/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                  <Image
-                    src={getTemplateImageUrl("yootheme/activities/campfire.jpg")}
-                    width={465}
-                    height={200}
-                  alt="Customer reviews"
-                  style={{ border: 0, width: "100%", height: "100%", objectFit: "contain" }}
-                  unoptimized
-                />
-              </a>
-            </center>
-          </div>
-        </div>
-        <div className="uk-grid-item-match uk-flex-middle uk-width-2-3@m uk-width-1-1@s">
-          <div className="uk-panel uk-width-1-1">
-            <blockquote className="uk-margin-medium uk-text-left@m uk-text-center">
-              {/* Fixed: text-lg on mobile, vw on desktop */}
-              <p className="text-lg md:text-[1.7vw]">
-                My son (age 11) absolutely loved Camp Adventure! After two
-                disastrous camp experiences, this was our last attempt. I am so
-                glad he went! He said he had the time of his life and can&apos;t
-                wait to come back.
-              </p>
-              <footer className="el-footer">
-                <cite className="el-author">
-                  <a
-                    className="uk-link-muted text-base md:text-[1.67vw]"
-                    href="https://goo.gl/maps/6SUEPwPJtZofokoX7"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Sarah O.
-                  </a>
-                </cite>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-
-      {/* Description - Responsive text */}
-      <div className="uk-section-default uk-section p-6 md:p-12 m-0 md:m-8">
-        <div className="uk-panel uk-text-large uk-dropcap uk-margin">
-           {/* Fixed: text-base on mobile, vw on desktop */}
-          <p className="text-base md:text-[1.7vw] leading-relaxed">
-             In our international camps in Germany and England we offer various
-            courses that you can book as additional options to our camp
-            activities. Get an overview of what is taking place where and simply
-            decide which camp you would like to spend next summer based on the
-            program of your choice.
-          </p>
-        </div>
-      </div>
-
-      {/* Map Section - Adjusted height for mobile */}
-      <div
-        className="uk-section uk-padding-remove-vertical"
-        style={{ paddingLeft: 0, paddingRight: 0 }}
-      >
-        <div
-          className="uk-grid tm-grid-expand uk-child-width-1-1"
-          style={{ marginLeft: 0, marginRight: 0 }}
-        >
-          <div
-            className="uk-width-1-1@m"
-            style={{ paddingLeft: 0, paddingRight: 0 }}
-          >
-            <div
-              className="uk-position-relative uk-dark"
-              // Adjusted height: 400px on mobile, 600px on desktop
-              style={{ height: "600px", minHeight: "400px", width: "100%", zIndex: 1 }}
-            >
-              <div
-                id="camp-profiles-map"
-                style={{ height: "100%", width: "100%" }}
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Search Bar Section */}
       <div className="uk-section-default uk-section">

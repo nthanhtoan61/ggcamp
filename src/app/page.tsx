@@ -377,7 +377,7 @@ export default function HomePage() {
         title={<>Discover Adventure and Friendship</>}
         subtitle="Immerse yourself in a realm filled with excitement, discovery, and memorable experiences. Venture into nature, engage in thrilling activities, and forge lasting memories that you will cherish forever."
         backgroundImage="yootheme/banner/b3.jpg"
-        overlayColor="rgba(0, 0, 0, 0)"
+        overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-secondary uk-section-overlap uk-preserve-color uk-light"
         titleClass="uk-heading-large uk-text-center !text-[8vw] md:!text-[5vw] max-sm:leading-tight"
         enableScrollspy={true}

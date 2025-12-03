@@ -15,7 +15,7 @@ export default function TravelDocumentsPage() {
           </>
         }
         backgroundImage="yootheme/cache/9d/Reiseunterlagen-9d81dea5.jpeg"
-        overlayColor="rgba(0, 0, 0, 0)"
+        overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
         titleClass="uk-heading-large uk-text-center !text-[5vw]"
         enableScrollspy={true}

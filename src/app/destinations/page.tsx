@@ -87,7 +87,7 @@ export default function DestinationsPage() {
       <HeroSection
         title="Our international Camps"
         backgroundImage="yootheme/banner/b2.jpg"
-        overlayColor="rgba(0, 0, 0, 0)"
+        overlayColor="rgba(0, 0, 0, 0.35)"
       />
 
       {/* Welcome Quote Section */}

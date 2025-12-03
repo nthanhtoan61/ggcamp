@@ -291,7 +291,7 @@ export default function FAQPage() {
                 </>
               }
               backgroundImage="yootheme\cache\18\faqs_header_new.jpg"
-              overlayColor="rgba(0, 0, 0, 0)"
+              overlayColor="rgba(0, 0, 0, 0.35)"
               sectionClass="uk-section-secondary uk-section-overlap uk-preserve-color uk-light"
               titleClass="uk-heading-large uk-text-center !text-[5vw]"
               enableScrollspy={true}

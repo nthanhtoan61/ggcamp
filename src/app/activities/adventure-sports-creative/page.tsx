@@ -118,7 +118,7 @@ export default function AdventureSportsCreativePage({}) {
       <HeroSection
         title=" Adventure, Sports & Creative Camps in Germany"
         backgroundImage="yootheme/cache/04/01-Abenteuercamp-Bogenschieen-044ac9af.jpg"
-        overlayColor="rgba(0, 0, 0, 0.19)"
+        overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
         titleClass="uk-heading-large uk-text-center"
       />

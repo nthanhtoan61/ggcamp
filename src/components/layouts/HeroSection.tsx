@@ -79,14 +79,13 @@ export function HeroSection({
               : "center top",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "scroll",
-          minHeight: "60vh",
-          height: "auto",
+          height: "150vh",
           position: "relative",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          paddingBottom: "10vh", // Extra padding to ensure image bottom is visible
-          overflow: "visible",
+          paddingBottom: "10vh",
+          overflow: "hidden",
           clipPath: "none",
         }}
       >

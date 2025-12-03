@@ -269,7 +269,7 @@ export default function AboutPage() {
       <HeroSection
         title="About Us"
         backgroundImage="yootheme/banner/b4.jpg"
-        overlayColor="rgba(0, 0, 0, 0.7)"
+        overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-primary"
         titleClass="uk-heading-large uk-text-center !text-[5vw]"
       />
