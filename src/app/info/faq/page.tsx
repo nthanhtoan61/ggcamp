@@ -556,8 +556,7 @@ export default function FAQPage() {
               <div id="general-information" className="uk-section-default" style={{backgroundColor:"#f7f7f7", paddingBottom:"20px", paddingLeft:"20px"}}>
                 <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
                   <div className="uk-width-1-1@m">
-                    <h2 className="sm:text-[4vw]! md:text-[3.5vw]! 2xl:text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center" 
-                        style={{ fontWeight: '700' }}>
+                    <h2 className="text-2xl! md:text-[2.5vw]! text-[#292c3d] font-bold! uk-text-left@m uk-text-center" >
                       <strong>General Information</strong>
                       
                       </h2>
@@ -578,7 +577,7 @@ export default function FAQPage() {
                       <div className="custom-accordion" uk-accordion="collapsible: true;">
                         {/* Câu hỏi 1 */}
                         <div className="el-item uk-margin-bottom uk-open" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -612,7 +611,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 FAQ are the initials for &quot;Frequently Asked Questions&quot;.
                               </p>
@@ -625,7 +624,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 2 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -659,7 +658,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 Once the booking has been confirmed by us, you will receive an e-mail requesting a deposit. As soon as we have received this, you will receive an e-mail with a payment confirmation.
                                 <br />
@@ -680,7 +679,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 3 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -714,7 +713,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 Our Terms & Conditions can be found{" "}
                             
@@ -725,7 +724,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 4 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -759,7 +758,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 <a
                                   href="https://www.campadventure.de/images/g_infopakete/packliste/PAckliste2024engl.pdf"
@@ -776,7 +775,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 5 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -810,7 +809,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 Here you can find all the necessary information if you want to drive to our camps or send something. If you want to send something please ALWAYS include the full name of your child on the letter/package and please only send it at the time when your kids are staying in camp as we cannot store it for a longer period of time.
                               </p>
@@ -881,15 +880,14 @@ export default function FAQPage() {
                 <div className="uk-container uk-container-large">
                   <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
                     <div className="uk-width-1-1@m">
-                      <h2 className="sm:text-[4vw]! md:text-[3.5vw]! 2xl:text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center" 
-                          style={{ fontWeight: '700' }}>
+                      <h2 className="text-2xl! md:text-[2.5vw]! text-[#292c3d] font-bold! uk-text-left@m uk-text-center" >
                         <strong>Camps</strong>
                       </h2>
 
                       <div className="custom-accordion " uk-accordion="collapsible: true;">
                         {/* Câu hỏi 1 - ĐÃ SỬA */}
                         <div className="el-item uk-margin-bottom uk-open" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -923,7 +921,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 Camp Adventure attatches great importance to internationality. The participants and supervisors in our camps come from many different countries. Last year, for example, we had participants from over 60 different countries and counselors from 25 different nations. Of course, we don&apos;t know where they will come from this year. So we are at least as excited as you are.
                                 Through our office in Hamburg and our branch office in Canada, we reach motivated and committed counselors from all over the world. Canadian and Australian teamers can therefore be found as well as German or Spanish teamers.
@@ -936,7 +934,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 2 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -970,7 +968,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 The main language in all our camps is English. In addition, there is the language of the country in which the camp takes place. As we have our headquarters in Germany, German teamers are always present in all camps in Germany. All announcements and explanations are here therefore always in German and English. Of course, all our teamers with their different nationalities are also available for individual translations.
                               </p>
@@ -980,7 +978,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 3 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1014,7 +1012,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 No, because there are usually more participants and team members who speak the same language. We know from experience that children are excellent at communicating nonverbally. They often need a few days to warm up to it, but are then very open to other children as well.
                               </p>
@@ -1024,7 +1022,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 4 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1058,7 +1056,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 Girls and boys are accommodated separately in the dormitories/tents. The program is completely mixed.
                               </p>
@@ -1068,7 +1066,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 5 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1102,7 +1100,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 Capacities range from around 30 participants in smaller language camps to a maximum of about 400 children in our camp Lueneburger Heide. However, the maximum capacity is not reached every week. However, a minimum number of participants must be guaranteed in order to run the camp.
                                 <br />
@@ -1114,7 +1112,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 6 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1148,7 +1146,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 This question is not easy to answer and depends on the individual stage of development of your child. Therefore, as parents, we leave you the opportunity to decide for yourself. In the Junior Camp they belong to the older ones and can explore a lot in a playful way. In the Senior Camp they are the younger ones, who have role models through the older ones, whom they can emulate.
                               </p>
@@ -1167,15 +1165,14 @@ export default function FAQPage() {
                   <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
                     <div className="uk-width-1-1@m">
                       {/* CHỈ SỬA DÒNG NÀY */}
-                      <h2 className="sm:text-[4vw]! md:text-[3.5vw]! 2xl:text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center" 
-                          style={{ fontWeight: '700' }}>
+                      <h2 className="text-2xl! md:text-[2.5vw]! text-[#292c3d] font-bold! uk-text-left@m uk-text-center" >
                         <strong>Camp Routine</strong>
                       </h2>
                     
                       <div className="custom-accordion" uk-accordion="collapsible: true;">
                         {/* Câu hỏi 1 */}
                         <div className="el-item uk-margin-bottom uk-open" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1209,7 +1206,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 If your child would like to participate in a paid additional course (e.g. horse riding, language course, Survival etc.), this must be booked in advance when registering. In principle, no extra additional courses have to be booked. A program with a variety of activities is of course available to the participants in all camps. The various activities can be chosen by the participants on site in the respective camps. We present the offers to the participants, so that everyone gets an insight into the different courses. The children can then register in the lists of the respective courses.
                               </p>
@@ -1219,7 +1216,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 2 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1253,7 +1250,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 The hike is a 1-3 day walking tour, in which all participants of the Adventure Camp who stay 2 weeks in the camp take part. On this hike the participants will not spend the night in a tent, but either in the open air or under a self-made shelter e.g. from tarpaulins. They will of course be accompanied by their teamers. The hike is a very special experience and a highlight for all participants. For this hike the participants need sturdy shoes and a big backpack.
                               </p>
@@ -1263,7 +1260,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 3 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1297,7 +1294,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 In principle, participants should bring sufficient clothing and change of clothes for the entire camp period.
                                 <br />
@@ -1309,7 +1306,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 4 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1343,7 +1340,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>Dear parents</p>
                               <p>
                                 now it&apos;s almost time: In summer your child travels for the first time with Camp Adventure. Maybe it will be the first time that he travels alone without parents or relatives. As we are getting more and more questions, we have decided to put together a small package for you parents with little tips from experts to make everything as easy as possible for you and your child. Follow our tips and your child will have a fantastic holiday, have many new experiences and make friends from all over the world! All these tips have been developed together with the International Camping Fellowship. And the more you think your child will be a &quot;homesick candidate&quot; - or your child even claims to be one - the more you consider the following tips.
@@ -1462,15 +1459,14 @@ export default function FAQPage() {
                   <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
                     <div className="uk-width-1-1@m">
                       {/* CHỈ SỬA DÒNG NÀY */}
-                      <h2 className="sm:text-[4vw]! md:text-[3.5vw]! 2xl:text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center" 
-                          style={{ fontWeight: '700' }}>
+                      <h2 className="text-2xl! md:text-[2.5vw]! text-[#292c3d] font-bold! uk-text-left@m uk-text-center" >
                         <strong>Camp Counselors - Our Teamers</strong>
                       </h2>
                     
                       <div className="custom-accordion" uk-accordion="collapsible: true;">
                         {/* Câu hỏi 1 */}
                         <div className="el-item uk-margin-bottom uk-open" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1504,7 +1500,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 Every year our team is made up of an international mix. The non-profit association Camp Europe e.V. with headquarters in Hamburg and a branch office in Canada takes care of the acquisition of national and international applicants. Since we have about 50% German-speaking children, there are also German carers in every location. But many also come from other countries, such as England, Spain, Canada and Australia, to name just a few.
                               </p>
@@ -1514,7 +1510,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 2 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1548,7 +1544,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 All counselors go through an extensive application process. For a successful application, not only an interesting curriculum vitae and a minimum age of 19 years are sufficient! We conduct a personal interview with each individual in which our employees get a first impression of the applicant.
                                 <br />
@@ -1569,15 +1565,14 @@ export default function FAQPage() {
                   <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
                     <div className="uk-width-1-1@m">
                       {/* CHỈ SỬA DÒNG NÀY */}
-                      <h2 className="sm:text-[4vw]! md:text-[3.5vw]! 2xl:text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center" 
-                          style={{ fontWeight: '700' }}>
+                      <h2 className="text-2xl! md:text-[2.5vw]! text-[#292c3d] font-bold! uk-text-left@m uk-text-center" >
                         <strong>Camp Rules</strong>
                       </h2>
                     
                       <div className="custom-accordion" uk-accordion="collapsible: true;">
                         {/* Câu hỏi 1 */}
                         <div className="el-item uk-margin-bottom uk-open" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1611,7 +1606,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 From our point of view an absolutely unacceptable and indiscutable combination! Due to our cooperation with the association &quot;Keine Macht den Drogen&quot; (No power to drugs) and our common opinion that all kinds of drugs do not belong in the hands of children & teenagers, any possession or consumption of drugs is forbidden for teenagers and children in the camp and also outside the camp.
                                 <br />
@@ -1623,7 +1618,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 2 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1657,7 +1652,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 We ask all parents to write to their child at least once. This is especially useful at the beginning, as it is a particularly upsetting experience for every child and every teenager when most of the participants receive a letter, but they do not.
                                 <br />
@@ -1677,7 +1672,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 3 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1711,7 +1706,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               Yes, there are. Not allowed are pocket knives with lockable blades, all weapons, lighters and matches (danger of fire in the forest!). Drugs of any kind, including alcohol and cigarettes, are also included.
                             </div>
                           </div>
@@ -1727,15 +1722,14 @@ export default function FAQPage() {
                 <div className="uk-container uk-container-large">
                   <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
                     <div className="uk-width-1-1@m">
-                      <h2 className="sm:text-[4vw]! md:text-[3.5vw]! 2xl:text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center" 
-                          style={{ fontWeight: '700' }}>
+                      <h2 className="text-2xl! md:text-[2.5vw]! text-[#292c3d] font-bold! uk-text-left@m uk-text-center" >
                         <strong>Safety</strong>
                       </h2>
                   
                       <div className="custom-accordion" uk-accordion="collapsible: true;">
                         {/* Câu hỏi 1 */}
                         <div className="el-item uk-margin-bottom uk-open" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1769,7 +1763,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               We recommend that you do not take an MP3 player, e-book, tablet, etc. or any valuables with you. On the one hand we do not assume any liability and on the other hand there are no possibilities to charge the devices. We are of the opinion that the camp time is a special experience for the participants if they do not have the headphones in their ears all the time or are busy with their mobile phones. Instead they have the chance to deal with other topics and they find time to dedicate themselves to the new people in the camp.
                             </div>
                           </div>
@@ -1777,7 +1771,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 2 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1811,7 +1805,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               Before our camp counselors start working with us, we check their police clearance certificates. You must be at least 19 years old to work for us as a teamer. They must also have a &quot;First Aid Certificate&quot;, which must not be older than two years. In the camps we try to make sure that only adults from our camp or familiar faces are on the campground and that all our carers look after strangers.
                               <br />
                               We have many different camp sites. Some of them are fenced in, others are not. There are no armed guards or the like in our camps, as we believe that these conditions create a very insecure feeling. We do not have a high security zone in Germany, Northern Ireland or England, but we keep our eyes open and do everything we can to ensure that all participants have a great time.
@@ -1824,7 +1818,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 3 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1858,7 +1852,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 If your child should fall ill during the camp and medical help is required, he or she will of course be taken to the doctor by our carers and cared for there as well. It is therefore necessary for each participant to take their insurance card with them to the camp. We offer all participants the possibility of taking out liability, casualty & health insurance for travel abroad with us. This covers all costs in case of illness and prevents international children in particular from having to &quot;advance&quot; their own cash. You can find more detailed information on insurance{" "}
                             
@@ -1877,15 +1871,14 @@ export default function FAQPage() {
                 <div className="uk-container uk-container-large">
                   <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
                     <div className="uk-width-1-1@m">
-                      <h2 className="sm:text-[4vw]! md:text-[3.5vw]! 2xl:text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center" 
-                          style={{ fontWeight: '700' }}>
+                      <h2 className="text-2xl! md:text-[2.5vw]! text-[#292c3d] font-bold! uk-text-left@m uk-text-center" >
                         <strong>Accommodation & Catering</strong>
                       </h2>
                   
                       <div className="custom-accordion" uk-accordion="collapsible: true;">
                         {/* Câu hỏi 1 */}
                         <div className="el-item uk-margin-bottom uk-open" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1919,7 +1912,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 Full board for the entire duration of the camp is of course already included in the camp price. In addition, water and fruit are available for the participants around the clock. For us it is a matter of course to provide one variant for vegetarians and one pork-free with each meal. In case of special allergies or intolerances of your children let us know in advance and we will try to find a solution.
                               </p>
@@ -1929,7 +1922,7 @@ export default function FAQPage() {
 
                         {/* Câu hỏi 2 */}
                         <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                          <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+                          <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
                             display: 'flex', 
                             justifyContent: 'space-between', 
                             alignItems: 'center',
@@ -1963,7 +1956,7 @@ export default function FAQPage() {
                             </div>
                           </a>
                           <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-                            <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+                            <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                               <p>
                                 In our Adventure Camp Bayerischer Wald and our Camp Lueneburger Heide, the Juniors (7-12) and the Seniors (12-16) can choose between tents and huts.
                                 <br />
@@ -1984,15 +1977,14 @@ export default function FAQPage() {
   <div className="uk-container uk-container-large">
     <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
       <div className="uk-width-1-1@m">
-        <h2 className="sm:text-[4vw]! md:text-[3.5vw]! 2xl:text-[2.5vw]! text-[#292c3d] uk-text-left@m uk-text-center" 
-            style={{ fontWeight: '700' }}>
+        <h2 className="text-2xl! md:text-[2.5vw]! text-[#292c3d] font-bold! uk-text-left@m uk-text-center" >
           <strong>Transfers & Shuttles</strong>
         </h2>
     
         <div className="custom-accordion" uk-accordion="collapsible: true;">
           {/* Câu hỏi 1 */}
           <div className="el-item uk-margin-bottom uk-open" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-            <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+            <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
               display: 'flex', 
               justifyContent: 'space-between', 
               alignItems: 'center',
@@ -2026,7 +2018,7 @@ export default function FAQPage() {
               </div>
             </a>
             <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-              <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+              <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                 <p><strong>All parents need to fill this out and bring it to camp:</strong></p>
                 
                 <p><strong>Below is a summary of the travel requirements for minors from various EU countries traveling with Camp Adventure on group flights. Please note that regulations can change, so it&apos;s essential to consult the official resources provided for the most up-to-date information.</strong></p>
@@ -2071,7 +2063,7 @@ export default function FAQPage() {
 
           {/* Câu hỏi 2 */}
           <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-            <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+            <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
               display: 'flex', 
               justifyContent: 'space-between', 
               alignItems: 'center',
@@ -2105,7 +2097,7 @@ export default function FAQPage() {
               </div>
             </a>
             <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-              <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+              <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                 The respective transfer possibilities depend on the period and venue of the camp. Check directly on the respective camp page under &quot;Arrival & Departure Services&quot;.
               </div>
             </div>
@@ -2113,7 +2105,7 @@ export default function FAQPage() {
 
           {/* Câu hỏi 3 */}
           <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-            <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+            <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
               display: 'flex', 
               justifyContent: 'space-between', 
               alignItems: 'center',
@@ -2147,7 +2139,7 @@ export default function FAQPage() {
               </div>
             </a>
             <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-              <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+              <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                 Information about the different arrival and departure times can be found on the respective camp page under &quot;Arrival & Departure Services&quot;.
               </div>
             </div>
@@ -2155,7 +2147,7 @@ export default function FAQPage() {
 
           {/* Câu hỏi 4 */}
           <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-            <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+            <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
               display: 'flex', 
               justifyContent: 'space-between', 
               alignItems: 'center',
@@ -2189,7 +2181,7 @@ export default function FAQPage() {
               </div>
             </a>
             <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-              <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+              <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                 <p>When booking a train or air trip, the indicated price includes the arrival and departure as well as the accompaniment by a supervisor.</p>
               </div>
             </div>
@@ -2197,7 +2189,7 @@ export default function FAQPage() {
 
           {/* Câu hỏi 5 */}
           <div className="el-item uk-margin-bottom" style={{ marginBottom: '20px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-            <a className="sm:text-[3.0vw]! md:text-[2vw]! 2xl:text-[1vw]! uk-accordion-title" href="#" style={{ 
+            <a className="text-md! md:text-[1.5vw]! uk-accordion-title" href="#" style={{ 
               display: 'flex', 
               justifyContent: 'space-between', 
               alignItems: 'center',
@@ -2231,7 +2223,7 @@ export default function FAQPage() {
               </div>
             </a>
             <div className="uk-accordion-content" style={{display:"flow-root", marginTop:"0.1px"}}>
-              <div className="sm:text-[2.5vw]! md:text-[2vw]! lg:text-[2vw]! xl:text-[1.5vw]! 2xl:text-[1vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
+              <div className="text-md! md:text-[1.2vw]! uk-panel rounded-b-lg bg-[var(--color-primary)]" style={{padding: '15px 40px'}}>
                 <p>You will receive the exact address and directions of the camp with the Last Travel Information about 3-4 weeks before the camp starts.</p>
               </div>
             </div>
