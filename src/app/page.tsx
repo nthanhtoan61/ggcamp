@@ -385,7 +385,7 @@ export default function HomePage() {
         buttonContent={
           <Link href="/booking">
             <button
-              className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-[1vw] md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-base md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
               onMouseEnter={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 setCoords({
@@ -440,7 +440,10 @@ export default function HomePage() {
         }
       >
         {/* Contact Box */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-3 2xl:gap-6 px-4 md:px-6 2xl:px-16 py-4 md:py-4 2xl:py-5 rounded-xl text-white shadow-md backdrop-blur-sm contact-box w-full" style={{ backgroundColor: 'rgba(128, 128, 128, 0.3)' }}>
+        <div
+          className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-3 2xl:gap-6 px-4 md:px-6 2xl:px-16 py-4 md:py-4 2xl:py-5 rounded-xl text-white shadow-md backdrop-blur-sm contact-box w-full"
+          style={{ backgroundColor: "rgba(128, 128, 128, 0.3)" }}
+        >
           <div className="flex items-start gap-2 2xl:gap-3 max-sm:hidden">
             <div className="p-2 rounded-full"></div>
             <div className="!text-[1.7vw] 2xl:!text-[1.8vw] text-white font-semibold leading-snug !text-left">
@@ -451,7 +454,10 @@ export default function HomePage() {
           <div className="w-px h-6 2xl:h-8 bg-white/30 max-sm:hidden"></div>
 
           {/* Call */}
-          <a href="tel:+123456789" className="group flex items-center gap-2 md:gap-2 2xl:gap-3 w-full md:w-auto">
+          <a
+            href="tel:+123456789"
+            className="group flex items-center gap-2 md:gap-2 2xl:gap-3 w-full md:w-auto"
+          >
             <div className="p-2 md:p-3 rounded-full transition-colors duration-300 group-hover:bg-[var(--color-primary)]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -504,7 +510,10 @@ export default function HomePage() {
           <div className="w-full md:w-px h-px md:h-6 2xl:h-8 bg-white/30"></div>
 
           {/* Working Hours */}
-          <a href="#" className="group flex items-center gap-2 md:gap-2 2xl:gap-3 w-full md:w-auto">
+          <a
+            href="#"
+            className="group flex items-center gap-2 md:gap-2 2xl:gap-3 w-full md:w-auto"
+          >
             <div className="p-2 md:p-3 rounded-full transition-colors duration-300 group-hover:bg-[var(--color-primary)]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -530,7 +539,6 @@ export default function HomePage() {
         </div>
       </HeroSection>
 
-
       {/*About Us*/}
       <AboutSection />
 
@@ -539,9 +547,19 @@ export default function HomePage() {
         <div className="uk-container">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1">
-              <h2 className="uk-h2 uk-text-center@m uk-text-center">
-                <p className="!text-[5vw] !font-bold">Activities</p>
-              </h2>
+              <div className="uk-h2 uk-text-center@m uk-text-center">
+                <div className="inline-flex items-center gap-[0.5vw] !text-[var(--color-primary)] text-xl md:text-[2vw] !font-bold !mb-[4vh] !tracking-wider uppercase leading-none">
+                  <img
+                    src="https://demo.awaikenthemes.com/wildex/wp-content/themes/wildex/assets/images/icon-sub-heading.svg"
+                    alt="icon"
+                    className="w-6 h-6 md:w-[2vw] md:h-[2vw] object-contain flex-shrink-0"
+                  />
+                  Activies
+                </div>
+                <div className="text-2xl md:text-[2.5vw]  !font-bold text-gray-900 !mb-[2vh] !mt-0 leading-tight">
+                  Explore Our Activities
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -565,7 +583,7 @@ export default function HomePage() {
                 <div className="uk-text-center uk-margin-large">
                   <Link href="/booking">
                     <button
-                      className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-[1vw] md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
+                      className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-base md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
                       onMouseEnter={(e) => {
                         const rect = e.currentTarget.getBoundingClientRect();
                         setCoords({
@@ -593,7 +611,9 @@ export default function HomePage() {
                           fill="currentColor"
                           className="w-4 h-4 md:w-[1.2vw] md:h-[1.2vw] transition-transform duration-500"
                           style={{
-                            transform: hovered ? "rotate(45deg)" : "rotate(0deg)",
+                            transform: hovered
+                              ? "rotate(45deg)"
+                              : "rotate(0deg)",
                           }}
                         >
                           <path

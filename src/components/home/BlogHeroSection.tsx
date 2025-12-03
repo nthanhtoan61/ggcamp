@@ -8,25 +8,30 @@ export default function BlogHeroSection() {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   return (
-    <div className="py-8 md:!py-[6vh]">
-      <div className="px-6 md:!px-[10vw]  mx-auto">
+    <div className="py-8 md:py-[6vh]">
+      <div className="px-6 md:px-[10vw] mx-auto">
         <div className="uk-text-center">
-          <p className="!text-[1vw] md:!text-[1vw] text-gray-600 mb-2 md:!mb-[1vh]">
+          <p className="inline-flex items-center gap-2 md:gap-[0.5vw] !text-[var(--color-primary)] text-xl md:text-[1.7vw] !font-bold mb-6 md:mb-[4vh] !tracking-wider uppercase leading-none">
+            <img
+              src="https://demo.awaikenthemes.com/wildex/wp-content/themes/wildex/assets/images/icon-sub-heading.svg"
+              alt="icon"
+              className="w-6 h-6 md:w-[2vw] md:h-[2vw] object-contain flex-shrink-0"
+            />
             Your next step
           </p>
-          <h2 className="!text-[4vw] md:!text-[2.7vw] !font-bold !leading-tight mb-4 md:!mb-[2vh]">
+          <div className="text-2xl md:text-[2.5vw] !font-bold text-gray-900 mb-4 md:mb-[2vh] !mt-0 leading-tight">
             Read Every News & Blog
-          </h2>
-          <p className="!text-[1vw] md:!text-[1vw] text-gray-600 mb-2 md:!mb-[1vh]">
+          </div>
+          <p className="text-lg md:text-[1vw] text-gray-600 mb-2 md:mb-[1vh]">
             Our approach combines creativity and strategy to meet your goals.
           </p>
-          <p className="!text-[1vw] md:!text-[1vw] text-gray-600 mb-4 md:!mb-[2vh]">
+          <p className="text-lg md:text-[1vw] text-gray-600 mb-4 md:mb-[2vh]">
             We emphasize responsiveness and personalized service.
           </p>
 
           <Link href="/booking">
             <button
-              className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-[1vw] md:text-[1vw] lg:text-[0.95vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="relative overflow-hidden rounded-full px-6 md:px-[2vw] py-3 md:py-[1.5vh] font-bold bg-[var(--color-primary)] hover:bg-[#b8b76a] text-black text-base md:text-[1vw] mt-4 md:mt-[2vh] transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1"
               onMouseEnter={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 setCoords({
