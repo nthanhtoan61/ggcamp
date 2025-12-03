@@ -1192,7 +1192,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Which languages are spoken in camp?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         The main language in all our camps is English. In
                         addition, there is the language of the country in which
                         the camp takes place. As we have our headquarters in
@@ -1212,7 +1212,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Who are the camp counselors?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         Every year our team is made up of an international mix.
                         The non-profit association Camp Europe e.V. with
                         headquarters in Hamburg and a branch office in Canada
@@ -1234,7 +1234,7 @@ export default function DestinationsPage() {
                         Should 12-year-olds rather go to Junior Camp or Senior
                         Camp?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         This question is not easy to answer and depends on the
                         individual stage of development of your child.
                         Therefore, as parents, we leave you the opportunity to
@@ -1254,7 +1254,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         How do you provide safety for the kids?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         Before our camp counselors start working with us, we
                         check their police clearance certificates. You must be
                         at least 19 years old to work for us as a teamer. They
@@ -1283,7 +1283,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         How is my child accommodated in camp?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         In the Creative, Sports & Adventure Camp in Neuburg the
                         participants are accommodated in tents with 6-7 persons.
                         These are equipped with a floor and a wooden gallery.
@@ -1307,7 +1307,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Where do kids and camp counselors come from?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         Go and Grow Camp attaches great importance to
                         internationality. The participants and supervisors in
                         our camps come from many different countries. Last year,
@@ -1336,7 +1336,7 @@ export default function DestinationsPage() {
                         How is the choice of activities/courses in the camps
                         made?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         If your child would like to participate in a paid
                         profile (e.g. horse riding, language course, GEOlino),
                         this must be booked in advance when registering. In
@@ -1359,7 +1359,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         How big are the camps? How high is the caregiver key?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         Capacities range from around 30 participants in smaller
                         language camps to a maximum of 350 children. However,
                         the maximum capacity is not reached every week. However,
@@ -1383,7 +1383,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         When do I have to pay the price for the booked camp?
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         The deposit must be paid within 7 days of receipt of the
                         booking confirmation. The remaining payment for the
                         booked camp is due 4 weeks before the start of the camp
@@ -1467,7 +1467,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Background Check
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           Every counselor, chef, teamer who enters our camps has
                           to be registrated, needs a background check as well as
@@ -1487,7 +1487,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Education
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           Each supervisor must complete an almost two-week
                           training course with us, which from early in the
@@ -1509,7 +1509,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Crisis Intervention
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           If something should happen, it is not only important
                           to provide first aid for the affected person, but also
@@ -1529,7 +1529,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Caregiver Key
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           No safety without sufficient staff! We are the leaders
                           in Germany with our great caregiver key. There are no
@@ -1554,7 +1554,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Nightwatch
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           All our camps are also supervised at night by the
                           counselors/teamers. On the one hand we want to prevent
@@ -1578,7 +1578,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Cooperation
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           Cooperation with the independent representative for
                           questions of sexual child abuse via our umbrella
@@ -1611,7 +1611,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Quality
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           As a member of the quality committee of the
                           professional association for children and youth travel
@@ -1634,7 +1634,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         Accessibility
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           Of course, all parents receive a number from us, which
                           allows them to reach us 24 hours a day in an
@@ -1653,7 +1653,7 @@ export default function DestinationsPage() {
                       <h3 className="el-title uk-card-title uk-margin-top uk-margin-remove-bottom !text-[1.67vw] !font-semibold">
                         In case of emergency
                       </h3>
-                      <div className="el-content uk-panel uk-margin-top !text-[#9c5d00]">
+                      <div className="el-content uk-panel uk-margin-top !text-[#cbca7b]">
                         <p>
                           Every caregiver has a valid first aid certificate and
                           can help if necessary.

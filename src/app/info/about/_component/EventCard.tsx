@@ -66,7 +66,7 @@ export default function EventCard({
 
           <a
             href="#"
-            className="text-[#9c5d00] flex items-center gap-[0.5vw] text-sm lg:text-[0.9vw]!"
+            className="text-[#cbca7b] flex items-center gap-[0.5vw] text-sm lg:text-[0.9vw]!"
           >
             Read More
             <svg

@@ -836,7 +836,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .search-field-input {
               width: 100%;
               padding: 0.75rem 1rem;
-              border: 2px solid #9c5d00;
+              border: 2px solid #cbca7b;
               border-radius: 8px;
               font-size: 1rem;
               background: white;
@@ -853,7 +853,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             }
             .search-button {
               padding: 0.75rem 2rem;
-              background: #9c5d00;
+              background: #cbca7b;
               color: white;
               border: none;
               border-radius: 8px;
@@ -1123,7 +1123,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               justify-content: center;
               cursor: pointer;
               transition: all 0.2s;
-              color: #9c5d00;
+              color: #cbca7b;
               font-size: 18px;
             }
             .pagination-arrow:hover:not(:disabled) {
@@ -1164,7 +1164,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               background: #e0e0e0;
             }
             .pagination-page.active {
-              background: #9c5d00;
+              background: #cbca7b;
               color: white;
               font-weight: 600;
             }
@@ -1195,7 +1195,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #9c5d00;
+              background: #cbca7b;
               cursor: pointer;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
               transition: all 0.3s;
@@ -1210,7 +1210,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #9c5d00;
+              background: #cbca7b;
               cursor: pointer;
               border: none;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -1225,7 +1225,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .price-slider::-webkit-slider-runnable-track {
               height: 8px;
               border-radius: 5px;
-              background: linear-gradient(to right, #9c5d00 0%, #9c5d00 var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
+              background: linear-gradient(to right, #cbca7b 0%, #cbca7b var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
             }
             .price-slider::-moz-range-track {
               height: 8px;
@@ -1235,7 +1235,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .price-slider::-moz-range-progress {
               height: 8px;
               border-radius: 5px;
-              background: #9c5d00;
+              background: #cbca7b;
             }
           `,
         }}
@@ -1418,7 +1418,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                         right: "10px",
                         top: "50%",
                         transform: "translateY(-50%)",
-                        background: "#9c5d00",
+                        background: "#cbca7b",
                         color: "white",
                         border: "none",
                         borderRadius: "50%",
@@ -1862,7 +1862,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
 
               <div className="mb-6 md:mb-[2vh]">
                  {/* Responsive Bar Size */}
-                <div className="w-24 h-1 md:w-[6.5vw] md:h-[0.5vh] bg-[#9c5d00] rounded-full -mt-2 mb-4 mx-auto md:mx-0" />
+                <div className="w-24 h-1 md:w-[6.5vw] md:h-[0.5vh] bg-[#cbca7b] rounded-full -mt-2 mb-4 mx-auto md:mx-0" />
                 <p className="text-base md:text-[1vw] text-gray-600 leading-normal md:leading-[1.4vw]">
                   Sign up to receive the latest news about new camps,
                   activities, and exciting opportunities. Don’t miss out on
@@ -1882,7 +1882,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                 />
                 <button
                   type="submit"
-                  className="bg-[#9c5d00] text-white px-6 md:px-[3vw] py-3 md:py-[1.5vh] rounded-r-full md:rounded-lg shadow hover:bg-[#238a56] flex items-center gap-2 md:gap-[0.5vw] text-sm md:text-[0.9vw] font-medium"
+                  className="bg-[#cbca7b] text-white px-6 md:px-[3vw] py-3 md:py-[1.5vh] rounded-r-full md:rounded-lg shadow hover:bg-[#238a56] flex items-center gap-2 md:gap-[0.5vw] text-sm md:text-[0.9vw] font-medium"
                 >
                   <span>Subscribe</span>
                   <svg

@@ -252,13 +252,22 @@ footer .uk-margin .el-link .el-image img {
   font-size: 14px;
 }
 
+/* Ensure footer headings are white */
+footer .uk-panel h3 {
+  color: #ffffff !important;
+}
+
+footer .footer-social h3 {
+  color: #ffffff !important;
+}
+
 .ripple-button {
   position: relative;
   overflow: hidden;
   border-radius: 9999px;
   padding: 1rem 2rem;
   font-weight: bold;
-  background-color: #9c5d00;
+  background-color: #cbca7b;
   color: white;
   cursor: pointer;
   transition: color 0.3s;
@@ -274,7 +283,7 @@ footer .uk-margin .el-link .el-image img {
 }
 
 .button-text.hovered {
-  color: #9c5d00;
+  color: #cbca7b;
 }
 
 .button-icon {
@@ -326,7 +335,7 @@ footer .uk-margin .el-link .el-image img {
 }
 
 .contact-box a:hover .icon-wrapper {
-  background-color: #9c5d00;
+  background-color: #cbca7b;
 }
 
 @keyframes fadeUp {

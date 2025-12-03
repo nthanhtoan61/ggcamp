@@ -621,7 +621,7 @@ export default function BookingPage() {
             .search-field-input {
               width: 100%;
               padding: 0.75rem 1rem;
-              border: 2px solid #9c5d00;
+              border: 2px solid #cbca7b;
               border-radius: 8px;
               font-size: 1rem;
               background: white;
@@ -638,7 +638,7 @@ export default function BookingPage() {
             }
             .search-button {
               padding: 0.75rem 2rem;
-              background: #9c5d00;
+              background: #cbca7b;
               color: white;
               border: none;
               border-radius: 8px;
@@ -760,7 +760,7 @@ export default function BookingPage() {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #9c5d00;
+              background: #cbca7b;
               cursor: pointer;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
               transition: all 0.3s;
@@ -814,7 +814,7 @@ export default function BookingPage() {
               justify-content: center;
               cursor: pointer;
               transition: all 0.2s;
-              color: #9c5d00;
+              color: #cbca7b;
               font-size: 18px;
             }
             .pagination-arrow:hover:not(:disabled) {
@@ -853,7 +853,7 @@ export default function BookingPage() {
               background: #e0e0e0;
             }
             .pagination-page.active {
-              background: #9c5d00;
+              background: #cbca7b;
               color: white;
               font-weight: 600;
             }

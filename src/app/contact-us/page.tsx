@@ -15,8 +15,9 @@ declare global {
 }
 
 // Icon components based on type
-// iconType can be: URL image (http:// or https://), empty string, or icon type (phone, email, etc.)
-const getIcon = (iconType: string) => {
+// iconType can be: URL image (http:// or https://), FontAwesome class (fas fa-*), empty string, or icon type (phone, email, etc.)
+// iconSource: "fontawesome" hoặc undefined (default SVG)
+const getIcon = (iconType: string, iconSource?: string) => {
   // If iconType is empty, return null
   if (!iconType || iconType.trim() === "") {
     return null;
@@ -40,7 +41,25 @@ const getIcon = (iconType: string) => {
     );
   }
 
-  // Otherwise, treat as icon type and return SVG
+  // If iconSource is "fontawesome", render FontAwesome icon
+  if (iconSource === "fontawesome" && iconType.trim() !== "") {
+    // iconType should be FontAwesome class like "fas fa-envelope", "fa fa-phone", etc.
+    return (
+      <i
+        className={iconType}
+        style={{
+          fontSize: "inherit",
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      />
+    );
+  }
+
+  // Otherwise, treat as icon type and return SVG (backward compatible)
   const iconClass =
     "w-[4vw] h-[4vw] sm:w-[3vw] sm:h-[3vw] md:w-[2vw] md:h-[2vw] lg:w-[1.5vw] lg:h-[1.5vw]";
   const commonProps = {
@@ -285,48 +304,50 @@ export default function ContactUsPage() {
                 <div
                   className="
                 bg-white rounded-xl p-[4vw] sm:p-[3vw] lg:p-[2vw] shadow-md transition-all duration-300 
-                hover:-translate-y-1 hover:shadow-lg flex flex-col h-full group"
+                hover:-translate-y-1 hover:shadow-lg flex flex-row sm:flex-col h-full group"
                 >
                   {card.iconType && card.iconType.trim() !== "" && (
-                    <div className="w-[12vw] h-[12vw] sm:w-[8vw] sm:h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[4vw] lg:h-[4vw] rounded-full bg-[#e8f5e9] flex items-center justify-center mb-[2vh] sm:mb-[1.5vh] text-gray-600 transition-colors group-hover:bg-[#9c5d00] group-hover:text-white">
+                    <div className="w-[12vw] h-[12vw] sm:w-[8vw] sm:h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[4vw] lg:h-[4vw] rounded-full bg-[#cbca7b] flex items-center justify-center mb-0 sm:mb-[1.5vh] mr-[3vw] sm:mr-0 flex-shrink-0 text-gray-600 transition-colors group-hover:bg-[#cbca7b] group-hover:text-white">
                       <div className="transition-colors">
-                        {getIcon(card.iconType)}
+                        {getIcon(card.iconType, card.iconSource)}
                       </div>
                     </div>
                   )}
 
-                  <div className="text-[4vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] font-bold text-[#1a1a1a] mb-[1.5vh] sm:mb-[1vh]">
-                    {card.title}
-                  </div>
+                  <div className="flex-1 flex flex-col">
+                    <div className="text-[4vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] font-bold text-[#1a1a1a] mb-[1.5vh] sm:mb-[1vh]">
+                      {card.title}
+                    </div>
 
-                  <div className="text-[#666] text-[3.5vw] sm:text-[2vw] md:text-[1.5vw] lg:text-[1.2vw] leading-relaxed">
-                    {card.content.map((item, i) =>
-                      card.type === "location" ? (
-                        <p
-                          key={i}
-                          className="my-2 no-underline cursor-pointer hover:text-[#E9A919] transition-colors"
-                          onClick={() => {
-                            const mapSection =
-                              document.getElementById("contact-map");
-                            if (mapSection) {
-                              mapSection.scrollIntoView({
-                                behavior: "smooth",
-                                block: "center",
-                              });
-                            }
-                          }}
-                        >
-                          {item}
-                        </p>
-                      ) : (
-                        <p
-                          key={i}
-                          className="my-2 hover:text-[#E9A919] transition-colors"
-                        >
-                          {item}
-                        </p>
-                      )
-                    )}
+                    <div className="text-[#666] text-[3.5vw] sm:text-[2vw] md:text-[1.5vw] lg:text-[1.2vw] leading-relaxed">
+                      {card.content.map((item, i) =>
+                        card.type === "location" ? (
+                          <p
+                            key={i}
+                            className="my-2 no-underline cursor-pointer hover:text-[#E9A919] transition-colors"
+                            onClick={() => {
+                              const mapSection =
+                                document.getElementById("contact-map");
+                              if (mapSection) {
+                                mapSection.scrollIntoView({
+                                  behavior: "smooth",
+                                  block: "center",
+                                });
+                              }
+                            }}
+                          >
+                            {item}
+                          </p>
+                        ) : (
+                          <p
+                            key={i}
+                            className="my-2 hover:text-[#E9A919] transition-colors"
+                          >
+                            {item}
+                          </p>
+                        )
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -405,7 +426,7 @@ export default function ContactUsPage() {
                             });
                           }}
                           required={field.required}
-                          className="w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-gray-300 rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh] focus:outline-none focus:ring-2 focus:ring-[#9c5d00] focus:border-[#9c5d00]"
+                          className="w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-[#cbca7b] rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh] focus:outline-none focus:ring-2 focus:ring-[#cbca7b] focus:border-[#cbca7b]"
                         />
                       </div>
                     );
@@ -417,7 +438,7 @@ export default function ContactUsPage() {
                     value: formData[field.name] || "",
                     onChange: handleInputChange,
                     required: field.required,
-                    className: `w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-gray-300 rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh] focus:outline-none focus:ring-2 focus:ring-[#9c5d00] focus:border-[#9c5d00]`,
+                    className: `w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-[#cbca7b] rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh] focus:outline-none focus:ring-2 focus:ring-[#cbca7b] focus:border-[#cbca7b]`,
                   };
 
                   if (field.type === "textarea") {
@@ -442,8 +463,8 @@ export default function ContactUsPage() {
                 <button
                   type="submit"
                   className="
-                bg-[#9c5d00] text-white px-[4vw] sm:px-[3vw] lg:px-[1.5vw] py-[2vh] sm:py-[1.5vh] lg:py-[0.75vh] rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] font-semibold 
-                hover:bg-[#7a4a00] hover:-translate-y-1 hover:shadow-lg 
+                bg-[#cbca7b] text-white px-[3.6vw] sm:px-[3vw] lg:px-[1.5vw] py-[1.8vh] sm:py-[1.5vh] lg:py-[0.75vh] rounded-lg text-[3.6vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] font-semibold 
+                hover:bg-[#a8a769] hover:-translate-y-1 hover:shadow-lg 
                 transition-all inline-flex items-center gap-[2vw] sm:gap-[1vw] lg:gap-[0.5vw]
               "
                 >
