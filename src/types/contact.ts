@@ -17,6 +17,7 @@ export interface ContactCard {
   title: string;
   content: string[];
   iconType: string;
+  iconSource?: string; // "fontawesome" hoặc undefined (default SVG)
 }
 
 export interface MapCoordinates {
@@ -62,4 +63,3 @@ export interface ContactData {
   map: ContactMap;
   form: ContactForm;
 }
-
