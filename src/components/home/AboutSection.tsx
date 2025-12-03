@@ -357,7 +357,7 @@ export function AboutSection() {
                 {/* Count Circle */}
                 <div
                   ref={circleRef}
-                  className="w-[2.5vw] h-[2.5vw] max-sm:w-[8vw] max-sm:h-[8vw] flex items-center justify-center rounded-full bg-white text-[#9c5d00] font-bold opacity-0 animate-fadeUp flex-shrink-0"
+                  className="w-[2.5vw] h-[2.5vw] max-sm:w-[8vw] max-sm:h-[8vw] flex items-center justify-center rounded-full bg-white text-[#cbca7b] font-bold opacity-0 animate-fadeUp flex-shrink-0"
                   style={{ animationDelay: "1000ms" }}
                 >
                   <span className="text-[0.8vw] max-sm:text-[2.5vw] font-bold">{count}</span>
@@ -409,7 +409,7 @@ export function AboutSection() {
         <div className="flex-1 flex flex-col gap-[1vw] max-sm:gap-[2vw] max-sm:w-full max-sm:mt-[4vw]">
           <h3
             ref={aboutUsTitleRef}
-            className="about-title !text-[5vw] max-sm:!text-[8vw] !md:text-[4.5vw] text-[#9c5d00] !font-bold uppercase tracking-wider m-0 max-sm:text-center"
+            className="about-title !text-[5vw] max-sm:!text-[8vw] !md:text-[4.5vw] text-[#cbca7b] !font-bold uppercase tracking-wider m-0 max-sm:text-center"
           >
             About Us
           </h3>
