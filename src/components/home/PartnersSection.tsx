@@ -71,8 +71,8 @@ export default function PartnersSection() {
         </div>
 
         {/* CTA Button */}
-        <div className="text-left md:text-center">
-          <div className="inline-flex flex-nowrap items-center justify-start md:justify-center  px-4 md:!px-[1vw] py-2 md:!py-[1.5vh] rounded-full transition-colors cursor-pointer">
+        <div className="text-center">
+          <div className="inline-flex flex-nowrap items-center justify-center px-4 md:!px-[1vw] py-2 md:!py-[1.5vh] rounded-full transition-colors cursor-pointer">
             <span className="bg-[var(--color-primary)] !text-black !text-[1vw] md:!text-[1vw] px-[0.1vh] md:!px-[0.5vw] py-[0.1vh] md:!py-[0.5vh] rounded-2xl whitespace-nowrap">
               Free
             </span>
