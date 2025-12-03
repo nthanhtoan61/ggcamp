@@ -16,7 +16,7 @@ export default function NotFound() {
       <h1 style={{ 
         fontSize: '6rem', 
         fontWeight: 'bold', 
-        color: '#9c5d00',
+        color: '#cbca7b',
         margin: 0 
       }}>
         404
@@ -40,7 +40,7 @@ export default function NotFound() {
         href="/" 
         style={{
           padding: '0.75rem 2rem',
-          background: '#9c5d00',
+          background: '#cbca7b',
           color: '#ffffff',
           textDecoration: 'none',
           borderRadius: '4px',

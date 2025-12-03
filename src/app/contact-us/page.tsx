@@ -252,7 +252,7 @@ export default function ContactUsPage() {
                 hover:-translate-y-1 hover:shadow-lg flex flex-col h-full group
               "
                 >
-                  <div className="w-[12vw] h-[12vw] sm:w-[8vw] sm:h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[4vw] lg:h-[4vw] rounded-full bg-[#e8f5e9] flex items-center justify-center mb-[2vh] sm:mb-[1.5vh] text-gray-600 transition-colors group-hover:bg-[#9c5d00] group-hover:text-white">
+                  <div className="w-[12vw] h-[12vw] sm:w-[8vw] sm:h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[4vw] lg:h-[4vw] rounded-full bg-[#e8f5e9] flex items-center justify-center mb-[2vh] sm:mb-[1.5vh] text-gray-600 transition-colors group-hover:bg-[#cbca7b] group-hover:text-white">
                     <div className="transition-colors">{card.icon}</div>
                   </div>
 
@@ -333,7 +333,7 @@ export default function ContactUsPage() {
                   onChange={handleInputChange}
                   required
                   className="w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-gray-300 rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh] 
-                focus:outline-none focus:ring-2 focus:ring-[#9c5d00] focus:border-[#9c5d00]"
+                focus:outline-none focus:ring-2 focus:ring-[#cbca7b] focus:border-[#cbca7b]"
                 />
 
                 <input
@@ -344,7 +344,7 @@ export default function ContactUsPage() {
                   onChange={handleInputChange}
                   required
                   className="w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-gray-300 rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh]
-                focus:outline-none focus:ring-2 focus:ring-[#9c5d00] focus:border-[#9c5d00]"
+                focus:outline-none focus:ring-2 focus:ring-[#cbca7b] focus:border-[#cbca7b]"
                 />
 
                 <input
@@ -355,7 +355,7 @@ export default function ContactUsPage() {
                   onChange={handleInputChange}
                   required
                   className="w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-gray-300 rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh]
-                focus:outline-none focus:ring-2 focus:ring-[#9c5d00] focus:border-[#9c5d00]"
+                focus:outline-none focus:ring-2 focus:ring-[#cbca7b] focus:border-[#cbca7b]"
                 />
 
                 <input
@@ -367,7 +367,7 @@ export default function ContactUsPage() {
                   required
                   suppressHydrationWarning
                   className="w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-gray-300 rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh]
-                focus:outline-none focus:ring-2 focus:ring-[#9c5d00] focus:border-[#9c5d00]"
+                focus:outline-none focus:ring-2 focus:ring-[#cbca7b] focus:border-[#cbca7b]"
                 />
 
                 <textarea
@@ -377,13 +377,13 @@ export default function ContactUsPage() {
                   onChange={handleInputChange}
                   required
                   className="w-full p-[3vw] sm:p-[2vw] lg:p-[1vw] border border-gray-300 rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] mb-[2vh] sm:mb-[1vh] min-h-[20vh] sm:min-h-[15vh] 
-                focus:outline-none focus:ring-2 focus:ring-[#9c5d00] focus:border-[#9c5d00]"
+                focus:outline-none focus:ring-2 focus:ring-[#cbca7b] focus:border-[#cbca7b]"
                 />
 
                 <button
                   type="submit"
                   className="
-                bg-[#9c5d00] text-white px-[4vw] sm:px-[3vw] lg:px-[1.5vw] py-[2vh] sm:py-[1.5vh] lg:py-[0.75vh] rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] font-semibold 
+                bg-[#cbca7b] text-white px-[4vw] sm:px-[3vw] lg:px-[1.5vw] py-[2vh] sm:py-[1.5vh] lg:py-[0.75vh] rounded-lg text-[4vw] sm:text-[2.5vw] md:text-[1.8vw] lg:text-[1.2vw] font-semibold 
                 hover:bg-[#7a4a00] hover:-translate-y-1 hover:shadow-lg 
                 transition-all inline-flex items-center gap-[2vw] sm:gap-[1vw] lg:gap-[0.5vw]
               "
