@@ -1,7 +1,7 @@
 "use client";
 
 import { getTemplateImageUrl } from "@/lib/assets";
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 
 interface HeroSectionProps {
   title: string | ReactNode;
@@ -28,7 +28,23 @@ export function HeroSection({
   buttonContent,
   children,
 }: HeroSectionProps) {
-  const imageUrl = getTemplateImageUrl(backgroundImage);
+  // Check if backgroundImage is a full URL (from CMS) or relative path
+  // Use useMemo to only recalculate when backgroundImage changes
+  const imageUrl = useMemo(() => {
+    const isFullUrl =
+      backgroundImage.startsWith("http://") ||
+      backgroundImage.startsWith("https://");
+    const baseImageUrl = isFullUrl
+      ? backgroundImage
+      : getTemplateImageUrl(backgroundImage);
+    // Add cache-busting query parameter based on image URL to force browser reload when image changes
+    // Use filename from URL as cache buster - when image changes, filename changes, so browser will reload
+    const cacheBuster = backgroundImage.split("/").pop() || backgroundImage;
+    return `${baseImageUrl}${
+      baseImageUrl.includes("?") ? "&" : "?"
+    }v=${encodeURIComponent(cacheBuster)}`;
+  }, [backgroundImage]);
+
   const bgPositionClass =
     backgroundPosition === "center-center"
       ? "uk-background-center-center"
@@ -62,12 +78,16 @@ export function HeroSection({
               ? "center bottom"
               : "center top",
           backgroundRepeat: "no-repeat",
-          minHeight: "50vw",
+          backgroundAttachment: "scroll",
+          minHeight: "60vh",
+          height: "auto",
           position: "relative",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          paddingBottom: "8vw", // Extra padding to ensure image bottom is visible
+          paddingBottom: "10vh", // Extra padding to ensure image bottom is visible
+          overflow: "visible",
+          clipPath: "none",
         }}
       >
         <div
@@ -109,7 +129,17 @@ export function HeroSection({
           </div>
         </div>
         {children && (
-          <div className="uk-container uk-container-large" style={{ zIndex: 1, maxWidth: "100%", marginTop: "8rem", position: "relative", paddingLeft: "0.5rem", paddingRight: "0.5rem" }}>
+          <div
+            className="uk-container uk-container-large"
+            style={{
+              zIndex: 1,
+              maxWidth: "100%",
+              marginTop: "8rem",
+              position: "relative",
+              paddingLeft: "0.5rem",
+              paddingRight: "0.5rem",
+            }}
+          >
             <div className="flex flex-col items-center justify-center w-full">
               {children}
             </div>

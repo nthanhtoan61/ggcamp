@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "backgroundImage": "yootheme/cache/5e/sicherheit_header-5ede6167.jpeg",
+    "overlayColor": "rgba(0, 0, 0, 0)",
+    "sectionClass": "uk-section-secondary uk-section-overlap uk-preserve-color uk-light",
+    "titleClass": "uk-heading-large uk-text-center !text-[5vw]",
+    "enableScrollspy": true,
+    "backgroundPosition": "top-center"
+  },
+  "contactCards": [
+    {
+      "type": "phone",
+      "title": "Phone Number",
+      "content": ["+123456789"],
+      "iconType": "phone"
+    },
+    {
+      "type": "email",
+      "title": "Email Address",
+      "content": ["office@ggcamp.org"],
+      "iconType": "email"
+    },
+    {
+      "type": "location",
+      "title": "Our Location",
+      "content": ["Poblacion, Madridejos 22, Cebu City, Philippines"],
+      "iconType": "location"
+    },
+    {
+      "type": "hours",
+      "title": "Working hours",
+      "content": ["Monday to Saturday: 07pm - 05am", "Sunday: Closed"],
+      "iconType": "clock"
+    }
+  ],
+  "map": {
+    "coordinates": {
+      "lat": 10.3157,
+      "lng": 123.8854
+    },
+    "zoom": 15,
+    "location": "Poblacion, Madridejos 22, Cebu City, Philippines",
+    "markerTitle": "Our Office",
+    "tileLayer": {
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+      "maxZoom": 18,
+      "minZoom": 0
+    }
+  },
+  "form": {
+    "sectionLabel": "Contact Us",
+    "heading": "Let's plan your dream adventure - contact our team today",
+    "fields": [
+      {
+        "name": "firstName",
+        "type": "text",
+        "placeholder": "First name",
+        "required": true
+      },
+      {
+        "name": "lastName",
+        "type": "text",
+        "placeholder": "Last name",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Phone Number",
+        "required": true
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "placeholder": "Email Address",
+        "required": true
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Send Message",
+        "required": true
+      }
+    ],
+    "submitButton": {
+      "text": "Send Message"
+    }
+  }
+}
