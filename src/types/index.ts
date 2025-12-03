@@ -14,3 +14,6 @@ export interface ButtonProps extends BaseComponentProps {
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
 }
+
+// Re-export contact types
+export * from "./contact";
