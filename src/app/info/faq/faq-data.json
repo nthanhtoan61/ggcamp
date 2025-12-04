@@ -1,0 +1,235 @@
+{
+  "hero": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our camps",
+    "backgroundImage": "yootheme/cache/18/faqs_header_new.jpg",
+    "overlayColor": "rgba(0, 0, 0, 0)",
+    "sectionClass": "uk-section-secondary uk-section-overlap uk-preserve-color uk-light",
+    "titleClass": "uk-heading-large uk-text-center !text-[5vw]",
+    "enableScrollspy": true,
+    "backgroundPosition": "top-center"
+  },
+  
+  "sidebarNav": [
+    {
+      "id": "general-information",
+      "label": "General Information"
+    },
+    {
+      "id": "camps",
+      "label": "Camps"
+    },
+    {
+      "id": "camp-routine",
+      "label": "Camp Routine"
+    },
+    {
+      "id": "camp-counselors",
+      "label": "Camp Counselors"
+    },
+    {
+      "id": "camp-rules",
+      "label": "Camp Rules"
+    },
+    {
+      "id": "safety",
+      "label": "Safety"
+    },
+    {
+      "id": "accommodation-catering",
+      "label": "Accommodation & Catering"
+    },
+    {
+      "id": "transfers-shuttles",
+      "label": "Transfers & Shuttles"
+    }
+  ],
+  
+  "contactBox": {
+    "title": "Let's plan your perfect nature escape",
+    "phone": {
+      "icon": "phone",
+      "text": "+(123)-456-789"
+    },
+    "email": {
+      "icon": "email", 
+      "text": "hello@ggcamp.org"
+    }
+  },
+  
+  "faqSections": [
+    {
+      "id": "general-information",
+      "title": "General Information",
+      "faqs": [
+        {
+          "title": "What are FAQ?",
+          "description": "FAQ are the initials for \"Frequently Asked Questions\".\n\nThe FAQ have been compiled by us over a long period of time and are intended to help give a general overview of our camps and clarify questions that arise before booking a camp."
+        },
+        {
+          "title": "General booking process",
+          "description": "Once the booking has been confirmed by us, you will receive an e-mail requesting a deposit. As soon as we have received this, you will receive an e-mail with a payment confirmation.\nPlease have a look at the welcome package, which will reach you by e-mail with the Last Travel Information. This contains information that applies to the camp you have booked.\n\nStep 1: Registration\nStep 2: Receipt of registration confirmation, total invoice and deposit request (e-mail)\nStep 3: Deposit of USD 50 (due within 7 days after booking)\nStep 4: Receiving an email with the latest important travel information, a packing list, addresses and important emergency phone numbers plus remaining payment request about 3-4 weeks before the camp starts."
+        },
+        {
+          "title": "Terms & Conditions",
+          "description": "Our Terms & Conditions can be found in our official documents section."
+        },
+        {
+          "title": "Where can I find a packing guide for Camps?",
+          "description": "Just click here to download our packing list."
+        },
+        {
+          "title": "Where can I find contact information from Camps and addresses?",
+          "description": "Here you can find all the necessary information if you want to drive to our camps or send something. If you want to send something please ALWAYS include the full name of your child on the letter/package and please only send it at the time when your kids are staying in camp as we cannot store it for a longer period of time.\n\nWalsrode/Lüneburger Heide - Germany:\nCamp Adventure, Vethem 58, 29664 Walsrode, Germany\nwalsrode@campadventure.de\n\nRegen/Bavarian Forest - Germany:\nCamp Adventure, Badstrasse 18, 94209 Regen\nregen@campadventure.de\n\nBarcelona - Spain:\nBISC International Sailing Center, c/o Camp Adventure, Parc del Fòrum Sota plaça fotovoltàica, 08930 Sant Adrià de Besòs, Barcelona, Spain\nbarcelona@campadventure.de\n\nBath - England:\nUniversity of Bath, c/o Camp Adventure, Claverton Down, Bath BA2 7AY, England\nengland@campadventure.de\n\nRossall - England:\nRossall School, Broadway, Fleetwood, Lancashire FY7 8JW, England\nengland@campadventure.de"
+        }
+      ]
+    },
+    {
+      "id": "camps",
+      "title": "Camps",
+      "faqs": [
+        {
+          "title": "Where do kids and camp counselors come from?",
+          "description": "Camp Adventure attaches great importance to internationality. The participants and supervisors in our camps come from many different countries. Last year, for example, we had participants from over 60 different countries and counselors from 25 different nations. Of course, we don't know where they will come from this year. So we are at least as excited as you are.\n\nThrough our office in Hamburg and our branch office in Canada, we reach motivated and committed counselors from all over the world. Canadian and Australian teamers can therefore be found as well as German or Spanish teamers.\n\nDue to the different experiences and cultural backgrounds an indescribably fantastic, international atmosphere is created."
+        },
+        {
+          "title": "Which languages are spoken in camp?",
+          "description": "The main language in all our camps is English. In addition, there is the language of the country in which the camp takes place. As we have our headquarters in Germany, German teamers are always present in all camps in Germany. All announcements and explanations are here therefore always in German and English. Of course, all our teamers with their different nationalities are also available for individual translations."
+        },
+        {
+          "title": "Are there problems if children have low language skills?",
+          "description": "No, because there are usually more participants and team members who speak the same language. We know from experience that children are excellent at communicating nonverbally. They often need a few days to warm up to it, but are then very open to other children as well."
+        },
+        {
+          "title": "Are girls and boys separated?",
+          "description": "Girls and boys are accommodated separately in the dormitories/tents. The program is completely mixed."
+        },
+        {
+          "title": "How big are the camps? How high is the caregiver ratio?",
+          "description": "Capacities range from around 30 participants in smaller language camps to a maximum of about 400 children in our camp Lueneburger Heide. However, the maximum capacity is not reached every week. However, a minimum number of participants must be guaranteed in order to run the camp.\n\nIt is important to us that all children are always grouped in small groups of 5-8, with a counselor as a contact person. This way homesickness doesn't stand a chance and despite the size of the camp in their group family, they experience a strong bond on which they can count on!"
+        },
+        {
+          "title": "Should 12-year-olds go to Junior Camp or Senior Camp?",
+          "description": "This question is not easy to answer and depends on the individual stage of development of your child. Therefore, as parents, we leave you the opportunity to decide for yourself. In the Junior Camp they belong to the older ones and can explore a lot in a playful way. In the Senior Camp they are the younger ones, who have role models through the older ones, whom they can emulate."
+        }
+      ]
+    },
+    {
+      "id": "camp-routine",
+      "title": "Camp Routine",
+      "faqs": [
+        {
+          "title": "How is the choice of activities/courses in the camps made?",
+          "description": "If your child would like to participate in a paid additional course (e.g. horse riding, language course, Survival etc.), this must be booked in advance when registering. In principle, no extra additional courses have to be booked. A program with a variety of activities is of course available to the participants in all camps. The various activities can be chosen by the participants on site in the respective camps. We present the offers to the participants, so that everyone gets an insight into the different courses. The children can then register in the lists of the respective courses."
+        },
+        {
+          "title": "What is a hike?",
+          "description": "The hike is a 1-3 day walking tour, in which all participants of the Adventure Camp who stay 2 weeks in the camp take part. On this hike the participants will not spend the night in a tent, but either in the open air or under a self-made shelter e.g. from tarpaulins. They will of course be accompanied by their teamers. The hike is a very special experience and a highlight for all participants. For this hike the participants need sturdy shoes and a big backpack."
+        },
+        {
+          "title": "Can I wash my clothes during the camp?",
+          "description": "In principle, participants should bring sufficient clothing and change of clothes for the entire camp period.\n\nOnly in the camps in Lüneburger Heide and Bayerischer Wald a laundry service will be offered for kids staying three weeks or more, which means that a laundry bag (approx. 3 kg) will be washed in the laundry centre of the next village at a price of USD 45. This service can be booked upon registration for three-week camps. Please note that the laundry will be done either after one week or after two weeks."
+        },
+        {
+          "title": "Anti Homesick Adviser",
+          "description": "Dear parents\n\nNow it's almost time: In summer your child travels for the first time with Camp Adventure. Maybe it will be the first time that he travels alone without parents or relatives. As we are getting more and more questions, we have decided to put together a small package for you parents with little tips from experts to make everything as easy as possible for you and your child. Follow our tips and your child will have a fantastic holiday, have many new experiences and make friends from all over the world! All these tips have been developed together with the International Camping Fellowship. And the more you think your child will be a \"homesick candidate\" - or your child even claims to be one - the more you consider the following tips."
+        }
+      ]
+    },
+    {
+      "id": "camp-counselors",
+      "title": "Camp Counselors - Our Teamers",
+      "faqs": [
+        {
+          "title": "Who are the camp counselors?",
+          "description": "Every year our team is made up of an international mix. The non-profit association Camp Europe e.V. with headquarters in Hamburg and a branch office in Canada takes care of the acquisition of national and international applicants. Since we have about 50% German-speaking children, there are also German carers in every location. But many also come from other countries, such as England, Spain, Canada and Australia, to name just a few."
+        },
+        {
+          "title": "How are the teamers trained?",
+          "description": "All counselors go through an extensive application process. For a successful application, not only an interesting curriculum vitae and a minimum age of 19 years are sufficient! We conduct a personal interview with each individual in which our employees get a first impression of the applicant.\n\nBefore the camp season, everyone, both the first supervisors (teamers) as well as many recomers, complete a one-week training in which they are prepared for their assignment by trained coaches. They must have a first aid certificate, which may not be older than two years, as well as an internationally flawless police clearance certificate. We know how important the teamers are for a great camp and therefore select them very conscientiously."
+        }
+      ]
+    },
+    {
+      "id": "camp-rules",
+      "title": "Camp Rules",
+      "faqs": [
+        {
+          "title": "Drugs, Alcohol & Camp?",
+          "description": "From our point of view an absolutely unacceptable and indiscutable combination! Due to our cooperation with the association \"Keine Macht den Drogen\" (No power to drugs) and our common opinion that all kinds of drugs do not belong in the hands of children & teenagers, any possession or consumption of drugs is forbidden for teenagers and children in the camp and also outside the camp.\n\nViolations can lead to exclusion or even to criminal charges. The term \"drugs\" also includes cigarettes and alcohol! Through our varied activities, we offer a much better alternative! We would like to make it clear from the outset that we are also against any form of discrimination or \"putting down\". This is - just like violence - immediately prevented by us, in order to offer each young person a relaxed and joyful time in the camp."
+        },
+        {
+          "title": "Should I call my kid or write an old-fashioned letter?",
+          "description": "We ask all parents to write to their child at least once. This is especially useful at the beginning, as it is a particularly upsetting experience for every child and every teenager when most of the participants receive a letter, but they do not.\n\nPlease note that there is NO public \"camp phone\" available for incoming or outgoing calls. If your child doesn't bring her/his own phone, she/he won't be able to call you. In case of any problems, we will of course contact you immediately.\n\nIf your child brings a mobile phone, we will collect it on arrival and store it with the valuables. Your child's Teamer may hand it over during the phone time after lunch. Please keep in mind: no news is good news (the location manager will contact you if it is necessary due to homesickness or illness). We kindly ask you not to call the office in Hamburg to ask about your kid's health and wellbeing, nor if you would like to know why your child hasn't called you yet. Please use our camp email service for such enquiries.\n\nOur recommendation is the following:\nWe recommend not to call your child (even if he or she has a mobile phone with him or her) and not to tell him or her to call you. Telephoning can in our experience promote homesickness very strongly and your child will be cured thereby if completely immersed in camp life! At noon after lunch, if absolutely necessary, your child can pick up his or her mobile phone from the counselors until the start of next program and make phone calls. Instead, you are welcome to bring a pre-stamped and addressed envelope with you. We will then make sure that your child has enough time to write letters. Since letters and postcards often arrive late at the camps, we also offer the e-mail service. You can send your child max. ONE email per day directly to the camp, which we then print out and give to your child. There is no way for them to reply, but your child will be happy to receive a small message from home. You can find the postal and email address in the info package of the booked camp."
+        },
+        {
+          "title": "Are there any prohibited items?",
+          "description": "Yes, there are. Not allowed are pocket knives with lockable blades, all weapons, lighters and matches (danger of fire in the forest!). Drugs of any kind, including alcohol and cigarettes, are also included."
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "title": "Safety",
+      "faqs": [
+        {
+          "title": "Electronic equipment and valuables",
+          "description": "We recommend that you do not take an MP3 player, e-book, tablet, etc. or any valuables with you. On the one hand we do not assume any liability and on the other hand there are no possibilities to charge the devices. We are of the opinion that the camp time is a special experience for the participants if they do not have the headphones in their ears all the time or are busy with their mobile phones. Instead they have the chance to deal with other topics and they find time to dedicate themselves to the new people in the camp."
+        },
+        {
+          "title": "How do you provide safety for the kids?",
+          "description": "Before our camp counselors start working with us, we check their police clearance certificates. You must be at least 19 years old to work for us as a teamer. They must also have a \"First Aid Certificate\", which must not be older than two years. In the camps we try to make sure that only adults from our camp or familiar faces are on the campground and that all our carers look after strangers.\n\nWe have many different camp sites. Some of them are fenced in, others are not. There are no armed guards or the like in our camps, as we believe that these conditions create a very insecure feeling. We do not have a high security zone in Germany, Northern Ireland or England, but we keep our eyes open and do everything we can to ensure that all participants have a great time."
+        },
+        {
+          "title": "Insurance in case of illness?",
+          "description": "If your child should fall ill during the camp and medical help is required, he or she will of course be taken to the doctor by our carers and cared for there as well. It is therefore necessary for each participant to take their insurance card with them to the camp. We offer all participants the possibility of taking out liability, casualty & health insurance for travel abroad with us. This covers all costs in case of illness and prevents international children in particular from having to \"advance\" their own cash. You can find more detailed information on insurance in our documents section."
+        }
+      ]
+    },
+    {
+      "id": "accommodation-catering",
+      "title": "Accommodation & Catering",
+      "faqs": [
+        {
+          "title": "How's the food at the camps?",
+          "description": "Full board for the entire duration of the camp is of course already included in the camp price. In addition, water and fruit are available for the participants around the clock. For us it is a matter of course to provide one variant for vegetarians and one pork-free with each meal. In case of special allergies or intolerances of your children let us know in advance and we will try to find a solution."
+        },
+        {
+          "title": "How is my child accommodated in the camp?",
+          "description": "In our Adventure Camp Bayerischer Wald and our Camp Lueneburger Heide, the Juniors (7-12) and the Seniors (12-16) can choose between tents and huts.\n\nThe tents are equipped with a floor and a wooden platform, up to 7 children can share one tent. The participants can make themselves comfortable with sleeping bag and sleeping mat. The wooden huts are equipped with bunk beds and can accommodate 4-8 children. At the other locations, participants will be accommodated in shared rooms in youth hostels, sports centres or boarding schools of private schools. You will find detailed information about the accommodation on the individual camp pages."
+        }
+      ]
+    },
+    {
+      "id": "transfers-shuttles",
+      "title": "Transfers & Shuttles",
+      "faqs": [
+        {
+          "title": "Entry regulations/Travel Consent for group flights",
+          "description": "All parents need to fill this out and bring it to camp:\n\nBelow is a summary of the travel requirements for minors from various EU countries traveling with Camp Adventure on group flights. Please note that regulations can change, so it's essential to consult the official resources provided for the most up-to-date information."
+        },
+        {
+          "title": "Which transfers are offered?",
+          "description": "The respective transfer possibilities depend on the period and venue of the camp. Check directly on the respective camp page under \"Arrival & Departure Services\"."
+        },
+        {
+          "title": "Where can I find the exact arrival and departure times?",
+          "description": "Information about the different arrival and departure times can be found on the respective camp page under \"Arrival & Departure Services\"."
+        },
+        {
+          "title": "How do the transfer costs come about?",
+          "description": "When booking a train or air trip, the indicated price includes the arrival and departure as well as the accompaniment by a supervisor."
+        },
+        {
+          "title": "Where can I find the address/driving directions from the camp?",
+          "description": "You will receive the exact address and directions of the camp with the Last Travel Information about 3-4 weeks before the camp starts."
+        }
+      ]
+    }
+  ],
+  
+  "video": {
+    "url": "https://www.youtube.com/embed/3NtE5wSwYTo?list=PLSOedrxa1c-bxvH6uuz_oZdIfJkov66wB&disablekb=1",
+    "title": "Anti Homesickness Adviser"
+  }
+}
