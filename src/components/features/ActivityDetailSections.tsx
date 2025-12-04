@@ -13,15 +13,11 @@ export default function ActivityDetailSections({
   outroText = ["outro text 1"],
   mainHeading = "Glamping that gives back to nature in style",
   mainDescription = [
-    "Eco-friendly glamping is reshaping how we connect with the outdoors—pairing the beauty of nature with sustainable comfort. From solar-powered tents and eco-conscious amenities to locally sourced cuisine and minimal-impact designs, every detail is crafted to protect the environment while enhancing your stay.",
+    "mainDescription text 1",
   ],
 
   principles = [
-    "Luxury doesn't have to cost the earth. Our glamping site blends high-end comfort with eco-conscious practices",
-    "Learn how we combine modern comforts with sustainable practices to protect the wild spaces we love",
-    "From solar power to zero-waste initiatives, explore the ways our glamping experience stays eco-friendly",
-    "We believe that connecting with nature should go hand in hand with protecting it",
-    "Why settle for roughing it when you can relax responsibly? Our eco-glamping model blends modern amenities",
+    "principles text 1",
   ],
   footerText = ["footer text 1"],
 }) {
@@ -136,7 +132,7 @@ export default function ActivityDetailSections({
         <div className="mb-8 max-w-5xl mx-auto">
           <ul className="space-y-3">
             {principles.map((principle, index) => (
-              <li key={index} className="flex items-start gap-3">
+              <li key={index} className="flex items-center gap-3">
                 <svg
                   style={{ marginTop: "6px", flexShrink: 0 }}
                   width="7"
@@ -146,9 +142,9 @@ export default function ActivityDetailSections({
                 >
                   <circle cx="9" cy="9" r="9" fill="var(--color-primary)" />
                 </svg>
-                <p className="text-gray-600 text-base md:text-[1vw] leading-relaxed m-0">
+                <div className="text-gray-600 text-base text-[1vw] leading-relaxed m-0">
                   {principle}
-                </p>
+                </div>
               </li>
             ))}
           </ul>

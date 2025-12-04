@@ -120,7 +120,7 @@ export default function AdventureSportsCreativePage({}) {
         backgroundImage="yootheme/cache/04/01-Abenteuercamp-Bogenschieen-044ac9af.jpg"
         overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
-        titleClass="uk-heading-large uk-text-center"
+        titleClass="uk-heading-large uk-text-center ]"
       />
 
       {/* Basic Info Section */}
@@ -128,8 +128,8 @@ export default function AdventureSportsCreativePage({}) {
         id="Start"
         className="uk-section-default uk-section uk-padding-remove-bottom "
       >
-        <div className="uk-container" 
-          style={{ color: "var(--color-primary)" }}>
+        <div className="uk-container " 
+        >
           <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
             <div className="uk-light uk-width-1-3@s uk-width-1-6@m">
               <div>
@@ -292,7 +292,7 @@ export default function AdventureSportsCreativePage({}) {
                               fill="currentColor"
                               className="sidebar-arrow"
                               style={{
-                                color: "#bebc1bff",
+                             
                                 transform: "rotate(0deg)",
                                 transition:
                                   "transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s ease",
@@ -672,7 +672,7 @@ export default function AdventureSportsCreativePage({}) {
                 </h2>
 
                 <div className="border-t border-b border-gray-200 py-6">
-                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8" style={{ color: "var(--color-primary)" }}>
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
                     {/* Start Date */}
                     <div className="flex items-start gap-3">
                       <Clock className="w-6 h-6 text-gray-700 mt-1" />
