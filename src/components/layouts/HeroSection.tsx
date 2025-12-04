@@ -79,7 +79,7 @@ export function HeroSection({
               : "center top",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "scroll",
-          height: "150vh",
+          height: "70vh",
           position: "relative",
           display: "flex",
           flexDirection: "column",
