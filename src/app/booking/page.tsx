@@ -5,6 +5,7 @@ import { getTemplateImageUrl } from "@/lib/assets";
 import Image from "next/image";
 import React, { useState, useEffect, useMemo } from "react";
 import { Calendar, Users, MapPin } from "lucide-react";
+import { HeroSection } from "@/components/layouts";
 
 // Extend Window interface for Leaflet
 declare global {
@@ -871,54 +872,15 @@ export default function BookingPage() {
         }}
       />
       {/* Hero Section */}
-      <div
-        className="uk-section-primary uk-section-overlap uk-position-relative"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
-      >
-        <div
-          data-src={getTemplateImageUrl("yootheme/banner/b7.jpg")}
-          uk-img=""
-          className="uk-background-norepeat uk-background-cover uk-background-top-center uk-section uk-section-xlarge"
-          style={{
-            backgroundImage: `url(${getTemplateImageUrl("yootheme/banner/b7.jpg")})`,
-          }}
-        >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-          ></div>
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <h1
-                  className="uk-heading-large uk-text-center"
-                  uk-scrollspy-class=""
-                >
-                  Booking
-                </h1>
-                <div
-                  className="uk-panel uk-text-lead uk-margin uk-text-center"
-                  uk-scrollspy-class=""
-                >
-                  <p>International Sports & Language Camps</p>
-                </div>
-                <div className="uk-margin uk-text-right" uk-scrollspy-class="">
-                  <Image
-                    src={getTemplateImageUrl(
-                      "yootheme/cache/12/Storer-min-125a5bd1.png"
-                    )}
-                    width={400}
-                    height={200}
-                    className="el-image"
-                    alt="Book Now!"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        title="Booking"
+        backgroundImage="yootheme/banner/b13.jpg"
+        overlayColor="rgba(0, 0, 0, 0)"
+        sectionClass="uk-section-primary uk-section-overlap"
+        titleClass="uk-heading-large uk-text-center !text-[5vw]"
+        enableScrollspy={true}
+        backgroundPosition="top-center"
+      />
 
 
     {/* Search Bar Section */}

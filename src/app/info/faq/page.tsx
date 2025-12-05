@@ -270,11 +270,11 @@ useEffect(() => {
       <HeroSection
               title={
                 <>
-                  Go and Grow Camp<br />
+                  Frequently Asked Questions<br />
                   
                 </>
               }
-              backgroundImage="yootheme\cache\18\faqs_header_new.jpg"
+              backgroundImage="yootheme/banner/b15.jpg"
               overlayColor="rgba(0, 0, 0, 0.35)"
               sectionClass="uk-section-secondary uk-section-overlap uk-preserve-color uk-light"
               titleClass="uk-heading-large uk-text-center !text-[5vw]"

@@ -11,13 +11,6 @@
   --color-foreground: var(--foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 /* Reset margins and padding for html and body */
 html,
 body {
@@ -470,4 +463,45 @@ footer .footer-social h3 {
 
 .uk-heading-bullet::before {
   border-left-color: var(--color-primary) !important;
+}
+
+/* Header */
+.tm-header .uk-navbar-container {
+  background: transparent !important;
+}
+
+.tm-header .uk-navbar-container.uk-navbar-sticky {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent) !important;
+  box-shadow: none !important;
+}
+
+/* White text for all navigation links */
+.tm-header .uk-navbar-container .uk-navbar-nav > li > a,
+.tm-header .uk-navbar-container .uk-navbar-nav > li > a:link,
+.tm-header .uk-navbar-container .uk-navbar-nav > li > a:visited {
+  color: #fff !important;
+}
+
+.tm-header .uk-navbar-container .uk-navbar-nav > li:hover > a,
+.tm-header .uk-navbar-container .uk-navbar-nav > li > a:hover,
+.tm-header .uk-navbar-container .uk-navbar-nav > li > a[aria-expanded="true"] {
+  color: #fff !important;
+  opacity: 0.9;
+}
+
+.tm-header .uk-navbar-container .uk-navbar-nav > li.uk-active > a {
+  color: #fff !important;
+}
+
+/* White text when sticky */
+.tm-header .uk-navbar-container.uk-navbar-sticky .uk-navbar-nav > li > a,
+.tm-header .uk-navbar-container.uk-navbar-sticky .uk-navbar-nav > li > a:link,
+.tm-header .uk-navbar-container.uk-navbar-sticky .uk-navbar-nav > li > a:visited {
+  color: #fff !important;
+}
+
+.tm-header .uk-navbar-container.uk-navbar-sticky .uk-navbar-nav > li:hover > a,
+.tm-header .uk-navbar-container.uk-navbar-sticky .uk-navbar-nav > li > a:hover {
+  color: #fff !important;
+  opacity: 0.9;
 }

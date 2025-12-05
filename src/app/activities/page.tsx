@@ -1263,7 +1263,7 @@ export default function CampProfilesPage() {
         backgroundImage="yootheme/banner/b9.jpg"
         overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
-        titleClass="uk-heading-large uk-text-center !text-[10vw] md:text-[5vw]"
+        titleClass="uk-heading-large uk-text-center !text-[5vw]"
       />
 
       {/* Search Bar Section */}

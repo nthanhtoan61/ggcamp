@@ -142,7 +142,7 @@ export default function SafetyPage() {
       {/* Hero Section */}
       <HeroSection
         title={<>Safety</>}
-        backgroundImage="yootheme/cache/18/faqs_header_new.jpg"
+        backgroundImage="yootheme/banner/b13.jpg"
         overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
         titleClass="uk-heading-large uk-text-center !text-[5vw]"

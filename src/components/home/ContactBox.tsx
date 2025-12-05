@@ -1,8 +1,9 @@
 export default function ContactBox() {
     return (
         <div
-            className="flex flex-col md:flex-row justify-around items-center gap-6 md:gap-8 py-5 md:py-6 2xl:py-7 px-6 md:px-10 2xl:px-10 rounded-xl text-white shadow-md backdrop-blur-sm contact-box w-full"
-            style={{ backgroundColor: "rgba(128, 128, 128, 0.3)" }}
+            className="flex flex-col md:flex-row justify-around items-center gap-6 md:gap-8 py-5 md:py-6 2xl:py-7 px-6 md:px-10 2xl:px-10 rounded-xl text-white shadow-md contact-box w-full"
+            style={{ 
+                backgroundColor: "#00000020"}}
         >
             {/* Adventure Journey Text */}
             <div className="flex items-center gap-3 2xl:gap-4 max-sm:hidden whitespace-nowrap flex-shrink-0">
@@ -32,7 +33,7 @@ export default function ContactBox() {
                     </svg>
                 </div>
                 <div className="flex flex-col gap-y-0 items-start">
-                    <h3 className="text-white !font-semibold !text-[4vw] md:!text-[1.2vw] 2xl:!text-[1.5vw] mb-0 mt-0 !leading-none whitespace-nowrap !mb-1">
+                    <h3 className="!text-white !font-semibold !text-[4vw] md:!text-[1.2vw] 2xl:!text-[1.5vw] mb-0 mt-0 !leading-none whitespace-nowrap !mb-1">
                         Call us
                     </h3>
                     <span className="!text-[3.5vw] md:!text-[0.95vw] 2xl:!text-[1vw] text-white/90 font-normal whitespace-nowrap">
@@ -61,7 +62,7 @@ export default function ContactBox() {
                     </svg>
                 </div>
                 <div className="flex flex-col gap-y-0 items-start">
-                    <h3 className="text-white !font-semibold !text-[4vw] md:!text-[1.2vw] 2xl:!text-[1.5vw] mb-0 mt-0 !leading-none whitespace-nowrap !mb-1">
+                    <h3 className="!text-white !font-semibold !text-[4vw] md:!text-[1.2vw] 2xl:!text-[1.5vw] mb-0 mt-0 !leading-none whitespace-nowrap !mb-1">
                         Email
                     </h3>
                     <span className="!text-[3.5vw] md:!text-[0.95vw] 2xl:!text-[1vw] text-white/90 font-normal whitespace-nowrap">
@@ -91,7 +92,7 @@ export default function ContactBox() {
                     </svg>
                 </div>
                 <div className="flex flex-col gap-y-0 items-start">
-                    <h3 className="text-white !font-semibold !text-[4vw] md:!text-[1.2vw] 2xl:!text-[1.5vw] mb-0 mt-0 !leading-none whitespace-nowrap !mb-1">
+                    <h3 className="!text-white !font-semibold !text-[4vw] md:!text-[1.2vw] 2xl:!text-[1.5vw] mb-0 mt-0 !leading-none whitespace-nowrap !mb-1">
                         Working Hours
                     </h3>
                     <span className="!text-[3.5vw] md:!text-[0.95vw] 2xl:!text-[1vw] text-white/90 font-normal whitespace-nowrap">

@@ -76,7 +76,7 @@ export function HeroSection({
                 : "center top",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "scroll",
-          height: "70vh",
+          height: "110vh",
           position: "relative",
           display: "flex",
           flexDirection: "column",
@@ -84,6 +84,7 @@ export function HeroSection({
           paddingBottom: "10vh",
           overflow: "hidden",
           clipPath: "none",
+          top: "-20vh"
         }}
       >
         <div
