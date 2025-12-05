@@ -29,7 +29,7 @@ export function MissionVisionSection() {
                 marginBottom: 'clamp(1.5rem, 3vh, 2rem)',
               }}
             >
-              <h2 className="text-center md:text-left whitespace-normal md:whitespace-nowrap tracking-normal"
+              <h2 className="text-center md:text-left whitespace-normal md:whitespace-nowrap tracking-normal !text-[#cbca7b] !mb-[4vh] !font-bold"
                 style={{
                   fontSize: 'clamp(1.125rem, 1.5vw, 1.5rem)',
                   marginBottom: 'clamp(1rem, 2vh, 1.875rem)',

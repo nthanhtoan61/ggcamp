@@ -188,8 +188,7 @@ export const Footer: React.FC = () => {
                       rel="noopener noreferrer"
                       className="text-white no-underline text-base md:text-lg hover:text-amber-400 transition-colors"
                     >
-                      Poblacion, Madridejos 22,
-                      Cebu City, Philippines
+                      Poblacion, Madridejos 22, Cebu City, Philippines
                     </a>
                   </p>
                   <p className="text-lg md:text-xl lg:text-[1.1vw] mt-4 flex items-center">
@@ -227,7 +226,10 @@ export const Footer: React.FC = () => {
                           rel="noreferrer"
                           className="text-white hover:text-amber-400 transition-colors"
                         >
-                          <span uk-icon="icon: facebook; width: 28; height: 28;" className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"></span>
+                          <span
+                            uk-icon="icon: facebook; width: 28; height: 28;"
+                            className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"
+                          ></span>
                         </a>
                       </li>
                       <li>
@@ -238,7 +240,10 @@ export const Footer: React.FC = () => {
                           rel="noreferrer"
                           className="text-white hover:text-amber-400 transition-colors"
                         >
-                          <span uk-icon="icon: twitter; width: 28; height: 28;" className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"></span>
+                          <span
+                            uk-icon="icon: twitter; width: 28; height: 28;"
+                            className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"
+                          ></span>
                         </a>
                       </li>
                       <li>
@@ -249,7 +254,10 @@ export const Footer: React.FC = () => {
                           rel="noreferrer"
                           className="text-white hover:text-amber-400 transition-colors"
                         >
-                          <span uk-icon="icon: instagram; width: 28; height: 28;" className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"></span>
+                          <span
+                            uk-icon="icon: instagram; width: 28; height: 28;"
+                            className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"
+                          ></span>
                         </a>
                       </li>
                       <li>
@@ -260,7 +268,10 @@ export const Footer: React.FC = () => {
                           rel="noreferrer"
                           className="text-white hover:text-amber-400 transition-colors"
                         >
-                          <span uk-icon="icon: behance; width: 28; height: 28;" className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"></span>
+                          <span
+                            uk-icon="icon: behance; width: 28; height: 28;"
+                            className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"
+                          ></span>
                         </a>
                       </li>
                       <li>
@@ -271,13 +282,15 @@ export const Footer: React.FC = () => {
                           rel="noreferrer"
                           className="text-white hover:text-amber-400 transition-colors"
                         >
-                          <span uk-icon="icon: linkedin; width: 28; height: 28;" className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"></span>
+                          <span
+                            uk-icon="icon: linkedin; width: 28; height: 28;"
+                            className="w-[20px] h-[20px] lg:w-[1.45vw] lg:h-[1.45vw]"
+                          ></span>
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -286,7 +299,7 @@ export const Footer: React.FC = () => {
 
       <div className="footer-bottom">
         <span className="portfolio block text-center text-sm lg:text-base text-white">
-          © 2002-2025 GGC @ All Rights Reserved
+          © 2025 GGC @ All Rights Reserved
         </span>
       </div>
     </footer>
