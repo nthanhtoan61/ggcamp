@@ -5,9 +5,9 @@ import { getMediaCssUrl, getTemplateCssUrl } from "@/lib/assets";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "International adventure, sports & language camps",
+  title: "Go and Grow Camp",
   description:
-    "Adventure, sports & language camps for kids & teens aged 7–17 in Germany, England & Ireland ✅ Book now!",
+    "Go and Grow Camp is a leading provider of international adventure, sports & language camps for kids & teens aged ✅ Book now!",
 };
 
 export default function RootLayout({
