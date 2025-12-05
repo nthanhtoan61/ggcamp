@@ -52,394 +52,406 @@ export default function CampProfilesPage() {
   const [appliedSearchHolidaySeason, setAppliedSearchHolidaySeason] =
     useState("");
 
-  const programs = useMemo(() => [
-    { value: "adventure", label: "Adventure, Sports & Creative", count: 0 },
-    { value: "arts-crafts", label: "Arts & Crafts", count: 0 },
-    { value: "climbing", label: "Climbing", count: 0 },
-    { value: "dancing", label: "Dancing", count: 0 },
-    { value: "diving", label: "Diving", count: 0 },
-    { value: "englisch-camps", label: "Englischcamps", count: 0 },
-    { value: "englisch-toefl", label: "Englisch TOEFL©", count: 0 },
-    { value: "fishing", label: "Fishing", count: 0 },
-    { value: "german-camps", label: "German Camps", count: 0 },
-    { value: "horseback", label: "Horseback Riding", count: 0 },
-    { value: "husky", label: "Husky Camp", count: 0 },
-    {
-      value: "icit",
-      label: "International Counsellor in Training (ICIT)",
-      count: 0,
-    },
-    { value: "lifeguarding", label: "Lifeguarding", count: 0 },
-    { value: "language", label: "Language", count: 0 },
-    { value: "leadership", label: "Leadership", count: 0 },
-    { value: "multi-water", label: "Multi Water Adventure", count: 0 },
-    { value: "sailing", label: "Sailing", count: 0 },
-    { value: "skating", label: "Skating", count: 0 },
-    { value: "soccer", label: "Soccer", count: 0 },
-    { value: "space", label: "Space Exploration", count: 0 },
-    { value: "spanish", label: "Spanishcourse", count: 0 },
-    { value: "survival", label: "Survival", count: 0 },
-    { value: "swimming", label: "Swimming", count: 0 },
-    { value: "tennis", label: "Tennis", count: 0 },
-    { value: "windsurf", label: "Windsurfing", count: 0 },
-  ], []);
+  const programs = useMemo(
+    () => [
+      { value: "adventure", label: "Adventure, Sports & Creative", count: 0 },
+      { value: "arts-crafts", label: "Arts & Crafts", count: 0 },
+      { value: "climbing", label: "Climbing", count: 0 },
+      { value: "dancing", label: "Dancing", count: 0 },
+      { value: "diving", label: "Diving", count: 0 },
+      { value: "englisch-camps", label: "Englischcamps", count: 0 },
+      { value: "englisch-toefl", label: "Englisch TOEFL©", count: 0 },
+      { value: "fishing", label: "Fishing", count: 0 },
+      { value: "german-camps", label: "German Camps", count: 0 },
+      { value: "horseback", label: "Horseback Riding", count: 0 },
+      { value: "husky", label: "Husky Camp", count: 0 },
+      {
+        value: "icit",
+        label: "International Counsellor in Training (ICIT)",
+        count: 0,
+      },
+      { value: "lifeguarding", label: "Lifeguarding", count: 0 },
+      { value: "language", label: "Language", count: 0 },
+      { value: "leadership", label: "Leadership", count: 0 },
+      { value: "multi-water", label: "Multi Water Adventure", count: 0 },
+      { value: "sailing", label: "Sailing", count: 0 },
+      { value: "skating", label: "Skating", count: 0 },
+      { value: "soccer", label: "Soccer", count: 0 },
+      { value: "space", label: "Space Exploration", count: 0 },
+      { value: "spanish", label: "Spanishcourse", count: 0 },
+      { value: "survival", label: "Survival", count: 0 },
+      { value: "swimming", label: "Swimming", count: 0 },
+      { value: "tennis", label: "Tennis", count: 0 },
+      { value: "windsurf", label: "Windsurfing", count: 0 },
+    ],
+    []
+  );
 
-  const holidays = useMemo(() => [
-    { value: "autumn", label: "Autumn" },
-    { value: "spring", label: "Spring" },
-    { value: "summer", label: "Summer" },
-  ], []);
+  const holidays = useMemo(
+    () => [
+      { value: "autumn", label: "Autumn" },
+      { value: "spring", label: "Spring" },
+      { value: "summer", label: "Summer" },
+    ],
+    []
+  );
 
-  const locations = useMemo(() => [
-    { value: "philippines", label: "Philippines" },
-    { value: "vietnam", label: "Vietnam" },
-    { value: "portugal", label: "Portugal" },
-    { value: "china", label: "China" },
-    { value: "thailand", label: "Thailand" },
-    { value: "malaysia", label: "Malaysia" },
-    { value: "holiday", label: "Holiday" },
-  ], []);
+  const locations = useMemo(
+    () => [
+      { value: "philippines", label: "Philippines" },
+      { value: "vietnam", label: "Vietnam" },
+      { value: "portugal", label: "Portugal" },
+      { value: "china", label: "China" },
+      { value: "thailand", label: "Thailand" },
+      { value: "malaysia", label: "Malaysia" },
+      { value: "holiday", label: "Holiday" },
+    ],
+    []
+  );
 
   // Camp data
-  const camps: Camp[] = useMemo(() => [
-    {
-      name: "Adventure, Sports & Creative",
-      price: 395,
-      priceText: "from 395 USD",
-      season: ["spring", "summer", "autumn"],
-      age: [12, 18],
-      locations: ["thailand"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/53/00_Abenteuercamp-Hike-533b20fa.jpg"
-      ),
-      link: "/adventure-sports-creative",
-      program: "adventure",
-      rating: 5,
-    },
-    {
-      name: "Arts & Crafts",
-      price: 500,
-      priceText: "from 500 USD",
-      season: ["spring", "summer", "autumn"],
-      age: [12, 18],
-      locations: ["vietnam"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/c6/01-Kreativprogramm-in-der-Ferienfreizeit-c6e95722.jpg"
-      ),
-      link: "/arts-crafts",
-      program: "arts-crafts",
-      rating: 4,
-    },
-    {
-      name: "Climbing",
-      price: 515,
-      priceText: "from 515 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["philippines"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/40/00-Kletterkurs_Sommercamp_Bayern-40f1bd8d.jpg"
-      ),
-      link: "/climbing",
-      program: "climbing",
-      rating: 5,
-    },
-    {
-      name: "Dancing",
-      price: 520,
-      priceText: "from 520 USD",
-      season: ["summer", "autumn"],
-      age: [12, 18],
-      locations: ["malaysia"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/c1/00-Tanzen-im-Feriencamp-c1834fc7.jpg"
-      ),
-      link: "/dancing",
-      program: "dancing",
-      rating: 4,
-    },
-    {
-      name: "Diving",
-      price: 1190,
-      priceText: "from 1190 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["philippines"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/33/01-Tauchkurs-im-Sommercamp-3309e219.jpg"
-      ),
-      link: "/diving",
-      program: "diving",
-      rating: 5,
-    },
-    {
-      name: "Englisch TOEFL®",
-      price: 1290,
-      priceText: "from 1290 USD",
-      season: ["spring", "summer"],
-      age: [12, 18],
-      locations: ["malaysia"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/b9/07-Language-Camps-by-Camp-Adventure-b9f01b6a.jpg"
-      ),
-      link: "/englisch-toefl",
-      program: "englisch-toefl",
-      rating: 5,
-    },
-    {
-      name: "Englischcamps",
-      price: 530,
-      priceText: "from 530 USD",
-      season: ["spring", "summer", "autumn"],
-      age: [12, 18],
-      locations: ["philippines", "thailand"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/ad/00-Language-Camps-by-Camp-Adventure-add7aa60.jpg"
-      ),
-      link: "/englischcamps",
-      program: "englisch-camps",
-      rating: 4,
-    },
-    {
-      name: "Fishing",
-      price: 580,
-      priceText: "from 580 USD",
-      season: ["spring", "summer", "autumn"],
-      age: [12, 18],
-      locations: ["vietnam"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/02/01-Angeln-im-Ferienlager-02243939.jpg"
-      ),
-      link: "/fishing",
-      program: "fishing",
-      rating: 4,
-    },
-    {
-      name: "German Camps",
-      price: 610,
-      priceText: "from 610 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["thailand", "vietnam"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/0e/Deutschcamps-in-Deutschland-0ed3ea07.jpg"
-      ),
-      link: "/german-camps",
-      program: "german-camps",
-      rating: 4,
-    },
-    {
-      name: "Horseback Riding",
-      price: 620,
-      priceText: "from 620 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["portugal"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/69/00-Reiten-Sommercamp-Ausritt-6930f841.jpg"
-      ),
-      link: "/horseback-riding",
-      program: "horseback",
-      rating: 5,
-    },
-    {
-      name: "Husky Camp",
-      price: 525,
-      priceText: "from 525 USD",
-      season: ["spring", "summer", "autumn"],
-      age: [12, 18],
-      locations: ["china"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/9c/00-Husky%20Camp_sommercamp%20mit%20Hunden-9c098a17.jpg"
-      ),
-      link: "/husky-camp",
-      program: "husky",
-      rating: 5,
-    },
-    {
-      name: "International Counsellor in Training (ICIT)",
-      price: 995,
-      priceText: "from 995 USD",
-      season: ["summer"],
-      age: [16, 18],
-      locations: ["thailand", "malaysia"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/3b/00-INTERNATIONAL%20COUNSELOR%20IN%20TRAINING_teambuilding-3b91547c.jpg"
-      ),
-      link: "/international-counsellor-in-training-icit",
-      program: "icit",
-      rating: 5,
-    },
-    {
-      name: "Leadership",
-      price: 1185,
-      priceText: "from 1185 USD",
-      season: ["summer"],
-      age: [16, 18],
-      locations: ["philippines"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/0d/00-Leadership-Camp-0d21c60a.jpg"
-      ),
-      link: "/senior-plus-leadership",
-      program: "leadership",
-      rating: 5,
-    },
-    {
-      name: "Lifeguarding",
-      price: 580,
-      priceText: "from 580 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["malaysia"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/6a/00-Rettungsschwimmen-Feriencamp-6a364891.jpg"
-      ),
-      link: "/lifeguarding",
-      program: "lifeguarding",
-      rating: 4,
-    },
-    {
-      name: "Multi Water Adventure",
-      price: 990,
-      priceText: "from 990 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["philippines"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/a4/00-Multi-Water-Adventure-im-Sommercamp-a47c08a3.jpg"
-      ),
-      link: "/multi-water-adventure",
-      program: "multi-water",
-      rating: 1,
-    },
-    {
-      name: "Sailing",
-      price: 990,
-      priceText: "from 990 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["thailand"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/e9/01-Segeln-im-Sommercamp-in-Spanien-e9d06b28.jpg"
-      ),
-      link: "/sailing",
-      program: "sailing",
-      rating: 2,
-    },
-    {
-      name: "Skating",
-      price: 420,
-      priceText: "from 420 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["vietnam"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/82/00-Skaten im Sommercamp-8240a4c7.jpg"
-      ),
-      link: "/skating",
-      program: "skating",
-      rating: 3,
-    },
-    {
-      name: "Soccer",
-      price: 495,
-      priceText: "from 495 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["malaysia"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/54/00-Soccer-Camps-543a1625.jpg"
-      ),
-      link: "/soccer",
-      program: "soccer",
-      rating: 3,
-    },
-    {
-      name: "Space Exploration",
-      price: 595,
-      priceText: "from 595 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["china"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/59/00-Space-Exploration-Sommer-Camp-599962e5.jpg"
-      ),
-      link: "/space-exploration",
-      program: "space",
-      rating: 4,
-    },
-    {
-      name: "Spanish Camps",
-      price: 595,
-      priceText: "from 595 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["portugal"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/d1/Spanischcamp-in-Spanien-d118b0e9.jpg"
-      ),
-      link: "/spanish-camps",
-      program: "spanish",
-      rating: 4,
-    },
-    {
-      name: "Survival",
-      price: 495,
-      priceText: "from 495 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["vietnam"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/e0/03-Walsrode-Survival-e00c16d7.jpg"
-      ),
-      link: "/survival",
-      program: "survival",
-      rating: 4,
-    },
-    {
-      name: "Swimming",
-      price: 495,
-      priceText: "from 495 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["philippines"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/98/Schwimmen_camp-98f48b76.jpg"
-      ),
-      link: "/swimming",
-      program: "swimming",
-      rating: 4,
-    },
-    {
-      name: "Tennis",
-      price: 495,
-      priceText: "from 495 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["malaysia"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/57/00-Tenniscamp-57cd2c79.jpg"
-      ),
-      link: "/tennis",
-      program: "tennis",
-      rating: 4,
-    },
-    {
-      name: "Windsurfing",
-      price: 990,
-      priceText: "from 990 USD",
-      season: ["summer"],
-      age: [12, 18],
-      locations: ["thailand"],
-      image: getTemplateImageUrl(
-        "yootheme/cache/ac/00-Windsurfen-im-Sommercamp-ac31b126.jpg"
-      ),
-      link: "/windsurfing",
-      program: "windsurf",
-      rating: 5,
-    },
-  ], []);
-  
+  const camps: Camp[] = useMemo(
+    () => [
+      {
+        name: "Adventure, Sports & Creative",
+        price: 395,
+        priceText: "from 395 USD",
+        season: ["spring", "summer", "autumn"],
+        age: [12, 18],
+        locations: ["thailand"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/53/00_Abenteuercamp-Hike-533b20fa.jpg"
+        ),
+        link: "/adventure-sports-creative",
+        program: "adventure",
+        rating: 5,
+      },
+      {
+        name: "Arts & Crafts",
+        price: 500,
+        priceText: "from 500 USD",
+        season: ["spring", "summer", "autumn"],
+        age: [12, 18],
+        locations: ["vietnam"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/c6/01-Kreativprogramm-in-der-Ferienfreizeit-c6e95722.jpg"
+        ),
+        link: "/arts-crafts",
+        program: "arts-crafts",
+        rating: 4,
+      },
+      {
+        name: "Climbing",
+        price: 515,
+        priceText: "from 515 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["philippines"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/40/00-Kletterkurs_Sommercamp_Bayern-40f1bd8d.jpg"
+        ),
+        link: "/climbing",
+        program: "climbing",
+        rating: 5,
+      },
+      {
+        name: "Dancing",
+        price: 520,
+        priceText: "from 520 USD",
+        season: ["summer", "autumn"],
+        age: [12, 18],
+        locations: ["malaysia"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/c1/00-Tanzen-im-Feriencamp-c1834fc7.jpg"
+        ),
+        link: "/dancing",
+        program: "dancing",
+        rating: 4,
+      },
+      {
+        name: "Diving",
+        price: 1190,
+        priceText: "from 1190 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["philippines"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/33/01-Tauchkurs-im-Sommercamp-3309e219.jpg"
+        ),
+        link: "/diving",
+        program: "diving",
+        rating: 5,
+      },
+      {
+        name: "Englisch TOEFL®",
+        price: 1290,
+        priceText: "from 1290 USD",
+        season: ["spring", "summer"],
+        age: [12, 18],
+        locations: ["malaysia"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/b9/07-Language-Camps-by-Camp-Adventure-b9f01b6a.jpg"
+        ),
+        link: "/englisch-toefl",
+        program: "englisch-toefl",
+        rating: 5,
+      },
+      {
+        name: "Englischcamps",
+        price: 530,
+        priceText: "from 530 USD",
+        season: ["spring", "summer", "autumn"],
+        age: [12, 18],
+        locations: ["philippines", "thailand"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/ad/00-Language-Camps-by-Camp-Adventure-add7aa60.jpg"
+        ),
+        link: "/englischcamps",
+        program: "englisch-camps",
+        rating: 4,
+      },
+      {
+        name: "Fishing",
+        price: 580,
+        priceText: "from 580 USD",
+        season: ["spring", "summer", "autumn"],
+        age: [12, 18],
+        locations: ["vietnam"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/02/01-Angeln-im-Ferienlager-02243939.jpg"
+        ),
+        link: "/fishing",
+        program: "fishing",
+        rating: 4,
+      },
+      {
+        name: "German Camps",
+        price: 610,
+        priceText: "from 610 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["thailand", "vietnam"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/0e/Deutschcamps-in-Deutschland-0ed3ea07.jpg"
+        ),
+        link: "/german-camps",
+        program: "german-camps",
+        rating: 4,
+      },
+      {
+        name: "Horseback Riding",
+        price: 620,
+        priceText: "from 620 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["portugal"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/69/00-Reiten-Sommercamp-Ausritt-6930f841.jpg"
+        ),
+        link: "/horseback-riding",
+        program: "horseback",
+        rating: 5,
+      },
+      {
+        name: "Husky Camp",
+        price: 525,
+        priceText: "from 525 USD",
+        season: ["spring", "summer", "autumn"],
+        age: [12, 18],
+        locations: ["china"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/9c/00-Husky%20Camp_sommercamp%20mit%20Hunden-9c098a17.jpg"
+        ),
+        link: "/husky-camp",
+        program: "husky",
+        rating: 5,
+      },
+      {
+        name: "International Counsellor in Training (ICIT)",
+        price: 995,
+        priceText: "from 995 USD",
+        season: ["summer"],
+        age: [16, 18],
+        locations: ["thailand", "malaysia"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/3b/00-INTERNATIONAL%20COUNSELOR%20IN%20TRAINING_teambuilding-3b91547c.jpg"
+        ),
+        link: "/international-counsellor-in-training-icit",
+        program: "icit",
+        rating: 5,
+      },
+      {
+        name: "Leadership",
+        price: 1185,
+        priceText: "from 1185 USD",
+        season: ["summer"],
+        age: [16, 18],
+        locations: ["philippines"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/0d/00-Leadership-Camp-0d21c60a.jpg"
+        ),
+        link: "/senior-plus-leadership",
+        program: "leadership",
+        rating: 5,
+      },
+      {
+        name: "Lifeguarding",
+        price: 580,
+        priceText: "from 580 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["malaysia"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/6a/00-Rettungsschwimmen-Feriencamp-6a364891.jpg"
+        ),
+        link: "/lifeguarding",
+        program: "lifeguarding",
+        rating: 4,
+      },
+      {
+        name: "Multi Water Adventure",
+        price: 990,
+        priceText: "from 990 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["philippines"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/a4/00-Multi-Water-Adventure-im-Sommercamp-a47c08a3.jpg"
+        ),
+        link: "/multi-water-adventure",
+        program: "multi-water",
+        rating: 1,
+      },
+      {
+        name: "Sailing",
+        price: 990,
+        priceText: "from 990 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["thailand"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/e9/01-Segeln-im-Sommercamp-in-Spanien-e9d06b28.jpg"
+        ),
+        link: "/sailing",
+        program: "sailing",
+        rating: 2,
+      },
+      {
+        name: "Skating",
+        price: 420,
+        priceText: "from 420 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["vietnam"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/82/00-Skaten im Sommercamp-8240a4c7.jpg"
+        ),
+        link: "/skating",
+        program: "skating",
+        rating: 3,
+      },
+      {
+        name: "Soccer",
+        price: 495,
+        priceText: "from 495 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["malaysia"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/54/00-Soccer-Camps-543a1625.jpg"
+        ),
+        link: "/soccer",
+        program: "soccer",
+        rating: 3,
+      },
+      {
+        name: "Space Exploration",
+        price: 595,
+        priceText: "from 595 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["china"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/59/00-Space-Exploration-Sommer-Camp-599962e5.jpg"
+        ),
+        link: "/space-exploration",
+        program: "space",
+        rating: 4,
+      },
+      {
+        name: "Spanish Camps",
+        price: 595,
+        priceText: "from 595 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["portugal"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/d1/Spanischcamp-in-Spanien-d118b0e9.jpg"
+        ),
+        link: "/spanish-camps",
+        program: "spanish",
+        rating: 4,
+      },
+      {
+        name: "Survival",
+        price: 495,
+        priceText: "from 495 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["vietnam"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/e0/03-Walsrode-Survival-e00c16d7.jpg"
+        ),
+        link: "/survival",
+        program: "survival",
+        rating: 4,
+      },
+      {
+        name: "Swimming",
+        price: 495,
+        priceText: "from 495 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["philippines"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/98/Schwimmen_camp-98f48b76.jpg"
+        ),
+        link: "/swimming",
+        program: "swimming",
+        rating: 4,
+      },
+      {
+        name: "Tennis",
+        price: 495,
+        priceText: "from 495 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["malaysia"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/57/00-Tenniscamp-57cd2c79.jpg"
+        ),
+        link: "/tennis",
+        program: "tennis",
+        rating: 4,
+      },
+      {
+        name: "Windsurfing",
+        price: 990,
+        priceText: "from 990 USD",
+        season: ["summer"],
+        age: [12, 18],
+        locations: ["thailand"],
+        image: getTemplateImageUrl(
+          "yootheme/cache/ac/00-Windsurfen-im-Sommercamp-ac31b126.jpg"
+        ),
+        link: "/windsurfing",
+        program: "windsurf",
+        rating: 5,
+      },
+    ],
+    []
+  );
+
   const setCount = useCallback(() => {
     camps.forEach((camp) => {
       programs.forEach((program) => {
@@ -449,7 +461,7 @@ export default function CampProfilesPage() {
       });
     });
   }, [camps, programs]);
-  
+
   useEffect(() => {
     setCount();
   }, [setCount, programs]);
@@ -694,44 +706,48 @@ export default function CampProfilesPage() {
     }
   };
 
-// Apply price filter immediately and sort by price
-const applyPriceFilter = (newPriceRange: [number, number]) => {
-  // Save current scroll position
-  const scrollPosition = typeof window !== "undefined" ? window.scrollY : 0;
+  // Apply price filter immediately and sort by price
+  const applyPriceFilter = (newPriceRange: [number, number]) => {
+    // Save current scroll position
+    const scrollPosition = typeof window !== "undefined" ? window.scrollY : 0;
 
-  // Use requestAnimationFrame to prevent UI blocking
-  requestAnimationFrame(() => {
-    const filtered = camps.filter((camp) => {
-      // Price range filter (up to selected price)
-      if (camp.price > newPriceRange[1]) return false;
+    // Use requestAnimationFrame to prevent UI blocking
+    requestAnimationFrame(() => {
+      const filtered = camps.filter((camp) => {
+        // Price range filter (up to selected price)
+        if (camp.price > newPriceRange[1]) return false;
 
-      if (selectedProgram && camp.program !== selectedProgram) return false;
-      if (
-        selectedHolidays.length > 0 &&
-        !camp.season.some((s) => selectedHolidays.includes(s))
-      )
-        return false;
-      if (
-        selectedLocations.length > 0 &&
-        !camp.locations.some((l) => selectedLocations.includes(l))
-      )
-        return false;
-      if (selectedAge) {
-        const age = parseInt(selectedAge);
-        if (age < camp.age[0] || age > camp.age[1]) return false;
+        if (selectedProgram && camp.program !== selectedProgram) return false;
+        if (
+          selectedHolidays.length > 0 &&
+          !camp.season.some((s) => selectedHolidays.includes(s))
+        )
+          return false;
+        if (
+          selectedLocations.length > 0 &&
+          !camp.locations.some((l) => selectedLocations.includes(l))
+        )
+          return false;
+        if (selectedAge) {
+          const age = parseInt(selectedAge);
+          if (age < camp.age[0] || age > camp.age[1]) return false;
+        }
+        return true;
+      });
+
+      // Sort by price ascending when filtering by price range
+      setFilteredCamps(sortCamps(filtered, "price-asc"));
+
+      // Restore scroll position after filtering
+      if (typeof window !== "undefined" && scrollPosition !== undefined) {
+        window.scrollTo(0, scrollPosition);
       }
-      return true;
     });
+  };
 
-    // Sort by price ascending when filtering by price range
-    setFilteredCamps(sortCamps(filtered, "price-asc"));
+  const capitalizeWords = (str: string) =>
+    str.replace(/\b\w/g, (c) => c.toUpperCase());
 
-    // Restore scroll position after filtering
-    if (typeof window !== "undefined" && scrollPosition !== undefined) {
-      window.scrollTo(0, scrollPosition);
-    }
-  });
-};
   // Sort camps
   const sortCamps = (campsToSort: Camp[], sortValue: string): Camp[] => {
     const sorted = [...campsToSort];
@@ -836,7 +852,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .search-field-input {
               width: 100%;
               padding: 0.75rem 1rem;
-              border: 2px solid #cbca7b;
+              border: 2px solid var(--color-primary);
               border-radius: 8px;
               font-size: 1rem;
               background: white;
@@ -1123,7 +1139,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               justify-content: center;
               cursor: pointer;
               transition: all 0.2s;
-              color: #cbca7b;
+              color: var(--color-primary);
               font-size: 18px;
             }
             .pagination-arrow:hover:not(:disabled) {
@@ -1164,7 +1180,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               background: #e0e0e0;
             }
             .pagination-page.active {
-              background: #cbca7b;
+              background: var(--color-primary);
               color: white;
               font-weight: 600;
             }
@@ -1195,7 +1211,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #cbca7b;
+              background: var(--color-primary);
               cursor: pointer;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
               transition: all 0.3s;
@@ -1210,7 +1226,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               width: 20px;
               height: 20px;
               border-radius: 50%;
-              background: #cbca7b;
+              background: var(--color-primary);
               cursor: pointer;
               border: none;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -1225,7 +1241,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .price-slider::-webkit-slider-runnable-track {
               height: 8px;
               border-radius: 5px;
-              background: linear-gradient(to right, #cbca7b 0%, #cbca7b var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
+              background: linear-gradient(to right, var(--color-primary) 0%, var(--color-primary) var(--slider-progress, 50%), #e0e0e0 var(--slider-progress, 50%), #e0e0e0 100%);
             }
             .price-slider::-moz-range-track {
               height: 8px;
@@ -1235,7 +1251,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
             .price-slider::-moz-range-progress {
               height: 8px;
               border-radius: 5px;
-              background: #cbca7b;
+              background: var(--color-primary);
             }
           `,
         }}
@@ -1247,9 +1263,8 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         backgroundImage="yootheme/banner/b9.jpg"
         overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
-        titleClass="uk-heading-large uk-text-center"
+        titleClass="uk-heading-large uk-text-center !text-[10vw] md:text-[5vw]"
       />
-
 
       {/* Search Bar Section */}
       <div className="uk-section-default uk-section">
@@ -1316,7 +1331,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                         right: "10px",
                         top: "50%",
                         transform: "translateY(-50%)",
-                        background: "#cbca7b",
+                        background: "var(--color-primary)",
                         color: "white",
                         border: "none",
                         borderRadius: "50%",
@@ -1357,42 +1372,19 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
 
       {/* Main Layout with Balanced Design */}
       <div className="uk-container">
-        <div className="main-layout">
-          {/* Filter and Sort Panel - Left Side */}
-          <div className="filter-sort-panel ">
-            <h2 className="panel-title">FIND YOUR CAMP!</h2>
+  <div className="main-layout flex flex-col md:flex-row gap-6">
+    
+    {/* Filter and Sort Panel */}
+    <div
+      className="
+        filter-sort-panel 
+        w-full md:w-[20.56vw] md:min-w-[20.56vw] md:max-w-[20.56vw]
+      "
+    >
+      <h2 className="panel-title">FIND YOUR CAMP!</h2>
 
-            {/* Price Section */}
-            <div className="mb-6 px-6 pt-6 border-t border-b border-gray-200">
-              <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
-                PRICE
-              </h3>
-              <div className="space-y-4">
-                {/* Price Input */}
-                <div>
-                  <label className="block text-xs text-gray-600 mb-2">
-                    Maximum Price (USD)
-                  </label>
-                  <input
-                    type="number"
-                    min="0"
-                    max="2000"
-                    value={priceRange[1]}
-                    onChange={(e) => {
-                      const value = Math.min(
-                        2000,
-                        Math.max(0, parseInt(e.target.value) || 0)
-                      );
-                      const newPriceRange: [number, number] = [0, value];
-                      setPriceRange(newPriceRange);
-                    }}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                    placeholder="Enter max price"
-                  />
-                </div>
-
-                {/* Price Slider */}
-                <div>
+      {/* PRICE */}
+      <div className="mb-6 px-6 pt-6">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-xs text-gray-600">$0</span>
                     <span className="text-sm font-semibold text-green-600">
@@ -1435,282 +1427,252 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                     }
                   />
                 </div>
-              </div>
-            </div>
 
-            {/* Filter Form */}
-            <div className="bg-white">
-              {/* Programs & Courses Section */}
-              <div className="mb-6 px-6 pt-6">
-                <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
-                  Activities
-                </h3>
-                <div className="space-y-2 max-h-96 overflow-y-auto pr-2">
-                  {programs.map((program) => (
-                    <label
-                      key={program.value}
-                      className="flex items-center justify-between cursor-pointer group hover:bg-gray-50 p-2 rounded transition-colors"
-                    >
-                      <div className="flex items-center flex-1">
-                        <input
-                          type="checkbox"
-                          checked={selectedProgram === program.value}
-                          onChange={() =>
-                            setSelectedProgram(
-                              selectedProgram === program.value
-                                ? ""
-                                : program.value
-                            )
-                          }
-                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-2 focus:ring-green-500"
-                        />
-                        <span className="ml-3 text-sm text-gray-700 group-hover:text-gray-900">
-                          {program.label}
-                        </span>
-                      </div>
-                      <span className="text-sm text-gray-500 font-medium ml-2">
-                        {program.count}
-                      </span>
-                    </label>
-                  ))}
-                </div>
-              </div>
+      {/* ACTIVITIES */}
+      <div className="bg-white">
+        <div className="mb-6 px-6 pt-6">
+          <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
+            Activities
+          </h3>
 
-              {/* Age Section */}
-              <div className="mb-6 px-6">
-                <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
-                  AGE
-                </h3>
-                <select
-                  value={selectedAge}
-                  onChange={(e) => setSelectedAge(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                >
-                  <option value="">Select age</option>
-                  {Array.from({ length: 12 }, (_, i) => i + 7).map((age) => (
-                    <option key={age} value={age}>
-                      {age} years old
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Rating Wise Section */}
-              <div className="mb-6 px-6">
-                <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
-                  RATING WISE
-                </h3>
-                <select
-                  value={ratingWise}
-                  onChange={(e) => setRatingWise(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                >
-                  <option value="">All Ratings</option>
-                  <option value="5">5 Stars</option>
-                  <option value="4">4 Stars & Up</option>
-                  <option value="3">3 Stars & Up</option>
-                  <option value="2">2 Stars & Up</option>
-                  <option value="1">1 Star & Up</option>
-                </select>
-              </div>
-
-              {/* Reset Button */}
-              <div className="flex items-center justify-center px-6 pb-6 pt-4 border-t border-b border-gray-200">
-                <button
-                  type="button"
-                  onClick={handleReset}
-                  className="px-6 py-2.5 text-gray-600 text-sm font-medium hover:text-gray-900 transition-colors"
-                >
-                  Reset
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Camps Cards Panel - Right Side */}
-          <div className="cards-panel">
-            {/* Results Info */}
-            <div className="results-info mb-6">
-              <div className="uk-text-right@s uk-text-center">
-                Showing {currentItems.length} of {filteredCamps.length} camps
-                (Page {currentPage} of {totalPages})
-              </div>
-            </div>
-            <div className="space-y-6">
-              {currentItems.map((camp, index) => (
-                <div key={indexOfFirstItem + index} className="camp-card">
-                  <div className="max-w-4xl mx-auto w-full">
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow h-full">
-                      {/* Image Section - Full width on mobile, half on desktop */}
-                      <div className="relative w-full h-64 md:h-auto md:w-1/2 flex-shrink-0">
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={camp.image}
-                            alt={camp.name}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                          />
-                        </div>
-                        <span className="absolute top-4 left-0 bg-yellow-400 text-gray-900 font-semibold px-4 py-2 text-sm rounded-r-md z-10">
-                          Featured
-                        </span>
-                      </div>
-
-                      {/* Content Section */}
-                      <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col justify-between">
-                        {/* Holiday Season */}
-                        <div className="flex items-center text-teal-600 text-sm mb-3">
-                          <Calendar className="w-4 h-4 mr-2 flex-shrink-0" />
-                          <span className="text-sm md:text-[1vw] capitalize">{camp.season.join(", ")}</span>
-                        </div>
-
-                        {/* Camp Name */}
-                        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-                          {camp.name}
-                        </h2>
-
-                        {/* Description */}
-                        <p className="text-sm md:text-[1vw] text-gray-600 mb-4 leading-relaxed line-clamp-2">
-                          Lorem, ipsum dolor sit amet consectetur adipisicing
-                          elit. Laborum excepturi qui eum. Fugit sapiente
-                          doloremque harum veniam nemo nulla voluptatibus in,
-                          alias provident voluptatem. Iure voluptatum quis
-                          ratione incidunt cum.
-                        </p>
-
-                        {/* Age and Location */}
-                        <div className="flex flex-col gap-2 text-sm text-gray-700 mb-6">
-                          <div className="flex items-center">
-                            <Users className="w-4 h-4 mr-2 flex-shrink-0" />
-                            <span className="text-sm md:text-[1vw]">
-                              From {camp.age[0]} - {camp.age[1]} years old
-                            </span>
-                          </div>
-                          <div className="flex items-center">
-                            <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                            <span className="text-sm md:text-[1vw] capitalize">{camp.locations.join(", ")}</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between mt-auto">
-                          <div>
-                            <div className="text-lg md:text-[1.67vw] font-semibold">${camp.price}</div>
-                          </div>
-                          
-                         <a
-                          href={`/activities/${camp.link}`}
-                          onClick={() => {
-                            localStorage.setItem("campData", JSON.stringify(camp));
-                          }}
-                          className="block"
-                        >
-                          <div className="uk-button uk-button-default">Camp Details</div>
-                        </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Pagination */}
-            {totalPages > 1 &&
-              (() => {
-                // Calculate which pages to show
-                const getPageNumbers = () => {
-                  const pages: (number | string)[] = [];
-                  const maxVisible = 5;
-
-                  if (totalPages <= maxVisible) {
-                    for (let i = 1; i <= totalPages; i++) {
-                      pages.push(i);
+          <div className="space-y-2 max-h-96 overflow-y-auto pr-2">
+            {programs.map((program) => (
+              <label
+                key={program.value}
+                className="
+                  flex items-center justify-between cursor-pointer 
+                  group hover:bg-gray-50 p-2 rounded transition-colors
+                "
+              >
+                <div className="flex items-center flex-1">
+                  <input
+                    type="checkbox"
+                    checked={selectedProgram === program.value}
+                    onChange={() =>
+                      setSelectedProgram(
+                        selectedProgram === program.value
+                          ? ""
+                          : program.value
+                      )
                     }
-                  } else {
-                    pages.push(1);
-                    if (currentPage <= 3) {
-                      for (let i = 2; i <= 4; i++) {
-                        pages.push(i);
-                      }
-                      pages.push("ellipsis");
-                      pages.push(totalPages);
-                    } else if (currentPage >= totalPages - 2) {
-                      pages.push("ellipsis");
-                      for (let i = totalPages - 3; i <= totalPages; i++) {
-                        pages.push(i);
-                      }
-                    } else {
-                      pages.push("ellipsis");
-                      for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-                        pages.push(i);
-                      }
-                      pages.push("ellipsis");
-                      pages.push(totalPages);
-                    }
-                  }
-                  return pages;
-                };
+                    className="
+                      w-4 h-4 text-green-600 border-gray-300 rounded 
+                      focus:ring-2 focus:ring-green-500
+                    "
+                  />
 
-                const pageNumbers = getPageNumbers();
+                  <span className="ml-3 text-sm text-gray-700 group-hover:text-gray-900">
+                    {program.label}
+                  </span>
+                </div>
 
-                return (
-                  <div className="modern-pagination">
-                    {/* Previous Arrow */}
-                    <button
-                      className="pagination-arrow"
-                      onClick={() =>
-                        setCurrentPage((prev) => Math.max(1, prev - 1))
-                      }
-                      disabled={currentPage === 1}
-                      aria-label="Previous page"
-                    >
-                      ‹
-                    </button>
-
-                    {/* Page Numbers Container */}
-                    <div className="pagination-pages">
-                      {pageNumbers.map((page, index) => {
-                        if (page === "ellipsis") {
-                          return (
-                            <span
-                              key={`ellipsis-${index}`}
-                              className="pagination-ellipsis"
-                            >
-                              ...
-                            </span>
-                          );
-                        }
-                        return (
-                          <button
-                            key={page}
-                            className={`pagination-page ${
-                              currentPage === page ? "active" : ""
-                            }`}
-                            onClick={() => setCurrentPage(page as number)}
-                          >
-                            {page}
-                          </button>
-                        );
-                      })}
-                    </div>
-
-                    {/* Next Arrow */}
-                    <button
-                      className="pagination-arrow"
-                      onClick={() =>
-                        setCurrentPage((prev) => Math.min(totalPages, prev + 1))
-                      }
-                      disabled={currentPage === totalPages}
-                      aria-label="Next page"
-                    >
-                      ›
-                    </button>
-                  </div>
-                );
-              })()}
+                <span className="text-sm text-gray-500 font-medium ml-2">
+                  {program.count}
+                </span>
+              </label>
+            ))}
           </div>
         </div>
+
+        {/* AGE */}
+        <div className="mb-6 px-6">
+          <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
+            AGE
+          </h3>
+
+          <select
+            value={selectedAge}
+            onChange={(e) => setSelectedAge(e.target.value)}
+            className="
+              w-full px-4 py-2 border border-gray-300 rounded-lg 
+              focus:ring-2 focus:ring-green-500 focus:border-transparent 
+              text-sm
+            "
+          >
+            <option value="">Select age</option>
+            {Array.from({ length: 12 }, (_, i) => i + 7).map((age) => (
+              <option key={age} value={age}>
+                {age} years old
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* RATING */}
+        <div className="mb-6 px-6">
+          <h3 className="text-sm font-bold text-gray-900 mb-4 tracking-wide">
+            RATING WISE
+          </h3>
+
+          <select
+            value={ratingWise}
+            onChange={(e) => setRatingWise(e.target.value)}
+            className="
+              w-full px-4 py-2 border border-gray-300 rounded-lg 
+              focus:ring-2 focus:ring-green-500 focus:border-transparent 
+              text-sm
+            "
+          >
+            <option value="">All Ratings</option>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars & Up</option>
+            <option value="3">3 Stars & Up</option>
+            <option value="2">2 Stars & Up</option>
+            <option value="1">1 Star & Up</option>
+          </select>
+        </div>
+
+        {/* RESET */}
+        <div className="flex items-center justify-center px-6 pb-6 pt-4 border-t border-b border-gray-200">
+          <button
+            type="button"
+            onClick={handleReset}
+            className="px-6 py-2.5 text-gray-600 text-sm font-medium hover:text-gray-900 transition-colors"
+          >
+            Reset
+          </button>
+        </div>
       </div>
+    </div>
+
+    {/* RIGHT PANEL */}
+    <div className="cards-panel w-full">
+      <div className="results-info mb-6">
+        <div className="uk-text-right@s uk-text-center">
+          Showing {currentItems.length} of {filteredCamps.length} camps (Page{" "}
+          {currentPage} of {totalPages})
+        </div>
+      </div>
+
+      {/* CARDS */}
+      <div className="space-y-6">
+        {currentItems.map((camp, index) => (
+          <div key={index} className="camp-card">
+            <div className="max-w-4xl mx-auto w-full">
+              <div
+                className="
+                  bg-white rounded-lg shadow-lg overflow-hidden
+                  flex flex-col md:flex-row
+                  hover:shadow-xl transition-shadow
+                  h-auto md:h-[22vw]
+                  mb-6
+                "
+              >
+                {/* IMAGE */}
+                <div className="relative w-full md:w-1/2 h-[50vw] md:h-full">
+                  <Image
+                    src={camp.image}
+                    alt={camp.name}
+                    fill
+                    className="object-cover"
+                  />
+                  <div
+                    className="
+                      text-[3vw] md:text-[1vw]
+                      absolute top-4 left-0 
+                      bg-yellow-400 text-gray-900 font-semibold 
+                      px-4 py-2 rounded-r-md z-10
+                    "
+                  >
+                    Featured
+                  </div>
+                </div>
+
+                {/* CONTENT */}
+                <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center text-teal-600 text-sm mb-3">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      <span>{camp.season.join(", ")}</span>
+                    </div>
+
+                    <div className="text-[4vw] md:text-[1.5vw] font-bold mb-3">
+                      {camp.name}
+                    </div>
+
+                    <div className="text-[3vw] md:text-[1vw] mb-4 leading-relaxed h-auto md:h-[50px] overflow-hidden">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                    </div>
+
+                    <div className="flex flex-col gap-2 text-sm mb-6">
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-2" />
+                        <div className="text-[3vw] md:text-[1vw]">
+                          From {camp.age[0]} – {camp.age[1]} years old
+                        </div>
+                      </div>
+
+                      <div className="flex items-center">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        <div className="text-[3vw] md:text-[1vw]">
+                          {camp.locations.join(", ")}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between mt-auto">
+                    <div className="text-[4vw] md:text-[1.5vw] font-semibold">
+                      ${camp.price}
+                    </div>
+
+                    <a
+                      href={`/activities/${camp.link}`}
+                      onClick={() =>
+                        localStorage.setItem("campData", JSON.stringify(camp))
+                      }
+                      className="block"
+                    >
+                      <div className="uk-button uk-button-default uk-text-center">
+                        Camp Details
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* PAGINATION */}
+      {totalPages > 1 && (
+        <div className="modern-pagination flex items-center justify-center gap-2 mt-6">
+          <button
+            className="pagination-arrow"
+            onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+            disabled={currentPage === 1}
+          >
+            ‹
+          </button>
+
+          {/* Pages */}
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+            <button
+              key={n}
+              onClick={() => setCurrentPage(n)}
+              className={`
+                pagination-page 
+                ${n === currentPage ? "active bg-green-600 text-white" : ""}
+                px-3 py-1 rounded text-sm md:text-base
+              `}
+            >
+              {n}
+            </button>
+          ))}
+
+          <button
+            className="pagination-arrow"
+            onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
+            disabled={currentPage === totalPages}
+          >
+            ›
+          </button>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
 
       {/* Newsletter Section - Completely overhauled for Mobile */}
       <section>
@@ -1759,8 +1721,8 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
               </h2>
 
               <div className="mb-6 md:mb-[2vh]">
-                 {/* Responsive Bar Size */}
-                <div className="w-24 h-1 md:w-[6.5vw] md:h-[0.5vh] bg-[#cbca7b] rounded-full -mt-2 mb-4 mx-auto md:mx-0" />
+                {/* Responsive Bar Size */}
+                <div className="w-24 h-1 md:w-[6.5vw] md:h-[0.5vh] bg-[var(--color-primary)] rounded-full -mt-2 mb-4 mx-auto md:mx-0" />
                 <p className="text-base md:text-[1vw] text-gray-600 leading-normal md:leading-[1.4vw]">
                   Sign up to receive the latest news about new camps,
                   activities, and exciting opportunities. Don’t miss out on
@@ -1780,7 +1742,7 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
                 />
                 <button
                   type="submit"
-                  className="bg-[#cbca7b] text-white px-6 md:px-[3vw] py-3 md:py-[1.5vh] rounded-r-full md:rounded-lg shadow hover:bg-[#238a56] flex items-center gap-2 md:gap-[0.5vw] text-sm md:text-[0.9vw] font-medium"
+                  className="bg-[var(--color-primary)] text-white px-6 md:px-[3vw] py-3 md:py-[1.5vh] rounded-r-full md:rounded-lg shadow hover:bg-[#238a56] flex items-center gap-2 md:gap-[0.5vw] text-sm md:text-[0.9vw] font-medium"
                 >
                   <span>Subscribe</span>
                   <svg
@@ -1805,114 +1767,11 @@ const applyPriceFilter = (newPriceRange: [number, number]) => {
         </div>
       </section>
 
-      {/* Cooperations & Memberships Section */}
-      <div className="uk-section-default uk-section-overlap uk-position-relative">
-        <div
-          className="uk-background-norepeat uk-background-contain uk-background-bottom-center uk-section uk-section-large"
-          style={{
-            backgroundImage: `url(${getTemplateImageUrl(
-              "yootheme/cache/d1/background_campground-d13d89db.jpeg"
-            )})`,
-          }}
-        >
-          <div
-            className="uk-position-cover"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.87)" }}
-          ></div>
-          <div className="uk-container uk-container-large uk-position-relative">
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large">
-              <div className="uk-width-1-1@m">
-                {/* Responsive text sizes */}
-                <div className="text-xl md:text-[2.5vw] uk-margin-small uk-text-center ">
-                  Camp Adventure
-                </div>
-                <div className="text-2xl md:text-[3vw] uk-margin-small uk-text-center">
-                  Cooperations & Memberships
-                </div>
-                <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
-              </div>
-            </div>
-            <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
-              <div className="uk-width-1-1@m">
-                <div className="uk-margin uk-text-center">
-                  <div
-                    className="uk-grid uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-collapse uk-grid-match"
-                    uk-grid=""
-                  >
-                    {[
-                      {
-                        img: "../../templates/yootheme/cache/98/reisenetz2-98f3b127.png",
-                        link: "https://www.reisenetz.org/",
-                        w: 120,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/7a/icf2-7a52c185.png",
-                        link: "http://www.campingfellowship.org/",
-                        w: 178,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/5f/toefl2-5f52dff4.png",
-                        link: "https://www.ets.org/toefl",
-                        w: 120,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/bd/kmdd2-bdeae52d.png",
-                        link: "https://www.kmdd.de/Home.htm",
-                        w: 112,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/f8/dofe2-f84c724b.png",
-                        link: "https://dofe-germany.de/",
-                        w: 362,
-                        h: 120,
-                      },
-                      {
-                        img: "../../templates/yootheme/cache/00/erca2-0047e06a.png",
-                        link: "https://www.erca.uk/index.php/de/",
-                        w: 276,
-                        h: 120,
-                      },
-                    ].map((partner, idx) => (
-                      <div key={idx}>
-                        <div className="el-item uk-flex uk-flex-column">
-                          <a
-                            className="uk-flex-1 uk-card uk-card-hover uk-card-body uk-margin-remove-first-child uk-link-toggle"
-                            href={partner.link}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image
-                              src={getTemplateImageUrl(
-                                partner.img.replace("../../templates/", "")
-                              )}
-                              width={partner.w}
-                              height={partner.h}
-                              alt="Partner"
-                              className="el-image"
-                              loading="lazy"
-                              style={{ maxWidth: '100%', height: 'auto' }}
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Leaflet Scripts */}
       <Script
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         strategy="afterInteractive"
       />
     </React.Fragment>
-    );
+  );
 }

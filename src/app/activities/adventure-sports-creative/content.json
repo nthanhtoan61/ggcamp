@@ -1,0 +1,234 @@
+{
+  "hero": {
+    "title": "Adventure, Sports & Creative Camps in Germany",
+    "bgImage": "yootheme/cache/04/01-Abenteuercamp-Bogenschieen-044ac9af.jpg"
+  },
+  "basicInfo": {
+    "location": "Germany",
+    "ageRange": "7 - 17 years\nSeparated by age groups",
+    "accommodationType": "Tent & Cabin/House",
+    "careLevel": "Around-the-Clock Care & All Meals Included",
+    "languages": "Bilingual\nGER & EN"
+  },
+  "sidebar": {
+    "contact": {
+      "phone": "+(123)-456-789",
+      "email": "hello@ggcamp.org"
+    },
+    "menuItems": [
+      { "name": "Overview", "href": "#overview" },
+      { "name": "Location", "href": "#location" },
+      { "name": "Accommodation Options", "href": "#accommodation" },
+      { "name": "Program", "href": "#program" },
+      { "name": "Meals On Site", "href": "#meals" },
+      { "name": "Team and Supervision", "href": "#team" },
+      { "name": "Coverage and Insurance", "href": "#coverage" }
+    ],
+    "upcomingTours": [
+      {
+        "id": 1,
+        "title": "Volcanoes and Waterfalls",
+        "rating": 4.9,
+        "reviews": 25,
+        "location": "Hilo, Hawaii",
+        "price": 1500,
+        "originalPrice": 1800,
+        "image": "https://images.unsplash.com/photo-1542259009477-d625272157b7?w=400&h=300&fit=crop"
+      },
+      {
+        "id": 2,
+        "title": "Exploring the Fjords",
+        "rating": 4.9,
+        "reviews": 28,
+        "location": "Bergen, Norway",
+        "price": 1900,
+        "originalPrice": 2200,
+        "image": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&h=300&fit=crop"
+      },
+      {
+        "id": 3,
+        "title": "Safari in Style",
+        "rating": 4.9,
+        "reviews": 35,
+        "location": "Okavango Delta, Botswana",
+        "price": 4500,
+        "originalPrice": 5000,
+        "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=400&h=300&fit=crop"
+      },
+      {
+        "id": 4,
+        "title": "Cherry Blossom Tour",
+        "rating": 4.8,
+        "reviews": 22,
+        "location": "Kyoto, Japan",
+        "price": 1200,
+        "originalPrice": 1800,
+        "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400&h=300&fit=crop"
+      }
+    ]
+  },
+  "mainGallery": {
+    "slides": [
+      {
+        "url": "/templates/yootheme/activities/activity-details/bg-ad1.png",
+        "alt": "Camp tent"
+      },
+      {
+        "url": "/templates/yootheme/activities/activity-details/bg-ad2.png",
+        "alt": "Archery"
+      },
+      {
+        "url": "/templates/yootheme/activities/activity-details/bg-ad3.png",
+        "alt": "Cabin"
+      }
+    ],
+    "overlayInfo": {
+      "location": "Thailand",
+      "season": "Spring, Summer, Autumn",
+      "languages": "GER & EN "
+    }
+  },
+  "eventSchedule": {
+    "startDate": "06/15/2024",
+    "duration": "7 Days 6 Nights",
+    "tickets": "$48/50"
+  },
+  "sections": {
+    "overview": {
+      "intro": "Nestled in the lush landscapes of Madridejos, Cebu Island, the Exploration Camp offers a vibrant mix of adventure, nature, and community. Campers wake up to tropical surroundings, enjoy engaging activities, and explore the beauty of the island while building friendships and unforgettable memories.",
+      "mainText": "The Exploration Camp offers young explorers aged 12 to 18 a chance to experience nature, culture and people against the picturesque scenes of the Philippines. Aiming to inspire, challenge and nurture a love of learning in each and every child, the camp combines outdoor adventures, engaging creative projects and incredible group efforts – all within a spirited international setting.",
+      "featuresTitle": "Key features",
+      "features": [
+        "Ages 12–18, open to all levels",
+        "Outdoor, sports, creative & evening activities",
+        "Cool, impactful excursions and trips",
+        "2 English-speaking camp environment",
+        "Dorm accommodation with full board",
+        "24/7 care from GGCamp teamers",
+        "Digital Detox: phones only during siesta",
+        "Arrival/departure shuttle service"
+      ],
+      "featureImage": "/templates/yootheme/activities/activity-details/bg-ad4.png"
+    },
+    "location": {
+      "title": "Location",
+      "description": "Your stay at Exploration Camp in Cebu City comes with more than just a place to spend your summer—it’s a complete experience designed for learning, adventure, connection, and community. From the moment you arrive, every detail is taken care of. Explore the stunning island of Cebu, just a short walk from a quaint fishing village with traditional farms and charming timber framed homes. Enjoy activities across our expansive campgrounds, from kayaking and bouncing on water trampolines to building rafts and conquering the high ropes course. With fellow campers from around the world, you can improve your English skills, forge lasting friendships, and immerse yourself in the authentic spirit of camp.",
+      "images": [
+        "/templates/yootheme/activities/activity-details/bg-ad5.png",
+        "/templates/yootheme/activities/activity-details/bg-ad6.png"
+      ]
+    },
+    "accommodation": {
+      "heroImage": "/templates/yootheme/cache/1e/08-Sommercamp-Walsrode-tents-inside-1e26262a.jpg",
+      "title": "Accommodation Options",
+      "subtitle": "Camp Life – Like a Little Village!",
+      "quote": "",
+      "mainHeading": "",
+      "introText": [
+        "At our international summer camp in Lower Saxony, you can choose between our cozy tent village or the comfy Adventure Lodges – it all depends on your sense of adventure!"
+      ],
+      "outroText": [
+        "🏕️ Tent Village: Spacious tents for 6–7 campers with wooden floors and a loft area – the ultimate outdoor experience under the stars.",
+        "🏡 Adventure Lodges: Comfortable cabins with 4–8 beds, storage shelves, and seating areas. (Please note: staying in a lodge comes at an extra charge.)"
+      ],
+      "details": [
+        "Restroom and shower facilities are also separated by gender and always close by.",
+        "Best of all: Our teamers live right next door – they’re available for you 24/7!",
+        "Good to know:",
+        "For tents, bring your own sleeping bag and sleeping mat.",
+        "For lodges, bring a fitted sheet and either a sleeping bag or bedding set (available for rent if needed).",
+        "You can choose your preferred accommodation during the booking process – secure your spot now!"
+      ],
+      "principles": [
+        "Junior (7–12 years)",
+        " Senior (12–15 years)",
+        " Senior Plus (15–17 years)"
+      ]
+    },
+    "program": {
+      "heroImage": "/templates/yootheme/cache/7e/10-Abenteuercamp-Climbing-Tree-7e2c8878.jpg",
+      "title": "Program",
+      "subtitle": "A Full Day of Adventure, Sports & Creativity!",
+      "introText": [
+        "\"Adventure, Sports & Creativity\" is the base program at our Lüneburger Heide Camp – no extra booking needed! If you don’t choose an additional profile like Horseback Riding or Survival, this is your go-to for an action-packed and varied camp experience."
+      ],
+       "quote": "",
+      "outroText": [
+        "Learn English – Without Even Trying!",
+        "Our international team brings the real camp spirit – full of energy, adventure, and fun. And the best part? English becomes a natural part of the day – whether you're playing sports, doing creative projects, or chilling by the campfire.",
+        "Friendships That Last!",
+        "Shared adventures create real connections – and many campers already plan their return together for next summer. These are friendships that stick!"
+      ],
+      "mainHeading": "Every morning, you get to pick a new exciting activity – whatever you’re in the mood for!",
+      "principles": [
+        "Outdoor Action & Adventure: High ropes course, archery, raft building, or survival training – challenge your limits!",
+        "Sports & Movement: Soccer, volleyball, basketball, or splashing around in the lake – get moving and have fun!",
+        " Creativity & Chill: Crafts, painting, reading, or baking – perfect for relaxing moments at camp."
+      ],
+      "footerText": [
+        "There’s no room for boredom here – every day brings fresh adventures, new sports challenges, and creative highlights just for you!"
+      ]
+    },
+    "meals": {
+      "title": "Meal On Site",
+      "description": "Indulge in three scrumptious meals each day—fresh, diverse, and absolutely delightful! Whether you have a vegetarian, gluten-free, or lactose-free diet, simply inform us in advance, and we’ll take care of your needs.",
+      "items": [
+        {
+          "title": "Breakfast",
+          "desc": "Start your day with a hearty buffet of fresh bread, seasonal fruits, muesli, milk , juice, and tea—perfect fuel for all your exciting activities"
+        },
+        {
+          "title": "Lunch",
+          "desc": "Feast on warm, delicious dishes made entirely from scratch, featuring seafood, meats, vegetables, and rice to satisfy every appetite and keep you energized"
+        },
+        {
+          "title": "Dinner",
+          "desc": "Savor authentic local flavors with carefully prepared meals, served fresh to delight your taste buds after a full day of adventure and exploration."
+        },
+        {
+          "title": "Snacks and Refreshments",
+          "desc": "Stay energized with fresh fruits, afternoon treats, and plenty of water throughout the day, keeping you ready for every experience"
+        }
+      ],
+      "footer": "And the highlight? Everything is made from scratch—no instant meals here! Enjoy authentic dishes that not only taste incredible but also provide you with a true taste of local cuisine to fuel your adventures!"
+    },
+    "team": {
+      "heroImage": "/templates/yootheme/cache/2e/Teamertraining_2017_60-2e2ec36d.jpg",
+      "title": "Team and Supervision",
+      "subtitle": "Cared for Around the Clock!",
+       "quote": "",
+      "mainHeading": "",
+      "introText": [
+        "Our experienced and passionate teamers are there for you 24/7 – full of energy, positivity, and always ready to listen. Whether it’s a quick question or a bigger worry, you can count on them anytime.",
+        "The best part?",
+        "Our team comes from all over the world and brings that true international camp spirit – that’s why we speak both English and German!"
+      ],
+      "footerText": [
+        "This way, you’ll naturally pick up both languages – while playing sports, chatting by the campfire, or just hanging out.",
+        "Our supervision ratio is between 1:7 and 1:10, so you’re always in good hands with our all-around care package!"
+      ]
+    },
+    "insurance": {
+      "title": "Coverage and Insurance",
+      "description": "Whether it’s everyday bumps and scrapes to unexpected emergencies, our International Insurance Package gives your child all-round protection. Covering accidents, health issues, and other unforeseen events, it ensures peace of mind for parents while keeping children safe and supported throughout their entire journey.",
+      "package": {
+        "title": "Camp Insurance Package",
+        "desc": "With this, every risk is going to be covered, and participants will stay completely safe the entire time they are in camp.",
+        "items": [
+          "Accidents and medical visits are covered",
+          "Protection against property damage",
+          "Price: Depending on the camping trip selected"
+        ]
+      },
+      "cancellation": {
+        "title": "Travel Cancellation Guarantee",
+        "desc": "Our promise ensures a full refund for cancellations due to illness or unforeseen events before camp starts, giving you peace of mind and flexible plans.",
+        "items": [
+          "Valid until one week before camp",
+          "Covers cancellations for illness, accidents, or exams",
+          "Refund applies to the full program cost"
+        ]
+      }
+    }
+  }
+}
