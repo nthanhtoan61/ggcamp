@@ -5,7 +5,6 @@ import { ReactNode, useMemo } from "react";
 
 interface HeroSectionProps {
   title: string | ReactNode;
-  subtitle?: string;
   backgroundImage: string;
   overlayColor?: string;
   sectionClass?: string;
@@ -18,7 +17,6 @@ interface HeroSectionProps {
 
 export function HeroSection({
   title,
-  subtitle,
   backgroundImage,
   overlayColor = "rgba(0, 0, 0, 0)",
   sectionClass = "uk-section-primary",
@@ -40,17 +38,16 @@ export function HeroSection({
     // Add cache-busting query parameter based on image URL to force browser reload when image changes
     // Use filename from URL as cache buster - when image changes, filename changes, so browser will reload
     const cacheBuster = backgroundImage.split("/").pop() || backgroundImage;
-    return `${baseImageUrl}${
-      baseImageUrl.includes("?") ? "&" : "?"
-    }v=${encodeURIComponent(cacheBuster)}`;
+    return `${baseImageUrl}${baseImageUrl.includes("?") ? "&" : "?"
+      }v=${encodeURIComponent(cacheBuster)}`;
   }, [backgroundImage]);
 
   const bgPositionClass =
     backgroundPosition === "center-center"
       ? "uk-background-center-center"
       : backgroundPosition === "bottom-center"
-      ? "uk-background-bottom-center"
-      : "uk-background-top-center";
+        ? "uk-background-bottom-center"
+        : "uk-background-top-center";
 
   return (
     <div
@@ -75,8 +72,8 @@ export function HeroSection({
             backgroundPosition === "center-center"
               ? "center center"
               : backgroundPosition === "bottom-center"
-              ? "center bottom"
-              : "center top",
+                ? "center bottom"
+                : "center top",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "scroll",
           height: "70vh",
@@ -108,17 +105,6 @@ export function HeroSection({
               >
                 {title}
               </h1>
-              {subtitle && (
-                <div
-                  className="uk-panel uk-text-lead uk-margin uk-text-center max-sm:text-[3.5vw] max-sm:leading-relaxed max-sm:px-4"
-                  {...(enableScrollspy &&
-                    ({
-                      "uk-scrollspy-class": "",
-                    } as React.HTMLAttributes<HTMLDivElement>))}
-                >
-                  {subtitle}
-                </div>
-              )}
               {buttonContent && (
                 <div className="flex flex-col items-center justify-center text-center w-full mt-4">
                   {buttonContent}
@@ -129,14 +115,14 @@ export function HeroSection({
         </div>
         {children && (
           <div
-            className="uk-container uk-container-large"
             style={{
               zIndex: 1,
-              maxWidth: "100%",
-              marginTop: "8rem",
+              width: "100%",
+              maxWidth: "none",
+              marginTop: "20rem",
               position: "relative",
-              paddingLeft: "0.5rem",
-              paddingRight: "0.5rem",
+              paddingLeft: "1rem",
+              paddingRight: "1rem",
             }}
           >
             <div className="flex flex-col items-center justify-center w-full">
