@@ -142,7 +142,7 @@ export default function ActivityDetailSections({
                 >
                   <circle cx="9" cy="9" r="9" fill="var(--color-primary)" />
                 </svg>
-                <div className="text-gray-600 text-base text-[1vw] leading-relaxed m-0">
+                <div className="text-gray-600 text-base text-[2vw] md:text-[1vw] leading-relaxed m-0">
                   {principle}
                 </div>
               </li>
