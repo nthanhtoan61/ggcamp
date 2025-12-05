@@ -8,7 +8,7 @@ import { programs } from "@/data/programs";
 import { ProgramCard } from "@/components/features/ProgramCard";
 import { useScrollTrigger } from "@/lib/utils";
 import ActivityShowcase from "@/components/home/ActivityShowcase";
-import BlogHeroSection from "@/components/home/BlogHeroSection";
+
 import FAQSection from "@/components/home/FAQSection";
 import { Lasso } from "lucide-react";
 import LatestPostsSection from "@/components/home/LatestPostsSection";
@@ -651,7 +651,6 @@ export default function HomePage() {
       <FAQSection />
       <PartnersSection />
       <Newsletter />
-      <BlogHeroSection />
       <LatestPostsSection />
     </main>
   );
