@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { programs } from "@/data/programs";
 import ActivityShowcase from "@/components/home/ActivityShowcase";
-import BlogHeroSection from "@/components/home/BlogHeroSection";
+
 import FAQSection from "@/components/home/FAQSection";
 import LatestPostsSection from "@/components/home/LatestPostsSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -371,7 +371,6 @@ export default function HomePage() {
       <FAQSection />
       <PartnersSection />
       <Newsletter />
-      <BlogHeroSection />
       <LatestPostsSection />
     </main>
   );

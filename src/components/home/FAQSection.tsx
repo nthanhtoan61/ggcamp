@@ -9,27 +9,13 @@ export default function FAQSection() {
   return (
     <div className="relative py-[10vh] overflow-hidden bg-gray-50">
       {/* Background Image - Left Side */}
-      <div className="absolute left-0 top-[19vh] bottom-0 w-[15vw] flex items-start justify-start overflow-hidden opacity-80">
-        <Image
-          src="/templates/yootheme/post/anhla.png"
-          width={800}
-          height={1200}
-          alt="Background"
-          className="h-full w-[10vw] max-w-none"
-        />
-      </div>
-
-      <div className="w-full px-[5vw] md:px-[10vw] relative z-10">
+      <div className="absolute left-0 top-[19vh] bottom-0 w-[15vw] flex items-start justify-start overflow-hidden opacity-80"></div>
+      <div className="w-full px-[5vw] md:px-[3vw] relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[5vw] items-start">
           {/* Left Column */}
           <div>
-            <div className="inline-flex items-center gap-2 md:gap-[0.5vw] !text-[var(--color-primary)] text-xl md:text-[1.7vw] !font-bold mb-6 md:mb-[4vh] !tracking-wider  leading-none">
-              <img
-                src="https://demo.awaikenthemes.com/wildex/wp-content/themes/wildex/assets/images/icon-sub-heading.svg"
-                alt="icon"
-                className="w-6 h-6 md:w-[2vw] md:h-[2vw] object-contain flex-shrink-0"
-              />
-              Frequently Asked Questions
+            <div className="inline-flex items-center gap-2 md:gap-[0.5vw] !text-[var(--color-primary)] text-lg md:text-[1vw] !font-bold mb-6 md:mb-[4vh] !tracking-wider  leading-none">
+              - Frequently Asked Questions
             </div>
 
             <div className="text-2xl md:text-[2.5vw] !font-bold text-gray-900 mb-4 md:mb-[2vh] !mt-0 leading-tight">

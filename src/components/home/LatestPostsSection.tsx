@@ -78,6 +78,18 @@ const latestPosts = [
 export default function LatestPostsSection() {
   return (
     <div className="uk-section-default uk-section !py-[10vh]">
+      <div className="py-8 md:py-[6vh]">
+        <div className="px-6 md:px-[10vw] mx-auto">
+          <div className="uk-text-center">
+            <p className="inline-flex items-center gap-2 md:gap-[0.5vw] !text-[var(--color-primary)] text-lg md:text-[1vw] !font-bold mb-6 md:mb-[4vh] !tracking-wider uppercase leading-none">
+              - Your next step
+            </p>
+            <div className="text-2xl md:text-[2.5vw] !font-bold text-gray-900 mb-4 md:mb-[2vh] !mt-0 leading-tight">
+              Read Every News & Blog
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="">
         <div
           className="uk-grid tm-grid-expand uk-child-width-1-1"
@@ -100,7 +112,7 @@ export default function LatestPostsSection() {
                       width={post.id === 1 ? 800 : 600}
                       height={post.id === 1 ? 600 : 520}
                       alt={post.title}
-                      className="!w-[90vw] md:!w-[40vw] !h-[60vw] md:!h-[60vh] object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="!w-[90vw] md:!w-[80vw] !h-[60vw] md:!h-[50vh] object-cover group-hover:scale-110 transition-transform duration-700"
                       loading="lazy"
                     />
 
@@ -108,7 +120,7 @@ export default function LatestPostsSection() {
 
                     <div className="absolute bottom-0 !left-[1vw] !right-[1vw] !p-[1vw] flex flex-col gap-0">
                       <div className="!-mb-[4vh]">
-                        <span className="inline-block bg-[var(--color-primary)] text-black !text-[3.5vw] md:!text-[1.7vw] lg:!text-[1.5vw] font-extrabold !px-[4vw] md:!px-[1.5vw] !py-[1vh] md:!py-[0.5vh] shadow-lg">
+                        <span className="inline-block bg-[var(--color-primary)] text-white !text-[3.5vw] md:!text-[1.7vw] lg:!text-[1.5vw] font-extrabold !px-[4vw] md:!px-[1.5vw] !py-[1vh] md:!py-[0.5vh] shadow-lg">
                           {post.date}
                         </span>
                       </div>
@@ -199,7 +211,7 @@ export default function LatestPostsSection() {
                 width={500}
                 height={250}
                 alt="Comfort Plus"
-                className="!w-[90vw] md:!w-[50vw] !h-[30vh] md:!h-[50vh] object-cover"
+                className="!w-[90vw] md:!w-[100vw] !h-[30vh] md:!h-[50vh] object-cover"
               />
 
               <div className="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:opacity-0"></div>
