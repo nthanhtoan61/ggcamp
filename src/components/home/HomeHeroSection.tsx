@@ -142,7 +142,6 @@ export default function HomeHeroSection() {
                         left: "50%",
                         transform: "translateX(-50%)",
                         width: "100%",
-                        maxWidth: "1200px",
                         zIndex: 3,
                         padding: "0 1rem",
                     }}

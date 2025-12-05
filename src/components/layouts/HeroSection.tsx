@@ -84,7 +84,7 @@ export function HeroSection({
           paddingBottom: "10vh",
           overflow: "hidden",
           clipPath: "none",
-          top: "-20vh"
+          marginTop: "-20vh",
         }}
       >
         <div
