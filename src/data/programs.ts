@@ -22,7 +22,7 @@ export const programs: Program[] = [
     seasons: ["spring", "summer", "autumn"],
     age: "From 12 - 18 years old",
     location: "Thailand",
-    image: "yootheme/cache/53/00_Abenteuercamp-Hike-533b20fa.jpg",
+    image: "yootheme/banner/b5.jpg",
     slug: "adventure-sports-creative",
   },
   {
@@ -32,7 +32,7 @@ export const programs: Program[] = [
     seasons: ["spring", "summer", "autumn"],
     age: "From 12 - 18 years old",
     location: "Vietnam",
-    image: "yootheme/cache/c6/01-Kreativprogramm-in-der-Ferienfreizeit-c6e95722.jpg",
+    image: "yootheme/banner/b6.jpg",
     slug: "arts-crafts",
   },
   {
@@ -42,7 +42,7 @@ export const programs: Program[] = [
     seasons: ["summer"],
     age: "From 12 - 18 years old",
     location: "Philippines",
-    image: "yootheme/cache/40/00-Kletterkurs_Sommercamp_Bayern-40f1bd8d.jpg",
+    image: "yootheme/banner/b1.jpg",
     slug: "climbing",
   },
   {
@@ -52,7 +52,7 @@ export const programs: Program[] = [
     seasons: ["summer", "autumn"],
     age: "From 12 - 18 years old",
     location: "Malaysia",
-    image: "yootheme/cache/c1/00-Tanzen-im-Feriencamp-c1834fc7.jpg",
+    image: "yootheme/banner/b4.jpg",
     slug: "dancing",
   },
   {
@@ -62,7 +62,7 @@ export const programs: Program[] = [
     seasons: ["summer"],
     age: "From 12 - 18 years old",
     location: "Philippines",
-    image: "yootheme/cache/33/01-Tauchkurs-im-Sommercamp-3309e219.jpg",
+    image: "yootheme/banner/b2.jpg",
     slug: "diving",
   },
   {
@@ -72,7 +72,7 @@ export const programs: Program[] = [
     seasons: ["spring", "summer"],
     age: "From 12 - 18 years old",
     location: "Malaysia",
-    image: "yootheme/cache/b9/07-Language-Camps-by-Camp-Adventure-b9f01b6a.jpg",
+    image: "yootheme/banner/b1.jpg",
     slug: "englisch-toefl",
   },
   {

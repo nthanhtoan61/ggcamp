@@ -7,7 +7,7 @@ export default function PartnersSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/templates/yootheme/post/anhtour.jpg"
+          src="/templates/yootheme/banner/b2.jpg"
           fill
           alt="Partners Background"
           className="object-cover"

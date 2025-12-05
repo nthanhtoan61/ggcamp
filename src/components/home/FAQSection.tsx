@@ -30,7 +30,7 @@ export default function FAQSection() {
             {/* Image with CTA Overlay */}
             <div className="relative rounded-2xl md:rounded-[2vw] overflow-hidden">
               <Image
-                src="/templates/yootheme/post/anhgirl1.jpg"
+                src="/templates/yootheme/banner/b5.jpg"
                 width={400}
                 height={500}
                 alt="Glamping"

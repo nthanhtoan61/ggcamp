@@ -120,7 +120,7 @@ export default function CampProfilesPage() {
         age: [12, 18],
         locations: ["thailand"],
         image: getTemplateImageUrl(
-          "yootheme/cache/53/00_Abenteuercamp-Hike-533b20fa.jpg"
+          "yootheme/banner/b14.jpg"
         ),
         link: "/adventure-sports-creative",
         program: "adventure",
@@ -134,7 +134,7 @@ export default function CampProfilesPage() {
         age: [12, 18],
         locations: ["vietnam"],
         image: getTemplateImageUrl(
-          "yootheme/cache/c6/01-Kreativprogramm-in-der-Ferienfreizeit-c6e95722.jpg"
+          "yootheme/banner/b6.jpg"
         ),
         link: "/arts-crafts",
         program: "arts-crafts",
@@ -148,7 +148,7 @@ export default function CampProfilesPage() {
         age: [12, 18],
         locations: ["philippines"],
         image: getTemplateImageUrl(
-          "yootheme/cache/40/00-Kletterkurs_Sommercamp_Bayern-40f1bd8d.jpg"
+          "yootheme/banner/b1.jpg"
         ),
         link: "/climbing",
         program: "climbing",
@@ -162,7 +162,7 @@ export default function CampProfilesPage() {
         age: [12, 18],
         locations: ["malaysia"],
         image: getTemplateImageUrl(
-          "yootheme/cache/c1/00-Tanzen-im-Feriencamp-c1834fc7.jpg"
+          "yootheme/banner/b4.jpg"
         ),
         link: "/dancing",
         program: "dancing",
@@ -176,7 +176,7 @@ export default function CampProfilesPage() {
         age: [12, 18],
         locations: ["philippines"],
         image: getTemplateImageUrl(
-          "yootheme/cache/33/01-Tauchkurs-im-Sommercamp-3309e219.jpg"
+          "yootheme/banner/b2.jpg"
         ),
         link: "/diving",
         program: "diving",
@@ -190,7 +190,7 @@ export default function CampProfilesPage() {
         age: [12, 18],
         locations: ["malaysia"],
         image: getTemplateImageUrl(
-          "yootheme/cache/b9/07-Language-Camps-by-Camp-Adventure-b9f01b6a.jpg"
+          "yootheme/banner/b1.jpg"
         ),
         link: "/englisch-toefl",
         program: "englisch-toefl",

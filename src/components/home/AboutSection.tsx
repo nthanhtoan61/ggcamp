@@ -323,7 +323,7 @@ export function AboutSection() {
               className="about-main-img relative !w-[22vw] !h-[28vw] max-sm:!w-full max-sm:!h-[50vh] overflow-hidden rounded-xl max-sm:rounded-[2vw] shadow-lg cursor-pointer group"
             >
               <img
-                src={getTemplateImageUrl("yootheme/aboutImage/about-image-1-royal.jpg")}
+                src={getTemplateImageUrl("yootheme/img/a1.jpg")}
                 alt="About Image"
                 className="absolute inset-0 w-full h-full object-contain"
               />
@@ -381,7 +381,7 @@ export function AboutSection() {
             >
               <img
                 src={getTemplateImageUrl(
-                  "yootheme/aboutImage/about-image-2-royal.png"
+                  "yootheme/img/a2.jpg"
                 )}
                 alt="Extra Corner Image"
                 className="w-full h-full object-contain"

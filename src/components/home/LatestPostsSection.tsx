@@ -3,7 +3,7 @@ import Image from "next/image";
 const blogPosts = [
   {
     id: 1,
-    image: "/templates/yootheme/post/anhnew1.jpg",
+    image: "templates/yootheme/banner/b1.jpg",
     title: "Power of Consistency",
     description:
       "Customized training programs to enhance skills and improve team performance.",
@@ -11,7 +11,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    image: "/templates/yootheme/post/anhnew2.jpg",
+    image: "templates/yootheme/banner/b2.jpg",
     title: "You Need to Know",
     description:
       "Expert project management ensuring timely delivery and budget compliance.",
@@ -19,7 +19,7 @@ const blogPosts = [
   },
   {
     id: 3,
-    image: "/templates/yootheme/post/anhnew3.jpg",
+    image: "templates/yootheme/banner/b3.jpg",
     title: "Common Mistakes",
     description:
       "Comprehensive marketing strategies focused on increasing brand awareness and sales.",
@@ -27,7 +27,7 @@ const blogPosts = [
   },
   {
     id: 4,
-    image: "/templates/yootheme/post/anhnew4.jpg",
+    image: "templates/yootheme/banner/b4.jpg",
     title: "Quality Always Wins",
     description:
       "Innovative design services that bring your creative visions to life.",
@@ -35,7 +35,7 @@ const blogPosts = [
   },
   {
     id: 5,
-    image: "/templates/yootheme/post/anhnew5.jpg",
+    image: "templates/yootheme/banner/b5.jpg",
     title: "Tips You Should Know",
     description:
       "Reliable customer support designed to provide fast and effective solutions.",
@@ -43,7 +43,7 @@ const blogPosts = [
   },
   {
     id: 6,
-    image: "/templates/yootheme/post/anhnew6.jpg",
+    image: "templates/yootheme/banner/b6.jpg",
     title: "Make the Most of It",
     description:
       "Professional consulting tailored to meet your unique business challenges and goals.",
@@ -54,21 +54,21 @@ const blogPosts = [
 const latestPosts = [
   {
     id: 1,
-    image: "/templates/yootheme/post/anhnew7.jpg",
+    image: "templates/yootheme/banner/b7.jpg",
     title: "Make the Most of It",
     description:
       "Professional consulting tailored to meet your unique business challenges.",
   },
   {
     id: 2,
-    image: "/templates/yootheme/post/anhnew8.jpg",
+    image: "templates/yootheme/banner/b8.jpg",
     title: "Tips You Should Know",
     description:
       "Reliable customer support designed to provide fast and effective solutions.",
   },
   {
     id: 3,
-    image: "/templates/yootheme/post/anhnew1.jpg",
+    image: "templates/yootheme/banner/b1.jpg",
     title: "Quality Always Wins",
     description:
       "Innovative design services that bring your creative visions to life.",
@@ -207,7 +207,7 @@ export default function LatestPostsSection() {
             {/* Featured Card lớn */}
             <div className="relative !mt-[2vh] group">
               <Image
-                src="/templates/yootheme/post/anhnew2.jpg"
+                src="templates/yootheme/banner/b2.jpg"
                 width={500}
                 height={250}
                 alt="Comfort Plus"

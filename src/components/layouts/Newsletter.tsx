@@ -14,7 +14,7 @@ type NewsletterProps = {
 };
 
 export default function Newsletter({
-  imagePath = "yootheme/aboutImage/beach.jpg",
+  imagePath = "yootheme/banner/b10.jpg",
   title = "Stay Updated with Our Monthly",
   description = "Sign up to receive the latest news about new camps, activities, and exciting opportunities. Don’t miss out on anything fun!",
   buttonText = "Subscribe",

@@ -47,7 +47,7 @@ export default function AdventureSportsCreativePage() {
         backgroundImage={data.hero.bgImage}
         overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-default uk-preserve-color uk-light"
-        titleClass="uk-heading-large uk-text-center ]"
+        titleClass="uk-heading-large uk-text-center !text-[5vw]"
       />
 
       {/* Main Content Area */}
@@ -78,7 +78,7 @@ export default function AdventureSportsCreativePage() {
 
 <div className="flex flex-col w-full border border-[#e8e8e8] rounded-[20px] overflow-hidden">
   {/* Header */}
-  <div className="p-6 font-semibold text-[3.63vw] md:text-[1.7vw] bg-primary">
+  <div className="!text-white p-6 font-semibold text-[3.63vw] md:text-[1.7vw] bg-primary">
     Explore Our services
   </div>
 
@@ -349,31 +349,34 @@ export default function AdventureSportsCreativePage() {
                   }}
                 >
                   <div
-                    className="text-2xl md:text-[3vw]"
-                    style={{
-                      color: "#fff",
-                      fontWeight: "700",
-                      margin: "0 0 15px 0",
-                      textShadow: "2px 2px 8px rgba(0,0,0,0.5)",
-                      letterSpacing: "-0.5px",
-                    }}
-                  >
-                    <span>{data.mainGallery.overlayInfo.location}</span>
-                  </div>
-                  <div
                     style={{
                       display: "flex",
                       alignItems: "center",
                       gap: "20px",
-                      fontSize: "16px",
-                      fontWeight: "500",
+                      flexWrap: "wrap",
                     }}
                   >
+                    {/* Location */}
+                    <div
+                      className="text-2xl md:text-[3vw]"
+                      style={{
+                        color: "#fff",
+                        fontWeight: "700",
+                        textShadow: "2px 2px 8px rgba(0,0,0,0.5)",
+                        letterSpacing: "-0.5px",
+                      }}
+                    >
+                      <span>{data.mainGallery.overlayInfo.location}</span>
+                    </div>
+                    
+                    {/* Season */}
                     <div
                       style={{
                         display: "flex",
                         alignItems: "center",
                         gap: "8px",
+                        fontSize: "2vw",
+                        fontWeight: "500",
                       }}
                     >
                       {/* Calendar Icon SVG */}
@@ -401,11 +404,15 @@ export default function AdventureSportsCreativePage() {
                         {data.mainGallery.overlayInfo.season}
                       </div>
                     </div>
+                    
+                    {/* Languages */}
                     <div
                       style={{
                         display: "flex",
                         alignItems: "center",
                         gap: "8px",
+                        fontSize: "2vw",
+                        fontWeight: "500",
                       }}
                     >
                       {/* Globe Icon SVG */}
@@ -421,7 +428,7 @@ export default function AdventureSportsCreativePage() {
                         <line x1="2" y1="12" x2="22" y2="12" />
                         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                       </svg>
-                      <div className="text-xs md:text-[1w]">
+                      <div className="text-xs md:text-[1vw]">
                         {data.mainGallery.overlayInfo.languages}
                       </div>
                     </div>

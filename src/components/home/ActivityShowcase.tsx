@@ -8,10 +8,10 @@ export default function ActivityShowcase() {
 
   // Định nghĩa ảnh cho mỗi activity
   const activityImages = {
-    0: "/templates/yootheme/post/anhthuyen.jpg", // Default/Surfing
-    1: "/templates/yootheme/post/anhtour.jpg", // River Kayaking - bạn có thể thay đổi path
-    2: "/templates/yootheme/post/anhgirl1.jpg", // Campfire - bạn có thể thay đổi path
-    3: "/templates/yootheme/post/anhthuyen.jpg", // Community Service - bạn có thể thay đổi path
+    0: "/templates/yootheme/banner/b13.jpg", // Default/Surfing
+    1: "/templates/yootheme/banner/b14.jpg", // River Kayaking - bạn có thể thay đổi path
+    2: "/templates/yootheme/banner/b16.jpg", // Campfire - bạn có thể thay đổi path
+    3: "/templates/yootheme/banner/b11.jpg", // Community Service - bạn có thể thay đổi path
   };
 
   const currentImage =
