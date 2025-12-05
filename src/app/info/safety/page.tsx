@@ -145,54 +145,14 @@ export default function SafetyPage() {
         backgroundImage="yootheme/cache/18/faqs_header_new.jpg"
         overlayColor="rgba(0, 0, 0, 0.35)"
         sectionClass="uk-section-secondary uk-section-overlap uk-preserve-color uk-light"
-        titleClass="uk-heading-large uk-text-center !text-[5vw]"
+        titleClass="uk-heading-large uk-text-center"
         enableScrollspy={true}
         backgroundPosition="top-center"
       />
 
-      {/* Introduce Section */}
-      <section
-        className="uk-section-default uk-section-overlap uk-section"
-        uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
-      >
-        <div className="uk-container uk-container-large">
-          <div className="uk-grid tm-grid-expand uk-grid-margin" uk-grid="">
-            <div className="uk-width-1-3@m">
-              <h1>
-                <p
-                  className="font-['Raleway'] text-3xl! md:text-[2vw]! leading-tight font-semibold! "
-                  uk-scrollspy-class="uk-animation-slide-bottom-medium"
-                >
-                  Go and Grow Camp
-                </p>
-              </h1>
-              <div className="uk-divider-icon uk-width-medium uk-margin-auto"></div>
-            </div>
-            <div className="uk-width-2-3@m">
-              <blockquote>
-                <p
-                  className="font-['Raleway'] text-sm! md:text-[1.2vw]! leading-relaxed "
-                  uk-scrollspy-class="uk-animation-slide-bottom-medium"
-                >
-                  Dear parents,
-                  <br />
-                  <br />
-                  We are very happy that you want us to take care of the
-                  sweetest and the best of your life. Be sure: we will protect
-                  them as if they were our own child and will do everything we
-                  can to guarantee the greatest possible safety. We would like
-                  to share our philosophy and a piece of our safety concept with
-                  you. If you have any questions, please feel free to contact
-                  us.
-                </p>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Aprroach Section */}
-      <section
+      <div
         className="w-full px-10 md:px-[3vw] py-16 md:py-24 bg-white"
         uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
       >
@@ -216,7 +176,7 @@ export default function SafetyPage() {
               </div>
 
               {/* Ảnh nhỏ bên phải trên */}
-              <div className="w-[34%] bg-[#f8f9fa] p-[1vw] md:p-[2vw] rounded-2xl flex flex-col justify-center items-start">
+              <div className="w-[34%] bg-white p-[1vw] md:p-[2vw] rounded-2xl flex flex-col justify-center items-start">
                 <div className="flex items-center -space-x-3 mb-[5vh]">
                   <img
                     className="w-10 h-10 md:w-[3vw] md:h-[3vh] rounded-full border-2 border-white"
@@ -273,7 +233,7 @@ export default function SafetyPage() {
                 className="text-primary font-bold text-sm md:text-[1vw] tracking-widest uppercase mb-2 block animate-fadeUp"
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
               >
-                ✦ Our Approach
+                Our Approach
               </span>
               <div className="text-4xl md:text-[2vw] font-extrabold text-gray-900 leading-tight">
                 Learning, Comfort, and Confidence in Every Step
@@ -389,7 +349,7 @@ export default function SafetyPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Our Philosophy Section */}
       <section
@@ -407,15 +367,12 @@ export default function SafetyPage() {
                 Go and Grow Camp
               </div>
               <div
-                className=" uk-margin-small uk-text-center font-['Raleway'] text-md md:text-[1.5vw] leading-tight font-semibold"
+                className=" uk-margin-small uk-text-center font-['Raleway'] text-md md:text-[1.5vw] text-primary leading-tight font-semibold"
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
               >
                 Our Philosophy
               </div>
-              <div
-                className="uk-divider-icon uk-width-medium uk-margin-auto"
-                uk-scrollspy-class=""
-              ></div>
+              
               <div className="uk-margin uk-text-left@m uk-text-center">
                 <div
                   className="uk-grid uk-child-width-1-1 uk-child-width-1-3@m uk-grid-large uk-grid-match"
@@ -505,15 +462,12 @@ export default function SafetyPage() {
                 Go and Grow Camp
               </div>
               <div
-                className="uk-margin-small uk-text-center font-['Raleway'] text-md md:text-[1.5vw] leading-tight font-semibold "
+                className="uk-margin-small uk-text-center font-['Raleway'] text-md md:text-[1.5vw] text-primary leading-tight font-semibold "
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
               >
                 Security Concept
               </div>
-              <div
-                className="uk-divider-icon uk-width-medium uk-margin-auto"
-                uk-scrollspy-class=""
-              ></div>
+           
             </div>
           </div>
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
@@ -579,15 +533,6 @@ export default function SafetyPage() {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              {/*Contact section*/}
-              <div className="uk-panel uk-margin" uk-scrollspy-class="">
-                <p className="text-center!"></p>
-                <p className="font-['Raleway'] text-md md:text-[1.2vw] leading-relaxed text-center!">
-                  We hope to have helped you with this overview. For further
-                  information you can call us at +49 (0) 40 4100 949 00.
-                </p>
               </div>
             </div>
           </div>
