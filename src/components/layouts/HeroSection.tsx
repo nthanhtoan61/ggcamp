@@ -54,7 +54,7 @@ export function HeroSection({
 
   return (
     <div
-      className={`${sectionClass} uk-section-overlap uk-position-relative`}
+      className={`${sectionClass} uk-position-relative`}
       style={{
         overflow: "visible", // Allow image to show fully
       }}
