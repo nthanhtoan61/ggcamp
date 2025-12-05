@@ -122,6 +122,8 @@
       "heroImage": "/templates/yootheme/cache/1e/08-Sommercamp-Walsrode-tents-inside-1e26262a.jpg",
       "title": "Accommodation Options",
       "subtitle": "Camp Life – Like a Little Village!",
+      "quote": "",
+      "mainHeading": "",
       "introText": [
         "At our international summer camp in Lower Saxony, you can choose between our cozy tent village or the comfy Adventure Lodges – it all depends on your sense of adventure!"
       ],
@@ -150,6 +152,7 @@
       "introText": [
         "\"Adventure, Sports & Creativity\" is the base program at our Lüneburger Heide Camp – no extra booking needed! If you don’t choose an additional profile like Horseback Riding or Survival, this is your go-to for an action-packed and varied camp experience."
       ],
+       "quote": "",
       "outroText": [
         "Learn English – Without Even Trying!",
         "Our international team brings the real camp spirit – full of energy, adventure, and fun. And the best part? English becomes a natural part of the day – whether you're playing sports, doing creative projects, or chilling by the campfire.",
@@ -193,6 +196,8 @@
       "heroImage": "/templates/yootheme/cache/2e/Teamertraining_2017_60-2e2ec36d.jpg",
       "title": "Team and Supervision",
       "subtitle": "Cared for Around the Clock!",
+       "quote": "",
+      "mainHeading": "",
       "introText": [
         "Our experienced and passionate teamers are there for you 24/7 – full of energy, positivity, and always ready to listen. Whether it’s a quick question or a bigger worry, you can count on them anytime.",
         "The best part?",

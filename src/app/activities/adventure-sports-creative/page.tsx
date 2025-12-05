@@ -362,7 +362,7 @@ export default function AdventureSportsCreativePage() {
                 subtitle={data.sections.accommodation.subtitle}
                 introText={data.sections.accommodation.introText}
                 outroText={data.sections.accommodation.outroText}
-                quote=""
+                quote={data.sections.accommodation.quote}
                 mainHeading=""
                 mainDescription={["Accommodations are separated by gender, so girls and boys stay in their own tents or lodges. We also organize by age group to make sure everyone feels right at home:"]}
                 principles={data.sections.accommodation.principles}
@@ -377,7 +377,7 @@ export default function AdventureSportsCreativePage() {
                 subtitle={data.sections.program.subtitle}
                 introText={data.sections.program.introText}
                 outroText={data.sections.program.outroText}
-                quote=""
+                quote={data.sections.program.quote}
                 mainHeading={data.sections.program.mainHeading}
                 mainDescription={[""]}
                 principles={data.sections.program.principles}
@@ -411,8 +411,8 @@ export default function AdventureSportsCreativePage() {
                 subtitle={data.sections.team.subtitle}
                 introText={data.sections.team.introText}
                 outroText={[]}
-                quote=""
-                mainHeading=""
+                quote={data.sections.team.quote}
+                mainHeading={data.sections.team.mainHeading}
                 mainDescription={[""]}
                 principles={[]}
                 footerText={data.sections.team.footerText}
