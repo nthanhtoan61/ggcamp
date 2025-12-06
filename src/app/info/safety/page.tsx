@@ -8,6 +8,7 @@ import { Plus, Star, Quote } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { getTemplateImageUrl } from "@/lib/assets";
+import { TopBar } from "@/components/layouts/TopBar";
 
 const pageData = {
   philosophyCards: [
@@ -193,7 +194,7 @@ export default function SafetyPage() {
                     src="https://i.pravatar.cc/100?img=8"
                     alt="User"
                   />
-                  <div className="w-10 h-10 md:w-[3vw] md:h-[7vh] rounded-full border-2 border-white bg-[#bfd66b] flex items-center justify-center text-white">
+                  <div className="w-10 h-10 md:w-[3vw] md:h-[7vh] rounded-full border-2 border-white bg-primary flex items-center justify-center text-white">
                     <Plus size={30} />
                   </div>
                 </div>
@@ -230,12 +231,12 @@ export default function SafetyPage() {
             {/* Header */}
             <div>
               <span
-                className="text-primary font-bold text-sm md:text-[1vw] tracking-widest uppercase mb-2 block animate-fadeUp"
+                className="text-primary font-bold text-sm md:text-[1.3vw] tracking-widest uppercase mb-2 block animate-fadeUp"
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
               >
-                Our Approach
+                - Our Approach
               </span>
-              <div className="text-4xl md:text-[2vw] font-extrabold text-gray-900 leading-tight">
+              <div className="text-4xl md:text-[2.5vw] font-extrabold text-gray-900 leading-tight">
                 Learning, Comfort, and Confidence in Every Step
               </div>
             </div>
@@ -263,10 +264,10 @@ export default function SafetyPage() {
                 "Staff trained and supervised around the clock",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="mt-1 text-[#cbca7b]">
+                  <div className="mt-1 text-primary">
                     <FontAwesomeIcon
                       icon={faCheckCircle}
-                      className="text-[#cbca7b]-600 text-[1.2vw]"
+                      className=" text-[5vw] md:text-[1.2vw] "
                     />
                   </div>
                   <span className="text-gray-500 text-sm md:text-[1vw]">
@@ -278,7 +279,7 @@ export default function SafetyPage() {
 
             {/* Vision & Mission Cards Container */}
             <div
-              className="mt-3 md:mt-0 bg-gray-50 rounded-3xl md:p-[2vw] p-6 flex flex-col md:flex-row gap-6"
+              className="mt-3 md:mt-0  rounded-3xl flex flex-col md:flex-row gap-6"
               uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
             >
               {/* Card 1: Vision */}
@@ -290,8 +291,8 @@ export default function SafetyPage() {
                   <div className="w-12 h-12 md:w-[3vw] md:h-[6vh] bg-primary hover:bg-black hover:text-white transition-all duration-300 ease-in-out  rounded-full flex items-center justify-center text-gray-800">
                     {/* SVG Icon from your design */}
                     <svg
-                      width="2vw"
-                      height="3vh"
+                      width="60%"
+                      height="50%"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -323,8 +324,8 @@ export default function SafetyPage() {
                 <div className="flex flex-row justify-start items-center mb-[2vh]">
                   <div className="w-12 h-12 md:w-[3vw] md:h-[6vh] bg-primary hover:bg-black hover:text-white transition-all duration-300 ease-in-out rounded-full flex items-center justify-center text-gray-800 ">
                     <svg
-                      width="2vw"
-                      height="3vh"
+                      width="60%"
+                      height="50%"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -354,20 +355,20 @@ export default function SafetyPage() {
       {/* Our Philosophy Section */}
       <section
         id="guide"
-        className="uk-section-muted uk-section-overlap uk-section uk-section-large"
+        className="uk-section-overlap uk-section uk-section-large "
         uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;"
       >
         <div className="uk-container uk-container-large">
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <div
-                className="uk-h5 uk-margin-small uk-text-center font-['Raleway'] text-[1.5vw] md:text-[1.2vw] "
+                className=" uk-margin-small uk-text-center font-['Raleway'] font-bold text-3xl md:text-[2.5vw] "
                 uk-scrollspy-class="uk-animation-slide-top-medium"
               >
                 Go and Grow Camp
               </div>
               <div
-                className=" uk-margin-small uk-text-center font-['Raleway'] text-md md:text-[1.5vw] text-primary leading-tight font-semibold"
+                className=" uk-margin-small uk-text-center font-['Raleway'] text-xl md:text-[1.5vw] text-primary leading-tight font-semibold"
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
               >
                 Our Philosophy
@@ -396,7 +397,7 @@ export default function SafetyPage() {
                               <Star
                                 key={i}
                                 size={20}
-                                className="text-[#cbca7b] fill-[#cbca7b]"
+                                className="text-primary fill-primary"
                               />
                             ))}
                           </div>
@@ -456,13 +457,13 @@ export default function SafetyPage() {
           <div className="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
             <div className="uk-width-1-1@m">
               <div
-                className="uk-h5 uk-margin-small uk-text-center font-['Raleway'] text-[1.5vw] md:text-[1.2vw]"
+                className="uk-margin-small uk-text-center font-['Raleway'] font-bold text-3xl md:text-[2.5vw]"
                 uk-scrollspy-class="uk-animation-slide-top-medium"
               >
                 Go and Grow Camp
               </div>
               <div
-                className="uk-margin-small uk-text-center font-['Raleway'] text-md md:text-[1.5vw] text-primary leading-tight font-semibold "
+                className="uk-margin-small uk-text-center font-['Raleway'] text-xl md:text-[1.5vw] text-primary leading-tight font-semibold "
                 uk-scrollspy-class="uk-animation-slide-bottom-medium"
               >
                 Security Concept
@@ -494,7 +495,7 @@ export default function SafetyPage() {
                               <Star
                                 key={index}
                                 size={20}
-                                className="text-[#cbca7b] fill-[#cbca7b]"
+                                className="text-primary fill-primary"
                               />
                             ))}
                           </div>
