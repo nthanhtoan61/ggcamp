@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { getTemplateImageUrl } from "@/lib/assets";
+import {getTemplateImageUrl} from "@/lib/assets";
 
 type NewsletterProps = {
   imagePath?: string;

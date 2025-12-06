@@ -71,6 +71,12 @@ const pageData = {
         "Express yourself through games, arts, and exciting hands-on experiences.",
       icon: "yootheme/aboutImage/act2.jpg",
     },
+    {
+      title: "Family Atmosphere",
+      description:
+        "Every camper is part of our big camp family, where friendships grow and everyone feels included.",
+      icon: "yootheme/aboutImage/act2.jpg",
+    },
   ],
 
   events: [
@@ -187,28 +193,27 @@ export default function AboutPage() {
           src={src}
           alt={title}
           fill
-          className="object-cover rounded-[1vw]"
+          className="object-cover rounded-[30px]"
         />
 
         {/* Modal panel */}
-        <div className="absolute inset-0 rounded-[1vw] z-30 pointer-events-none">
+        <div className="absolute inset-0 rounded-[30px] z-30 pointer-events-none flex items-center justify-start">
           <div
             className="
         relative
-        
-        h-[20vh]
-        mt-[14vh] mb-[14vh]
-        rounded-[2vw]
+        h-auto min-h-[120px] md:h-[20vh]
+        rounded-2xl md:rounded-[2vw]
         bg-[#274218]/50
         backdrop-blur-[0.5vw]
         overflow-visible
-        mx-[1.5vw]
+        mx-4 md:mx-[1.5vw]
         w-0
         opacity-0
         transition-all duration-500 ease-out
         group-hover:w-[calc(100%-3vw)]
         group-hover:opacity-100
         pointer-events-auto
+        flex flex-col justify-center
       "
           >
             {/* Nội dung modal */}
@@ -227,12 +232,12 @@ export default function AboutPage() {
               className="
           absolute 
           top-1/2 
-          -translate-y-[18vh]
+          -translate-y-[16vh]
           right-0
           bg-white 
           text-[#274218] 
           rounded-full 
-          p-[0.8vw] 
+          p-[0.5vw] 
           shadow-lg 
           opacity-0 
           transform -translate-x-[3vw] 
@@ -246,13 +251,14 @@ export default function AboutPage() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="1.5vw"
-                height="1.5vw"
+                width="24"
+                height="24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                className="w-6 h-6 md:w-[1.5vw] md:h-[1.5vw]"
               >
                 <path d="M10 6l6 6-6 6" />
               </svg>
@@ -262,7 +268,6 @@ export default function AboutPage() {
       </div>
     );
   };
-  // #E9A919
   return (
     <>
       {/* Hero Section */}
@@ -276,23 +281,27 @@ export default function AboutPage() {
 
       {/* Go & Grow Camp */}
       <section
-        className="uk-section-default uk-section-overlap uk-section uk-section-small bg-cover bg-center animate-fade-in-up"
-        style={{
-          backgroundImage: `url(${getTemplateImageUrl(
-            "yootheme/aboutImage/bg_about.jpg"
-          )})`,
-          animation: "fadeInUp 1s ease-out 0.2s both",
-        }}
+        className=""
+        // style={{
+        //   backgroundImage: `url(${getTemplateImageUrl(
+        //     "yootheme/aboutImage/bg_about.jpg"
+        //   )})`,
+        //   animation: "fadeInUp 1s ease-out 0.2s both",
+        // }}
       >
-        <div className="uk-container uk-container-large">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[2vw] py-[10vh] w-full">
+        <div className="py-[10vh] px-[10vw]">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[2vw]  w-full">
             {/* LEFT CONTENT */}
             <div className="lg:w-2/5 w-full">
-              <p className="text-base md:text-[1vw] text-primary! font-medium mb-[1vw] md:leading-[1.6vw] leading-normal">
+              <p className="text-base md:text-[1vw] text-primary! font-medium mb-[1vw] md:leading-[1.7vw] leading-normal">
+                Go & Grow Camp
+              </p>
+
+              <p className="text-base md:text-[2.5vw] font-bold!">
                 Go & Grow Camp A Place to Learn, Connect, and Grow
               </p>
 
-              <p className="text-base md:text-[1.458vw]">
+              <p className="text-base md:text-[1vw] text-gray-600 mb-[2vw]">
                 Go & Grow Camp brings together young people from different
                 countries and cultures to enjoy fun activities, meaningful
                 projects, and positive community experiences. Every camper—new
@@ -300,23 +309,13 @@ export default function AboutPage() {
                 environment and supportive team.
               </p>
 
-              <p className="text-base md:text-[1vw] text-gray-600 md:leading-[1.8vw] leading-normal mb-[2vw]">
-                Camp is where real friendships begin. Many campers stay in touch
-                long after the program ends, forming connections that cross
-                borders and cultures. Parents often share that after camp, their
-                children return more confident, independent, and motivated to
-                improve their English so they can communicate even better the
-                next time. The friendships and experiences at camp leave a
-                lasting impact that goes far beyond the session itself.
-              </p>
-
               <Button>Discover More</Button>
             </div>
 
             {/* CENTER IMAGE */}
-            <div className="relative lg:w-2/5 w-full lg:h-[65vh] h-[40vh] rounded-[2vw] overflow-visible bg-white">
+            <div className="relative lg:w-2/5 w-full h-[40vh] rounded-[2vw] overflow-visible bg-white">
               {/* Image positioned inside to create a white border effect */}
-              <div className="absolute inset-[6px] rounded-[calc(2vw-6px)] overflow-hidden">
+              <div className="absolute inset-[6px] rounded-[50px] overflow-hidden">
                 <Image
                   src={getTemplateImageUrl("yootheme/aboutImage/section2.jpg")}
                   alt="Cottage"
@@ -348,14 +347,12 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="text-lg xl:text-md"></div>
-
             {/* RIGHT SIDE SERVICES */}
-            <div className="lg:w-1/5 w-full h-full flex flex-col items-between justify-center gap-4 lg:gap-[1.5vw] lg:mt-0 mt-6">
+            <div className="lg:w-1/5 w-full h-full flex flex-col items-between justify-center gap-[1vw] lg:mt-0 mt-6">
               {pageData.services.map((service: any, index: number) => (
                 <div
                   key={index}
-                  className="rounded-[1rem] p-4 sm:p-2 transform transition-all duration-500 hover:scale-105 hover:rotate-1"
+                  className="rounded-[1rem] transform transition-all duration-500 hover:scale-105 hover:rotate-1"
                   style={{
                     animation: `slideInRight 0.8s ease-out ${
                       0.3 + index * 0.2
@@ -395,17 +392,17 @@ export default function AboutPage() {
 
       {/* Safe Environment / Features */}
       <section
-        className="relative overflow-hidden"
-        style={{
-          backgroundImage: `url(${getTemplateImageUrl(
-            "yootheme/aboutImage/bg_about.jpg"
-          )})`,
-        }}
+        className="relative overflow-hidden py-[5vh] px-[10vw]"
+        // style={{
+        //   backgroundImage: `url(${getTemplateImageUrl(
+        //     "yootheme/aboutImage/bg_about.jpg"
+        //   )})`,
+        // }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-transparent animate-pulse"></div>
-        <div className="py-[10vh] w-full px-[5vw] relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-transparent animate-pulse "></div>
+        <div className="w-full relative z-10">
           {/* Header */}
-          <div className="text-center max-w-[80vw] mx-auto flex flex-col items-center justify-center">
+          <div className="text-center max-w-[80vw] mx-auto flex flex-col items-center justify-between">
             <p className="text-primary! text-sm md:text-[1.5vw] leading-[1.2] mt-0 mb-[0.5vh]">
               Accommodation
             </p>
@@ -422,62 +419,39 @@ export default function AboutPage() {
 
           {/* Features grid */}
           <div className="mt-[5vh] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[5vw] sm:gap-[3vw]">
-            {pageData.features
-              .slice(0, 3)
-              .map((feature: any, index: number) => (
-                <div
-                  key={index}
-                  className="transform transition-all duration-700"
-                  style={{
-                    animation: `slideInUp 0.8s ease-out ${
-                      0.3 + index * 0.2
-                    }s both`,
-                  }}
-                >
-                  <Feature
-                    icon={feature.icon}
-                    title={feature.title}
-                    description={feature.description}
-                  />
-                </div>
-              ))}
-          </div>
-
-          {/* Features grid 2 */}
-          <div className="mt-[5vh] grid grid-cols-1 sm:grid-cols-2 gap-[5vw] sm:gap-[3vw]">
-            {pageData.features
-              .slice(3, 5)
-              .map((feature: any, index: number) => (
-                <div
-                  key={index + 3}
-                  className="transform transition-all duration-700"
-                  style={{
-                    animation: `slideInUp 0.8s ease-out ${
-                      0.9 + index * 0.2
-                    }s both`,
-                  }}
-                >
-                  <Feature
-                    icon={feature.icon}
-                    title={feature.title}
-                    description={feature.description}
-                  />
-                </div>
-              ))}
+            {pageData.features.map((feature: any, index: number) => (
+              <div
+                key={index}
+                className="transform transition-all duration-700"
+                style={{
+                  animation: `slideInUp 0.8s ease-out ${
+                    0.3 + index * 0.2
+                  }s both`,
+                }}
+              >
+                <Feature
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section>
-        <div className="py-[10vh] w-full lg:px-[10vw] px-[4vw]">
+      <section className="py-[5vh] px-[10vw]">
+        <div className=" w-full">
           <div className="flex flex-col md:flex-row items-start justify-between py-[5vh]">
             {/* LEFT */}
             <div className="lg:w-2/3 w-full flex flex-col items-start justify-center space-y-[1vh]">
-              <p className="text-xl text-primary!">Activities</p>
-              <p className="text-black text-md! lg:text-[1.667vw] font-bold!">
+              <p className="text-lg! lg:text-[1.7vw]! text-primary!">
+                Activities
+              </p>
+              <p className="text-black text-lg! lg:text-[1.7vw]! font-bold!">
                 Enjoy unforgettable experiences at Go and Grow Camp
               </p>
-              <p className="">
+              <p className="text-base! lg:text-[1vw]!">
                 Discover a world of adventure, creativity, and friendship. From
                 exciting outdoor activities to hands-on workshops, every day is
                 full of new experiences that help campers grow, have fun, and
@@ -496,37 +470,37 @@ export default function AboutPage() {
               src={getTemplateImageUrl("yootheme/aboutImage/act1.jpg")}
               title="Outdoor Adventures"
               desc="Climb, paddle and explore with our experienced team."
-              className="md:col-span-2 col-span-1 h-[40vh]"
+              className="md:col-span-2 col-span-1 h-[30vh] md:h-[40vh]"
             />
 
             <ImagePanel
               src={getTemplateImageUrl("yootheme/aboutImage/act2.jpg")}
               title="Creative Workshops"
               desc="Arts & crafts sessions to spark imagination."
-              className="col-span-1 h-[40vh]"
+              className="col-span-1 h-[50vh] md:h-[40vh]"
             />
 
             <ImagePanel
               src={getTemplateImageUrl("yootheme/aboutImage/act3.jpg")}
               title="Water Sports"
               desc="Safe swimming and supervised water activities."
-              className="col-span-1 h-[40vh]"
+              className="col-span-1 h-[50vh] md:h-[40vh]"
             />
 
             <ImagePanel
               src={getTemplateImageUrl("yootheme/aboutImage/act4.jpg")}
               title="Campfire Nights"
               desc="Evening stories, music, and marshmallow roasting."
-              className="md:col-span-2 col-span-1 h-[40vh]"
+              className="md:col-span-2 col-span-1 h-[30vh] md:h-[40vh]"
             />
           </div>
         </div>
       </section>
 
-      <Newsletter />
+      <Newsletter className="py-[5vh]" />
 
-      <section>
-        <div className="py-[8vh] w-full lg:px-[15vw] px-[4vw]">
+      <section className="py-[5vh] px-[10vw]">
+        <div className="w-full">
           <div className="flex items-center justify-between mb-[4vh] mx-[2vw]">
             <div>
               <h2 className="text-lg! md:text-[2vw]! font-bold text-[#274423]">

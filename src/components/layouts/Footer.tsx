@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getTemplateImageUrl } from "@/lib/assets";
+import {getTemplateImageUrl} from "@/lib/assets";
 
 export const Footer: React.FC = () => {
   const logoUrl = getTemplateImageUrl("yootheme/logo/logo.png");
@@ -7,11 +7,11 @@ export const Footer: React.FC = () => {
     "/templates/yootheme/vendor/assets/uikit-themes/master-fjord/images/background_footer_white.png";
 
   return (
-    <footer className="relative w-full max-w-[1920px] mx-auto m-0 p-0 bg-black">
+    <footer className="relative w-full  mx-auto m-0 p-0 bg-black">
       <div
         aria-hidden="true"
         role="presentation"
-        className="absolute inset-0 z-0 pointer-events-none select-none bg-cover md:bg-size-[100%_100%]"
+        className="absolute  inset-0 z-0 pointer-events-none select-none bg-cover md:bg-size-[100%_100%]"
         style={{
           backgroundImage: `url(${bgUrl})`,
           backgroundPosition: "bottom",
@@ -297,7 +297,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className="footer-bottom mt-[50vh]!">
         <span className="portfolio block text-center text-sm lg:text-base text-white">
           © 2025 GGC @ All Rights Reserved
         </span>

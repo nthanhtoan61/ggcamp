@@ -22,7 +22,7 @@ export default function Feature({icon, title, description}: FeatureProps) {
   };
 
   return (
-    <div className="group text-center px-4 sm:px-[1vw]">
+    <div className="group text-center">
       <div className="p-4 rounded-lg transition-shadow transition-transform duration-200 bg-transparent hover:shadow-xl hover:-translate-y-1 hover:border-2 hover:border-[#e6c76a]">
         <div className="mx-auto w-16 h-16 sm:w-[5vw] sm:h-[5vw] rounded-full bg-green-50 flex items-center justify-center mb-3 sm:mb-[1.5vh]">
           {renderIcon()}
